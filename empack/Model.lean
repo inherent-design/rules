@@ -28,16 +28,38 @@ def detect (i : Intent) (o : Observation) : Terminal :=
 theorem redirected_ascii (i : Intent) (o : Observation) :
     (detect i {o with stderrTty := false}).unicode = false := rfl
 
-/-- Plan for a single owned file in an update. The interpreter records a
-    conflict when the old ownership receipt and live bytes disagree. -/
-inductive Action | preserve | replace | unchanged | conflict deriving DecidableEq
-def updateFile (owned live next : Option Nat) : Action :=
-  if owned = none && live.isSome then .preserve
-  else if live ≠ owned then .conflict
-  else if live = next then .unchanged else .replace
+/-- File identities denote equivalence classes under the selected platform's
+    portable-attribute capabilities. The adapter refuses links before planning. -/
+inductive Policy | managed | seed deriving DecidableEq
+structure File where
+  identity : Nat
+  policy : Policy
+  deriving DecidableEq
+inductive Path | absent | directory | file (identity : Nat) deriving DecidableEq
+inductive Clash | unowned | modified | wrongKind | seedOwnership deriving DecidableEq
+inductive Action | preserve | unchanged | create (id : Nat) | replace (id : Nat)
+  | remove | conflict (reason : Clash) deriving DecidableEq
 
-example : updateFile none (some 6) (some 7) = .preserve := rfl
-example : updateFile (some 5) (some 6) (some 7) = .conflict := rfl
+def planFile (old : Option File) (live : Path) (next : Option File) : Action :=
+  match next, old, live with
+  | none, none, _ | none, some ⟨_,.seed⟩, _ => .preserve
+  | none, some _, .absent => .unchanged
+  | none, some _, .directory => .conflict .wrongKind
+  | none, some f, .file n => if n = f.identity then .remove else .conflict .modified
+  | some _, _, .directory => .conflict .wrongKind
+  | some ⟨n,.seed⟩, _, .absent => .create n
+  | some ⟨_,.seed⟩, _, .file _ => .preserve
+  | some _, some ⟨_,.seed⟩, _ => .conflict .seedOwnership
+  | some f, _, .absent => .create f.identity
+  | some _, none, .file _ => .conflict .unowned
+  | some f, some b, .file n => if n = f.identity then .unchanged
+    else if n = b.identity then .replace f.identity else .conflict .modified
+
+theorem unowned_matching_file (id : Nat) :
+    planFile none (.file id) (some ⟨id,.managed⟩) = .conflict .unowned := rfl
+
+example : planFile (some ⟨1,.managed⟩) (.file 2) (some ⟨2,.managed⟩) = .unchanged := rfl
+example : planFile (some ⟨1,.managed⟩) (.file 2) none = .conflict .modified := rfl
 example : (detect .always ⟨false,false,"24bit",none,true,80⟩) = ⟨false,.trueColor,false,80⟩ := by decide
 end Empack
 

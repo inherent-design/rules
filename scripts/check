@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -euo pipefail
 cd "$(dirname "$0")/.."
 lean=${LEAN:-lean}
 bend=${BEND:-bend}
@@ -10,6 +10,14 @@ export LEAN_PATH="$PWD/.build${LEAN_PATH:+:$LEAN_PATH}"
 for f in moment playground empack simulacrum re-desktop; do
   mkdir -p ".build/$f"
   "$lean" -DwarningAsError=true -o ".build/$f/Model.olean" "$f/Model.lean"
+done
+"$lean" -DwarningAsError=true common/Latency.lean
+"$lean" -DwarningAsError=true common/Across.lean
+for f in moment playground empack; do
+  "$lean" -DwarningAsError=true "$f/Workflow.lean"
+done
+for module in moment/Guidance moment/Hierarchy playground/Schedule playground/Regions empack/Recovery; do
+  "$lean" -DwarningAsError=true -o ".build/$module.olean" "$module.lean"
 done
 BEND_NO_TELEMETRY=1 "$bend" common/Proof.bend --verdict
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 - <<'PY'
 import hashlib,json,pathlib,subprocess
@@ -7,7 +7,7 @@ for project, source in json.load(open('sources.json')).items():
     root=pathlib.Path('..',project)
     for path,blob in source['blobs'].items():
         content=(root/path).read_bytes()
-        pinned=subprocess.check_output(['git','-C',root,'rev-parse',source['revision']+':'+path],text=True).strip()
+        pinned=subprocess.check_output(['git','-C',root,'ls-tree','--format=%(objectname)',source['revision'],'--',path],text=True).strip() or None
         actual=hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
         if pinned!=blob or actual!=source.get('observedWorktreeBlobs',{}).get(path,blob):
             raise SystemExit(f'{project}/{path}: source changed; review the affected model')

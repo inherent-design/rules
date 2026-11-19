@@ -6,5 +6,6 @@ def acknowledge (cursor : Option Nat) (mtime : Nat) (flushed updateCursor : Bool
   if flushed && updateCursor then some mtime else cursor
 theorem failed_flush (c : Option Nat) (t : Nat) (enabled : Bool) :
     acknowledge c t false enabled = c := rfl
+example : eligible none 0 = true := rfl
 example : eligible (some 12) 12 = false := rfl
 end Simulacrum

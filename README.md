@@ -25,3 +25,24 @@ The first command typechecks all five models, their examples and the generic the
 [Source pins](sources.json) record Git revisions and blob IDs. Run the checks after changing a projection. When a tracked source changes, inspect the changed boundary and its tests before advancing the pin. Model proofs cover the stated abstractions. The source probes cover individual adapter cases. Neither amounts to translation validation of an entire host application.
 
 Where an inspected upstream file had uncommitted changes, the manifest records its observed working-tree blob separately from its committed blob. Restoring or advancing that source requires a fresh comparison. The local rules repository does not modify the project checkouts.
+
+## Verification boundaries
+
+| Project | Executable comparison | Adapter boundary |
+| --- | --- | --- |
+| Moment | The graph probe calls the actual mutation and topology functions. The Lean reaction example follows an event through proposal and commit, including revocation between those stages. | The model takes authenticated action, lease and receipt observations as inputs. SQLite durability and real provider effects need integration tests. |
+| Playground | The compiled probe calls the native resource ledger. The Lean tick example connects a reservation and halo reads to world publication and a later device generation check. | A new world can commit while its GPU result is still unavailable. Partition and replay proofs apply to the specified kernels. GPU and physics completion require host observations. |
+| empack | The differential test compares all 245 normalized single-file cases with Rust. The Lean release example follows an authenticated channel selection through capacity, content verification and installation. | Trust verification, portable metadata, rooted filesystem operations and actual process control belong to the host. A refused install can still advance the authenticated channel high-water mark. |
+| Simulacrum | Lean examples exercise first discovery, flush outcome and equal timestamps. | Source inspection supplies the cursor rule. Database crash recovery and analytics delivery have no native parity test here. |
+| re:desktop | The source check runs the original six Bend laws. Lean exercises renewal under a matching or stale epoch. | Disconnect, timer delivery and foreground focus are external observations. |
+
+Run the additional native comparisons from this directory with the sibling checkouts present:
+
+```sh
+scripts/compare-empack
+(cd ../moment && node --test test/scheduler.test.mjs)
+(cd ../empack && cargo test --locked --offline -p empack-lib --lib engine::resources::tests)
+(cd ../empack && cargo test --locked --offline -p empack-lib --lib terminal::capabilities::tests -- --test-threads=1)
+```
+
+The reference run on macOS arm64 passed 11 scheduler tests, six governor tests and 20 terminal capability tests. Cargo needs the source checkout's dependencies in its local cache for these offline commands. The manifest uses a null committed blob for a file present only in the inspected working tree. Reproducing that part of the comparison requires the separately recorded working-tree content.

@@ -23,3 +23,39 @@ law coherent_replaces:
 
 def coherent_replaces(old, next):
   {==}
+
+# The host supplies independent scope/revision, coverage and time observations.
+# Nested guards form an intersection; any false witness preserves the old root.
+def all(left: Bool, right: Bool) -> Bool:
+  match left:
+    case True{}:
+      right
+    case False{}:
+      False{}
+
+law grouped_guards:
+  for a: Bool
+  for b: Bool
+  for c: Bool
+  {all(all(a, b), c) == all(a, all(b, c)) : Bool}
+
+def grouped_guards(a, b, c):
+  match a:
+    case False{}:
+      {==}
+    case True{}:
+      {==}
+
+law nested_publish:
+  for a: Bool
+  for b: Bool
+  for +old: Nat
+  for candidate: Nat
+  {publish(a, old, publish(b, old, candidate)) == publish(all(a, b), old, candidate) : Nat}
+
+def nested_publish(a, b, old, candidate):
+  match a:
+    case False{}:
+      {==}
+    case True{}:
+      {==}

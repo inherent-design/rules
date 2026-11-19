@@ -15,3 +15,15 @@ apply([{kind:'assertion.withdraw', assertionId:'a'}]);
 assert.equal(snapshot.assertions[0].withdrawnAtRevision,4);
 assert.throws(()=>apply([put]), {code:'IDENTITY_CONFLICT'});
 assert.throws(()=>apply([{...put, assertion:{...assertion,id:'b',record:{...assertion.record,contextId:'other'}}}]), {code:'NOT_FOUND'});
+
+const {validateTopology} = await import('../../moment/runtime/builtins.mjs');
+const topology = (edges) => {
+  const records = edges.map(([perspective,child,parent],index) => ({value:{
+    id:String(index),kind:'relation',schema:{name:'moment.within'},
+    roles:{perspective:[{id:perspective}],child:[{id:child}],parent:[{id:parent}]}
+  }}));
+  return {records,assertions:records.map(({value})=>({status:'asserted',assertion:{value:{record:{id:value.id}}}}))};
+};
+validateTopology(topology([['map','a','b'],['incident','a','c']]));
+assert.throws(()=>validateTopology(topology([['map','a','b'],['map','a','c']])), {code:'INVALID_ARGUMENT'});
+assert.throws(()=>validateTopology(topology([['map','a','b'],['map','b','a']])), {code:'INVALID_ARGUMENT'});

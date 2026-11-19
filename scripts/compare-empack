@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .build/oracle
+cat > .build/oracle/Cargo.toml <<'TOML'
+[package]
+name = "rules-oracle"
+version = "0.0.0"
+edition = "2024"
+[dependencies]
+empack-core = { path = "../../../empack/crates/empack-core" }
+[[bin]]
+name = "compare"
+path = "../../empack/DecisionProbe.rs"
+TOML
+cp ../empack/Cargo.lock .build/oracle/Cargo.lock
+cargo run --offline --quiet --manifest-path .build/oracle/Cargo.toml > .build/rust-decisions
+LEAN_PATH=".build" "${LEAN:-lean}" --run empack/Decisions.lean > .build/lean-decisions
+diff -u .build/rust-decisions .build/lean-decisions
+test "$(wc -l < .build/rust-decisions | tr -d ' ')" = 245
+echo "All 245 file decisions match empack-core."
