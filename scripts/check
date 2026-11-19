@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -eu
+cd "$(dirname "$0")/.."
+lean=${LEAN:-lean}
+bend=${BEND:-bend}
+mkdir -p .build/common
+export LEAN_PATH="$PWD/.build${LEAN_PATH:+:$LEAN_PATH}"
+"$lean" --version
+"$lean" -DwarningAsError=true -o .build/common/Core.olean common/Core.lean
+for f in moment playground empack simulacrum re-desktop; do
+  mkdir -p ".build/$f"
+  "$lean" -DwarningAsError=true -o ".build/$f/Model.olean" "$f/Model.lean"
+done
+BEND_NO_TELEMETRY=1 "$bend" common/Proof.bend --verdict
+
+python3 empack/TerminalProbe.py --fixture empack/redirected.json |
+  "$lean" --run empack/Run.lean always |
+  python3 -c 'import sys,json; assert json.load(sys.stdin)==dict(tty=False,unicode=False,columns=80,color="Empack.Color.trueColor")'

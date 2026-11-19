@@ -1,0 +1,17 @@
+# Rules for composition
+
+A useful atom has input identities, units, a decision and an observable result. Use a partial lookup for a single optional target. Use a relation for many possible endpoints, such as a part belonging to several assemblies. Existential composition keeps an intermediate witness and is associative. In a query that counts results, specify whether two witnesses denote two supports or one distinct endpoint. Relational composition alone does not define multiplicity or grant access.
+
+| Question | Formal obligation in [Core.lean](Core.lean) | Application |
+| --- | --- | --- |
+| Can two queries be joined? | `follow_assoc` for optional lookups, `join_assoc` for many-to-many relations | Match the middle identity including context, role and perspective. Cross-context joins require an explicit mapping. |
+| Can one region or interval contain another? | `nested_contains` compares endpoints in a common frame | Use a different frame type for each grid or clock. A tick needs a rate and origin to become a wall instant. A parent object need not contain its child's lifetime. |
+| Can a cached result still be read? | `joined_fresh`, `changed_input`, `unrelated_update`, `expiry_requires_refresh` | A join depends on the union of input revisions. An unrelated write can leave it valid. A time boundary can invalidate it with zero writes. |
+| Does a candidate become authoritative? | `stale_commit`, `missing_holds` and the [Bend publication gate](Proof.bend) | Missing coverage or a changed base holds the old root. A later retry must obtain new evidence. Durable host publication also needs crash recovery. |
+| Can work fit? | `nested_budget` | Limits on the same quantity combine by minimum. Distinct charges, e.g. all GPU bytes and target bytes, require separate predicates. A check becomes a reservation only through its owner. |
+| Can a coarse model or fake adapter replace a detailed trace? | `project_replay`, `replay_chunks`, `loss_obstruction` | A commuting one-step square extends to finite event streams. If two equal visible states have visibly different successors, add a hidden dependency, expose uncertainty, or recompute. |
+| How does missing evidence propagate? | `both_assoc` | A known false conjunct defeats an unknown. All true admits. Otherwise return unknown. An authority policy must specify what to do with unknown. |
+
+To reproject a stream, declare which observations survive, how events become coarse events, and which clock is sampled. The terminal model proves a concrete replay square. Playground gives a counterexample: equal total GPU usage can conceal different target charges and therefore different admission outcomes. The same reasoning applies to a renderer deciding when it can reuse a submission allocation. A fence observation conveys completion under its queue/device identity. Elapsed wall time cannot provide that observation.
+
+Disjoint dependencies permit independent refresh, not necessarily independent execution. Two chunk jobs can read disjoint voxels while competing for the same scratch pool. Add that pool to admission dependencies; add neighbor revisions to result dependencies only if actually read. For Minecraft-style distant meshes, retain chunk epoch, LOD, coverage and neighborhood revisions with each product. For a gateway such as cfgate, a route result can depend on configuration revision and a time-based credential expiry. These are transfer examples for analysis, not claims about those projects' implementations.

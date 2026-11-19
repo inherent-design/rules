@@ -1,0 +1,15 @@
+# Moment
+
+A context owns revisioned records, schemas, incidents and policy. A reference needs both system and context identity. A relation has roles and a schema. An assertion supplies independently withdrawable support. Equal payloads or projection results do not unite authorities. The core registers records first, then applies support commands in order. The graph probe exercises that ordering, idempotent duplicate insertion, foreign endpoints and refusal to resurrect withdrawn support.
+
+| Input → output | Rule and update boundary |
+| --- | --- |
+| Record declarations → immutable identities | Same identity and digest is idempotent. A changed digest conflicts. A batch requires its expected context revision at durable commit. |
+| Assertions → placed entities | Filter by active support and read authority. `contains` attaches child/parent under one perspective. Immediate parent is unique and the final asserted hierarchy must be acyclic. `partOf` permits several wholes. A replacement can withdraw old support and assert new support in one transaction. |
+| Endpoints → semantic relations | `viewOf` selects aspects, `derivedFrom` records provenance, `supports` preserves evidence, `contradicts` records conflict and `equivalent` needs a criterion. `precedes` orders occurrences within a frame. `during` is interval containment. Parent traversal alone cannot infer either temporal relation. |
+| Authorized snapshot → view | Select fields and group only visible inputs. A hidden row must not leak through counts, page markers or a visible hash. Support and completeness can change visible identity while the visible record values stay equal. |
+| Event or anchor → pending occurrence | Evaluate event selectors at the event revision with admission checks. Edge mode fires on false→true. A full pending queue retains the source cursor. A bounded unresolved causal walk returns indeterminate. Timer and capacity wakes use different predicates. |
+| Occurrence → reaction → execution | Recheck rule, incident, grant chain and available limits at use. Capacity is the smallest remaining envelope after each scope's own charges. An occurrence has no execution authority. Provider selection, lease expiry, outcome evidence and durable commit remain distinct. |
+| Commit → delivery → agent context | Event sequence orders local delivery. Cause IDs carry dependency. A projection, durable message, wake or prompt is an observation for its reader. An agent turn or side effect requires separate admission. |
+
+[Model.lean](Model.lean) proves withdrawn support is terminal, hidden extension preserves visible placement, and an occurrence cannot grant revoked authority. Executable cases cover edge coalescence across repeated matching observations, saturation and duplicate support. The model's edge branch covers a visible, eligible event in recurring mode with coalescing disabled. It abstracts payload digests, SQLite transactions and provider execution. [GraphProbe.mjs](GraphProbe.mjs) runs the upstream mutation code against a synthetic snapshot. Source contracts and checked revision are in the [manifest](../sources.json).
