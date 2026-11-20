@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+fixture=".build/desktop"
+mkdir -p "$fixture/build" "$fixture/src"
+# Keep the production module layout and build the loaded core from source.
+cp ../re-desktop/src/{coordinator,core,heartbeat}.mjs "$fixture/src/"
+BEND_NO_TELEMETRY=1 "${BEND:-bend}" ../re-desktop/core/access.bend -o "$fixture/build/access.mjs"
+node re-desktop/RenewalProbe.mjs > "$fixture/native"
+LEAN_PATH=".build" "${LEAN:-lean}" --run re-desktop/Renewals.lean > "$fixture/lean"
+diff -u "$fixture/lean" "$fixture/native"
+cat "$fixture/native"
