@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+if [ "$#" -ne 2 ]; then echo "Usage: host/java/check JDK_HOME 17|21|25" >&2; exit 2; fi
+jdk=$1
+feature=$2
+case $feature in 17|21|25) ;; *) exit 2;; esac
+"$jdk/bin/java" -version >&2
+version=$("$jdk/bin/javac" -version)
+[[ "$version" == "javac $feature."* ]] || { echo "Unexpected compiler: $version" >&2; exit 1; }
+out=$(mktemp -d)
+trap 'rm -rf "$out"' EXIT
+compile() { "$jdk/bin/javac" --release "$feature" -cp "$out" -d "$out" "host/java/$1.java"; }
+run() { "$jdk/bin/java" -cp "$out" "$@"; }
+compile HostProbe
+run HostProbe
+if ((feature >= 21)); then compile VirtualProbe; run VirtualProbe; fi
+if ((feature >= 25)); then compile ScopeProbe; run ScopeProbe; fi
+for input in pipe tty; do
+    scripts/host-streams --stdin "$input" -- "$jdk/bin/java" -cp "$out" HostProbe console |
+      python3 -c 'import base64,json,sys
+r=json.load(sys.stdin)
+assert r["outcome"]["exit_code"] == 0 and r["outcome"]["capture_complete"]
+print("console",r["observed"]["isatty"],base64.b64decode(r["observed"]["stdout_b64"]).strip().decode(),file=sys.stderr)
+assert base64.b64decode(r["observed"]["stderr_b64"]).splitlines()==[b"diagnostic"]'
+done

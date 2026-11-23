@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+out=.build/host
+mkdir -p "$out" .build/common
+export LEAN_PATH="$PWD/.build${LEAN_PATH:+:$LEAN_PATH}"
+export BEND_NO_TELEMETRY=1
+lean=${LEAN:-lean}
+bend=${BEND:-bend}
+"$lean" -DwarningAsError=true -o .build/common/Core.olean common/Core.lean
+"$lean" -DwarningAsError=true -o .build/common/Host.olean common/Host.lean
+"$lean" --run host/Vectors.lean > "$out/vectors"
+"$bend" common/Host.bend --verdict
+"$bend" common/Host.bend -o "$out/core.mjs"
+python3 host/native.py > "$out/native.jsonl"
+"${CXX:-c++}" -std=c++23 -I../playground/include host/LedgerProbe.cpp -o "$out/ledger"
+"$out/ledger" > "$out/ledger.jsonl"
+receipts=("$out/native.jsonl" "$out/ledger.jsonl")
+if [[ $(uname -s) == Darwin ]]; then
+    swiftc host/MetalProbe.swift -o "$out/metal"
+    "$out/metal" > "$out/metal.jsonl"
+    receipts+=("$out/metal.jsonl")
+fi
+node host/compare.mjs "${receipts[@]}" "$@"

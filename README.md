@@ -2,6 +2,8 @@
 
 This local repository compares the laws behind five systems. Start with the [plain-language review](review.md) for a file update, a world update, and where Bend and Lean run. The [common model](common/README.md) lists the underlying laws. Models use mathematical naturals for bounded host quantities. Adapters must reject overflow, invalid units and foreign identities before applying those models.
 
+For the six host surfaces, see the [host behavior map](host/README.md), [native and Java profile matrix](profiles/README.md), and [qualification evidence](host/evidence.md).
+
 | Project | Reprojection and evidence |
 | --- | --- |
 | [Moment](moment/README.md) | Historical comparison from immutable records and contextual support to a visible relation, a wake occurrence and a separately admitted execution |
