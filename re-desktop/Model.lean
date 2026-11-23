@@ -17,4 +17,27 @@ theorem accepted_deadline (s : Grant) (now : Nat) :
 
 -- Historical regression: using the presence interval produced 30100 here.
 example : (renew ⟨1,1,900000⟩ 1 1 100).untilMs = 900100 := rfl
+/-- The grant, when present, is already live and belongs to a subscribed
+    session. Queue scheduling after Allow belongs to the upstream scheduler. -/
+inductive Mode | allowed | pending | paused deriving DecidableEq
+structure Access where
+  mode : Mode
+  current : Option Grant
+  deriving DecidableEq
+
+def pauseAfter (s : Access) : Access :=
+  match s.current with
+  | none => ⟨.paused, none⟩
+  | some g => ⟨.pending, some g⟩
+
+def endGrant (s : Access) : Access :=
+  ⟨if s.mode = .pending then .paused else s.mode, none⟩
+
+def acceptsNewGrant (s : Access) := s.mode == .allowed
+
+theorem pending_keeps_grant (m : Mode) (g : Grant) :
+    pauseAfter ⟨m,some g⟩ = ⟨.pending,some g⟩ := rfl
+theorem pending_blocks_successor (m : Mode) (g : Grant) :
+    acceptsNewGrant (endGrant (pauseAfter ⟨m,some g⟩)) = false := rfl
+
 end Desktop

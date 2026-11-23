@@ -1,6 +1,6 @@
 # Rules
 
-This local repository compares the laws behind five systems. Start with the [common model](common/README.md), then follow a boundary into the corresponding project. Models use mathematical naturals for bounded host quantities. Adapters must reject overflow, invalid units and foreign identities before applying those models.
+This local repository compares the laws behind five systems. Start with the [plain-language review](review.md) for a file update, a world update, and where Bend and Lean run. The [common model](common/README.md) lists the underlying laws. Models use mathematical naturals for bounded host quantities. Adapters must reject overflow, invalid units and foreign identities before applying those models.
 
 | Project | Reprojection and evidence |
 | --- | --- |
@@ -20,7 +20,7 @@ scripts/check
 scripts/check-sources
 ```
 
-The first command typechecks all five models, their examples and the generic theorems, checks the Bend laws through the Lean-based kernel and runs a terminal replay. The second checks the recorded source files, runs the Moment graph and Playground ledger probes against the working checkouts, and verifies re:desktop's seven Bend laws. Build products stay in `.build/`. No service or remote is required. For live terminal observations and reproducible fault cases see [empack](empack/README.md).
+The first command typechecks all five models, their examples and the generic theorems, checks the Bend laws through the Lean-based kernel and runs a terminal replay. The second checks the recorded source files, runs the Moment graph and Playground ledger probes against the working checkouts, and verifies re:desktop's 13 Bend laws. Build products stay in `.build/`. No service or remote is required. For live terminal observations and reproducible fault cases see [empack](empack/README.md).
 
 [Source pins](sources.json) record Git revisions and blob IDs. Run the checks after changing a projection. When a tracked source changes, inspect the changed boundary and its tests before advancing the pin. Model proofs cover the stated abstractions. The source probes cover individual adapter cases. Neither amounts to translation validation of an entire host application.
 
@@ -34,7 +34,7 @@ Where an inspected upstream file had uncommitted changes, the manifest records i
 | Playground | The compiled probe calls the native resource ledger. The Lean tick example connects a reservation and halo reads to world publication and a later device generation check. | A new world can commit while its GPU result is still unavailable. Partition and replay proofs apply to the specified kernels. GPU and physics completion require host observations. |
 | empack | The differential test compares all 245 normalized single-file cases with Rust. The Lean release example follows an authenticated channel selection through capacity, content verification and installation. | Trust verification, portable metadata, rooted filesystem operations and actual process control belong to the host. A refused install can still advance the authenticated channel high-water mark. |
 | Simulacrum | Lean examples exercise first discovery, flush outcome and equal timestamps. | Source inspection supplies the cursor rule. Database crash recovery and analytics delivery have no native parity test here. |
-| re:desktop | The source check runs seven Bend laws. The renewal comparison checks Lean against the emitted core and the host coordinator for accepted renewal, a stale epoch and a wrong caller. | Disconnect, timer delivery and foreground focus are external observations. |
+| re:desktop | The source check runs 13 Bend laws. The desktop comparison checks renewal and Pause after against the emitted core as used by the host coordinator. | Disconnect, timer delivery and foreground focus are external observations. |
 
 Run the additional native comparisons from this directory with the sibling checkouts present:
 

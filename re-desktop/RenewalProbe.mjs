@@ -30,3 +30,28 @@ for (const [label, error] of [
   assert.deepEqual([core.holder, core.epoch], [before.holder, before.epoch]);
   console.log(label, core.holder, core.epoch, core.until);
 }
+
+// Compare the public mode and grant, including the instant a queued successor
+// could have taken over. Each participant belongs to this in-process fixture.
+const host = new Coordinator({ clock: () => 0, blocked: false });
+const [holder, waiting, newcomer] = [{}, {}, {}];
+const ids = new Map();
+for (const [index, connection] of [holder, waiting, newcomer].entries()) {
+  const { session_id } = host.call(connection, 'subscribe', { name: String(index), workspace: process.cwd() });
+  ids.set(session_id, index + 1);
+}
+function showAccess(label) {
+  const { access_mode, holder, grants_allowed } = host.snapshot();
+  console.log(label, access_mode, holder ? ids.get(holder.session_id) : 0, grants_allowed);
+}
+host.pauseAfter();
+showAccess('empty');
+host.setBlocked(false);
+const grant = host.call(holder, 'take');
+host.call(waiting, 'take');
+host.pauseAfter();
+assert.equal(host.call(newcomer, 'take').you.queue_position, null);
+showAccess('held');
+host.call(holder, 'release', { lease_token: grant.lease.token });
+assert.equal(host.call(waiting, 'status').you.queue_position, 1);
+showAccess('released');
