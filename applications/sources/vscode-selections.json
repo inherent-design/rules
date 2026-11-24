@@ -31,7 +31,7 @@
     "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
     "sha256": "aebeff47ba12c40f4fa11f40f53ab2efd8e4a2fdbab99162f5829507d8887272",
     "cache": "applications/tools/source-cache/vscode/src__vs__platform__files__browser__htmlFileSystemProvider.ts",
-    "inspection": "Lines192-235(write/createWritable/write/close),362-401(registerHandle,in-memory name collision andIDB persistence),400-505(getHandle/getDirectoryHandle/doGetHandle,restored permissions). Current interpretation incomplete;caller/namespace investigation pending."
+    "inspection": "Lines192-235(write/createWritable/write/close);362-505(registry and lookup methods executed unmodified with native OPFS/IDB and fixture URI/error adapters). Six source-fragment cases,not full VS Code picker/UI or case-folding qualification. Normal caller source inspected separately."
   },
   {
     "path": "src/vs/workbench/services/untitled/common/untitledTextEditorModel.ts",
@@ -40,5 +40,29 @@
     "sha256": "9eed23127ebb03c050ea337610003346175fc0fa19c7cf1d7d85e26419cbc424",
     "cache": "applications/tools/source-cache/vscode/src__vs__workbench__services__untitled__common__untitledTextEditorModel.ts",
     "inspection": "Lines123-141:first-line display name distinct from resource;309-337:UTF-8 backup snapshot;340-390:resolve backup or initial content,retain existing model,and mark restored untitled dirty. Other implementation pending."
+  },
+  {
+    "path": "src/vs/workbench/services/dialogs/browser/fileDialogService.ts",
+    "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/services/dialogs/browser/fileDialogService.ts",
+    "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+    "sha256": "52dc38fecb71ec80b325762549c1ced31bf25cac9da2517d6914b4b32959932e",
+    "cache": "applications/tools/source-cache/vscode/src__vs__workbench__services__dialogs__browser__fileDialogService.ts",
+    "inspection": "Lines26-30:shared file provider;51-81:file picker registration then open;115-140:save picker registration;185-215:file/directory picker branches register in the same provider. Source callers only;native picker/UI path not executed."
+  },
+  {
+    "path": "src/vs/platform/files/browser/webFileSystemAccess.ts",
+    "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/platform/files/browser/webFileSystemAccess.ts",
+    "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+    "sha256": "fbf6900abb87c990ee24a4ac313c3f66c288b7dd2dd0224ae0247c287df99b55",
+    "cache": "applications/tools/source-cache/vscode/src__vs__platform__files__browser__webFileSystemAccess.ts",
+    "inspection": "Lines11-39:capability presence and structural handle/file/directory predicates. Source fragments use these predicates;normal user-grant handling remains unqualified."
+  },
+  {
+    "path": "src/vs/base/browser/indexedDB.ts",
+    "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/base/browser/indexedDB.ts",
+    "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+    "sha256": "31dfe9d39cac8e41acd9f7a7977bce1817793739a20532d8018b1437d534640b",
+    "cache": "applications/tools/source-cache/vscode/src__vs__base__browser__indexedDB.ts",
+    "inspection": "Lines112-131:runInTransaction waits for transaction completion and returns request results;abort/error reject. Other methods not inspected for this band."
   }
 ]

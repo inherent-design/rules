@@ -1,0 +1,167 @@
+[
+  {
+    "id": "same-file",
+    "stage": "start"
+  },
+  {
+    "id": "same-file",
+    "stage": "complete",
+    "observed": {
+      "id": "same-file",
+      "firstKind": "file",
+      "secondKind": "file",
+      "freshReceiver": false,
+      "firstUri": "/entry",
+      "secondUri": "/entry",
+      "sameUnderlyingEntry": true,
+      "currentKind": "file",
+      "currentIsFirst": true,
+      "currentIsSecond": true,
+      "persistedKind": "file",
+      "persistedIsFirst": true,
+      "persistedIsSecond": true,
+      "secondDirectoryResolvable": false,
+      "directoryError": {
+        "code": "Unavailable",
+        "message": "No file system handle registered"
+      },
+      "errors": []
+    }
+  },
+  {
+    "id": "different-files",
+    "stage": "start"
+  },
+  {
+    "id": "different-files",
+    "stage": "complete",
+    "observed": {
+      "id": "different-files",
+      "firstKind": "file",
+      "secondKind": "file",
+      "freshReceiver": false,
+      "firstUri": "/entry",
+      "secondUri": "/entry-1",
+      "sameUnderlyingEntry": false,
+      "currentKind": "file",
+      "currentIsFirst": true,
+      "currentIsSecond": false,
+      "persistedKind": "file",
+      "persistedIsFirst": true,
+      "persistedIsSecond": false,
+      "secondDirectoryResolvable": false,
+      "directoryError": {
+        "code": "Unavailable",
+        "message": "No file system handle registered"
+      },
+      "errors": []
+    }
+  },
+  {
+    "id": "file-then-directory",
+    "stage": "start"
+  },
+  {
+    "id": "file-then-directory",
+    "stage": "complete",
+    "observed": {
+      "id": "file-then-directory",
+      "firstKind": "file",
+      "secondKind": "directory",
+      "freshReceiver": false,
+      "firstUri": "/entry",
+      "secondUri": "/entry",
+      "sameUnderlyingEntry": false,
+      "currentKind": "file",
+      "currentIsFirst": true,
+      "currentIsSecond": false,
+      "persistedKind": "directory",
+      "persistedIsFirst": false,
+      "persistedIsSecond": true,
+      "secondDirectoryResolvable": false,
+      "directoryError": {
+        "code": "Unavailable",
+        "message": "No file system handle registered"
+      },
+      "errors": []
+    }
+  },
+  {
+    "id": "directory-then-file",
+    "stage": "start"
+  },
+  {
+    "id": "directory-then-file",
+    "stage": "complete",
+    "observed": {
+      "id": "directory-then-file",
+      "firstKind": "directory",
+      "secondKind": "file",
+      "freshReceiver": false,
+      "firstUri": "/entry",
+      "secondUri": "/entry",
+      "sameUnderlyingEntry": false,
+      "currentKind": "file",
+      "currentIsFirst": false,
+      "currentIsSecond": true,
+      "persistedKind": "file",
+      "persistedIsFirst": false,
+      "persistedIsSecond": true,
+      "secondDirectoryResolvable": false,
+      "directoryError": {
+        "code": "Unavailable",
+        "message": "No file system handle registered"
+      },
+      "errors": []
+    }
+  },
+  {
+    "id": "new-provider-unloaded-alias",
+    "stage": "start"
+  },
+  {
+    "id": "new-provider-unloaded-alias",
+    "stage": "complete",
+    "observed": {
+      "id": "new-provider-unloaded-alias",
+      "firstKind": "file",
+      "secondKind": "file",
+      "freshReceiver": true,
+      "firstUri": "/entry",
+      "secondUri": "/entry",
+      "sameUnderlyingEntry": false,
+      "currentKind": "file",
+      "currentIsFirst": false,
+      "currentIsSecond": true,
+      "persistedKind": "file",
+      "persistedIsFirst": false,
+      "persistedIsSecond": true,
+      "secondDirectoryResolvable": false,
+      "directoryError": {
+        "code": "Unavailable",
+        "message": "No file system handle registered"
+      },
+      "errors": []
+    }
+  },
+  {
+    "id": "aborted-handle-persistence",
+    "stage": "start"
+  },
+  {
+    "id": "aborted-handle-persistence",
+    "stage": "complete",
+    "observed": {
+      "id": "aborted-handle-persistence",
+      "uri": "/entry",
+      "memoryIsFirst": true,
+      "freshLookup": "Unavailable",
+      "errors": [
+        {
+          "name": "Error",
+          "message": "unknown error"
+        }
+      ]
+    }
+  }
+]

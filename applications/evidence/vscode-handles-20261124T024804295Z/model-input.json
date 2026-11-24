@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "same-file",
+      "firstFile": true,
+      "secondFile": true,
+      "sameEntry": true,
+      "freshReceiver": false
+    },
+    {
+      "id": "different-files",
+      "firstFile": true,
+      "secondFile": true,
+      "sameEntry": false,
+      "freshReceiver": false
+    },
+    {
+      "id": "file-then-directory",
+      "firstFile": true,
+      "secondFile": false,
+      "sameEntry": false,
+      "freshReceiver": false
+    },
+    {
+      "id": "directory-then-file",
+      "firstFile": false,
+      "secondFile": true,
+      "sameEntry": false,
+      "freshReceiver": false
+    },
+    {
+      "id": "new-provider-unloaded-alias",
+      "firstFile": true,
+      "secondFile": true,
+      "sameEntry": false,
+      "freshReceiver": true
+    }
+  ]
+}

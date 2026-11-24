@@ -13483,13 +13483,24 @@
           "operations": [
             {
               "id": "open-local-handle",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Handles.lean; vscode/Handles.bend",
+              "laws": [
+                "Two-registration equal-basename projection;separate immutable-key candidate preserves occupied and unrelated bindings."
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-handles-20261124T024804295Z/receipt.json",
+                "evidence/vscode-handles-20261124T024804295Z/observed.json",
+                "evidence/vscode-handles-20261124T024804295Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "Alias uniqueness,memory/persisted agreement,and registration-implies-persistence contradicted by source-fragment observations;impossible same-entry/different-kind input refused."
+              ],
+              "uxAssessment": "vscode/HANDLES.md",
+              "status": "source-modeled",
+              "evidenceLimit": "Unmodified registry/transaction methods with real private OPFS handles and IDB,fixture URI/error adapters. Not full VS Code normal picker/open/editor flow,permission change,restart,or case-folding qualification."
             },
             {
               "id": "open-github",
