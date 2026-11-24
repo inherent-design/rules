@@ -122,6 +122,8 @@ Trust predicates reinforce that support metadata is not full admission. Explicit
 
 ### empack
 
+The [synchronization band](empack/SYNCHRONIZATION.md) separates affected resolution roots, allowed proposed closure, changed dependency records, and the whole lock delta. Shared prerequisites cannot bypass protected explicit roots or retained dependents; root demotion does not authorize deletion. Graph/coverage-only differences need attributable reporting but are retained by the inspected full-lock publication path. Portable result reuse must preserve current search-revision and exact-runtime policies rather than infer authority from an unchanged label or unpinned request.
+
 The [document/approval band](empack/DOCUMENTS.md) supports keeping semantic currency separate from raw write preconditions. Actual approval-time author/lock comments and absent-to-empty bindings refuse pending metadata publication while preserving the later edits; fresh preparation succeeds. Portable editors may retain useful semantic results without granting old prepared writes. This is not a new automatic rebasing or cache protocol.
 
 The [Java band](empack/JAVA.md) supports retaining separate game admission, constraint evidence, author preference, resolved output requirements, and host executable observations. A known preference is not an exact-major requirement; an unknown profile deliberately requires the explicit major. Installed JDKs do not expand admission. This distinction should survive portable editing, and reports should identify which constraints were actually collected rather than implying whole-pack Java compatibility.
