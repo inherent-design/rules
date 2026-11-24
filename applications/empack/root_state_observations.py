@@ -144,7 +144,7 @@ def main():
             'A matching candidate does not bypass another unresolved claim,duplicate ownership,bad records or the global entry cap.',
             'Read-only discovery succeeds while a fixture operation.lock is held;this does not qualify publication/recovery coordination.',
             'Root disappearance/replacement refuse;nonregular association/state entries are not followed or accepted.'],
-        limits=['Formal policy/replay comparison pending;these checks verify retained observations,source/artifacts and private postimages.',
+        limits=['These checks verify retained observations,source/artifacts and private postimages;formal comparisons are separately recorded by root_state_conformance.py.',
             'Actual unchanged source methods on macOS;provided Publisher capability,not Publisher::open/private-state initialization.',
             'Synthetic old-device records,authored journal/runtime sentinels and held fixture lock;no real reboot,operation/recovery or interrupted engine write.',
             'Images compare bytes,shape,inode/device,mode andmtime;access time is excluded. At the limit,all immediate host entries count,not only matching project names.',

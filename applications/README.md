@@ -34,6 +34,8 @@ The [restore-policy band](restic/RESTORE.md) separates existing content, overwri
 
 The [empack native identity band](empack/IDENTITY.md) compares 58 source-function outcomes with Lean and Bend. It separates live identity, durable comparison, content fingerprints, absence, unavailable evidence, and strict inner binding shape. Actual state lookup, root capture/revalidation, reboot behavior, and recovery execution remain pending.
 
+The [empack discovery band](empack/ROOT-STATE.md) compares 35 actual source-method cases, including complete 4,096/4,097-entry views. It preserves state absence, unresolved history, physical association, and derived keys separately. An actual lock prefix exposes an initialization concern; complete writer/interruption and recovery qualification remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

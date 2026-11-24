@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "tool": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+  "toolSha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539",
+  "modelSha256": "19196aedf877b5fc562508a7b141f19b51fa8cb0b64cdf1bb759a49fa0f13951",
+  "generatedDriverSha256": "b8d40ad1e005d068d26b3d35adda2b88e09f17186d316b18d120c75583aef0d2",
+  "typecheck": {
+    "argv": [
+      "bend",
+      "applications/empack/generated/RootStateCase.bend",
+      "--check-only"
+    ],
+    "exitCode": 0,
+    "stdout": "model-typecheck.stdout",
+    "stdoutSha256": "931f1e664a679af1355a9ca547ac1daef9f7b14137bc7cc21b110b0cc504b5b1"
+  },
+  "interpretation": {
+    "argv": [
+      "bend",
+      "applications/empack/generated/RootStateCase.bend"
+    ],
+    "exitCode": 1,
+    "stdoutBytes": 0,
+    "stderr": "model-interpreter.stderr",
+    "stderrSha256": "6f2b3274a4f9280b66ad0ba7f04f61de24ef910bb110588a1f7a006960fc2ba2"
+  },
+  "scope": "Model runtime only;Bend native builder runs the same complete views without dropping the4096/4097boundary cases. No empack/native fixture acquisition."
+}

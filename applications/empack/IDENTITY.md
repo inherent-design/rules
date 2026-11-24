@@ -47,7 +47,7 @@ LEAN=/path/to/pinned/lean BEND=/path/to/pinned/bend \
   python3 applications/empack/identity_conformance.py
 ```
 
-The subsequent [discovery band](ROOT-STATE.md) executes selected actual root checks, association reads, and lookup through native directory capabilities. It also retains a separate initialization-lock prefix. Its formal comparison and the complete writer/recovery lifecycle remain pending.
+The subsequent [discovery band](ROOT-STATE.md) executes selected actual root checks, association reads, and lookup through native directory capabilities. It also retains a separate initialization-lock prefix. Lean and Bend compare its admission and selected-key results; the complete writer/recovery lifecycle remains pending.
 
 ## Remaining qualification
 

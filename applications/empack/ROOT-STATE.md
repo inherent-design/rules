@@ -1,6 +1,6 @@
 # Native state discovery and initialization boundaries
 
-This intermediate band executes selected unchanged source at `0b4462e3032b4f09230b15329722eabefb7f574c` on macOS. Formal discovery models and replay remain pending. It extends the [identity band](IDENTITY.md) from a binding-only predicate adapter to actual directory capabilities, root checks, bounded association reads, and lookup. It does not qualify a complete initialization, publication, interruption, or recovery workflow.
+This bounded source/native/model band executes selected unchanged source at `0b4462e3032b4f09230b15329722eabefb7f574c` on macOS. Lean and Bend compare admission and selection with the retained views. It extends the [identity band](IDENTITY.md) from a binding-only predicate adapter to actual directory capabilities, root checks, bounded association reads, and lookup. It does not qualify a complete initialization, publication, interruption, or recovery workflow.
 
 ## Executed boundary
 
@@ -36,8 +36,29 @@ This demonstrates the primitive prefix and resulting refusal. It does not execut
 
 Keep the reader conservative. A candidate writer change is dedicated association coordination compatible with the current empty-slot rule, followed by durable association publication before exposing ordinary operation-lock state. Reusing existing locking and record-writing primitives may suffice; an index, migration framework, or permissive adoption rule is not established as necessary. First qualify concurrent initializers, failure before and after record publication, existing foreign or unassociated state, lock ordering, and native directory durability. The current diagnostic's suggestion to use the creating version also needs review for this newly created prefix; no older version is demonstrated to repair it.
 
+## Models and replay
+
+The [Lean model](RootState.lean) provides 23 laws, including a general law that every immediate entry counts before name filtering. The [Bend model](RootState.bend) provides 14 laws. Both preserve current-empty versus unresolved state, original-key selection, malformed versus absent records, foreign ownership, duplicate claims, root replacement, inclusive byte limits, and fallback keys that do not establish state.
+
+The [replay](root_state_conformance.py) derives all immediate entries from the raw images, including the 4,095 and 4,096 unrelated entries. Duplicate-preserving external JSON decoding projects strict typed record witnesses. The models do not parse JSON text or recreate native capabilities. The root relation uses presence/device/inode under the private fixture's quiescence and retained-root assumptions; birth, UUID, and durable-token stability for the same object remain premises. The actual native `check_binding` still compares its complete identity.
+
+Both models match all 35 available native cases across the three entry points. The [comparison receipt](../evidence/empack-root-state-20261124T201312610313Z/conformance.json) also records 14 unsupported research-input refusals. Two additional views—the recorded pre-lock image and the proposed `state.lock`-only alternative—are model-only. The proposed writer is neither implemented nor qualified.
+
+Admission, selected physical key, found state, and key fallback are compared. Native error chains remain retained separately. Directory enumeration order was not recorded, so the models do not claim the first diagnostic when several independent faults coexist. Complete quiescent views and the absence of additional enumeration/permission races are explicit premises.
+
+Bend's checked interpreter exceeds its machine stack on the large boundary fixture, while type checking and the model's kernel verdict pass. Its native builder replays the same complete inputs successfully; no boundary case is removed. The [runtime record](../evidence/empack-root-state-20261124T201312610313Z/model-runtime.json) preserves that limitation. The replay records Bend's identity, generated source, output, and approximately 1.1 MB model executable. The builder's subordinate compiler invocation is not independently recorded. This is a local model comparison, not fresh empack or filesystem evidence.
+
+```sh
+LEAN=/path/to/pinned/lean BEND=/path/to/pinned/bend \
+  python3 applications/empack/root_state_conformance.py
+```
+
+## API and interface direction
+
+Retain the current distinction between a derived key, a selected association and held directory, a prepared recovery, and an authorized operation. Internal lookup already returns the information needed to preserve absence separately from selection; a string returned by the fallback helper must not become an existence or authority check in a new caller. Portable project/release identities cannot replace these host facts.
+
+Explain capacity as an enumeration limit over the host directory, with a safe inspection route that preserves unknown and recovery data. For unassociated state, retain useful paths and uncertainty. The creating-version suggestion is insufficient for the reproduced initializer prefix; do not imply that an older executable has been shown to repair it. These are reporting candidates, not changes to ownership policy or a newly selected cleanup mechanism.
+
 ## Remaining work
 
-Model discovery, bounded reads, original-key selection, unresolved claims, and the initialization prefix in Lean and Bend. Derive model inputs from raw fixture images, not selected names or returned error categories. Keep external JSON parsing and host observations attributable. Compare the retained results, with explicit unavailable and malformed-input cases; do not model this reader as a grant to recover or write.
-
-Then join actual state initialization and interrupted publication/creation with retained-image validation, approval/revision checks, restoration direction, and coordination. Real reboot behavior, Linux/Windows providers, full root capture/revalidation, and recovery remain pending. Production changes require a separately selected decision. Live operation stores, user projects, and Moment recovery data are untouched.
+Join actual state initialization and interrupted publication/creation with retained-image validation, approval/revision checks, restoration direction, and coordination. Qualify the proposed initializer coordination under concurrent writers and failure before/after association publication while keeping the current reader conservative. Real reboot behavior, Linux/Windows providers, full root capture/revalidation, and recovery remain pending. Production changes require a separately selected decision. Live operation stores, user projects, and Moment recovery data are untouched.
