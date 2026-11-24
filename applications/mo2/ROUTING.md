@@ -42,8 +42,20 @@ These flags are mapping-plan facts. The connector source forwards the flag to di
 
 A candidate design would resolve the mapping context explicitly: selected profile, mod set/classification, game paths, local-save policy, executable overrides, and plugin contributions. Reuse the existing profile and mapping types; do not add a second resolver or generic launch framework. If differing profiles are forbidden by the real caller contract, validate that precondition rather than silently mixing them. If overrides are supported, decide which settings intentionally remain ambient and report that basis.
 
-## Evidence limits and remaining comparison
+## Models and retained comparison
 
-No Lean/Bend routing comparison is claimed by this record yet. The next comparison must retain ordered rows, exact name admission, regularity, requested/current profile distinctions, and independently supplied plugin/local-save rows. Any stronger target/profile rule remains proposed and must not replace these current observations.
+[Lean](Routing.lean) checks 20 laws; [Bend](Routing.bend) checks nine. Both retain ordered ordinary rows, exact-name admission before regularity, current-profile save contribution, overwrite rows, and independently enabled plugin rows. A single method result covers both an optional plan and the local-feature warning. No returned plan is represented separately from a successful empty list.
+
+The [pure replay](routing_conformance.py) matches both models to the [19 retained results](../evidence/mo2-routing-20261124T145829818462Z/conformance.json), including every row's origin, destination, directory flag, create-target flag, and order. It also compares refusal and warning outcomes. Eight malformed research profiles are refused. This decoder uses closed fixture name/path identities, not a general profile, filesystem, or game-plugin codec. It recompiles the exact Lean model before importing it; no Qt, native collector, or MO2 process runs during replay.
+
+Active entries are already supplied from the selected profile. A model comparison that changes only a profile label while holding that list fixed does not simulate loading another native profile. Likewise, the save callback's one-row shape and the supplied plugin row are fixture premises. The comparison does not model arbitrary plugin side effects or callback timing.
+
+A separate design alternative requires a regular custom target and uses the requested profile's save policy/path. Its four differences are retained as proposed results: the two nonregular-target cases refuse, and the two differing-profile save cases follow the requested profile. These do not replace current observations or establish normal caller reachability. Regular classification alone is not a filesystem-writability proof. Alternatively, an API could explicitly require requested and current profile identities to agree. Choose the actual override contract before adopting either approach.
+
+## Evidence limits and verification
+
+An absent plan is not evidence of zero surrounding effects. The real profile constructor is an adapter here, and `beforeRun` saves current profile state before mapping assembly. Neither constructor/prelaunch publication, previous VFS state, nor cleanup after refusal is qualified by the pure result. Preserve the operation's actual scope when presenting a failure.
+
+For empack's portable authoring target, bind prepared work to its selected recipe/profile and captured project inputs. An ambient editor selection must not silently supply another profile's behavior after preparation. Reuse existing interpretation and native constructor authority; this finding does not justify a second mapping engine, generic launcher, or frontend-only policy table. An assembled plan, installed view, running process, retired process, and captured output remain different evidence.
 
 Before application adoption, exercise a supported Windows MO2/Qt build with actual profiles, regular/foreign mods, local-save plugins, executable overrides, and file-mapper plugins. Observe physical reads/writes from an injected disposable process, retain originals, and confirm process retirement before capturing output. Qualify inactive or stale targets, profile switches, refusal/cancellation, partial mapping installation, and existing-file behavior. Native initialization, process ownership, mapping installation, output capture, and deliberate mod adoption remain separate obligations. No complete feature family or joined workflow is qualified here.

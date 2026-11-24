@@ -39,3 +39,5 @@ The keep-current alternative is appropriate if the existing views already explai
 The shared host contracts can describe origin identity, observed effective-view provenance, and process ownership. They do not determine the game's archive rules or MO2's precedence policy. The remaining MO2 inventory, including installation, external writes and overwrite adoption, plugin load order, saves, tools, recovery, and maintenance, stays open.
 
 The later [output and sync band](OUTPUTS.md) separates custom write routing and shell-move adoption from the sync dialog's per-file remove/move sequence. Real Qt/macOS source-method evidence exposes partial destination loss; supported Windows/USVFS qualification and any correction remain separate.
+
+The [mapping-plan band](ROUTING.md) separately compares default/custom target flags, requested/current profile save context, and supplied plugin rows. Assembled mappings do not establish the installed VFS view or physical tool writes.
