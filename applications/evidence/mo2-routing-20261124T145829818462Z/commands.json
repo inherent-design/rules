@@ -1,0 +1,79 @@
+[
+  {
+    "case": "compile",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+      "-std=c++20",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O0",
+      "-g0",
+      "-I",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-routing-20261124T145829818462Z/work",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-routing-20261124T145829818462Z/driver.cpp",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-routing-20261124T145829818462Z/work/routing-oracle",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtWidgets",
+      "-I/opt/homebrew/lib/QtWidgets.framework",
+      "-DQT_WIDGETS_LIB",
+      "-I/opt/homebrew/include/QtGui",
+      "-I/opt/homebrew/lib/QtGui.framework",
+      "-DQT_GUI_LIB",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtWidgets",
+      "-framework",
+      "QtGui",
+      "-framework",
+      "QtCore"
+    ],
+    "pid": 12547,
+    "seconds": 1.5441912501119077,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/compile.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/compile.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "observe",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-routing-20261124T145829818462Z/work/routing-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-routing-20261124T145829818462Z/cases.json"
+    ],
+    "pid": 13166,
+    "seconds": 0.35975791700184345,
+    "streams": {
+      "stdout": {
+        "rawSha256": "4dbb6c475f21c51ba54e609f2ae19abcdbb9669bc67e33e0d347bf27e04f95fa",
+        "publicSha256": "4dbb6c475f21c51ba54e609f2ae19abcdbb9669bc67e33e0d347bf27e04f95fa",
+        "rawPrivatePath": "work/private/observe.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/observe.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]
