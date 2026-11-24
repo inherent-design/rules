@@ -10578,33 +10578,108 @@
           "operations": [
             {
               "id": "discover-members",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Workspaces.lean and cargo/Workspaces.bend",
+              "laws": [
+                "member_context_overrides_root_defaults",
+                "explicit_defaults_select_a",
+                "nonvirtual_unset_selects_root",
+                "virtual_unset_selects_all",
+                "excluded_b_not_selected",
+                "excluded_b_still_checked",
+                "explicit_a_requires_b",
+                "same_members_different_default_context",
+                "invalid_selection_checks_nothing"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-workspaces-20261124T080614049672Z/trace.json",
+                "evidence/cargo-workspaces-20261124T080614049672Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/workspaces_conformance.py:rejectedInterpretations",
+                "cargo/workspaces_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "cargo/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four generated root/virtual/default-A profiles,two local members,normal A-to-B path edge,host check mode",
+                "Metadata member/default fields and compiler-reported package IDs direct;check-root selection source/model interpreted",
+                "Finite closure only;opaque package IDs mapped through metadata,not parsed;artifact order/bytes/fullunits/runtime unqualified",
+                "PrivateCargoHome,CWDancestorconfigexcluded,sourcehashesstable;allfourtargets cleaned,no arbitrary user cache cleanup"
+              ],
+              "verificationPlan": "Expand general discovery/globs/membership excludes,nested/empty/outside members,features/targets/units,ambiguous selectors,concurrent/interrupted operations,IDE caching and platforms. Keep selectedroots,dependency closure and actual artifact/runtime evidence distinct;no whole-family qualification."
             },
             {
               "id": "default-members",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Workspaces.lean and cargo/Workspaces.bend",
+              "laws": [
+                "member_context_overrides_root_defaults",
+                "explicit_defaults_select_a",
+                "nonvirtual_unset_selects_root",
+                "virtual_unset_selects_all",
+                "excluded_b_not_selected",
+                "excluded_b_still_checked",
+                "explicit_a_requires_b",
+                "same_members_different_default_context",
+                "invalid_selection_checks_nothing"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-workspaces-20261124T080614049672Z/trace.json",
+                "evidence/cargo-workspaces-20261124T080614049672Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/workspaces_conformance.py:rejectedInterpretations",
+                "cargo/workspaces_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "cargo/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four generated root/virtual/default-A profiles,two local members,normal A-to-B path edge,host check mode",
+                "Metadata member/default fields and compiler-reported package IDs direct;check-root selection source/model interpreted",
+                "Finite closure only;opaque package IDs mapped through metadata,not parsed;artifact order/bytes/fullunits/runtime unqualified",
+                "PrivateCargoHome,CWDancestorconfigexcluded,sourcehashesstable;allfourtargets cleaned,no arbitrary user cache cleanup"
+              ],
+              "verificationPlan": "Expand general discovery/globs/membership excludes,nested/empty/outside members,features/targets/units,ambiguous selectors,concurrent/interrupted operations,IDE caching and platforms. Keep selectedroots,dependency closure and actual artifact/runtime evidence distinct;no whole-family qualification."
             },
             {
               "id": "exclude",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Workspaces.lean and cargo/Workspaces.bend",
+              "laws": [
+                "member_context_overrides_root_defaults",
+                "explicit_defaults_select_a",
+                "nonvirtual_unset_selects_root",
+                "virtual_unset_selects_all",
+                "excluded_b_not_selected",
+                "excluded_b_still_checked",
+                "explicit_a_requires_b",
+                "same_members_different_default_context",
+                "invalid_selection_checks_nothing"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-workspaces-20261124T080614049672Z/trace.json",
+                "evidence/cargo-workspaces-20261124T080614049672Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/workspaces_conformance.py:rejectedInterpretations",
+                "cargo/workspaces_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "cargo/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four generated root/virtual/default-A profiles,two local members,normal A-to-B path edge,host check mode",
+                "Metadata member/default fields and compiler-reported package IDs direct;check-root selection source/model interpreted",
+                "Finite closure only;opaque package IDs mapped through metadata,not parsed;artifact order/bytes/fullunits/runtime unqualified",
+                "PrivateCargoHome,CWDancestorconfigexcluded,sourcehashesstable;allfourtargets cleaned,no arbitrary user cache cleanup"
+              ],
+              "verificationPlan": "Expand general discovery/globs/membership excludes,nested/empty/outside members,features/targets/units,ambiguous selectors,concurrent/interrupted operations,IDE caching and platforms. Keep selectedroots,dependency closure and actual artifact/runtime evidence distinct;no whole-family qualification."
             },
             {
               "id": "inherit-fields",
@@ -10618,7 +10693,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected explicit-member/root/default-context/CLI-exclusion profiles observed and modeled;general discovery/inheritance and full workspace behavior remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -10878,13 +10953,38 @@
             },
             {
               "id": "check",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Workspaces.lean and cargo/Workspaces.bend",
+              "laws": [
+                "member_context_overrides_root_defaults",
+                "explicit_defaults_select_a",
+                "nonvirtual_unset_selects_root",
+                "virtual_unset_selects_all",
+                "excluded_b_not_selected",
+                "excluded_b_still_checked",
+                "explicit_a_requires_b",
+                "same_members_different_default_context",
+                "invalid_selection_checks_nothing"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-workspaces-20261124T080614049672Z/trace.json",
+                "evidence/cargo-workspaces-20261124T080614049672Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/workspaces_conformance.py:rejectedInterpretations",
+                "cargo/workspaces_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "cargo/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four generated root/virtual/default-A profiles,two local members,normal A-to-B path edge,host check mode",
+                "Metadata member/default fields and compiler-reported package IDs direct;check-root selection source/model interpreted",
+                "Finite closure only;opaque package IDs mapped through metadata,not parsed;artifact order/bytes/fullunits/runtime unqualified",
+                "PrivateCargoHome,CWDancestorconfigexcluded,sourcehashesstable;allfourtargets cleaned,no arbitrary user cache cleanup"
+              ],
+              "verificationPlan": "Expand general discovery/globs/membership excludes,nested/empty/outside members,features/targets/units,ambiguous selectors,concurrent/interrupted operations,IDE caching and platforms. Keep selectedroots,dependency closure and actual artifact/runtime evidence distinct;no whole-family qualification."
             },
             {
               "id": "rustc",
@@ -11792,7 +11892,13 @@
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
         }
       ],
-      "improvementCandidates": [],
+      "improvementCandidates": [
+        {
+          "id": "context-bound-workspace-inspection",
+          "status": "proposed integration/inspection improvement;bounded Cargo behavior consistent,no product defect established",
+          "document": "cargo/WORKSPACES.md"
+        }
+      ],
       "preservationDecisions": [],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",

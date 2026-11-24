@@ -1,0 +1,32 @@
+{
+  "root-default": {
+    "Cargo.toml": "[package]\nname=\"fixture-root\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[workspace]\nmembers=[\"a\",\"b\"]\nresolver=\"2\"\n",
+    "a/Cargo.toml": "[package]\nname=\"fixture-a\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[dependencies]\nfixture-b={path=\"../b\"}\n",
+    "a/src/main.rs": "fn main(){println!(\"{}\",fixture_b::value());}\n",
+    "b/Cargo.toml": "[package]\nname=\"fixture-b\"\nversion=\"0.1.0\"\nedition=\"2021\"\n",
+    "b/src/lib.rs": "pub fn value()->u8{7}\n",
+    "src/main.rs": "fn main(){println!(\"root\");}\n"
+  },
+  "virtual-default": {
+    "Cargo.toml": "[workspace]\nmembers=[\"a\",\"b\"]\nresolver=\"2\"\n",
+    "a/Cargo.toml": "[package]\nname=\"fixture-a\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[dependencies]\nfixture-b={path=\"../b\"}\n",
+    "a/src/main.rs": "fn main(){println!(\"{}\",fixture_b::value());}\n",
+    "b/Cargo.toml": "[package]\nname=\"fixture-b\"\nversion=\"0.1.0\"\nedition=\"2021\"\n",
+    "b/src/lib.rs": "pub fn value()->u8{7}\n"
+  },
+  "virtual-a": {
+    "Cargo.toml": "[workspace]\nmembers=[\"a\",\"b\"]\nresolver=\"2\"\ndefault-members=[\"a\"]\n",
+    "a/Cargo.toml": "[package]\nname=\"fixture-a\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[dependencies]\nfixture-b={path=\"../b\"}\n",
+    "a/src/main.rs": "fn main(){println!(\"{}\",fixture_b::value());}\n",
+    "b/Cargo.toml": "[package]\nname=\"fixture-b\"\nversion=\"0.1.0\"\nedition=\"2021\"\n",
+    "b/src/lib.rs": "pub fn value()->u8{7}\n"
+  },
+  "root-a": {
+    "Cargo.toml": "[package]\nname=\"fixture-root\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[workspace]\nmembers=[\"a\",\"b\"]\nresolver=\"2\"\ndefault-members=[\"a\"]\n",
+    "a/Cargo.toml": "[package]\nname=\"fixture-a\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[dependencies]\nfixture-b={path=\"../b\"}\n",
+    "a/src/main.rs": "fn main(){println!(\"{}\",fixture_b::value());}\n",
+    "b/Cargo.toml": "[package]\nname=\"fixture-b\"\nversion=\"0.1.0\"\nedition=\"2021\"\n",
+    "b/src/lib.rs": "pub fn value()->u8{7}\n",
+    "src/main.rs": "fn main(){println!(\"root\");}\n"
+  }
+}
