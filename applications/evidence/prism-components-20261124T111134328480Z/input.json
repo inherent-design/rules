@@ -1,0 +1,384 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "empty",
+      "components": []
+    },
+    {
+      "id": "missing-exact",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "met-explicit",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": []
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mismatch-adjustable-dependency",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.20.1",
+          "requires": [],
+          "dependencyOnly": true
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mismatch-explicit-protected",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.20.1",
+          "requires": []
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mismatch-custom-dependency-protected",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.20.1",
+          "requires": [],
+          "dependencyOnly": true,
+          "custom": true
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "same-exact-requirements",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        },
+        {
+          "uid": "fixture.other",
+          "version": "1",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact-plus-unconstrained",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": ""
+            }
+          ]
+        },
+        {
+          "uid": "fixture.other",
+          "version": "1",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conflicting-exacts",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.20.1",
+              "suggests": ""
+            }
+          ]
+        },
+        {
+          "uid": "fixture.other",
+          "version": "1",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numeric-suggestions",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.2"
+            }
+          ]
+        },
+        {
+          "uid": "fixture.other",
+          "version": "1",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact-and-different-suggestion",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": "1.20.1"
+            }
+          ]
+        },
+        {
+          "uid": "fixture.other",
+          "version": "1",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obsolete-volatile-dependency",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "dependencyOnly": true,
+          "volatile": true
+        }
+      ]
+    },
+    {
+      "id": "unreferenced-nonvolatile-dependency",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "dependencyOnly": true
+        }
+      ]
+    },
+    {
+      "id": "unreferenced-explicit-volatile",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "volatile": true
+        }
+      ]
+    },
+    {
+      "id": "required-volatile-dependency",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "dependencyOnly": true,
+          "volatile": true
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "disabled-root-still-requires",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "dependencyOnly": true,
+          "volatile": true
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": ""
+            }
+          ],
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "dependency-flag-cannot-disable",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "dependencyOnly": true,
+          "disabled": true
+        },
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "important-flag-cannot-disable",
+      "components": [
+        {
+          "uid": "net.minecraft",
+          "version": "1.21.1",
+          "requires": [],
+          "important": true,
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "two-missing-identities",
+      "components": [
+        {
+          "uid": "fixture.loader",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.21.1",
+              "suggests": ""
+            },
+            {
+              "uid": "fixture.library",
+              "equals": "3",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

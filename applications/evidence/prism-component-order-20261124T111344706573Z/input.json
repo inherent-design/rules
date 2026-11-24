@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "equal-rank-suggestions-left-right",
+      "components": [
+        {
+          "uid": "fixture.left",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.2+left"
+            }
+          ]
+        },
+        {
+          "uid": "fixture.right",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.2+right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equal-rank-suggestions-right-left",
+      "components": [
+        {
+          "uid": "fixture.right",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.2+right"
+            }
+          ]
+        },
+        {
+          "uid": "fixture.left",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "",
+              "suggests": "1.2+left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distinct-exact-spelling",
+      "components": [
+        {
+          "uid": "fixture.left",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.02",
+              "suggests": ""
+            }
+          ]
+        },
+        {
+          "uid": "fixture.right",
+          "version": "1.0",
+          "requires": [
+            {
+              "uid": "net.minecraft",
+              "equals": "1.2",
+              "suggests": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
