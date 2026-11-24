@@ -12670,13 +12670,27 @@
             },
             {
               "id": "publish-snapshot",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Backup.lean;restic/Backup.bend",
+              "laws": [
+                "A partial source error can coexist with a published snapshot; a dry-run ID or successful unchanged skip does not establish a new saved reference. Content reuse and live-byte identity remain distinct."
+              ],
+              "nativeEvidence": [
+                "evidence/restic-backup-20261124T140738773237Z/receipt.json",
+                "evidence/restic-backup-20261124T140738773237Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-backup-selections.json"
+              ],
+              "negativeControls": [
+                "Unreadable file produces partial snapshot/status 3; excluded unreadable file succeeds; dry-run/unchanged skip/missing root produce no new repository snapshot. Three malformed research inputs refuse."
+              ],
+              "uxAssessment": "restic/BACKUP.md",
+              "status": "native-observed",
+              "evidenceLimit": "38 commands/14 cases in one new local macOS repository and fixed regular-file profile. Eleven published snapshot contents and selected metadata independently inspected; syscall read counts are not measured. No remote durability, crash recovery, hostile roots, general chunking, or source-race qualification.",
+              "verificationPlan": "Exercise live source/type mutation, missing parent/index data, permission/metadata errors, interruption and failed publication, multiple chunks/files, remote acknowledgements, and platform-specific metadata policies.",
+              "proofPremises": [
+                "Metadata equality and indexed prior blobs support current reuse policy, not proof of live-byte equality. Publication model assumes successful local store witnesses; it does not model orphaned partial uploads or native atomic capture."
+              ]
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",

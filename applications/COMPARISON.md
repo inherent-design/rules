@@ -34,6 +34,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 **Creating an artifact is not qualifying it.** Cargo retains a local archive after a deliberately failed build check and permits packaging with verification skipped. Its transformed distribution manifest and original author manifest have different roles. Consumers need the actual checked outcome and exact artifact identity before delivery; an expected pathname alone cannot supply either.
 
+**Metadata trust is a policy, not a content identity.** Restic's explicit ignore-metadata options can reuse old content while saving current metadata. Forced rereading can add no new data because deduplication already knows those bytes. Preserve the requested evidence policy and distinguish reads, stored data, captured content, and publication. This local backup policy does not establish suitable validation for empack publisher inputs. [Capture observations](restic/BACKUP.md).
+
 **Completion is scoped to an effect.** Restic forget removes a reference before prune reclaims data. Cargo clean removes its target artifacts while an external script effect remains. MO2 dirty notifications can contain duplicate indices with no net edit. Prism can accept an abort before its base task finishes. A restored browser tab, in-memory handle, finalizer call, and confirmed stored project are different outcomes. Reports should name the affected resource and confirmed or unknown result.
 
 **Permission and execution have scope.** The JavaScript hook study distinguishes dependency review, root hooks, explicit script requests, and command status. The three tools differ legitimately; a disabled default can still allow a particular explicit or workspace action. A failed command can retain selected files and hook-written output. A shared report should preserve those facts rather than impose one universal script switch.
@@ -99,6 +101,8 @@ Local source packaging adds another boundary: Cargo can leave an archive after f
 Cargo workspace metadata adds effective-manifest context to the inspection basis: root defaults can differ from member defaults without source changes. CLI exclusion removes selected roots, while a still-required dependency can remain in the compiler-reported check set. Preserve those relations and improve caller scope/provenance before proposing another metadata service. This contrasts with workspace script selection rather than establishing a universal meaning of “excluded.” [Cargo context and dependency evidence](cargo/WORKSPACES.md).
 
 ### restic
+
+The [backup band](restic/BACKUP.md) supports preserving partial snapshot evidence after source errors, explicit reuse policy, and dry-run/unchanged distinctions. Existing status, stderr, and summary facts should remain linked; a returned snapshot ID in dry-run is a simulated result, not saved-reference evidence. Reread/new-data counters need their actual scopes. No backup product defect or policy change is selected.
 
 The [integrity band](restic/INTEGRITY.md) supports preserving metadata-only, subset, and full-data checks as distinct operations. A same-size data fault can pass metadata checks, and a successful index rebuild can leave file data unreadable. Candidate reports should name their checked set and repaired namespace. The keep-current option remains sound; no exit-code, repository-format, or automatic destructive-repair change is selected. Post-repair full reads and exact known-file comparison stay separate acceptance evidence.
 
