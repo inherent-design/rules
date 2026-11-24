@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "primaryCases": 30,
+  "cleanupCases": 22,
+  "joinedOverrideCases": 8,
+  "priorCaptureCases": 28,
+  "unchangedFragmentHashes": true,
+  "sourcePins": 9,
+  "saveEquivalentPathCases": 4,
+  "overridePathLossCases": [
+    {
+      "case": "list-marker-in-filename",
+      "original": [
+        "config/my-overrides-settings.toml"
+      ],
+      "recorded": [
+        "settings.toml"
+      ],
+      "removedUnrelated": [
+        "settings.toml"
+      ]
+    },
+    {
+      "case": "list-marker-in-directory",
+      "original": [
+        "config/overrides/rules.json"
+      ],
+      "recorded": [
+        "rules.json"
+      ],
+      "removedUnrelated": [
+        "rules.json"
+      ]
+    },
+    {
+      "case": "list-whitespace",
+      "original": [
+        "  options.txt  "
+      ],
+      "recorded": [
+        "options.txt"
+      ],
+      "removedUnrelated": [
+        "options.txt"
+      ]
+    },
+    {
+      "case": "list-client-marker",
+      "original": [
+        "config/client-overrides-feature.json"
+      ],
+      "recorded": [
+        "feature.json"
+      ],
+      "removedUnrelated": [
+        "feature.json"
+      ]
+    },
+    {
+      "case": "list-newline",
+      "original": [
+        "config/line\nbreak.txt"
+      ],
+      "recorded": [
+        "break.txt",
+        "config/line"
+      ],
+      "removedUnrelated": [
+        "break.txt",
+        "config/line"
+      ]
+    },
+    {
+      "case": "list-unicode-whitespace",
+      "original": [
+        "\u00a0options.txt\u00a0"
+      ],
+      "recorded": [
+        "options.txt"
+      ],
+      "removedUnrelated": [
+        "options.txt"
+      ]
+    }
+  ],
+  "partialCleanupFailurePreserved": true,
+  "notes": [
+    "Native observations verified against preserved fixtures and source fragments; Lean/Bend policy comparison remains pending.",
+    "Unchanged primitive hashes across two runs; earlier capture predates joined override cleanup and two cached-No cases.",
+    "Directory traversal order is not qualified; override path bags and scoped effects require separate formal comparison.",
+    "Dialog state is explicitly initialized by fixture. Native constructor/initialization, whole archive import/update, downloads, publication and platform qualification remain open."
+  ]
+}

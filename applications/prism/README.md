@@ -4,6 +4,8 @@ This band studies Prism Launcher 11.1.1 at `7d2d3c1ec6fcf8255ebacd02d9f792688575
 
 A separate [launch lifecycle band](LAUNCH.md) studies sequencing and abort delivery with supported Qt 6 and controlled steps. It separates controller phase from base outcome and leaves actual game-process and GUI acceptance open.
 
+An intermediate [cleanup and override-record band](CLEANUP.md) executes selected deletion and record helpers with disposable files. It retains raw-path protection, recorded-destination, and partial-cleanup observations; formal comparison and full-importer qualification remain pending.
+
 The [component-decision band](COMPONENTS.md) compares protected selections, exact and suggested versions, activation flags, obsolete-dependency candidates, cached-state round trips, and removal failure through source functions and supported Qt. Its models match the selected retained comparisons; actual component loading, publication, and game launch remain separate obligations.
 
 ## Current rule and counterexample

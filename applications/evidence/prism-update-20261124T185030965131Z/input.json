@@ -1,0 +1,442 @@
+{
+  "schema": 1,
+  "cleanup": [
+    {
+      "id": "empty-path",
+      "files": {
+        "options.txt": "user"
+      },
+      "requests": [
+        {
+          "path": "",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-refused",
+      "files": {
+        "saves/world/level.dat": "world"
+      },
+      "requests": [
+        {
+          "path": "saves/world/level.dat",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "No"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-approved",
+      "files": {
+        "saves/world/level.dat": "world"
+      },
+      "requests": [
+        {
+          "path": "saves/world/level.dat",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "Yes"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-dot-prefix",
+      "files": {
+        "saves/world/level.dat": "world"
+      },
+      "requests": [
+        {
+          "path": "./saves/world/level.dat",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "No"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-parent-prefix",
+      "files": {
+        "saves/world/level.dat": "world"
+      },
+      "requests": [
+        {
+          "path": "mods/../saves/world/level.dat",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "No"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-no-cached",
+      "files": {
+        "saves/a.dat": "a",
+        "saves/b.dat": "b"
+      },
+      "requests": [
+        {
+          "path": "saves/a.dat",
+          "checkDisabled": false
+        },
+        {
+          "path": "saves/b.dat",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "No",
+        "Yes"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-yes-cached",
+      "files": {
+        "saves/a.dat": "a",
+        "saves/b.dat": "b"
+      },
+      "requests": [
+        {
+          "path": "saves/a.dat",
+          "checkDisabled": false
+        },
+        {
+          "path": "saves/b.dat",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [
+        "Yes",
+        "No"
+      ],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-preexisting-no",
+      "files": {
+        "saves/a.dat": "a"
+      },
+      "requests": [
+        {
+          "path": "saves/a.dat",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "No",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-preexisting-yes",
+      "files": {
+        "saves/a.dat": "a"
+      },
+      "requests": [
+        {
+          "path": "saves/a.dat",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "Yes",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "user-options-override",
+      "files": {
+        "options.txt": "user-changed-options"
+      },
+      "requests": [
+        {
+          "path": "options.txt",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "enabled-disabled-pair",
+      "files": {
+        "mods/a.jar": "enabled",
+        "mods/a.jar.disabled": "disabled"
+      },
+      "requests": [
+        {
+          "path": "mods/a.jar",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "disabled-enabled-pair",
+      "files": {
+        "mods/a.jar": "enabled",
+        "mods/a.jar.disabled": "disabled"
+      },
+      "requests": [
+        {
+          "path": "mods/a.jar.disabled",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "override-no-disabled-pair",
+      "files": {
+        "mods/a.jar": "enabled",
+        "mods/a.jar.disabled": "disabled"
+      },
+      "requests": [
+        {
+          "path": "mods/a.jar",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "missing-is-skipped",
+      "files": {},
+      "requests": [
+        {
+          "path": "mods/absent.jar",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "directory-fails",
+      "files": {},
+      "requests": [
+        {
+          "path": "config",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [
+        "config"
+      ],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "partial-batch-continues",
+      "files": {
+        "first.txt": "first",
+        "last.txt": "last"
+      },
+      "requests": [
+        {
+          "path": "first.txt",
+          "checkDisabled": false
+        },
+        {
+          "path": "config",
+          "checkDisabled": false
+        },
+        {
+          "path": "last.txt",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [
+        "config"
+      ],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "no-override-no-cleanup",
+      "files": {
+        "options.txt": "user"
+      },
+      "requests": [
+        {
+          "path": "options.txt",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": false
+    },
+    {
+      "id": "broken-link-skipped",
+      "files": {},
+      "requests": [
+        {
+          "path": "mods/link.jar",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {
+        "mods/link.jar": "mods/absent.jar"
+      },
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "valid-link-only",
+      "files": {
+        "payload.jar": "retained-target"
+      },
+      "requests": [
+        {
+          "path": "mods/link.jar",
+          "checkDisabled": true
+        }
+      ],
+      "directories": [],
+      "links": {
+        "mods/link.jar": "payload.jar"
+      },
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    },
+    {
+      "id": "save-prefix-not-substring",
+      "files": {
+        "config/saves/a.txt": "not-a-world"
+      },
+      "requests": [
+        {
+          "path": "config/saves/a.txt",
+          "checkDisabled": false
+        }
+      ],
+      "directories": [],
+      "links": {},
+      "saveChoice": "NotAsked",
+      "answers": [],
+      "overrideExisting": true
+    }
+  ],
+  "overrides": [
+    {
+      "id": "list-simple",
+      "name": "overrides",
+      "files": {
+        "options.txt": "seed",
+        "config/a.toml": "config"
+      }
+    },
+    {
+      "id": "list-marker-in-filename",
+      "name": "overrides",
+      "files": {
+        "config/my-overrides-settings.toml": "config"
+      }
+    },
+    {
+      "id": "list-marker-in-directory",
+      "name": "overrides",
+      "files": {
+        "config/overrides/rules.json": "config"
+      }
+    },
+    {
+      "id": "list-whitespace",
+      "name": "overrides",
+      "files": {
+        "  options.txt  ": "seed"
+      }
+    },
+    {
+      "id": "list-unicode",
+      "name": "overrides",
+      "files": {
+        "config/\u65e5\u672c \u03a9.toml": "config"
+      }
+    },
+    {
+      "id": "list-client-marker",
+      "name": "client-overrides",
+      "files": {
+        "config/client-overrides-feature.json": "config"
+      }
+    },
+    {
+      "id": "list-newline",
+      "name": "overrides",
+      "files": {
+        "config/line\nbreak.txt": "config"
+      }
+    },
+    {
+      "id": "list-unicode-whitespace",
+      "name": "overrides",
+      "files": {
+        "\u00a0options.txt\u00a0": "seed"
+      }
+    }
+  ]
+}
