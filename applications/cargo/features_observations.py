@@ -68,7 +68,7 @@ def main():
         assert 'default' in row['normalFeatures'] and 'defaulted'in row['normalFeatures'] and 'sibling'not in row['normalFeatures']
     report=dict(schema=1,commands=51,metadataCommands=9,compiledAndExecutedCases=20,qualifiedSelfRefusals=refused,
         sourcePins=len(source_pins),peakTargetAllocatedKiB=receipt['peakTargetAllocatedKiB'],targetCleaned=True,scopedRuntime=runtime,
-        limits=['Observed profile consistency only;Lean/Bend policy comparison remains pending.',
+        limits=['Observed profile consistency only;the separate features_conformance.py checks the Lean/Bend policy projection.',
           'Metadata queries retain one package reached by several kinds;this is not a discriminating test of conditional-only package removal by filter-platform.',
           'Build/test outputs are directly executed on the same Mac. Windows metadata is not Windows compilation;resolver3 MSRV selection is not exercised.',
           'Compiler-reported feature sets are observed;role labels use controlled source tags and runtime/build-script witnesses. They are not raw UnitKind fields or counts of newly compiled units.',

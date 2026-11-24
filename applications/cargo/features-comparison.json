@@ -1,0 +1,564 @@
+{
+  "schema": 1,
+  "basisSha256": {
+    "applications/cargo/Features.lean": "5bf75dc966e38a2ee5c19a4aa6d07e8c0e28bd63124be11aab7b22167614bc62",
+    "applications/cargo/Features.bend": "342b4e0fd856da465e6720cb8d5c065495896d14511bb894970fce9d07fa669c",
+    "applications/cargo/FeaturesCase.lean": "1d8b1536ef230626d365ce0953ccc8921576962bde970d23f10ceb24b77dddeb",
+    "applications/cargo/features_conformance.py": "6163c5067fc4ed49e7ddefa40e72dff9fc411b6e0e634c6154f66220e7076e7e",
+    "applications/cargo/features_observations.py": "a134a6204e0fc7c1c91e3552a5410ec9a90aaf5d18e226a1be23f1cf50d60d1b",
+    "applications/cargo/features-observations.json": "26b5bbab4a404155ef1bae80dae84fc9f8b21619278ca6aaefa24e67a10e9dcc",
+    "applications/sources/cargo-features-selections.json": "5e3b39dc3a6404ef5390b46a9b20f7baf8ed4102feccc2a763dc7f1d5221f132",
+    "applications/evidence/cargo-features-20261124T181357949100Z/receipt.json": "b677cb0919fea94f2ed2a5a021a674aa3ea4622acfc0595c44524769e0456811",
+    "applications/evidence/cargo-features-20261124T181357949100Z/trace.json": "1f0b39888923b1aaf1b9b0e83482b98cd66348ecfca9a7a9100b403680c41c63",
+    "applications/evidence/cargo-features-20261124T181357949100Z/configuration.json": "9c2677aadf4ddfdebd8296ddc5be697f87bb94c0f0d183cd6d4c78d3790cfe8c",
+    "applications/evidence/cargo-features-20261124T181357949100Z/probe.py": "411cd468760fbdfcbb5cbfeff35e4ec67522ff0d1dd5986947e80f7f13fd990d",
+    "applications/evidence/cargo-features-20261124T181357949100Z/binaries.json": "ad006a82ac3f7430efbb6bb9ae73082009299a8987021958a674fdec5afbd0b2",
+    "applications/tools/source-cache/cargo/src__doc__src__reference__features.md": "29864a89a13c34c57e648bbab6e845ebfdd079291529cf586407599bfb094a38",
+    "applications/tools/source-cache/cargo/src__doc__src__commands__cargo-metadata.md": "34414526f99d8c8758d766347c0bc99f444fbb7e54e62b22464ac7a36788aa43",
+    "applications/tools/source-cache/cargo/src__cargo__core__compiler__unit.rs": "d839b464594456e321fa3cd950d5be47e566e150b9f03f7dfe2cff7f9a68cdef",
+    "applications/tools/source-cache/cargo/src__doc__src__reference__resolver.md": "4c3f3d3e772698b8605b7a2a271ce3954c599985667f08c4e9cede94909edf7c",
+    "applications/tools/source-cache/cargo/src__cargo__core__resolver__features.rs": "18b4e4e81d91aaf02ae9011f5172b2d2defcbec57c335cc881d7b368e26e68dd",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-all.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-host.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-host.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-windows.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-metadata-windows.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-qualified-self-feature-refusal.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-qualified-self-feature-refusal.stderr": "ebfdf3eb0a97344f59b34e415a36d216cc1309bb0a74d8788849b0890885207b",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-default.stdout": "6d73eb2645461d2a9e8f0351031678375f48c52041d370f8b4d5bc86c92c7026",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-default.stderr": "3ffeb86d989d7df6d5a15e32494968a270cd07d8f504a0d1e20417225ff425a6",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-default-runtime.stdout": "16a55562d8d7f981c13ad04a723cd5d326520b82fcb8dcc4bc8b8d2301882054",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-no-default.stdout": "80929f224a8fc0ac9b1bbfff9c2a2824ac6c5555667099b70315b9776327d52a",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-no-default.stderr": "220c998e8ddf8a0cb04b5341b4f349fd794d3d474cb41de95d5c916431fa2e49",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-no-default-runtime.stdout": "86d11c65a4acbefcef150d57167bfc93f16e00ddb08deb08af12bb351217c4b4",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-explicit.stdout": "a66c9940b0438d517b2800bcd3a235b8a9ec28cbaf2725d3dcbc99f3a36ee3b7",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-explicit.stderr": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-explicit-runtime.stdout": "d1d9cf356dea5580f7421de281b0f45a17250b49353c723fd39362b8021ba781",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-explicit-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-all-features.stdout": "165d63cdaf40c2786e7058552833dff54fa15cba7a2ee13cff6a0dd3e3232fad",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-all-features.stderr": "0f61e0fd51f25ad1a4618a7e62d81669d45af389dacac5adaea16826b4d8b12b",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-all-features-runtime.stdout": "dd5db6c9d0986c63a5b92dc440105d066cde2b2486ffeb21a7af750f7622a288",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-all-features-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-workspace-no-default.stdout": "4a4cad226cbdcaed3f0ed089c1064bb4e98dda7601df1dafcd34a0ad9dd91c80",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-workspace-no-default.stderr": "affe45d447acc8c65d335940fa8b4e57047305e7ceefa46e7132b9ec23bf8b82",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-workspace-no-default-runtime.stdout": "113711d578d4870bec5e38474f21c1f4fd6063927a55d517ac19ddfb78250a61",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-workspace-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-tests-no-default.stdout": "e8e9309087d32909ee62ce4a11d695dad2efa2e40e9b6896adbc6f6ab082b4cb",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-tests-no-default.stderr": "6a2512c8122b41da6ede7de506a75d62c39ddfd1a26856e0c0d5df62301db7e1",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-tests-no-default-runtime.stdout": "77f5062b0d67eab688b87c43ea2972184143dba1c9db896be91ec6a3d805ff69",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r1-tests-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-all.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-host.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-host.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-windows.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-metadata-windows.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-qualified-self-feature.stdout": "8decf6bf9c13d662224fadeb88b7035adb226398cdc9b52e4a3ddcafff8cedf4",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-qualified-self-feature.stderr": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-qualified-self-feature-runtime.stdout": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-qualified-self-feature-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-default.stdout": "aa8ab14d7b519f4ddb006bddbd220014e42320e6d528751ed03f8abfc228124e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-default.stderr": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-default-runtime.stdout": "469eff2bfe9e326b511623e13c99a8594f3512e245616d0c2e014eacf3494410",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-no-default.stdout": "3c5d380cb0e30d51c75ba907e10f234210e5efef60242845a45be60159a9c5d9",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-no-default.stderr": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-no-default-runtime.stdout": "423bcbede51db4f47dea861bf8e7687a7cfb7661f22c3beeefed593cd908e417",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-explicit.stdout": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-explicit.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-explicit-runtime.stdout": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-explicit-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-all-features.stdout": "cf2af21f8c1990d0812fc85db5665bf9c446a538f41397e7d1b5317bd54e42d3",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-all-features.stderr": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-all-features-runtime.stdout": "5556c93a7e16341a997efbe7b2dae9ed81de0689d2ec2df85ed1bdb1ceade19d",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-all-features-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-workspace-no-default.stdout": "b3f09729ccbffca445827e537b87191c1c8582b7ecb59e074ae1d4874262264e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-workspace-no-default.stderr": "bb8b3fdcb43f76121d339ab64673da35b048126ee84fd27b131dc72ba7ea6cb4",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-workspace-no-default-runtime.stdout": "a08793be327199489dc895606e32576554c2d2024e7c74085c1edb71303dd90f",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-workspace-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-tests-no-default.stdout": "30256861d947f0f8a6e439de77a53850bfd8d5442e891250204bf3f3945f6c0a",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-tests-no-default.stderr": "719c495bd8152df4d33613e0a6728bb9b93b174da156d72824a48036cfdbb832",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-tests-no-default-runtime.stdout": "77833652a00c379b7e1d7f2c92f7f7cd221214f085e7061e438920b2b14764de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r2-tests-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-all.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-host.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-host.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-windows.stdout": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-metadata-windows.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-qualified-self-feature.stdout": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-qualified-self-feature.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-qualified-self-feature-runtime.stdout": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-qualified-self-feature-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-default.stdout": "43012fa44d4b247aba93b1beb8e2cd09e84f836b3fdf5600cb48b8303175ff3a",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-default.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-default-runtime.stdout": "469eff2bfe9e326b511623e13c99a8594f3512e245616d0c2e014eacf3494410",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-no-default.stdout": "df5140ffcb10828799a41b2499af422b7af120aa3ee6830bf02def6781f79d0c",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-no-default.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-no-default-runtime.stdout": "423bcbede51db4f47dea861bf8e7687a7cfb7661f22c3beeefed593cd908e417",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-explicit.stdout": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-explicit.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-explicit-runtime.stdout": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-explicit-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-all-features.stdout": "5734488ee806b9503f3072415ba182673daa2d34e903abbd962ba21f7669c033",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-all-features.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-all-features-runtime.stdout": "5556c93a7e16341a997efbe7b2dae9ed81de0689d2ec2df85ed1bdb1ceade19d",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-all-features-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-workspace-no-default.stdout": "0006dc70f210b3731a4cdbadfe2127468cb6b12b0cd68b0101411a9694851d11",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-workspace-no-default.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-workspace-no-default-runtime.stdout": "a08793be327199489dc895606e32576554c2d2024e7c74085c1edb71303dd90f",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-workspace-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-tests-no-default.stdout": "95458c32e1be65ffcd0e28b23bbfb8feac0b41116389b5cc96d08188498d0091",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-tests-no-default.stderr": "4737d5703ba421bfa053f767143a1f9d2acfb290c1f5103354ef8edf4641b1f7",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-tests-no-default-runtime.stdout": "77833652a00c379b7e1d7f2c92f7f7cd221214f085e7061e438920b2b14764de",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-tests-no-default-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-clean.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-features-20261124T181357949100Z/r3-clean.stderr": "e9603c35e3961f78001acffc2b9a64b18ba0abb5068d1114a9fa026ce4163b03"
+  },
+  "nativeBuildRuntimePairsMatchBothModels": 20,
+  "nativeQualifiedRefusalsMatchBothModels": 1,
+  "additionalFiniteModelAgreementCases": 54,
+  "invalidResearchInputsRefused": 9,
+  "metadataScopeCounterexamples": [
+    {
+      "resolver": 1,
+      "case": "metadata-all",
+      "mask": 479
+    },
+    {
+      "resolver": 1,
+      "case": "metadata-host",
+      "mask": 479
+    },
+    {
+      "resolver": 1,
+      "case": "metadata-windows",
+      "mask": 479
+    },
+    {
+      "resolver": 2,
+      "case": "metadata-all",
+      "mask": 479
+    },
+    {
+      "resolver": 2,
+      "case": "metadata-host",
+      "mask": 479
+    },
+    {
+      "resolver": 2,
+      "case": "metadata-windows",
+      "mask": 479
+    },
+    {
+      "resolver": 3,
+      "case": "metadata-all",
+      "mask": 479
+    },
+    {
+      "resolver": 3,
+      "case": "metadata-host",
+      "mask": 479
+    },
+    {
+      "resolver": 3,
+      "case": "metadata-windows",
+      "mask": 479
+    }
+  ],
+  "cases": [
+    {
+      "label": "r1-qualified-self-feature-refusal",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 2,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 101,
+        "normal": null,
+        "build": null
+      }
+    },
+    {
+      "label": "r1-default",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 31,
+        "build": 31
+      }
+    },
+    {
+      "label": "r1-no-default",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 15,
+        "build": 15
+      }
+    },
+    {
+      "label": "r1-explicit",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 1,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 47,
+        "build": 47
+      }
+    },
+    {
+      "label": "r1-all-features",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": true,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 63,
+        "build": 63
+      }
+    },
+    {
+      "label": "r1-workspace-no-default",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": true,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 463,
+        "build": 463
+      }
+    },
+    {
+      "label": "r1-tests-no-default",
+      "request": {
+        "resolver": 1,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": true
+      },
+      "observed": {
+        "code": 0,
+        "normal": 15,
+        "build": 15
+      }
+    },
+    {
+      "label": "r2-qualified-self-feature",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 2,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 33,
+        "build": 34
+      }
+    },
+    {
+      "label": "r2-default",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 17,
+        "build": 18
+      }
+    },
+    {
+      "label": "r2-no-default",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 1,
+        "build": 2
+      }
+    },
+    {
+      "label": "r2-explicit",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 1,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 33,
+        "build": 34
+      }
+    },
+    {
+      "label": "r2-all-features",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": true,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 49,
+        "build": 50
+      }
+    },
+    {
+      "label": "r2-workspace-no-default",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": true,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 321,
+        "build": 2
+      }
+    },
+    {
+      "label": "r2-tests-no-default",
+      "request": {
+        "resolver": 2,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": true
+      },
+      "observed": {
+        "code": 0,
+        "normal": 5,
+        "build": 2
+      }
+    },
+    {
+      "label": "r3-qualified-self-feature",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 2,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 33,
+        "build": 34
+      }
+    },
+    {
+      "label": "r3-default",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 17,
+        "build": 18
+      }
+    },
+    {
+      "label": "r3-no-default",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 1,
+        "build": 2
+      }
+    },
+    {
+      "label": "r3-explicit",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 1,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 33,
+        "build": 34
+      }
+    },
+    {
+      "label": "r3-all-features",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": false,
+        "allFeatures": true,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 49,
+        "build": 50
+      }
+    },
+    {
+      "label": "r3-workspace-no-default",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": true,
+        "tests": false
+      },
+      "observed": {
+        "code": 0,
+        "normal": 321,
+        "build": 2
+      }
+    },
+    {
+      "label": "r3-tests-no-default",
+      "request": {
+        "resolver": 3,
+        "context": "app-member-native-mac",
+        "projection": "compiled-roles",
+        "noDefault": true,
+        "allFeatures": false,
+        "featureArg": 0,
+        "workspace": false,
+        "tests": true
+      },
+      "observed": {
+        "code": 0,
+        "normal": 5,
+        "build": 2
+      }
+    }
+  ],
+  "limits": [
+    "Fixed three-package graph; macOS native normal/build/dev and inactive Windows declarations. No actual Windows compilation.",
+    "Metadata observations have a broader union; no complete metadata algorithm or conditional-only package filter qualification.",
+    "Forwarding follows matching admitted dependency uses; no optional/weak/renamed/proc-macro/artifact dependency qualification.",
+    "Role features match runtime/build-script witnesses and compiler feature sets, not counts of new physical units.",
+    "Resolver3 feature projection equals resolver2 here; no registry/MSRV fallback or general cache/fingerprint qualification.",
+    "Fifty-four extra inputs compare models only. Workspace requests are restricted to the captured no-default build; other root feature selection remains unmodeled. Decoder refusals are research-interface checks, not native CLI results.",
+    "Executables were measured before cleanup and are absent. Replay executes neither Cargo nor captured executables."
+  ]
+}

@@ -1,6 +1,6 @@
 # Cargo: feature requests and compilation contexts
 
-This is an intermediate native/source record. The role/default/target models and formal replay are still pending. No inventory operation is promoted, and no production change is selected.
+This band compares source-derived feature-context models with retained native observations. Twenty build/runtime pairs and one CLI refusal agree with both models. This qualifies the captured projection, not Cargo's complete resolver. No production change is selected.
 
 The fixture uses the pinned Cargo 1.92.0 source revision `344c4567c634a25837e3c3476aac08af84cf9203` and its recorded Rust compiler on macOS arm64. It extends the earlier [normal-feature band](README.md) and [workspace-selection band](WORKSPACES.md) with build/development roles, root defaults, dependency defaults, and resolver versions. It does not replace those earlier profiles or qualify the full resolver.
 
@@ -42,7 +42,23 @@ The same library is reachable through several dependency kinds, including an unc
 
 From the app member directory, resolver 1 refuses `--features fixture-app/explicit`, describing `fixture-app` as a missing dependency. The bare `--features explicit` succeeds there. The qualified form succeeds under resolvers 2 and 3. This is a bounded command-context observation; the fixture does not adjudicate every multi-package qualified-feature example in the documentation. The original collector's wrong success expectation is retained, not recast as a product fix.
 
-The test target prints the observed feature values and exits successfully. Its test-summary success alone is not a feature-policy assertion. The [observation checker](features_observations.py) independently matches those values to compiler-reported library feature sets. The [retained summary](features-observations.json) preserves all twenty executed results. Formal policy comparison remains pending.
+The test target prints the observed feature values and exits successfully. Its test-summary success alone is not a feature-policy assertion. The [observation checker](features_observations.py) independently matches those values to compiler-reported library feature sets. The [retained summary](features-observations.json) preserves all twenty executed results.
+
+## Models and replay
+
+[Lean](Features.lean) models five declaration edges, additive default and forwarded contributions, role admission, and the legacy qualified-syntax refusal. Fifteen laws establish contribution preservation, role separation, forwarded requests in both contexts, selected-root versus dependency defaults, and the limited resolver-2/3 equivalence. [Bend](Features.bend) implements the same projection with ten checked laws. These are closed fixture models; neither implements Cargo's general recursive resolver or fingerprint algorithm.
+
+The [replay](features_conformance.py) validates the manifest graph, reads resolver and request flags from the actual argument vectors and member-directory context, and compares the models with raw runtime output. Expected feature masks are not model inputs. The preceding observation check links those runtime values to compiler-reported library feature sets. The [comparison](features-comparison.json) retains the exact source/model/stream basis.
+
+All twenty executed feature pairs and the resolver-1 refusal match both models. Fifty-four additional request combinations establish agreement between the models only. Nine research-input controls reject an unknown schema, resolver, context, projection, feature argument, unsupported qualified or workspace request combination, missing field, or invalid Boolean. These are research-decoder tests, not native CLI outcomes. Workspace requests are limited to the captured no-default build: the library is itself a member, so extending this model to workspace-wide all-features would also require its direct root contributions. The nine metadata observations remain scope counterexamples; their constant broader union does not qualify a metadata algorithm.
+
+With the pinned tools, run:
+
+```sh
+LEAN=<pinned-lean> BEND=<pinned-bend> python3 applications/cargo/features_conformance.py
+```
+
+This command compiles the current Lean model into an ignored private output and replays retained data. `scripts/check-rules.py` separately checks every tracked model and law. Neither check executes Cargo, rebuilds packages, or runs the cleaned native executables. The owner-run collector remains outside ordinary CI.
 
 ## Internal and interface direction
 
@@ -55,7 +71,5 @@ Cargo's existing feature documentation and `cargo tree` inspection options are u
 For empack's current/0.9 design, retain recipe/side/runtime/request context alongside exact selection. A broader saved graph does not establish readiness for a particular artifact or host operation. Cargo's additive feature defaults must not be copied into unrelated negative constraints such as exact pins or ownership policies merely because both use Boolean fields.
 
 ## Remaining work
-
-Model the selected declaration and forwarding graph, role admission, positive default contributions, CLI context, metadata scope, and observed compiler/runtime projections in Lean and Bend. Keep the metadata constant-union observations as a bounded scope counterexample, not conformance of the complete metadata resolver. Include malformed research inputs and explain the premises of any set/identity laws.
 
 Optional/weak features, renamed dependencies, proc-macros, artifact dependencies, conditional-only packages, actual Windows/cross-target compilation, target CPU features, arbitrary defaults/membership, registry/version/MSRV selection, concurrency, compiler/cache failures, and general fingerprint/ABI behavior remain pending. The binary reports the pinned Cargo source commit, but this study does not rebuild Cargo or prove its complete implementation. No whole feature family or joined workspace workflow is qualified yet.

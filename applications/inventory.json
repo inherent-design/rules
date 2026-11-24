@@ -11580,23 +11580,71 @@
             },
             {
               "id": "default-features",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Features.lean;cargo/Features.bend",
+              "laws": [
+                "positive_contribution_survives",
+                "legacy_roles_equal",
+                "resolver_three_feature_projection",
+                "dependency_defaults_survive_root_no_default",
+                "default_forwarding_reaches_both_roles",
+                "test_dev_contribution_is_normal_only",
+                "inactive_windows_not_admitted"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-features-20261124T181357949100Z/receipt.json",
+                "evidence/cargo-features-20261124T181357949100Z/trace.json",
+                "cargo/features-comparison.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-features-selections.json"
+              ],
+              "negativeControls": [
+                "features_conformance.py:9 research decoder refusals; broader metadata union differs from selected runtime features; qualified legacy member syntax refused natively."
+              ],
+              "uxAssessment": "cargo/FEATURES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Fixed three-package path graph; pinned Cargo1.92/macOS native host and recorded compiler.",
+                "App-member CWD; workspace request limited to captured no-default build.",
+                "20 runtime/build-script feature pairs independently matched to compiler-reported feature sets, then both source-derived models.",
+                "target-features here means declaration/compilation contexts, not CPU feature flags; Windows-conditioned dependency is inactive, not cross-compiled."
+              ],
+              "evidenceLimit": "No general recursive resolver, metadata filtering algorithm, conditional-only package, CPU flags, Windows execution, MSRV selection, cache/fingerprint, or broad workspace-root feature qualification.",
+              "verificationPlan": "Extend conditional-only packages and actual target builds, direct workspace-root feature contributions, optional/weak/renamed/proc-macro/artifact edges, registry/MSRV and interrupted/concurrent contexts separately."
             },
             {
               "id": "target-features",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Features.lean;cargo/Features.bend",
+              "laws": [
+                "positive_contribution_survives",
+                "legacy_roles_equal",
+                "resolver_three_feature_projection",
+                "dependency_defaults_survive_root_no_default",
+                "default_forwarding_reaches_both_roles",
+                "test_dev_contribution_is_normal_only",
+                "inactive_windows_not_admitted"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-features-20261124T181357949100Z/receipt.json",
+                "evidence/cargo-features-20261124T181357949100Z/trace.json",
+                "cargo/features-comparison.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-features-selections.json"
+              ],
+              "negativeControls": [
+                "features_conformance.py:9 research decoder refusals; broader metadata union differs from selected runtime features; qualified legacy member syntax refused natively."
+              ],
+              "uxAssessment": "cargo/FEATURES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Fixed three-package path graph; pinned Cargo1.92/macOS native host and recorded compiler.",
+                "App-member CWD; workspace request limited to captured no-default build.",
+                "20 runtime/build-script feature pairs independently matched to compiler-reported feature sets, then both source-derived models.",
+                "target-features here means declaration/compilation contexts, not CPU feature flags; Windows-conditioned dependency is inactive, not cross-compiled."
+              ],
+              "evidenceLimit": "No general recursive resolver, metadata filtering algorithm, conditional-only package, CPU flags, Windows execution, MSRV selection, cache/fingerprint, or broad workspace-root feature qualification.",
+              "verificationPlan": "Extend conditional-only packages and actual target builds, direct workspace-root feature contributions, optional/weak/renamed/proc-macro/artifact edges, registry/MSRV and interrupted/concurrent contexts separately."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -12656,6 +12704,11 @@
           "id": "context-bound-workspace-inspection",
           "status": "proposed integration/inspection improvement;bounded Cargo behavior consistent,no product defect established",
           "document": "cargo/WORKSPACES.md"
+        },
+        {
+          "id": "role-bound-feature-inspection",
+          "status": "proposed caller/reporting improvement;bounded behavior consistent,no product defect established",
+          "document": "cargo/FEATURES.md"
         }
       ],
       "preservationDecisions": [],

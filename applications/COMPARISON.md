@@ -112,6 +112,8 @@ Local source packaging adds another boundary: Cargo can leave an archive after f
 
 Cargo workspace metadata adds effective-manifest context to the inspection basis: root defaults can differ from member defaults without source changes. CLI exclusion removes selected roots, while a still-required dependency can remain in the compiler-reported check set. Preserve those relations and improve caller scope/provenance before proposing another metadata service. This contrasts with workspace script selection rather than establishing a universal meaning of “excluded.” [Cargo context and dependency evidence](cargo/WORKSPACES.md).
 
+The [feature-context band](cargo/FEATURES.md) adds an important policy distinction: root no-default flags do not cancel another dependency declaration’s positive defaults. Forwarded requests can reach both normal and build uses, even when resolver 2/3 keeps their declaration features separate. Preserve the command and role context instead of describing every resolved feature as compiled. Workspace-wide all-features and conditional-only filtering still need their own evidence. Cargo’s positive feature contributions are not a substitute for empack’s pins, negative constraints, or file ownership rules.
+
 ### restic
 
 The [backup band](restic/BACKUP.md) supports preserving partial snapshot evidence after source errors, explicit reuse policy, and dry-run/unchanged distinctions. Existing status, stderr, and summary facts should remain linked; a returned snapshot ID in dry-run is a simulated result, not saved-reference evidence. Reread/new-data counters need their actual scopes. No backup product defect or policy change is selected.
