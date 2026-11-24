@@ -30,6 +30,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 **Incoming evidence and saved evidence can need different checks.** Empack's selected channel APIs correctly permit a newer signed offer, but reusing that admission for a stored envelope also accepts an inconsistent older stored floor. Exact saved-pair validation is a narrower proposed caller obligation, not a change to cryptography or monotone offer advancement. This finding comes from independent in-memory source checks, not a reproduced normal update or crash. [Source/model scope](empack/CHANNELS.md).
 
+**Saving an assignment and changing the effective value are different actions.** npm, pnpm, and Yarn use different default write scopes. A higher file or environment source can mask a successful edit. Yarn's measured set headline describes the effective override as what it wrote, and its custom-basename home writer and reader disagree. Preserve target, requested assignment, source, and result separately. [Configuration evidence and alternatives](js-config/README.md).
+
 **An event clock is not a saved image.** Native VS Code undo returns to a clean save point while its document version increases. Empack's proposed edit epoch rejects stale work, while saved-image identity answers whether the current draft is saved. Returning to the same image does not authorize an old attempt's background result. The file/provider incarnation and admitted storage revision remain separate.
 
 **Creating an artifact is not qualifying it.** Cargo retains a local archive after a deliberately failed build check and permits packaging with verification skipped. Its transformed distribution manifest and original author manifest have different roles. Consumers need the actual checked outcome and exact artifact identity before delivery; an expected pathname alone cannot supply either.
@@ -52,6 +54,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 ### npm
 
+The [configuration band](js-config/README.md) supports retaining the user default write target and existing per-file provenance list. Global-mode reads still include the user layer, so label the effective scope accurately rather than promising a raw global-file read.
+
 Preserve Arborist's distinction between edge validity, placement, and the provider a module actually resolves. The observed shared plugin uses API 1 for both consumers even though the right workspace directly supplies API 2. That valid binding should not be relabeled a failed installation merely because another package manager creates distinct contexts.
 
 A candidate inspection result should connect the direct declaration, requiring instance, actual provider, and retained reason. Removal could explain that a declaration disappeared while a parent still needs the package. Keep npm's observed missing-root no-op policy and successful identical re-adoption. Reuse `ls`/`explain` and existing reification data before inventing another graph or command.
@@ -64,6 +68,8 @@ The [publication band](js-peers/PUBLICATION.md) supports retaining acknowledged 
 
 ### pnpm
 
+The [configuration band](js-config/README.md) distinguishes global default writes from project-effective reads and key-specific INI/YAML destinations. Keep the current typed setting and routing rules. A per-key origin view needs attributable collector evidence; merged values alone cannot supply it.
+
 Preserve peer-context identity and the distinction between root visibility and retained reachability. In the fixture, the leaf stops being root-resolvable after direct removal while its parent still loads it. A root-level module lookup is therefore insufficient for either retention or absence claims.
 
 A useful diagnostic can distinguish “not directly declared” from “not present” and identify requiring roots when the graph is known. Keep missing-root refusal and policy checks; do not force-remove transitives or reclaim store content to make the output look successful. The existing `PeerSet` distinction between declared and taken peers should survive any internal cleanup.
@@ -75,6 +81,8 @@ The [lock-mode comparison](js-peers/LOCK-MODES.md) supports preserving pnpm's ex
 pnpm’s [single-publication path](js-peers/PUBLICATION.md) already has an internal published-summary error record, but drops it when rendering a later hook failure. Preserve that existing fact across the caller boundary rather than inventing another publication model. Ordinary registry conflicts, pnpr release confirmation, and availability polling have different evidence obligations.
 
 ### Yarn Berry
+
+The [configuration band](js-config/README.md) supports a focused set-result correction using the requested stored value and existing effective/source facts. Its custom-basename home read/write mismatch also needs a deliberate compatible target policy. Preserve environment precedence and current explicit JSON provenance; do not silently combine old conflicting home files.
 
 Preserve descriptors, resolved packages, virtual peer contexts, and materialization as different values. Same archive contents do not remove the need for context-specific identity. Immutable installation refuses a changed lock basis; it does not roll back the author's edited manifest or prove no incidental cache effect.
 

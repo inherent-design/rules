@@ -1,0 +1,4205 @@
+[
+  {
+    "app": "npm",
+    "case": "get-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.1476171249523759,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/npm/private/npm-get-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {
+      "NPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.09014141606166959,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/npm/private/npm-get-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-command",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry",
+      "--registry",
+      "https://command.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {
+      "NPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.0830925409682095,
+    "streams": {
+      "stdout": {
+        "rawSha256": "18fec7b9dd71f01bd4519b956dbed4738628aaeecd720749cb685114e716d1fb",
+        "publicSha256": "18fec7b9dd71f01bd4519b956dbed4738628aaeecd720749cb685114e716d1fb",
+        "rawPrivatePath": "work/npm/private/npm-get-command.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-command.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "set-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "set",
+      "registry",
+      "https://written.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08161720773205161,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-after-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08269958291202784,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/npm/private/npm-get-after-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-after-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "set-lower-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "set",
+      "registry",
+      "https://home-write.invalid/",
+      "--location=user"
+    ],
+    "cwd": "project",
+    "environment": {
+      "NPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08508837502449751,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-lower-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-lower-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {
+      "NPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08044504188001156,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/npm/private/npm-get-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-without-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08114716690033674,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/npm/private/npm-get-without-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-without-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "set-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "set",
+      "registry",
+      "https://project-write.invalid/",
+      "--location=project"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08270733384415507,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-set-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-after-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08951970795169473,
+    "streams": {
+      "stdout": {
+        "rawSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "publicSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "rawPrivatePath": "work/npm/private/npm-get-after-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-after-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "explain",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "list"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.083940792363137,
+    "streams": {
+      "stdout": {
+        "rawSha256": "dd1cf4e6b8a671edae6192f5cffac1e4023e3d0e1cf0f6157a2ef6adedb59074",
+        "publicSha256": "d05974adbeeac2e0d9dc6d61ec235554d008db9ea9589ea5c62818532c516948",
+        "rawPrivatePath": "work/npm/private/npm-explain.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-explain.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "unset-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "delete",
+      "registry",
+      "--location=project"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08646379224956036,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-unset-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-unset-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-after-unset",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.08255279203876853,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "publicSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "rawPrivatePath": "work/npm/private/npm-get-after-unset.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-after-unset.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "get-global",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "config",
+      "get",
+      "registry",
+      "--global"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      }
+    },
+    "seconds": 0.0811544586904347,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "publicSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "rawPrivatePath": "work/npm/private/npm-get-global.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/npm/private/npm-get-global.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "initialize-global",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "set",
+      "registry",
+      "https://global.invalid/",
+      "--global"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.039573332760483027,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-initialize-global.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-initialize-global.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011515500023961067,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {
+      "PNPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011564417276531458,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-command",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry",
+      "--registry",
+      "https://command.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {
+      "PNPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011487333104014397,
+    "streams": {
+      "stdout": {
+        "rawSha256": "18fec7b9dd71f01bd4519b956dbed4738628aaeecd720749cb685114e716d1fb",
+        "publicSha256": "18fec7b9dd71f01bd4519b956dbed4738628aaeecd720749cb685114e716d1fb",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-command.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-command.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "set-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "set",
+      "registry",
+      "https://written.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.017146583646535873,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-after-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011520874686539173,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "set-lower-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "set",
+      "registry",
+      "https://home-write.invalid/",
+      "--global"
+    ],
+    "cwd": "project",
+    "environment": {
+      "PNPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "872a2b15d1db127b1eeaf1108b27b69312b2cbff3d747d208e27cc643a71bae8",
+        "bytes": 34,
+        "content": "registry=https://written.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.017192041967064142,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-lower-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-lower-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {
+      "PNPM_CONFIG_REGISTRY": "https://environment.invalid/"
+    },
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011735707987099886,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-without-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.01129900012165308,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-without-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-without-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "set-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "set",
+      "registry",
+      "https://project-write.invalid/",
+      "--location=project"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.017565707676112652,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-set-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-after-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.01136645907536149,
+    "streams": {
+      "stdout": {
+        "rawSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "publicSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "explain",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "list"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011484916787594557,
+    "streams": {
+      "stdout": {
+        "rawSha256": "c722e2a7b902cc01f09f60b72ec5e184f84ce46a13b861f256e738d21978448f",
+        "publicSha256": "c722e2a7b902cc01f09f60b72ec5e184f84ce46a13b861f256e738d21978448f",
+        "rawPrivatePath": "work/pnpm/private/pnpm-explain.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-explain.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "unset-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "delete",
+      "registry",
+      "--location=project"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "7b46486951818bb97e915ccf0a9d297dab9d83465b6f13484316f9088da361c0",
+        "bytes": 40,
+        "content": "registry=https://project-write.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.0175205422565341,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-unset-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-unset-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-after-unset",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011711250059306622,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "publicSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-unset.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-after-unset.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "get-global",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "config",
+      "get",
+      "registry",
+      "--global"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "after": {
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/pnpm/auth.ini": {
+        "sha256": "6fc18b4893c364bab2319b343d16972e4dc324f23a8b18112550938cc894274c",
+        "bytes": 37,
+        "content": "registry=https://home-write.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/pnpm-workspace.yaml": {
+        "sha256": "3e682083a8652004cf518391973e8e1e2d37b60abfcb616b60b6f35858c01f7b",
+        "bytes": 20,
+        "content": "packages:\n  - child\n"
+      }
+    },
+    "seconds": 0.011529999785125256,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "publicSha256": "8f968baeb0a63b17a646812b972552ed9c52c473a886a71ec40c088f549383fb",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-global.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/pnpm/private/pnpm-get-global.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0901a31692bd5d4c28f128c888eb501fa743ba839a34b977391e53979ce55508",
+        "bytes": 44,
+        "content": "npmRegistryServer: https://project.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0901a31692bd5d4c28f128c888eb501fa743ba839a34b977391e53979ce55508",
+        "bytes": 44,
+        "content": "npmRegistryServer: https://project.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12162679200991988,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "publicSha256": "bffd053e64a67295488baa40016a6b73fb0b083de679ec3ba6c740a1a42bdeb3",
+        "rawPrivatePath": "work/yarn/private/yarn-get-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {
+      "YARN_NPM_REGISTRY_SERVER": "https://environment.invalid/"
+    },
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0901a31692bd5d4c28f128c888eb501fa743ba839a34b977391e53979ce55508",
+        "bytes": 44,
+        "content": "npmRegistryServer: https://project.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0901a31692bd5d4c28f128c888eb501fa743ba839a34b977391e53979ce55508",
+        "bytes": 44,
+        "content": "npmRegistryServer: https://project.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12445254065096378,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/yarn/private/yarn-get-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "set-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "set",
+      "npmRegistryServer",
+      "https://written.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0901a31692bd5d4c28f128c888eb501fa743ba839a34b977391e53979ce55508",
+        "bytes": 44,
+        "content": "npmRegistryServer: https://project.invalid/\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.13982237502932549,
+    "streams": {
+      "stdout": {
+        "rawSha256": "aeefac2e3ee21e088240700407b030ffdd23697feb6bc4d9fe86b6e3322332c1",
+        "publicSha256": "aeefac2e3ee21e088240700407b030ffdd23697feb6bc4d9fe86b6e3322332c1",
+        "rawPrivatePath": "work/yarn/private/yarn-set-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-set-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-after-default",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.15218270802870393,
+    "streams": {
+      "stdout": {
+        "rawSha256": "1216cd0a7b0d73e9094670e698dba5c5bfe8c9137a5545a3132aa29b93a1f2d5",
+        "publicSha256": "1216cd0a7b0d73e9094670e698dba5c5bfe8c9137a5545a3132aa29b93a1f2d5",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-default.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-default.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "set-lower-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "set",
+      "npmRegistryServer",
+      "https://home-write.invalid/",
+      "--home"
+    ],
+    "cwd": "project",
+    "environment": {
+      "YARN_NPM_REGISTRY_SERVER": "https://environment.invalid/"
+    },
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "dc1ff69c138e94d72063bf4b29d02828bf4e5c5dadac5f21487d46d2b99c11bc",
+        "bytes": 41,
+        "content": "npmRegistryServer: https://user.invalid/\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12775708409026265,
+    "streams": {
+      "stdout": {
+        "rawSha256": "3920838eeb9edc2a0db8c24852d315a906ccdd7b74125ffc076eeff92740bff0",
+        "publicSha256": "3920838eeb9edc2a0db8c24852d315a906ccdd7b74125ffc076eeff92740bff0",
+        "rawPrivatePath": "work/yarn/private/yarn-set-lower-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-set-lower-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-masked",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {
+      "YARN_NPM_REGISTRY_SERVER": "https://environment.invalid/"
+    },
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12551920814439654,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "publicSha256": "2674a2dd2bd96ad075dc64f4573c2f95b49f8e142031cbf7d2be9e6c24b2ae22",
+        "rawPrivatePath": "work/yarn/private/yarn-get-masked.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-masked.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-without-environment",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12473175022751093,
+    "streams": {
+      "stdout": {
+        "rawSha256": "1216cd0a7b0d73e9094670e698dba5c5bfe8c9137a5545a3132aa29b93a1f2d5",
+        "publicSha256": "1216cd0a7b0d73e9094670e698dba5c5bfe8c9137a5545a3132aa29b93a1f2d5",
+        "rawPrivatePath": "work/yarn/private/yarn-get-without-environment.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-without-environment.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "set-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "set",
+      "npmRegistryServer",
+      "https://project-write.invalid/"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "844352f136eae09386592d0f9d3e479f86db3e5b0b282340921480190aff201c",
+        "bytes": 46,
+        "content": "npmRegistryServer: \"https://written.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12488458305597305,
+    "streams": {
+      "stdout": {
+        "rawSha256": "6cd8c927da2864cbb2b4e48c96bde292a1d99a6285493bd1aa8ba37283d7a405",
+        "publicSha256": "6cd8c927da2864cbb2b4e48c96bde292a1d99a6285493bd1aa8ba37283d7a405",
+        "rawPrivatePath": "work/yarn/private/yarn-set-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-set-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-after-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12740237498655915,
+    "streams": {
+      "stdout": {
+        "rawSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "publicSha256": "d9393b8778edce8f87ddb78f89bafa2eef5a78a2d1606a1c40393ecdeba66a5d",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "explain",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "npmRegistryServer",
+      "--json"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12729249987751245,
+    "streams": {
+      "stdout": {
+        "rawSha256": "d374e238441e2709c8e60ec6b5903b1575f93c7af3b8b5ed5e3cdb81f98f4938",
+        "publicSha256": "ce58ad01f41c3bc6165313feea9db3d9f5b79738396afa716f906b51ccef04ed",
+        "rawPrivatePath": "work/yarn/private/yarn-explain.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-explain.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "unset-project",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "unset",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "0ee6b86cba0df8455d03f3efef39bf0f9049bcd9b639551dcdc37d865a11a229",
+        "bytes": 52,
+        "content": "npmRegistryServer: \"https://project-write.invalid/\"\n"
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12746666697785258,
+    "streams": {
+      "stdout": {
+        "rawSha256": "5725c3c1b6a6a5fa403ce8656adb628e905ba31e8e76bf001f4a8bfc917c32c0",
+        "publicSha256": "5725c3c1b6a6a5fa403ce8656adb628e905ba31e8e76bf001f4a8bfc917c32c0",
+        "rawPrivatePath": "work/yarn/private/yarn-unset-project.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-unset-project.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-after-unset",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12507037492468953,
+    "streams": {
+      "stdout": {
+        "rawSha256": "b87b9932621b6ff6d1c4391c51840c6f427d035a0fd823ae197e424921cef480",
+        "publicSha256": "b87b9932621b6ff6d1c4391c51840c6f427d035a0fd823ae197e424921cef480",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-unset.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-after-unset.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "get-child",
+    "argv": [
+      "/Users/[fixture-user]/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/[fixture-user]/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "config",
+      "get",
+      "npmRegistryServer"
+    ],
+    "cwd": "project/child",
+    "environment": {},
+    "before": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "after": {
+      "home/.fixture-yarnrc.yml": {
+        "sha256": "6294bd790f9b01bf8f9f58dee6b32f202151753f05e10cb8907f3eeadbd92c5f",
+        "bytes": 49,
+        "content": "npmRegistryServer: \"https://home-write.invalid/\"\n"
+      },
+      "config/global.npmrc": {
+        "sha256": "2171c872f9e347746e6222a58a10d12edc6c28575773b26f20cc501664e8a1e7",
+        "bytes": 33,
+        "content": "registry=https://global.invalid/\n"
+      },
+      "config/user.npmrc": {
+        "sha256": "b961ed4412240047cb401651b199c97df33a4bfc748abbeee23d4335ce62e773",
+        "bytes": 31,
+        "content": "registry=https://user.invalid/\n"
+      },
+      "project/.fixture-yarnrc.yml": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0,
+        "content": ""
+      },
+      "project/.npmrc": {
+        "sha256": "00da954e5c98bd08412891d6b3758ec25986841c1a7530c535e68851c4d32472",
+        "bytes": 34,
+        "content": "registry=https://project.invalid/\n"
+      },
+      "project/child/package.json": {
+        "sha256": "5fefde4e80c4c55285c563d6cefedaee7b4b0c43ebaf89643b99a6a83a50b704",
+        "bytes": 39,
+        "content": "{\"name\":\"config-child\",\"private\":true}\n"
+      },
+      "project/package.json": {
+        "sha256": "2cfc14f75c598a814e9723fbb6e1763ddcce8ea242407702dea79194ce4c3210",
+        "bytes": 69,
+        "content": "{\"name\": \"config-fixture\", \"private\": true, \"workspaces\": [\"child\"]}\n"
+      },
+      "project/yarn.lock": {
+        "sha256": "089e257cd8098d0d472a50dbfd762fbb89ec42b14cbc2a755ff8909b780f5eb8",
+        "bytes": 38,
+        "content": "# Fixture project marker; no install.\n"
+      }
+    },
+    "seconds": 0.12164195766672492,
+    "streams": {
+      "stdout": {
+        "rawSha256": "b87b9932621b6ff6d1c4391c51840c6f427d035a0fd823ae197e424921cef480",
+        "publicSha256": "b87b9932621b6ff6d1c4391c51840c6f427d035a0fd823ae197e424921cef480",
+        "rawPrivatePath": "work/yarn/private/yarn-get-child.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/yarn/private/yarn-get-child.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]
