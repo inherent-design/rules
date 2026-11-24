@@ -4,7 +4,7 @@ This band compares the actual current `empack-core::instance::plan_file` API wit
 
 A subsequent [observation-demand band](OBSERVATIONS.md) examines why preparation reads an ordinary existing seed before preserving it. Its sparse-file result is a read-footprint limitation and an API proposal, not a change to the ownership rules verified here.
 
-An intermediate [identity/recovery-evidence band](IDENTITY.md) executes selected native identity, binding, and fingerprint functions. It keeps persistent comparison separate from live authority; formal policy comparison and complete recovery execution remain pending.
+A bounded [identity/recovery-evidence band](IDENTITY.md) executes selected native identity, binding, and fingerprint functions. It keeps persistent comparison separate from live authority; 58 retained source-function outcomes match Lean and Bend, while complete recovery execution remains pending.
 
 ## Domain and authority
 

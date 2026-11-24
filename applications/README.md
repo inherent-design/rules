@@ -32,6 +32,8 @@ The [publication band](js-peers/PUBLICATION.md) separates generated archive iden
 
 The [restore-policy band](restic/RESTORE.md) separates existing content, overwrite/mtime admission, verification of actually restored files, and selected-directory deletion. It preserves the upstream whole-directory policy alongside a separately modeled child-preserving alternative. Seventeen private target outcomes leave general metadata, traversal, concurrency, and recovery pending.
 
+The [empack native identity band](empack/IDENTITY.md) compares 58 source-function outcomes with Lean and Bend. It separates live identity, durable comparison, content fingerprints, absence, unavailable evidence, and strict inner binding shape. Actual state lookup, root capture/revalidation, reboot behavior, and recovery execution remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

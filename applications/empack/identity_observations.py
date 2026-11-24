@@ -105,7 +105,7 @@ def main():
     report = dict(schema=1, cases=58, byKind=dict(counts), sourcePins=len(pins), snapshotByteEncodingsChecked=encoded,
         unsupportedFingerprintSides=unsupported,
         nativeVersusSyntheticOrigins=dict(collections.Counter(r['origin'] for r in rows)), postFixtureFilesVerified=len(expected),
-        limits=['Observed/source consistency and independent Python reconstruction of snapshot hash bytes only; formal policies remain pending.',
+        limits=['Observed/source consistency and independent Python reconstruction of snapshot hash bytes only; formal comparisons are separately recorded by identity_conformance.py.',
             'Durable object tokens are opaque native outputs; this checker does not independently recompute filesystem UUID evidence.',
             'Device/creation/object-field perturbations and errno failures are injected,not observed reboots,OS identifier changes,or permission incidents.',
             'Snapshots are assembled from fixture observations,not captured through real roots/scopes/filters or revalidated. Root association is a pure predicate with a binding-only adapter.',

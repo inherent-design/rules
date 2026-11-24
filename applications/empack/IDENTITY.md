@@ -1,6 +1,6 @@
 # Native identity, retained evidence, and recovery authority
 
-This is an intermediate source/native band for checkout `0b4462e3032b4f09230b15329722eabefb7f574c`. It executes selected unchanged identity, binding, and fingerprint code on macOS. Formal policy models and replay remain pending. It does not run a reboot, an installed-CLI recovery, or the complete engine, and no inventory operation is promoted.
+This is a bounded source/native/model band for checkout `0b4462e3032b4f09230b15329722eabefb7f574c`. It executes selected unchanged identity, binding, and fingerprint code on macOS. Lean and Bend compare the retained source-function results. It does not run a reboot, an installed-CLI recovery, or the complete engine, and it qualifies no complete native state or recovery workflow.
 
 ## Executed boundary
 
@@ -24,7 +24,7 @@ Snapshot entries are assembled by the fixture from native observations. Their un
 
 **Availability retains a capability boundary.** Injected unsupported/permission errno values return unavailable evidence, while the tested unrelated errors remain errors. These are calls to the unchanged classifier, not reproduced permission incidents. Unavailability does not silently become durable identity or grant recovery authority.
 
-The [observation checker](identity_observations.py) verifies source/artifact/stream identities, six post-run files, and independently reconstructs the snapshot encoding with Python. Twenty-two valid fingerprint sides match byte-for-byte; two sides report missing durable evidence without a fallback digest. The [summary](identity-observations.json) separates native observations, synthetic fields, supplied wire inputs, and assembled snapshots. It runs no native program or state operation. Formal comparison remains pending.
+The [observation checker](identity_observations.py) verifies source/artifact/stream identities, six post-run files, and independently reconstructs the snapshot encoding with Python. Twenty-two valid fingerprint sides match byte-for-byte; two sides report missing durable evidence without a fallback digest. The [summary](identity-observations.json) separates native observations, synthetic fields, supplied wire inputs, and assembled snapshots. It runs no native program or state operation. The [formal comparison](../evidence/empack-identity-20261124T193525996513Z/conformance.json) separately checks all 58 results against [Lean](Identity.lean) and [Bend](Identity.bend).
 
 ## API and interface direction
 
@@ -32,4 +32,21 @@ Preserve the existing distinction between `ObjectIdentity`, `JournalBinding`, `B
 
 One possible reporting improvement is retaining why durable evidence is unavailable. The current classifier deliberately collapses unsupported capability and selected permission failures into `None`, which lets live observations continue. A caller that needs persistence must still refuse. Review existing diagnostics before choosing an additional typed reason or companion report; do not weaken that refusal or introduce another identity fallback merely to improve wording. The injected cases do not establish a current host permission problem.
 
-Next, model live versus durable comparison, optional absence, strict wire shape, fingerprint projection, association naming, and availability in Lean and Bend. Compare independently derived model inputs with the retained results; do not treat the expected decisions or hash equality as input facts. Keep codec admission separate from a record's execution authority. Then continue the actual root lookup, read-only recovery planning, operation/revision approval, restoration direction, retained-image verification, and interrupted publication/creation lifecycle. Use isolated fixtures and preserve the distinction between source methods, current checkout, and installed release behavior. Live user recovery state remains outside this study.
+## Models and replay
+
+The models distinguish strict live equality, durable token comparison, optional absence, inner binding shape, structural fingerprint inputs, association naming, and selected availability classes. Lean provides 23 laws, and Bend provides 12. The [research decoder](IdentityCase.lean) rejects 14 unsupported inputs, including repeated or unordered paths, inconsistent node payloads, invalid equality labels, and unknown profiles. These are research refusals, not additional production validation.
+
+The [replay](identity_conformance.py) derives inputs from raw recorded values and compares both models with all 58 retained outcomes. Per-field injective labels preserve equality without treating large inode numbers or hashes as arithmetic. Duplicate-preserving JSON parsing keeps repeated members visible. Numeric atom magnitudes saturate at 256 because this shape predicate distinguishes only sign and byte range; successful decoded bytes are checked separately. The models do not parse JSON text or implement SHA-256. Python independently reconstructs 22 valid hash-input encodings and checks the two unavailable sides.
+
+Association names are recomputed from the original raw binding and the fixture's wrong-name request. The native wrapper stored its pre-call record/name arguments alongside its outcome; the replay verifies those arguments rather than feeding the returned match or error into a model. Snapshot comparisons retain canonical path and directory-member order as an explicit premise. Structural equality predicts the observed digest comparisons only for these inputs; it supplies no cryptographic injectivity proof or execution permission.
+
+Run retained-data comparison without starting empack or rustc:
+
+```sh
+LEAN=/path/to/pinned/lean BEND=/path/to/pinned/bend \
+  python3 applications/empack/identity_conformance.py
+```
+
+## Remaining qualification
+
+Continue the actual root lookup, read-only recovery planning, operation/revision approval, restoration direction, retained-image verification, and interrupted publication/creation lifecycle. Use isolated fixtures and preserve the distinction between source methods, current checkout, and installed release behavior. Linux/Windows providers, actual reboot behavior, root capture/revalidation, outer record admission, and complete recovery remain pending. Live user recovery state remains outside this study.
