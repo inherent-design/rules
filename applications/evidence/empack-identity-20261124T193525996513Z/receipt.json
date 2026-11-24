@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "compiler": {
+    "path": "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+    "sha256": "1ba7bb8e273bd64125f4048d2ecce530e0a6470e565ab1b3aecf0b82b532f7b1",
+    "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: aarch64-apple-darwin\nrelease: 1.99.1\nLLVM version: 23.1.1\n"
+  },
+  "libraries": {
+    "anyhow": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "sha256": "de0aec8659ffc513a77813f88dca2b4c20dcb284232cdc030507a04ee5367992",
+      "bytes": 1215808
+    },
+    "serde": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "sha256": "33518018aae21f5ae89f51de6f10ef446056dd1f90b7a5c4f621bda287c369c6",
+      "bytes": 1090840
+    },
+    "serde_json": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "sha256": "b5aecadc5340d057acb06a2c76bb8ae2bc9bababef597c64b9f805f83bd47170",
+      "bytes": 3534032
+    },
+    "sha2": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "sha256": "9dd5472a352b9226503f156dc0f771545f56b39446fc7e0940d9f50d4fdc3f39",
+      "bytes": 1577112
+    },
+    "libc": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "sha256": "cb731ec6df481246cf20a955d8f8a6179a33e76211aa201109229f1300393567",
+      "bytes": 3776832,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/libc-57e3d4331ab41dea/lib-libc.json",
+      "fingerprintSha256": "42e70a0f2714864b68bca669985aff196179e8f03c2337aa2cbdc51f6e8f6b36",
+      "features": "[\"default\", \"extra_traits\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    }
+  },
+  "sourceSelections": [
+    {
+      "path": "crates/empack-lib/src/engine/native.rs",
+      "start": "#[derive(Debug, Clone, Copy, PartialEq, Eq)]\npub(super) struct ObjectIdentity",
+      "stop": "\npub(super) fn directory_identity(",
+      "firstLine": 13,
+      "lastLine": 73,
+      "sha256": "734d71aabd8a342c8d986918b30794b68feb3e80a9d9548e0df3c0a206854e92"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/snapshot.rs",
+      "start": "/// Observed bytes, including raw document bytes.",
+      "stop": "#[derive(Debug)]\npub(super) struct CaptureGroup",
+      "firstLine": 191,
+      "lastLine": 217,
+      "sha256": "3b56833cfcb6205b35c6c23efd9b120466e6e5dd44572faadae650b3ffe2c904"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/snapshot.rs",
+      "start": "/// Immutable native evidence bound to one retained project root.",
+      "stop": "\nimpl NativeSnapshot {",
+      "firstLine": 224,
+      "lastLine": 231,
+      "sha256": "3e9e6c4bd3338f9ae3403944d8d9a28fd44b2b02e0576c9a07b63b2f8b734470"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/snapshot.rs",
+      "start": "    /// Persisted comparison data only.",
+      "stop": "    /// Filtered directory membership",
+      "firstLine": 233,
+      "lastLine": 279,
+      "sha256": "ef88abc3857dfff6b6598c5c8be66c0885f9ae92d13b2f7856af4863d3eb1f42"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]\n#[serde(deny_unknown_fields)]\nstruct Binding",
+      "stop": "#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]\n#[serde(deny_unknown_fields)]\nstruct Fingerprint",
+      "firstLine": 176,
+      "lastLine": 192,
+      "sha256": "10da2e7d6e5d8d26425a35427c976f078b640780fa3b2ebb408b97cc507a9522"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "fn binding_key(",
+      "stop": "\nfn discard_sibling(",
+      "firstLine": 811,
+      "lastLine": 821,
+      "sha256": "f8ff3bd725b36bcb94f7311450fd09f3a8846f9caa49a21dc3a29087429f645e"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+      "start": "#[derive(Serialize, Deserialize)]",
+      "stop": "\nfn read(",
+      "firstLine": 35,
+      "lastLine": 41,
+      "sha256": "fbf03eca7bf5be110e90c500d72bfb53a59e2287eb771def0aa8fd96716e3469"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+      "start": "fn matches(",
+      "stop": "\nimpl Publisher {",
+      "firstLine": 69,
+      "lastLine": 79,
+      "sha256": "b1d91b950be197e6036bf51940e35739c7ef0c1e759202a38f83734bf52bfc4c"
+    }
+  ],
+  "sourceSha256": {
+    "crates/empack-lib/src/engine/native.rs": "7fa4bddfa4f77b508c1475d18d6119f4f4c92e7c4f5db13239eb993cbebb5b2e",
+    "crates/empack-lib/src/engine/native/persistent.rs": "c6af33a5c39716391da9197421d8e1a5553d904da00681a0c91eb01e66e34e67",
+    "crates/empack-lib/src/engine/snapshot.rs": "459845d9b66ba6777d498913fe30841c66b36712683d7a2b0a42505e597aabf2",
+    "crates/empack-lib/src/engine/publication/journal_identity.rs": "4fa15c80d309fb949c9c5c9510f91a7754b51e7d8b821f4bcb6fa75d0cc79b56",
+    "crates/empack-lib/src/engine/publication.rs": "945bdf2751623520264ea57ff83c5dd721462b0790ab7ed87f5e2eca6151f856",
+    "crates/empack-lib/src/engine/publication/root_state.rs": "18f4ea3339fdbe91b892784abcd7623b2242ce24a5f13ddd22d1e5723b5b295b",
+    "crates/empack-core/src/path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "crates/empack-lib/src/engine/snapshot/tests.rs": "1fb77a955d5c5c94354803dd8a84ef1bb7991edc8779cfea0aad399fc11b7e0d",
+    "crates/empack-lib/src/engine/publication/tests/identity.rs": "163423f8002b4da6f366b2abfbc97a36211110c2090181912c4258d599a3daba",
+    "crates/empack-lib/src/engine/api/recovery.rs": "66e631f7f2d704670bcb2efc5b69e8a58d803ca416464c32ebbfd4ef1d6dd985",
+    "crates/empack-lib/src/engine/api/recovery_tests.rs": "d638d588215e77100d55eeb2d00c0927869b04ac53022f5afd8806a9ce8dbc14",
+    "crates/empack-lib/src/engine/publication/recovery.rs": "e239232338b5a61f9fc02b1d9408fc957cae992a652bee5c5ca6b22fc25df18a",
+    "crates/empack-lib/src/engine/publication/creation/recovery.rs": "81599c4d4c3e2983eff91b1b455a22948efcd06c54b367739325e526c9bdc232"
+  },
+  "cargoLockSha256": "6b837285c6a84e87e4e9a5e521ac06114fa74723b87cc396656e628c1bb37b5a",
+  "producerSha256": "dfacb947a8a679ada5906f909902fe00101fd0ef6939b12ded4f91826d9bb336",
+  "driverSha256": "f1a9ba34bc2ad53bab308c7517ba9de039bc94d5a53774e6167ff3e8a4b7e617",
+  "generatedSha256": {
+    "journal_identity.rs": "4fa15c80d309fb949c9c5c9510f91a7754b51e7d8b821f4bcb6fa75d0cc79b56",
+    "path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "main.rs": "82eccf27562e538c3781b1a9440c2628315c8a764e4565956b431feefd793e7f",
+    "persistent.rs": "6f947f4609d52013d89423b64d4695feefc318e5b77afe1351a4c12122c65629"
+  },
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "limits": [
+    "Selected unchanged source functions/types with existing dependencies; no Cargo or full engine build.",
+    "Native macOS files/FFI plus explicitly marked synthetic field and errno inputs; no actual reboot or Linux/Windows execution.",
+    "Snapshot entries are assembled by fixture,with unused CaptureGroup marker. Capture/scopes/filtering/revalidation/write authority are not executed.",
+    "Association matches uses a binding-only root adapter and valid schema1 typed record; real discovery/schema read/locks/state migration are excluded.",
+    "No actual user project,state/operation store,retained production journal,publication,installation,creation or recovery is accessed."
+  ],
+  "binarySha256": "58d35b761e305f5a96b7cdcdfd2fad65296fdc5d43e51a5e067fced8ef8ddc79",
+  "binaryBytes": 1905328,
+  "commands": [
+    {
+      "case": "compile",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-Cdebuginfo=0",
+        "-Cstrip=debuginfo",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-identity-20261124T193525996513Z/work/main.rs",
+        "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+        "--extern",
+        "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+        "--extern",
+        "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+        "--extern",
+        "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+        "--extern",
+        "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+        "--extern",
+        "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+        "-o",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-identity-20261124T193525996513Z/work/identity-driver"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 1.944877749774605,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "observed",
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-identity-20261124T193525996513Z/work/identity-driver",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-identity-20261124T193525996513Z/work/native-files"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 0.2473592502065003,
+      "stdoutSha256": "fd3f771dbf7d20f63f0e56a52648ae89787e3609bf4a4f97835b51556bb672ed",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
