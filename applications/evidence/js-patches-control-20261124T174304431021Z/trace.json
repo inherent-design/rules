@@ -1,0 +1,1303 @@
+[
+  {
+    "app": "pnpm",
+    "case": "initial-install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-frozen-lockfile",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": null
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "e72200409ece27e5b8ba59dc528055c682d1be16c6bc2ba5655a842dea0660bd",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "initial-install-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "a0752e1a145b1f059a8dfbd85a59968a390b7ed03e97ec54581c99462be85c3e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "prepare",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "patch",
+      "fixture-patch",
+      "--edit-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/edit-prepare",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "8b4b3993ca2f1060168f056460b802484ae5a21425e35dbc154fa4db2a77c150",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "commit",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "patch-commit",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/edit-prepare",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd",
+            "bytes": 673,
+            "captured": "files/ba16e5007e93fe1e4fb317a081c302e4ecb678c00e320feeb9699debe92cfebd.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "a4ea8dd6dc7ac9c2433034fb6288722030532d2992d9353eaa47a9a5fdb5faf5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "commit-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "f956b2e5011de4c3cb1705213467410e1eb3b72af7b8a3ebfc6d308458ac44a7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "frozen-after-commit",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--frozen-lockfile",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "d6a754c5f3aeb4540c279b98d96e9075f4f7578ea034990c24957cbccc2c321d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "frozen-after-commit-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "f956b2e5011de4c3cb1705213467410e1eb3b72af7b8a3ebfc6d308458ac44a7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "install-patch",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-frozen-lockfile",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "33d93b0498eb4f794fc10755ed5a665b9eb0ec9f46f3d1095cb8c97170f7beff",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "install-patch-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "f956b2e5011de4c3cb1705213467410e1eb3b72af7b8a3ebfc6d308458ac44a7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "invalid-apply",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-frozen-lockfile",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7",
+            "bytes": 236,
+            "captured": "files/99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7",
+            "bytes": 236,
+            "captured": "files/99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "6ad424269422b26e9c1b2b97c36e8c70bdefb696c0b5f1579cf893c0d8359568",
+      "stderrSha256": "0e26ae5b53c8574f024ff7370acdf670ef3f98bc9ab2cc7220b678d0a30586ec"
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "invalid-apply-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7",
+            "bytes": 236,
+            "captured": "files/99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7",
+            "bytes": 236,
+            "captured": "files/99bf25b447c26c78a90c47c1761d0b112a37e7e4a73a144dee8bcebae0c07db7.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "07afa0675f2ac3eacd4b9a51c1a215ad2945efa664996f6603a2668286109161",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "restore-valid",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-frozen-lockfile",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "7cb1c2ad1eda6a416ad63f293b9db104ed7ad5a336bc18be62298b7cd5df1a66",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "restore-valid-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "stdoutSha256": "07afa0675f2ac3eacd4b9a51c1a215ad2945efa664996f6603a2668286109161",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "force-valid-repair",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-frozen-lockfile",
+      "--force",
+      "--store-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/store",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/state"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=99bf25b447c26c78a90c47c1761_03a6653a8cb18addd3bcb107eede326c/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"base\";\n",
+          "sha256": "56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8",
+          "bytes": 25,
+          "captured": "files/56751010d8f678325da2c8c1352889a090a3a557d6874d3fb8f82725784e1db8.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "5d12f1767a0dcbc5286f185ef3d36064e24bad246c32bb1868d59c19b51e4227",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "force-valid-repair-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try{console.log(JSON.stringify({value:require(\"fixture-patch\"),path:require.resolve(\"fixture-patch\")}))}catch(e){console.log(JSON.stringify({error:e.code}))}"
+    ],
+    "observed": {
+      "before": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "after": {
+        "files": {
+          "package.json": {
+            "sha256": "50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277",
+            "bytes": 230,
+            "captured": "files/50046a7dd4938e54178b4da06c4f2663137ef5bb72e386ae50b4eb4cd63e4277.txt"
+          },
+          "pnpm-workspace.yaml": {
+            "sha256": "ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9",
+            "bytes": 66,
+            "captured": "files/ee99c8232eddc0f49d4976862cb081e60f5026dd0d335b98b7df874640a683f9.txt"
+          },
+          "pnpm-lock.yaml": {
+            "sha256": "97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77",
+            "bytes": 931,
+            "captured": "files/97cf27c8c483ba205030807a304f10d29f8cda83be2458ff696e12a011947e77.txt"
+          },
+          ".npmrc": {
+            "sha256": "2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7",
+            "bytes": 61,
+            "captured": "files/2f83f0e1f18b332fc3cc996f2d60f8b7dc2ab62cec32c2e67fbd99a3eacbc6a7.txt"
+          },
+          "patches/fixture-patch.patch": {
+            "sha256": "7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d",
+            "bytes": 226,
+            "captured": "files/7eeca4943626bb1ee2865dbf9203a9339b6c46fc4bafde13e93695360679280d.txt"
+          }
+        },
+        "installed": {
+          "path": "/Users/zer0cell/production/rules/applications/evidence/js-patches-control-20261124T174304431021Z/work/pnpm/project/node_modules/.pnpm/fixture-patch@file+..+..+fixture-patch-1.0.0.tgz_patch_hash=7eeca4943626bb1ee2865dbf920_3fe7ca6f7ff88143fcba96983ebbac93/node_modules/fixture-patch/index.js",
+          "content": "module.exports = \"patched\";\n",
+          "sha256": "928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6",
+          "bytes": 28,
+          "captured": "files/928416e9588a3cdb0d39c6a7801bb3b2f611732eb61dd7648c7d649ab0686aa6.txt"
+        }
+      },
+      "stdoutSha256": "f956b2e5011de4c3cb1705213467410e1eb3b72af7b8a3ebfc6d308458ac44a7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]
