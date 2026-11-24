@@ -128,6 +128,8 @@ The [restore band](restic/RESTORE.md) shows why a successful `--verify` request 
 
 ### Mod Organizer 2
 
+The [output/sync band](mo2/OUTPUTS.md) adds a destructive failure boundary: the selected sync methods remove the old destination before a move that can fail. Preserve confirmed per-file effects and require a checked replacement or verified old-backing retention before a correction claims recoverability. Real Qt/macOS source-method evidence does not qualify Windows MO2, USVFS routing, or the separate shell-move/create-mod workflow. Reuse appropriate existing filesystem helpers after reviewing their guarantees; a broad transaction framework is not selected.
+
 Preserve profile-local activation, installed metadata, eligible origins, backing-kind rank, plugin rules, and the effective view. The source ordering compares loose/archive kinds and their own rank, rather than only mod priority. The activation source also shows why dirty notification history cannot supply a unique net-change count.
 
 A candidate inspection result should identify the profile/catalog/environment basis, winning origin and alternatives, comparison rule, skipped requests, and net effects. Keep existing ordered callbacks for listeners. Reuse refresh/ready mechanisms and existing conflict views before adding another scheduler or interface. A profile update is not proof of saved profile files or completed VFS state.

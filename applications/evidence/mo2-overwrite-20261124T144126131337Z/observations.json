@@ -1,0 +1,1695 @@
+[
+  {
+    "case": "move",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/move",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "dont-sync",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/dont-sync",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": -1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": -1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "missing-destination",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/missing-destination",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to remove /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/missing-destination/mods/A/a.txt"
+      ],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "readonly-target",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/readonly-target",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 365,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 365,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to remove /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/readonly-target/mods/A/a.txt"
+      ],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "readonly-source",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/readonly-source",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 365,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 365,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to move /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/readonly-source/source/a.txt to /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/readonly-source/mods/A/a.txt"
+      ],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "source-gone-after-preview",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-gone-after-preview",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": [
+        "source/a.txt"
+      ]
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to move /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-gone-after-preview/source/a.txt to /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-gone-after-preview/mods/A/a.txt"
+      ],
+      "interventions": [
+        {
+          "relative": "source/a.txt",
+          "removed": true
+        }
+      ],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "destination-gone-after-preview",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/destination-gone-after-preview",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": [
+        "mods/A/a.txt"
+      ]
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to remove /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/destination-gone-after-preview/mods/A/a.txt"
+      ],
+      "interventions": [
+        {
+          "relative": "mods/A/a.txt",
+          "removed": true
+        }
+      ],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "nested",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/nested",
+      "files": [
+        {
+          "relative": "sub/caf\u00e9 \u03a9.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/sub": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/sub/caf\u00e9 \u03a9.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/sub": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/sub/caf\u00e9 \u03a9.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/sub": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/sub/cafe\u0301 \u03a9.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "sub/caf\u00e9 \u03a9.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "sub/caf\u00e9 \u03a9.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "sub/caf\u00e9 \u03a9.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "unknown-entry",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/unknown-entry",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": false,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": null
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": -1,
+          "options": [
+            -1
+          ],
+          "relative": "a.txt",
+          "selected": -1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "metadata-file",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/metadata-file",
+      "files": [
+        {
+          "relative": "meta.ini",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": null
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/meta.ini": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/meta.ini": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/meta.ini": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/meta.ini": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "meta.ini": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "meta.ini": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "relative": "meta.ini",
+          "widgetPresent": false
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "default-alternative",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/default-alternative",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1,
+            2
+          ],
+          "choice": null
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "e3f70a1178010a1aa290db2a60416eaeb614acff8279ced87defe54e42d97516"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/B/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": true,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": true,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 2,
+          "options": [
+            -1,
+            1,
+            2
+          ],
+          "relative": "a.txt",
+          "selected": 2,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "only-overwrite",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/only-overwrite",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [],
+          "choice": null
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": -1,
+          "options": [
+            -1
+          ],
+          "relative": "a.txt",
+          "selected": -1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "partial-batch",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/partial-batch",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        },
+        {
+          "relative": "b.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/b.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "e3f70a1178010a1aa290db2a60416eaeb614acff8279ced87defe54e42d97516"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      },
+      "source/b.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 11,
+        "sha256": "343d931cebdbd7bed344270b7feba0d9821fafd7d2430581f063b32e144c6a43"
+      }
+    },
+    "after": {
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/b.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 11,
+        "sha256": "343d931cebdbd7bed344270b7feba0d9821fafd7d2430581f063b32e144c6a43"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        },
+        "b.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": false,
+          "mods/B": false,
+          "source": true
+        },
+        "b.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        },
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "b.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [
+        "failed to remove /Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/partial-batch/mods/A/a.txt"
+      ],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "source-link",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-link",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "canary.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 13,
+        "sha256": "909afa08650b6bcbe987e5b9a33377afc4236d2a09634a6347a6d781016fc271"
+      },
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 6,
+        "sha256": "c0c7517699211f77953040aa2c61d4ac9c81d3cc73fa38d02dab76e85d119223"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 493,
+        "kind": "symlink",
+        "target": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-link/canary.txt"
+      }
+    },
+    "after": {
+      "canary.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 13,
+        "sha256": "909afa08650b6bcbe987e5b9a33377afc4236d2a09634a6347a6d781016fc271"
+      },
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 493,
+        "kind": "symlink",
+        "target": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/source-link/canary.txt"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  },
+  {
+    "case": "destination-link",
+    "request": {
+      "root": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/destination-link",
+      "files": [
+        {
+          "relative": "a.txt",
+          "entryPresent": true,
+          "primary": 0,
+          "alternatives": [
+            1
+          ],
+          "choice": 1
+        }
+      ],
+      "removeBeforeApply": []
+    },
+    "before": {
+      "canary.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 13,
+        "sha256": "909afa08650b6bcbe987e5b9a33377afc4236d2a09634a6347a6d781016fc271"
+      },
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 493,
+        "kind": "symlink",
+        "target": "/Users/[fixture-user]/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/cases/destination-link/canary.txt"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      }
+    },
+    "after": {
+      "canary.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 13,
+        "sha256": "909afa08650b6bcbe987e5b9a33377afc4236d2a09634a6347a6d781016fc271"
+      },
+      "mods": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "mods/A/a.txt": {
+        "mode": 420,
+        "kind": "file",
+        "bytes": 9,
+        "sha256": "1e3e6b74c89f30be9a6d8d5e30766880927958c84501f6c3b2d438b2565de408"
+      },
+      "mods/B": {
+        "mode": 493,
+        "kind": "directory"
+      },
+      "source": {
+        "mode": 493,
+        "kind": "directory"
+      }
+    },
+    "result": {
+      "afterApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": false
+        }
+      },
+      "beforeApply": {
+        "a.txt": {
+          "mods/A": true,
+          "mods/B": false,
+          "source": true
+        }
+      },
+      "choices": [
+        {
+          "default": 1,
+          "options": [
+            -1,
+            1
+          ],
+          "relative": "a.txt",
+          "selected": 1,
+          "widgetPresent": true
+        }
+      ],
+      "errors": [],
+      "interventions": [],
+      "platformPlugin": "offscreen",
+      "qt": "6.12.0",
+      "schema": 1
+    }
+  }
+]

@@ -1,0 +1,429 @@
+[
+  {
+    "case": "compile",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+      "-std=c++20",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O0",
+      "-g0",
+      "-I",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/driver.cpp",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtWidgets",
+      "-I/opt/homebrew/lib/QtWidgets.framework",
+      "-DQT_WIDGETS_LIB",
+      "-I/opt/homebrew/include/QtGui",
+      "-I/opt/homebrew/lib/QtGui.framework",
+      "-DQT_GUI_LIB",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtWidgets",
+      "-framework",
+      "QtGui",
+      "-framework",
+      "QtCore"
+    ],
+    "pid": 95773,
+    "seconds": 1.455502666067332,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/compile.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/compile.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "move",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/move.json"
+    ],
+    "pid": 96068,
+    "seconds": 1.8800694160163403,
+    "streams": {
+      "stdout": {
+        "rawSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "publicSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "rawPrivatePath": "work/private/move.stdout"
+      },
+      "stderr": {
+        "rawSha256": "30fe497b7fbc0130e604cc78f56330b8e18e51391c8785581d748b4c4ded32ad",
+        "publicSha256": "30fe497b7fbc0130e604cc78f56330b8e18e51391c8785581d748b4c4ded32ad",
+        "rawPrivatePath": "work/private/move.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "dont-sync",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/dont-sync.json"
+    ],
+    "pid": 96677,
+    "seconds": 0.2477498329244554,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8633dbe31a95f28d5d498d7fb6e9e741635193a1142e867705d02f647e7c1c6c",
+        "publicSha256": "8633dbe31a95f28d5d498d7fb6e9e741635193a1142e867705d02f647e7c1c6c",
+        "rawPrivatePath": "work/private/dont-sync.stdout"
+      },
+      "stderr": {
+        "rawSha256": "3a7572b5bcc1f41920b4e99532238a5401f1843116117d51c0a2c116df20d745",
+        "publicSha256": "3a7572b5bcc1f41920b4e99532238a5401f1843116117d51c0a2c116df20d745",
+        "rawPrivatePath": "work/private/dont-sync.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "missing-destination",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/missing-destination.json"
+    ],
+    "pid": 96679,
+    "seconds": 0.2423842498101294,
+    "streams": {
+      "stdout": {
+        "rawSha256": "14bc5e95e54e474fe8f275855cdce14d991273610d10e41d2035dab151be72b0",
+        "publicSha256": "6bdd43e62ed3ea7bfbf52e0ccf66e69bfcb6dd3c3e19a0b9a3d0d565045efb86",
+        "rawPrivatePath": "work/private/missing-destination.stdout"
+      },
+      "stderr": {
+        "rawSha256": "9324a8097b7b823123ce005a4290142d338bfb37efb4ce8455ab697f8b73b651",
+        "publicSha256": "9324a8097b7b823123ce005a4290142d338bfb37efb4ce8455ab697f8b73b651",
+        "rawPrivatePath": "work/private/missing-destination.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "readonly-target",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/readonly-target.json"
+    ],
+    "pid": 96730,
+    "seconds": 0.2623784998431802,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e1e67c570f0d7b27e5a4172e46a78a2b00105c6389c1b102303dd610df8e07d7",
+        "publicSha256": "0c80e74e9659ab4bb6fbd601b728c156778e42b9dca15c441fb10418b08f7fdc",
+        "rawPrivatePath": "work/private/readonly-target.stdout"
+      },
+      "stderr": {
+        "rawSha256": "3e758f2a56e97593390d712a1933f95780e0a2a931b04c4f9639c9e6a9a72ba4",
+        "publicSha256": "3e758f2a56e97593390d712a1933f95780e0a2a931b04c4f9639c9e6a9a72ba4",
+        "rawPrivatePath": "work/private/readonly-target.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "readonly-source",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/readonly-source.json"
+    ],
+    "pid": 97009,
+    "seconds": 0.25864450028166175,
+    "streams": {
+      "stdout": {
+        "rawSha256": "3e562c0dea09ab959daa385c84be35b592297b2d69953e7ed3da0379c47a8e44",
+        "publicSha256": "b13d8620c03ae737bbfaaa34bbf53fe97f9e5d4d622e5882eb112e8ed8628544",
+        "rawPrivatePath": "work/private/readonly-source.stdout"
+      },
+      "stderr": {
+        "rawSha256": "c55ac91aa3c80f1af83b5168538f3fd9006099e8d15b58a58756b728dd80a21b",
+        "publicSha256": "c55ac91aa3c80f1af83b5168538f3fd9006099e8d15b58a58756b728dd80a21b",
+        "rawPrivatePath": "work/private/readonly-source.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "source-gone-after-preview",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/source-gone-after-preview.json"
+    ],
+    "pid": 97011,
+    "seconds": 0.23358283285051584,
+    "streams": {
+      "stdout": {
+        "rawSha256": "347aa944cc7a54eadfafdfc131f96397c27e6c0259fe7ad9fb0f111f7e3bb42b",
+        "publicSha256": "2d490e9dc38dafa215bd3ac1705fbeb87d77e4231a02702d26987614c1700357",
+        "rawPrivatePath": "work/private/source-gone-after-preview.stdout"
+      },
+      "stderr": {
+        "rawSha256": "d296f264c7143681f4e680ed6ec6e4875ec3b13345eae0575b27f81f803ccb76",
+        "publicSha256": "d296f264c7143681f4e680ed6ec6e4875ec3b13345eae0575b27f81f803ccb76",
+        "rawPrivatePath": "work/private/source-gone-after-preview.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "destination-gone-after-preview",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/destination-gone-after-preview.json"
+    ],
+    "pid": 97012,
+    "seconds": 0.2431206670589745,
+    "streams": {
+      "stdout": {
+        "rawSha256": "eb9edb1fab9a8d46042dd3861bc25522e3eac27fcaa6db81f77696171506a108",
+        "publicSha256": "52dc25df8b1e53d7b8aa7090052492b5ae82f5bff34c1679e1cf3c7a9dc69a54",
+        "rawPrivatePath": "work/private/destination-gone-after-preview.stdout"
+      },
+      "stderr": {
+        "rawSha256": "d1e2d2280940c03cf9d8dc2abd8e62067340fe67d7783aac9dadd58b2e57634f",
+        "publicSha256": "d1e2d2280940c03cf9d8dc2abd8e62067340fe67d7783aac9dadd58b2e57634f",
+        "rawPrivatePath": "work/private/destination-gone-after-preview.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "nested",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/nested.json"
+    ],
+    "pid": 97013,
+    "seconds": 0.2805745000950992,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bc283cc214953a97d3c650791c73da363ce6940bbb5cf42de6e591925d8b7753",
+        "publicSha256": "bc283cc214953a97d3c650791c73da363ce6940bbb5cf42de6e591925d8b7753",
+        "rawPrivatePath": "work/private/nested.stdout"
+      },
+      "stderr": {
+        "rawSha256": "6cfe0611cdf8317de8ef04e5a6ed74b822e4195ef847f78e54116da834ad1c7e",
+        "publicSha256": "6cfe0611cdf8317de8ef04e5a6ed74b822e4195ef847f78e54116da834ad1c7e",
+        "rawPrivatePath": "work/private/nested.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "unknown-entry",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/unknown-entry.json"
+    ],
+    "pid": 97295,
+    "seconds": 0.24437358416616917,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2912169a4dec2f3f41454bdc13660d1bf4ed88d413bc71a047c9517938171cf3",
+        "publicSha256": "2912169a4dec2f3f41454bdc13660d1bf4ed88d413bc71a047c9517938171cf3",
+        "rawPrivatePath": "work/private/unknown-entry.stdout"
+      },
+      "stderr": {
+        "rawSha256": "f111727d9c7213753562b4681521c95562fac4d9f8f14b657e8c3f76ec5d70af",
+        "publicSha256": "f111727d9c7213753562b4681521c95562fac4d9f8f14b657e8c3f76ec5d70af",
+        "rawPrivatePath": "work/private/unknown-entry.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "metadata-file",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/metadata-file.json"
+    ],
+    "pid": 97296,
+    "seconds": 0.2526090000756085,
+    "streams": {
+      "stdout": {
+        "rawSha256": "3bdd3d0773d92e429795d6c8105b608cdbfed32d9875d4096a73c17417ef466c",
+        "publicSha256": "3bdd3d0773d92e429795d6c8105b608cdbfed32d9875d4096a73c17417ef466c",
+        "rawPrivatePath": "work/private/metadata-file.stdout"
+      },
+      "stderr": {
+        "rawSha256": "8f675a9ab7d3b0712fc818a2dc9d235dbce9ee7452a6b2a54601c99e7e1bd120",
+        "publicSha256": "8f675a9ab7d3b0712fc818a2dc9d235dbce9ee7452a6b2a54601c99e7e1bd120",
+        "rawPrivatePath": "work/private/metadata-file.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "default-alternative",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/default-alternative.json"
+    ],
+    "pid": 97297,
+    "seconds": 0.2425652090460062,
+    "streams": {
+      "stdout": {
+        "rawSha256": "d34a04a47409e7b5c327e573aae8ece7a8346a8ba999bfa525202f8505e0a8c9",
+        "publicSha256": "d34a04a47409e7b5c327e573aae8ece7a8346a8ba999bfa525202f8505e0a8c9",
+        "rawPrivatePath": "work/private/default-alternative.stdout"
+      },
+      "stderr": {
+        "rawSha256": "7a5c4243a7f9514d635fc3247826d353d446794e74d3c37526fff17366f12770",
+        "publicSha256": "7a5c4243a7f9514d635fc3247826d353d446794e74d3c37526fff17366f12770",
+        "rawPrivatePath": "work/private/default-alternative.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "only-overwrite",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/only-overwrite.json"
+    ],
+    "pid": 97359,
+    "seconds": 0.2548246248625219,
+    "streams": {
+      "stdout": {
+        "rawSha256": "2912169a4dec2f3f41454bdc13660d1bf4ed88d413bc71a047c9517938171cf3",
+        "publicSha256": "2912169a4dec2f3f41454bdc13660d1bf4ed88d413bc71a047c9517938171cf3",
+        "rawPrivatePath": "work/private/only-overwrite.stdout"
+      },
+      "stderr": {
+        "rawSha256": "3a7572b5bcc1f41920b4e99532238a5401f1843116117d51c0a2c116df20d745",
+        "publicSha256": "3a7572b5bcc1f41920b4e99532238a5401f1843116117d51c0a2c116df20d745",
+        "rawPrivatePath": "work/private/only-overwrite.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "partial-batch",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/partial-batch.json"
+    ],
+    "pid": 97625,
+    "seconds": 0.24162295926362276,
+    "streams": {
+      "stdout": {
+        "rawSha256": "535cee21302f4c1c051bfee605972b8966ff7ddf19d66b1409d9a47e302d1b43",
+        "publicSha256": "81909e504f3990955a4bbc89c04c5dfcd36d57330076fdacc99c4a1435b57978",
+        "rawPrivatePath": "work/private/partial-batch.stdout"
+      },
+      "stderr": {
+        "rawSha256": "d1e2d2280940c03cf9d8dc2abd8e62067340fe67d7783aac9dadd58b2e57634f",
+        "publicSha256": "d1e2d2280940c03cf9d8dc2abd8e62067340fe67d7783aac9dadd58b2e57634f",
+        "rawPrivatePath": "work/private/partial-batch.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "source-link",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/source-link.json"
+    ],
+    "pid": 97628,
+    "seconds": 0.2312739579938352,
+    "streams": {
+      "stdout": {
+        "rawSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "publicSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "rawPrivatePath": "work/private/source-link.stdout"
+      },
+      "stderr": {
+        "rawSha256": "71976510cf57dcdb23c10dce5f2cf209af896cba08613a15bb0577ad72dec323",
+        "publicSha256": "71976510cf57dcdb23c10dce5f2cf209af896cba08613a15bb0577ad72dec323",
+        "rawPrivatePath": "work/private/source-link.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "destination-link",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/sync-oracle",
+      "/Users/zer0cell/production/rules/applications/evidence/mo2-overwrite-20261124T144126131337Z/work/destination-link.json"
+    ],
+    "pid": 97631,
+    "seconds": 0.31906974967569113,
+    "streams": {
+      "stdout": {
+        "rawSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "publicSha256": "c65c93379c934e2af4e503450d0bdad59183097da22eaf837d39e14c75ee2da9",
+        "rawPrivatePath": "work/private/destination-link.stdout"
+      },
+      "stderr": {
+        "rawSha256": "d385a1fb440b42baad3773d575bafe66f5ffe1c3337c51016f1085358af903f7",
+        "publicSha256": "d385a1fb440b42baad3773d575bafe66f5ffe1c3337c51016f1085358af903f7",
+        "rawPrivatePath": "work/private/destination-link.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]
