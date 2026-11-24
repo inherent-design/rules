@@ -1,6 +1,6 @@
 # VS Code: document versions, save points, and backing files
 
-This first band covers VS Code desktop 1.147.0 at `8a14f0cc1b08d531eb83255ea3764ae22aa932b5` on macOS arm64. It compares one native file-backed document with serial edits, save, undo/redo, external changes, and explicit revert. The browser product, custom filesystem providers, asynchronous save races, and most editor/workspace features remain open.
+This first band covers VS Code desktop 1.147.0 at `8a14f0cc1b08d531eb83255ea3764ae22aa932b5` on macOS arm64. It compares one native file-backed document with serial edits, save, undo/redo, external changes, and explicit revert. A separate [browser band](WEB.md) observes an untitled draft across one page reload. Custom filesystem providers, asynchronous save races, and most editor/workspace features remain open.
 
 ## Separate state values
 
@@ -64,4 +64,4 @@ The keep-current alternative is sound for ordinary editor use: the Boolean resul
 
 A general dirty-state rule should use the application's persisted projection or save-point identity. A monotonic operation clock still matters for invalidating stale work, but undo returning to saved content need not mean an unsaved change. The host owner has clarified that its forward-only edit/save projection does not model undo and that `newer_edit` means remaining divergence, not a raw API-version comparison.
 
-No production editor or empack change was made. Most of VS Code's feature inventory remains pending, including multi-root workspaces, configuration precedence, extension trust/authority, tasks and terminals, SCM, save-as, provider permissions, and desktop/browser differences. vscode.dev needs its own served-version, backing, permission, save/reopen, and interruption evidence; desktop parity is not assumed.
+No production editor or empack change was made. Most of VS Code's feature inventory remains pending, including multi-root workspaces, configuration precedence, extension trust/authority, tasks and terminals, SCM, save-as, provider permissions, and desktop/browser differences. The browser's served-version and one untitled reload are now observed separately; backing-file saves, permissions, and interruption recovery remain open. Desktop parity is not assumed.

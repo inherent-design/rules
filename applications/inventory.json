@@ -13503,13 +13503,25 @@
             },
             {
               "id": "edit-web",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/WebDraft.lean; vscode/WebDraft.bend",
+              "laws": [
+                "Conditional successful-restoration projection retains rendered text and an admitted logical resource; restored untitled remains dirty without a file-write receipt."
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/receipt.json",
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/review.json",
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json",
+                "sources/vscode-web-serving.json"
+              ],
+              "negativeControls": [
+                "Different command and actual comparison-editor run excluded by web_conformance.py; reload does not establish a file-write receipt."
+              ],
+              "uxAssessment": "vscode/WEB.md",
+              "status": "native-observed",
+              "evidenceLimit": "One ordinary untitled marker and dirty indicator across one same-profile Chromium page reload. No complete document,local-file save,process relaunch,storage durability,permission or whole-feature qualification."
             },
             {
               "id": "retain-working-copy",
@@ -13523,13 +13535,25 @@
             },
             {
               "id": "reopen",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/WebDraft.lean; vscode/WebDraft.bend",
+              "laws": [
+                "Conditional successful-restoration projection retains rendered text and an admitted logical resource; restored untitled remains dirty without a file-write receipt."
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/receipt.json",
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/review.json",
+                "evidence/vscode-web-untitled-reload-20261124T022405483Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json",
+                "sources/vscode-web-serving.json"
+              ],
+              "negativeControls": [
+                "Different command and actual comparison-editor run excluded by web_conformance.py; reload does not establish a file-write receipt."
+              ],
+              "uxAssessment": "vscode/WEB.md",
+              "status": "native-observed",
+              "evidenceLimit": "One ordinary untitled marker and dirty indicator across one same-profile Chromium page reload. No complete document,local-file save,process relaunch,storage durability,permission or whole-feature qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
