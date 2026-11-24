@@ -12539,47 +12539,171 @@
           "operations": [
             {
               "id": "acquire-shared",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Locks.lean and restic/Locks.bend",
+              "laws": [
+                "shared_compatible",
+                "exclusive_conflicts_with_shared",
+                "published_exclusive_blocks_append",
+                "unreadable_is_not_absent",
+                "ordinary_unlock_keeps_live",
+                "dead_record_blocks_until_removed",
+                "abrupt_retirement_keeps_lock_identity",
+                "published_is_not_admission_evidence",
+                "stop_request_does_not_confirm_retirement",
+                "candidate_preserves_unknown_owner"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-locks-20261124T082746005710Z/trace.json",
+                "evidence/restic-locks-20261124T082746005710Z/observations.json",
+                "evidence/restic-locks-20261124T082746005710Z/conformance.json",
+                "evidence/restic-wait-20261124T083844392124Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-locks-selections.json"
+              ],
+              "negativeControls": [
+                "restic/locks_conformance.py:rejectedInterpretations",
+                "restic/locks_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/LOCKS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Private short-lived local same-host repo;two compatible published backup records,exclusive check/prune conflict,normal unlock",
+                "Published candidate is not necessarily admitted;interrupted/killed positive cases labeled separately",
+                "SIGINT stdin wait exceeded3s;EOF then supplied before130/cleanup,no signal-only retirement claim",
+                "SIGKILL leaves record;guarded known-absent PID cleanup and data check succeed;no arbitrary process signaling",
+                "Explicit human-output retry marker establishes wait in separate follow-up;primary success alone did not",
+                "Raw private streams and public redactions checked separately;full owner-local replay needs ignored originals",
+                "Permission/PID-reuse/refresh/age/remote faults and unknown-preserving probe refinement source/proposed only"
+              ],
+              "verificationPlan": "Qualify safe error adapters,unreadable/empty records,refresh/standby/remote failures,nonempty and partial-source interruption,concurrent cleanup,and Windows identity/error semantics. Preserve raw evidence and recovery state;no whole-family or distributed-lock proof."
             },
             {
               "id": "acquire-exclusive",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Locks.lean and restic/Locks.bend",
+              "laws": [
+                "shared_compatible",
+                "exclusive_conflicts_with_shared",
+                "published_exclusive_blocks_append",
+                "unreadable_is_not_absent",
+                "ordinary_unlock_keeps_live",
+                "dead_record_blocks_until_removed",
+                "abrupt_retirement_keeps_lock_identity",
+                "published_is_not_admission_evidence",
+                "stop_request_does_not_confirm_retirement",
+                "candidate_preserves_unknown_owner"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-locks-20261124T082746005710Z/trace.json",
+                "evidence/restic-locks-20261124T082746005710Z/observations.json",
+                "evidence/restic-locks-20261124T082746005710Z/conformance.json",
+                "evidence/restic-wait-20261124T083844392124Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-locks-selections.json"
+              ],
+              "negativeControls": [
+                "restic/locks_conformance.py:rejectedInterpretations",
+                "restic/locks_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/LOCKS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Private short-lived local same-host repo;two compatible published backup records,exclusive check/prune conflict,normal unlock",
+                "Published candidate is not necessarily admitted;interrupted/killed positive cases labeled separately",
+                "SIGINT stdin wait exceeded3s;EOF then supplied before130/cleanup,no signal-only retirement claim",
+                "SIGKILL leaves record;guarded known-absent PID cleanup and data check succeed;no arbitrary process signaling",
+                "Explicit human-output retry marker establishes wait in separate follow-up;primary success alone did not",
+                "Raw private streams and public redactions checked separately;full owner-local replay needs ignored originals",
+                "Permission/PID-reuse/refresh/age/remote faults and unknown-preserving probe refinement source/proposed only"
+              ],
+              "verificationPlan": "Qualify safe error adapters,unreadable/empty records,refresh/standby/remote failures,nonempty and partial-source interruption,concurrent cleanup,and Windows identity/error semantics. Preserve raw evidence and recovery state;no whole-family or distributed-lock proof."
             },
             {
               "id": "retry-lock",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Locks.lean and restic/Locks.bend",
+              "laws": [
+                "shared_compatible",
+                "exclusive_conflicts_with_shared",
+                "published_exclusive_blocks_append",
+                "unreadable_is_not_absent",
+                "ordinary_unlock_keeps_live",
+                "dead_record_blocks_until_removed",
+                "abrupt_retirement_keeps_lock_identity",
+                "published_is_not_admission_evidence",
+                "stop_request_does_not_confirm_retirement",
+                "candidate_preserves_unknown_owner"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-locks-20261124T082746005710Z/trace.json",
+                "evidence/restic-locks-20261124T082746005710Z/observations.json",
+                "evidence/restic-locks-20261124T082746005710Z/conformance.json",
+                "evidence/restic-wait-20261124T083844392124Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-locks-selections.json"
+              ],
+              "negativeControls": [
+                "restic/locks_conformance.py:rejectedInterpretations",
+                "restic/locks_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/LOCKS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Private short-lived local same-host repo;two compatible published backup records,exclusive check/prune conflict,normal unlock",
+                "Published candidate is not necessarily admitted;interrupted/killed positive cases labeled separately",
+                "SIGINT stdin wait exceeded3s;EOF then supplied before130/cleanup,no signal-only retirement claim",
+                "SIGKILL leaves record;guarded known-absent PID cleanup and data check succeed;no arbitrary process signaling",
+                "Explicit human-output retry marker establishes wait in separate follow-up;primary success alone did not",
+                "Raw private streams and public redactions checked separately;full owner-local replay needs ignored originals",
+                "Permission/PID-reuse/refresh/age/remote faults and unknown-preserving probe refinement source/proposed only"
+              ],
+              "verificationPlan": "Qualify safe error adapters,unreadable/empty records,refresh/standby/remote failures,nonempty and partial-source interruption,concurrent cleanup,and Windows identity/error semantics. Preserve raw evidence and recovery state;no whole-family or distributed-lock proof."
             },
             {
               "id": "unlock",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Locks.lean and restic/Locks.bend",
+              "laws": [
+                "shared_compatible",
+                "exclusive_conflicts_with_shared",
+                "published_exclusive_blocks_append",
+                "unreadable_is_not_absent",
+                "ordinary_unlock_keeps_live",
+                "dead_record_blocks_until_removed",
+                "abrupt_retirement_keeps_lock_identity",
+                "published_is_not_admission_evidence",
+                "stop_request_does_not_confirm_retirement",
+                "candidate_preserves_unknown_owner"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-locks-20261124T082746005710Z/trace.json",
+                "evidence/restic-locks-20261124T082746005710Z/observations.json",
+                "evidence/restic-locks-20261124T082746005710Z/conformance.json",
+                "evidence/restic-wait-20261124T083844392124Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-locks-selections.json"
+              ],
+              "negativeControls": [
+                "restic/locks_conformance.py:rejectedInterpretations",
+                "restic/locks_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/LOCKS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Private short-lived local same-host repo;two compatible published backup records,exclusive check/prune conflict,normal unlock",
+                "Published candidate is not necessarily admitted;interrupted/killed positive cases labeled separately",
+                "SIGINT stdin wait exceeded3s;EOF then supplied before130/cleanup,no signal-only retirement claim",
+                "SIGKILL leaves record;guarded known-absent PID cleanup and data check succeed;no arbitrary process signaling",
+                "Explicit human-output retry marker establishes wait in separate follow-up;primary success alone did not",
+                "Raw private streams and public redactions checked separately;full owner-local replay needs ignored originals",
+                "Permission/PID-reuse/refresh/age/remote faults and unknown-preserving probe refinement source/proposed only"
+              ],
+              "verificationPlan": "Qualify safe error adapters,unreadable/empty records,refresh/standby/remote failures,nonempty and partial-source interruption,concurrent cleanup,and Windows identity/error semantics. Preserve raw evidence and recovery state;no whole-family or distributed-lock proof."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected local compatibility/retry/stale-removal/interruption behavior observed;full backend/age/refresh/identity/platform semantics remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -13035,6 +13159,16 @@
           "id": "explicit-forget-receipt",
           "status": "proposed, native silent explicit-ID form observed",
           "document": "restic/README.md"
+        },
+        {
+          "id": "nonintrusive-owner-probe-classification",
+          "status": "proposed from Unix source;no native permission/PID-reuse incident established",
+          "document": "restic/LOCKS.md"
+        },
+        {
+          "id": "stale-cleanup-terminal-results",
+          "status": "proposed opt-in reporting;live unlock preserved records with little feedback",
+          "document": "restic/LOCKS.md"
         }
       ],
       "preservationDecisions": [

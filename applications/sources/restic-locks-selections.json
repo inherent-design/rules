@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "internal/repository/lock.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/lock.go",
+      "cache": "applications/tools/source-cache/restic-locks/internal__repository__lock.go",
+      "sha256": "fda19e7cca67abb0bd35e7f72bec2d533a402d3cbfc453f0e7093d24a8b880aa",
+      "bytes": 8806,
+      "inspection": "lines17-133,190-242,269-307:retry,refresh/unlock retirement,stale removal;long refresh/standby outcomes source-only"
+    },
+    {
+      "path": "cmd/restic/lock.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/lock.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__lock.go",
+      "sha256": "ebfb624da62147632d1a805308d682abe21199773f72a333d50c183a2a3eba3c",
+      "bytes": 1796,
+      "inspection": "whole:read/append nonexclusive versus exclusive,no-lock diagnostic dry-run boundary"
+    },
+    {
+      "path": "cmd/restic/cmd_backup.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_backup.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__cmd_backup.go",
+      "sha256": "982ff7e20a3038342b4d7f3c3f7f0927cd7a53cff110387fda656a49e79df683",
+      "bytes": 21990,
+      "inspection": "lines541-549:append lock and deferred unlock;stdin interruption observed at public command boundary"
+    },
+    {
+      "path": "cmd/restic/cmd_check.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_check.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__cmd_check.go",
+      "sha256": "d46a84d773be5663f32a846490eb7b288d3f58364a1741e0c25df09bc0adcd7c",
+      "bytes": 18136,
+      "inspection": "lines229-254:check exclusive lock before data work"
+    },
+    {
+      "path": "cmd/restic/cmd_unlock.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_unlock.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__cmd_unlock.go",
+      "sha256": "091b21308c239dc06f58dd3b5ba2f6bd93fb64daf9c7147b803338ee60529a21",
+      "bytes": 1803,
+      "inspection": "whole:ordinary stale removal versus explicit force-all;force-all not executed"
+    },
+    {
+      "path": "internal/repository/lock_file.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/lock_file.go",
+      "cache": "applications/tools/source-cache/restic-locks/internal__repository__lock_file.go",
+      "sha256": "288201043171718c2b87ed6559b666c65bb74369741ee22ccecae09df9a9f88f",
+      "bytes": 11508,
+      "inspection": "lines21-31,97-205,242-282,377-425:serialized values,publish/check,stale predicate and readable/empty/unknown observations"
+    },
+    {
+      "path": "internal/repository/lock_file_unix.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/lock_file_unix.go",
+      "cache": "applications/tools/source-cache/restic-locks/internal__repository__lock_file_unix.go",
+      "sha256": "c2b9de0e44c090771f91f26d42dd6ecb369708011016bfd448e22325610a223a",
+      "bytes": 984,
+      "inspection": "whole:Unix SIGHUP probe returnsfalse on any signal error;permission/PID-reuse effects source-only,not natively exercised"
+    },
+    {
+      "path": "cmd/restic/cmd_cat.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_cat.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__cmd_cat.go",
+      "sha256": "aa31c3a15c59d39b4cdd4bb85fa9a4b2e3ff76b57b5c66c16f0450f89cdae62d",
+      "bytes": 5010,
+      "inspection": "lines68-76,139-151:read lock bypass only for explicit no-lock diagnostic metadata observer"
+    },
+    {
+      "path": "cmd/restic/cmd_prune.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_prune.go",
+      "cache": "applications/tools/source-cache/restic/cmd__restic__cmd_prune.go",
+      "sha256": "74891f7251fb5fd315c4ddf303e8d9097af1f1ef3f63ff52db9520bee0450d1d",
+      "bytes": 10841,
+      "inspection": "lines174-187:exclusive lock selection for actual prune"
+    }
+  ],
+  "fetchFailures": [
+    {
+      "path": "internal/data/lock.go",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "Selected source compared with private local lock/interruption captures and explicit retry-wait follow-up. Native modes and source/proposed owner-probe refinement remain separate."
+}

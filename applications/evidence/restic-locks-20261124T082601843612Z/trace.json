@@ -1,0 +1,1009 @@
+[
+  {
+    "case": "init",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "init"
+    ],
+    "pid": 71201,
+    "observed": {
+      "before": {
+        "locks": [],
+        "snapshots": []
+      },
+      "after": {
+        "locks": [],
+        "snapshots": []
+      },
+      "seconds": 3.033035583794117,
+      "streams": {
+        "stdout": {
+          "rawSha256": "eb6ce07937ac06abd63bd053635c452945b07c5cd053fc27bbcf17f6245bb0fd",
+          "publicSha256": "cbb0e3e1a5e82fe2c1648737090bed507760278fa98abfdca493075685c8aa31",
+          "redacted": true,
+          "rawPrivatePath": "work/private/init.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/init.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "seed-backup",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "seed",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/source/seed.txt"
+    ],
+    "pid": 72093,
+    "observed": {
+      "before": {
+        "locks": [],
+        "snapshots": []
+      },
+      "after": {
+        "locks": [],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.7440455001778901,
+      "streams": {
+        "stdout": {
+          "rawSha256": "56a2dbf20a95a4d5340fc57e08283b98a9a98bcf3af7bc5b555f6c12c3c1a312",
+          "publicSha256": "56a2dbf20a95a4d5340fc57e08283b98a9a98bcf3af7bc5b555f6c12c3c1a312",
+          "redacted": false,
+          "rawPrivatePath": "work/private/seed-backup.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/seed-backup.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "shared-a-0",
+    "role": "diagnostic-no-lock-observer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+    ],
+    "pid": 72756,
+    "observed": {
+      "before": {
+        "locks": [
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.49915258307009935,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7a7ee3c7eb3de4bf594d432d12cfc4a439ec5c9d7797f9ee125903675d8a13ae",
+          "publicSha256": "4f3f70d953f65c3312ef3aaa148b6e2d5bb9f362d22d5cd367bd8b50605ee132",
+          "redacted": true,
+          "rawPrivatePath": "work/private/shared-a-0.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/shared-a-0.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "shared-ab-0",
+    "role": "diagnostic-no-lock-observer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532"
+    ],
+    "pid": 73050,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.4950249590910971,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7069695d210b4b7d1bfcd20da125cd2e5d046f628396cc73909f01c26900aeed",
+          "publicSha256": "d85221893278f99e8e061d2c1d01a8a3e9a64cc336672f2c0616ca7d6c7ed75f",
+          "redacted": true,
+          "rawPrivatePath": "work/private/shared-ab-0.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/shared-ab-0.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "shared-ab-1",
+    "role": "diagnostic-no-lock-observer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+    ],
+    "pid": 73372,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.4821728328242898,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7a7ee3c7eb3de4bf594d432d12cfc4a439ec5c9d7797f9ee125903675d8a13ae",
+          "publicSha256": "4f3f70d953f65c3312ef3aaa148b6e2d5bb9f362d22d5cd367bd8b50605ee132",
+          "redacted": true,
+          "rawPrivatePath": "work/private/shared-ab-1.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/shared-ab-1.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "unlock-live",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "unlock"
+    ],
+    "pid": 73373,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.49563120817765594,
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/unlock-live.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/unlock-live.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "check-blocked",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ],
+    "pid": 73659,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.48465600004419684,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "publicSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "redacted": false,
+          "rawPrivatePath": "work/private/check-blocked.stdout"
+        },
+        "stderr": {
+          "rawSha256": "001781a44c150ebce88af7c7f2bebf01b03ceebf9118acc90a39e690b8773058",
+          "publicSha256": "eacaa291cf067631a19b57cebab2f17cea356866ebbc3b24f121f99942caa181",
+          "redacted": true,
+          "rawPrivatePath": "work/private/check-blocked.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 11
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "prune-blocked",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "prune",
+      "--max-unused",
+      "0"
+    ],
+    "pid": 73660,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.4913514577783644,
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/prune-blocked.stdout"
+        },
+        "stderr": {
+          "rawSha256": "b7042d8c26136bedfe463e960a22979d8e0d29e2f8333eed961e50d51b88d42a",
+          "publicSha256": "846e394f475504fcc6ab42554111f86e84cae53c68cfdc3ce8bb04cca1bbd6fd",
+          "redacted": true,
+          "rawPrivatePath": "work/private/prune-blocked.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 11
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "retry-expired",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--retry-lock",
+      "1s",
+      "check",
+      "--read-data"
+    ],
+    "pid": 73983,
+    "observed": {
+      "before": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532",
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 1.487810832913965,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "publicSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "redacted": false,
+          "rawPrivatePath": "work/private/retry-expired.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e4f1a549fc3cc270073be861e9ec50d5c0e076a239936acdda7d9c4462c895ca",
+          "publicSha256": "41174fd479399d779d5bf5df298ffbe3ff675986b07264d729034c4b6b8ef366",
+          "redacted": true,
+          "rawPrivatePath": "work/private/retry-expired.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 11
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "held-b",
+    "role": "held-append",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-b.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-b"
+    ],
+    "pid": 72766,
+    "observed": {
+      "before": {
+        "locks": [
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 7.75253741722554,
+      "streams": {
+        "stdout": {
+          "rawSha256": "f617bd6a605ff54de18a5663824052e69f7b7b9b185843ba81c3490984e18368",
+          "publicSha256": "f617bd6a605ff54de18a5663824052e69f7b7b9b185843ba81c3490984e18368",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-b.stdout"
+        },
+        "stderr": {
+          "rawSha256": "1361453d9a11c0614c69b2f7763a4cd6a89d3e8e13f980c5805c30aecf034030",
+          "publicSha256": "1361453d9a11c0614c69b2f7763a4cd6a89d3e8e13f980c5805c30aecf034030",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-b.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 130
+    },
+    "control": {
+      "signal": "SIGINT",
+      "neededEOFToRetire": true,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "held-a",
+    "role": "held-append",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-a.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-a"
+    ],
+    "pid": 72374,
+    "observed": {
+      "before": {
+        "locks": [],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 9.299159292131662,
+      "streams": {
+        "stdout": {
+          "rawSha256": "53efa07a1c38523dd610e9d2ef17759d98681cb496aeafd9d7060ebb539a6ccb",
+          "publicSha256": "53efa07a1c38523dd610e9d2ef17759d98681cb496aeafd9d7060ebb539a6ccb",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-a.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-a.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "retry-after-release",
+    "role": "waiting-exclusive",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--retry-lock",
+      "2s",
+      "check",
+      "--read-data"
+    ],
+    "pid": 75197,
+    "observed": {
+      "before": {
+        "locks": [
+          "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+        ],
+        "snapshots": [
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.7093129581771791,
+      "streams": {
+        "stdout": {
+          "rawSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+          "publicSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+          "redacted": false,
+          "rawPrivatePath": "work/private/retry-after-release.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/retry-after-release.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "before-kill-c-0",
+    "role": "diagnostic-no-lock-observer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+    ],
+    "pid": 75808,
+    "observed": {
+      "before": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.4807988749817014,
+      "streams": {
+        "stdout": {
+          "rawSha256": "ba65f1a8c11902eabe73d58021efe24cad77c364d6827f04896b365a7fd6759e",
+          "publicSha256": "77f337107911bdd37adc4a92671998d4e5d8bbe370eff3cae53a386a697ac841",
+          "redacted": true,
+          "rawPrivatePath": "work/private/before-kill-c-0.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/before-kill-c-0.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "held-c",
+    "role": "held-append",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-c.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-c"
+    ],
+    "pid": 75486,
+    "observed": {
+      "before": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 1.2856846251524985,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7b87f579aa687b06cdcb120a4a57ba3b23c91f281d9ef47398d0952c60e054d2",
+          "publicSha256": "7b87f579aa687b06cdcb120a4a57ba3b23c91f281d9ef47398d0952c60e054d2",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-c.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/held-c.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": -9
+    },
+    "control": {
+      "signal": "SIGKILL",
+      "timedOut": false
+    }
+  },
+  {
+    "case": "dead-lock-check-refused",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ],
+    "pid": 75809,
+    "observed": {
+      "before": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.492227042093873,
+      "streams": {
+        "stdout": {
+          "rawSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "publicSha256": "7b2af30352b7095f69517e55698b8bff0e85303906a6cef76722d4cafe05be2a",
+          "redacted": false,
+          "rawPrivatePath": "work/private/dead-lock-check-refused.stdout"
+        },
+        "stderr": {
+          "rawSha256": "df4c0790688bbdf67d4f7ee07a9ba32b92c43c17a85dc62c0039a7417272d1b2",
+          "publicSha256": "27a323a1922a6115314dadf654709b09864f7fb37f9ceed549f2b03086a3210f",
+          "redacted": true,
+          "rawPrivatePath": "work/private/dead-lock-check-refused.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 11
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "unlock-dead",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "unlock"
+    ],
+    "pid": 76089,
+    "observed": {
+      "before": {
+        "locks": [
+          "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.48891708394512534,
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/unlock-dead.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/unlock-dead.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "check-after-unlock",
+    "role": "operation",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ],
+    "pid": 76090,
+    "observed": {
+      "before": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.712532333098352,
+      "streams": {
+        "stdout": {
+          "rawSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+          "publicSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+          "redacted": false,
+          "rawPrivatePath": "work/private/check-after-unlock.stdout"
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/check-after-unlock.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "control": {
+      "timedOut": false
+    }
+  },
+  {
+    "case": "exclusive-published-stopped-0",
+    "role": "diagnostic-no-lock-observer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "94dc829823f8dc22bf948e57e6b410adf78f782b116ea06b5a481c8f490e3888-tmp-3292653280"
+    ],
+    "pid": 76418,
+    "observed": {
+      "before": {
+        "locks": [
+          "94dc829823f8dc22bf948e57e6b410adf78f782b116ea06b5a481c8f490e3888-tmp-3292653280"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "after": {
+        "locks": [
+          "94dc829823f8dc22bf948e57e6b410adf78f782b116ea06b5a481c8f490e3888-tmp-3292653280"
+        ],
+        "snapshots": [
+          "14b88ba17fc3d3c923d452a749a3f24ea1ea4a1b6f5c061a9e887ad33a53a6ba",
+          "c1e337fda21526b4eaccddaae93db948f9eac15692bf42318a8e63e4ea858271"
+        ]
+      },
+      "seconds": 0.48845074977725744,
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redacted": false,
+          "rawPrivatePath": "work/private/exclusive-published-stopped-0.stdout"
+        },
+        "stderr": {
+          "rawSha256": "fceb4337eaf7f0f4e06453222fa7d25f83a635b1e4bf71deb8959f355f85339d",
+          "publicSha256": "fceb4337eaf7f0f4e06453222fa7d25f83a635b1e4bf71deb8959f355f85339d",
+          "redacted": false,
+          "rawPrivatePath": "work/private/exclusive-published-stopped-0.stderr"
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 1
+    },
+    "control": {
+      "timedOut": false
+    }
+  }
+]

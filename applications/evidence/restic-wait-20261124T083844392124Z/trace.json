@@ -1,0 +1,111 @@
+[
+  {
+    "case": "holder-metadata",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "111f716a6f00ae47abca89d8b7a2f73229ee59d3620771daad8d6822711e25b1"
+    ],
+    "pid": 6011,
+    "beforeLocks": [
+      "111f716a6f00ae47abca89d8b7a2f73229ee59d3620771daad8d6822711e25b1"
+    ],
+    "afterLocks": [
+      "111f716a6f00ae47abca89d8b7a2f73229ee59d3620771daad8d6822711e25b1"
+    ],
+    "seconds": 0.5035455408506095,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3f0fa647878c97e2df08cd90f0aa3c8c0ddeb8ea2717744eb0090ed504fcf6e",
+        "publicSha256": "90c328b06bf0f10e1da1dffd8076290f60e16ac7d8b1129724e65c5bd9b32981",
+        "redacted": true,
+        "rawPrivatePath": "work/private/holder-metadata.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redacted": false,
+        "rawPrivatePath": "work/private/holder-metadata.stderr"
+      }
+    },
+    "exitCode": 0
+  },
+  {
+    "case": "holder",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "observed-wait.txt",
+      "--host",
+      "rules-lock-fixture"
+    ],
+    "pid": 5687,
+    "beforeLocks": [],
+    "afterLocks": [],
+    "seconds": 1.912146625109017,
+    "streams": {
+      "stdout": {
+        "rawSha256": "8e0be3619dd847fe346be451c49d7bae988a6bfae07abefae1f54a05c5a9e604",
+        "publicSha256": "8e0be3619dd847fe346be451c49d7bae988a6bfae07abefae1f54a05c5a9e604",
+        "redacted": false,
+        "rawPrivatePath": "work/private/holder.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redacted": false,
+        "rawPrivatePath": "work/private/holder.stderr"
+      }
+    },
+    "exitCode": 0
+  },
+  {
+    "case": "observed-wait",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-wait-20261124T083844392124Z/work/password",
+      "--retry-lock",
+      "3s",
+      "check",
+      "--read-data"
+    ],
+    "pid": 6012,
+    "beforeLocks": [
+      "111f716a6f00ae47abca89d8b7a2f73229ee59d3620771daad8d6822711e25b1"
+    ],
+    "afterLocks": [],
+    "seconds": 3.732061832677573,
+    "streams": {
+      "stdout": {
+        "rawSha256": "b509f93bd992198ca8b729b680b6d23e7603e97517a8ae95c3d8a55d6e9dddf2",
+        "publicSha256": "4d2d8d9c6a4a44db4b21a7699bbacddfeff70f89a5bb4ead44ef38948897de50",
+        "redacted": true,
+        "rawPrivatePath": "work/private/observed-wait.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redacted": false,
+        "rawPrivatePath": "work/private/observed-wait.stderr"
+      }
+    },
+    "exitCode": 0
+  }
+]

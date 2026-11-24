@@ -1,0 +1,302 @@
+[
+  {
+    "case": "init",
+    "pid": 71201,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "init"
+    ]
+  },
+  {
+    "case": "seed-backup",
+    "pid": 72093,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "seed",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/source/seed.txt"
+    ]
+  },
+  {
+    "case": "held-a",
+    "pid": 72374,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-a.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-a"
+    ]
+  },
+  {
+    "case": "shared-a-0",
+    "pid": 72756,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+    ]
+  },
+  {
+    "case": "held-b",
+    "pid": 72766,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-b.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-b"
+    ]
+  },
+  {
+    "case": "shared-ab-0",
+    "pid": 73050,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "0388adb8f7138bf7dc4b6d3bedb03c84a591b4f97bb7d71804008ce951c56532"
+    ]
+  },
+  {
+    "case": "shared-ab-1",
+    "pid": 73372,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "bcd6aa9e9901933bc8421b37450eb88c6a5e7b1107cde90aa6e58d8109787bde"
+    ]
+  },
+  {
+    "case": "unlock-live",
+    "pid": 73373,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "unlock"
+    ]
+  },
+  {
+    "case": "check-blocked",
+    "pid": 73659,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "prune-blocked",
+    "pid": 73660,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "prune",
+      "--max-unused",
+      "0"
+    ]
+  },
+  {
+    "case": "retry-expired",
+    "pid": 73983,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--retry-lock",
+      "1s",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "retry-after-release",
+    "pid": 75197,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--retry-lock",
+      "2s",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "held-c",
+    "pid": 75486,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "backup",
+      "--stdin",
+      "--stdin-filename",
+      "held-c.txt",
+      "--host",
+      "rules-lock-fixture",
+      "--tag",
+      "held-c"
+    ]
+  },
+  {
+    "case": "before-kill-c-0",
+    "pid": 75808,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "ec0a88ee0ab6dd051003a1dfd8a8765e9f542e8b78f18d056a1296d4ba2d4fc9"
+    ]
+  },
+  {
+    "case": "dead-lock-check-refused",
+    "pid": 75809,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "unlock-dead",
+    "pid": 76089,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "unlock"
+    ]
+  },
+  {
+    "case": "check-after-unlock",
+    "pid": 76090,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "exclusive-paused",
+    "pid": 76417,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "check",
+      "--read-data"
+    ]
+  },
+  {
+    "case": "exclusive-published-stopped-0",
+    "pid": 76418,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-locks-20261124T082601843612Z/work/password",
+      "--json",
+      "--no-lock",
+      "cat",
+      "lock",
+      "94dc829823f8dc22bf948e57e6b410adf78f782b116ea06b5a481c8f490e3888-tmp-3292653280"
+    ]
+  }
+]

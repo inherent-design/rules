@@ -49,4 +49,6 @@ Acceptance should include exact-ID and policy-group forms, missing IDs, changed 
 
 ## Remaining feature work
 
-General snapshot grouping and policy evaluation beyond the selected keep-last-one fixtures, scans and partial backup, multiple readers/writers, stale-lock decisions, remote backends, corruption and repair, keys, format migration, mount/dump, copy, exclusions/metadata, and cache/resource policy remain pending. The inventory keeps those entries separate. A passing local restore does not qualify them.
+General snapshot grouping and policy evaluation beyond the selected keep-last-one fixtures, scans and partial backup, general multiple readers/writers and stale-lock decisions, remote backends, corruption and repair, keys, format migration, mount/dump, copy, exclusions/metadata, and cache/resource policy remain pending. The inventory keeps those entries separate. A passing local restore does not qualify them.
+
+A later [lock/interruption band](LOCKS.md) tests selected compatible appenders, exclusive maintenance refusal, retry, known-process cleanup, and published-versus-admitted evidence. Backend/identity/age/refresh and partial-data recovery remain open.
