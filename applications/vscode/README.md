@@ -67,3 +67,5 @@ A general dirty-state rule should use the application's persisted projection or 
 No production editor or empack change was made. Most of VS Code's feature inventory remains pending, including general multi-root workspaces, extension trust/authority, tasks and terminals, SCM, save-as, provider permissions, and desktop/browser differences. The browser's served-version and one untitled reload are now observed separately; backing-file saves, permissions, and interruption recovery remain open. Desktop parity is not assumed.
 
 A later [configuration band](CONFIGURATION.md) observes explicit settings targets and selected multi-root/language precedence through the native API. It preserves an explicit-null inspection counterexample. This does not qualify general workspace behavior, trust, or the Settings UI.
+
+The [trust band](TRUST.md) models selected support-policy and trust-disable predicates from source with admitted adapters. It leaves installed trust enforcement, extension execution, and grant/revoke persistence unqualified.

@@ -13757,17 +13757,38 @@
             },
             {
               "id": "admit-feature",
-              "model": null,
-              "laws": [],
+              "model": "vscode/Trust.lean and vscode/Trust.bend",
+              "laws": [
+                "matching_user_deny_wins",
+                "mismatched_user_is_ignored",
+                "untrusted_workspace_local_blocked",
+                "trusted_passes_only_this_predicate",
+                "limited_is_not_false",
+                "environment_disable_wins"
+              ],
               "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "sourceComparison": [
+                "sources/vscode-trust-selections.json",
+                "evidence/vscode-trust-20261124T074001256Z/receipt.json",
+                "evidence/vscode-trust-20261124T074001256Z/conformance.json"
+              ],
+              "negativeControls": [
+                "vscode/trust_conformance.py:rejectedInterpretations",
+                "vscode/trust_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "vscode/TRUST.md",
+              "status": "source-modeled",
+              "proofPremises": [
+                "Only selected unmodified source methods with admitted maps/config/membership dependencies;not installed application conformance",
+                "Support metadata is distinct from one disable predicate and complete extension enablement",
+                "Independent predicate inputs do not prove every combination reachable in the full app",
+                "No UI/persistence/grant/revoke/task/dependency/extension host/native retirement qualification"
+              ],
+              "verificationPlan": "Exercise installed desktop/web managers,real URI and identity/profile services,version-scoped overrides,other enablement gates,trust prompts and transitions;observe running extension effects and durable state separately. Full native obligation remains open."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected extension support and trust-disable predicates source-modeled;inspect/grant/revoke and complete installed feature admission remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -14825,6 +14846,11 @@
           "id": "present-null-configuration-provenance",
           "status": "proposed; documented globalValue gap native/source-confirmed in bounded local fixture",
           "document": "vscode/CONFIGURATION.md"
+        },
+        {
+          "id": "extension-support-and-admission-provenance",
+          "status": "proposed;bounded source policy is consistent,no production defect established",
+          "document": "vscode/TRUST.md"
         }
       ],
       "preservationDecisions": [],
