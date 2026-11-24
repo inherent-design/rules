@@ -2,6 +2,8 @@
 
 This band compares the actual current `empack-core::instance::plan_file` API with models, and separately exercises the installed empack 0.8.8-beta CLI through a tiny producer/install/update/repair flow. Those are different evidence scopes. The source checkout is `0b4462e3032b4f09230b15329722eabefb7f574c`; its build correspondence with the installed release binary is not proved here.
 
+A subsequent [observation-demand band](OBSERVATIONS.md) examines why preparation reads an ordinary existing seed before preserving it. Its sparse-file result is a read-footprint limitation and an API proposal, not a change to the ownership rules verified here.
+
 ## Domain and authority
 
 A completed installation provides prior ownership and content. A selected release supplies desired content and policy. A fresh native observation supplies absence, regular-file content, or directory shape. Content comparison includes byte identity, length, read-only state, and executable state when the representation supports it. A policy decision is not native write authority.

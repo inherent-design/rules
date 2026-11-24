@@ -1769,7 +1769,9 @@
               "nativeEvidence": [
                 "evidence/empack-native-ownership-20261124T031930881554Z/receipt.json",
                 "evidence/empack-native-ownership-20261124T031930881554Z/core-receipt.json",
-                "evidence/empack-native-ownership-20261124T031930881554Z/conformance.json"
+                "evidence/empack-native-ownership-20261124T031930881554Z/conformance.json",
+                "evidence/empack-seed-footprint-20261124T040524972293Z/receipt.json",
+                "evidence/empack-seed-footprint-20261124T040524972293Z/conformance.json"
               ],
               "sourceComparison": [
                 "sources/empack-selections.json"
@@ -1779,7 +1781,8 @@
               ],
               "uxAssessment": "empack/OWNERSHIP.md",
               "status": "native-observed",
-              "evidenceLimit": "Current core API: 252 finite cases. Installed 0.8.8-beta on macOS arm64: 15 workflow commands, direct snapshots and two text files. This does not qualify the whole feature. Unowned destination refusal is core-only. No worlds, Prism, channel trust, runtime, or crash recovery. Update evidence uses instance install with direct snapshots."
+              "evidenceLimit": "Current core API: 252 finite cases. Installed 0.8.8-beta on macOS arm64: 15 workflow commands, direct snapshots and two text files. This does not qualify the whole feature. Unowned destination refusal is core-only. No worlds, Prism, channel trust, runtime, or crash recovery. Update evidence uses instance install with direct snapshots. A separate sparse 8 GiB+1 seed uses 4 KiB allocated: check succeeds, same-release installation preview refuses the snapshot byte limit; size/mtime unchanged. Observation-demand models are proposed classifications, not a native shape-only implementation.",
+              "observationDemandProposal": "empack/OBSERVATIONS.md;empack/ObservationDemand.lean;empack/ObservationDemand.bend"
             },
             {
               "id": "adopt-ownership",

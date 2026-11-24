@@ -35,6 +35,8 @@ The existing native publisher, instance reconciler, and process supervisor retai
 
 An `AssetId` addresses an immutable captured asset. A `ContentId` describes observed bytes; an asset can also carry source assertions and original provenance. Physical backing identities and leases belong to storage. Several placements or selections can use the same payload without becoming the same dependency, entry, or deletion authority. The JavaScript peer-context and restic lineage studies explain why bytes and provenance edges cannot substitute for every other relation.
 
+[Observation demand](OBSERVATIONS.md) also depends on the operation's role. A protected installed seed can be preserved without claiming its byte identity; the publisher's source for that seed still requires bytes when exporting a bundled distribution. Shape, byte evidence, retained inputs, and publication authority must remain distinct during extraction.
+
 ## Session and operation interfaces
 
 These are boundary sketches, not existing Rust signatures:
