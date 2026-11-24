@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "kind": "Actual collection/replay/check scope,not a complete ownership qualification",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "checks": [
+    {
+      "exitCode": 0,
+      "result": "49Lean modules and15Bend files checked.",
+      "argv": [
+        "python3",
+        "scripts/check-rules.py"
+      ],
+      "environment": {
+        "LEAN": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+        "BEND": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend"
+      }
+    },
+    {
+      "exitCode": 0,
+      "result": "252actualcoreAPIcases agree withLean/Bend;15CLIcommands and42basisfileidentities validated.",
+      "argv": [
+        "python3",
+        "applications/empack/ownership_conformance.py",
+        "applications/evidence/empack-native-ownership-20261124T031930881554Z"
+      ],
+      "environment": {
+        "LEAN": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+        "BEND": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend"
+      }
+    },
+    {
+      "exitCode": 0,
+      "result": "No leaks found in selected staged changes.",
+      "argv": [
+        "gitleaks",
+        "git",
+        "--pre-commit",
+        "--staged",
+        "--redact",
+        "--no-banner",
+        "--report-path",
+        ".build/applications/empack/gitleaks-ownership-final.json",
+        "."
+      ]
+    }
+  ],
+  "additionalObservedChecks": "SourceGit/contenttree,payloadassertedassets,buildprintedreleaseIDs,rawbyteidentities,AST,JSON,local links,inventory/hostprojection,and diff checks pass.",
+  "nativeCommands": "setup.json,init-project.json,init-private.json,build-a.json,and progress.json retain actualargv/status;core-receipt.json retains compilation/oracle commands.",
+  "sourceScope": "Installed0.8.8binary and current0b4462ecore are independently identified;not claimed to be the same compiledtree.",
+  "storage": {
+    "workAllocatedKiB": 10256,
+    "generatedCoreApproxKiB": 10076,
+    "scope": "Privatefixture only;no fullengineCargo build. Rawobservations/privatework retained;reconstructiblematrixJSON moved to ignoredgenerated storage."
+  },
+  "limits": [
+    "One installed0.8.8macOSbinary,two tiny custom files,Vanilla metadata;no runtime/game/GUI/network qualification.",
+    "Local digest-pinned snapshots;no publisher signatures or channel update/authentication tested.",
+    "Preview/refusal equality compares instance regular-file bytes,mode,mtime;not global caches,host logs,or every native attribute.",
+    "Initial explicit0700state refusal and .empack archive-suffix fixture correction retained separately."
+  ]
+}

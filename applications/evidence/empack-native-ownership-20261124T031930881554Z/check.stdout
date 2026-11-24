@@ -1,0 +1,23 @@
+Check current authoring, recorded relationships and applicable local content
+
+Usage: empack check [OPTIONS]
+
+Options:
+      --documents              Validate author files and any present lock, without reading content
+                               or providers
+      --online                 Also check fresh provider metadata for every exact locked provider
+                               selection
+      --details                Include successful checks and all unverified evidence
+      --state-dir <STATE_DIR>  Durable operation and recovery storage, separate from disposable
+                               caches [env: EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>  Disposable cache root; previews only inspect existing objects [env:
+                               EMPACK_CACHE_DIR=]
+      --json                   Emit a structured report, including useful findings before a failed
+                               check
+      --quiet                  Hide temporary progress
+  -y, --yes                    Run without prompts; unresolved content choices still fail [env:
+                               EMPACK_YES=]
+      --dry-run                Preview changes without publishing project, instance or durable state
+                               [env: EMPACK_DRY_RUN=]
+  -h, --help                   Print help
+  -V, --version                Print version

@@ -2,6 +2,8 @@
 
 This is a design proposal within the application study. It preserves the checked-out native contracts at `0b4462e3032b4f09230b15329722eabefb7f574c` and considers the separate 0.9 portable-authoring candidate. The [source selections](../sources/empack-selections.json) identify the inspected files and ranges. This proposal changes no production code, schema, command, or release requirement. Most feature-level implementation comparisons remain pending in the [inventory](../inventory.json).
 
+The separate [current ownership band](OWNERSHIP.md) has actual core API and installed-CLI evidence. It does not qualify the proposed portable-authoring implementation.
+
 The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.
 
 ## Keep the current guarantees

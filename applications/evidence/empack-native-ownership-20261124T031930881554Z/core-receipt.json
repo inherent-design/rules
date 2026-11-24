@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "kind": "Actual current empack-core public API;not mocked source fragments or a full engine build",
+  "sourceRevision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "compiler": "rustc 1.92.0 (ded5c06cf 2025-12-08)\nbinary: rustc\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\ncommit-date: 2025-12-08\nhost: aarch64-apple-darwin\nrelease: 1.92.0\nLLVM version: 21.1.3\n",
+  "driverSha256": "05cf15f16b88b4097b6a44381f40be0875a1a54b4dd14328287baea6adbfb19c",
+  "librarySha256": "2631cbfd994f5cb0971ca645313e0fdca67b777617ca8277bfeafd1518f0037f",
+  "binarySha256": "3e9ab2e18dbd0273922ec70a20311a70f47be8111909a2bb92664ff0f5f58f05",
+  "observedSha256": "8f6de50ff22dd2268ce7563099883aefe7517ecffb6fa67882478c2d7d385230",
+  "commands": [
+    {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "--crate-name",
+        "empack_core",
+        "--crate-type=rlib",
+        "-C",
+        "debuginfo=0",
+        "-C",
+        "opt-level=0",
+        "/Users/zer0cell/production/empack/crates/empack-core/src/lib.rs",
+        "-o",
+        "applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-C",
+        "debuginfo=0",
+        "-C",
+        "opt-level=0",
+        "--extern",
+        "empack_core=applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib",
+        "applications/empack/ownership_oracle.rs",
+        "-o",
+        "applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/ownership-oracle"
+      ],
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/ownership-oracle"
+      ],
+      "exitCode": 0,
+      "stdout": "core-observed.tsv"
+    }
+  ],
+  "cases": 252,
+  "limits": [
+    "Standalone actual no_std core library,edition2024,noCargo/externaldependencies;not full native publication/instance engine.",
+    "Synthetic content IDs and fixed length1 are pure API input labels;they are not independently verified physical file contents.",
+    "Executable-bit capability is a parameter;this source test does not qualify Windows filesystem behavior.",
+    "CLI release binary has its own independent digest;compiled checkout correspondence to that binary is not proved."
+  ],
+  "cwd": "/Users/zer0cell/production/rules",
+  "sourceTree": {
+    "crates/empack-core/src/addition/batch.rs": "8471ccb4f8eb836841f76f40bb8173351ac21a7567868605746f4e17a2b9c1ca",
+    "crates/empack-core/src/addition.rs": "ee3e2c984ffa7a29f0b1f810daa81f41d5730f7f5e96b80da0fe53bab7133971",
+    "crates/empack-core/src/digest.rs": "05976df69ee16a943deb84fc888bc0f1ce7552d5f696e7a0dc3fabb52d41872d",
+    "crates/empack-core/src/distribution.rs": "a18a7cb29e5ceab393d518c2f9d257f58dfac3cbe46fa606617eb3b385d8b9ad",
+    "crates/empack-core/src/files.rs": "55f5853b9ff06d6d53c6a1c971ac4ee212edfbb231fda66e781e9a40aecf1646",
+    "crates/empack-core/src/identity.rs": "6e77d7bdfe2323f99d30c602a84bcbf78a0c303c802d43a8e85f07d6d4debf1f",
+    "crates/empack-core/src/instance/tests.rs": "bc9b6a7d3983f995f7cd1029fd6154d920bebb602c689f19594c94650697b822",
+    "crates/empack-core/src/instance.rs": "4f1021c54c63e64436da2fbab30849f23efb43b01c9106bc0a78f876a36ed878",
+    "crates/empack-core/src/inventory.rs": "b9bbae9fb4b56b97abda92b7e5d800c37406dda108d1a782d82d15dcdfab2ace",
+    "crates/empack-core/src/java.rs": "91771182225eed4692c81d32d015a8aecceed0a03ac848012bf3406f8b19c67f",
+    "crates/empack-core/src/java_profiles.csv": "d99f8241974cac19d7265bf6b77006f277efa2321a76d8c0805773b47283df66",
+    "crates/empack-core/src/lib.rs": "bc1729fc0c2e60477b4614847d8f26de0d01e70a766b8c28223f213b41551652",
+    "crates/empack-core/src/model/archive.rs": "6662ec83b90f2eea10e69b22d74d110a496f01a963ed282136417a58217e9e99",
+    "crates/empack-core/src/model.rs": "7d5d2a637f2abaf5db51f6e048e119d3e57f4be648171d093750077f950163d7",
+    "crates/empack-core/src/path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "crates/empack-core/src/removal.rs": "0d692eb2330ce5e450df2855d622130c753006b07e38652b0b2c95eea2ca6d1b",
+    "crates/empack-core/src/requirements.rs": "3698745052f78c85493ac17ce2fc13290344d4d1484a708fefb757b741c3d665",
+    "crates/empack-core/src/synchronization.rs": "20e2adbac7b533549275decae57702ce35a9ed1ff6b54b4b934ce812e6dc38eb"
+  },
+  "sourceTreeScope": "Conservative complete crate source-tree identity,including cfg(test) files not compiled/executed by this oracle."
+}

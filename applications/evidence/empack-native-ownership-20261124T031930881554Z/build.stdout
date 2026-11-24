@@ -1,0 +1,71 @@
+Build verified distribution archives
+
+Usage: empack build [OPTIONS] [CONSUMERS]...
+
+Arguments:
+  [CONSUMERS]...  Consumers with a unique configured profile (or use --ad-hoc) [possible values:
+                  modrinth, curseforge, prism, server, empack]
+
+Options:
+      --profile <NAME>                 Select complete authored profiles; repeat to build several
+                                       together
+      --ad-hoc                         Create consumer recipes from built-in defaults instead of
+                                       configured profiles
+      --explain                        Show effective profiles, overrides and recipient requirements
+                                       without building
+      --state-dir <STATE_DIR>          Durable operation and recovery storage, separate from
+                                       disposable caches [env: EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>          Disposable cache root; previews only inspect existing objects
+                                       [env: EMPACK_CACHE_DIR=]
+      --json                           Emit the effective build explanation as versioned JSON
+      --delivery <DELIVERY>            How dependency bytes reach the consumer; independent of
+                                       update authority [possible values: references, bundled]
+      --environment <ENVIRONMENT>      Environment to project; each consumer validates the selected
+                                       side [possible values: client, server, both]
+      --updates <UPDATES>              Who may select future releases; requires a bound platform or
+                                       publisher association [possible values: snapshot, platform,
+                                       empack]
+  -c, --clean                          Remove obsolete artifacts when the verified build is
+                                       published
+      --format <FORMAT>                Archive format override for distributions; mrpack and
+                                       curseforge always use ZIP [possible values: zip, tar.gz, 7z]
+      --downloads-dir <DOWNLOADS_DIR>  Directory to scan for manually downloaded restricted mods
+                                       [env: EMPACK_DOWNLOADS_DIR=]
+      --open-downloads                 Open verified provider pages for missing files after saving
+                                       continuation
+      --wait-downloads <SECONDS>       Wait for verified downloads, then present a fresh build plan
+  -y, --yes                            Run without prompts; unresolved content choices still fail
+                                       [env: EMPACK_YES=]
+      --dry-run                        Preview changes without publishing project, instance or
+                                       durable state [env: EMPACK_DRY_RUN=]
+      --optional-defaults              Use authored defaults for optional files in materialized
+                                       distributions
+      --optional <CHOICE=true|false>   Decide one optional choice explicitly
+      --allow-optional-metadata-loss   Allow reference archives to omit optional choice keys,
+                                       defaults and descriptions
+  -h, --help                           Print help
+  -V, --version                        Print version
+
+Consumers:
+  modrinth    Modrinth archive with exact references and overrides
+  curseforge  CurseForge client ZIP with exact references and overrides
+  prism       Launcher instance using the selected delivery profile
+  server      Prepared server runtime using the selected delivery profile
+  empack      Exact native release and immutable assets
+
+Without selectors, use build.default from empack.yml.
+A consumer selects its unique configured profile; use --ad-hoc for a new recipe.
+New projects and ad-hoc Prism/server recipes default to reference delivery.
+Use --profile NAME when multiple profiles have the same consumer.
+Use --explain (and optionally --json) to inspect the exact configuration without building.
+Use --delivery references for a Prism/server snapshot installed by empack.
+Prism/server reference exports and native empack exports need
+pack.id and runtime.java settings.
+Bundled content does not include client game binaries or imply offline launch.
+Update authority is independent of dependency delivery; snapshots are the default.
+All requested outputs are verified before combined publication.
+
+Examples:
+  empack build --dry-run modrinth prism
+  empack build prism server --delivery references
+  empack pending list

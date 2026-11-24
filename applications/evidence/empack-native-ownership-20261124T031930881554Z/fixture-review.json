@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "kind": "Operator observations and fixture corrections,not new native execution",
+  "stateRootGuard": {
+    "initialMode": "0755",
+    "nativeExit": 1,
+    "nativeDiagnostic": "Journal state must be owned by this user and private (0700)",
+    "afterFailure": {
+      "stateChildren": [],
+      "projectExists": false
+    },
+    "correction": "Only inspected owner-created empty fixture directories changed to0700 before a separately recorded successful init."
+  },
+  "archiveDiscovery": {
+    "nativeBuildExit": 0,
+    "incorrectFixtureExpectation": "dist/*.zip",
+    "actualNativeArtifact": "Rules ownership fixture-A-empack-bundled.empack",
+    "containerObserved": "ZIP",
+    "documentationRecheck": "Currentdocs/usage.md:171correctlynames.empack;no documentation mismatch."
+  },
+  "classification": "These are fixture assumptions/refusal controls,not native implementation failures.",
+  "rootScope": "All native writes use the private work subtree and explicit state/cache flags;personal projects,global state,and runtime/game workflows were not selected."
+}

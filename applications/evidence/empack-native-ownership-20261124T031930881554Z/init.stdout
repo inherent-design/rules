@@ -1,0 +1,56 @@
+Create a project or import a modpack archive
+
+Usage: empack init [OPTIONS] [DIR]
+
+Arguments:
+  [DIR]  Directory for the modpack project (created if needed)
+
+Options:
+  -f, --force
+          Replace existing managed project content after preparation succeeds
+  -m, --modloader <MODLOADER>
+          Mod loader to use (none for vanilla; skips interactive prompt) [env: EMPACK_MODLOADER=]
+      --mc-version <MC_VERSION>
+          Minecraft version (skips interactive prompt) [env: EMPACK_MC_VERSION=]
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches [env:
+          EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects [env: EMPACK_CACHE_DIR=]
+      --java <JAVA>
+          Java major for this pack, such as 21 (default: newest supported major)
+  -A, --author <AUTHOR>
+          Author name (skips interactive prompt) [env: EMPACK_AUTHOR=]
+  -n, --pack-name <PACK_NAME>
+          Modpack display name (default: directory basename) [env: EMPACK_NAME=]
+      --loader-version <LOADER_VERSION>
+          Loader version (skips interactive prompt) [env: EMPACK_LOADER_VERSION=]
+      --pack-version <PACK_VERSION>
+          Pack version (skips interactive prompt) [env: EMPACK_PACK_VERSION=]
+      --datapack-folder <DATAPACK_FOLDER>
+          Folder for datapacks relative to pack root [env: EMPACK_DATAPACK_FOLDER=]
+      --world-folder <WORLD_FOLDER>
+          Parent folder for interpreted world directories, relative to the pack root [env:
+          EMPACK_WORLD_FOLDER=]
+      --game-versions <GAME_VERSIONS>
+          Additional accepted MC versions (comma-separated) [env: EMPACK_GAME_VERSIONS=]
+      --from <SOURCE>
+          Import modpack from a source (file path or URL)
+  -y, --yes
+          Run without prompts; unresolved content choices still fail [env: EMPACK_YES=]
+      --dry-run
+          Preview changes without publishing project, instance or durable state [env:
+          EMPACK_DRY_RUN=]
+      --import-optional-default <BOOL>
+          Default for optional imported files; participation remains optional [possible values:
+          true, false]
+      --exclude-auxiliary
+          Explicitly exclude archive members outside recognized content namespaces
+      --import-local-files
+          Retain imported downloads as local files instead of durable URL references
+      --import-file <SELECTOR=PATH>
+          Associate a selected file with one exact imported download obligation
+  -h, --help
+          Print help
+  -V, --version
+          Print version

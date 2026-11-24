@@ -1,0 +1,31 @@
+Install an exact local release, preserving seeds and rejecting edited managed files
+
+Usage: empack instance install [OPTIONS] --sha256 <SHA256> <RELEASE>
+
+Arguments:
+  <RELEASE>  Immutable JSON release payload, not an author manifest
+
+Options:
+      --preserve <PATH>        Keep your file as a local override; use the path shown in the
+                               conflict options
+      --replace <PATH>         Use the release version of a conflicting file, or remove it if no
+                               longer included
+      --merge <PATH=FILE>      Use your prepared merged file as a local override
+      --state-dir <STATE_DIR>  Durable operation and recovery storage, separate from disposable
+                               caches [env: EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>  Disposable cache root; previews only inspect existing objects [env:
+                               EMPACK_CACHE_DIR=]
+      --sha256 <SHA256>        Expected SHA-256 of the exact release payload bytes
+      --side <SIDE>            Infer the installed environment; first installation defaults to
+                               client [possible values: client, server]
+      --layout <LAYOUT>        Fixed content directory; retained on updates (new instances default
+                               to game) [possible values: game, prism]
+      --choice <KEY=VALUE>     Stable release choice and selected alternative
+      --file <KEY=PATH>        Associate exact content with a release file key, including manual
+                               downloads
+  -y, --yes                    Run without prompts; unresolved content choices still fail [env:
+                               EMPACK_YES=]
+      --dry-run                Preview changes without publishing project, instance or durable state
+                               [env: EMPACK_DRY_RUN=]
+  -h, --help                   Print help
+  -V, --version                Print version
