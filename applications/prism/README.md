@@ -2,6 +2,8 @@
 
 This band studies Prism Launcher 11.1.1 at `7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4`. It covers a selected mrpack update filter and its empty-list staging guard. A full GUI import/update and the rest of Prism's instance, component, Java, account, task, and launch behavior remain pending.
 
+A separate [launch lifecycle band](LAUNCH.md) studies sequencing and abort delivery with supported Qt 6 and controlled steps. It separates controller phase from base outcome and leaves actual game-process and GUI acceptance open.
+
 ## Current rule and counterexample
 
 [`ModrinthCreationTask::updateInstance`](https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/modplatform/modrinth/ModrinthInstanceCreationTask.cpp) parses incoming and saved mrpack indexes. It removes a new/old pair from its download/deletion candidates when their SHA-512 values match. That comparison does not require equal paths. The remaining old entries are scheduled for deletion, while the remaining new entries are downloaded during staging.

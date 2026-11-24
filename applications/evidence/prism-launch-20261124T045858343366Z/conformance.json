@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "leanFullControlledTracesMatch": 10,
+  "bendConditionalFinalizationProjections": 10,
+  "bendAbortAdmissionDeliveryPoints": 10,
+  "unknownStepRefused": true,
+  "rejectedInterpretations": [
+    "Accepted queued abort means the base task has already finished.",
+    "Controller Running/Waiting phase alone identifies the base task outcome.",
+    "Source parent abort necessarily emits the parent Task::aborted outcome rather than failed."
+  ],
+  "adapterSha256": "dbe155f91a908a281e60859eb230f4ae20368c8d9c90684357dadac9587fb390",
+  "basisSha256": {
+    "applications/prism/Launch.lean": "5c358788159c232723826fb974466bbcf620b7c6f73ac277f8710a735aadc05c",
+    "applications/prism/Launch.bend": "ebce1449d95949084ffe53f8097213e65ca68e647da5d703bcd96c098ae87dff",
+    "applications/prism/LaunchCase.lean": "0f9bc2d66e12f60e850066aeefe6c13d3dd1a2f65a347f39bbec689cd1b3ad6c",
+    "applications/evidence/prism-launch-20261124T045858343366Z/receipt.json": "820d363a3d48086c192c431c982076df37d3eb012578d062b3a21690b28ed5f1",
+    "applications/evidence/prism-launch-20261124T045858343366Z/probe.py": "6b4dc6ab36f2a9ab46ee2cef11759c00a180d6215fbab78740ef4f001b8d8359",
+    "applications/evidence/prism-launch-20261124T045858343366Z/observed.stdout": "51a241d9f2370871fe00d075b03596e33b7e07331fb78aac37eb5f3ac536baad",
+    "applications/evidence/prism-launch-20261124T045858343366Z/observed.stderr": "4649273446ec1bc184430497eed13a873db9242720acef8af6a80b5370c91100",
+    "applications/evidence/prism-launch-20261124T045858343366Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-launch-20261124T045858343366Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limits": [
+    "Bend finalization consumes independently observed started prefix and base completion; it does not predict every sequence event.",
+    "Lean predicts selected same-thread controlled step traces, not all launch steps or real OS retirement.",
+    "Instance flags and logging handlers are adapters; no native GUI, accounts, Java or complete LaunchController acceptance."
+  ]
+}
