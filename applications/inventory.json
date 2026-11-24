@@ -4281,23 +4281,67 @@
             },
             {
               "id": "install",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/LockModes.lean and js-peers/LockModes.bend",
+              "laws": [
+                "lock_only_preserves_payload",
+                "hidden_index_can_disagree_with_payload",
+                "successful_refresh_can_leave_old_payload",
+                "invalidation_control_changes_refresh_result"
+              ],
+              "nativeEvidence": [
+                "evidence/js-lock-modes-20261124T104619177625Z/trace.json",
+                "evidence/js-lock-modes-20261124T104619177625Z/conformance.json",
+                "evidence/js-lock-npm-refresh-20261124T104751912940Z/receipt.json",
+                "evidence/js-lock-npm-refresh-20261124T104927472206Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/js-lock-modes-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/lock_modes_conformance.py:unsupportedInputsRefused",
+                "js-peers/lock_modes_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/LOCK-MODES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nonempty one-direct-dependency project, exact local archives at two distinct versions; scripts disabled and offline/disabled network",
+                "Main 18 outcomes compare status/lock/runtime; nine npm follow-up outcomes also decode hidden/installed metadata",
+                "Npm hidden-index reuse is an admitted fixture projection, not a general mtime/presence/cache validator",
+                "No registry, workspace, peer, hooks, interruption, or other-platform qualification"
+              ],
+              "verificationPlan": "Extend normal installation after resolution-only across strategies/workspaces and hidden-index freshness; preserve exact current counterexample and intervention/ci controls. Keep cache integrity, publication, interrupted operations and general resolver/linker laws pending."
             },
             {
               "id": "ci",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/LockModes.lean and js-peers/LockModes.bend",
+              "laws": [
+                "missing_lock_refuses_frozen",
+                "refusal_preserves_state",
+                "frozen_success_keeps_lock",
+                "frozen_success_materializes_wanted"
+              ],
+              "nativeEvidence": [
+                "evidence/js-lock-modes-20261124T104619177625Z/trace.json",
+                "evidence/js-lock-modes-20261124T104619177625Z/conformance.json",
+                "evidence/js-lock-npm-refresh-20261124T104751912940Z/receipt.json",
+                "evidence/js-lock-npm-refresh-20261124T104927472206Z/receipt.json"
+              ],
+              "sourceComparison": [
+                "sources/js-lock-modes-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/lock_modes_conformance.py:unsupportedInputsRefused",
+                "js-peers/lock_modes_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/LOCK-MODES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nonempty one-direct-dependency project, exact local archives at two distinct versions; scripts disabled and offline/disabled network",
+                "Main 18 outcomes compare status/lock/runtime; nine npm follow-up outcomes also decode hidden/installed metadata",
+                "Npm hidden-index reuse is an admitted fixture projection, not a general mtime/presence/cache validator",
+                "No registry, workspace, peer, hooks, interruption, or other-platform qualification"
+              ],
+              "verificationPlan": "Extend normal installation after resolution-only across strategies/workspaces and hidden-index freshness; preserve exact current counterexample and intervention/ci controls. Keep cache integrity, publication, interrupted operations and general resolver/linker laws pending."
             },
             {
               "id": "shrinkwrap",
@@ -4321,7 +4365,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Partially observed and modeled in the fixed installation-mode profile; other operations and general feature qualification remain pending. See js-peers/LOCK-MODES.md.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -5974,13 +6018,32 @@
             },
             {
               "id": "install",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/LockModes.lean and js-peers/LockModes.bend",
+              "laws": [
+                "missing_lock_refuses_frozen",
+                "refusal_preserves_state",
+                "lock_only_preserves_payload",
+                "frozen_success_materializes_wanted"
+              ],
+              "nativeEvidence": [
+                "evidence/js-lock-modes-20261124T104619177625Z/trace.json",
+                "evidence/js-lock-modes-20261124T104619177625Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-lock-modes-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/lock_modes_conformance.py:unsupportedInputsRefused",
+                "js-peers/lock_modes_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/LOCK-MODES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nonempty one-direct-dependency project, exact local archives at two distinct versions; scripts disabled and offline/disabled network",
+                "Six installer outcomes and six fresh runtime reads for this application; root lock and module-tree images measured separately.",
+                "No registry, workspace, peer, hooks, interruption, or other-platform qualification"
+              ],
+              "verificationPlan": "Extend selected frozen/resolution-only modes to workspace graphs, hooks, settings/platform drift, alternate linkers, interrupted operations and cache integrity; do not promote this component into whole-feature conformance."
             },
             {
               "id": "link-store",
@@ -6004,7 +6067,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Partially observed and modeled in the fixed installation-mode profile; other operations and general feature qualification remain pending. See js-peers/LOCK-MODES.md.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -7626,13 +7689,30 @@
             },
             {
               "id": "update-lockfile",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/LockModes.lean and js-peers/LockModes.bend",
+              "laws": [
+                "lock_only_preserves_payload",
+                "current_lock_does_not_mean_current_payload"
+              ],
+              "nativeEvidence": [
+                "evidence/js-lock-modes-20261124T104619177625Z/trace.json",
+                "evidence/js-lock-modes-20261124T104619177625Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-lock-modes-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/lock_modes_conformance.py:unsupportedInputsRefused",
+                "js-peers/lock_modes_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/LOCK-MODES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nonempty one-direct-dependency project, exact local archives at two distinct versions; scripts disabled and offline/disabled network",
+                "Six installer outcomes and six fresh runtime reads for this application; root lock and module-tree images measured separately.",
+                "No registry, workspace, peer, hooks, interruption, or other-platform qualification"
+              ],
+              "verificationPlan": "Extend selected frozen/resolution-only modes to workspace graphs, hooks, settings/platform drift, alternate linkers, interrupted operations and cache integrity; do not promote this component into whole-feature conformance."
             },
             {
               "id": "skip-build",
@@ -7646,7 +7726,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Partially observed and modeled in the fixed installation-mode profile; other operations and general feature qualification remain pending. See js-peers/LOCK-MODES.md.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#yarn",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

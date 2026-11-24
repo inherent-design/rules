@@ -22,6 +22,8 @@ The first [VS Code desktop band](vscode/README.md) adds native serial file-backe
 
 The [empack target model](empack/README.md) maps all current and candidate feature families to authority boundaries. A [synchronization scope band](empack/SYNCHRONIZATION.md) compares nonempty retained graphs and separates resolution scope from complete lock changes. A [document/approval band](empack/DOCUMENTS.md) compares semantic lock currency with actual raw-document changes while approval waits. A [Java policy band](empack/JAVA.md) compares the actual pure policy across exact profiles and constraints, with separately limited local-JVM observations. Its first [authoring lifecycle](empack/AUTHORING.md) has proposed models and design examples, not native or browser implementation evidence. It preserves strict native validation while introducing saveable incomplete drafts, revision-bound work, and retained operation inputs. A [source/projection band](empack/SOURCES.md) compares actual core layer/choice/representation decisions and carries them into the portable-source proposal.
 
+The [installation-mode band](js-peers/LOCK-MODES.md) separates resolution-only updates, frozen lock admission, installed payloads, and observed runtime. All three JavaScript tools can have a current lock with an older installed package. A separate npm sequence reproduces a stale ordinary install after lock-only publication, with hidden-index removal and clean-install controls. This is a bounded current-product finding; the proposed correction remains separate from production adoption.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

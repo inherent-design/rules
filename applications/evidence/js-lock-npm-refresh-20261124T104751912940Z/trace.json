@@ -1,0 +1,495 @@
+[
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "initial-install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "package.json": {
+          "sha256": "dd5eb7e88f71d07334fe1177b9c899c7dd84aba5ae6063669a25dadbb767a244",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "8c24653d0999463bca83cec8482f83077187a7dd0cda5da02a5d24dcb93e5452",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "869fe21d14f80e35e3e3aa22c221db39ff22306ebba0b38494467d6b8bda6f5a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "dd5eb7e88f71d07334fe1177b9c899c7dd84aba5ae6063669a25dadbb767a244",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.504655041731894,
+      "stdoutSha256": "4fa4e579c73c6c1a9dd414ef3e1df3ccc3da4fb81ec206ba87197ef3010f15cf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "initial-install-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "console.log(JSON.stringify({value:require(\"fixture-lock-mode\"),path:require.resolve(\"fixture-lock-mode\")}))"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "8c24653d0999463bca83cec8482f83077187a7dd0cda5da02a5d24dcb93e5452",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "869fe21d14f80e35e3e3aa22c221db39ff22306ebba0b38494467d6b8bda6f5a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "dd5eb7e88f71d07334fe1177b9c899c7dd84aba5ae6063669a25dadbb767a244",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "8c24653d0999463bca83cec8482f83077187a7dd0cda5da02a5d24dcb93e5452",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "869fe21d14f80e35e3e3aa22c221db39ff22306ebba0b38494467d6b8bda6f5a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "dd5eb7e88f71d07334fe1177b9c899c7dd84aba5ae6063669a25dadbb767a244",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.0342502910643816,
+      "stdoutSha256": "a80f06397949b0bdd0506b53dfd97a21d692f3cff417af56df99fbe1e25c0c81",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "resolution-only",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--package-lock-only",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "8c24653d0999463bca83cec8482f83077187a7dd0cda5da02a5d24dcb93e5452",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "869fe21d14f80e35e3e3aa22c221db39ff22306ebba0b38494467d6b8bda6f5a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.21256862487643957,
+      "stdoutSha256": "20920f20ae96e56af34198a26ee3ad4903a86dcc750d722b9ec782907846e126",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "resolution-only-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "console.log(JSON.stringify({value:require(\"fixture-lock-mode\"),path:require.resolve(\"fixture-lock-mode\")}))"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.03129379078745842,
+      "stdoutSha256": "a80f06397949b0bdd0506b53dfd97a21d692f3cff417af56df99fbe1e25c0c81",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "normal-refresh",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.23673516558483243,
+      "stdoutSha256": "a53410f775dc964f8192c33144f4e38e7ac29eceba033d193febfa8070587731",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "normal-refresh-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "console.log(JSON.stringify({value:require(\"fixture-lock-mode\"),path:require.resolve(\"fixture-lock-mode\")}))"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.037745834328234196,
+      "stdoutSha256": "a80f06397949b0bdd0506b53dfd97a21d692f3cff417af56df99fbe1e25c0c81",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "clean-frozen",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "ci",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "4204c6e040c6f2363b2279009abfb6912043f0f54b9fc14e14f30f2bc75150bd",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "c8463740547a97731d782680d36d4487fb6e1f933d5e5e9b171b9c8592e5ad36",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "c14333189ef33a63e763a6d304606f49a032b130580ddd12d993b810b611417b",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "d6fac73b2da6e5ceaa37321be437d27326619454dcd0aa4e91263814bba3602b",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.40690945787355304,
+      "stdoutSha256": "5e73de2afe9cd6be1a934f84387bff8f6f943f5882c301d90da1a62709cdf3b6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "clean-frozen-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "console.log(JSON.stringify({value:require(\"fixture-lock-mode\"),path:require.resolve(\"fixture-lock-mode\")}))"
+    ],
+    "observed": {
+      "before": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "c14333189ef33a63e763a6d304606f49a032b130580ddd12d993b810b611417b",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "d6fac73b2da6e5ceaa37321be437d27326619454dcd0aa4e91263814bba3602b",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "after": {
+        "node_modules/.package-lock.json": {
+          "sha256": "87105ccdf5e7c37f15245c3c84a8ec296863acef8b0df0cbb16d79fee7cde303",
+          "bytes": 462
+        },
+        "node_modules/fixture-lock-mode/index.js": {
+          "sha256": "c14333189ef33a63e763a6d304606f49a032b130580ddd12d993b810b611417b",
+          "bytes": 26
+        },
+        "node_modules/fixture-lock-mode/package.json": {
+          "sha256": "d6fac73b2da6e5ceaa37321be437d27326619454dcd0aa4e91263814bba3602b",
+          "bytes": 69
+        },
+        "package-lock.json": {
+          "sha256": "27c435d49f5afd8f6aec12f23fceef4371aeb8370a2fd8cc63e977149de9595a",
+          "bytes": 719
+        },
+        "package.json": {
+          "sha256": "8e1a9e91bb97587764e3f00f3f0e5b3ffe00503679cf3c2b5890817ff7667069",
+          "bytes": 247
+        }
+      },
+      "seconds": 0.08162391604855657,
+      "stdoutSha256": "3fe7f1ac6f83c1d612f871f561af9933b64f1a6d406d68b350a07019e670f952",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  }
+]
