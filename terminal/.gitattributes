@@ -1,0 +1,8 @@
+# Captured streams and upstream source are byte evidence, not authored prose.
+evidence/** -text -diff -merge
+sources/** -text -diff -merge
+# Keep structured evidence and harness snapshots reviewable without normalization.
+evidence/**/*.json diff
+evidence/**/*.py diff
+sources/**/*.json diff
+sources/THIRD_PARTY.md text eol=lf diff merge
