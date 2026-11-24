@@ -26,6 +26,8 @@ The [installation-mode band](js-peers/LOCK-MODES.md) separates resolution-only u
 
 The [Prism component band](prism/COMPONENTS.md) adds requirement composition, protected choices, activation and obsolete-dependency policy, cached-state round trips, and source-loop progress after an actual permission refusal. Its source/Qt models preserve exact identity versus rank and proposal versus completed mutation. Actual instance construction, persistence, and GUI/game behavior remain pending.
 
+The [publication band](js-peers/PUBLICATION.md) separates generated archive identity, fixture registry acceptance, client acknowledgement, local hooks, and the command’s final status. Thirty outcomes across npm, pnpm, and Yarn demonstrate response loss before and after acceptance, plus acknowledged uploads followed by failed hooks. Real registry policy, authorization, durability, and larger publication workflows remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

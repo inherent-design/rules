@@ -1,0 +1,1421 @@
+[
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "help",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--help"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.30397333297878504,
+      "stdoutSha256": "0541c9d4f544b888b8080f9bb3c9572d66d87bbc35a10fbdb6017b2a01922178",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "dry-run",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-dry-run",
+          "method": "GET",
+          "path": "/npm",
+          "status": 404
+        },
+        {
+          "case": "npm-dry-run",
+          "method": "GET",
+          "path": "/npm",
+          "status": 404
+        },
+        {
+          "case": "npm-dry-run",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 404
+        },
+        {
+          "case": "npm-dry-run",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 404
+        }
+      ],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.1966180419549346,
+      "stdoutSha256": "62247ebd7840137f4289212e88dc32230dd70e00b5731cb888fd57221b6f462a",
+      "stderrSha256": "56b9283074aa355b0e433137928321d8dbbd186ed655f307a6ca893f7fc1cf62"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "accepted",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-accepted",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 404
+        },
+        {
+          "case": "npm-accepted",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 404
+        },
+        {
+          "case": "npm-accepted",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-npm",
+          "version": "1.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "3a7ecfada85f97a4ff0e284e15d6cb4e9cdee12d39553dac2a5f31954dd1625f",
+          "archiveBytes": 314,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "4e285478965f082cf600472928ab729e832c62d9f7387845f30e8a9909b0fd08"
+          },
+          "requestSha256": "d6e048b83707cac283284e4dc78fcc3f296a906232a23d6052c214a580932135",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.18711112486198545,
+      "stdoutSha256": "62247ebd7840137f4289212e88dc32230dd70e00b5731cb888fd57221b6f462a",
+      "stderrSha256": "965df6a152169414f5f500a54e43e47cca423c5c7e8fdc3797e752c0adcfa200"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "duplicate",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-duplicate",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.20144504075869918,
+      "stdoutSha256": "1776a74b975426ce40b4531e6b123e9e65d9bd491de39b0882246b3abf6b885d",
+      "stderrSha256": "508443ee2f77e06110146e4f68703eb48d9692c41faff2ce74da16373caffc18"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "rejected",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "2.0.0",
+      "fixtureMode": "reject",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-rejected",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        },
+        {
+          "case": "npm-rejected",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-npm",
+          "version": "2.0.0",
+          "mode": "reject",
+          "accepted": false,
+          "status": 403,
+          "responseDropped": false,
+          "archiveSha256": "04a3bf4e561c091066705ac48f174d4a22a8e06b1ee37eab9419fe78173dd0fc",
+          "archiveBytes": 314,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "dbe1bcb77bc86b53cdc8fad66e9339a7e7f8b48677d003b18fdc34616b3ad758"
+          },
+          "requestSha256": "fcd512e31db0d11d6328931213527d3e059accd856596eda996e611a4619574f",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.18655945779755712,
+      "stdoutSha256": "08c31007d600d554548b145dfbe61d1047c96016d6f10074d91de96dfb8f75e3",
+      "stderrSha256": "15d775d8292c847a0f96f4c8c8c88dff0e954cb812128e2dc94ad2221b909fb8"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "lost-response",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "drop",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-lost-response",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        },
+        {
+          "case": "npm-lost-response",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-npm",
+          "version": "3.0.0",
+          "mode": "drop",
+          "accepted": true,
+          "status": null,
+          "responseDropped": true,
+          "archiveSha256": "fcfa947d24cd8252f916aabd85a49f4d78ab2de30bfcafeebaf8b326ff8c7873",
+          "archiveBytes": 314,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "383530a20131943c659ddc50dabdf2cd5c6a6e85f24e873af341cdc313c9ff8c"
+          },
+          "requestSha256": "b951992fc87fd4ffc3056da358ab3a7e6f0f5ed9716f40d4503e6e7f58153b17",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.18737625004723668,
+      "stdoutSha256": "9ad5788bfbb20f20c828bca08c0a522c1d4486190b9b5dd90622b37f4102bfb4",
+      "stderrSha256": "c79e1fefc9e175644a3ac949012a6cd48a4bd7e03e19aff037778fcbf25e4c27"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "retry-after-loss",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-retry-after-loss",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.16519087506458163,
+      "stdoutSha256": "e49266bf6956a1cde94510762c212ebc4dd706c5c826e700fd3784cad3252ce9",
+      "stderrSha256": "8c6aeef513c4103c8527fd01534b523a87a448e200c672e0af7d8cedb6dcec08"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "dry-run-hooks",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "4.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-dry-run-hooks",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [
+        "prepublishOnly",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "seconds": 0.2965405420400202,
+      "stdoutSha256": "4de037e10ac14d201592f52bbd9c3aa00c20ec19583db37ef74d30a08356195e",
+      "stderrSha256": "5136c04a903a9ed51f942ed560efa95f49a2ffe64d2d16c3d91ed3296bf52570"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "after-upload-hook-failure",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "publish",
+      "--json",
+      "--fetch-retries=0",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "request": {
+      "version": "5.0.0",
+      "fixtureMode": "accept",
+      "failingHook": "postpublish"
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "npm-after-upload-hook-failure",
+          "method": "GET",
+          "path": "/rules-publication-fixture-npm",
+          "status": 200
+        },
+        {
+          "case": "npm-after-upload-hook-failure",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-npm",
+          "version": "5.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "ffe83585986265761cfbe71849549fb4d9280b7575b2a4e3b44e4220bac1354e",
+          "archiveBytes": 379,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "354836c0ea89217e2e303f8b6c31898bc7554d7297358720aca7653bd22e688f"
+          },
+          "requestSha256": "6a6b8e966fb67eac90de3fae8f57d377b78b66a2b1b40a44ecc5f7cfc7601a38",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0",
+        "5.0.0"
+      ],
+      "hooksBefore": [
+        "prepublishOnly",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "hooksAfter": [
+        "prepublishOnly",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish",
+        "prepublishOnly",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "seconds": 0.310053207911551,
+      "stdoutSha256": "b687586472c088c76c5576b99d0e4dadfb34caca5a96d13140c6697612b28951",
+      "stderrSha256": "fca38fb9f2422599df6c2d0a902966ed066185dab2e2b73ed5cb2bb519c40671"
+    },
+    "outcome": {
+      "exitCode": 7
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "help",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--help"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.01432787487283349,
+      "stdoutSha256": "c139aaf37afb8ba697a4fe7851d0bb6302791c1a70e6fecbe459efee3f4055da",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "dry-run",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.03668133309110999,
+      "stdoutSha256": "4dac3e0c963583840e30dc15ddde4cdf26275073ed58fe3c66e47150c7993781",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "accepted",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-accepted",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "1.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "2994fdded446b9d68bf6c82a4c854ed08fdf19f69d7f35d2df3a7e279760ff36",
+          "archiveBytes": 311,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "13ee285819c434c76c132c67acabbca1369c61e6b8ebd10d9adbe2abd419cbf8"
+          },
+          "requestSha256": "d7eb7f698e1e0887fe117cac2580c91a3f0f953dc780ad11784dababacdf81a3",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.021557750180363655,
+      "stdoutSha256": "4dac3e0c963583840e30dc15ddde4cdf26275073ed58fe3c66e47150c7993781",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "duplicate",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-duplicate",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "1.0.0",
+          "mode": "accept",
+          "accepted": false,
+          "status": 409,
+          "responseDropped": false,
+          "archiveSha256": "2994fdded446b9d68bf6c82a4c854ed08fdf19f69d7f35d2df3a7e279760ff36",
+          "archiveBytes": 311,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "13ee285819c434c76c132c67acabbca1369c61e6b8ebd10d9adbe2abd419cbf8"
+          },
+          "requestSha256": "d7eb7f698e1e0887fe117cac2580c91a3f0f953dc780ad11784dababacdf81a3",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.02464008331298828,
+      "stdoutSha256": "4946b749d64b6b4ce23df7b8b7ee26e70989f8b3afbd360b8cc99af260e410be",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "rejected",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "2.0.0",
+      "fixtureMode": "reject",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-rejected",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "2.0.0",
+          "mode": "reject",
+          "accepted": false,
+          "status": 403,
+          "responseDropped": false,
+          "archiveSha256": "0f7c58924f698c8f36a31079d5d4da7c46aae04c74cddc142362aa714bdd8f1b",
+          "archiveBytes": 311,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "a255b304db0204f77427c4050f6d7746938d7e9e0675c4587039eb11b6529aab"
+          },
+          "requestSha256": "044ee68632cf37535245a647b4580db06f73cf0cdda3cbb5634f20b0ba034aaf",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.0223237918689847,
+      "stdoutSha256": "77f2f6a9952e8cd7b6eb452af1c087f0a08b2370abde33bdd742ffbfae0c8a86",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "lost-response",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "drop",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-lost-response",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "3.0.0",
+          "mode": "drop",
+          "accepted": true,
+          "status": null,
+          "responseDropped": true,
+          "archiveSha256": "e5356042448582e8cd3651f4d4576372375e6ac568fc4f0aee9e8b0d1ef2a168",
+          "archiveBytes": 311,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "82bb4e179d9eaf39a03501f28bc7141550215e67a2e9141c117aa02f3ef571a0"
+          },
+          "requestSha256": "0b9e544d79df944fe1dd97950244bfe00c44b4ecff18c1b1ed59dc971f2fd1f2",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.021529625169932842,
+      "stdoutSha256": "8a4b1bd98530e60b3e618d537f76a0d35f7b39d1dd4c5327ba296af3f1d11a78",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "retry-after-loss",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-retry-after-loss",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "3.0.0",
+          "mode": "accept",
+          "accepted": false,
+          "status": 409,
+          "responseDropped": false,
+          "archiveSha256": "e5356042448582e8cd3651f4d4576372375e6ac568fc4f0aee9e8b0d1ef2a168",
+          "archiveBytes": 311,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "82bb4e179d9eaf39a03501f28bc7141550215e67a2e9141c117aa02f3ef571a0"
+          },
+          "requestSha256": "0b9e544d79df944fe1dd97950244bfe00c44b4ecff18c1b1ed59dc971f2fd1f2",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.021976749878376722,
+      "stdoutSha256": "9fbff98aa6bae6e2b3bb659ad5b3a0e355c9debe363b54fc12d9f139900d3b70",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "dry-run-hooks",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "4.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [
+        "prepublishOnly",
+        "prepublish",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "seconds": 0.18920108303427696,
+      "stdoutSha256": "49130b1b099cbc887eaebb49c7ae1025444a034d32428f21711a7fdfd1be575b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "after-upload-hook-failure",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "publish",
+      "--no-git-checks",
+      "--json",
+      "--registry",
+      "http://127.0.0.1:50562/",
+      "--npmrc-auth-file",
+      "/private/tmp/rules-js-publication-s84w036s/pnpm/config/user.npmrc"
+    ],
+    "request": {
+      "version": "5.0.0",
+      "fixtureMode": "accept",
+      "failingHook": "postpublish"
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "pnpm-after-upload-hook-failure",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-pnpm",
+          "version": "5.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "56f8ee98af59e2cb22a416b03d8ba64745d65acf43a133130739575463228da2",
+          "archiveBytes": 339,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "b50ea0c5f8832bf146d6e771c5ebda0113ce51c390993e5d20af60738f06bd36"
+          },
+          "requestSha256": "d67ada514f77ad22c501da0d123899427d495a327229c58135beca73f69c4576",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0",
+        "5.0.0"
+      ],
+      "hooksBefore": [
+        "prepublishOnly",
+        "prepublish",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "hooksAfter": [
+        "prepublishOnly",
+        "prepublish",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish",
+        "prepublishOnly",
+        "prepublish",
+        "prepack",
+        "postpack",
+        "publish",
+        "postpublish"
+      ],
+      "seconds": 0.19325145799666643,
+      "stdoutSha256": "4437e3234a4dec165f898e8f53ea665b07749976fc1e7e4e36e87fb1738f82a4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "help",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--help"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.11863112496212125,
+      "stdoutSha256": "38e2399a8c6959c9a12c12b66d20dee3fd84f931b06ff239179b9df65ff4a95e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "initialize",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.20215191692113876,
+      "stdoutSha256": "09a7506a1bd1f940ea7b8a7b6b1c1b9ce5acfe6c5e62b345dcd4c126e2d048cf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "dry-run",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [],
+      "afterVersions": [],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.27109279204159975,
+      "stdoutSha256": "40d8d2eddc06ef1b738b522441ab9b46e2012f44684f617bba54a57ee948ba56",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "accepted",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-accepted",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "1.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "f0000ed0275ead763b0a641e50e7c1dfe74d4ca7e475b3df4e5368a2ff65eb42",
+          "archiveBytes": 319,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "3c2fa50f4c517bc75c7c69d1a8db4def5655741933f779bb165fac12e109216e"
+          },
+          "requestSha256": "9c0ddba8ccfa6c7ba1ffb85262c6a92ae4a2f1226b808ac0f83625571487d3be",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.14162891684100032,
+      "stdoutSha256": "60a7b3136caeb6a9ef842850ee0b9ad1d46cfeee04e3fcec0455c6610620497e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "duplicate",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "1.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-duplicate",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "1.0.0",
+          "mode": "accept",
+          "accepted": false,
+          "status": 409,
+          "responseDropped": false,
+          "archiveSha256": "f0000ed0275ead763b0a641e50e7c1dfe74d4ca7e475b3df4e5368a2ff65eb42",
+          "archiveBytes": 319,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "3c2fa50f4c517bc75c7c69d1a8db4def5655741933f779bb165fac12e109216e"
+          },
+          "requestSha256": "9c0ddba8ccfa6c7ba1ffb85262c6a92ae4a2f1226b808ac0f83625571487d3be",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.14865075005218387,
+      "stdoutSha256": "9f6cc233a9c2d8e42d931266f7ad2da571a2f92d8cdcb1e288f002f15778ce8b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "rejected",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "2.0.0",
+      "fixtureMode": "reject",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-rejected",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "2.0.0",
+          "mode": "reject",
+          "accepted": false,
+          "status": 403,
+          "responseDropped": false,
+          "archiveSha256": "e482af45891cd257a2bbc1c9ab7dfe97aea0be8145b350f7d5da5c5a6e35caf0",
+          "archiveBytes": 320,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "443462398c65507d9a4824adbafef7f5b53500482ab7fc71c69af77f89c5cc5e"
+          },
+          "requestSha256": "ffd73504a22a81939c598ec20087bcb05908f7d7d2c529216fde70717d397461",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.14763762522488832,
+      "stdoutSha256": "0d1117099c519cc59581315cfa38efec30b1b0e00796c79e4208ed3ad1c2329d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "lost-response",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "drop",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-lost-response",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "3.0.0",
+          "mode": "drop",
+          "accepted": true,
+          "status": null,
+          "responseDropped": true,
+          "archiveSha256": "c0b9cc9d893d245983f1e8ac68835aeb3991c5b9fe4c152d94aec629743b8882",
+          "archiveBytes": 320,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "cccfce6a38b96b545979a1fbcac0d366ec31182bdf45793824ce98b9e9d01957"
+          },
+          "requestSha256": "81bba1722a08b19172a883355bea732ea0857bac30700a0cf4de45c0e164546e",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.15476974984630942,
+      "stdoutSha256": "8c85bbda8c3af8aede528be95c0ff9b0ace92986f40010dd1a6f0883acb84e35",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "retry-after-loss",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "3.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-retry-after-loss",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "3.0.0",
+          "mode": "accept",
+          "accepted": false,
+          "status": 409,
+          "responseDropped": false,
+          "archiveSha256": "c0b9cc9d893d245983f1e8ac68835aeb3991c5b9fe4c152d94aec629743b8882",
+          "archiveBytes": 320,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "cccfce6a38b96b545979a1fbcac0d366ec31182bdf45793824ce98b9e9d01957"
+          },
+          "requestSha256": "81bba1722a08b19172a883355bea732ea0857bac30700a0cf4de45c0e164546e",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [],
+      "seconds": 0.14874595776200294,
+      "stdoutSha256": "1189bfb2cfe549c0878068518a733c82206185a89eb610db90f35794b5324df4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "dry-run-hooks",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json",
+      "--dry-run"
+    ],
+    "request": {
+      "version": "4.0.0",
+      "fixtureMode": "accept",
+      "failingHook": ""
+    },
+    "observed": {
+      "serverEvents": [],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "hooksBefore": [],
+      "hooksAfter": [
+        "prepublish",
+        "prepack",
+        "postpack"
+      ],
+      "seconds": 0.6792855421081185,
+      "stdoutSha256": "528c6affd0cf7a2cc8c7f33c6b66461096f0d019ea6cca7d653f7f8642a9f543",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "after-upload-hook-failure",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "npm",
+      "publish",
+      "--json"
+    ],
+    "request": {
+      "version": "5.0.0",
+      "fixtureMode": "accept",
+      "failingHook": "postpack"
+    },
+    "observed": {
+      "serverEvents": [
+        {
+          "case": "yarn-after-upload-hook-failure",
+          "method": "PUT",
+          "path": "/rules-publication-fixture-yarn",
+          "version": "5.0.0",
+          "mode": "accept",
+          "accepted": true,
+          "status": 201,
+          "responseDropped": false,
+          "archiveSha256": "d7a0d7ddc2a26cecc4d223a41e9a0743134ccd7e9c62e8c3cc44aaf5a49d68d5",
+          "archiveBytes": 386,
+          "files": {
+            "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+            "package/package.json": "f8d4bbfdefd5941aa1108554cf44044cd4987ab0403624df86166812782fe268"
+          },
+          "requestSha256": "0e7cf8baba65120e853b1420cd224486f0af77e7ce227b960d52a3fb1d5c160e",
+          "authorizationPresent": true
+        }
+      ],
+      "beforeVersions": [
+        "1.0.0",
+        "3.0.0"
+      ],
+      "afterVersions": [
+        "1.0.0",
+        "3.0.0",
+        "5.0.0"
+      ],
+      "hooksBefore": [
+        "prepublish",
+        "prepack",
+        "postpack"
+      ],
+      "hooksAfter": [
+        "prepublish",
+        "prepack",
+        "postpack",
+        "prepublish",
+        "prepack",
+        "postpack"
+      ],
+      "seconds": 0.6278425417840481,
+      "stdoutSha256": "1cf53dad5c7e22170a8f5c1782c7f14537a3680fbef88a7fdd848a462922f8b6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  }
+]

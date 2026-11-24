@@ -1,0 +1,44 @@
+Publish the active workspace to the npm registry
+
+Usage
+
+$ yarn npm publish
+
+Options
+
+  --access #0             The access for the published package (public or restricted)
+  --tag #0                The tag on the registry that the package should be attached to
+  --tolerate-republish    Warn and exit when republishing an already existing version of a package
+  --otp #0                The OTP token to use with the command
+  --provenance            Generate provenance for the package. Only available in GitHub Actions and GitLab CI. Can be set globally through the `npmPublishProvenance` setting or the `YARN_NPM_CONFIG_PROVENANCE` environment variable, or per-package through the `publishConfig.provenance` field in package.json.
+  -n,--dry-run            Show what would be published without actually publishing
+  --json                  Output the result in JSON format
+  --staged                Stage the package for later approval instead of publishing it immediately
+
+Details
+
+This command will pack the active workspace into a fresh archive and upload it 
+to the npm registry.
+
+The package will by default be attached to the `latest` tag on the registry, but 
+this behavior can be overridden by using the `--tag` option.
+
+Note that for legacy reasons scoped packages are by default published with an 
+access set to `restricted` (aka "private packages"). This requires you to 
+register for a paid npm plan. In case you simply wish to publish a public scoped 
+package to the registry (for free), just add the `--access public` flag. This 
+behavior can be enabled by default through the `npmPublishAccess` settings.
+
+If the `--staged` flag is set, the package will be staged for later approval 
+instead of being published immediately. Staged publishing does not require 2FA, 
+allowing automated workflows to stage packages while deferring proof-of-presence 
+to the approval step. Use `yarn npm stage list`, `yarn npm stage approve`, and 
+`yarn npm stage reject` to manage staged packages.
+
+Examples
+
+Publish the active workspace
+  $ yarn npm publish
+
+Stage the active workspace for later approval
+  $ yarn npm publish --staged

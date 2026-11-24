@@ -1,0 +1,380 @@
+[
+  {
+    "case": "npm-dry-run",
+    "method": "GET",
+    "path": "/npm",
+    "status": 404
+  },
+  {
+    "case": "npm-dry-run",
+    "method": "GET",
+    "path": "/npm",
+    "status": 404
+  },
+  {
+    "case": "npm-dry-run",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 404
+  },
+  {
+    "case": "npm-dry-run",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 404
+  },
+  {
+    "case": "npm-accepted",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 404
+  },
+  {
+    "case": "npm-accepted",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 404
+  },
+  {
+    "case": "npm-accepted",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-npm",
+    "version": "1.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "3a7ecfada85f97a4ff0e284e15d6cb4e9cdee12d39553dac2a5f31954dd1625f",
+    "archiveBytes": 314,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "4e285478965f082cf600472928ab729e832c62d9f7387845f30e8a9909b0fd08"
+    },
+    "requestSha256": "d6e048b83707cac283284e4dc78fcc3f296a906232a23d6052c214a580932135",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-duplicate",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-rejected",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-rejected",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-npm",
+    "version": "2.0.0",
+    "mode": "reject",
+    "accepted": false,
+    "status": 403,
+    "responseDropped": false,
+    "archiveSha256": "04a3bf4e561c091066705ac48f174d4a22a8e06b1ee37eab9419fe78173dd0fc",
+    "archiveBytes": 314,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "dbe1bcb77bc86b53cdc8fad66e9339a7e7f8b48677d003b18fdc34616b3ad758"
+    },
+    "requestSha256": "fcd512e31db0d11d6328931213527d3e059accd856596eda996e611a4619574f",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-lost-response",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-lost-response",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-npm",
+    "version": "3.0.0",
+    "mode": "drop",
+    "accepted": true,
+    "status": null,
+    "responseDropped": true,
+    "archiveSha256": "fcfa947d24cd8252f916aabd85a49f4d78ab2de30bfcafeebaf8b326ff8c7873",
+    "archiveBytes": 314,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "383530a20131943c659ddc50dabdf2cd5c6a6e85f24e873af341cdc313c9ff8c"
+    },
+    "requestSha256": "b951992fc87fd4ffc3056da358ab3a7e6f0f5ed9716f40d4503e6e7f58153b17",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-owner-read-after-loss",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-retry-after-loss",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-dry-run-hooks",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-after-upload-hook-failure",
+    "method": "GET",
+    "path": "/rules-publication-fixture-npm",
+    "status": 200
+  },
+  {
+    "case": "npm-after-upload-hook-failure",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-npm",
+    "version": "5.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "ffe83585986265761cfbe71849549fb4d9280b7575b2a4e3b44e4220bac1354e",
+    "archiveBytes": 379,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "354836c0ea89217e2e303f8b6c31898bc7554d7297358720aca7653bd22e688f"
+    },
+    "requestSha256": "6a6b8e966fb67eac90de3fae8f57d377b78b66a2b1b40a44ecc5f7cfc7601a38",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-accepted",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "1.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "2994fdded446b9d68bf6c82a4c854ed08fdf19f69d7f35d2df3a7e279760ff36",
+    "archiveBytes": 311,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "13ee285819c434c76c132c67acabbca1369c61e6b8ebd10d9adbe2abd419cbf8"
+    },
+    "requestSha256": "d7eb7f698e1e0887fe117cac2580c91a3f0f953dc780ad11784dababacdf81a3",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-duplicate",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "1.0.0",
+    "mode": "accept",
+    "accepted": false,
+    "status": 409,
+    "responseDropped": false,
+    "archiveSha256": "2994fdded446b9d68bf6c82a4c854ed08fdf19f69d7f35d2df3a7e279760ff36",
+    "archiveBytes": 311,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "13ee285819c434c76c132c67acabbca1369c61e6b8ebd10d9adbe2abd419cbf8"
+    },
+    "requestSha256": "d7eb7f698e1e0887fe117cac2580c91a3f0f953dc780ad11784dababacdf81a3",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-rejected",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "2.0.0",
+    "mode": "reject",
+    "accepted": false,
+    "status": 403,
+    "responseDropped": false,
+    "archiveSha256": "0f7c58924f698c8f36a31079d5d4da7c46aae04c74cddc142362aa714bdd8f1b",
+    "archiveBytes": 311,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "a255b304db0204f77427c4050f6d7746938d7e9e0675c4587039eb11b6529aab"
+    },
+    "requestSha256": "044ee68632cf37535245a647b4580db06f73cf0cdda3cbb5634f20b0ba034aaf",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-lost-response",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "3.0.0",
+    "mode": "drop",
+    "accepted": true,
+    "status": null,
+    "responseDropped": true,
+    "archiveSha256": "e5356042448582e8cd3651f4d4576372375e6ac568fc4f0aee9e8b0d1ef2a168",
+    "archiveBytes": 311,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "82bb4e179d9eaf39a03501f28bc7141550215e67a2e9141c117aa02f3ef571a0"
+    },
+    "requestSha256": "0b9e544d79df944fe1dd97950244bfe00c44b4ecff18c1b1ed59dc971f2fd1f2",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-owner-read-after-loss",
+    "method": "GET",
+    "path": "/rules-publication-fixture-pnpm",
+    "status": 200
+  },
+  {
+    "case": "pnpm-retry-after-loss",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "3.0.0",
+    "mode": "accept",
+    "accepted": false,
+    "status": 409,
+    "responseDropped": false,
+    "archiveSha256": "e5356042448582e8cd3651f4d4576372375e6ac568fc4f0aee9e8b0d1ef2a168",
+    "archiveBytes": 311,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "82bb4e179d9eaf39a03501f28bc7141550215e67a2e9141c117aa02f3ef571a0"
+    },
+    "requestSha256": "0b9e544d79df944fe1dd97950244bfe00c44b4ecff18c1b1ed59dc971f2fd1f2",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-after-upload-hook-failure",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-pnpm",
+    "version": "5.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "56f8ee98af59e2cb22a416b03d8ba64745d65acf43a133130739575463228da2",
+    "archiveBytes": 339,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "b50ea0c5f8832bf146d6e771c5ebda0113ce51c390993e5d20af60738f06bd36"
+    },
+    "requestSha256": "d67ada514f77ad22c501da0d123899427d495a327229c58135beca73f69c4576",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-accepted",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "1.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "f0000ed0275ead763b0a641e50e7c1dfe74d4ca7e475b3df4e5368a2ff65eb42",
+    "archiveBytes": 319,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "3c2fa50f4c517bc75c7c69d1a8db4def5655741933f779bb165fac12e109216e"
+    },
+    "requestSha256": "9c0ddba8ccfa6c7ba1ffb85262c6a92ae4a2f1226b808ac0f83625571487d3be",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-duplicate",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "1.0.0",
+    "mode": "accept",
+    "accepted": false,
+    "status": 409,
+    "responseDropped": false,
+    "archiveSha256": "f0000ed0275ead763b0a641e50e7c1dfe74d4ca7e475b3df4e5368a2ff65eb42",
+    "archiveBytes": 319,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "3c2fa50f4c517bc75c7c69d1a8db4def5655741933f779bb165fac12e109216e"
+    },
+    "requestSha256": "9c0ddba8ccfa6c7ba1ffb85262c6a92ae4a2f1226b808ac0f83625571487d3be",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-rejected",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "2.0.0",
+    "mode": "reject",
+    "accepted": false,
+    "status": 403,
+    "responseDropped": false,
+    "archiveSha256": "e482af45891cd257a2bbc1c9ab7dfe97aea0be8145b350f7d5da5c5a6e35caf0",
+    "archiveBytes": 320,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "443462398c65507d9a4824adbafef7f5b53500482ab7fc71c69af77f89c5cc5e"
+    },
+    "requestSha256": "ffd73504a22a81939c598ec20087bcb05908f7d7d2c529216fde70717d397461",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-lost-response",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "3.0.0",
+    "mode": "drop",
+    "accepted": true,
+    "status": null,
+    "responseDropped": true,
+    "archiveSha256": "c0b9cc9d893d245983f1e8ac68835aeb3991c5b9fe4c152d94aec629743b8882",
+    "archiveBytes": 320,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "cccfce6a38b96b545979a1fbcac0d366ec31182bdf45793824ce98b9e9d01957"
+    },
+    "requestSha256": "81bba1722a08b19172a883355bea732ea0857bac30700a0cf4de45c0e164546e",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-owner-read-after-loss",
+    "method": "GET",
+    "path": "/rules-publication-fixture-yarn",
+    "status": 200
+  },
+  {
+    "case": "yarn-retry-after-loss",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "3.0.0",
+    "mode": "accept",
+    "accepted": false,
+    "status": 409,
+    "responseDropped": false,
+    "archiveSha256": "c0b9cc9d893d245983f1e8ac68835aeb3991c5b9fe4c152d94aec629743b8882",
+    "archiveBytes": 320,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "cccfce6a38b96b545979a1fbcac0d366ec31182bdf45793824ce98b9e9d01957"
+    },
+    "requestSha256": "81bba1722a08b19172a883355bea732ea0857bac30700a0cf4de45c0e164546e",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-after-upload-hook-failure",
+    "method": "PUT",
+    "path": "/rules-publication-fixture-yarn",
+    "version": "5.0.0",
+    "mode": "accept",
+    "accepted": true,
+    "status": 201,
+    "responseDropped": false,
+    "archiveSha256": "d7a0d7ddc2a26cecc4d223a41e9a0743134ccd7e9c62e8c3cc44aaf5a49d68d5",
+    "archiveBytes": 386,
+    "files": {
+      "package/index.js": "e2abdc059bd8a706622154bfa9b27bc5d59c5ed262aab8ff8aa9245fc74b6f76",
+      "package/package.json": "f8d4bbfdefd5941aa1108554cf44044cd4987ab0403624df86166812782fe268"
+    },
+    "requestSha256": "0e7cf8baba65120e853b1420cd224486f0af77e7ce227b960d52a3fb1d5c160e",
+    "authorizationPresent": true
+  }
+]

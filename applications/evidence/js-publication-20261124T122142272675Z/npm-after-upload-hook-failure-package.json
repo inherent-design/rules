@@ -1,0 +1,20 @@
+{
+  "name": "rules-publication-fixture-npm",
+  "version": "5.0.0",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "http://127.0.0.1:50562/"
+  },
+  "scripts": {
+    "prepublish": "node hook.cjs prepublish",
+    "prepublishOnly": "node hook.cjs prepublishOnly",
+    "prepack": "node hook.cjs prepack",
+    "postpack": "node hook.cjs postpack",
+    "publish": "node hook.cjs publish",
+    "postpublish": "node hook.cjs postpublish"
+  }
+}

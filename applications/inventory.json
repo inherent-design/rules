@@ -5576,13 +5576,35 @@
           "operations": [
             {
               "id": "publish",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Publication.lean and js-peers/Publication.bend",
+              "laws": [
+                "dry_does_not_upload",
+                "acknowledged_implies_remote",
+                "both_loss_points_have_same_client_claim",
+                "late_hook_failure_preserves_acceptance",
+                "failure_does_not_mean_unpublished"
+              ],
+              "nativeEvidence": [
+                "evidence/js-publication-20261124T122142272675Z/trace.json",
+                "evidence/js-publication-20261124T122142272675Z/conformance.json",
+                "evidence/js-publication-20261124T122243777223Z/trace.json"
+              ],
+              "sourceComparison": [
+                "sources/js-publication-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/publication_conformance.py:unsupportedResearchInputsRefused",
+                "js-peers/publication_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/PUBLICATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated dependency-free package per tool with selected version identities, private configuration/cache/home and loopback-only fixture registry.",
+                "Server record and client response are separately measured. This does not establish real registry authorization, durability, replication or availability.",
+                "Selected retries disabled; effectful owned hooks only. Proposed Claim is distinct from current CLI fields.",
+                "Fixed archive membership/digest checks do not qualify general packaging or source-to-binary correspondence for pnpm/Yarn."
+              ],
+              "verificationPlan": "Extend real registry policy, staged publication, provenance, auth challenges, availability polling, default retries, workspace batches, concurrency/interruption and platforms separately. Preserve accepted summaries across later failure; inspect existing API/JSON consumers before adopting a reporting change."
             },
             {
               "id": "stage",
@@ -7002,13 +7024,35 @@
           "operations": [
             {
               "id": "publish",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Publication.lean and js-peers/Publication.bend",
+              "laws": [
+                "dry_does_not_upload",
+                "acknowledged_implies_remote",
+                "both_loss_points_have_same_client_claim",
+                "late_hook_failure_preserves_acceptance",
+                "failure_does_not_mean_unpublished"
+              ],
+              "nativeEvidence": [
+                "evidence/js-publication-20261124T122142272675Z/trace.json",
+                "evidence/js-publication-20261124T122142272675Z/conformance.json",
+                "evidence/js-publication-20261124T122243777223Z/trace.json"
+              ],
+              "sourceComparison": [
+                "sources/js-publication-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/publication_conformance.py:unsupportedResearchInputsRefused",
+                "js-peers/publication_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/PUBLICATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated dependency-free package per tool with selected version identities, private configuration/cache/home and loopback-only fixture registry.",
+                "Server record and client response are separately measured. This does not establish real registry authorization, durability, replication or availability.",
+                "Selected retries disabled; effectful owned hooks only. Proposed Claim is distinct from current CLI fields.",
+                "Fixed archive membership/digest checks do not qualify general packaging or source-to-binary correspondence for pnpm/Yarn."
+              ],
+              "verificationPlan": "Extend real registry policy, staged publication, provenance, auth challenges, availability polling, default retries, workspace batches, concurrency/interruption and platforms separately. Preserve accepted summaries across later failure; inspect existing API/JSON consumers before adopting a reporting change."
             },
             {
               "id": "stage",
@@ -8528,13 +8572,35 @@
             },
             {
               "id": "npm-publish",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Publication.lean and js-peers/Publication.bend",
+              "laws": [
+                "dry_does_not_upload",
+                "acknowledged_implies_remote",
+                "both_loss_points_have_same_client_claim",
+                "late_hook_failure_preserves_acceptance",
+                "failure_does_not_mean_unpublished"
+              ],
+              "nativeEvidence": [
+                "evidence/js-publication-20261124T122142272675Z/trace.json",
+                "evidence/js-publication-20261124T122142272675Z/conformance.json",
+                "evidence/js-publication-20261124T122243777223Z/trace.json"
+              ],
+              "sourceComparison": [
+                "sources/js-publication-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/publication_conformance.py:unsupportedResearchInputsRefused",
+                "js-peers/publication_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "js-peers/PUBLICATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated dependency-free package per tool with selected version identities, private configuration/cache/home and loopback-only fixture registry.",
+                "Server record and client response are separately measured. This does not establish real registry authorization, durability, replication or availability.",
+                "Selected retries disabled; effectful owned hooks only. Proposed Claim is distinct from current CLI fields.",
+                "Fixed archive membership/digest checks do not qualify general packaging or source-to-binary correspondence for pnpm/Yarn."
+              ],
+              "verificationPlan": "Extend real registry policy, staged publication, provenance, auth challenges, availability polling, default retries, workspace batches, concurrency/interruption and platforms separately. Preserve accepted summaries across later failure; inspect existing API/JSON consumers before adopting a reporting change."
             },
             {
               "id": "npm-stage-approve",
