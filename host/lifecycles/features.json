@@ -1,0 +1,3498 @@
+{
+  "formatVersion": 1,
+  "inventorySha256": "ebf0b645b414f548080889c276c7f5ee0ce235a169062d05b573f61b4f6e6d4d",
+  "meaning": "A host contract link names an obligation. Application conformance remains with its owner.",
+  "applications": [
+    {
+      "id": "empack",
+      "features": [
+        {
+          "id": "empack.identity",
+          "contracts": [
+            "identity",
+            "files"
+          ],
+          "operations": [
+            "decode",
+            "normalize",
+            "encode",
+            "reject-unsupported"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.author-documents",
+          "contracts": [
+            "files",
+            "revision",
+            "publication"
+          ],
+          "operations": [
+            "compose",
+            "edit",
+            "split-encode",
+            "no-op-preserve"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.initialize",
+          "contracts": [
+            "authority",
+            "files",
+            "publication"
+          ],
+          "operations": [
+            "prepare",
+            "preview",
+            "decline",
+            "apply",
+            "replace"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.import",
+          "contracts": [
+            "archives",
+            "network",
+            "content"
+          ],
+          "operations": [
+            "local-import",
+            "remote-import",
+            "interpret",
+            "associate",
+            "convert"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.provider-discovery",
+          "contracts": [
+            "network",
+            "identity",
+            "revision"
+          ],
+          "operations": [
+            "search",
+            "lookup-selector",
+            "bind-id",
+            "retain-binding",
+            "rebind"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.provider-policy",
+          "contracts": [
+            "network",
+            "evidence",
+            "revision"
+          ],
+          "operations": [
+            "resolve",
+            "prefer-stable",
+            "pin",
+            "unpin",
+            "validate-closure"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.supplied-content",
+          "contracts": [
+            "content",
+            "network",
+            "archives"
+          ],
+          "operations": [
+            "inspect-jar",
+            "inspect-zip",
+            "identify",
+            "associate",
+            "retain-url",
+            "copy-local"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.content-kinds",
+          "contracts": [
+            "content",
+            "archives"
+          ],
+          "operations": [
+            "classify-mod",
+            "classify-resource",
+            "classify-shader",
+            "classify-datapack",
+            "interpret-world"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.file-roles",
+          "contracts": [
+            "identity",
+            "files",
+            "evidence"
+          ],
+          "operations": [
+            "select-primary",
+            "select-declared-role",
+            "select-filename",
+            "map-members",
+            "place"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.source-layers",
+          "contracts": [
+            "files",
+            "overlay",
+            "content"
+          ],
+          "operations": [
+            "capture-common",
+            "capture-client",
+            "capture-server",
+            "exclude",
+            "overlay"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.templates",
+          "contracts": [
+            "files",
+            "archives",
+            "process"
+          ],
+          "operations": [
+            "capture-binary",
+            "render-template",
+            "override-client",
+            "override-server"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.sync",
+          "contracts": [
+            "revision",
+            "evidence",
+            "publication"
+          ],
+          "operations": [
+            "preview",
+            "retain-exact",
+            "resolve-missing",
+            "materialize",
+            "publish"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.assessment",
+          "contracts": [
+            "network",
+            "evidence",
+            "ui"
+          ],
+          "operations": [
+            "select-scope",
+            "observe-catalog",
+            "compare",
+            "filter",
+            "report"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.update",
+          "contracts": [
+            "authority",
+            "network",
+            "publication"
+          ],
+          "operations": [
+            "preview-all",
+            "preview-selected",
+            "choose-policy",
+            "apply",
+            "continue-independent"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.adoption",
+          "contracts": [
+            "files",
+            "evidence",
+            "authority"
+          ],
+          "operations": [
+            "inspect-drift",
+            "verify-identity",
+            "prepare-adopt",
+            "apply-adopt"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.migration",
+          "contracts": [
+            "revision",
+            "network",
+            "publication"
+          ],
+          "operations": [
+            "prepare-target",
+            "retain-valid-pins",
+            "re-resolve",
+            "apply"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.removal",
+          "contracts": [
+            "files",
+            "evidence",
+            "publication"
+          ],
+          "operations": [
+            "preview",
+            "remove-owned",
+            "forget-root",
+            "re-adopt",
+            "refuse-required"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.requirements",
+          "contracts": [
+            "overlay",
+            "revision",
+            "evidence"
+          ],
+          "operations": [
+            "select-side",
+            "choose-option",
+            "apply-fallback",
+            "validate-choice"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.consumer-builds",
+          "contracts": [
+            "archives",
+            "content",
+            "finalization"
+          ],
+          "operations": [
+            "prepare-modrinth",
+            "prepare-curseforge",
+            "prepare-prism",
+            "prepare-server",
+            "prepare-native",
+            "verify"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.delivery",
+          "contracts": [
+            "network",
+            "archives",
+            "capability"
+          ],
+          "operations": [
+            "select-reference",
+            "select-bundled",
+            "materialize-recipient",
+            "verify-distribution"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.release-producer",
+          "contracts": [
+            "identity",
+            "content",
+            "finalization"
+          ],
+          "operations": [
+            "produce-inventory",
+            "encode-release",
+            "validate-payload",
+            "stage-assets"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.publisher-channels",
+          "contracts": [
+            "authority",
+            "network",
+            "publication",
+            "time"
+          ],
+          "operations": [
+            "initialize-publisher",
+            "sign-release",
+            "advance-channel",
+            "verify-offer",
+            "retain-sequence"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.automation",
+          "contracts": [
+            "process",
+            "network",
+            "authority"
+          ],
+          "operations": [
+            "generate-ci",
+            "build-artifacts",
+            "qualify",
+            "publish-pack",
+            "install-engine"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.instance-install",
+          "contracts": [
+            "files",
+            "authority",
+            "publication"
+          ],
+          "operations": [
+            "prepare-install",
+            "install",
+            "prepare-repair",
+            "repair"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.instance-update",
+          "contracts": [
+            "network",
+            "revision",
+            "publication"
+          ],
+          "operations": [
+            "observe-offer",
+            "authenticate-select",
+            "plan-update",
+            "apply-update",
+            "change-authority"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.file-ownership",
+          "contracts": [
+            "files",
+            "identity",
+            "evidence"
+          ],
+          "operations": [
+            "compare-managed",
+            "preserve-seed",
+            "adopt-ownership",
+            "accept-deviation",
+            "refuse-foreign"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.world-state",
+          "contracts": [
+            "files",
+            "overlay",
+            "retention"
+          ],
+          "operations": [
+            "seed-initial-world",
+            "protect-initialized-world",
+            "preserve-runtime-output"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.instance-choices",
+          "contracts": [
+            "authority",
+            "revision",
+            "ui"
+          ],
+          "operations": [
+            "retain-choice",
+            "request-new-choice",
+            "replace",
+            "preserve",
+            "merge"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.rollback-recovery",
+          "contracts": [
+            "publication",
+            "files",
+            "retention"
+          ],
+          "operations": [
+            "plan-rollback",
+            "apply-rollback",
+            "inspect-journal",
+            "finish-journal",
+            "restore-journal"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.root-state",
+          "contracts": [
+            "identity",
+            "files",
+            "publication"
+          ],
+          "operations": [
+            "identify-root",
+            "observe-root",
+            "bind-state",
+            "reopen",
+            "refuse-incompatible"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.manual-pending",
+          "contracts": [
+            "content",
+            "network",
+            "authority"
+          ],
+          "operations": [
+            "record-requirement",
+            "scan-bounded",
+            "open-assistance",
+            "associate-exact",
+            "resume",
+            "discard"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.archive-bounds",
+          "contracts": [
+            "archives",
+            "files",
+            "resources"
+          ],
+          "operations": [
+            "sniff",
+            "decode-bounded",
+            "validate-paths",
+            "extract-private",
+            "verify-layout"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.cache-leases",
+          "contracts": [
+            "retention",
+            "content",
+            "concurrency"
+          ],
+          "operations": [
+            "acquire",
+            "verify",
+            "lease",
+            "release",
+            "collect",
+            "clean"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.java-policy",
+          "contracts": [
+            "process",
+            "capability",
+            "evidence"
+          ],
+          "operations": [
+            "resolve-minimum",
+            "admit-majors",
+            "recommend",
+            "override",
+            "probe"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.runtime-families",
+          "contracts": [
+            "network",
+            "process",
+            "capability"
+          ],
+          "operations": [
+            "prepare-vanilla",
+            "prepare-fabric",
+            "prepare-quilt",
+            "prepare-forge",
+            "prepare-neoforge"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.bootstrap",
+          "contracts": [
+            "files",
+            "network",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "read-launch-input",
+            "select-local",
+            "select-cache",
+            "download-verify",
+            "delegate",
+            "cancel"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.launch",
+          "contracts": [
+            "process",
+            "revision",
+            "authority"
+          ],
+          "operations": [
+            "capture-installation",
+            "validate-runtime",
+            "acquire-runtime-owner",
+            "revalidate",
+            "start"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.process-console",
+          "contracts": [
+            "process",
+            "terminal",
+            "concurrency"
+          ],
+          "operations": [
+            "transfer-console",
+            "read-input",
+            "interrupt",
+            "request-stop",
+            "retire",
+            "restore-terminal"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.batches",
+          "contracts": [
+            "concurrency",
+            "resources",
+            "publication"
+          ],
+          "operations": [
+            "admit-resources",
+            "prepare-batch",
+            "apply-all",
+            "apply-independent",
+            "cancel-batch",
+            "report-partial"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.status-diagnostics",
+          "contracts": [
+            "evidence",
+            "terminal",
+            "ui"
+          ],
+          "operations": [
+            "manifest",
+            "status",
+            "check-documents",
+            "check-recorded",
+            "check-local",
+            "check-online",
+            "doctor"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.api-events",
+          "contracts": [
+            "concurrency",
+            "authority",
+            "ui"
+          ],
+          "operations": [
+            "decode-request",
+            "prepare",
+            "approve",
+            "execute",
+            "subscribe",
+            "retain-error",
+            "close"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.configuration",
+          "contracts": [
+            "terminal",
+            "files",
+            "authority"
+          ],
+          "operations": [
+            "select-workdir",
+            "merge-cli-env",
+            "headless-decide",
+            "log",
+            "exit",
+            "clean-tools"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.project-save",
+          "contracts": [
+            "archives",
+            "files",
+            "retention"
+          ],
+          "operations": [
+            "capture-project",
+            "encode-backup",
+            "restore-draft",
+            "export-lossy"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-draft",
+          "contracts": [
+            "revision",
+            "content",
+            "capability"
+          ],
+          "operations": [
+            "import-input",
+            "inspect",
+            "propose",
+            "edit",
+            "validate",
+            "retain-invalid"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-assets",
+          "contracts": [
+            "content",
+            "files",
+            "retention"
+          ],
+          "operations": [
+            "retain-import",
+            "bounded-read",
+            "replace-mapping",
+            "resolve-missing",
+            "renew-permission"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-history",
+          "contracts": [
+            "revision",
+            "retention",
+            "concurrency"
+          ],
+          "operations": [
+            "edit",
+            "undo",
+            "redo",
+            "prune-history"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-background",
+          "contracts": [
+            "concurrency",
+            "revision",
+            "resources"
+          ],
+          "operations": [
+            "validate-background",
+            "resolve-background",
+            "deliver-result",
+            "discard-stale",
+            "cancel",
+            "retire-worker"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-save",
+          "contracts": [
+            "publication",
+            "retention",
+            "concurrency"
+          ],
+          "operations": [
+            "retain-bytes",
+            "commit-metadata",
+            "reopen",
+            "detect-missing",
+            "export-backup"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-export",
+          "contracts": [
+            "finalization",
+            "resources",
+            "archives"
+          ],
+          "operations": [
+            "plan-export",
+            "retain-plan",
+            "stream-output",
+            "backpressure",
+            "verify",
+            "finalize",
+            "abort"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-network",
+          "contracts": [
+            "network",
+            "authority",
+            "capability"
+          ],
+          "operations": [
+            "check-cors",
+            "authenticate-provider",
+            "fetch-bounded",
+            "request-file",
+            "resume-restricted"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-adapters",
+          "contracts": [
+            "capability",
+            "process",
+            "content"
+          ],
+          "operations": [
+            "admit-capabilities",
+            "execute-native",
+            "execute-worker",
+            "compare-inventory",
+            "report-unavailable"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "empack.portable-joined",
+          "contracts": [
+            "publication",
+            "retention",
+            "finalization"
+          ],
+          "operations": [
+            "import-jar-config",
+            "edit-metadata-place",
+            "preview",
+            "save",
+            "reopen",
+            "export-prism"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "npm",
+      "features": [
+        {
+          "id": "npm.identity-manifest",
+          "contracts": [
+            "identity",
+            "files"
+          ],
+          "operations": [
+            "init",
+            "pkg-get",
+            "pkg-set",
+            "pkg-delete",
+            "validate"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.resolution-lock",
+          "contracts": [
+            "network",
+            "evidence",
+            "revision"
+          ],
+          "operations": [
+            "resolve",
+            "install",
+            "ci",
+            "shrinkwrap",
+            "override"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.workspaces",
+          "contracts": [
+            "files",
+            "concurrency",
+            "authority"
+          ],
+          "operations": [
+            "discover",
+            "select",
+            "include-root",
+            "run-workspaces"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.sources",
+          "contracts": [
+            "network",
+            "content",
+            "files"
+          ],
+          "operations": [
+            "resolve-source",
+            "fetch",
+            "verify-integrity",
+            "link"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.installation",
+          "contracts": [
+            "files",
+            "process",
+            "publication"
+          ],
+          "operations": [
+            "install",
+            "dry-run",
+            "ci",
+            "reify",
+            "rebuild"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.editing-dependencies",
+          "contracts": [
+            "revision",
+            "evidence",
+            "files"
+          ],
+          "operations": [
+            "install-package",
+            "uninstall",
+            "update",
+            "outdated"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.dedupe-prune",
+          "contracts": [
+            "files",
+            "retention",
+            "evidence"
+          ],
+          "operations": [
+            "dedupe",
+            "find-dupes",
+            "prune"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.script-trust",
+          "contracts": [
+            "authority",
+            "process",
+            "revision"
+          ],
+          "operations": [
+            "approve-scripts",
+            "deny-scripts",
+            "install-scripts",
+            "rebuild"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.scripts",
+          "contracts": [
+            "process",
+            "terminal",
+            "concurrency"
+          ],
+          "operations": [
+            "run",
+            "start",
+            "stop",
+            "restart",
+            "test",
+            "install-test",
+            "install-ci-test"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.temporary-exec",
+          "contracts": [
+            "network",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "exec",
+            "resolve-bin",
+            "cache-executable",
+            "confirm"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.local-link-edit",
+          "contracts": [
+            "files",
+            "identity",
+            "authority"
+          ],
+          "operations": [
+            "link",
+            "edit",
+            "explore"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.inspect",
+          "contracts": [
+            "evidence",
+            "network",
+            "terminal"
+          ],
+          "operations": [
+            "ls",
+            "ll",
+            "explain",
+            "query",
+            "view",
+            "prefix",
+            "root"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.security",
+          "contracts": [
+            "network",
+            "evidence",
+            "authority"
+          ],
+          "operations": [
+            "audit",
+            "sbom",
+            "trust"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.cache",
+          "contracts": [
+            "retention",
+            "content",
+            "files"
+          ],
+          "operations": [
+            "cache-add",
+            "cache-verify",
+            "cache-clean",
+            "offline"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.config",
+          "contracts": [
+            "files",
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "config",
+            "get",
+            "set",
+            "merge-config",
+            "redact"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.registry-discovery",
+          "contracts": [
+            "network",
+            "evidence"
+          ],
+          "operations": [
+            "search",
+            "ping",
+            "whoami"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.account-credentials",
+          "contracts": [
+            "authority",
+            "network",
+            "files"
+          ],
+          "operations": [
+            "login",
+            "adduser",
+            "logout",
+            "profile",
+            "token"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.permissions",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "access",
+            "org",
+            "team",
+            "owner"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.release-artifact",
+          "contracts": [
+            "archives",
+            "files",
+            "process"
+          ],
+          "operations": [
+            "pack",
+            "version",
+            "validate-files",
+            "run-pack-hooks"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.publication",
+          "contracts": [
+            "network",
+            "authority",
+            "finalization"
+          ],
+          "operations": [
+            "publish",
+            "stage",
+            "approve-stage",
+            "unpublish"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.registry-labels",
+          "contracts": [
+            "network",
+            "identity",
+            "authority"
+          ],
+          "operations": [
+            "dist-tag",
+            "deprecate",
+            "undeprecate"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.discovery-help",
+          "contracts": [
+            "terminal",
+            "ui",
+            "process"
+          ],
+          "operations": [
+            "help",
+            "help-search",
+            "completion",
+            "docs",
+            "bugs",
+            "repo",
+            "fund",
+            "doctor"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "npm.social-metadata",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "star",
+            "unstar",
+            "stars"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "pnpm",
+      "features": [
+        {
+          "id": "pnpm.manifest-workspace",
+          "contracts": [
+            "identity",
+            "files"
+          ],
+          "operations": [
+            "init",
+            "pkg",
+            "workspace-discover",
+            "filter"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.resolution-lock",
+          "contracts": [
+            "network",
+            "evidence",
+            "revision"
+          ],
+          "operations": [
+            "install",
+            "update",
+            "outdated",
+            "import",
+            "resolve-peers"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.install-store",
+          "contracts": [
+            "content",
+            "files",
+            "retention"
+          ],
+          "operations": [
+            "fetch",
+            "install",
+            "link-store",
+            "verify-store"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.dependency-edits",
+          "contracts": [
+            "files",
+            "evidence",
+            "revision"
+          ],
+          "operations": [
+            "add",
+            "remove",
+            "unlink",
+            "prune"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.workspaces",
+          "contracts": [
+            "concurrency",
+            "authority",
+            "revision"
+          ],
+          "operations": [
+            "recursive",
+            "filter",
+            "filter-prod",
+            "sort",
+            "parallel"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.scripts-gates",
+          "contracts": [
+            "process",
+            "terminal",
+            "authority"
+          ],
+          "operations": [
+            "run",
+            "exec",
+            "verify-deps-before-run",
+            "test",
+            "start",
+            "stop",
+            "restart"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.task-pipelines",
+          "contracts": [
+            "concurrency",
+            "content",
+            "evidence"
+          ],
+          "operations": [
+            "tasks",
+            "pipeline",
+            "group-concurrency",
+            "restore-task-cache"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.build-permissions",
+          "contracts": [
+            "authority",
+            "process",
+            "revision"
+          ],
+          "operations": [
+            "ignored-builds",
+            "approve-builds",
+            "permissions",
+            "approve"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.patches",
+          "contracts": [
+            "files",
+            "identity",
+            "revision"
+          ],
+          "operations": [
+            "patch",
+            "patch-commit",
+            "patch-remove"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.dedupe-peers",
+          "contracts": [
+            "evidence",
+            "files"
+          ],
+          "operations": [
+            "dedupe",
+            "peers",
+            "why"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.inspection",
+          "contracts": [
+            "evidence",
+            "content",
+            "files"
+          ],
+          "operations": [
+            "list",
+            "ll",
+            "view",
+            "find-hash",
+            "cat-file",
+            "cat-index",
+            "bin",
+            "root",
+            "prefix"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.security-license",
+          "contracts": [
+            "network",
+            "evidence"
+          ],
+          "operations": [
+            "audit",
+            "licenses",
+            "sbom",
+            "fund"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.tool-runtime",
+          "contracts": [
+            "process",
+            "network",
+            "identity"
+          ],
+          "operations": [
+            "runtime",
+            "env",
+            "with",
+            "shim",
+            "setup",
+            "self-update"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.temporary-tools",
+          "contracts": [
+            "network",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "dlx",
+            "create",
+            "pack-app"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.deployment",
+          "contracts": [
+            "archives",
+            "content",
+            "finalization"
+          ],
+          "operations": [
+            "deploy",
+            "pack",
+            "fetch-lock"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.release-management",
+          "contracts": [
+            "revision",
+            "files",
+            "authority"
+          ],
+          "operations": [
+            "change",
+            "version",
+            "lane"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.publication",
+          "contracts": [
+            "network",
+            "authority",
+            "finalization"
+          ],
+          "operations": [
+            "publish",
+            "stage",
+            "dist-tag",
+            "unpublish",
+            "deprecate",
+            "undeprecate"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.registry-auth",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "login",
+            "logout",
+            "profile",
+            "token",
+            "access",
+            "team",
+            "owner",
+            "whoami"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.registry-ui",
+          "contracts": [
+            "network",
+            "ui"
+          ],
+          "operations": [
+            "search",
+            "ping",
+            "docs",
+            "repo",
+            "bugs",
+            "star",
+            "unstar",
+            "stars"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.config-reporting",
+          "contracts": [
+            "files",
+            "terminal",
+            "authority"
+          ],
+          "operations": [
+            "config",
+            "get",
+            "set",
+            "env-file",
+            "reporter",
+            "help",
+            "completion",
+            "doctor"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.cleanup",
+          "contracts": [
+            "files",
+            "retention",
+            "process"
+          ],
+          "operations": [
+            "clean",
+            "purge",
+            "ci",
+            "store",
+            "cache"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "pnpm.unsupported-aliases",
+          "contracts": [
+            "capability",
+            "terminal"
+          ],
+          "operations": [
+            "edit",
+            "xmas"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "yarn",
+      "features": [
+        {
+          "id": "yarn.manifest-project",
+          "contracts": [
+            "identity",
+            "files"
+          ],
+          "operations": [
+            "init",
+            "discover-project",
+            "discover-workspace"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.constraints-resolution",
+          "contracts": [
+            "network",
+            "evidence",
+            "revision"
+          ],
+          "operations": [
+            "resolve",
+            "set-resolution",
+            "check-resolutions",
+            "explain-peers"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.installation",
+          "contracts": [
+            "content",
+            "files",
+            "process"
+          ],
+          "operations": [
+            "resolve",
+            "fetch",
+            "link",
+            "build",
+            "immutable",
+            "update-lockfile",
+            "skip-build"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.linkers",
+          "contracts": [
+            "files",
+            "process",
+            "capability"
+          ],
+          "operations": [
+            "select-pnp",
+            "select-node-modules",
+            "unplug",
+            "node"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.dependency-edits",
+          "contracts": [
+            "revision",
+            "authority",
+            "ui"
+          ],
+          "operations": [
+            "add",
+            "remove",
+            "up",
+            "upgrade-interactive"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.workspaces",
+          "contracts": [
+            "files",
+            "concurrency",
+            "authority"
+          ],
+          "operations": [
+            "workspace",
+            "workspaces-list",
+            "focus",
+            "foreach"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.constraints",
+          "contracts": [
+            "evidence",
+            "revision",
+            "files"
+          ],
+          "operations": [
+            "constraints-check",
+            "constraints-fix",
+            "constraints-query",
+            "constraints-source"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.scripts",
+          "contracts": [
+            "process",
+            "terminal"
+          ],
+          "operations": [
+            "run",
+            "exec",
+            "bin",
+            "rebuild"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.temporary-exec",
+          "contracts": [
+            "network",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "dlx",
+            "init-initializer"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.cache-offline",
+          "contracts": [
+            "content",
+            "retention",
+            "evidence"
+          ],
+          "operations": [
+            "cache-clean",
+            "immutable-cache",
+            "check-cache",
+            "offline"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.patches",
+          "contracts": [
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "patch",
+            "patch-commit",
+            "unplug"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.plugins",
+          "contracts": [
+            "authority",
+            "network",
+            "process"
+          ],
+          "operations": [
+            "plugin-list",
+            "plugin-runtime",
+            "plugin-check",
+            "plugin-import",
+            "plugin-remove"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.tool-version",
+          "contracts": [
+            "identity",
+            "network",
+            "process"
+          ],
+          "operations": [
+            "set-version",
+            "set-version-from-sources"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.inspection",
+          "contracts": [
+            "evidence",
+            "terminal",
+            "ui"
+          ],
+          "operations": [
+            "info",
+            "why",
+            "explain",
+            "search"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.configuration",
+          "contracts": [
+            "files",
+            "authority",
+            "terminal"
+          ],
+          "operations": [
+            "config-get",
+            "config-set",
+            "config-unset",
+            "config-why"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.security",
+          "contracts": [
+            "network",
+            "evidence"
+          ],
+          "operations": [
+            "npm-audit",
+            "explain-peer-requirements"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.package-publication",
+          "contracts": [
+            "archives",
+            "network",
+            "authority"
+          ],
+          "operations": [
+            "pack",
+            "npm-publish",
+            "npm-stage-approve",
+            "npm-stage-list",
+            "npm-stage-reject"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.registry-account",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "npm-login",
+            "npm-logout",
+            "npm-whoami",
+            "npm-info",
+            "npm-tag-add",
+            "npm-tag-remove"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "yarn.version-intents",
+          "contracts": [
+            "revision",
+            "files",
+            "authority"
+          ],
+          "operations": [
+            "version",
+            "version-apply",
+            "version-check",
+            "stage"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "mo2",
+      "features": [
+        {
+          "id": "mo2.instances-games",
+          "contracts": [
+            "identity",
+            "files",
+            "capability"
+          ],
+          "operations": [
+            "discover-game",
+            "create-instance",
+            "select-instance",
+            "move-instance"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.profiles",
+          "contracts": [
+            "files",
+            "revision",
+            "concurrency"
+          ],
+          "operations": [
+            "create-profile",
+            "copy-profile",
+            "switch-profile",
+            "remove-profile"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.downloads",
+          "contracts": [
+            "network",
+            "content",
+            "authority"
+          ],
+          "operations": [
+            "query-nexus",
+            "enqueue",
+            "download",
+            "resume",
+            "associate"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.installation",
+          "contracts": [
+            "archives",
+            "files",
+            "authority"
+          ],
+          "operations": [
+            "install-archive",
+            "run-fomod",
+            "choose-options",
+            "merge-mod",
+            "replace-mod"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.mod-state",
+          "contracts": [
+            "overlay",
+            "revision",
+            "ui"
+          ],
+          "operations": [
+            "enable",
+            "disable",
+            "reorder",
+            "categorize",
+            "filter"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.effective-files",
+          "contracts": [
+            "overlay",
+            "files",
+            "identity"
+          ],
+          "operations": [
+            "build-overlay",
+            "resolve-file",
+            "hide-file",
+            "inspect-conflict",
+            "preview-archive"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.plugins-load-order",
+          "contracts": [
+            "overlay",
+            "evidence",
+            "capability"
+          ],
+          "operations": [
+            "enable-plugin",
+            "reorder-plugin",
+            "sort-loot",
+            "inspect-masters"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.configuration",
+          "contracts": [
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "select-local-ini",
+            "edit-ini",
+            "validate-paths",
+            "configure-tool"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.saves",
+          "contracts": [
+            "files",
+            "retention",
+            "identity"
+          ],
+          "operations": [
+            "select-local-saves",
+            "inspect-save",
+            "transfer-save"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.executables",
+          "contracts": [
+            "process",
+            "authority",
+            "concurrency"
+          ],
+          "operations": [
+            "register-tool",
+            "configure-arguments",
+            "launch",
+            "wait",
+            "close-ui"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.overwrite",
+          "contracts": [
+            "files",
+            "overlay",
+            "authority"
+          ],
+          "operations": [
+            "capture-write",
+            "inspect-overwrite",
+            "create-mod",
+            "route-output"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.mod-metadata",
+          "contracts": [
+            "network",
+            "evidence",
+            "ui"
+          ],
+          "operations": [
+            "inspect-version",
+            "notes",
+            "categories",
+            "content-types",
+            "check-updates"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.extension-interfaces",
+          "contracts": [
+            "capability",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "load-plugin",
+            "admit-game-capability",
+            "call-python",
+            "preview"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.diagnostics",
+          "contracts": [
+            "evidence",
+            "ui",
+            "files"
+          ],
+          "operations": [
+            "inspect-logs",
+            "detect-problems",
+            "report-crash",
+            "repair-association"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "mo2.maintenance",
+          "contracts": [
+            "retention",
+            "files",
+            "publication"
+          ],
+          "operations": [
+            "backup-profile",
+            "restore-profile",
+            "clean-downloads",
+            "update-mo2",
+            "rebase-paths"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "prism",
+      "features": [
+        {
+          "id": "prism.instance-library",
+          "contracts": [
+            "identity",
+            "files",
+            "ui"
+          ],
+          "operations": [
+            "create",
+            "copy",
+            "rename",
+            "group",
+            "move",
+            "delete"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.components",
+          "contracts": [
+            "network",
+            "revision",
+            "evidence"
+          ],
+          "operations": [
+            "select-minecraft",
+            "install-loader",
+            "edit-component",
+            "patch-order",
+            "upgrade-components"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.java",
+          "contracts": [
+            "process",
+            "capability",
+            "files"
+          ],
+          "operations": [
+            "discover-java",
+            "select-instance-java",
+            "validate-runtime",
+            "configure-memory"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.accounts",
+          "contracts": [
+            "authority",
+            "network",
+            "files"
+          ],
+          "operations": [
+            "add-account",
+            "refresh-session",
+            "select-account",
+            "offline-launch",
+            "remove-account"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.pack-import",
+          "contracts": [
+            "archives",
+            "network",
+            "content"
+          ],
+          "operations": [
+            "browse-providers",
+            "import-url",
+            "import-archive",
+            "associate-pack"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.pack-update",
+          "contracts": [
+            "network",
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "observe-version",
+            "compare-pack",
+            "replace-pack-files",
+            "preserve-user-state"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.mod-management",
+          "contracts": [
+            "network",
+            "evidence",
+            "files"
+          ],
+          "operations": [
+            "search-mod",
+            "install-mod",
+            "disable-mod",
+            "update-mod",
+            "remove-mod"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.resources",
+          "contracts": [
+            "files",
+            "identity",
+            "ui"
+          ],
+          "operations": [
+            "install-resource",
+            "enable-resource",
+            "remove-resource"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.worlds",
+          "contracts": [
+            "files",
+            "retention",
+            "process"
+          ],
+          "operations": [
+            "list-world",
+            "copy-world",
+            "import-world",
+            "export-world",
+            "delete-world"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.launch-commands",
+          "contracts": [
+            "process",
+            "files",
+            "authority"
+          ],
+          "operations": [
+            "configure-command",
+            "override-global",
+            "prepare-hook",
+            "wrap-launch",
+            "post-exit"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.process-console",
+          "contracts": [
+            "process",
+            "concurrency",
+            "ui"
+          ],
+          "operations": [
+            "prepare-launch",
+            "start-game",
+            "show-console",
+            "close-window",
+            "kill-game"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.tasks-downloads",
+          "contracts": [
+            "network",
+            "content",
+            "concurrency"
+          ],
+          "operations": [
+            "schedule-task",
+            "fetch-assets",
+            "fetch-libraries",
+            "cancel-task",
+            "retry"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.export",
+          "contracts": [
+            "archives",
+            "authority",
+            "finalization"
+          ],
+          "operations": [
+            "select-files",
+            "export-zip",
+            "export-mrpack",
+            "include-overrides"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.launcher-settings",
+          "contracts": [
+            "files",
+            "overlay",
+            "ui"
+          ],
+          "operations": [
+            "resolve-global",
+            "override-instance",
+            "edit-icon",
+            "theme",
+            "accessibility"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.cli",
+          "contracts": [
+            "terminal",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "launch-by-id",
+            "import-by-argument",
+            "select-directory",
+            "request-uri"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.diagnostics",
+          "contracts": [
+            "evidence",
+            "network",
+            "ui"
+          ],
+          "operations": [
+            "inspect-log",
+            "filter-log",
+            "redact-upload",
+            "diagnose-metadata"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "prism.launcher-maintenance",
+          "contracts": [
+            "retention",
+            "files",
+            "network"
+          ],
+          "operations": [
+            "update-launcher",
+            "retain-instance",
+            "clean-cache",
+            "migrate-settings"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "cargo",
+      "features": [
+        {
+          "id": "cargo.package-manifest",
+          "contracts": [
+            "identity",
+            "files"
+          ],
+          "operations": [
+            "new",
+            "init",
+            "decode-manifest",
+            "normalize-targets"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.workspaces",
+          "contracts": [
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "discover-members",
+            "default-members",
+            "exclude",
+            "inherit-fields"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.dependency-graph",
+          "contracts": [
+            "network",
+            "evidence",
+            "identity"
+          ],
+          "operations": [
+            "resolve",
+            "patch",
+            "replace-source",
+            "resolve-target-cfg"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.features",
+          "contracts": [
+            "evidence",
+            "concurrency",
+            "capability"
+          ],
+          "operations": [
+            "select-features",
+            "unify-features",
+            "default-features",
+            "target-features"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.lock-state",
+          "contracts": [
+            "network",
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "generate-lockfile",
+            "update",
+            "locked",
+            "frozen",
+            "offline"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.build-units",
+          "contracts": [
+            "process",
+            "content",
+            "concurrency"
+          ],
+          "operations": [
+            "build",
+            "check",
+            "rustc",
+            "doc",
+            "rustdoc"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.freshness",
+          "contracts": [
+            "files",
+            "process",
+            "evidence"
+          ],
+          "operations": [
+            "fingerprint",
+            "rerun-if-changed",
+            "rerun-if-env-changed",
+            "reuse-artifact"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.profiles-config",
+          "contracts": [
+            "process",
+            "capability",
+            "files"
+          ],
+          "operations": [
+            "select-profile",
+            "configure-target",
+            "configure-runner",
+            "merge-config"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.scripts",
+          "contracts": [
+            "process",
+            "authority",
+            "files"
+          ],
+          "operations": [
+            "compile-build-script",
+            "run-build-script",
+            "execute-proc-macro"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.execution-tests",
+          "contracts": [
+            "process",
+            "terminal",
+            "evidence"
+          ],
+          "operations": [
+            "run",
+            "test",
+            "bench",
+            "doctest"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.developer-fixes",
+          "contracts": [
+            "files",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "fmt",
+            "clippy",
+            "fix"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.graph-inspection",
+          "contracts": [
+            "evidence",
+            "network",
+            "files"
+          ],
+          "operations": [
+            "metadata",
+            "tree",
+            "pkgid",
+            "locate-project",
+            "read-manifest"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.source-cache",
+          "contracts": [
+            "content",
+            "network",
+            "retention"
+          ],
+          "operations": [
+            "fetch",
+            "vendor",
+            "offline",
+            "cache-reuse"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.artifact-cleanup",
+          "contracts": [
+            "files",
+            "retention",
+            "concurrency"
+          ],
+          "operations": [
+            "clean",
+            "select-target-dir",
+            "select-package",
+            "select-profile"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.binary-install",
+          "contracts": [
+            "files",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "install",
+            "uninstall",
+            "list-installed",
+            "replace-binary"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.registry-identity",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "login",
+            "logout",
+            "credential-provider",
+            "search",
+            "info"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.publication",
+          "contracts": [
+            "archives",
+            "process",
+            "network"
+          ],
+          "operations": [
+            "package",
+            "publish",
+            "dry-run",
+            "verify-package"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.registry-mutation",
+          "contracts": [
+            "authority",
+            "network"
+          ],
+          "operations": [
+            "owner",
+            "yank",
+            "unyank"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "cargo.extensions-reporting",
+          "contracts": [
+            "process",
+            "terminal",
+            "capability"
+          ],
+          "operations": [
+            "help",
+            "list-commands",
+            "aliases",
+            "external-subcommand",
+            "report",
+            "explain"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "restic",
+      "features": [
+        {
+          "id": "restic.repository",
+          "contracts": [
+            "identity",
+            "network",
+            "files"
+          ],
+          "operations": [
+            "init",
+            "open",
+            "select-backend",
+            "migrate-format"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.key-custody",
+          "contracts": [
+            "authority",
+            "content"
+          ],
+          "operations": [
+            "derive-key",
+            "add-key",
+            "change-password",
+            "remove-key"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.snapshot-selection",
+          "contracts": [
+            "identity",
+            "time",
+            "evidence"
+          ],
+          "operations": [
+            "snapshots",
+            "tag",
+            "rewrite-metadata",
+            "select-latest"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.backup",
+          "contracts": [
+            "files",
+            "content",
+            "publication"
+          ],
+          "operations": [
+            "select-inputs",
+            "scan",
+            "chunk",
+            "deduplicate",
+            "store",
+            "publish-snapshot"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.input-policy",
+          "contracts": [
+            "files",
+            "process",
+            "evidence"
+          ],
+          "operations": [
+            "exclude",
+            "include",
+            "read-list",
+            "skip-unchanged",
+            "read-command",
+            "stdin-backup"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.comparison",
+          "contracts": [
+            "content",
+            "evidence",
+            "retention"
+          ],
+          "operations": [
+            "diff",
+            "find",
+            "ls",
+            "stats"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.restore",
+          "contracts": [
+            "files",
+            "authority",
+            "publication"
+          ],
+          "operations": [
+            "restore",
+            "select-path",
+            "verify-restored",
+            "overwrite-policy"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.read-projection",
+          "contracts": [
+            "files",
+            "content",
+            "resources"
+          ],
+          "operations": [
+            "dump",
+            "mount",
+            "cat",
+            "list-objects"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.integrity",
+          "contracts": [
+            "content",
+            "evidence",
+            "resources"
+          ],
+          "operations": [
+            "check-index",
+            "check-data",
+            "read-data-subset"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.locks",
+          "contracts": [
+            "concurrency",
+            "time",
+            "authority"
+          ],
+          "operations": [
+            "acquire-shared",
+            "acquire-exclusive",
+            "retry-lock",
+            "unlock"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.retention",
+          "contracts": [
+            "retention",
+            "identity",
+            "time"
+          ],
+          "operations": [
+            "forget-selected",
+            "group-retention",
+            "dry-run",
+            "forget-prune"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.prune",
+          "contracts": [
+            "retention",
+            "content",
+            "publication"
+          ],
+          "operations": [
+            "mark-reachable",
+            "repack",
+            "remove-unreferenced",
+            "limit-unused"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.copy",
+          "contracts": [
+            "content",
+            "network",
+            "identity"
+          ],
+          "operations": [
+            "select-source",
+            "copy-snapshots",
+            "verify-destination"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.repair",
+          "contracts": [
+            "evidence",
+            "publication",
+            "authority"
+          ],
+          "operations": [
+            "repair-index",
+            "repair-snapshot",
+            "recover-unreferenced",
+            "check-after"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.cache-resources",
+          "contracts": [
+            "resources",
+            "retention",
+            "network"
+          ],
+          "operations": [
+            "cache-list",
+            "cache-clean",
+            "configure-concurrency",
+            "compress",
+            "throttle"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "restic.automation",
+          "contracts": [
+            "process",
+            "terminal",
+            "publication"
+          ],
+          "operations": [
+            "json-progress",
+            "partial-backup",
+            "interrupt",
+            "retry",
+            "schedule"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    },
+    {
+      "id": "vscode",
+      "features": [
+        {
+          "id": "vscode.workspaces",
+          "contracts": [
+            "identity",
+            "files",
+            "revision"
+          ],
+          "operations": [
+            "open-folder",
+            "open-workspace",
+            "add-root",
+            "remove-root",
+            "remote-open"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.documents",
+          "contracts": [
+            "revision",
+            "files",
+            "ui"
+          ],
+          "operations": [
+            "open",
+            "edit",
+            "dirty",
+            "save",
+            "save-as",
+            "revert",
+            "close"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.undo-history",
+          "contracts": [
+            "retention",
+            "revision",
+            "files"
+          ],
+          "operations": [
+            "undo",
+            "redo",
+            "save-history",
+            "restore-history"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.save-conflicts",
+          "contracts": [
+            "files",
+            "revision",
+            "authority"
+          ],
+          "operations": [
+            "watch-file",
+            "reload",
+            "compare",
+            "merge",
+            "overwrite"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.filesystem-adapters",
+          "contracts": [
+            "capability",
+            "files",
+            "network"
+          ],
+          "operations": [
+            "register-provider",
+            "read",
+            "write",
+            "watch",
+            "renew-permission"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.search",
+          "contracts": [
+            "revision",
+            "concurrency",
+            "evidence"
+          ],
+          "operations": [
+            "search-buffer",
+            "search-workspace",
+            "replace-preview",
+            "replace-all",
+            "cancel-search"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.language-services",
+          "contracts": [
+            "concurrency",
+            "revision",
+            "process"
+          ],
+          "operations": [
+            "complete",
+            "navigate",
+            "diagnose",
+            "rename",
+            "refactor",
+            "format"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.configuration",
+          "contracts": [
+            "files",
+            "authority",
+            "overlay"
+          ],
+          "operations": [
+            "resolve-settings",
+            "edit-user",
+            "edit-workspace",
+            "language-override",
+            "keybindings"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.profiles-sync",
+          "contracts": [
+            "network",
+            "revision",
+            "authority"
+          ],
+          "operations": [
+            "create-profile",
+            "switch-profile",
+            "export-profile",
+            "sync",
+            "resolve-sync-conflict"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.extensions",
+          "contracts": [
+            "capability",
+            "process",
+            "authority"
+          ],
+          "operations": [
+            "install",
+            "enable",
+            "disable",
+            "update",
+            "select-host",
+            "uninstall"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.workspace-trust",
+          "contracts": [
+            "authority",
+            "process",
+            "revision"
+          ],
+          "operations": [
+            "inspect-trust",
+            "grant-trust",
+            "revoke-trust",
+            "admit-feature"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.tasks",
+          "contracts": [
+            "process",
+            "concurrency",
+            "ui"
+          ],
+          "operations": [
+            "configure-task",
+            "resolve-task",
+            "run",
+            "background-ready",
+            "stop-task"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.terminal",
+          "contracts": [
+            "process",
+            "terminal",
+            "ui"
+          ],
+          "operations": [
+            "create-terminal",
+            "reconnect",
+            "send-input",
+            "split",
+            "close",
+            "kill"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.debug-test",
+          "contracts": [
+            "process",
+            "capability",
+            "evidence"
+          ],
+          "operations": [
+            "discover-test",
+            "run-test",
+            "debug-launch",
+            "attach",
+            "stop-debug"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.scm",
+          "contracts": [
+            "files",
+            "revision",
+            "authority"
+          ],
+          "operations": [
+            "stage",
+            "commit",
+            "discard",
+            "checkout",
+            "worktree",
+            "merge-conflict",
+            "history"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.remote",
+          "contracts": [
+            "network",
+            "process",
+            "capability"
+          ],
+          "operations": [
+            "ssh-connect",
+            "container-connect",
+            "wsl-connect",
+            "tunnel",
+            "disconnect"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.web-workspaces",
+          "contracts": [
+            "files",
+            "retention",
+            "capability"
+          ],
+          "operations": [
+            "open-local-handle",
+            "open-github",
+            "edit-web",
+            "retain-working-copy",
+            "reopen"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.web-extensions",
+          "contracts": [
+            "process",
+            "network",
+            "capability"
+          ],
+          "operations": [
+            "load-web-extension",
+            "run-worker",
+            "language-service-web",
+            "report-unavailable"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.ui-accessibility",
+          "contracts": [
+            "ui",
+            "authority",
+            "revision"
+          ],
+          "operations": [
+            "command-palette",
+            "key-navigation",
+            "dialogs",
+            "notifications",
+            "screen-reader"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.cli",
+          "contracts": [
+            "process",
+            "files",
+            "ui"
+          ],
+          "operations": [
+            "goto",
+            "diff",
+            "merge",
+            "stdin",
+            "wait",
+            "new-window",
+            "reuse-window"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.agent-sessions",
+          "contracts": [
+            "revision",
+            "authority",
+            "concurrency"
+          ],
+          "operations": [
+            "start-session",
+            "provide-context",
+            "plan",
+            "review-edits",
+            "undo-agent",
+            "close-session"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.agent-tools",
+          "contracts": [
+            "authority",
+            "network",
+            "process"
+          ],
+          "operations": [
+            "register-mcp",
+            "invoke-tool",
+            "approve",
+            "deny",
+            "sandbox",
+            "hook",
+            "delegate"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.agent-continuity",
+          "contracts": [
+            "retention",
+            "revision",
+            "authority"
+          ],
+          "operations": [
+            "resume-session",
+            "share-context",
+            "schedule",
+            "remote-session",
+            "retain-artifact"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.browser-preview",
+          "contracts": [
+            "ui",
+            "network",
+            "authority"
+          ],
+          "operations": [
+            "preview-markdown",
+            "open-browser",
+            "forward-port",
+            "inspect-web"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        },
+        {
+          "id": "vscode.updates-operations",
+          "contracts": [
+            "process",
+            "retention",
+            "evidence"
+          ],
+          "operations": [
+            "update-code",
+            "update-extension",
+            "inspect-status",
+            "profile-startup",
+            "collect-logs"
+          ],
+          "owner": "application-study",
+          "conformance": "requires-per-application-evidence"
+        }
+      ]
+    }
+  ]
+}

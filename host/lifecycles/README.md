@@ -1,0 +1,81 @@
+# Application lifecycles across hosts
+
+This study extends the first [host map](../README.md). It starts with the relationships an application needs to preserve across several operations, then asks what the host can establish for each step. The application-study owner maintains the per-program inventories and domain models under applications/. The host owner maintains this common contract and its native witnesses.
+
+| Surface                   | Application feature families                                                                                                        | Operation, state owner, and visible promise                                                                                                                       | Failure to exercise                                                                                                                  |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Files and storage         | MO2 effective files; Prism instances; package locks; Cargo artifacts; restic snapshots; editor documents; empack assets and exports | A directory, project, or repository owner admits a new revision. A reader can identify the content and the reference that keeps it live.                          | An interrupted save retains bytes without a committed metadata reference; an old reader or plan retains an earlier version.          |
+| Input, UI, and processes  | Editor Save; launchers; scripts and tasks; prompts; external tools                                                                  | The UI records the user's requested target and reports the operation's actual outcome. Process ownership continues through task retirement.                       | A save completes after another edit, a profile switches while an external tool runs, or closing a window leaves a worker alive.      |
+| Concurrency and time      | Background inspection; builds and caches; concurrent repository operations; tabs and watchers                                       | A result identifies its captured revision and the consumer checks that basis at publication. A serialized compare-and-publish owner arbitrates competing writers. | Two writers prepare from one base; a job finishes out of order; a cancelled request still returns a result.                          |
+| Network and subscriptions | Provider search; account/session state; package registries; remote workspaces; updates                                              | A transport delivers exact bytes and scoped observations. A receiver retains its cursor, authorized interest, and request identity.                               | CORS blocks a verifiable body, a hook sees a stale basis, or a reconnect loses an acknowledgement.                                   |
+| Retention and resources   | Undo, plans, snapshots, profiles, caches, imported content, downloads                                                               | Each retained reference has an owner. Collection can reclaim only objects unreachable from all admitted roots.                                                    | Deleting an undo entry leaves a plan alive; metadata commits before content is stored; native and browser quotas differ.             |
+| Authority and interaction | Approval, trusted workspace actions, native companions, browser permissions, instance repair                                        | Current authority and required capability bind the same target and operation. Displaying a plan or propagating an identity provides evidence for the decision.    | A permission is revoked, a native-only action is requested on a browser host, or a visible row points to a different backing object. |
+
+The six surfaces overlap. A background save connects storage, UI, concurrency, and retention. Keeping a separate observation for each makes it possible to tell someone “revision 4 was saved; revision 5 is still unsaved” without discarding either result.
+
+## Ownership and trace contract
+
+The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.
+
+Each lifecycle trace uses an explicit major version and identifies the profile, application or fixture, feature, operation, target, and captured basis. Decimal revision strings preserve identity beyond JavaScript's exact number range. A receipt references the producing build and source digests. Observed state and actual outcome are separate from proposed policy and proof status. The verifier refuses unknown major versions, absent identity, malformed counters, or a missing witness required by that surface. A peer message cannot supply native evidence by itself.
+
+## What the state models establish
+
+The Lean model follows project references and stored assets through atomic save and collection steps. If all admitted roots point to retained content initially, any finite sequence of those coordinated steps preserves that property. The model includes saved drafts, undo, plans, workers, and recovery. The host must supply the complete closure of retaining relationships. History, lineage, and provenance edges have different semantics and can legitimately name reclaimed objects. It also contains the counterexample in which the collector uses an earlier root snapshot while another writer publishes a reference.
+
+A separate editor model records document incarnation, current source revision, acknowledged source revision, and storage revision. A save receipt cannot rewrite the current buffer, regress the latest acknowledged save, or mark another incarnation saved. Its storage revision belongs to a different counter domain. These are proposed caller invariants with native witnesses to qualify, rather than guarantees inferred from any application's Save label.
+
+The typed-retention adapter refuses collection when a root group is missing or an edge has unknown ownership semantics. Its fixtures preserve shared content and plan-owned content while allowing a historical parent reference to remain without retaining the old content. The Lean edge projection proves that adding a non-retaining history edge leaves retention edges unchanged.
+
+The executable Bend layer checks admission predicates for a draft, export, save status, collection, retirement, consumption, and finalization. Lean independently enumerates all 68 Boolean combinations and checks them against the emitted module. These bounded classifiers are only one part of the models. The state/trace theorems carry the lifecycle assumptions.
+
+## What the probes found
+
+| Observation | Consequence for a host adapter or interface |
+| --- | --- |
+| An IndexedDB put request succeeds, then its transaction aborts. The previous project revision remains. | Announce save completion from the transaction outcome. Retain a separate state for a write accepted into an unfinished transaction. |
+| A dedicated worker flushes OPFS bytes and is terminated before project publication. The bytes remain, while project revision stays unchanged. | Content retention and project save have separate outcomes. A collector can consider the orphan only after checking all owners. |
+| Two tabs publish from one base. A serialized expected-revision check admits one. | Retain the conflict for the other writer so its draft can be reconciled. A lock on metadata alone cannot coordinate external content deletion. |
+| A collector reads old roots, another tab saves a reference, then the collector deletes its bytes. | The two browser engines both reproduced a dangling reference. The tested repair coordinates save and collection through an origin-scoped Web Lock and checks the reference inside the protocol. |
+| A writable OPFS stream accepts bytes. Abort keeps the original file, and close publishes the new one. | Use acceptance, cancellation, and finalization as distinct phases. This result does not qualify external browser downloads or power-loss durability. |
+| A cross-origin request produces an opaque response with no readable body. A server effect can still occur. | A successful fetch response is insufficient for byte verification or acknowledging the application's effect. |
+| Native SQLite writers using one base admit one publication. Foreign-key references retain assets held by undo or a plan. | Preserve every reference owner. The example places content and metadata in one transaction; a real split store needs the extra coordination tested in the browser. |
+| A child remains alive after its supervisor closes admission, then retires with its own completion receipt. | Window or scope closure cannot establish child retirement. A capture must keep its resources while the native operation can still use them. |
+| The native VS Code provider saves revision 1 while its buffer advances to revision 2. Save returns false, disk contains revision 1, and the document's dirty property reports false. | The intended dirty-state rule is contradicted in this extension-provider fixture. Keep the buffer, written content, save result, and dirty observation separately available. App-wide bug attribution and normal file-provider behavior remain unresolved. |
+| A ZIP's actual decoded bytes exceed the admission limit, or its selected name reaches outside the supported path set. | Bound actual reads and establish native confinement independently of archive metadata. A symlink at an allowed-looking destination is a different check. |
+
+The browser control intentionally demonstrates an unsafe candidate, then validates a coordinated candidate. These are prototype host adapters. The VS Code case exercises the installed native editor through its extension API and a private provider backed by an owned local file. It does not establish keyboard interaction, screen-reader behavior, or a normal local-file Save regression.
+
+The retained record contains 101 rows from 13 runs. Ninety-eight match the proposed predicates. Three remain recorded disagreements, comprising the unsafe collector on each browser engine and the VS Code provider marker. A checker accepts only those identified disagreements and verifies their specific facts. They remain failures of conformance, not passing application guarantees.
+
+## Application handoffs
+
+The [host contract catalog](contracts.json) gives the 19 witness kinds requested by the initial application inventory an explicit obligation, rule, evidence, and remaining gap. [Feature assignments](features.json) link 208 feature families across nine applications to those contracts. Their source inventory and 971 semantic research operations are owned by the application study. Linking a feature does not promote its conformance status.
+
+The following proposals arise from the host evidence. Each application's owner still has to establish the domain-specific behavior and decide adoption.
+
+- Editors and project-authoring tools can expose the saved revision alongside unsaved newer work. For VS Code, qualify the actual provider before trusting its dirty marker as a proxy for disk/buffer agreement. For portable empack drafts, retain incomplete authoring state separately from export readiness.
+- MO2 effective-file views and configuration overlays need the backing owner and captured profile alongside a visible filename. The host namespace counterexample explains why matching a display path alone cannot establish the resource being edited. Precedence and virtualized writes remain MO2-owned policies.
+- Prism's instance preparation and launch, package-manager scripts, and Cargo build tasks need operation/resource custody independent of a window or progress row. The host child-retirement observations qualify a mechanism, while each tool's descendants and task policy remain separate obligations.
+- Snapshot and content stores, including restic, need reference retention distinguished from physical reclamation. The custody proof applies only if their actual retained-root closure and coordination protocol meet its premises. Repository lineage, pack layout, cache ownership, and garbage collection policy stay with the application owner.
+- CLI and GUI consumers can report partial or uncertain results from the same facts without deriving project effects from exit status or task disappearance. A proposed structured receipt binds its source revision, target, profile, and actual finalization.
+
+The application owner also supplied a restic 0.20.0 counterexample. Forgetting snapshot A left pack bytes in place, then pruning reclaimed obsolete content while snapshot B still named A as its Parent. Source inspection at restic commit 9c88ff768f10c192dc6a87619a65a16374080e33 shows prune walking retained snapshot Tree roots rather than Parent links. This research is still owned by the application study; the host adapter tests the resulting typed-edge obligation without invoking restic in CI. [Restic root selection](https://github.com/restic/restic/blob/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_prune.go#L285)
+
+The Playground owner qualified the root model with retained results, old snapshots, caches, and worker/native leases. Its store serializes writers through per-world filesystem locks across separate handles, which supports a shared protocol without requiring one object or thread. The save path returns a captured world version and storage revision, while a failure after native replacement can leave an uncertain acknowledgement. Those source inspections constrain our assumptions. They do not prove Playground's cross-root GC or an asynchronous editor dirty-state policy. [Streaming leases](../../../playground/tests/world/streaming.cpp) · [Store publication](../../../playground/src/world/Store.cpp) · [Native checkpoint owner](../../../playground/src/platform/CheckpointStore.cpp)
+
+## Reproduce and extend
+
+From the repository root, use the pinned tools and run:
+
+```sh
+scripts/check-lifecycles
+```
+
+The default command rechecks proofs, the 68-way finite comparison, retained evidence, and bounded native SQLite/process/archive fixtures. Set PLAYWRIGHT_PACKAGE to a real installed playwright-core/package.json to run fresh isolated Chromium and WebKit contexts. No browser download is initiated. The test uses loopback servers, isolated persistent profiles, and removes those owned profiles after closing the browser.
+
+Run host/lifecycles/java-check with an explicit JDK home and feature 17, 21, or 25, then pass its JSON lines to host/lifecycles/check.mjs after building the emitted core. The Java baseline is recompiled with each selected JDK. The previous virtual-thread and scoped-value overlays remain separately attributable evidence.
+
+The native VS Code provider under vscode/ is an opt-in GUI probe. Acquire re:desktop access immediately before launching a private editor instance. Set RULES_VSCODE_OUTPUT to a file in an owned fixture root, use separate user-data and extensions directories, and load that provider with extensionDevelopmentPath. The probe edits, saves, closes, and reopens its own document and quits that instance. Preserve a new receipt and source identities rather than replacing the retained observation without review.
+
+Use map-features.py to check assignments against an available application inventory, and --write only after inspecting changed witness requirements. Every new host implementation or codec needs its own consuming operation, negative cases, exact profile, and disposition. [Profile scope](../../profiles/lifecycles.md)

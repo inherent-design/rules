@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+if [[ $# != 2 ]]; then echo 'Usage: host/lifecycles/java-check JDK_HOME 17|21|25' >&2; exit 2; fi
+jdk=$1
+feature=$2
+case $feature in 17|21|25) ;; *) exit 2;; esac
+version=$("$jdk/bin/javac" -version)
+[[ "$version" == "javac $feature."* ]] || { echo "Unexpected compiler: $version" >&2; exit 1; }
+"$jdk/bin/java" -version >&2
+out=$(mktemp -d)
+trap 'rm -rf "$out"' EXIT
+"$jdk/bin/javac" --release "$feature" -d "$out" host/lifecycles/JavaProbe.java
+"$jdk/bin/java" -cp "$out" JavaProbe

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+out=.build/lifecycles
+mkdir -p "$out" .build/common
+lean=${LEAN:-lean}
+bend=${BEND:-bend}
+export LEAN_PATH="$PWD/.build${LEAN_PATH:+:$LEAN_PATH}"
+export BEND_NO_TELEMETRY=1
+"$lean" -DwarningAsError=true -o .build/common/Core.olean common/Core.lean
+"$lean" -DwarningAsError=true -o .build/common/Lifecycle.olean common/Lifecycle.lean
+"$lean" --run host/lifecycles/Vectors.lean > "$out/vectors"
+"$bend" common/Lifecycle.bend --verdict
+"$bend" common/Lifecycle.bend -o "$out/core.mjs"
+python3 host/lifecycles/native.py > "$out/native.jsonl"
+python3 host/lifecycles/archives.py > "$out/archives.jsonl"
+node host/lifecycles/retention-probe.mjs > "$out/retention.jsonl"
+node host/lifecycles/verify-record.mjs
+node host/lifecycles/check.mjs "$out/native.jsonl" "$out/archives.jsonl" "$out/retention.jsonl" "$@"
+if [[ -n ${PLAYWRIGHT_PACKAGE:-} ]]; then
+    node host/lifecycles/browser.mjs > "$out/browser.jsonl"
+    python3 - "$out/browser.jsonl" "$out/browser-traces.json" <<'PY'
+import json,sys
+with open(sys.argv[1]) as f: lines=[json.loads(line) for line in f]
+with open(sys.argv[2],'w') as f: json.dump(lines[-1]['rows'],f)
+PY
+    node host/lifecycles/check.mjs "$out/browser-traces.json"
+else
+    echo 'Browser evidence replayed from the retained record. Set PLAYWRIGHT_PACKAGE to run fresh isolated browser fixtures.'
+fi
