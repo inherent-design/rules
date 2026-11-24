@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Owned portable-authoring study</title>
+<style>body{font:16px system-ui;max-width:72rem;margin:2rem auto}label{display:block;margin:.7rem 0}input,textarea{display:block;width:95%}textarea{height:12rem}button{margin:.5rem}td,th{padding:.4rem;text-align:left}pre{white-space:pre-wrap}</style>
+<h1>Portable draft study</h1><p>Research fixture. Project backup only; consumer export requires the shared engine.</p>
+<label>Workspace label<input id="label" value="Draft Ω 日本"></label>
+<label>Raw author file<textarea id="author">schema: [
+</textarea></label>
+<label>Import local JAR or config<input id="files" type="file" multiple></label>
+<label>Supply the missing configuration<input id="supply" type="file"></label>
+<button id="save">Save draft</button><button id="reopen">Reopen saved draft</button><button id="backup">Download study backup</button>
+<p id="status" role="status">Not saved yet</p><table><thead><tr><th>Project path</th><th>Bytes</th><th>Source evidence</th></tr></thead><tbody id="entries"></tbody></table>
+<pre id="missing"></pre><script type="module" src="/page.mjs"></script>
