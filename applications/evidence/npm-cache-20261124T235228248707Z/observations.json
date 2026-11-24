@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "status": "Intermediate source/native observations;formal models pending.",
+  "nativeCommands": 14,
+  "npmCommands": 7,
+  "nodeAvailabilityObservers": 7,
+  "registryRequests": 3,
+  "allocatedKiB": 2708,
+  "allOwnedGroupsAbsent": true,
+  "serverClosed": true,
+  "findings": [
+    "Cache verification successfully removes one corrupt cached tar and reports missing content;it does not validate or rewrite the installed module.",
+    "An offline clean install fails after removing the old installed tree;manifest/lock/configuration remain unchanged. Status1 is not absence of installed-tree effects.",
+    "Own-origin reacquisition restores the module;valid offline cache can later rebuild an edited installation. Cache verification alone preserves that installed edit.",
+    "The Node observer returns0 for a well-formed availability report even when the module is missing;the report field,not process status alone,describes availability."
+  ],
+  "limits": [
+    "One generated two-file package,one local project/private cache,one loopback registry. No global cache,real dependency graph,external service,shared writer,remote trust or durability qualification.",
+    "Captured cache snapshots are file/hash views,not a general semantic cache-index decoder. Availability beyond this closed fixture needs index/read/lease evidence.",
+    "Source flatOptions/cacache verification and ci stage order are inspected;this fixture does not make every acquisition failure post-clear or claim a clean-install correctness defect.",
+    "No new npm/Node execution by this checker. Formal comparison and improvement proposals remain separate;no complete feature or production change."
+  ]
+}
