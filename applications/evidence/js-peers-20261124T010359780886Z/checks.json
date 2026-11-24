@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "First local-tarball/peer-context/frozen-refusal band for npm,pnpm,Yarn; no production changes",
+  "commands": {
+    "native": "python3 applications/js_peers_probe.py",
+    "replay": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 applications/js-peers/conformance.py applications/evidence/js-peers-20261124T010359780886Z",
+    "formal": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 scripts/check-rules.py"
+  },
+  "outcomes": {
+    "native": "All3installs succeed;all3changed-manifest frozen installs refuse exit1;runtime bindings measured before/after",
+    "replay": "6cases match both models;uniform-provider/content-only interpretations rejected",
+    "adapterNegativeControls": "Unsupported schema/profile refuse exit2 with empty stdout; adapter-negative-controls.json",
+    "formal": "36Lean modules and8Bend files pass;no applications executed",
+    "other": "AST,local links,retained collector identity,inventory bookkeeping,host projection,diff checks pass"
+  },
+  "limitations": "Fixture-profile projection, not full peer/hoisting/semver algorithms. Selected lock/draft/runtime effects only; most application features remain pending."
+}

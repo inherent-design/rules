@@ -3887,13 +3887,31 @@
           "operations": [
             {
               "id": "install",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "distinct_peers_distinct_instances",
+                "instantiate_preserves_content"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:uniformPeerProviderPolicyRejected",
+                "js-peers/conformance.py:contentAloneAsRuntimeIdentityRejected"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "dry-run",
@@ -3907,13 +3925,31 @@
             },
             {
               "id": "ci",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "refusal_retains_current_draft",
+                "admission_does_not_publish",
+                "mismatch_refused"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:frozenRefusalsPreserveMeasuredLockDraftAndBindings"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "reify",
@@ -4313,13 +4349,31 @@
           "operations": [
             {
               "id": "ls",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "distinct_peers_distinct_instances",
+                "instantiate_preserves_content"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:uniformPeerProviderPolicyRejected",
+                "js-peers/conformance.py:contentAloneAsRuntimeIdentityRejected"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "ll",
@@ -5127,13 +5181,31 @@
           "operations": [
             {
               "id": "install",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "refusal_retains_current_draft",
+                "admission_does_not_publish",
+                "mismatch_refused"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:frozenRefusalsPreserveMeasuredLockDraftAndBindings"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "update",
@@ -5167,13 +5239,31 @@
             },
             {
               "id": "resolve-peers",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "distinct_peers_distinct_instances",
+                "instantiate_preserves_content"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:uniformPeerProviderPolicyRejected",
+                "js-peers/conformance.py:contentAloneAsRuntimeIdentityRejected"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -6680,13 +6770,31 @@
             },
             {
               "id": "link",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "distinct_peers_distinct_instances",
+                "instantiate_preserves_content"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:uniformPeerProviderPolicyRejected",
+                "js-peers/conformance.py:contentAloneAsRuntimeIdentityRejected"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "build",
@@ -6700,13 +6808,31 @@
             },
             {
               "id": "immutable",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-peers/Contexts.lean and js-peers/Contexts.bend",
+              "laws": [
+                "refusal_retains_current_draft",
+                "admission_does_not_publish",
+                "mismatch_refused"
+              ],
+              "nativeEvidence": [
+                "evidence/js-peers-20261124T010359780886Z/trace.json",
+                "evidence/js-peers-20261124T010359780886Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-peers-selections.json"
+              ],
+              "negativeControls": [
+                "js-peers/conformance.py:frozenRefusalsPreserveMeasuredLockDraftAndBindings"
+              ],
+              "uxAssessment": "js-peers/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated two-workspace/local-tarball fixture on pinned macOS tools",
+                "Only selected node_modules profiles; not general peer/semver/hoisting algorithms",
+                "Measured content is manifest+entrypoint; peer binding is separate",
+                "Frozen admission is not completion; effects scope excludes cache/log writes"
+              ],
+              "verificationPlan": "Expand missing/optional/transitive peers, alternate linkers/profiles, full resolver source, successful immutable installs, scripts, concurrency, and platforms; no whole-feature qualification."
             },
             {
               "id": "update-lockfile",

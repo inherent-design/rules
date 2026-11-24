@@ -1,0 +1,538 @@
+[
+  {
+    "v": 2,
+    "app": "npm",
+    "feature": "npm.installation",
+    "operationId": "npm-install",
+    "profile": "npm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/npm/project",
+    "basis": "0",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": null,
+        "nodeModulesExists": false,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.4242869168519974,
+      "stdoutSha256": "04f440fb6588202ce745a13422db18685633b5f2465c7eccaa26e8b11e13581b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "npm",
+    "feature": "npm.installation",
+    "operationId": "npm-runtime",
+    "profile": "npm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/npm/project",
+    "basis": "1",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.03019016608595848,
+      "stdoutSha256": "06601b8578748dd7394887017e2d8f1134448d1b36bf6ac3a41e29ee9c310815",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "npm",
+    "feature": "npm.installation",
+    "operationId": "npm-list",
+    "profile": "npm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/npm/project",
+    "basis": "2",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "ls",
+        "--all",
+        "--json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.17930399999022484,
+      "stdoutSha256": "63af5eb58a190dc3e77c51b92b6ed70ec5d820f68539190eda541c094a864d23",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "npm",
+    "feature": "npm.installation",
+    "operationId": "npm-frozen",
+    "profile": "npm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/npm/project",
+    "basis": "3",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "ci",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.1855027498677373,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "791d7484416e0d271f78adbc8d71b211b2e379f10d51aa875db3bcfb25a13006"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 2,
+    "app": "npm",
+    "feature": "npm.installation",
+    "operationId": "npm-after-frozen-runtime",
+    "profile": "npm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/npm/project",
+    "basis": "4",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "8847d19373c27fcc3d6dd6bb1c6b1bbac94ffeb574f8f7678e978317858c58b4",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.030671624932438135,
+      "stdoutSha256": "06601b8578748dd7394887017e2d8f1134448d1b36bf6ac3a41e29ee9c310815",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "pnpm",
+    "feature": "pnpm.install-store",
+    "operationId": "pnpm-install",
+    "profile": "pnpm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/pnpm/project",
+    "basis": "5",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--store-dir",
+        "/private/tmp/rules-js-peers-yksk9c1f/pnpm/store"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": null,
+        "nodeModulesExists": false,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.0838938751257956,
+      "stdoutSha256": "036a64c358bf560725f532ff653ca72f99e9f27def46865f5d0b39227cb37b7b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "pnpm",
+    "feature": "pnpm.install-store",
+    "operationId": "pnpm-runtime",
+    "profile": "pnpm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/pnpm/project",
+    "basis": "6",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.03218937525525689,
+      "stdoutSha256": "fdf0a5f7d7fb627b32513c268199219d8b32b8d774c6a9e636075c050227152f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "pnpm",
+    "feature": "pnpm.install-store",
+    "operationId": "pnpm-frozen",
+    "profile": "pnpm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/pnpm/project",
+    "basis": "7",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--store-dir",
+        "/private/tmp/rules-js-peers-yksk9c1f/pnpm/store",
+        "--frozen-lockfile"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.02035637479275465,
+      "stdoutSha256": "41a78c98b054da12a17dfdb26e97a9933b5a30d2eab636cbbaa6cd837ac04b9e",
+      "stderrSha256": "e448e288c59ba572fc107801418a8ecf5cead85a30a618b95de4c7cc9b5cd9d4"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 2,
+    "app": "pnpm",
+    "feature": "pnpm.install-store",
+    "operationId": "pnpm-after-frozen-runtime",
+    "profile": "pnpm-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/pnpm/project",
+    "basis": "8",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "32d4a134e41cac7bc01aa073d9296340b80100ae607bdb40862d05e5fdea3c2e",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.03097987500950694,
+      "stdoutSha256": "fdf0a5f7d7fb627b32513c268199219d8b32b8d774c6a9e636075c050227152f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "yarn",
+    "feature": "yarn.installation",
+    "operationId": "yarn-install",
+    "profile": "yarn-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/yarn/project",
+    "basis": "9",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+        "install"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": null,
+        "nodeModulesExists": false,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.21257045771926641,
+      "stdoutSha256": "2f8ff6d9cf0a07a00927a4d5498f77a73a46bf5c8779fb0eba536743d82d1c0f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "yarn",
+    "feature": "yarn.installation",
+    "operationId": "yarn-runtime",
+    "profile": "yarn-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/yarn/project",
+    "basis": "10",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "0f0d099d728c644871992b59b675eee281d72a366860e7f86811ec3aeadecae8",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.03585737477988005,
+      "stdoutSha256": "39e09d45a129cbc3c7c4aa7b63b7c7a8afdd80501e87e360646324dcaec2a426",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "yarn",
+    "feature": "yarn.installation",
+    "operationId": "yarn-frozen",
+    "profile": "yarn-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/yarn/project",
+    "basis": "11",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+        "install",
+        "--immutable"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.21401887480169535,
+      "stdoutSha256": "eea8833bfb2afca6d76a3d7d14da3924af8d63c5b5931aa68e7b7cb8bb666f1c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 2,
+    "app": "yarn",
+    "feature": "yarn.installation",
+    "operationId": "yarn-after-frozen-runtime",
+    "profile": "yarn-darwin-arm64-local-tarballs-node-modules",
+    "target": "/private/tmp/rules-js-peers-yksk9c1f/yarn/project",
+    "basis": "12",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "-e",
+        "const fs = require('fs');\nconst {createRequire} = require('module');\nconst {resolve} = require('path');\nconst result = {};\nfor (const side of ['left', 'right']) {\n  const req = createRequire(resolve(side, 'package.json'));\n  const pluginPath = req.resolve('fixture-plugin');\n  result[side] = {direct: req('fixture-api'), directPath: req.resolve('fixture-api'),\n    plugin: req('fixture-plugin'), pluginPath,\n    pluginContent: fs.readFileSync(pluginPath, 'utf8'),\n    pluginManifest: fs.readFileSync(req.resolve('fixture-plugin/package.json'), 'utf8')};\n}\nconsole.log(JSON.stringify(result));\n"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "after": {
+        "lockSha256": "610f166a34a4d5af54385d9983ebdfa70a5ce0df545220b62845f710592beade",
+        "nodeModulesExists": true,
+        "manifests": {
+          "left": "357ddd359ed067e6c39cfb487d64f0e034aeebcd70bd6e55649578ac85123486",
+          "right": "a61f21b9118e634cadbdbc30caac4c4bfc23ca7461596a6fea8640fe47f481eb"
+        }
+      },
+      "seconds": 0.029701624996960163,
+      "stdoutSha256": "39e09d45a129cbc3c7c4aa7b63b7c7a8afdd80501e87e360646324dcaec2a426",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  }
+]

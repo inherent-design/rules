@@ -1,0 +1,57 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  left:
+    dependencies:
+      fixture-api:
+        specifier: file:/private/tmp/rules-js-peers-yksk9c1f/archives/fixture-api-1.0.0.tgz
+        version: file:../../archives/fixture-api-1.0.0.tgz
+      fixture-plugin:
+        specifier: file:/private/tmp/rules-js-peers-yksk9c1f/archives/fixture-plugin-1.0.0.tgz
+        version: file:../../archives/fixture-plugin-1.0.0.tgz(fixture-api@file:../../archives/fixture-api-1.0.0.tgz)
+
+  right:
+    dependencies:
+      fixture-api:
+        specifier: file:/private/tmp/rules-js-peers-yksk9c1f/archives/fixture-api-2.0.0.tgz
+        version: file:../../archives/fixture-api-2.0.0.tgz
+      fixture-plugin:
+        specifier: file:/private/tmp/rules-js-peers-yksk9c1f/archives/fixture-plugin-1.0.0.tgz
+        version: file:../../archives/fixture-plugin-1.0.0.tgz(fixture-api@file:../../archives/fixture-api-2.0.0.tgz)
+
+packages:
+
+  fixture-api@file:../../archives/fixture-api-1.0.0.tgz:
+    resolution: {integrity: sha512-pZZa5EelxiZB303NNW8QQHIuCWJsEeDorTDJ72bBAjEu2A2GSEhFW+gCl3dWL3iaV4w/pyhepZXhYF8xadZTlQ==, tarball: file:../../archives/fixture-api-1.0.0.tgz}
+    version: 1.0.0
+
+  fixture-api@file:../../archives/fixture-api-2.0.0.tgz:
+    resolution: {integrity: sha512-P8ZCwwwmb5tNVKSMPOQLVR3h6u6mvuw1bZyImaDiIBa01gybX5wxRHHDGU5mGT+Hkc+HdA+QiiJkHJeDvr4EpA==, tarball: file:../../archives/fixture-api-2.0.0.tgz}
+    version: 2.0.0
+
+  fixture-plugin@file:../../archives/fixture-plugin-1.0.0.tgz:
+    resolution: {integrity: sha512-K/Ex8S6GWCvbgXaGgdBcDpMkecqJnGT+s9dMf51sc8nBW9owT53VCgpw70quuhfBpweaqpWzHcp8Pe5eyQU2zw==, tarball: file:../../archives/fixture-plugin-1.0.0.tgz}
+    version: 1.0.0
+    peerDependencies:
+      fixture-api: '*'
+
+snapshots:
+
+  fixture-api@file:../../archives/fixture-api-1.0.0.tgz: {}
+
+  fixture-api@file:../../archives/fixture-api-2.0.0.tgz: {}
+
+  fixture-plugin@file:../../archives/fixture-plugin-1.0.0.tgz(fixture-api@file:../../archives/fixture-api-1.0.0.tgz):
+    dependencies:
+      fixture-api: file:../../archives/fixture-api-1.0.0.tgz
+
+  fixture-plugin@file:../../archives/fixture-plugin-1.0.0.tgz(fixture-api@file:../../archives/fixture-api-2.0.0.tgz):
+    dependencies:
+      fixture-api: file:../../archives/fixture-api-2.0.0.tgz
