@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sources": [
+    {
+      "path": "crates/empack-core/src/synchronization.rs",
+      "sha256": "20e2adbac7b533549275decae57702ce35a9ed1ff6b54b4b934ce812e6dc38eb",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/synchronization.rs",
+      "inspection": "whole1-242:exact runtime retention,affected roots,alias rebind,allowed proposed required closure,retained selections/metadata,negative evidence andchanged record set"
+    },
+    {
+      "path": "crates/empack-core/src/model.rs",
+      "sha256": "7d5d2a637f2abaf5db51f6e048e119d3e57f4be648171d093750077f950163d7",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/model.rs",
+      "inspection": "lines149-174,294-397,563-618,664-704,750-792,1025-1210:typedfixture values,root validation,lock structure,ResolvedProject constructor;synthetic revision supplied bycaller,notcodec proof"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/synchronization.rs",
+      "sha256": "25e8093525a76dd9940948d15968a31b7daed2d32de097faeedd1e96d7782795",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/synchronization.rs",
+      "inspection": "lines1-53,115-190:changed Search requiresfreshresolution;scope proof consumed thenwholeproposedlock encoded;preserve_lock comparesfull lock,notchanged() list"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/synchronization/resolution_tests.rs",
+      "sha256": "00559e9d9004aea7450671695b1f429b5079f9c4a5db22b86205d742a2613d3f",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/synchronization/resolution_tests.rs",
+      "inspection": "lines1-88,190-239:existing regressionintent aroundchangedpins/search/source evidence;not executed here"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/addition.rs",
+      "sha256": "03c47e7d47d566ed3990166d29873fa37c2326139aac08e9117d8b01f38762a3",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/addition.rs",
+      "inspection": "lines442-510:existing sourcefixture construction reviewed asguide;newdriver independently constructs minimal values"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/documents/intent.rs",
+      "sha256": "50c5141da40196cb802ad11b095fa0b0669a34bd998d4a0bcd4698248e947716",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/documents/intent.rs",
+      "inspection": "lines150-173,268:Search sourcekind can be decoded/encoded;provider lookup/resolution notrun"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/synchronization.rs",
+      "sha256": "3eb689bb1838c730dc3e46590fd165f7cc09506c5766f2fb45daa31b7de4ac77",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/synchronization.rs",
+      "inspection": "lines15-71:request/preview/receipt role;native execution remains separatefrompure scope proof"
+    }
+  ],
+  "status": "Actual24case core observations collected;formal comparison/proposals pending.",
+  "sourceQualifiedFindings": [
+    "changed() enumerates changed logical dependency records;allowed coverage/edge-only changes can be absent. Production SynchronizationCandidate paths inspected here consume proof,encode wholeproposed lock,andcomparefull-lock equality;no dropped-publication defect established.",
+    "Persisted Search pluschanged overallsemantic revision requestsfreshresolution,evenforcontrolledmetadata change. Same revision control leavesrootretained. Nativecodec/CLI/provider effect notqualified bysynthetic revision tokens.",
+    "Absent edge-map entry andpresent empty set are distinct underretained-lock comparison;initial snapshot projection lost this distinction andwas revised. Do not silently canonicalize it away."
+  ]
+}
