@@ -1,0 +1,86 @@
+[
+  {
+    "buffer": "original\n",
+    "dirty": false,
+    "disk": "original\n",
+    "operation": "open",
+    "version": "1"
+  },
+  {
+    "buffer": "draft-one\n",
+    "dirty": true,
+    "disk": "original\n",
+    "operation": "edit-one",
+    "version": "2"
+  },
+  {
+    "buffer": "draft-one\n",
+    "dirty": false,
+    "disk": "draft-one\n",
+    "operation": "save",
+    "version": "2"
+  },
+  {
+    "buffer": "draft-two\n",
+    "dirty": true,
+    "disk": "draft-one\n",
+    "operation": "edit-two",
+    "version": "3"
+  },
+  {
+    "buffer": "draft-one\n",
+    "dirty": false,
+    "disk": "draft-one\n",
+    "operation": "undo",
+    "version": "4"
+  },
+  {
+    "buffer": "draft-two\n",
+    "dirty": true,
+    "disk": "draft-one\n",
+    "operation": "redo",
+    "version": "5"
+  },
+  {
+    "buffer": "draft-two\n",
+    "dirty": false,
+    "disk": "draft-two\n",
+    "operation": "save",
+    "version": "5"
+  },
+  {
+    "buffer": "external-clean\n",
+    "dirty": false,
+    "disk": "external-clean\n",
+    "operation": "external-clean",
+    "version": "6"
+  },
+  {
+    "buffer": "local-unsaved\n",
+    "dirty": true,
+    "disk": "external-clean\n",
+    "operation": "edit-dirty",
+    "version": "7"
+  },
+  {
+    "buffer": "local-unsaved\n",
+    "dirty": true,
+    "disk": "external-dirty\n",
+    "operation": "external-dirty",
+    "version": "7"
+  },
+  {
+    "buffer": "external-dirty\n",
+    "dirty": false,
+    "disk": "external-dirty\n",
+    "operation": "revert",
+    "version": "8"
+  },
+  {
+    "buffer": "external-dirty\n",
+    "dirty": false,
+    "disk": "external-dirty\n",
+    "operation": "quit-requested",
+    "version": "8"
+  }
+]

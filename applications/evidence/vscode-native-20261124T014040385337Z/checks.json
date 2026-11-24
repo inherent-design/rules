@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "scope": "VSCode native-file serial document band;browser/custom-provider race remain unqualified",
+  "commands": {
+    "native": "native_fixture.py prepare/launch/request under re:desktop;actual commands in process.json and operations in observed.json",
+    "replay": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 applications/vscode/conformance.py applications/evidence/vscode-native-20261124T014040385337Z",
+    "formal": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 scripts/check-rules.py"
+  },
+  "outcomes": {
+    "native": "12states captured,root exit0,private-work-argument processes absent after exit;desktop released/unsubscribed",
+    "replay": "Both models match12states;monotonic-version-as-savepoint rule rejected",
+    "formal": "41Lean/11Bend pass;no applications executed",
+    "other": "Python AST,Node --check,local links,captured source identities,inventory bookkeeping,host projection,diff checks pass"
+  },
+  "limits": "One macOS profile,LF/ASCII file,serial success;keychain prompt canceled. Revised startup not executed. No browser,raced save,error write,keyboard/accessibility acceptance."
+}

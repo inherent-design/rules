@@ -16,6 +16,8 @@ MO2 2.5.2 requires Windows 10 1809+ or Windows 11. Its native Windows behavior i
 
 The first [restic band](restic/README.md) has source/native/model evidence for a selected local snapshot-forget/prune/restore flow. The first [Cargo band](cargo/README.md) compares workspace metadata, selected build features, build-script input declarations, and cleanup. The [JavaScript peer-context band](js-peers/README.md) compares npm, pnpm, and Yarn without erasing their different installed bindings. [MO2](mo2/README.md) and [Prism](prism/README.md) have bounded source-fragment/model comparisons, with full native-product qualification still pending. These leave most operations and application models pending. [Inventory checks](check_inventory.py) verify structure and bookkeeping constraints, not product correctness.
 
+The first [VS Code desktop band](vscode/README.md) adds native serial file-backed document evidence and separates event versions from undo/save-point identity. It leaves the earlier custom-provider race unresolved and does not qualify vscode.dev.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

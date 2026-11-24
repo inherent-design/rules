@@ -12266,23 +12266,65 @@
           "operations": [
             {
               "id": "open",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "edit",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "dirty",
@@ -12296,13 +12338,34 @@
             },
             {
               "id": "save",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "save-as",
@@ -12316,13 +12379,34 @@
             },
             {
               "id": "revert",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "close",
@@ -12354,23 +12438,65 @@
           "operations": [
             {
               "id": "undo",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "redo",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "save-history",
@@ -12422,13 +12548,34 @@
             },
             {
               "id": "reload",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Document.lean and vscode/Document.bend",
+              "laws": [
+                "save_preserves_event_version",
+                "serial_save_aligns_points",
+                "history_move_advances_version",
+                "history_return_to_saved_is_clean",
+                "dirty_external_write_preserves_buffer",
+                "revert_observes_backing"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-native-20261124T014040385337Z/observed.json",
+                "evidence/vscode-native-20261124T014040385337Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/conformance.py:eventVersionAsSavepointIdentityRejected"
+              ],
+              "uxAssessment": "vscode/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Serial successful native-file operations on one LF/ASCII file",
+                "History keys are admitted point labels,not exported internal IDs",
+                "Settled external notification only;no immediate watcher guarantee",
+                "Temporary-HOME acquisition required user-canceled keychain prompt;credential behavior unqualified"
+              ],
+              "verificationPlan": "Expand native save errors/conflicts/concurrency,undo grouping,encoding,incarnations,custom-provider race,and browser backing/permissions. Test revised fixture startup separately;no whole-feature qualification."
             },
             {
               "id": "compare",
