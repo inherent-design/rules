@@ -1,0 +1,52 @@
+[
+  {
+    "case": "compile",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "-C",
+      "debuginfo=0",
+      "-A",
+      "dead_code",
+      "-A",
+      "unused_imports",
+      "-L",
+      "dependency=/Users/zer0cell/production/empack/target/debug/deps",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-channels-20261124T130523942359Z/work/main.rs",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-channels-20261124T130523942359Z/work/channel-oracle",
+      "--extern",
+      "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "--extern",
+      "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "--extern",
+      "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "--extern",
+      "ed25519_dalek=/Users/zer0cell/production/empack/target/debug/deps/libed25519_dalek-429c30776c4ae53f.rlib",
+      "--extern",
+      "reqwest=/Users/zer0cell/production/empack/target/debug/deps/libreqwest-893d856ece8dbf20.rlib",
+      "--extern",
+      "semver=/Users/zer0cell/production/empack/target/debug/deps/libsemver-0e90ff15ced0040c.rlib",
+      "--extern",
+      "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib"
+    ],
+    "pid": 22647,
+    "seconds": 0.4507046667858958,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exitCode": 0,
+    "timedOut": false
+  },
+  {
+    "case": "observe",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-channels-20261124T130523942359Z/work/channel-oracle"
+    ],
+    "pid": 22938,
+    "seconds": 0.316854250151664,
+    "stdoutSha256": "9a2768671aaa1e4ca2778401811a1533d235c96d713a33b5fa15b8481afd8c1d",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exitCode": 0,
+    "timedOut": false
+  }
+]
