@@ -16,6 +16,8 @@ The [channel band](CHANNELS.md) keeps incoming offer authentication, saved-envel
 
 The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.
 
+The [recovery band](RECOVERY.md) exercises installed CLI inspection, planning, confirmation, and execution against tiny authored journals. It preserves saved direction, stale approval refusal, and role-specific image demand. A corrupt before-image can preview successfully, then fail with new private scratch while preserving the target and journal; earlier verification remains proposed. Actual interrupted producer and multi-file recovery remain pending.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.

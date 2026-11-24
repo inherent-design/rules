@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "cases": 19,
+  "commands": 65,
+  "compilations": 1,
+  "setupIdentityCommands": 19,
+  "installedCLICommands": 45,
+  "privateApprovalPTYs": 6,
+  "imagesVerified": 172,
+  "privatePostimagesVerified": 19,
+  "projectUnchangedCLICommands": 39,
+  "capturedFixtureUnchangedCLICommands": 36,
+  "capturedScopes": [
+    "project",
+    "host",
+    "cache",
+    "originals"
+  ],
+  "sourcePins": 7,
+  "findings": [
+    "Finish follows the saved journal direction;already-restoring Finish and Restore both complete its after-image.",
+    "Preparation can preview restoration with a corrupt before-image;execution refuses while leaving target/journal unchanged and a new retained restore scratch file.",
+    "An already-before no-op restoration does not need the corrupt before-image. Already-after Finish does not need a missing candidate.",
+    "Actual approval rejects changed target bytes,same-byte object replacement,and typed journal progress. Raw JSON reformatting preserves semantic revision and succeeds.",
+    "Corruption after preparation is detected at execution. Refusal does not imply zero host-state effects;decline is an independently observed unchanged case."
+  ],
+  "limits": [
+    "Authored forensic one-file journals,not real producer interruption or power-loss evidence.",
+    "One installed macOS0.8.8CLI identity;selected source files match tag,but no reproducible full-build correspondence.",
+    "Source helper only supplies native root/file identity and association setup. It is not the recovery implementation.",
+    "This checker verifies retained observations;separate model replay,full creation/multi-file/concurrent/root-replacement recovery remain obligations.",
+    "Snapshots cover each fixture project,host,cache and retained original handles;not process-wide write tracing or unrelated HOME/tmp changes."
+  ]
+}
