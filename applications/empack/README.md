@@ -18,7 +18,7 @@ The proposed split is between editable project data, interpreted meaning, retain
 
 The [recovery band](RECOVERY.md) exercises installed CLI inspection, planning, confirmation, and execution against tiny authored journals. It preserves saved direction, stale approval refusal, and role-specific image demand. A corrupt before-image can preview successfully, then fail with new private scratch while preserving the target and journal; earlier verification remains proposed. Actual interrupted producer and multi-file recovery remain pending.
 
-The intermediate [portable-storage feasibility band](PORTABLE-STORAGE.md) executes real browser input, OPFS/IndexedDB save/reopen, worker-loss boundaries, and project-backup downloads in Chromium and WebKit. Restored selected inputs produce identical native Prism inventories. This is a research host adapter, not browser distribution export or a production project format; formal comparison and the full portable-engine join remain open.
+The [portable-storage feasibility band](PORTABLE-STORAGE.md) executes real browser input, OPFS/IndexedDB save/reopen, worker-loss boundaries, and project-backup downloads in Chromium and WebKit. Restored selected inputs produce identical native Prism inventories. This is a research host adapter, not browser distribution export or a production project format; its scoped models match captured save/reopen boundaries, while the full portable-engine join remains open.
 
 ## Keep the current guarantees
 

@@ -1,6 +1,6 @@
 # Portable draft storage feasibility
 
-This intermediate band implements a research-only browser host adapter. It imports real FileList inputs, retains their bytes in OPFS, saves an incomplete draft in IndexedDB, reopens it, and downloads a study backup. Restoring those selected inputs through the installed native CLI produces a Prism archive. **It does not implement empack's portable engine, production project format, browser distribution exporter, or complete required joined scenario.** Formal comparisons remain pending.
+This band implements a research-only browser host adapter. It imports real FileList inputs, retains their bytes in OPFS, saves an incomplete draft in IndexedDB, reopens it, and downloads a study backup. Restoring those selected inputs through the installed native CLI produces a Prism archive. **It does not implement empack's portable engine, production project format, browser distribution exporter, or complete required joined scenario.** The scoped models compare the captured save and recovery boundaries; the complete portable-engine join remains pending.
 
 ## Scope and provenance
 
@@ -52,9 +52,17 @@ The [reviewed final images](../evidence/empack-portable-storage-20261124T2228359
 
 The study backup includes only its selected raw-author document and file subtree. It is not a lossless backup of arbitrary native empack projects: lock state, arbitrary document slots, templates, profiles, external references, permissions, evidence policies, and unresolved decisions need the real project format. The format label is deliberately separate from empack's production schemas.
 
-## Next qualification
+## Scoped formal comparison
 
-Compare the actual save, stale-tab, lost-reply, reopen, corruption, and backing/image distinctions with [authoring laws](AUTHORING.md) and a scoped store model. Derive inputs from observed state and explicit interventions; retain expected effects from independent storage, UI, download, and native artifacts. Keep manually specified design expectations separate from these executed prototype observations.
+The [Lean model](PortableStore.lean), [Bend model](PortableStore.bend), and [bounded research decoder](PortableStoreCase.lean) reuse the [authoring laws](AUTHORING.md). They distinguish available-byte coverage from authoring validity, semantic image from backing handle, backend commit from UI acknowledgement, and failed verification from deletion of saved metadata. Their 19 Lean and six Bend laws are conditional design statements, not proofs of browser storage or production empack.
+
+The [pure replay](portable_store_conformance.py) compares both models with 30 captured boundaries: 28 browser events and the two separately recorded completed backup downloads. Its [receipt](../evidence/empack-portable-storage-20261124T222835992Z/conformance.json) retains the inputs, observed expected fields, model results, and source hashes. Eleven malformed research inputs refuse; seven changed expected fields are detected. Those controls test the decoder and comparison, not browser fault handling.
+
+Inputs follow the known prior editor, explicit producer edits, verified downloads, and independent storage inspection. Hashing, JSON decoding, byte verification, and semantic image labels remain external witnesses. Backup rows compare only storage and delivery because they have no immediate editor snapshot. The final multi-line fill generated more DOM input events than the three editing actions; its unrecorded pre-save epoch is excluded. The corruption row composes ordinary reopen and save because only their combined final snapshot exists. These exclusions preserve the original observations rather than invent intermediate states.
+
+A pure decoder control also found that Python equality admitted boolean and floating-point nested schema values as integer version 1. The research decoder now requires an exact integer. The [before/after control](../evidence/empack-portable-storage-20261124T222835992Z/decoder-scalar-controls.json) preserves the executed decoder identity and corrected source identity. This changes only the study decoder; it does not reattribute the original native run or claim a production schema defect.
+
+## Remaining qualification
 
 The required browser local-JAR/configuration-to-Prism scenario remains open because there is no shared portable engine or browser consumer codec. Do not fill that gap with an independent JavaScript interpretation of Prism or a local companion and call it browser parity. The next implementation decision must preserve shared interpretation and verification while supplying real host capabilities.
 

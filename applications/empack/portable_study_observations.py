@@ -63,7 +63,17 @@ def main():
         assert c['ownedGroupAbsent']
         for stream in ['stdout','stderr']:assert sha(RUN/(c['label']+'.'+stream))==c[stream+'Sha256']
     assert len(native['decoderRefusals'])==6
-    report=dict(schema=1,status='Intermediate executed research prototype;formal comparison pending',
+    controls=json.loads((RUN/'decoder-scalar-controls.json').read_text())
+    assert sha(RUN/controls['input'])==controls['inputSha256']
+    assert sha(RUN/'native-probe.py')==controls['sourceBeforeSha256']
+    assert sha(ROOT/'applications/empack/portable_study_native.py')==controls['sourceAfterSha256']
+    for row in controls['after']:
+        value=json.loads((RUN/controls['input']).read_text());value['record']['schema']=row['value']
+        try:decode(json.dumps(value,ensure_ascii=False).encode())
+        except (ValueError,TypeError):accepted=False
+        else:accepted=True
+        assert accepted==row['accepted']
+    report=dict(schema=1,status='Executed research prototype observations;formal comparison recorded separately in capture/conformance.json',
         browserProfiles=2,browserEvents=28,completedDownloads=4,browserRelaunches=2,workerLossBoundaries=6,
         nativeCommands=6,equalNativePrismInventory=True,nativeArchiveFiles=5,decoderRefusals=native['decoderRefusals'],
         backendAssetsPerEngine=12,backendUnreferencedPerEngine=8,backendEmptyUnreferencedPerEngine=1,
@@ -73,7 +83,7 @@ def main():
             'Raw independent storage inspection finds an empty private orphan and exactly the explicit referenced corruption;retries succeeded without adopting the empty file.',
             'Completed backups from both browsers restore selected source inventories into the same native exporter and produce identical5filePrism inventories.'],
         limits=['No portable production engine or browser distribution exporter. Study schema is not a full native project backup.',
-            'Formal model/replay still pending. No complete parent-scenario or feature-status promotion.',
+            'Formal model/replay is a separate source-bound check. No complete parent-scenario or feature-status promotion.',
             'No OS picker/permission,CORS/provider,GC/history/plan-retention,quota,eviction,reboot,power-loss or real game/Prism qualification.',
             'No new browser/native execution by this checker;future generator/source changes require their own attribution.'])
     (ROOT/'applications/empack/portable-storage-observations.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

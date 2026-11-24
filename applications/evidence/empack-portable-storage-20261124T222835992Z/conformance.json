@@ -1,0 +1,1623 @@
+{
+  "schema": 1,
+  "scope": "Executed proposed storage adapter versus conditional models,not production empack",
+  "browserObservationComparisons": 30,
+  "browserSourceEvents": 28,
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "operation",
+    "boundary",
+    "revision",
+    "missing-saved-basis",
+    "role-label",
+    "duplicate-role",
+    "unsorted-role",
+    "wrong-bool"
+  ],
+  "measuredMutations": [
+    "field-0",
+    "field-1",
+    "field-2",
+    "field-3",
+    "field-4",
+    "field-5",
+    "field-6"
+  ],
+  "imageLabels": {
+    "e702b28065ce547ceb4231f555a0247e85bbd001a7d0f3110b8a9ebd99b2ffeb": 1,
+    "90322939a2a1368c7e8b7ebf62cff02158937c4464c510453cead86e4a474df1": 2,
+    "c8a89f5b644affee8383f358ae0847e0405a818eae7bfcb8cecfa35fc31a5d96": 3,
+    "b49feae51ac1110cd61793b4f7a20666a8032fa67214c8cfbe2770f12773a060": 4,
+    "94a6b35cc877160e46305f378ee7ff4ea7c271039f953203dde0dd9ea84a1c80": 5,
+    "e6567e1387ab3615272ab65085b5504bcc2001bb3fff7140a4e6f4aad27213e4": 6
+  },
+  "roleLabels": {
+    "author:21f9dcc928a4d4bc11a956cca1df4c4755f64c121b26d59ad169e4f7a5cc065d": 1,
+    "available:cfbbcb40-5b93-414d-91bd-6a787a2b9070": 2,
+    "available:baaff3d3-e59c-4ab2-93d8-4589f72dbcf0": 3,
+    "missing:pack/config/not-supplied.cfg": 4,
+    "author:a075ea60c7cf051aedf8cd18da8af3f298ab2566f86146170dd0e1168e454fa6": 5,
+    "available:2abbb07d-c805-4340-8aba-c345b39e3839": 6,
+    "available:98e99ef2-c147-4098-9df5-c3fc86481db8": 7,
+    "available:72bf0ba3-98fa-4f5e-be5e-3ddd9eedddc4": 8,
+    "available:2e2313cf-28f1-4aeb-946e-a2043bf8b666": 9
+  },
+  "comparisons": [
+    {
+      "id": "chromium/0-import-edit",
+      "input": {
+        "stored": {
+          "revision": 0,
+          "image": null
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 1,
+        "boundary": 3,
+        "kind": 0,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "0/-/3/1/-/0/0",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 0,
+        "kind": "import-edit",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "0/-/3/1/-/0/0"
+    },
+    {
+      "id": "chromium/1-save-invalid-missing",
+      "input": {
+        "stored": {
+          "revision": 0,
+          "image": null
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 1,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "1/1/3/1/1/1/1",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 1,
+        "kind": "save-invalid-missing",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "1/1/3/1/1/1/1"
+    },
+    {
+      "id": "chromium/2-same-image-new-backing",
+      "input": {
+        "stored": {
+          "revision": 1,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": 1,
+          "savedRevision": 1
+        },
+        "expected": 1,
+        "image": 1,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/3/1/1/2/1",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 2,
+        "kind": "same-image-new-backing",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/3/1/1/2/1"
+    },
+    {
+      "id": "chromium/3-stale-tab",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 2,
+          "current": 2,
+          "saved": 1,
+          "savedRevision": 1
+        },
+        "expected": 1,
+        "image": 2,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/2/2/1/1/3",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 3,
+        "kind": "stale-tab",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/2/2/1/1/3"
+    },
+    {
+      "id": "chromium/4-invalid-backup",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 1,
+        "boundary": 3,
+        "kind": 3,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/3/1/1/2/6",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 4,
+        "kind": "invalid-backup",
+        "measuredFields": [
+          0,
+          1,
+          6
+        ]
+      },
+      "modelResult": "2/1/3/1/1/2/6"
+    },
+    {
+      "id": "chromium/5-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 4,
+          "current": 3,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 3,
+        "boundary": 0,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/4/3/1/2/2",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 5,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/4/3/1/2/2"
+    },
+    {
+      "id": "chromium/6-retry-after-unpublished-file",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 4,
+          "current": 3,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 3,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/4/3/3/3/1",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 6,
+        "kind": "retry-after-unpublished-file",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/4/3/3/3/1"
+    },
+    {
+      "id": "chromium/7-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 5,
+          "current": 4,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 4,
+        "boundary": 1,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/5/4/3/3/2",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 7,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/5/4/3/3/2"
+    },
+    {
+      "id": "chromium/8-reconcile-after-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 5,
+          "current": 4,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 3,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/6/3/3/3/5",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 8,
+        "kind": "reconcile-after-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/6/3/3/3/5"
+    },
+    {
+      "id": "chromium/9-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 7,
+          "current": 5,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 5,
+        "boundary": 2,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "4/5/7/5/3/3/2",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 9,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "4/5/7/5/3/3/2"
+    },
+    {
+      "id": "chromium/10-reconcile-after-loss",
+      "input": {
+        "stored": {
+          "revision": 4,
+          "image": 5
+        },
+        "editor": {
+          "epoch": 7,
+          "current": 5,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 5,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": false,
+        "available": [
+          1,
+          2,
+          3
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          2,
+          3
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "4/5/8/5/5/4/5",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 10,
+        "kind": "reconcile-after-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "4/5/8/5/5/4/5"
+    },
+    {
+      "id": "chromium/11-save-complete",
+      "input": {
+        "stored": {
+          "revision": 4,
+          "image": 5
+        },
+        "editor": {
+          "epoch": 11,
+          "current": 6,
+          "saved": 5,
+          "savedRevision": 4
+        },
+        "expected": 4,
+        "image": 6,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": true,
+        "available": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "missing": [],
+        "verified": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/74/6/6/5/1",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 11,
+        "kind": "save-complete",
+        "measuredFields": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/11/6/6/5/1"
+    },
+    {
+      "id": "chromium/12-browser-relaunch-reopen",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 0,
+          "current": 0,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 6,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": true,
+        "available": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "missing": [],
+        "verified": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/5",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 12,
+        "kind": "browser-relaunch-reopen",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/1/6/6/5/5"
+    },
+    {
+      "id": "chromium/complete-download",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 0,
+          "current": 0,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 6,
+        "boundary": 3,
+        "kind": 3,
+        "validAuthoring": true,
+        "available": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "missing": [],
+        "verified": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/6",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 12,
+        "kind": "complete-download",
+        "measuredFields": [
+          0,
+          1,
+          6
+        ]
+      },
+      "modelResult": "5/6/0/0/-/0/6"
+    },
+    {
+      "id": "chromium/13-retained-corruption",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 1,
+          "current": 6,
+          "saved": 6,
+          "savedRevision": 5
+        },
+        "expected": 5,
+        "image": 6,
+        "boundary": 3,
+        "kind": 4,
+        "validAuthoring": true,
+        "available": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "missing": [],
+        "verified": [
+          2,
+          5,
+          6
+        ],
+        "backing": false,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/4",
+      "source": {
+        "profile": "chromium",
+        "eventIndex": 13,
+        "kind": "retained-corruption",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/1/6/6/5/4"
+    },
+    {
+      "id": "webkit/0-import-edit",
+      "input": {
+        "stored": {
+          "revision": 0,
+          "image": null
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 1,
+        "boundary": 3,
+        "kind": 0,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "0/-/3/1/-/0/0",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 0,
+        "kind": "import-edit",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "0/-/3/1/-/0/0"
+    },
+    {
+      "id": "webkit/1-save-invalid-missing",
+      "input": {
+        "stored": {
+          "revision": 0,
+          "image": null
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 1,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "1/1/3/1/1/1/1",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 1,
+        "kind": "save-invalid-missing",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "1/1/3/1/1/1/1"
+    },
+    {
+      "id": "webkit/2-same-image-new-backing",
+      "input": {
+        "stored": {
+          "revision": 1,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": 1,
+          "savedRevision": 1
+        },
+        "expected": 1,
+        "image": 1,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/3/1/1/2/1",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 2,
+        "kind": "same-image-new-backing",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/3/1/1/2/1"
+    },
+    {
+      "id": "webkit/3-stale-tab",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 2,
+          "current": 2,
+          "saved": 1,
+          "savedRevision": 1
+        },
+        "expected": 1,
+        "image": 2,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/2/2/1/1/3",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 3,
+        "kind": "stale-tab",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/2/2/1/1/3"
+    },
+    {
+      "id": "webkit/4-invalid-backup",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 3,
+          "current": 1,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 1,
+        "boundary": 3,
+        "kind": 3,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/3/1/1/2/6",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 4,
+        "kind": "invalid-backup",
+        "measuredFields": [
+          0,
+          1,
+          6
+        ]
+      },
+      "modelResult": "2/1/3/1/1/2/6"
+    },
+    {
+      "id": "webkit/5-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 4,
+          "current": 3,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 3,
+        "boundary": 0,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "2/1/4/3/1/2/2",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 5,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "2/1/4/3/1/2/2"
+    },
+    {
+      "id": "webkit/6-retry-after-unpublished-file",
+      "input": {
+        "stored": {
+          "revision": 2,
+          "image": 1
+        },
+        "editor": {
+          "epoch": 4,
+          "current": 3,
+          "saved": 1,
+          "savedRevision": 2
+        },
+        "expected": 2,
+        "image": 3,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/4/3/3/3/1",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 6,
+        "kind": "retry-after-unpublished-file",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/4/3/3/3/1"
+    },
+    {
+      "id": "webkit/7-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 5,
+          "current": 4,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 4,
+        "boundary": 1,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/5/4/3/3/2",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 7,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/5/4/3/3/2"
+    },
+    {
+      "id": "webkit/8-reconcile-after-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 5,
+          "current": 4,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 3,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "3/3/6/3/3/3/5",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 8,
+        "kind": "reconcile-after-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "3/3/6/3/3/3/5"
+    },
+    {
+      "id": "webkit/9-worker-loss",
+      "input": {
+        "stored": {
+          "revision": 3,
+          "image": 3
+        },
+        "editor": {
+          "epoch": 7,
+          "current": 5,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 5,
+        "boundary": 2,
+        "kind": 1,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "4/5/7/5/3/3/2",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 9,
+        "kind": "worker-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "4/5/7/5/3/3/2"
+    },
+    {
+      "id": "webkit/10-reconcile-after-loss",
+      "input": {
+        "stored": {
+          "revision": 4,
+          "image": 5
+        },
+        "editor": {
+          "epoch": 7,
+          "current": 5,
+          "saved": 3,
+          "savedRevision": 3
+        },
+        "expected": 3,
+        "image": 5,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": false,
+        "available": [
+          1,
+          7,
+          8
+        ],
+        "missing": [
+          4
+        ],
+        "verified": [
+          1,
+          7,
+          8
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "4/5/8/5/5/4/5",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 10,
+        "kind": "reconcile-after-loss",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "4/5/8/5/5/4/5"
+    },
+    {
+      "id": "webkit/11-save-complete",
+      "input": {
+        "stored": {
+          "revision": 4,
+          "image": 5
+        },
+        "editor": {
+          "epoch": 11,
+          "current": 6,
+          "saved": 5,
+          "savedRevision": 4
+        },
+        "expected": 4,
+        "image": 6,
+        "boundary": 3,
+        "kind": 1,
+        "validAuthoring": true,
+        "available": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "missing": [],
+        "verified": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/74/6/6/5/1",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 11,
+        "kind": "save-complete",
+        "measuredFields": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/11/6/6/5/1"
+    },
+    {
+      "id": "webkit/12-browser-relaunch-reopen",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 0,
+          "current": 0,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 6,
+        "boundary": 3,
+        "kind": 2,
+        "validAuthoring": true,
+        "available": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "missing": [],
+        "verified": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/5",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 12,
+        "kind": "browser-relaunch-reopen",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/1/6/6/5/5"
+    },
+    {
+      "id": "webkit/complete-download",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 0,
+          "current": 0,
+          "saved": null,
+          "savedRevision": 0
+        },
+        "expected": 0,
+        "image": 6,
+        "boundary": 3,
+        "kind": 3,
+        "validAuthoring": true,
+        "available": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "missing": [],
+        "verified": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "backing": true,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/6",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 12,
+        "kind": "complete-download",
+        "measuredFields": [
+          0,
+          1,
+          6
+        ]
+      },
+      "modelResult": "5/6/0/0/-/0/6"
+    },
+    {
+      "id": "webkit/13-retained-corruption",
+      "input": {
+        "stored": {
+          "revision": 5,
+          "image": 6
+        },
+        "editor": {
+          "epoch": 1,
+          "current": 6,
+          "saved": 6,
+          "savedRevision": 5
+        },
+        "expected": 5,
+        "image": 6,
+        "boundary": 3,
+        "kind": 4,
+        "validAuthoring": true,
+        "available": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "missing": [],
+        "verified": [
+          5,
+          7,
+          9
+        ],
+        "backing": false,
+        "finalized": true
+      },
+      "expected": "5/6/1/6/6/5/4",
+      "source": {
+        "profile": "webkit",
+        "eventIndex": 13,
+        "kind": "retained-corruption",
+        "measuredFields": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "modelResult": "5/6/1/6/6/5/4"
+    }
+  ],
+  "basisSha256": {
+    "applications/empack/Authoring.bend": "07a5c71f8f94eec644d30484e6519398b48eba95254af72cc62f940a726c4b19",
+    "applications/empack/Authoring.lean": "fe266e504e219a1152342c63407a140076d019b084371d8f46bd7cab01970820",
+    "applications/empack/PortableStore.bend": "a229553907343749f2fd4b17d660dc4dc55e9d4899a3d73e31a2b7f471f29f1b",
+    "applications/empack/PortableStore.lean": "29dfc1ca006ede05f05a30b1ce3d644d08f2d8ef2db6b97d5827bf96c55e9f46",
+    "applications/empack/PortableStoreCase.lean": "326eb819b21e809f8f2c3daa5f5f5693bb0941cf8e7e8a27087c3fcae8447b88",
+    "applications/empack/portable_store_conformance.py": "4ad61e4749b20c2ffb39adcdfe85f2dbcb215f2a860114e49880d8693e821cb0",
+    "applications/empack/portable_study_native.py": "d14c51908e3719ed69a19abd79a9144afb7025a610c9d6f74396d2791f409fec",
+    "applications/empack/portable_study_observations.py": "f3a6e99e29fdcf63824e258bbd2ca86fc2303d42adb5bbb053c518ba098e5c11",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/backend-inspection.json": "e28cb4b61a537461e0f2cf3e86eb4310c20f6293da3f0ea83524bd2a62027135",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/backend-inspection.mjs": "2739ebbd595c480d84e82645a997b2ae499635c419e9ef803d3afac571ebaac1",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-complete-backup.json": "f01f68d1c3134ff2980dc82adb60ac6184c688ab69d485939066b15efce98d3c",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-final.png": "de66ddbd935694c9c927b1d6cae2603d5be0d1eea009978afd2dafbdd20685dd",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-invalid-author.stderr": "fe80d977d3a9649f86bd5251865e3c2731608cb5a26016db982276ad34931e7d",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-invalid-author.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-invalid-backup.json": "24b5e38a6b982880b9dc31ac3e64b6daf6269501f80dbc12016713e230469471",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-prism.stderr": "c253eaa7090da86d4f84437311c5c9b44b8824c85a54d77d234c196eab4ae7ab",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-prism.stdout": "63077df261599dc57a6066789939a801856795262dfd6929e1ec5986c48ce1ef",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-sync.stderr": "6165ba4cd65f8ade5268188c17bdb881a12063c03a2fb901b80c4f68bd063c1d",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/chromium-sync.stdout": "d1e2ee0f7fbf1cb28b5973699f79d9ab4ed436dcf48f1d83926ff954c4484ae3",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/decoder-scalar-controls.json": "141aa802bbea8d6c1dfe3efb124a097229b2782d4d514452a654d25a61abcfeb",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/image-review.json": "6563d971eded3c448f205dd1a423b697eba5f464fa0d97d8eb4949a4dc30da5a",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/make-jar.py": "1da1e7255887987ba5475c01d169a3c53b9f3e2ae10b9a64e7544bbba8ecd2fc",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/native-chromium-prism.zip": "56c5d0e3c5615e7fce4b2a170169837f33fe834d66f8f4f563beac21a4a0ade3",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/native-probe.py": "50da85304537230b8c30700cf68e76862af8d351acab2dc88089dcd0a3ac34a3",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/native-webkit-prism.zip": "56c5d0e3c5615e7fce4b2a170169837f33fe834d66f8f4f563beac21a4a0ade3",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/native.json": "1a46766ac35f3c0092a4b66dec75cbd60290ff1c319fdbd647ecce0be3afb527",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/page.html": "0f966bf76a0ff80615615ad244faecdf265814398e9c6535de74ae912c9f554d",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/page.mjs": "25ef17e7c433a4ca2eb8fe241fa36220d0e1468eabad3b71ceeae4d42541110b",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/probe.mjs": "652f7d08d8e84abe9f922e1fcca636d517a46c585069d29bdeb660e78c84d4fc",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/receipt.json": "4a6fdbf4443c121d979410da694753c2781355f11b109c25dd327978d7f534dd",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/retained-archives.json": "73fce8368b0f719832610ea10bf5a8a54746645613c69e3d42ba364854e79b07",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/store.mjs": "290ba5166c57ded3685cada9ccdac07bfb68c1447e692e242cbf00f69cd748c9",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-complete-backup.json": "fc3d934d88ff2f55e521f79d50198903237e251c0ea3e58d12b3d9fedae3052b",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-final.png": "e7c3ffb8184e3e540bbc9ec69c8917d8956ab99497cc6f670f081bba034b0995",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-invalid-author.stderr": "fe80d977d3a9649f86bd5251865e3c2731608cb5a26016db982276ad34931e7d",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-invalid-author.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-invalid-backup.json": "022989bafb1e7473135c96bce3e9e0e664835bc176b648145bc291acef9f970a",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-prism.stderr": "c253eaa7090da86d4f84437311c5c9b44b8824c85a54d77d234c196eab4ae7ab",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-prism.stdout": "63077df261599dc57a6066789939a801856795262dfd6929e1ec5986c48ce1ef",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-sync.stderr": "6165ba4cd65f8ade5268188c17bdb881a12063c03a2fb901b80c4f68bd063c1d",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/webkit-sync.stdout": "d1e2ee0f7fbf1cb28b5973699f79d9ab4ed436dcf48f1d83926ff954c4484ae3",
+    "applications/evidence/empack-portable-storage-20261124T222835992Z/worker.mjs": "228e859381b43c1f69b0c2b817fe82efbd6e8d09dc53618296076fa2d1e4b42c",
+    "applications/sources/empack-portable-storage-selections.json": "d6d417c5aaa211791c7e73ebd843e0b3d4d210aea3bf934f5ee1f7a5e1bec2e0",
+    "common/Lifecycle.lean": "c50244b60f0eced63a3219725791a1deff5697db29e7b8d5db1ab43389fe4483"
+  },
+  "generatedDriverSha256": "bddb5964b2909b16fa02ba04b8740a8e8c3bddfe96d73ba7f98ab59a9568fdb3",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No new browser/native execution. Do not promote the complete portable-authoring scenario.",
+    "Hashing/JSON,verified byte roles and semantic image labels are external decoded witnesses. This model neither mints capability nor supplies source authentication.",
+    "Edits follow the frozen producer and known prior saved basis. Final fill() DOM event count was not captured before save,so that row excludes editor epoch. Backup rows compare only measured storage/delivery fields.",
+    "Backing validity follows the closed fixture:verified downloads/raw inspection and source-controlled mutation timing. No hidden/noncooperating writes assumed.",
+    "Corruption is one composed reopen-then-save observation,not fabricated intermediate snapshots. Logical revision arithmetic is unbounded here. Prototype UInt64 guard,arbitrary contention/history/GC/streaming/permissions and native consumer engine parity remain separate obligations."
+  ]
+}
