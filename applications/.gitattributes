@@ -1,0 +1,8 @@
+# Captured output is immutable byte evidence, including whitespace and CRLF.
+evidence/** -text -diff -merge
+sources/** -text -diff -merge
+# Retain useful review diffs for structured records and inspected fixture code.
+evidence/**/*.json diff
+evidence/**/*.py diff
+evidence/**/*.cjs diff
+sources/**/*.json diff

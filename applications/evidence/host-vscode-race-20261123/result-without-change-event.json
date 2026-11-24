@@ -1,0 +1,47 @@
+{
+  "version": "1.147.0",
+  "uiKind": 1,
+  "rows": [
+    {
+      "v": 2,
+      "profile": "vscode-1.147.0",
+      "app": "vscode-desktop",
+      "feature": "save-raced-edit",
+      "operationId": "save-raced-edit",
+      "target": "rules-study:/document.txt",
+      "basis": "1",
+      "predicate": "save_status",
+      "observed": {
+        "confirmed": true,
+        "newer_edit": true
+      },
+      "outcome": {
+        "decision": 0,
+        "saveReturn": false,
+        "buffer": "revision-2",
+        "written": "revision-1",
+        "dirty": false
+      }
+    },
+    {
+      "v": 2,
+      "profile": "vscode-1.147.0",
+      "app": "vscode-desktop",
+      "feature": "save-and-reopen",
+      "operationId": "save-and-reopen",
+      "target": "rules-study:/document.txt",
+      "basis": "1",
+      "predicate": "save_status",
+      "observed": {
+        "confirmed": true,
+        "newer_edit": false
+      },
+      "outcome": {
+        "decision": 0,
+        "buffer": "revision-2",
+        "written": "revision-2",
+        "dirty": false
+      }
+    }
+  ]
+}

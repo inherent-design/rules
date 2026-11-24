@@ -1,0 +1,1396 @@
+[
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.repository",
+    "operationId": "0-init",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "0",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "init"
+      ]
+    },
+    "observed": {
+      "beforePacks": {},
+      "afterPacks": {},
+      "seconds": 3.053345916327089,
+      "stdoutSha256": "65878f3a3e8bf7102457a18e4883b915fa66ece9d5a719e747137ffba73d46cf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.repository",
+    "operationId": "1-config",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "1",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "config"
+      ]
+    },
+    "observed": {
+      "beforePacks": {},
+      "afterPacks": {},
+      "seconds": 0.7295508752577007,
+      "stdoutSha256": "b18e3d3dfc9c7a2d2a2136a2840c691dd843490b764e2c49407c3c964fbc2d7f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.backup",
+    "operationId": "2-backup-a",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "2",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "backup",
+        "--host",
+        "rules-fixture",
+        "--tag",
+        "fixture",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/source"
+      ]
+    },
+    "observed": {
+      "beforePacks": {},
+      "afterPacks": {
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        }
+      },
+      "seconds": 0.8007745002396405,
+      "stdoutSha256": "d3b6a2383d1b13114423d3771a8cffd400cb30c4c1dc4e0e16f5abb865f76121",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.snapshot-selection",
+    "operationId": "3-snapshots-a",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "3",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "snapshots"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        }
+      },
+      "afterPacks": {
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        }
+      },
+      "seconds": 0.7429306250996888,
+      "stdoutSha256": "e18429f6e7aba78325e77b7d77f733f3569aa60ec6682553b246a2273e6752e2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.backup",
+    "operationId": "4-backup-b",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "4",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "backup",
+        "--host",
+        "rules-fixture",
+        "--tag",
+        "fixture",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/source"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7827260419726372,
+      "stdoutSha256": "39003fef8009a5c6f12b6e9b0ad3092526b01fcf276fdaeab8950057503ce0ce",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.snapshot-selection",
+    "operationId": "5-snapshots-b",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "5",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "snapshots"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7990494170226157,
+      "stdoutSha256": "71b62424a514bcb9ca2bd5c3a9f1fbf58c16531e9926bc0ae18c22e65d7a2558",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.snapshot-selection",
+    "operationId": "6-snapshot-b",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "6",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "snapshot",
+        "b43eb3492e9153410497643693ae802201a5115ad473a58e94caafe01c2e4b59"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7512761671096087,
+      "stdoutSha256": "a0493c7f628024c7a9a95946eb53bbb9b83364dda61d3c95eccddca538a75225",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.backup",
+    "operationId": "7-old-blob-before",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "7",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "327092ac610fbe7bbba351f0d3469dde1a9785db303d5cdc9e3e949009b90c3d"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7501180828548968,
+      "stdoutSha256": "327092ac610fbe7bbba351f0d3469dde1a9785db303d5cdc9e3e949009b90c3d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.backup",
+    "operationId": "8-shared-blob-before",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "8",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "7c038626abcfc2b3898a33c794a3255cdfb752307c8e8c087e8836af75815b61"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.8018617499619722,
+      "stdoutSha256": "7c038626abcfc2b3898a33c794a3255cdfb752307c8e8c087e8836af75815b61",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.backup",
+    "operationId": "9-new-blob-before",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "9",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "df3da431c2f5f950ea82729bb5e412c4a8634b0ac0ca38ced9ee2902924319a5"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7508755000308156,
+      "stdoutSha256": "df3da431c2f5f950ea82729bb5e412c4a8634b0ac0ca38ced9ee2902924319a5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.retention",
+    "operationId": "10-forget-preview",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "10",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "forget",
+        "9870c3656899ab7d594f9ba06d24aab66d22a4c2d2ba774eeed1cefcf494f1e2",
+        "--dry-run"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7492653331719339,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.snapshot-selection",
+    "operationId": "11-snapshots-after-preview",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "11",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "snapshots"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7243678751401603,
+      "stdoutSha256": "71b62424a514bcb9ca2bd5c3a9f1fbf58c16531e9926bc0ae18c22e65d7a2558",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.retention",
+    "operationId": "12-forget-a",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "12",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "forget",
+        "9870c3656899ab7d594f9ba06d24aab66d22a4c2d2ba774eeed1cefcf494f1e2"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7264171247370541,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.snapshot-selection",
+    "operationId": "13-snapshots-after-forget",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "13",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "snapshots"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7236677501350641,
+      "stdoutSha256": "0ae257031677d2d0cb94ce7fc98afc66dec422a9c7787a769fa4b0d4d41aa343",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.prune",
+    "operationId": "14-prune",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "14",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "prune",
+        "--max-unused",
+        "0"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/52/52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1": {
+          "bytes": 245,
+          "allocatedBytes": 4096,
+          "sha256": "52c7395718725a15833bfb7253505859fa31ec660943eeee03fce6731f9aacd1"
+        },
+        "data/6a/6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738": {
+          "bytes": 3659,
+          "allocatedBytes": 4096,
+          "sha256": "6a9f55793d8feb76fcf40ff5ba6646d40228a0c0b15a67cf1ec06f39f0282738"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7664910410530865,
+      "stdoutSha256": "5547c5f417a7cd314b1ca65e3ba5481da765b4b9173f82c339d4be1f5c78e8d7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.prune",
+    "operationId": "15-old-blob-after",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "15",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "327092ac610fbe7bbba351f0d3469dde1a9785db303d5cdc9e3e949009b90c3d"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7220923751592636,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "d5a38826ccf891a4e5c3b4d7846372ff9f39974dacba0f997da838b5b2d8cafc"
+    },
+    "outcome": {
+      "exitCode": 1
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 1,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.prune",
+    "operationId": "16-shared-blob-after",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "16",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "7c038626abcfc2b3898a33c794a3255cdfb752307c8e8c087e8836af75815b61"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7150102499872446,
+      "stdoutSha256": "7c038626abcfc2b3898a33c794a3255cdfb752307c8e8c087e8836af75815b61",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.prune",
+    "operationId": "17-new-blob-after",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "17",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "cat",
+        "blob",
+        "df3da431c2f5f950ea82729bb5e412c4a8634b0ac0ca38ced9ee2902924319a5"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7146806670352817,
+      "stdoutSha256": "df3da431c2f5f950ea82729bb5e412c4a8634b0ac0ca38ced9ee2902924319a5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.integrity",
+    "operationId": "18-check-read-data",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "18",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "check",
+        "--read-data"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7522014160640538,
+      "stdoutSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  },
+  {
+    "v": 2,
+    "app": "restic",
+    "feature": "restic.restore",
+    "operationId": "19-restore-b",
+    "profile": "restic-0.20.0-darwin-arm64-local-repository",
+    "target": "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+    "basis": "19",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+        "--repo",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/repository",
+        "--password-file",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/password",
+        "--json",
+        "restore",
+        "b43eb3492e9153410497643693ae802201a5115ad473a58e94caafe01c2e4b59",
+        "--target",
+        "/Users/zer0cell/production/rules/applications/evidence/restic-20261124T001750826529Z/work/restored"
+      ]
+    },
+    "observed": {
+      "beforePacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "afterPacks": {
+        "data/13/1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff": {
+          "bytes": 142,
+          "allocatedBytes": 4096,
+          "sha256": "1329c20763e20ddf3b793c3c8576b333f0371f9dc37295de92a4c749409770ff"
+        },
+        "data/50/50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497": {
+          "bytes": 3667,
+          "allocatedBytes": 4096,
+          "sha256": "50a46efed897feb1d77bf63f732a7b8c5094ca58200cfa142f46356ccfde8497"
+        },
+        "data/fa/fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7": {
+          "bytes": 149,
+          "allocatedBytes": 4096,
+          "sha256": "fa6136cd2ce9ea041412859d565cac8ed196139563916fa844a6eb513fbf72a7"
+        }
+      },
+      "seconds": 0.7172627919353545,
+      "stdoutSha256": "d8aaaf7bd00ac6a13356bfb5e8db04254f119596a53785b472529d93f6a1804a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    },
+    "interpretation": {
+      "status": "native-observed",
+      "model": null,
+      "expectedExit": 0,
+      "hostMapping": "Domain trace; not admitted as a shared host predicate until explicitly mapped."
+    }
+  }
+]

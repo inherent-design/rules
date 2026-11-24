@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "status": "Required joined scenarios; pending unless an evidence link says otherwise",
+  "scenarios": [
+    {
+      "id": "empack-editable-authoring",
+      "features": [
+        "empack.portable-draft",
+        "empack.portable-assets",
+        "empack.portable-history",
+        "empack.portable-background",
+        "empack.portable-save",
+        "empack.portable-export",
+        "empack.portable-joined"
+      ],
+      "flow": "Import local JAR and config; edit metadata/placement; retain invalid draft; validate; preview; save/reopen; produce equivalent native/browser Prism inventory.",
+      "counterexamples": [
+        "Saved metadata references never-retained bytes",
+        "stale resolver result overwrites newer binding",
+        "undo cleanup deletes active export input",
+        "worker loss reported as finalized artifact"
+      ],
+      "hostWitnesses": [
+        "revision-bound publication",
+        "retained immutable backing",
+        "durable content-before-metadata save",
+        "actual output finalization"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "empack-reference-to-subscribed-instance",
+      "features": [
+        "empack.consumer-builds",
+        "empack.delivery",
+        "empack.publisher-channels",
+        "empack.instance-update",
+        "empack.file-ownership",
+        "empack.world-state",
+        "empack.launch",
+        "empack.process-console"
+      ],
+      "flow": "Prepare reference distribution; install; authenticate later release; retain user-owned seeds/worlds; repair exact selection; validate runtime; launch and retire.",
+      "counterexamples": [
+        "Native release has incompatible Prism icon ownership",
+        "repair implicitly upgrades",
+        "late cancellation discards partial publication or terminal cleanup failure",
+        "stale approved conflict writes over later user edit"
+      ],
+      "hostWitnesses": [
+        "authenticated selection",
+        "current observations",
+        "target-bound authority",
+        "process retirement separate from UI close"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "npm-workspace-publish",
+      "features": [
+        "npm.workspaces",
+        "npm.resolution-lock",
+        "npm.script-trust",
+        "npm.scripts",
+        "npm.release-artifact",
+        "npm.publication"
+      ],
+      "flow": "Select workspace; change dependency; resolve/install with script policy; package exact contents; stage/publish and reconcile uncertain remote acceptance.",
+      "counterexamples": [
+        "Root script writes outside selected workspace",
+        "lock success misrepresented as script authorization",
+        "failed upload retried despite accepted immutable version"
+      ],
+      "hostWitnesses": [
+        "selected graph",
+        "script grant",
+        "scoped effects",
+        "remote acknowledgement"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "pnpm-filtered-task-deploy",
+      "features": [
+        "pnpm.workspaces",
+        "pnpm.scripts-gates",
+        "pnpm.task-pipelines",
+        "pnpm.build-permissions",
+        "pnpm.install-store",
+        "pnpm.deployment",
+        "pnpm.cleanup"
+      ],
+      "flow": "Filter workspace; run prerequisite gate; execute/cache dependent tasks; deploy selected closure; clean owned install without reclaiming another consumer's backing.",
+      "counterexamples": [
+        "Filtered gate installs wrong projects",
+        "cache restores stale outputs without inputs/config basis",
+        "cleanup follows a foreign junction",
+        "declined prerequisite mistaken for cancelled script"
+      ],
+      "hostWitnesses": [
+        "selected graph",
+        "cache provenance",
+        "shared backing identity",
+        "child outcome and effects"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "yarn-workspace-patch-release",
+      "features": [
+        "yarn.constraints-resolution",
+        "yarn.linkers",
+        "yarn.workspaces",
+        "yarn.patches",
+        "yarn.constraints",
+        "yarn.version-intents",
+        "yarn.package-publication"
+      ],
+      "flow": "Patch exact dependency; preserve peer context; check workspace constraints; focused installation; deferred version application; verify packed artifact and staged release.",
+      "counterexamples": [
+        "Filename/version label substitutes for virtual locator",
+        "stale patch applies to changed source",
+        "focus interpreted as deleting unrelated intent",
+        "deferred bump targets changed workspace basis"
+      ],
+      "hostWitnesses": [
+        "exact source identities",
+        "revision-bound patch",
+        "dependency closure",
+        "publication target"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "mo2-profile-tool-output",
+      "features": [
+        "mo2.profiles",
+        "mo2.mod-state",
+        "mo2.effective-files",
+        "mo2.plugins-load-order",
+        "mo2.executables",
+        "mo2.overwrite",
+        "mo2.maintenance"
+      ],
+      "flow": "Install mod; enable/reorder per profile; inspect loose-file and plugin precedence; run tool; switch profile while work is pending; classify output and retain shared mod data.",
+      "counterexamples": [
+        "Virtual file winner confused with physical owner",
+        "plugin load order treated as loose-file priority",
+        "tool output adopted into newly selected profile",
+        "removing profile deletes shared mod or save"
+      ],
+      "hostWitnesses": [
+        "effective-view provenance",
+        "captured profile identity",
+        "descendant lifetime",
+        "output backing owner"
+      ],
+      "evidence": [],
+      "status": "pending native Windows; source/model work can proceed"
+    },
+    {
+      "id": "prism-pack-runtime-transition",
+      "features": [
+        "prism.pack-import",
+        "prism.pack-update",
+        "prism.components",
+        "prism.java",
+        "prism.launch-commands",
+        "prism.process-console",
+        "prism.resources"
+      ],
+      "flow": "Import pack; customize user settings/resource selection; update pack/components; re-evaluate Java; invoke prelaunch/wrapper; close/stop and inspect actual runtime result.",
+      "counterexamples": [
+        "Override update resets user options without a representable seed policy",
+        "cached component data mistaken for current exact metadata",
+        "config parser selects different command meaning",
+        "window close mistaken for process retirement"
+      ],
+      "hostWitnesses": [
+        "effective configuration",
+        "authenticated or observed source basis",
+        "actual invocation",
+        "runtime result"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "cargo-build-script-freshness",
+      "features": [
+        "cargo.workspaces",
+        "cargo.features",
+        "cargo.lock-state",
+        "cargo.build-units",
+        "cargo.freshness",
+        "cargo.scripts",
+        "cargo.artifact-cleanup",
+        "cargo.publication"
+      ],
+      "flow": "Resolve workspace and features; run host build script for target compilation; mutate declared/undeclared input; compare freshness; package/verify; clean only generated ownership.",
+      "counterexamples": [
+        "Same lock assumed to imply identical features/toolchain/environment",
+        "check counted as executable proof",
+        "target cleanup assumed to undo arbitrary build script effects",
+        "cross build counted as target execution"
+      ],
+      "hostWitnesses": [
+        "complete unit identity",
+        "observed invalidation inputs",
+        "host versus target profile",
+        "effect ownership"
+      ],
+      "evidence": [],
+      "status": "pending"
+    },
+    {
+      "id": "restic-retention-restore",
+      "features": [
+        "restic.backup",
+        "restic.snapshot-selection",
+        "restic.locks",
+        "restic.retention",
+        "restic.prune",
+        "restic.integrity",
+        "restic.restore"
+      ],
+      "flow": "Back up controlled mutable source; create multiple snapshot groups; preview retention; forget selected references; prune retained backing; verify/restore surviving snapshots.",
+      "counterexamples": [
+        "Changed grouping silently retires wrong history",
+        "forget counted as physical reclamation",
+        "sample check counted as complete data verification",
+        "stale lock removed while foreign owner remains live"
+      ],
+      "hostWitnesses": [
+        "snapshot references",
+        "physical backing reachability",
+        "coordinated writer/reader ownership",
+        "restore bytes and metadata"
+      ],
+      "evidence": [
+        "evidence/restic-20261124T001750826529Z/findings.json",
+        "evidence/restic-20261124T001750826529Z/conformance.json",
+        "restic/README.md"
+      ],
+      "status": "Bounded explicit-ID two-snapshot local lifecycle observed/modelled; grouping/concurrent-owner/remote cases remain pending."
+    },
+    {
+      "id": "vscode-edit-save-external-change",
+      "features": [
+        "vscode.documents",
+        "vscode.undo-history",
+        "vscode.save-conflicts",
+        "vscode.filesystem-adapters",
+        "vscode.web-workspaces",
+        "vscode.extensions"
+      ],
+      "flow": "Dirty buffer; start delayed save; edit again; complete original write; inspect buffer/backing/dirty/result independently; save/reopen; compare native/custom/browser providers.",
+      "counterexamples": [
+        "Dirty=false assumed to prove current buffer persisted",
+        "save=false assumed to prove no backing write",
+        "provider API presence assumed to prove browser durability"
+      ],
+      "hostWitnesses": [
+        "captured buffer version",
+        "written bytes/revision",
+        "current displayed version",
+        "provider receipt"
+      ],
+      "evidence": [
+        "evidence/host-handoffs.json"
+      ],
+      "status": "host custom-provider observation inspected; source/native provider comparisons pending"
+    },
+    {
+      "id": "vscode-workspace-trust-agent-task",
+      "features": [
+        "vscode.workspaces",
+        "vscode.workspace-trust",
+        "vscode.tasks",
+        "vscode.agent-sessions",
+        "vscode.agent-tools",
+        "vscode.remote",
+        "vscode.profiles-sync"
+      ],
+      "flow": "Open workspace; edit while background agent/task works; change trust/profile/remote connection; preserve draft and inspect actual tool/child effects before resuming.",
+      "counterexamples": [
+        "Session continuation restores revoked grants",
+        "UI closure discards running tool ownership",
+        "late proposed edits overwrite newer buffer",
+        "profile sync grants execution authority"
+      ],
+      "hostWitnesses": [
+        "current principal and capability",
+        "source revision",
+        "child ownership",
+        "explicit accepted workspace edit"
+      ],
+      "evidence": [],
+      "status": "pending"
+    }
+  ]
+}

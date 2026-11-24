@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "Initial inventory and first bounded feature band; full application goal remains active",
+  "rulesBase": "e9b85304144e936885e09a60c054205bae65f045",
+  "scope": "applications/**; no production changes or package/account/world operations outside new fixtures",
+  "checks": {
+    "formalCommand": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 scripts/check-rules.py",
+    "formalOutput": "applications/restic/Retention.bend: kernel checked\ncommon/Host.bend: kernel checked\ncommon/Lifecycle.bend: kernel checked\ncommon/Proof.bend: kernel checked\nterminal/Candidate.bend: kernel checked\nterminal/Native.bend: kernel checked\nChecked 32 Lean modules and 6 Bend files.\n",
+    "conformance": "evidence/restic-20261124T001750826529Z/conformance.json",
+    "bookkeeping": "evidence/inventory-audit.json",
+    "syntaxAndDocLinks": "passed",
+    "stagedByteEquivalence": "all initial151application files match raw working bytes",
+    "privacy": "No ignored work/tool/generated paths staged; bounded common credential/private-key text pattern scan found no matches. This is not proof all possible secrets absent."
+  },
+  "remaining": "Most source/native comparisons, domain models/laws, cross-feature scenarios, multi-application proposals, full empack current/0.9coherent design and compatibility/verification plans remain incomplete."
+}
