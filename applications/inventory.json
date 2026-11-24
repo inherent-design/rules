@@ -11631,13 +11631,34 @@
           "operations": [
             {
               "id": "snapshots",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Selection.lean;restic/Selection.bend",
+              "laws": [
+                "disabled_display_grouping_still_selects_per_host_path",
+                "selected_snapshot_is_an_input",
+                "keep_and_remove_are_disjoint",
+                "every_input_has_a_preview_disposition"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-selection-20261124T061409701179Z/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/trace.json",
+                "evidence/restic-selection-20261124T061409701179Z/latest-selector/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-selection-selections.json"
+              ],
+              "negativeControls": [
+                "Empty group-by has different latest-selection meaning for snapshots and forget; tag-list AND/repeated-list OR; keep-tag union; preview remove-set does not imply deletion. Research decoder refuses unsupported schema/group/operation/empty-tag/tied-time cases."
+              ],
+              "uxAssessment": "restic/SELECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Six generated private local snapshots, two hosts/two paths, unique timestamps and nonempty tags.",
+                "Keep-last-one/default-global-tag groups only; original21 commands plus separately attributed latest-selector command.",
+                "Reference/pack hashes unchanged during selection/previews; policy application/pruning not exercised here."
+              ],
+              "evidenceLimit": "Membership/group identity only, not output order. No calendar/tie/empty-tag/count-generalization, deletion, remote backend, lock/concurrency, or restore-integrity qualification.",
+              "verificationPlan": "Extend paths/tags/permutations, ties/future time, calendar/count variants, filtered groups, actual partial deletion, locks/concurrent mutation and backend outcomes separately."
             },
             {
               "id": "tag",
@@ -11661,13 +11682,34 @@
             },
             {
               "id": "select-latest",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Selection.lean;restic/Selection.bend",
+              "laws": [
+                "disabled_display_grouping_still_selects_per_host_path",
+                "selected_snapshot_is_an_input",
+                "keep_and_remove_are_disjoint",
+                "every_input_has_a_preview_disposition"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-selection-20261124T061409701179Z/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/trace.json",
+                "evidence/restic-selection-20261124T061409701179Z/latest-selector/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-selection-selections.json"
+              ],
+              "negativeControls": [
+                "Empty group-by has different latest-selection meaning for snapshots and forget; tag-list AND/repeated-list OR; keep-tag union; preview remove-set does not imply deletion. Research decoder refuses unsupported schema/group/operation/empty-tag/tied-time cases."
+              ],
+              "uxAssessment": "restic/SELECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Six generated private local snapshots, two hosts/two paths, unique timestamps and nonempty tags.",
+                "Keep-last-one/default-global-tag groups only; original21 commands plus separately attributed latest-selector command.",
+                "Reference/pack hashes unchanged during selection/previews; policy application/pruning not exercised here."
+              ],
+              "evidenceLimit": "Membership/group identity only, not output order. No calendar/tie/empty-tag/count-generalization, deletion, remote backend, lock/concurrency, or restore-integrity qualification.",
+              "verificationPlan": "Extend paths/tags/permutations, ties/future time, calendar/count variants, filtered groups, actual partial deletion, locks/concurrent mutation and backend outcomes separately."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -12172,13 +12214,34 @@
             },
             {
               "id": "group-retention",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Selection.lean;restic/Selection.bend",
+              "laws": [
+                "disabled_display_grouping_still_selects_per_host_path",
+                "selected_snapshot_is_an_input",
+                "keep_and_remove_are_disjoint",
+                "every_input_has_a_preview_disposition"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-selection-20261124T061409701179Z/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/trace.json",
+                "evidence/restic-selection-20261124T061409701179Z/latest-selector/receipt.json",
+                "evidence/restic-selection-20261124T061409701179Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-selection-selections.json"
+              ],
+              "negativeControls": [
+                "Empty group-by has different latest-selection meaning for snapshots and forget; tag-list AND/repeated-list OR; keep-tag union; preview remove-set does not imply deletion. Research decoder refuses unsupported schema/group/operation/empty-tag/tied-time cases."
+              ],
+              "uxAssessment": "restic/SELECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Six generated private local snapshots, two hosts/two paths, unique timestamps and nonempty tags.",
+                "Keep-last-one/default-global-tag groups only; original21 commands plus separately attributed latest-selector command.",
+                "Reference/pack hashes unchanged during selection/previews; policy application/pruning not exercised here."
+              ],
+              "evidenceLimit": "Membership/group identity only, not output order. No calendar/tie/empty-tag/count-generalization, deletion, remote backend, lock/concurrency, or restore-integrity qualification.",
+              "verificationPlan": "Extend paths/tags/permutations, ties/future time, calendar/count variants, filtered groups, actual partial deletion, locks/concurrent mutation and backend outcomes separately."
             },
             {
               "id": "dry-run",

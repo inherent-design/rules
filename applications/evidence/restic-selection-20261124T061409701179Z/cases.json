@@ -1,0 +1,116 @@
+[
+  {
+    "id": "host-alpha",
+    "operation": "select",
+    "filter": {
+      "hosts": [
+        "alpha"
+      ],
+      "paths": [],
+      "tags": []
+    }
+  },
+  {
+    "id": "path-a",
+    "operation": "select",
+    "filter": {
+      "hosts": [],
+      "paths": [
+        "/Users/zer0cell/production/rules/applications/evidence/restic-selection-20261124T061409701179Z/work/source-a"
+      ],
+      "tags": []
+    }
+  },
+  {
+    "id": "tag-stable",
+    "operation": "select",
+    "filter": {
+      "hosts": [],
+      "paths": [],
+      "tags": [
+        [
+          "stable"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "tags-and",
+    "operation": "select",
+    "filter": {
+      "hosts": [],
+      "paths": [],
+      "tags": [
+        [
+          "stable",
+          "review"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "tags-or",
+    "operation": "select",
+    "filter": {
+      "hosts": [],
+      "paths": [],
+      "tags": [
+        [
+          "canary"
+        ],
+        [
+          "review"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "host-missing",
+    "operation": "select",
+    "filter": {
+      "hosts": [
+        "missing-fixture"
+      ],
+      "paths": [],
+      "tags": []
+    }
+  },
+  {
+    "id": "latest-groups",
+    "operation": "latest",
+    "groupBy": "host,paths"
+  },
+  {
+    "id": "latest-global",
+    "operation": "latest",
+    "groupBy": ""
+  },
+  {
+    "id": "keep-default",
+    "operation": "keep",
+    "groupBy": "host,paths",
+    "keepTags": []
+  },
+  {
+    "id": "keep-global",
+    "operation": "keep",
+    "groupBy": "",
+    "keepTags": []
+  },
+  {
+    "id": "keep-tag-groups",
+    "operation": "keep",
+    "groupBy": "host,paths,tags",
+    "keepTags": []
+  },
+  {
+    "id": "keep-union-tag",
+    "operation": "keep",
+    "groupBy": "host,paths",
+    "keepTags": [
+      [
+        "canary"
+      ]
+    ]
+  }
+]
