@@ -1,0 +1,21 @@
+[tools]
+node = "26.13.1"
+dprint = "0.51.1"
+actionlint = "1.7.12"
+"aqua:gitleaks/gitleaks" = "8.30.1"
+"aqua:aquasecurity/trivy" = "0.76.2"
+
+[tasks.format]
+run = "dprint fmt"
+
+[tasks."format:check"]
+run = "dprint check"
+
+[tasks."check:ci"]
+run = "actionlint"
+
+[tasks."check:rules"]
+run = "python3 scripts/check-rules.py"
+
+[tasks."check:security"]
+run = "trivy fs --scanners vuln,misconfig,secret --severity HIGH,CRITICAL --exit-code 1 --skip-dirs .build,.tools,node_modules ."

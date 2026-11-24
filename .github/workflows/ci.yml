@@ -1,0 +1,96 @@
+name: Rules and hosts
+on:
+  push:
+    branches: [main, dev]
+    paths-ignore: ['**/*.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md']
+  pull_request:
+    paths-ignore: ['**/*.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rules-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  proofs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      rules: ${{ steps.export.outputs.rules }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26'
+      - uses: jdx/mise-action@924e7c586e33d7d4bae9c14e26c5d22e2beb6e78 # v5
+        with:
+          version: '2026.11.10'
+          install_args: dprint actionlint
+          cache: true
+      - run: mise run format:check && mise run check:ci
+      - run: python3 scripts/check-meta.py
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .tools
+          key: formal-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('toolchain.json') }}
+      - run: python3 scripts/setup-tools.py
+      - name: Check proofs once and emit shared modules
+        id: export
+        run: |
+          export PATH="$PWD/.tools/bend/bin:$PWD/.tools/lean-4.34.0-linux/bin:$PATH"
+          python3 scripts/check-rules.py
+          scripts/ci-export
+
+  hosts:
+    needs: proofs
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '26'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Import the source-bound emitted rules
+        run: node scripts/ci-core.mjs import
+        env:
+          RULES_BUNDLE: ${{ needs.proofs.outputs.rules }}
+      - name: Compare all finite rules and retained observations
+        run: |
+          node host/compare.mjs
+          node host/lifecycles/verify-record.mjs
+          node host/lifecycles/retention-probe.mjs > .build/lifecycles/retention.jsonl
+          node host/lifecycles/check.mjs .build/lifecycles/retention.jsonl
+      - name: Exercise bounded POSIX host fixtures
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          python3 host/native.py > .build/host/current.jsonl
+          node host/compare.mjs .build/host/current.jsonl
+          python3 host/lifecycles/native.py > .build/lifecycles/current.jsonl
+          python3 host/lifecycles/archives.py > .build/lifecycles/archive.jsonl
+          node host/lifecycles/check.mjs .build/lifecycles/current.jsonl .build/lifecycles/archive.jsonl
+      - uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756 # v1
+        if: runner.os == 'Windows'
+      - name: Exercise bounded Win32 host fixtures
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          cl /nologo /W4 host/WinProbe.c /Fe:.build/WinProbe.exe
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & .build/WinProbe.exe > .build/host/current.jsonl
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node host/compare.mjs .build/host/current.jsonl

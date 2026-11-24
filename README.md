@@ -1,28 +1,30 @@
 # Rules
 
-This local repository compares the laws behind five systems. Start with the [plain-language review](review.md) for a file update, a world update, and where Bend and Lean run. The [common model](common/README.md) lists the underlying laws. Models use mathematical naturals for bounded host quantities. Adapters must reject overflow, invalid units and foreign identities before applying those models.
+This repository studies reusable host rules and application behavior through executable models, proofs, and attributable observations. Start with the [plain-language review](review.md) for a file update, a world update, and where Bend and Lean run. The [common model](common/README.md) lists the underlying laws. Models use mathematical naturals for bounded host quantities. Adapters must reject overflow, invalid units and foreign identities before applying those models.
 
-For the six host surfaces, see the [host behavior map](host/README.md), [native and Java profile matrix](profiles/README.md), and [qualification evidence](host/evidence.md). The [terminal application study](terminal/README.md) compares npm, pnpm, Yarn, and empack, with [UX findings and proposed empack changes](terminal/report.md).
+For the six host surfaces, see the [host behavior map](host/README.md), [native and Java profile matrix](profiles/README.md), and [qualification evidence](host/evidence.md). The [application lifecycle study](host/lifecycles/README.md) extends those rules through retained assets, concurrent saves, native editors, and browser hosts. The [terminal application study](terminal/README.md) compares npm, pnpm, Yarn, and empack, with [UX findings and proposed empack changes](terminal/report.md).
 
-| Project | Reprojection and evidence |
-| --- | --- |
-| [Moment](moment/README.md) | Historical comparison from immutable records and contextual support to a visible relation, a wake occurrence and a separately admitted execution |
-| [Playground](playground/README.md) | From owned reservations and spatial observations to coherent tick candidates and derived presentation |
-| [empack](empack/README.md) | From author intent, terminal observations and resource estimates to a verified plan, managed publication and installed ownership |
-| [Simulacrum](simulacrum/README.md) | Receptor observations, staged delivery and cursor semantics |
-| [re:desktop](re-desktop/README.md) | Human pause, per-session grants, epochs and clocks |
+| Project                            | Reprojection and evidence                                                                                                                        |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Moment](moment/README.md)         | Historical comparison from immutable records and contextual support to a visible relation, a wake occurrence and a separately admitted execution |
+| [Playground](playground/README.md) | From owned reservations and spatial observations to coherent tick candidates and derived presentation                                            |
+| [empack](empack/README.md)         | From author intent, terminal observations and resource estimates to a verified plan, managed publication and installed ownership                 |
+| [Simulacrum](simulacrum/README.md) | Receptor observations, staged delivery and cursor semantics                                                                                      |
+| [re:desktop](re-desktop/README.md) | Human pause, per-session grants, epochs and clocks                                                                                               |
 
 ## Check the models
 
-Use Lean 4.34.0 and Bend 2.0.40 on PATH, including the Lean binary for Bend's independent verdict. With the existing sibling re-desktop installation on macOS arm64:
+The [development guide](docs/development.md) covers pinned tool setup and checks from a fresh clone. Start with:
 
 ```sh
-export PATH="$PWD/../re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin:$PWD/../re-desktop/.tools/bend/bin:$PATH"
-scripts/check
-scripts/check-sources
+python3 scripts/setup-tools.py
+# Add the installed Bend and Lean bin directories to PATH.
+python3 scripts/check-rules.py
 ```
 
-The first command typechecks all five models, their examples and the generic theorems, checks the Bend laws through the Lean-based kernel and runs a terminal replay. The second checks the recorded source files, runs the Moment graph and Playground ledger probes against the working checkouts, and verifies re:desktop's 13 Bend laws. Build products stay in `.build/`. No service or remote is required. For live terminal observations and reproducible fault cases see [empack](empack/README.md).
+The rules check typechecks tracked Lean modules and rechecks Bend laws. CI runs it once, then compares emitted rules on macOS, Linux, and Windows with bounded host fixtures. Application evidence collection and optional sibling-checkout comparisons follow their own documented procedures.
+
+See [contributing](CONTRIBUTING.md), [repository conventions](docs/repository.md), and [security](SECURITY.md) for participation and maintenance.
 
 [Source pins](sources.json) record Git revisions and blob IDs. Run the checks after changing a projection. When a tracked source changes, inspect the changed boundary and its tests before advancing the pin. Model proofs cover the stated abstractions. The source probes cover individual adapter cases. Neither amounts to translation validation of an entire host application.
 
@@ -30,13 +32,13 @@ Where an inspected upstream file had uncommitted changes, the manifest records i
 
 ## Verification boundaries
 
-| Project | Executable comparison | Adapter boundary |
-| --- | --- | --- |
-| Moment | The graph probe calls the actual mutation and topology functions. The Lean reaction example follows an event through proposal and commit, including revocation between those stages. | The model takes authenticated action, lease and receipt observations as inputs. SQLite durability and real provider effects need integration tests. |
-| Playground | The compiled probe calls the native resource ledger. The Lean tick example connects a reservation and halo reads to world publication and a later device generation check. | A new world can commit while its GPU result is still unavailable. Partition and replay proofs apply to the specified kernels. GPU and physics completion require host observations. |
-| empack | The differential test compares all 245 normalized single-file cases with Rust. The Lean release example follows an authenticated channel selection through capacity, content verification and installation. | Trust verification, portable metadata, rooted filesystem operations and actual process control belong to the host. A refused install can still advance the authenticated channel high-water mark. |
-| Simulacrum | Lean examples exercise first discovery, flush outcome and equal timestamps. | Source inspection supplies the cursor rule. Database crash recovery and analytics delivery have no native parity test here. |
-| re:desktop | The source check runs 13 Bend laws. The desktop comparison checks renewal and Pause after against the emitted core as used by the host coordinator. | Disconnect, timer delivery and foreground focus are external observations. |
+| Project    | Executable comparison                                                                                                                                                                                       | Adapter boundary                                                                                                                                                                                  |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Moment     | The graph probe calls the actual mutation and topology functions. The Lean reaction example follows an event through proposal and commit, including revocation between those stages.                        | The model takes authenticated action, lease and receipt observations as inputs. SQLite durability and real provider effects need integration tests.                                               |
+| Playground | The compiled probe calls the native resource ledger. The Lean tick example connects a reservation and halo reads to world publication and a later device generation check.                                  | A new world can commit while its GPU result is still unavailable. Partition and replay proofs apply to the specified kernels. GPU and physics completion require host observations.               |
+| empack     | The differential test compares all 245 normalized single-file cases with Rust. The Lean release example follows an authenticated channel selection through capacity, content verification and installation. | Trust verification, portable metadata, rooted filesystem operations and actual process control belong to the host. A refused install can still advance the authenticated channel high-water mark. |
+| Simulacrum | Lean examples exercise first discovery, flush outcome and equal timestamps.                                                                                                                                 | Source inspection supplies the cursor rule. Database crash recovery and analytics delivery have no native parity test here.                                                                       |
+| re:desktop | The source check runs 13 Bend laws. The desktop comparison checks renewal and Pause after against the emitted core as used by the host coordinator.                                                         | Disconnect, timer delivery and foreground focus are external observations.                                                                                                                        |
 
 Run the additional native comparisons from this directory with the sibling checkouts present:
 

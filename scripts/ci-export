@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p .build/host .build/lifecycles
+export BEND_NO_TELEMETRY=1 LEAN_PATH="$PWD/.build/formal"
+"${BEND:-bend}" common/Host.bend -o .build/host/core.mjs
+"${BEND:-bend}" common/Lifecycle.bend -o .build/lifecycles/core.mjs
+"${LEAN:-lean}" --run host/Vectors.lean > .build/host/vectors
+"${LEAN:-lean}" --run host/lifecycles/Vectors.lean > .build/lifecycles/vectors
+node scripts/ci-core.mjs export
