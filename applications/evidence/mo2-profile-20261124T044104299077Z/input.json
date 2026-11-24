@@ -1,0 +1,360 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "single-free-0-0",
+      "mode": "single",
+      "policies": [
+        "free"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-free-0-1",
+      "mode": "single",
+      "policies": [
+        "free"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-free-1-0",
+      "mode": "single",
+      "policies": [
+        "free"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-free-1-1",
+      "mode": "single",
+      "policies": [
+        "free"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-on-0-0",
+      "mode": "single",
+      "policies": [
+        "on"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-on-0-1",
+      "mode": "single",
+      "policies": [
+        "on"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-on-1-0",
+      "mode": "single",
+      "policies": [
+        "on"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-on-1-1",
+      "mode": "single",
+      "policies": [
+        "on"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-off-0-0",
+      "mode": "single",
+      "policies": [
+        "off"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-off-0-1",
+      "mode": "single",
+      "policies": [
+        "off"
+      ],
+      "before": [
+        false
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-off-1-0",
+      "mode": "single",
+      "policies": [
+        "off"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": false
+    },
+    {
+      "id": "single-off-1-1",
+      "mode": "single",
+      "policies": [
+        "off"
+      ],
+      "before": [
+        true
+      ],
+      "target": 0,
+      "request": true
+    },
+    {
+      "id": "single-invalid-index",
+      "mode": "single",
+      "policies": [
+        "free"
+      ],
+      "before": [
+        false
+      ],
+      "target": 9,
+      "request": true
+    },
+    {
+      "id": "batch-empty",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [],
+      "disable": []
+    },
+    {
+      "id": "batch-enable-free",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        0
+      ],
+      "disable": []
+    },
+    {
+      "id": "batch-disable-free",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        true,
+        true,
+        false
+      ],
+      "enable": [],
+      "disable": [
+        0
+      ]
+    },
+    {
+      "id": "batch-enable-all",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        0,
+        1,
+        2
+      ],
+      "disable": []
+    },
+    {
+      "id": "batch-disable-all",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [],
+      "disable": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "batch-duplicate-enable",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        0,
+        0
+      ],
+      "disable": []
+    },
+    {
+      "id": "batch-overlapping-requests",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        0
+      ],
+      "disable": [
+        0
+      ]
+    },
+    {
+      "id": "batch-invalid-then-valid",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        9,
+        0
+      ],
+      "disable": []
+    },
+    {
+      "id": "batch-ordered-changes",
+      "mode": "batch",
+      "policies": [
+        "free",
+        "free",
+        "on",
+        "off"
+      ],
+      "before": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "enable": [
+        1,
+        0
+      ],
+      "disable": []
+    },
+    {
+      "id": "batch-invalid-on-prestate",
+      "mode": "batch",
+      "policies": [
+        "on"
+      ],
+      "before": [
+        false
+      ],
+      "enable": [],
+      "disable": [
+        0
+      ]
+    },
+    {
+      "id": "batch-invalid-off-prestate",
+      "mode": "batch",
+      "policies": [
+        "off"
+      ],
+      "before": [
+        true
+      ],
+      "enable": [
+        0
+      ],
+      "disable": []
+    }
+  ]
+}

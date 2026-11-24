@@ -8305,23 +8305,43 @@
           "operations": [
             {
               "id": "enable",
-              "model": null,
-              "laws": [],
+              "model": "mo2/Profile.lean;mo2/Profile.bend",
+              "laws": [
+                "Scalar policy normalization; valid forced states preserved by bulk edits; catalog length preserved; ordered dirty transitions need not equal net edits. View-readiness laws are proposed and separate."
+              ],
               "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "sourceComparison": [
+                "sources/mo2-profile-selections.json",
+                "evidence/mo2-profile-20261124T044104299077Z/receipt.json",
+                "evidence/mo2-profile-20261124T044104299077Z/conformance.json"
+              ],
+              "negativeControls": [
+                "Overlapping bulk enable/disable emits duplicate indices with no net state change; constructed invalid forced prestate is not normalized by the bulk skip path."
+              ],
+              "uxAssessment": "mo2/PROFILES.md",
+              "status": "source-modeled",
+              "evidenceLimit": "24 unmodified MO2 source-method cases compiled on Mac with explicit QList/log/translation/metadata/signal/Profile-construction adapters. No Windows MO2, Qt signal delivery, profile parsing/persistence, refresh worker or VFS. Independent fixture profile/catalog flags unchanged, not a native profile copy/switch test. Invalid forced prestates are constructed controls.",
+              "unavailableNativeObligation": "Supported Windows MO2: actual scalar/bulk activation, save/reopen, refresh completion, profile switch/catalog changes and an injected disposable file reader."
             },
             {
               "id": "disable",
-              "model": null,
-              "laws": [],
+              "model": "mo2/Profile.lean;mo2/Profile.bend",
+              "laws": [
+                "Scalar policy normalization; valid forced states preserved by bulk edits; catalog length preserved; ordered dirty transitions need not equal net edits. View-readiness laws are proposed and separate."
+              ],
               "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "sourceComparison": [
+                "sources/mo2-profile-selections.json",
+                "evidence/mo2-profile-20261124T044104299077Z/receipt.json",
+                "evidence/mo2-profile-20261124T044104299077Z/conformance.json"
+              ],
+              "negativeControls": [
+                "Overlapping bulk enable/disable emits duplicate indices with no net state change; constructed invalid forced prestate is not normalized by the bulk skip path."
+              ],
+              "uxAssessment": "mo2/PROFILES.md",
+              "status": "source-modeled",
+              "evidenceLimit": "24 unmodified MO2 source-method cases compiled on Mac with explicit QList/log/translation/metadata/signal/Profile-construction adapters. No Windows MO2, Qt signal delivery, profile parsing/persistence, refresh worker or VFS. Independent fixture profile/catalog flags unchanged, not a native profile copy/switch test. Invalid forced prestates are constructed controls.",
+              "unavailableNativeObligation": "Supported Windows MO2: actual scalar/bulk activation, save/reopen, refresh completion, profile switch/catalog changes and an injected disposable file reader."
             },
             {
               "id": "reorder",
