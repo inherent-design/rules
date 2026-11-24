@@ -1,0 +1,2476 @@
+[
+  {
+    "resolver": 1,
+    "case": "metadata-all",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": null,
+        "targetPresent": false
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.05973237520083785
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "metadata-host",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "aarch64-apple-darwin"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.036680624820291996
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "metadata-windows",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "x86_64-pc-windows-msvc"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.03636354207992554
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "qualified-self-feature-refusal",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "fixture-app/explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "ebfdf3eb0a97344f59b34e415a36d216cc1309bb0a74d8788849b0890885207b",
+      "seconds": 0.027931457851082087
+    },
+    "outcome": {
+      "exitCode": 101,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "6d73eb2645461d2a9e8f0351031678375f48c52041d370f8b4d5bc86c92c7026",
+      "stderrSha256": "3ffeb86d989d7df6d5a15e32494968a270cd07d8f504a0d1e20417225ff425a6",
+      "seconds": 0.6441950001753867
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "16a55562d8d7f981c13ad04a723cd5d326520b82fcb8dcc4bc8b8d2301882054",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.16265499964356422
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "80929f224a8fc0ac9b1bbfff9c2a2824ac6c5555667099b70315b9776327d52a",
+      "stderrSha256": "220c998e8ddf8a0cb04b5341b4f349fd794d3d474cb41de95d5c916431fa2e49",
+      "seconds": 0.2960812500678003
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "86d11c65a4acbefcef150d57167bfc93f16e00ddb08deb08af12bb351217c4b4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.11626270785927773
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "explicit",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "a66c9940b0438d517b2800bcd3a235b8a9ec28cbaf2725d3dcbc99f3a36ee3b7",
+      "stderrSha256": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+      "seconds": 0.36149575002491474
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "explicit-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "d1d9cf356dea5580f7421de281b0f45a17250b49353c723fd39362b8021ba781",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.18693900015205145
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "all-features",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--all-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "165d63cdaf40c2786e7058552833dff54fa15cba7a2ee13cff6a0dd3e3232fad",
+      "stderrSha256": "0f61e0fd51f25ad1a4618a7e62d81669d45af389dacac5adaea16826b4d8b12b",
+      "seconds": 0.3737610001116991
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "all-features-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "dd5db6c9d0986c63a5b92dc440105d066cde2b2486ffeb21a7af750f7622a288",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.19219075003638864
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "workspace-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "--workspace",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "4a4cad226cbdcaed3f0ed089c1064bb4e98dda7601df1dafcd34a0ad9dd91c80",
+      "stderrSha256": "affe45d447acc8c65d335940fa8b4e57047305e7ceefa46e7132b9ec23bf8b82",
+      "seconds": 0.3808685000985861
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "workspace-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "113711d578d4870bec5e38474f21c1f4fd6063927a55d517ac19ddfb78250a61",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.1871534576639533
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "tests-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "test",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--no-run",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "e8e9309087d32909ee62ce4a11d695dad2efa2e40e9b6896adbc6f6ab082b4cb",
+      "stderrSha256": "6a2512c8122b41da6ede7de506a75d62c39ddfd1a26856e0c0d5df62301db7e1",
+      "seconds": 0.12294995784759521
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 1,
+    "case": "tests-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/deps/fixture_app-1c6f4cf7f1c57e2d",
+      "--nocapture"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "da222c3022fd9a94e9b524203b2d32be8ecc04679e8983fc6d8b60d7402691ff",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "77f5062b0d67eab688b87c43ea2972184143dba1c9db896be91ec6a3d805ff69",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.20931366691365838
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "metadata-all",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.011977708898484707
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "metadata-host",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "aarch64-apple-darwin"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.020715792197734118
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "metadata-windows",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "x86_64-pc-windows-msvc"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.02108224993571639
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "qualified-self-feature",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "fixture-app/explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "8decf6bf9c13d662224fadeb88b7035adb226398cdc9b52e4a3ddcafff8cedf4",
+      "stderrSha256": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+      "seconds": 0.3656386248767376
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "qualified-self-feature-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.1873601251281798
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "aa8ab14d7b519f4ddb006bddbd220014e42320e6d528751ed03f8abfc228124e",
+      "stderrSha256": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+      "seconds": 0.3671096661128104
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "469eff2bfe9e326b511623e13c99a8594f3512e245616d0c2e014eacf3494410",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.18385779205709696
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "3c5d380cb0e30d51c75ba907e10f234210e5efef60242845a45be60159a9c5d9",
+      "stderrSha256": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+      "seconds": 0.365620959084481
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "423bcbede51db4f47dea861bf8e7687a7cfb7661f22c3beeefed593cd908e417",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.1850885832682252
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "explicit",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.013098332565277815
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "explicit-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.11154254199936986
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "all-features",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--all-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "cf2af21f8c1990d0812fc85db5665bf9c446a538f41397e7d1b5317bd54e42d3",
+      "stderrSha256": "718e6402b750f6e142da11070be61ffa58db1aab9412a0eada35799cd738e575",
+      "seconds": 0.36513599986210465
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "all-features-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "5556c93a7e16341a997efbe7b2dae9ed81de0689d2ec2df85ed1bdb1ceade19d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.18737370800226927
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "workspace-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "--workspace",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "b3f09729ccbffca445827e537b87191c1c8582b7ecb59e074ae1d4874262264e",
+      "stderrSha256": "bb8b3fdcb43f76121d339ab64673da35b048126ee84fd27b131dc72ba7ea6cb4",
+      "seconds": 0.10707091679796576
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "workspace-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "a08793be327199489dc895606e32576554c2d2024e7c74085c1edb71303dd90f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.201320415828377
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "tests-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "test",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--no-run",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "30256861d947f0f8a6e439de77a53850bfd8d5442e891250204bf3f3945f6c0a",
+      "stderrSha256": "719c495bd8152df4d33613e0a6728bb9b93b174da156d72824a48036cfdbb832",
+      "seconds": 0.1063095829449594
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 2,
+    "case": "tests-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/deps/fixture_app-c763805d7ec7bf63",
+      "--nocapture"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "bdcc20a2c51145eb8ceb3a914f34fbf061e94476d5671133583ced34a80fc332",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "77833652a00c379b7e1d7f2c92f7f7cd221214f085e7061e438920b2b14764de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.20518233394250274
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "metadata-all",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.011923459358513355
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "metadata-host",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "aarch64-apple-darwin"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.011778749991208315
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "metadata-windows",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "metadata",
+      "--offline",
+      "--format-version=1",
+      "--filter-platform",
+      "x86_64-pc-windows-msvc"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "c1315c2d1184ec1ff9c98fa2331ec036a0280bd4f046be1b9d1bb102fcacf2de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.011795000173151493
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "qualified-self-feature",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "fixture-app/explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.014034875202924013
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "qualified-self-feature-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.115641999989748
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "43012fa44d4b247aba93b1beb8e2cd09e84f836b3fdf5600cb48b8303175ff3a",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.013062667101621628
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "469eff2bfe9e326b511623e13c99a8594f3512e245616d0c2e014eacf3494410",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.10993504198268056
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "df5140ffcb10828799a41b2499af422b7af120aa3ee6830bf02def6781f79d0c",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.013867457862943411
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "423bcbede51db4f47dea861bf8e7687a7cfb7661f22c3beeefed593cd908e417",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.11434937501326203
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "explicit",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--features",
+      "explicit",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "acc914923a239192a524c767f5d394ac9f61f58d23858e830085636e16da1052",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.01343854097649455
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "explicit-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "6772a06cbbcd79e04d4be242f4465db2ec136b0ff8b09f069b9ad7d75839786e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.12750679207965732
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "all-features",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "-p",
+      "fixture-app",
+      "--all-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "5734488ee806b9503f3072415ba182673daa2d34e903abbd962ba21f7669c033",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.013341708108782768
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "all-features-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "5556c93a7e16341a997efbe7b2dae9ed81de0689d2ec2df85ed1bdb1ceade19d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.11178408330306411
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "workspace-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "build",
+      "--workspace",
+      "--no-default-features",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "0006dc70f210b3731a4cdbadfe2127468cb6b12b0cd68b0101411a9694851d11",
+      "stderrSha256": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+      "seconds": 0.013489332981407642
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "workspace-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/fixture-app"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "a08793be327199489dc895606e32576554c2d2024e7c74085c1edb71303dd90f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.11172170797362924
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "tests-no-default",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "test",
+      "-p",
+      "fixture-app",
+      "--no-default-features",
+      "--no-run",
+      "--offline",
+      "--message-format=json"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "95458c32e1be65ffcd0e28b23bbfb8feac0b41116389b5cc96d08188498d0091",
+      "stderrSha256": "4737d5703ba421bfa053f767143a1f9d2acfb290c1f5103354ef8edf4641b1f7",
+      "seconds": 0.012732665985822678
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "tests-no-default-runtime",
+    "argv": [
+      "/private/tmp/rules-cargo-features-4gl2_9u0/target/debug/deps/fixture_app-c763805d7ec7bf63",
+      "--nocapture"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project/app",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "stdoutSha256": "77833652a00c379b7e1d7f2c92f7f7cd221214f085e7061e438920b2b14764de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.003770166542381048
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "resolver": 3,
+    "case": "clean",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "clean",
+      "--offline"
+    ],
+    "cwd": "/private/tmp/rules-cargo-features-4gl2_9u0/project",
+    "observed": {
+      "before": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": true
+      },
+      "after": {
+        "sourceSha256": {
+          "Cargo.toml": "c486eb4def7da86b0df5c4f4f4f20919e414d44b78b5702cdf24077fb7be8a69",
+          "app/Cargo.toml": "c02c47b2481b712f7b3dd80854adeb38f292c785169d1e1b2a52c2765a03525a",
+          "app/build.rs": "b3cc530b860120ccf71017be6016f69ad85149f33d98c75963da06420ce9e63c",
+          "app/src/main.rs": "8b1c14bacb31860dc7f7117e1fb88553485272423e7e4946bc884af04dfda8eb",
+          "defaults/Cargo.toml": "3d08e7ffabd56d6a1383b957f2a42b52002f70ef4647342e37f846ac7b4a52d4",
+          "defaults/src/main.rs": "d6445d79113588eadb7883227b7d3200ee45b8e2ec12d7993130414240688388",
+          "flags/Cargo.toml": "e7a4fdfc9b663b83aa89d43152a30402b6fcce8ca33eafabacab86c97b558222",
+          "flags/src/lib.rs": "9b43f95afb98ae782d3f9a39636edb8252448a29863d85e0d21799383b3e43ae"
+        },
+        "lockSha256": "d44a62972d7e9e6f3b77330435e8a49a184824e3bff7226fa46041bd0f8d51c6",
+        "targetPresent": false
+      },
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e9603c35e3961f78001acffc2b9a64b18ba0abb5068d1114a9fa026ce4163b03",
+      "seconds": 0.029771207831799984
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]

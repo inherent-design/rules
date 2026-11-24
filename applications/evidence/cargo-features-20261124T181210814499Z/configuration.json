@@ -1,0 +1,12 @@
+{
+  "1": {
+    "Cargo.toml": "[workspace]\nmembers=[\"app\",\"flags\",\"defaults\"]\ndefault-members=[\"app\"]\nresolver=\"1\"\n[profile.dev]\ndebug=0\n[profile.test]\ndebug=0\n",
+    "app/Cargo.toml": "[package]\nname=\"fixture-app\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[features]\ndefault=[\"fixture-flags/extra\"]\nexplicit=[\"fixture-flags/explicit\"]\n[dependencies]\nfixture-flags={path=\"../flags\",default-features=false,features=[\"normal\"]}\n[build-dependencies]\nfixture-flags={path=\"../flags\",default-features=false,features=[\"build\"]}\n[dev-dependencies]\nfixture-flags={path=\"../flags\",default-features=false,features=[\"dev\"]}\n[target.'cfg(windows)'.dependencies]\nfixture-flags={path=\"../flags\",default-features=false,features=[\"platform\"]}\n",
+    "app/build.rs": "fn main(){println!(\"cargo:rerun-if-changed=build.rs\");println!(\"cargo:rustc-env=FIXTURE_BUILD_MASK={}\",fixture_flags::flags());}\n",
+    "app/src/main.rs": "fn main(){println!(\"FIXTURE_APP:{{\\\"normal\\\":{},\\\"build\\\":{}}}\",fixture_flags::flags(),env!(\"FIXTURE_BUILD_MASK\"));}\n#[test]\nfn report(){println!(\"FIXTURE_TEST:{{\\\"normal\\\":{},\\\"build\\\":{}}}\",fixture_flags::flags(),env!(\"FIXTURE_BUILD_MASK\"));}\n",
+    "defaults/Cargo.toml": "[package]\nname=\"fixture-defaults\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[features]\ndefault=[\"fixture-flags/sibling\"]\n[dependencies]\nfixture-flags={path=\"../flags\"}\n",
+    "defaults/src/main.rs": "fn main(){println!(\"FIXTURE_DEFAULTS:{}\",fixture_flags::flags());}\n",
+    "flags/Cargo.toml": "[package]\nname=\"fixture-flags\"\nversion=\"0.1.0\"\nedition=\"2021\"\n[features]\ndefault=[\"defaulted\"]\nnormal=[]\nbuild=[]\ndev=[]\nplatform=[]\nextra=[]\nexplicit=[]\ndefaulted=[]\nsibling=[]\n",
+    "flags/src/lib.rs": "pub fn flags()->u16{(cfg!(feature=\"normal\") as u16)*1+(cfg!(feature=\"build\") as u16)*2+(cfg!(feature=\"dev\") as u16)*4+(cfg!(feature=\"platform\") as u16)*8+(cfg!(feature=\"extra\") as u16)*16+(cfg!(feature=\"explicit\") as u16)*32+(cfg!(feature=\"defaulted\") as u16)*64+(cfg!(feature=\"sibling\") as u16)*128+(cfg!(feature=\"default\") as u16)*256}\n"
+  }
+}
