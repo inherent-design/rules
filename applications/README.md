@@ -2,6 +2,8 @@
 
 This is the active successor to the [terminal study](../terminal/README.md). It covers empack, npm, pnpm, Yarn Berry, Mod Organizer 2, Prism Launcher, Cargo, restic, and VS Code desktop/vscode.dev. The scope is each application's domain and meaningful features, not a list of ways other programs resemble empack.
 
+The [comparative report](COMPARISON.md) connects the bounded findings, per-application preservation decisions, candidate changes, compatibility costs, and verification plans. It is a partial synthesis; the inventory remains the coverage authority.
+
 The first [inventory](inventory.json) maps 208 feature families and 971 semantic operations across all nine applications. Those counts describe decomposition, not verification. Operation names are research identifiers, not assertions that a program exposes a command with that spelling. Every operation begins pending. Reading help or a contract establishes an inventory basis, not implementation conformance. The inventory is the single maintained feature/assessment source; its one-off initialization generator has been retired.
 
 ## Evidence and ownership

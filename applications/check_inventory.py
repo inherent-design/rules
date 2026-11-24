@@ -36,6 +36,10 @@ def validate(catalog, scenarios):
         scenario_ids.add(scenario['id'])
         assert scenario['features'] and set(scenario['features']) <= ids, scenario['id']
         assert scenario['counterexamples'] and scenario['hostWitnesses'] and scenario['status']
+        for component in scenario.get('componentEvidence', []):
+            assert component['status'] in {'native-observed', 'source-modeled', 'proposed'}, scenario['id']
+            assert component['scope'] and component['remaining'], scenario['id']
+            assert component['evidence'] and all((ROOT / path).is_file() for path in component['evidence']), (scenario['id'], 'missing component evidence')
     return len(ids), len(operations)
 
 
@@ -48,9 +52,13 @@ def main():
     narrowed['applications'] = [a for a in narrowed['applications'] if a['id'] != 'mo2']
     fake = copy.deepcopy(catalog)
     fake['applications'][0]['features'][0]['operations'][0]['status'] = 'verified-bounded'
-    for name, value in [('dropped-application', narrowed), ('unsupported-completion-claim', fake)]:
+    missing = copy.deepcopy(scenarios)
+    missing['scenarios'][0]['componentEvidence'] = [{'status': 'proposed', 'scope': 'Unimplemented component',
+        'remaining': 'Native implementation', 'evidence': ['evidence/no-such-component-record.json']}]
+    for name, value, joined in [('dropped-application', narrowed, scenarios), ('unsupported-completion-claim', fake, scenarios),
+                               ('missing-component-evidence', catalog, missing)]:
         try:
-            validate(value, scenarios)
+            validate(value, joined)
         except AssertionError:
             rejected.append(name)
         else:
