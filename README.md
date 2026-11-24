@@ -12,6 +12,8 @@ For the six host surfaces, see the [host behavior map](host/README.md), [native 
 | [Simulacrum](simulacrum/README.md) | Receptor observations, staged delivery and cursor semantics                                                                                      |
 | [re:desktop](re-desktop/README.md) | Human pause, per-session grants, epochs and clocks                                                                                               |
 
+The [application study](applications/README.md) owns the feature-by-feature inventory, per-program models, and design proposals. Its evidence status is tracked per operation. The first [restic retention model](applications/restic/README.md) covers a bounded snapshot lifecycle.
+
 ## Check the models
 
 The [development guide](docs/development.md) covers pinned tool setup and checks from a fresh clone. Start with:
