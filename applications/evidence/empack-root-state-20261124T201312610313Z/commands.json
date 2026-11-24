@@ -1,0 +1,49 @@
+[
+  {
+    "case": "compile",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "-Cdebuginfo=0",
+      "-Cstrip=debuginfo",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201312610313Z/work/main.rs",
+      "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+      "--extern",
+      "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "--extern",
+      "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "--extern",
+      "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "--extern",
+      "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "--extern",
+      "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "--extern",
+      "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+      "--extern",
+      "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+      "--extern",
+      "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+      "-Clink-arg=-Wl,-map,/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201312610313Z/work/link-map.txt",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201312610313Z/work/discovery-driver"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "seconds": 0.39236908312886953,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "case": "observed",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201312610313Z/work/discovery-driver",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201312610313Z/work/cases"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "seconds": 0.8772017918527126,
+    "stdoutSha256": "fb25bb72e8e60ed4ff90b3e2226045dc25b4a5bf95a965cf281d5970e36a8edf",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

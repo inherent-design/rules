@@ -47,6 +47,8 @@ LEAN=/path/to/pinned/lean BEND=/path/to/pinned/bend \
   python3 applications/empack/identity_conformance.py
 ```
 
+The subsequent [discovery band](ROOT-STATE.md) executes selected actual root checks, association reads, and lookup through native directory capabilities. It also retains a separate initialization-lock prefix. Its formal comparison and the complete writer/recovery lifecycle remain pending.
+
 ## Remaining qualification
 
-Continue the actual root lookup, read-only recovery planning, operation/revision approval, restoration direction, retained-image verification, and interrupted publication/creation lifecycle. Use isolated fixtures and preserve the distinction between source methods, current checkout, and installed release behavior. Linux/Windows providers, actual reboot behavior, root capture/revalidation, outer record admission, and complete recovery remain pending. Live user recovery state remains outside this study.
+Continue caller-bound state lookup, read-only recovery planning, operation/revision approval, restoration direction, retained-image verification, and interrupted publication/creation. The separate discovery band does not yet qualify those complete lifecycles. Use isolated fixtures and preserve the distinction between source methods, current checkout, and installed release behavior. Linux/Windows providers, actual reboot behavior, root capture/revalidation, outer record admission, and complete recovery remain pending. Live user recovery state remains outside this study.

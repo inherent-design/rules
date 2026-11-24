@@ -8,6 +8,8 @@ The [removal/re-adoption band](REMOVAL.md) compares current core demotion, exact
 
 The [native identity band](IDENTITY.md) separates live object equality, durable comparison, content observations, and recovery authority. Synthetic device changes preserve durable comparison while fresh live equality remains strict. This is source-function evidence, not a reboot, state lookup, or recovery qualification. The distinction must survive portable extraction; native evidence is not a portable project revision.
 
+The intermediate [state discovery band](ROOT-STATE.md) exercises actual directory lookup and retains a source-supported initialization-lock concern. Formal discovery comparison and a complete writer/interruption test remain pending. A returned state key alone supplies no observed state or execution authority.
+
 The [channel band](CHANNELS.md) keeps incoming offer authentication, saved-envelope revalidation, durable observation, and installed release separate. Its candidate exact saved-floor check can reuse current authentication/equality; it does not require another trust system or change the no-expiry policy. Root, publication, and acquisition behavior remain implementation/verification obligations.
 
 The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.

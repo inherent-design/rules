@@ -1,0 +1,14 @@
+error[E0425]: cannot find type `File` in this scope
+   --> /Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201809705356Z/work/main.rs:278:53
+    |
+278 | fn lock_file(directory: &Dir, name: &str) -> Result<File> {
+    |                                                     ^^^^ not found in this scope
+    |
+help: consider importing this struct
+    |
+242 | pub(crate) mod publication {use std::fs::File;
+    |                             ++++++++++++++++++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0425`.

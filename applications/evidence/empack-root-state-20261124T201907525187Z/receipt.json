@@ -1,0 +1,268 @@
+{
+  "schema": 1,
+  "profile": "writer-prefix",
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "priorReceipt": "applications/evidence/empack-identity-20261124T193525996513Z/receipt.json",
+  "priorReceiptSha256": "45a7ebad256ecf63564377b337a7f97ef6f5bcb1e7126caeade201e80100b152",
+  "compiler": {
+    "path": "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+    "sha256": "1ba7bb8e273bd64125f4048d2ecce530e0a6470e565ab1b3aecf0b82b532f7b1",
+    "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: aarch64-apple-darwin\nrelease: 1.99.1\nLLVM version: 23.1.1\n"
+  },
+  "libraries": {
+    "anyhow": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "sha256": "de0aec8659ffc513a77813f88dca2b4c20dcb284232cdc030507a04ee5367992",
+      "bytes": 1215808
+    },
+    "serde": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "sha256": "33518018aae21f5ae89f51de6f10ef446056dd1f90b7a5c4f621bda287c369c6",
+      "bytes": 1090840
+    },
+    "serde_json": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "sha256": "b5aecadc5340d057acb06a2c76bb8ae2bc9bababef597c64b9f805f83bd47170",
+      "bytes": 3534032
+    },
+    "sha2": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "sha256": "9dd5472a352b9226503f156dc0f771545f56b39446fc7e0940d9f50d4fdc3f39",
+      "bytes": 1577112
+    },
+    "libc": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "sha256": "cb731ec6df481246cf20a955d8f8a6179a33e76211aa201109229f1300393567",
+      "bytes": 3776832,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/libc-57e3d4331ab41dea/lib-libc.json",
+      "fingerprintSha256": "42e70a0f2714864b68bca669985aff196179e8f03c2337aa2cbdc51f6e8f6b36",
+      "features": "[\"default\", \"extra_traits\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "cap_std": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+      "sha256": "5fb7ab7c704487cec359fbd9e16924e219a6941d068bdd099490188abbd90256",
+      "bytes": 540848,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/cap-std-946277b4935028e3/lib-cap_std.json",
+      "fingerprintSha256": "1dfaf9c0c0a645b38830b99eea601f5daaa71a62a6c5deeb46895018ad7fc10f",
+      "features": "[\"default\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "cap_fs_ext": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+      "sha256": "6678e3b075a0fa75851f9ff4984f89a08e12a58d028fcb5c8c088878eb316579",
+      "bytes": 68800,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/cap-fs-ext-6077db0c19acb2fa/lib-cap_fs_ext.json",
+      "fingerprintSha256": "5eef7cdda738105bfb345388b08ec44c1709b598c4f90eb3efa1690ec83c2d11",
+      "features": "[\"cap-std\", \"default\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "thiserror": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+      "sha256": "472a529da535eff7c5fb47f36cbb7e7c0df2f8f13f8c2741892f46351ddb521d",
+      "bytes": 33008,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/thiserror-2ff5673840ad1f11/lib-thiserror.json",
+      "fingerprintSha256": "a217c826acfc549efe03b5fe2d233adcaeca05b41e981c155ac3e972444843a2",
+      "features": "[\"default\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    }
+  },
+  "sourceSelections": [
+    {
+      "path": "crates/empack-lib/src/application/process_runtime.rs",
+      "start": "#[derive(Debug, thiserror::Error)]\n#[error(\"Operation interrupted\")]",
+      "stop": "\n/// A completed instance runtime",
+      "firstLine": 13,
+      "lastLine": 16,
+      "sha256": "89a1b408966fbea15709586947841f8223452ea7dce5609fe4b11026187a857b"
+    },
+    {
+      "path": "crates/empack-lib/src/application/process_runtime.rs",
+      "start": "#[derive(Clone, Default)]\npub struct Cancellation",
+      "stop": "    pub(crate) async fn cancelled(",
+      "firstLine": 56,
+      "lastLine": 93,
+      "sha256": "53cd2c4883494d636e3f6555ddcd6f1b692fb2f2cce8e0c13ffe7885b5aa6b58"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/native.rs",
+      "start": "#[derive(Debug, Clone, Copy, PartialEq, Eq)]\npub(super) struct ObjectIdentity",
+      "stop": "\n/// Walk one component",
+      "firstLine": 13,
+      "lastLine": 77,
+      "sha256": "e3e3e71f30a5c75b46707bfb513c84cc20158f77d37d330785d62eba0fbcd585"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/native.rs",
+      "start": "pub(super) fn open_file(",
+      "stop": "\n/// Linux capability directories",
+      "firstLine": 92,
+      "lastLine": 130,
+      "sha256": "ae6a414cf5a79e5dc2a9b94643a9286c2a76870656cad1f470602a4e2cad0359"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/io.rs",
+      "start": "use crate::application::process_runtime::Cancellation;",
+      "stop": "\n#[cfg(test)]",
+      "firstLine": 2,
+      "lastLine": 36,
+      "sha256": "a5477c1c8225923384e18d3df632fbe042fb59e4e094db14242c27c37317b332"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/snapshot.rs",
+      "start": "/// An opened project root grants reads only through this adapter.",
+      "stop": "\n    /// Observe only selected managed paths.",
+      "firstLine": 35,
+      "lastLine": 85,
+      "sha256": "172adaaef7a2663d4eaedd2b68531329c73db33f6cea7b4ceadc60460e11a79b"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "/// Private host state is separate from project data",
+      "stop": "\n/// Read-only coordinates for recovery presentation",
+      "firstLine": 41,
+      "lastLine": 47,
+      "sha256": "99820d2b170b829f44f7ad9328db2496c5e999d3fc6b8f8f4ff4f238a47b8c47"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]\n#[serde(deny_unknown_fields)]\nstruct Binding",
+      "stop": "#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]\n#[serde(deny_unknown_fields)]\nstruct Fingerprint",
+      "firstLine": 176,
+      "lastLine": 192,
+      "sha256": "10da2e7d6e5d8d26425a35427c976f078b640780fa3b2ebb408b97cc507a9522"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "pub(super) fn root_key(",
+      "stop": "\nfn discard_sibling(",
+      "firstLine": 808,
+      "lastLine": 821,
+      "sha256": "e0e2a201eb6e9d0ff1ed87bfd6833cd2912e7e369f0317b39fdfe72179e411b2"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "fn lock(directory:",
+      "stop": "\nfn new_retained_file(",
+      "firstLine": 942,
+      "lastLine": 962,
+      "sha256": "d436c97e16248a786f4e0920c65e7fd6da93bb7a53cef2cd1eb077e21ac3d980"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/instance_runtime.rs",
+      "start": "use super::*;",
+      "stop": "\nfn marker(",
+      "firstLine": 2,
+      "lastLine": 12,
+      "sha256": "f2bb7b1566c1e1073ba237ffb934f9f6e27c5ce7b55a5e540e3b5674e3debdb8"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+      "start": "use super::*;",
+      "stop": "\nimpl Publisher {",
+      "firstLine": 2,
+      "lastLine": 79,
+      "sha256": "55972033d7dec3f6d2a889bb718261f6b706ba2996cd23665dabc70b17e0a88b"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+      "start": "    /// Read-only discovery never creates",
+      "stop": "    /// Retain only root identity",
+      "firstLine": 81,
+      "lastLine": 87,
+      "sha256": "9cae009ba69ead48405b0dc1d1f425116c1acf182eb75bf10620003df528ce13"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+      "start": "    /// An association's opaque original key",
+      "stop": "    pub(super) fn associate_project_state(",
+      "firstLine": 93,
+      "lastLine": 179,
+      "sha256": "bc007e62fefb5c838f576cdad3a08a8cdeec17a576acc1faf9cef6686dab81b9"
+    }
+  ],
+  "sourceSha256": {
+    "crates/empack-lib/src/engine/native.rs": "7fa4bddfa4f77b508c1475d18d6119f4f4c92e7c4f5db13239eb993cbebb5b2e",
+    "crates/empack-lib/src/engine/native/persistent.rs": "c6af33a5c39716391da9197421d8e1a5553d904da00681a0c91eb01e66e34e67",
+    "crates/empack-lib/src/engine/snapshot.rs": "459845d9b66ba6777d498913fe30841c66b36712683d7a2b0a42505e597aabf2",
+    "crates/empack-lib/src/engine/publication.rs": "945bdf2751623520264ea57ff83c5dd721462b0790ab7ed87f5e2eca6151f856",
+    "crates/empack-lib/src/engine/publication/root_state.rs": "18f4ea3339fdbe91b892784abcd7623b2242ce24a5f13ddd22d1e5723b5b295b",
+    "crates/empack-lib/src/engine/io.rs": "6b1d3a71bc3e949356d62c60b4647ba1aadecf0755cf27b5f2f047045760b2b7",
+    "crates/empack-lib/src/engine/publication/tests/root_state.rs": "7b7fa260044d8764a41e765346d4eeba2e33c9be76982a66b444ce958d9e119e",
+    "crates/empack-lib/src/engine/publication/recovery.rs": "e239232338b5a61f9fc02b1d9408fc957cae992a652bee5c5ca6b22fc25df18a",
+    "crates/empack-core/src/path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "crates/empack-lib/src/application/process_runtime.rs": "d0f3c42534586fdd7168f04ff55c5172cfbebe70519f1bf511627c27df3a51b9",
+    "crates/empack-lib/src/engine/publication/instance_runtime.rs": "09084420b972c5e00812924845763c0d70e6b6825b3d30929c6e254efde9d146"
+  },
+  "cargoLockSha256": "6b837285c6a84e87e4e9a5e521ac06114fa74723b87cc396656e628c1bb37b5a",
+  "producerSha256": "00d8d4e6159b6f35d0c03714546140d87cb383c6dc9245688bea304d7b0ea2c2",
+  "driverSha256": "823b40679b3b2182ac09bcfeb0132a8eca771a271ec15ba1937f057f6f8b03fc",
+  "generatedSha256": {
+    "path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "main.rs": "b76dab285c6ff074dd1c1d60f60a92062c1b62dfd02c6f1f5e72bb643dae2a0d",
+    "persistent.rs": "c6af33a5c39716391da9197421d8e1a5553d904da00681a0c91eb01e66e34e67"
+  },
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "commands": [
+    {
+      "case": "compile",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-Cdebuginfo=0",
+        "-Cstrip=debuginfo",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201907525187Z/work/main.rs",
+        "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+        "--extern",
+        "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+        "--extern",
+        "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+        "--extern",
+        "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+        "--extern",
+        "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+        "--extern",
+        "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+        "--extern",
+        "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+        "--extern",
+        "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+        "--extern",
+        "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+        "-Clink-arg=-Wl,-map,/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201907525187Z/work/link-map.txt",
+        "-o",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201907525187Z/work/discovery-driver"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 0.9250352499075234,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "observed",
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201907525187Z/work/discovery-driver",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-root-state-20261124T201907525187Z/work/cases",
+        "prefix"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 0.2318587084300816,
+      "stdoutSha256": "4eda83fba2103046b3bdedd32c3a630a8c6a0eab5b7fa3c75a5f6594e240f3f6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Selected unchanged actual methods on private macOS capabilities;no Cargo/full engine build.",
+    "Publisher struct,ProjectReadRoot open/selected/check_binding,discovery reader/predicates,cap_std+cap_fs_ext,native open/identity and bounded IO are actual source selections.",
+    "Cancellation synchronous source methods included;only fresh uncancelled default is used. Async supervision/full initialization/publication/recovery/continuation are not exercised. Optional prefix-only profile creates/acquires/releases one source operation.lock before discovery;it is not an actual crash or complete writer.",
+    "Old-device association fields are synthetic fixture setup;no actual reboot/remount or Linux/Windows provider qualification.",
+    "Private fixture associations/journal-named sentinels are authored,not engine-generated operations. They grant no publication/recovery authority.",
+    "No live project,operation store,Moment recovery,evidence retention,launcher or game accessed."
+  ],
+  "binarySha256": "e7267894caaa259b30f1caa9632c0e03aaeb49356482a0bdb05ad87912f1a2a5",
+  "binaryBytes": 2237984,
+  "linkMapSha256": "73ccaad3b968edb7e7301590676140a1178e01b9ab0bc8b25608b58244245c83"
+}

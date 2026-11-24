@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "sourceRevision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sourcePins": 10,
+  "availableCases": 34,
+  "entrypointsPerAvailableCase": [
+    "resolve_project_state",
+    "find_project_state",
+    "bound_root_key"
+  ],
+  "outcomes": {
+    "none": 5,
+    "error": 24,
+    "selected": 5
+  },
+  "privateCurrentPostimagesVerified": 34,
+  "historicalPhaseImages": 1,
+  "exactGlobalEntryBoundary": {
+    "limit4096": 4096,
+    "limit4097": 4097
+  },
+  "unavailableCases": [
+    {
+      "id": "nonutf8",
+      "errno": 92,
+      "reason": "Illegal byte sequence (os error 92)",
+      "sourceCalls": 0
+    }
+  ],
+  "priorFailedCollection": {
+    "capture": "applications/evidence/empack-root-state-20261124T201230642889Z",
+    "reason": "Fixture non-UTF-8 filename rejected before lookup;not an empack failure.",
+    "retainedCompletedCases": 28,
+    "postimagesVerified": 28
+  },
+  "writerPrefix": {
+    "capture": "applications/evidence/empack-root-state-20261124T201907525187Z",
+    "sourcePins": 11,
+    "discoveryCases": 1,
+    "beforeImage": {
+      "image": "writer-prefix-before.image.json",
+      "sha256": "26fe71a32822ff4fc52d9bd57524178067528583fbc9afafe24c2cf3a8f85c9f"
+    },
+    "exactAddedFile": "host/project-0000000001000010-000000000000000000000000116e5515-6b05f13c-2a4952cd/operation.lock",
+    "changedParentMetadataOnly": "host/project-0000000001000010-000000000000000000000000116e5515-6b05f13c-2a4952cd",
+    "outcome": "unassociated;not a full writer/crash/recovery test"
+  },
+  "failedPrefixCompilation": {
+    "capture": "applications/evidence/empack-root-state-20261124T201809705356Z",
+    "cause": "Fixture scaffold omitted File import;no native execution;fixed before new prefix capture."
+  },
+  "sourceFacts": [
+    "Old synthetic device-label association is selected without renaming/rebinding the physical state slot.",
+    "Current empty/state.lock-only slot is not selected;old empty and operation.lock-only unassociated slots refuse.",
+    "A matching candidate does not bypass another unresolved claim,duplicate ownership,bad records or the global entry cap.",
+    "Read-only discovery succeeds while a fixture operation.lock is held;this does not qualify publication/recovery coordination.",
+    "Root disappearance/replacement refuse;nonregular association/state entries are not followed or accepted."
+  ],
+  "limits": [
+    "Formal policy/replay comparison pending;these checks verify retained observations,source/artifacts and private postimages.",
+    "Actual unchanged source methods on macOS;provided Publisher capability,not Publisher::open/private-state initialization.",
+    "Synthetic old-device records,authored journal/runtime sentinels and held fixture lock;no real reboot,operation/recovery or interrupted engine write.",
+    "Images compare bytes,shape,inode/device,mode andmtime;access time is excluded. At the limit,all immediate host entries count,not only matching project names.",
+    "Actual lock/lock_file/ensure_stopped prefix creates operation.lock then discovery refuses;the full association writer/interruption lifecycle remains unqualified,current reader refusal must not be weakened.",
+    "No live operation store,production project,legacy-state sweep or Moment recovery payload accessed."
+  ]
+}
