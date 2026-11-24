@@ -8133,13 +8133,33 @@
             },
             {
               "id": "inspect-conflict",
-              "model": null,
-              "laws": [],
+              "model": "mo2/Overlay.lean and mo2/Overlay.bend",
+              "laws": [
+                "loose_beats_archive",
+                "sentinel_beats_finite",
+                "higher_order_wins_same_class",
+                "empty_has_no_winner",
+                "sole_candidate_wins"
+              ],
               "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "sourceComparison": [
+                "sources/launcher-selections.json:FileEntry::sortOrigins/Profile/OrganizerCore"
+              ],
+              "negativeControls": [
+                "launchers/conformance.py:priorityOnlyWinnerAssumptionRejected"
+              ],
+              "uxAssessment": "mo2/README.md",
+              "status": "source-modeled",
+              "sourceFragmentEvidence": [
+                "evidence/launcher-fragments-20261124T012218677503Z/conformance.json"
+              ],
+              "proofPremises": [
+                "Single virtual file,stationary eligible origin set after sort",
+                "Finite native orders below reserved INT_MAX; no equal ranks in source probe",
+                "Fixture field adapters are not MO2 Windows/VFS execution"
+              ],
+              "unavailableNativeObligation": "Supported Windows10/11 MO2 with disposable mods/profiles and actual injected-process file reads is not available on this Mac.",
+              "verificationPlan": "Exercise loose/archive conflicts,reorder,disable,hidden paths,profile switch,view revisions,and original backing bytes on supported Windows; inspect current conflict UI."
             },
             {
               "id": "preview-archive",
@@ -9067,13 +9087,33 @@
             },
             {
               "id": "compare-pack",
-              "model": null,
-              "laws": [],
+              "model": "prism/Update.lean(source/proposed plans) and prism/Update.bend(reuse decision)",
+              "laws": [
+                "path_aware_reuse_requires_path",
+                "path_aware_reuse_requires_hash",
+                "path_aware_reuse_allows_hash_reuse",
+                "empty_pending_reparses"
+              ],
               "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "sourceComparison": [
+                "sources/launcher-selections.json:ModrinthCreationTask update/create/manifest;InstanceCreationTask caller"
+              ],
+              "negativeControls": [
+                "launchers/conformance.py:hashOnlyReuseTargetCounterexamples",
+                "launchers/conformance.py:emptyPendingReparseGuardRetained"
+              ],
+              "uxAssessment": "prism/README.md",
+              "status": "source-modeled",
+              "sourceFragmentEvidence": [
+                "evidence/launcher-fragments-20261124T012218677503Z/conformance.json",
+                "evidence/launcher-fragments-20261124T012218677503Z/simulated-impact.json"
+              ],
+              "proofPremises": [
+                "Valid required-only selected manifests; current installed projection matches old indexed entries",
+                "Executed Qt6 filter only; reparse and final overlay are separate projections",
+                "Full GUI importer,publication,local modification/cancellation semantics unqualified"
+              ],
+              "verificationPlan": "Actual disposable packA->B update with moved file plus changed second file,swapped content,single-file/unchanged controls;inspect final paths/hashes and recovery. Check newer upstream before proposing production patch."
             },
             {
               "id": "replace-pack-files",
