@@ -11277,13 +11277,33 @@
           "operations": [
             {
               "id": "package",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Package.lean;cargo/Package.bend",
+              "laws": [
+                "include_ignores_git_and_exclude",
+                "required_root_metadata_survives_filter",
+                "unchecked_archive_is_not_build_evidence",
+                "failed_verification_can_leave_archive"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-package-20261124T060420484446Z/receipt.json",
+                "evidence/cargo-package-20261124T060420484446Z/trace.json",
+                "evidence/cargo-package-20261124T060420484446Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-package-selections.json"
+              ],
+              "negativeControls": [
+                "Fresh verification failure leaves a .crate; unchecked creation succeeds for invalid Rust; include overrides exclude and Git ignore; unknown profile/schema/publication request refused."
+              ],
+              "uxAssessment": "cargo/PACKAGING.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Five generated no-dependency Git crates on pinned Cargo/macOS; offline and publish=false.",
+                "Matched source membership and selected root metadata only; no arbitrary glob/Git/archive implementation model.",
+                "One tiny valid and invalid compile; named author input hashes unchanged."
+              ],
+              "evidenceLimit": "Local package list/create/build-check only; no registry publication, dependency rewriting, workspace, interrupted IO, symlink, or platform qualification.",
+              "verificationPlan": "Extend package/dependency/source rewriting, workspace filters, source mutation, stale outputs/finalization failure, symlinks/reserved names, platforms, and registry upload uncertainty separately."
             },
             {
               "id": "publish",
@@ -11307,13 +11327,33 @@
             },
             {
               "id": "verify-package",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Package.lean;cargo/Package.bend",
+              "laws": [
+                "include_ignores_git_and_exclude",
+                "required_root_metadata_survives_filter",
+                "unchecked_archive_is_not_build_evidence",
+                "failed_verification_can_leave_archive"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-package-20261124T060420484446Z/receipt.json",
+                "evidence/cargo-package-20261124T060420484446Z/trace.json",
+                "evidence/cargo-package-20261124T060420484446Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-package-selections.json"
+              ],
+              "negativeControls": [
+                "Fresh verification failure leaves a .crate; unchecked creation succeeds for invalid Rust; include overrides exclude and Git ignore; unknown profile/schema/publication request refused."
+              ],
+              "uxAssessment": "cargo/PACKAGING.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Five generated no-dependency Git crates on pinned Cargo/macOS; offline and publish=false.",
+                "Matched source membership and selected root metadata only; no arbitrary glob/Git/archive implementation model.",
+                "One tiny valid and invalid compile; named author input hashes unchanged."
+              ],
+              "evidenceLimit": "Local package list/create/build-check only; no registry publication, dependency rewriting, workspace, interrupted IO, symlink, or platform qualification.",
+              "verificationPlan": "Extend package/dependency/source rewriting, workspace filters, source mutation, stale outputs/finalization failure, symlinks/reserved names, platforms, and registry upload uncertainty separately."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",

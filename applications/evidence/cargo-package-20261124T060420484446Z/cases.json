@@ -1,0 +1,87 @@
+[
+  {
+    "id": "default",
+    "manifest": "[package]\nname=\"fixture-package\"\nversion=\"0.1.0\"\nedition=\"2021\"\npublish=false\nlicense-file=\"LICENSE.txt\"\nreadme=\"README.md\"\n",
+    "inputsSha256": {
+      "Cargo.toml": "72d20ce94b7ebfa28af9a7a9bd800754f915db071bcfc6cbb8d9c74897be0664",
+      "src/lib.rs": "5e0a6af76181b77032ef291474aab99538433cb86eb2b8ad88f3c0cfb2577a51",
+      "data/keep.txt": "46fda6a7f2144e8dd447938b64a5bab278f60d80f5b21ae1981d38c38c60d8b2",
+      "data/drop.txt": "e2811b55eedf25964a67d35906f83a0296d00f2a09a8d312e8c28014dd8e27f7",
+      "ignored.txt": "0f1482ed99baf88eacb25bbc59624da01945f4f9556e53bcb3522e31f0d6d7ed",
+      "README.md": "b4e7949e07c9ad6f8fdfa88a63d6e604d2576a986e0b68335d6054fa4043239c",
+      "LICENSE.txt": "79abe97c9252cb85c22265154f6ed3ddc5f01636a03a0cbafb63dd2109c374ed",
+      ".gitignore": "5469e0e24df7927521b9bb9c74c93fb7866b542534880705b3d5790d0431fabe",
+      "target/never.txt": "3b5182a152783ad2c12d8672b1edc12ec62fec0671ab2e81581c21327ec0c764",
+      "nested/Cargo.toml": "a10a708d370ac99dd3b7e3c735eca09c184571731a4ca1b96279c1b32fef08ec",
+      "nested/src/lib.rs": "2d0de1ac408476234ef42e8e58f344693244113bc2ae5d14e8d9216fa47f43dc"
+    }
+  },
+  {
+    "id": "exclude",
+    "manifest": "[package]\nname=\"fixture-package\"\nversion=\"0.1.0\"\nedition=\"2021\"\npublish=false\nlicense-file=\"LICENSE.txt\"\nreadme=\"README.md\"\nexclude=[\"data/drop.txt\"]\n",
+    "inputsSha256": {
+      "Cargo.toml": "dde99a19e3d77d6149283621e16c014b48bbc621454282d84270249e48e547ec",
+      "src/lib.rs": "5e0a6af76181b77032ef291474aab99538433cb86eb2b8ad88f3c0cfb2577a51",
+      "data/keep.txt": "46fda6a7f2144e8dd447938b64a5bab278f60d80f5b21ae1981d38c38c60d8b2",
+      "data/drop.txt": "e2811b55eedf25964a67d35906f83a0296d00f2a09a8d312e8c28014dd8e27f7",
+      "ignored.txt": "0f1482ed99baf88eacb25bbc59624da01945f4f9556e53bcb3522e31f0d6d7ed",
+      "README.md": "b4e7949e07c9ad6f8fdfa88a63d6e604d2576a986e0b68335d6054fa4043239c",
+      "LICENSE.txt": "79abe97c9252cb85c22265154f6ed3ddc5f01636a03a0cbafb63dd2109c374ed",
+      ".gitignore": "5469e0e24df7927521b9bb9c74c93fb7866b542534880705b3d5790d0431fabe",
+      "target/never.txt": "3b5182a152783ad2c12d8672b1edc12ec62fec0671ab2e81581c21327ec0c764",
+      "nested/Cargo.toml": "a10a708d370ac99dd3b7e3c735eca09c184571731a4ca1b96279c1b32fef08ec",
+      "nested/src/lib.rs": "2d0de1ac408476234ef42e8e58f344693244113bc2ae5d14e8d9216fa47f43dc"
+    }
+  },
+  {
+    "id": "include",
+    "manifest": "[package]\nname=\"fixture-package\"\nversion=\"0.1.0\"\nedition=\"2021\"\npublish=false\nlicense-file=\"LICENSE.txt\"\nreadme=\"README.md\"\ninclude=[\"src/**\",\"data/keep.txt\",\"ignored.txt\"]\n",
+    "inputsSha256": {
+      "Cargo.toml": "e2f3ec3dd631cf28495106ecf119d3b30951588d539cfbcc0281707e3d48d94f",
+      "src/lib.rs": "5e0a6af76181b77032ef291474aab99538433cb86eb2b8ad88f3c0cfb2577a51",
+      "data/keep.txt": "46fda6a7f2144e8dd447938b64a5bab278f60d80f5b21ae1981d38c38c60d8b2",
+      "data/drop.txt": "e2811b55eedf25964a67d35906f83a0296d00f2a09a8d312e8c28014dd8e27f7",
+      "ignored.txt": "0f1482ed99baf88eacb25bbc59624da01945f4f9556e53bcb3522e31f0d6d7ed",
+      "README.md": "b4e7949e07c9ad6f8fdfa88a63d6e604d2576a986e0b68335d6054fa4043239c",
+      "LICENSE.txt": "79abe97c9252cb85c22265154f6ed3ddc5f01636a03a0cbafb63dd2109c374ed",
+      ".gitignore": "5469e0e24df7927521b9bb9c74c93fb7866b542534880705b3d5790d0431fabe",
+      "target/never.txt": "3b5182a152783ad2c12d8672b1edc12ec62fec0671ab2e81581c21327ec0c764",
+      "nested/Cargo.toml": "a10a708d370ac99dd3b7e3c735eca09c184571731a4ca1b96279c1b32fef08ec",
+      "nested/src/lib.rs": "2d0de1ac408476234ef42e8e58f344693244113bc2ae5d14e8d9216fa47f43dc"
+    }
+  },
+  {
+    "id": "both",
+    "manifest": "[package]\nname=\"fixture-package\"\nversion=\"0.1.0\"\nedition=\"2021\"\npublish=false\nlicense-file=\"LICENSE.txt\"\nreadme=\"README.md\"\ninclude=[\"src/**\",\"data/keep.txt\",\"ignored.txt\"]\nexclude=[\"data/keep.txt\"]\n",
+    "inputsSha256": {
+      "Cargo.toml": "8e853973d319e4a9a5dfeba21acf405c9cef98e42952c29bf8edb9648da9868a",
+      "src/lib.rs": "5e0a6af76181b77032ef291474aab99538433cb86eb2b8ad88f3c0cfb2577a51",
+      "data/keep.txt": "46fda6a7f2144e8dd447938b64a5bab278f60d80f5b21ae1981d38c38c60d8b2",
+      "data/drop.txt": "e2811b55eedf25964a67d35906f83a0296d00f2a09a8d312e8c28014dd8e27f7",
+      "ignored.txt": "0f1482ed99baf88eacb25bbc59624da01945f4f9556e53bcb3522e31f0d6d7ed",
+      "README.md": "b4e7949e07c9ad6f8fdfa88a63d6e604d2576a986e0b68335d6054fa4043239c",
+      "LICENSE.txt": "79abe97c9252cb85c22265154f6ed3ddc5f01636a03a0cbafb63dd2109c374ed",
+      ".gitignore": "5469e0e24df7927521b9bb9c74c93fb7866b542534880705b3d5790d0431fabe",
+      "target/never.txt": "3b5182a152783ad2c12d8672b1edc12ec62fec0671ab2e81581c21327ec0c764",
+      "nested/Cargo.toml": "a10a708d370ac99dd3b7e3c735eca09c184571731a4ca1b96279c1b32fef08ec",
+      "nested/src/lib.rs": "2d0de1ac408476234ef42e8e58f344693244113bc2ae5d14e8d9216fa47f43dc"
+    }
+  },
+  {
+    "id": "invalid-source",
+    "manifest": "[package]\nname=\"fixture-package\"\nversion=\"0.1.0\"\nedition=\"2021\"\npublish=false\nlicense-file=\"LICENSE.txt\"\nreadme=\"README.md\"\n",
+    "inputsSha256": {
+      "Cargo.toml": "72d20ce94b7ebfa28af9a7a9bd800754f915db071bcfc6cbb8d9c74897be0664",
+      "src/lib.rs": "c33aeb4ad8a6fcb9d50662bb0446f155bae5fea787a794c3505a7171d9352583",
+      "data/keep.txt": "46fda6a7f2144e8dd447938b64a5bab278f60d80f5b21ae1981d38c38c60d8b2",
+      "data/drop.txt": "e2811b55eedf25964a67d35906f83a0296d00f2a09a8d312e8c28014dd8e27f7",
+      "ignored.txt": "0f1482ed99baf88eacb25bbc59624da01945f4f9556e53bcb3522e31f0d6d7ed",
+      "README.md": "b4e7949e07c9ad6f8fdfa88a63d6e604d2576a986e0b68335d6054fa4043239c",
+      "LICENSE.txt": "79abe97c9252cb85c22265154f6ed3ddc5f01636a03a0cbafb63dd2109c374ed",
+      ".gitignore": "5469e0e24df7927521b9bb9c74c93fb7866b542534880705b3d5790d0431fabe",
+      "target/never.txt": "3b5182a152783ad2c12d8672b1edc12ec62fec0671ab2e81581c21327ec0c764",
+      "nested/Cargo.toml": "a10a708d370ac99dd3b7e3c735eca09c184571731a4ca1b96279c1b32fef08ec",
+      "nested/src/lib.rs": "2d0de1ac408476234ef42e8e58f344693244113bc2ae5d14e8d9216fa47f43dc"
+    }
+  }
+]

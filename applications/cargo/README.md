@@ -1,6 +1,6 @@
 # Cargo: resolution, selected units, and build evidence
 
-This band compares Cargo 1.92.0 with its pinned source revision, `344c4567c634a25837e3c3476aac08af84cf9203`, on macOS arm64. It covers three local packages, normal dependency features under resolver 2, one build script, and cleanup. It does not qualify Cargo's full feature resolver, cache, or publication system.
+This band compares Cargo 1.92.0 with its pinned source revision, `344c4567c634a25837e3c3476aac08af84cf9203`, on macOS arm64. It covers three local packages, normal dependency features under resolver 2, one build script, and cleanup. It does not qualify Cargo's full feature resolver, cache, or publication system. A separate [package-selection and verification band](PACKAGING.md) examines local source archives and selected build checks; registry publication remains unqualified.
 
 ## Domain distinctions
 
