@@ -1,0 +1,49 @@
+[
+  {
+    "label": "compile-core",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "--crate-name",
+      "empack_core",
+      "--crate-type",
+      "rlib",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/core/lib.rs",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/libempack_core.rlib"
+    ],
+    "seconds": 0.6463995832018554,
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "compile-driver",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/driver.rs",
+      "--extern",
+      "empack_core=/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/libempack_core.rlib",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/projection-driver"
+    ],
+    "seconds": 0.6048377500846982,
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "observed",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/projection-driver"
+    ],
+    "seconds": 0.32942908396944404,
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutSha256": "797c768934bb2b4729fd84015f3916d436854f12ed242ad121fdb19c154d994b",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

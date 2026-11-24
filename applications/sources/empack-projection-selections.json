@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sources": [
+    {
+      "path": "crates/empack-core/src/inventory.rs",
+      "sha256": "b9bbae9fb4b56b97abda92b7e5d800c37406dda108d1a782d82d15dcdfab2ace",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/inventory.rs",
+      "inspection": "lines1-465: typed inputs, initial validation, layer selection, optional decisions and representation completion"
+    },
+    {
+      "path": "crates/empack-core/src/model.rs",
+      "sha256": "7d5d2a637f2abaf5db51f6e048e119d3e57f4be648171d093750077f950163d7",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/model.rs",
+      "inspection": "lines102-139,450-482,603-621: layers, placements, build profiles and expected content"
+    },
+    {
+      "path": "crates/empack-core/src/requirements.rs",
+      "sha256": "3698745052f78c85493ac17ce2fc13290344d4d1484a708fefb757b741c3d665",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/requirements.rs",
+      "inspection": "lines1-35,100-129: choice identity/default and environment projection"
+    },
+    {
+      "path": "crates/empack-core/src/distribution.rs",
+      "sha256": "a18a7cb29e5ceab393d518c2f9d257f58dfac3cbe46fa606617eb3b385d8b9ad",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/distribution.rs",
+      "inspection": "lines1-135: consumer/delivery/authority and named recipes"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/documents/bindings.rs",
+      "sha256": "e2f577df45df5a288e319d8b71436ab1c78688acf30c5829b93b8c9e7332cd3f",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/documents/bindings.rs",
+      "inspection": "whole110lines: compose and split; not executed in this core driver"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/templates.rs",
+      "sha256": "567754fef605b704efe8d03979f70e33437411c7f02c8d983922d963954fa996",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/templates.rs",
+      "inspection": "lines90-201: address interpretation and selected template layers; not executed in this core driver"
+    },
+    {
+      "path": "docs/design/builds.md",
+      "sha256": "1f5109a825f49075b7a5f5d20d22fe095b086f3643cbcb9b04c6dd2297509d82",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/design/builds.md",
+      "inspection": "lines55-78: layer precedence, selected acquisition and source exclusion roles"
+    },
+    {
+      "path": "docs/design/filesystem.md",
+      "sha256": "5561e3880deaddcaff13949b357a4d49bad3b5d77f44ba1522176c78137d44ac",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/design/filesystem.md",
+      "inspection": "lines11-16: local source versus placement lifetime and cache authority"
+    },
+    {
+      "path": "docs/design/model.md",
+      "sha256": "fcc6019b214875d157ac8100abfb03509f03ee95d603001bd389862cc79732c3",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/design/model.md",
+      "inspection": "lines39-80: source layers, profiles, bindings and raw/semantic revisions"
+    },
+    {
+      "path": "docs/candidates/v0.9.0-beta-browser-authoring.md",
+      "sha256": "8556130a565ba53ed5f3eabb20821cdc5f738fd11160c101bbeb29338b750041",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/candidates/v0.9.0-beta-browser-authoring.md",
+      "inspection": "lines41-72: proposed virtual sources, immutable assets and browser retention; not implemented"
+    }
+  ],
+  "status": "Inspected source/context and retained actual-core observations compared with the scoped Lean/Bend projections; host/codec/browser integration remains unqualified.",
+  "limits": [
+    "Actual dependency-free core compilation is separate from installed0.8.8 CLI and native/browser engine integration.",
+    "Representation values use fictional equality labels; no byte acquisition/authentication or host mutation authority is established.",
+    "Bindings/templates/candidate sources are design context, not execution evidence."
+  ]
+}

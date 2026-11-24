@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "adapterSha256": "af68563408480f28f314c13e1d2d7a8da945b28a6ec82640121780c2579dfb49",
+  "basisSha256": {
+    "applications/empack/Projection.lean": "3a7df0c37befa985dcd9e988e4da6b9ede74f477482d5f501e9cf499659ff10d",
+    "applications/empack/Projection.bend": "19df03768013d1c19e41c66459908f86278846ebcf85a5b63bd3f93c86de0bd2",
+    "applications/empack/ProjectionCase.lean": "2976e89c2e8d3ced76356383b5f202d3c25c186f688dd78ef36331998ec5fa7c",
+    "applications/empack/projection_conformance.py": "af68563408480f28f314c13e1d2d7a8da945b28a6ec82640121780c2579dfb49",
+    "applications/sources/empack-projection-selections.json": "afee73dcd52a6b85dae34ca42b3cf2530f06005fe99f60717114a136d24df660",
+    "applications/evidence/empack-projection-20261124T063515339963Z/receipt.json": "7c471b4dbe607d25ef39e7d71318a51568a6e52b698a306e387319aa0eb132b7",
+    "applications/evidence/empack-projection-20261124T063515339963Z/commands.json": "fcfda43cf0eda4393ef8cd9ccd8e055d784b88b7fcc4089902676ec586e874c3",
+    "applications/evidence/empack-projection-20261124T063515339963Z/probe.py": "4c7220a6a22122054ce7f46f1c1840a391a7aee21abb15f2198728184e286ac7",
+    "applications/evidence/empack-projection-20261124T063515339963Z/driver.rs": "7146300d5d4ce113dfbe1e31b59bd8945181c39379b99227a339de856d24e570",
+    "applications/evidence/empack-projection-20261124T063515339963Z/compile-core.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-projection-20261124T063515339963Z/compile-core.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-projection-20261124T063515339963Z/compile-driver.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-projection-20261124T063515339963Z/compile-driver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/empack-projection-20261124T063515339963Z/observed.stdout": "797c768934bb2b4729fd84015f3916d436854f12ed242ad121fdb19c154d994b",
+    "applications/evidence/empack-projection-20261124T063515339963Z/observed.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "actualCoreCases": 32,
+  "leanCasesMatch": true,
+  "bendFlatDestinationChoices": 22,
+  "bendRepresentationGates": 36,
+  "bendProjectionMatches": true,
+  "bendExcludedScopes": [
+    {
+      "case": "four-layers-mrpack",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "four-layers-native",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "native-bundled-layers",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "native-client-layers",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "optional-layers-mrpack",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "mrpack-resolve-refused",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    },
+    {
+      "case": "duplicate-layer-path",
+      "scope": "Native result is a global admission failure; Bend does not reimplement that validator."
+    },
+    {
+      "case": "invalid-side-requirement",
+      "scope": "Native result is a global admission failure; Bend does not reimplement that validator."
+    },
+    {
+      "case": "conflicting-choice-before-shadow",
+      "scope": "Native result is a global admission failure; Bend does not reimplement that validator."
+    },
+    {
+      "case": "unknown-choice",
+      "scope": "Native result is a global admission failure; Bend does not reimplement that validator."
+    },
+    {
+      "case": "unacquired-native-excluded",
+      "scope": "Preserved-layer/global recipe behavior is compared by Lean, not this Bend choice projection."
+    }
+  ],
+  "refusedResearchInputs": [
+    "schema",
+    "recipe",
+    "policy",
+    "layer",
+    "client",
+    "representation",
+    "destination"
+  ],
+  "rejectedInterpretations": [
+    "Map insertion order determines the selected layer.",
+    "Disabled optional override deletes its lower fallback.",
+    "A shadowed unresolved optional always needs an answer.",
+    "Every consumer flattens to one layer.",
+    "Identical bytes mean one placement.",
+    "Successful selection means every selected representation is complete.",
+    "Synthetic core values authenticate actual file bytes or authorize publication."
+  ],
+  "limits": [
+    "One fixed choice key/description and synthetic content labels. Download cases have no independent digest assertions; not general key maps,digest-bearing references,actual byte verification,path parsing or provider/codec evidence.",
+    "Lean compares complete controlled selection/finish outcomes,selected entry membership,precedence and choice provenance. Bend compares local layer choice/representation gates after native admission,not global validation or retained-layer recipes.",
+    "Entry and precedence membership is normalized for comparison; output presentation order is not qualified.",
+    "Actual standalone core source/build is separate from installed0.8.8 CLI,full engine,native filesystem,browser,WASM or real consumer execution.",
+    "Initial063406 driver compile failure is preserved separately and contributes no API cases."
+  ]
+}

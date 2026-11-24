@@ -20,7 +20,7 @@ The first [restic band](restic/README.md) has source/native/model evidence for a
 
 The first [VS Code desktop band](vscode/README.md) adds native serial file-backed document evidence and separates event versions from undo/save-point identity. It leaves the earlier custom-provider race unresolved. Separate browser bands cover [one untitled reload](vscode/WEB.md) and [source-fragment handle registration](vscode/HANDLES.md); local-file saves, normal picker behavior, and durable project storage remain unqualified.
 
-The [empack target model](empack/README.md) maps all current and candidate feature families to authority boundaries. Its first [authoring lifecycle](empack/AUTHORING.md) has proposed models and design examples, not native or browser implementation evidence. It preserves strict native validation while introducing saveable incomplete drafts, revision-bound work, and retained operation inputs.
+The [empack target model](empack/README.md) maps all current and candidate feature families to authority boundaries. Its first [authoring lifecycle](empack/AUTHORING.md) has proposed models and design examples, not native or browser implementation evidence. It preserves strict native validation while introducing saveable incomplete drafts, revision-bound work, and retained operation inputs. A [source/projection band](empack/SOURCES.md) compares actual core layer/choice/representation decisions and carries them into the portable-source proposal.
 
 ## Working order
 

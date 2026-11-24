@@ -1,0 +1,36 @@
+[
+  {
+    "label": "compile-core",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "--crate-name",
+      "empack_core",
+      "--crate-type",
+      "rlib",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/work/core/lib.rs",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/work/libempack_core.rlib"
+    ],
+    "seconds": 0.852594125084579,
+    "exitCode": 0,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "compile-driver",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/driver.rs",
+      "--extern",
+      "empack_core=/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/work/libempack_core.rlib",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/work/projection-driver"
+    ],
+    "seconds": 0.07246324978768826,
+    "exitCode": 1,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "174ffe8ffcd62ac9aaead43a3ea8804c8c8cb9e8aa83d4417a2cb787e225d30c"
+  }
+]

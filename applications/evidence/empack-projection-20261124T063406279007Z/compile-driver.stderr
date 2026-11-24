@@ -1,0 +1,26 @@
+error[E0507]: cannot move out of `expected.accepted_observation` which is behind a shared reference
+    --> /Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063406279007Z/driver.rs:60:120
+     |
+  60 | ...vation.is_some() {2} else {3}, expected.accepted_observation.map_or(0,|c|c.bytes()[0]))
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ------------------------- `expected.accepted_observation` moved due to this method call
+     |                                   |
+     |                                   help: consider calling `.as_ref()` or `.as_mut()` to borrow the type's contents
+     |                                   move occurs because `expected.accepted_observation` has type `Option<ContentId>`, which does not implement the `Copy` trait
+     |
+note: `Option::<T>::map_or` takes ownership of the receiver `self`, which moves `expected.accepted_observation`
+    --> /Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/option.rs:1223:31
+     |
+1223 |     pub const fn map_or<U, F>(self, default: U, f: F) -> U
+     |                               ^^^^
+help: you can `clone` the value and consume it, but this might not be your desired behavior
+     |
+  60 |         Representation::Download { expected, allowed: _ } => (if expected.accepted_observation.is_some() {2} else {3}, <Option<ContentId> as Clone>::clone(&expected.accepted_observation).map_or(0,|c|c.bytes()[0]))
+     |                                                                                                                        +++++++++++++++++++++++++++++++++++++                             +
+help: consider cloning the value if the performance cost is acceptable
+     |
+  60 |         Representation::Download { expected, allowed: _ } => (if expected.accepted_observation.is_some() {2} else {3}, expected.accepted_observation.clone().map_or(0,|c|c.bytes()[0]))
+     |                                                                                                                                                     ++++++++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0507`.

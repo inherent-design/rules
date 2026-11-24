@@ -10,7 +10,7 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 | Application | Current evidence | Scope limit |
 | --- | --- | --- |
-| empack | [Core API and native ownership](empack/OWNERSHIP.md); [seed observation demand](empack/OBSERVATIONS.md); [portable-authoring design](empack/AUTHORING.md). | Actual core compilation at `0b4462e` and installed 0.8.8-beta CLI runs are separate evidence; their build correspondence is not proved. Portable authoring is proposed. |
+| empack | [Core API and native ownership](empack/OWNERSHIP.md); [seed observation demand](empack/OBSERVATIONS.md); [source and projection decisions](empack/SOURCES.md); [portable-authoring design](empack/AUTHORING.md). | Actual core compilation at `0b4462e` and installed 0.8.8-beta CLI runs are separate evidence; their build correspondence is not proved. Portable authoring is proposed. |
 | npm | [Peer bindings](js-peers/README.md), [removal/re-adoption](js-peers/REMOVAL.md), and [script policy](js-scripts/README.md), using 11.20.0. | Private offline local archives and node-modules workspaces/projects; selected hook profiles only, no registry publication or general resolver qualification. |
 | pnpm | The same peer/removal families and script-policy band, using 12.21.0, with distinct context, hook, and missing-root behavior. | No store-reclamation, filtered deployment, complete peer resolution, or general script-policy qualification. |
 | Yarn Berry | The same fixture families, using 4.19.0, plus immutable-install refusal and scoped dependency/root-hook controls. | Node-modules linker only; no PnP, patch publication, or general virtualization proof. |
@@ -115,6 +115,8 @@ Preserve the current authority boundaries. The native core/CLI comparison suppor
 The [coherent target](empack/README.md) separates saveable raw drafts, immutable project images, interpretation, exact selection, retained assets, prepared work, verified output, delivery, installation, and native execution. Edit epochs reject stale attempts; saved-image identity supports undo; host-admitted saved revisions order receipts. Required observations depend on the selected operation and source/destination role. Portable export does not mint native initialization, recovery, or execution authority.
 
 Keep current native proofs and strict author schemas while introducing a new versioned project format. The selected clean break needs unknown-version refusal and preservation of unsupported/recovery data, not a general migration framework. The keep-current native-library option is useful but does not satisfy incomplete browser authoring. Actual local-JAR/config import through save/reopen and equivalent consumer export remains required. [Authoring laws and implementation obligations](empack/AUTHORING.md), [ownership](empack/OWNERSHIP.md), [observation demand](empack/OBSERVATIONS.md).
+
+The actual core projection band supports retaining the current layer/choice algorithm: flat views use side/shared-override/common precedence, while mrpack/native containers keep applicable layers and choices. Selection and representation completion are separate, and neither verifies actual bytes or grants publication. Virtual sources should feed that same interpretation after attributable capture. Keep bindings/raw documents, placements, template interpretation, and retained assets distinct; the local-JAR save/reopen/export flow remains an implementation obligation. [Source/API evidence and portable boundary](empack/SOURCES.md).
 
 ## Compatibility and implementation order
 
