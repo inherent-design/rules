@@ -1,0 +1,338 @@
+{
+  "v": 1,
+  "surface": "npm",
+  "case": "add",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "install",
+        "../extra",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/npm/project"
+    },
+    "expectation": "Explicitly add a local dependency back; project writes expected.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/npm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/npm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/npm/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.18917466700077057,
+          "channel": "stdout",
+          "bytes": 26
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "CmFkZGVkIDEgcGFja2FnZSBpbiAxMjBtcwo=",
+      "stderr_b64": ""
+    },
+    "before": {
+      "cache/npm/_logs/2026-11-23T22_53_22_147Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "05ac386707183b05e7de519c3515e3b7fd512fd4b64671fb170316825768f856",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_399Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "9f8cada24cde588893f03a831477f2b83918e66248e9f8950e018aa3cea0abf0",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_578Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 11367,
+        "sha256": "047fa41b5eece2a7a1dbaf89008a3a0d879e60a9b9558ef2fa0c3f10383afe2d",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_765Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1631,
+        "sha256": "a9f57a45c55a15d977e6af36c26e82e0a1de42b66847c9c74fbbb0acac974acd",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_960Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 2075,
+        "sha256": "a67c4d2d564c7d2b590ba1b43a786d7a0c2d40fd75439ed6f43c2bf2f9c6cc0e",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 288,
+        "sha256": "c84e7e88995f952a778c8a3d505d706ecb45351d51a65570ff41e5395dbaed77",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 435,
+        "sha256": "50a6e80925588139cdf337871336e5b291a3f04f4fa235110652eb3aa5718b5f",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 324,
+        "sha256": "029b854e86d8d043e1cfa6191c397113fe7b77b4ab7fac042ed7ebcf6f1f1e63",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/npm/_logs/2026-11-23T22_53_22_147Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "05ac386707183b05e7de519c3515e3b7fd512fd4b64671fb170316825768f856",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_399Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "9f8cada24cde588893f03a831477f2b83918e66248e9f8950e018aa3cea0abf0",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_578Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 11367,
+        "sha256": "047fa41b5eece2a7a1dbaf89008a3a0d879e60a9b9558ef2fa0c3f10383afe2d",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_765Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1631,
+        "sha256": "a9f57a45c55a15d977e6af36c26e82e0a1de42b66847c9c74fbbb0acac974acd",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_22_960Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 2075,
+        "sha256": "a67c4d2d564c7d2b590ba1b43a786d7a0c2d40fd75439ed6f43c2bf2f9c6cc0e",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_53_23_190Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1651,
+        "sha256": "80bf931df7d267294f7e1f779836114bba17bdd656c46285302e0780bc43dd07",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 463,
+        "sha256": "edde8617de950f5d58e990af6c695bd9bd9785a8bef7c09a8e8d99858a4768e7",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": "../../extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 653,
+        "sha256": "f8f2dca31808f9ef8ddc5b1d17c82137bbfb8597b8e4acf3456762fd58582537",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "d61bed1e2a7498c47a293bc354e06ed0e6e0d61185e84beb822b594c60056ff4",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/npm/_logs/2026-11-23T22_53_23_190Z-debug-0.log": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 1651,
+          "sha256": "80bf931df7d267294f7e1f779836114bba17bdd656c46285302e0780bc43dd07",
+          "mode": 420
+        }
+      },
+      "project/node_modules/.package-lock.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 288,
+          "sha256": "c84e7e88995f952a778c8a3d505d706ecb45351d51a65570ff41e5395dbaed77",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 463,
+          "sha256": "edde8617de950f5d58e990af6c695bd9bd9785a8bef7c09a8e8d99858a4768e7",
+          "mode": 420
+        }
+      },
+      "project/node_modules/terminal-extra": {
+        "before": null,
+        "after": {
+          "kind": "link",
+          "target": "../../extra"
+        }
+      },
+      "project/package-lock.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 435,
+          "sha256": "50a6e80925588139cdf337871336e5b291a3f04f4fa235110652eb3aa5718b5f",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 653,
+          "sha256": "f8f2dca31808f9ef8ddc5b1d17c82137bbfb8597b8e4acf3456762fd58582537",
+          "mode": 420
+        }
+      },
+      "project/package.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 324,
+          "sha256": "029b854e86d8d043e1cfa6191c397113fe7b77b4ab7fac042ed7ebcf6f1f1e63",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 363,
+          "sha256": "d61bed1e2a7498c47a293bc354e06ed0e6e0d61185e84beb822b594c60056ff4",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/node_modules/.package-lock.json",
+        "project/node_modules/terminal-extra",
+        "project/package-lock.json",
+        "project/package.json"
+      ],
+      "durable": [],
+      "cache": [
+        "cache/npm/_logs/2026-11-23T22_53_23_190Z-debug-0.log"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Confirm authored identity and lock agree.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

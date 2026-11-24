@@ -1,0 +1,504 @@
+{
+  "v": 1,
+  "surface": "empack",
+  "case": "add",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/bin/empack",
+        "--net-timeout",
+        "2",
+        "--yes",
+        "add",
+        "supplied/resource.zip",
+        "--type",
+        "resourcepack"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/project"
+    },
+    "expectation": "Explicit local addition may require identification or role decisions; only observed outcome is established.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.0053527080453932285,
+          "channel": "stderr",
+          "bytes": 6
+        },
+        {
+          "seconds": 0.015688042156398296,
+          "channel": "stdout",
+          "bytes": 51
+        },
+        {
+          "seconds": 0.04483050014823675,
+          "channel": "stdout",
+          "bytes": 176
+        },
+        {
+          "seconds": 0.09692954225465655,
+          "channel": "stderr",
+          "bytes": 197
+        },
+        {
+          "seconds": 0.2019615420140326,
+          "channel": "stderr",
+          "bytes": 101
+        },
+        {
+          "seconds": 0.2635246249847114,
+          "channel": "stderr",
+          "bytes": 5
+        },
+        {
+          "seconds": 0.2635560422204435,
+          "channel": "stdout",
+          "bytes": 24
+        },
+        {
+          "seconds": 0.2636072081513703,
+          "channel": "stderr",
+          "bytes": 12
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "aSBQcm9wb3NlZCByZXNvdXJjZTogcmVzb3VyY2UuemlwIChsb2NhbDpyZXNvdXJjZSkKaSByZXBsYWNlIGVtcGFjay55bWwgKDIwMCAtPiAyODMgYnl0ZXMpCmkgY3JlYXRlIGVtcGFjay5iaW5kaW5ncy55bWwgKDE4NSBieXRlcykKaSByZXBsYWNlIGVtcGFjay5sb2NrICg0NTYgLT4gMTIwMyBieXRlcykKaSBjcmVhdGUgcGFjay9yZXNvdXJjZXBhY2tzL3Jlc291cmNlLnppcCAoMTkxIGJ5dGVzKQorIFJlY29yZGVkIDEgZGVwZW5kZW5jeQo=",
+      "stderr_b64": "G1s/MjVoG1szODs1OzI4beKgixtbMG0gU2F2aW5nIHZlcmlmaWVkIGNoYW5nZXMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDRtbMksbWzM4OzU7Mjht4qCZG1swbSBTYXZpbmcgdmVyaWZpZWQgY2hhbmdlcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICANG1sySxtbMzg7NTsyOG3ioLkbWzBtIFNhdmluZyB2ZXJpZmllZCBjaGFuZ2VzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0bWzJLG1s/MjVoG1s/MjVo"
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.lock": {
+        "kind": "file",
+        "bytes": 456,
+        "sha256": "843b200a2cc9969db548bd871bb19e93a955f8c11b5e4dcb1f3130ce101ca94e",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/supplied/resource.zip": {
+        "kind": "file",
+        "bytes": 191,
+        "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/journal.json": {
+        "kind": "file",
+        "bytes": 873,
+        "sha256": "badac017d3367ca470ecf65f84155cb1b62b0d0f7b5792a1fe7ad9e5a51b60c0",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/operation.lock": {
+        "kind": "file",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/retention.json": {
+        "kind": "file",
+        "bytes": 198,
+        "sha256": "cefdea59149db111e7e622e6f3cd6595d28578bbd67b41e5578c991c6fe06791",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/root-identity.json": {
+        "kind": "file",
+        "bytes": 249,
+        "sha256": "70b1b189aa74e3f4bf7eba7736b60bf22e3ddceaa9f19bf7c26379f683060e47",
+        "mode": 384
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/empack/content-v1/c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc.blob": {
+        "kind": "file",
+        "bytes": 191,
+        "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+        "mode": 384
+      },
+      "cache/empack/content-v1/store.lock": {
+        "kind": "file",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 384
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.bindings.yml": {
+        "kind": "file",
+        "bytes": 185,
+        "sha256": "0abdd3eb66fd3a000aa17e7f40e50de5b04eae999851f468361d6f3d1ab00208",
+        "mode": 420
+      },
+      "project/empack.lock": {
+        "kind": "file",
+        "bytes": 1203,
+        "sha256": "8d191ce87d8afbde54f55627b75c0239879198fff33f960973b3fa435d31e01b",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "ff2c1282c5594485fe4077c2f68b04136b60fccc1c2e9a1b10aa9e47607da4fb",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/pack/resourcepacks/resource.zip": {
+        "kind": "file",
+        "bytes": 191,
+        "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+        "mode": 420
+      },
+      "project/supplied/resource.zip": {
+        "kind": "file",
+        "bytes": 191,
+        "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/journal.json": {
+        "kind": "file",
+        "bytes": 3360,
+        "sha256": "68af3f6659e8ff0c8ea8334471017f4e773e99dc1d4a0fc133b99ddbb2be2d4c",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-0": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "ff2c1282c5594485fe4077c2f68b04136b60fccc1c2e9a1b10aa9e47607da4fb",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-1": {
+        "kind": "file",
+        "bytes": 185,
+        "sha256": "0abdd3eb66fd3a000aa17e7f40e50de5b04eae999851f468361d6f3d1ab00208",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-2": {
+        "kind": "file",
+        "bytes": 1203,
+        "sha256": "8d191ce87d8afbde54f55627b75c0239879198fff33f960973b3fa435d31e01b",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-3": {
+        "kind": "file",
+        "bytes": 191,
+        "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-0": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-2": {
+        "kind": "file",
+        "bytes": 456,
+        "sha256": "843b200a2cc9969db548bd871bb19e93a955f8c11b5e4dcb1f3130ce101ca94e",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/operation.lock": {
+        "kind": "file",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/retention.json": {
+        "kind": "file",
+        "bytes": 329,
+        "sha256": "e5bf89852b3236c8049642e125b39e9ed71726bcd6b923b97b50f55c778f78db",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/root-identity.json": {
+        "kind": "file",
+        "bytes": 249,
+        "sha256": "70b1b189aa74e3f4bf7eba7736b60bf22e3ddceaa9f19bf7c26379f683060e47",
+        "mode": 384
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/empack/content-v1/c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc.blob": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 191,
+          "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+          "mode": 384
+        }
+      },
+      "cache/empack/content-v1/store.lock": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mode": 384
+        }
+      },
+      "project/empack.bindings.yml": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 185,
+          "sha256": "0abdd3eb66fd3a000aa17e7f40e50de5b04eae999851f468361d6f3d1ab00208",
+          "mode": 420
+        }
+      },
+      "project/empack.lock": {
+        "before": {
+          "kind": "file",
+          "bytes": 456,
+          "sha256": "843b200a2cc9969db548bd871bb19e93a955f8c11b5e4dcb1f3130ce101ca94e",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 1203,
+          "sha256": "8d191ce87d8afbde54f55627b75c0239879198fff33f960973b3fa435d31e01b",
+          "mode": 420
+        }
+      },
+      "project/empack.yml": {
+        "before": {
+          "kind": "file",
+          "bytes": 200,
+          "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 283,
+          "sha256": "ff2c1282c5594485fe4077c2f68b04136b60fccc1c2e9a1b10aa9e47607da4fb",
+          "mode": 420
+        }
+      },
+      "project/pack/resourcepacks/resource.zip": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 191,
+          "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+          "mode": 420
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/journal.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 873,
+          "sha256": "badac017d3367ca470ecf65f84155cb1b62b0d0f7b5792a1fe7ad9e5a51b60c0",
+          "mode": 384
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 3360,
+          "sha256": "68af3f6659e8ff0c8ea8334471017f4e773e99dc1d4a0fc133b99ddbb2be2d4c",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-0": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 283,
+          "sha256": "ff2c1282c5594485fe4077c2f68b04136b60fccc1c2e9a1b10aa9e47607da4fb",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-1": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 185,
+          "sha256": "0abdd3eb66fd3a000aa17e7f40e50de5b04eae999851f468361d6f3d1ab00208",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-2": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 1203,
+          "sha256": "8d191ce87d8afbde54f55627b75c0239879198fff33f960973b3fa435d31e01b",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-3": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 191,
+          "sha256": "c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-0": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 200,
+          "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-2": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 456,
+          "sha256": "843b200a2cc9969db548bd871bb19e93a955f8c11b5e4dcb1f3130ce101ca94e",
+          "mode": 384
+        }
+      },
+      "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/retention.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 198,
+          "sha256": "cefdea59149db111e7e622e6f3cd6595d28578bbd67b41e5578c991c6fe06791",
+          "mode": 384
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 329,
+          "sha256": "e5bf89852b3236c8049642e125b39e9ed71726bcd6b923b97b50f55c778f78db",
+          "mode": 384
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/empack.bindings.yml",
+        "project/empack.lock",
+        "project/empack.yml",
+        "project/pack/resourcepacks/resource.zip"
+      ],
+      "durable": [
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/journal.json",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-0",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-1",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-2",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/after-3",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-0",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/op-18eace65a2dce018-629c-0/before-2",
+        "state/project-0000000001000010-000000000000000000000000114aafe4-6b04c3a1-13be332/retention.json"
+      ],
+      "cache": [
+        "cache/empack/content-v1/c6b6e2d255d6b19cc9e50587cae0fc3e88be0aac79db541061e035675a1407cc.blob",
+        "cache/empack/content-v1/store.lock"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Inspect manifest and diagnostics before removal or retry.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

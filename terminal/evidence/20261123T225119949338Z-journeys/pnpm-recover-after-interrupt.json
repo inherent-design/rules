@@ -1,0 +1,552 @@
+{
+  "v": 1,
+  "surface": "pnpm",
+  "case": "recover-after-interrupt",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "install",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/pnpm/project"
+    },
+    "expectation": "Reconcile installation after interruption; this does not undo arbitrary script effects.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.018986749928444624,
+          "channel": "stdout",
+          "bytes": 114
+        },
+        {
+          "seconds": 0.02034570788964629,
+          "channel": "stdout",
+          "bytes": 16
+        },
+        {
+          "seconds": 0.020850500091910362,
+          "channel": "stdout",
+          "bytes": 60
+        },
+        {
+          "seconds": 0.041690082754939795,
+          "channel": "stdout",
+          "bytes": 33
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "4pyTIExvY2tmaWxlIHBhc3NlcyBzdXBwbHktY2hhaW4gcG9saWNpZXMgKHZlcmlmaWVkIDMzNW1zIGFnbykKTG9ja2ZpbGUgaXMgdXAgdG8gZGF0ZSwgcmVzb2x1dGlvbiBzdGVwIGlzIHNraXBwZWQKUGFja2FnZXM6ICsyCisrClByb2dyZXNzOiByZXNvbHZlZCAyLCByZXVzZWQgMCwgZG93bmxvYWRlZCAwLCBhZGRlZCAyLCBkb25lCkRvbmUgaW4gMzFtcyB1c2luZyBwbnBtIHYxMi4yMS4wCg==",
+      "stderr_b64": ""
+    },
+    "before": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 795,
+        "sha256": "30d003e42f5dc34e9b560c3b1a7088cc43b2960057aa961b006834fa400e39ed",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata/https%3A+registry.npmjs.org/pnpm.jsonl": {
+        "kind": "file",
+        "bytes": 1945173,
+        "sha256": "723c65d76b461ec76c97defe099983a00ae64929607f6485dd098327349ac68b",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.android-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 47587,
+        "sha256": "aa692beb5eb90b03c8fe76bd572a979d31dfa20806899342b2d524a29a9e55ee",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.android-x64.jsonl": {
+        "kind": "file",
+        "bytes": 47147,
+        "sha256": "2717da5ff807430f1002042181a4729f0d3d9e9b92e801bec721c30fb30c5997",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.darwin-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 119489,
+        "sha256": "056cf00be6edc5079e47fbac9b8277f18c8492203283e1c4f7b99dd9fa5ea85a",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.darwin-x64.jsonl": {
+        "kind": "file",
+        "bytes": 118357,
+        "sha256": "3474e5e3a4b7ff93411d0d81a07089f9f3b9ed30bb6bbf0f6a107e806c68cdfc",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.freebsd-x64.jsonl": {
+        "kind": "file",
+        "bytes": 47140,
+        "sha256": "676f926b6840604c82ae0d70cc4396dc6f4fec39b0d5c967356256d5e1ef018b",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-arm64-musl.jsonl": {
+        "kind": "file",
+        "bytes": 122624,
+        "sha256": "f83a1abd8ebe45a2416994d9d78fc99d825eadf9b4275be25f1c0f4056ecb408",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 120265,
+        "sha256": "ffcfdd31600b0809cc977758f33e6189c0790faac551f90ffd0152ebc8338908",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-ppc64.jsonl": {
+        "kind": "file",
+        "bytes": 47675,
+        "sha256": "9808620e956140ed2bcafd33ae7640b8c90216b35b7f95eeae666c9f35901f73",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-riscv64.jsonl": {
+        "kind": "file",
+        "bytes": 48122,
+        "sha256": "4466bb3fdd67528ee47fa7e2aba137fb0f9bad65b0c4eda8b2aa6cc1e0697696",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-s390x.jsonl": {
+        "kind": "file",
+        "bytes": 47671,
+        "sha256": "5a899ad05799fa5a312a76bed694b853bcd723e96968dcec1b98f3770290e827",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-x64-musl.jsonl": {
+        "kind": "file",
+        "bytes": 121494,
+        "sha256": "794aa624b0f81b0d4c8ae7e5a298b07f5eff12395640fbb91a3ccf36d5b6fe89",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-x64.jsonl": {
+        "kind": "file",
+        "bytes": 119132,
+        "sha256": "161f51fb8b8051f637ab485e9c166cd645f20e47a38667108c9ac0b266e089ae",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.netbsd-x64.jsonl": {
+        "kind": "file",
+        "bytes": 9831,
+        "sha256": "690528eeb5666a2d4d7138bc7a1a632dc263b28264ba752b8d61250d53829025",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.win32-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 119238,
+        "sha256": "d1053262c5c55d23f09038a149bcca9778039535a9ebb41ff9426e209308f5fb",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.win32-x64.jsonl": {
+        "kind": "file",
+        "bytes": 118112,
+        "sha256": "7bd82c503b8ce97cee5116ab3f861d251fab983bc3f68ef2ff5199060b867e48",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/3a8cda8ac342e46e3fdd0c0ade975066": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/interrupt-effect.txt": {
+        "kind": "file",
+        "bytes": 30,
+        "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 833,
+        "sha256": "399c635d8925a209b93e1922bd0a0b7990da26bf35d2f4e5a9733977f81bcffd",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 564,
+        "sha256": "6351f11cb577fc2021945397c3e35240ebf370ef419b928a0e468fa20326cbab",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 2372,
+        "sha256": "cb1c18936749c15d47118282d46ae7cb3289fab1d09873122a2166e0015fff8b",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": ".pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "4a77201580a9adc6b2dcc33554d38af509f89505dba7620014a3cb6f28a7abe7",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 5452,
+        "sha256": "dc8a85a8e855ce008ed1cc2adfd1946e0e79808f700b8ec3120bc7255d25eee5",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 795,
+        "sha256": "30d003e42f5dc34e9b560c3b1a7088cc43b2960057aa961b006834fa400e39ed",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata/https%3A+registry.npmjs.org/pnpm.jsonl": {
+        "kind": "file",
+        "bytes": 1945173,
+        "sha256": "723c65d76b461ec76c97defe099983a00ae64929607f6485dd098327349ac68b",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.android-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 47587,
+        "sha256": "aa692beb5eb90b03c8fe76bd572a979d31dfa20806899342b2d524a29a9e55ee",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.android-x64.jsonl": {
+        "kind": "file",
+        "bytes": 47147,
+        "sha256": "2717da5ff807430f1002042181a4729f0d3d9e9b92e801bec721c30fb30c5997",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.darwin-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 119489,
+        "sha256": "056cf00be6edc5079e47fbac9b8277f18c8492203283e1c4f7b99dd9fa5ea85a",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.darwin-x64.jsonl": {
+        "kind": "file",
+        "bytes": 118357,
+        "sha256": "3474e5e3a4b7ff93411d0d81a07089f9f3b9ed30bb6bbf0f6a107e806c68cdfc",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.freebsd-x64.jsonl": {
+        "kind": "file",
+        "bytes": 47140,
+        "sha256": "676f926b6840604c82ae0d70cc4396dc6f4fec39b0d5c967356256d5e1ef018b",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-arm64-musl.jsonl": {
+        "kind": "file",
+        "bytes": 122624,
+        "sha256": "f83a1abd8ebe45a2416994d9d78fc99d825eadf9b4275be25f1c0f4056ecb408",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 120265,
+        "sha256": "ffcfdd31600b0809cc977758f33e6189c0790faac551f90ffd0152ebc8338908",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-ppc64.jsonl": {
+        "kind": "file",
+        "bytes": 47675,
+        "sha256": "9808620e956140ed2bcafd33ae7640b8c90216b35b7f95eeae666c9f35901f73",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-riscv64.jsonl": {
+        "kind": "file",
+        "bytes": 48122,
+        "sha256": "4466bb3fdd67528ee47fa7e2aba137fb0f9bad65b0c4eda8b2aa6cc1e0697696",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-s390x.jsonl": {
+        "kind": "file",
+        "bytes": 47671,
+        "sha256": "5a899ad05799fa5a312a76bed694b853bcd723e96968dcec1b98f3770290e827",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-x64-musl.jsonl": {
+        "kind": "file",
+        "bytes": 121494,
+        "sha256": "794aa624b0f81b0d4c8ae7e5a298b07f5eff12395640fbb91a3ccf36d5b6fe89",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.linux-x64.jsonl": {
+        "kind": "file",
+        "bytes": 119132,
+        "sha256": "161f51fb8b8051f637ab485e9c166cd645f20e47a38667108c9ac0b266e089ae",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.netbsd-x64.jsonl": {
+        "kind": "file",
+        "bytes": 9831,
+        "sha256": "690528eeb5666a2d4d7138bc7a1a632dc263b28264ba752b8d61250d53829025",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.win32-arm64.jsonl": {
+        "kind": "file",
+        "bytes": 119238,
+        "sha256": "d1053262c5c55d23f09038a149bcca9778039535a9ebb41ff9426e209308f5fb",
+        "mode": 420
+      },
+      "cache/pnpm/v12/metadata-full/https%3A+registry.npmjs.org/@pnpm/exe.win32-x64.jsonl": {
+        "kind": "file",
+        "bytes": 118112,
+        "sha256": "7bd82c503b8ce97cee5116ab3f861d251fab983bc3f68ef2ff5199060b867e48",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/3a8cda8ac342e46e3fdd0c0ade975066": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/interrupt-effect.txt": {
+        "kind": "file",
+        "bytes": 30,
+        "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 833,
+        "sha256": "399c635d8925a209b93e1922bd0a0b7990da26bf35d2f4e5a9733977f81bcffd",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 564,
+        "sha256": "6351f11cb577fc2021945397c3e35240ebf370ef419b928a0e468fa20326cbab",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 2372,
+        "sha256": "7e1b5673258fd6791e33df83574dcaa1af829a4db47a95dd0238d23a0cfca4fa",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": ".pnpm/terminal-extra@file+..+extra/node_modules/terminal-extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "4a77201580a9adc6b2dcc33554d38af509f89505dba7620014a3cb6f28a7abe7",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 5452,
+        "sha256": "dc8a85a8e855ce008ed1cc2adfd1946e0e79808f700b8ec3120bc7255d25eee5",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 2372,
+          "sha256": "cb1c18936749c15d47118282d46ae7cb3289fab1d09873122a2166e0015fff8b",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 2372,
+          "sha256": "7e1b5673258fd6791e33df83574dcaa1af829a4db47a95dd0238d23a0cfca4fa",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/node_modules/.pnpm-workspace-state-v1.json"
+      ],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Inspect the retained marker separately from package installation success.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

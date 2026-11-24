@@ -1,0 +1,269 @@
+{
+  "v": 1,
+  "surface": "npm",
+  "case": "lock-refusal",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "ci",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/npm/project"
+    },
+    "expectation": "Manifest was deliberately changed after install. Locked/immutable operation should refuse; measure all scopes.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.16764895804226398,
+          "channel": "stderr",
+          "bytes": 52
+        },
+        {
+          "seconds": 0.16930537531152368,
+          "channel": "stderr",
+          "bytes": 1024
+        },
+        {
+          "seconds": 0.1693183332681656,
+          "channel": "stderr",
+          "bytes": 1024
+        },
+        {
+          "seconds": 0.1693275412544608,
+          "channel": "stderr",
+          "bytes": 1024
+        },
+        {
+          "seconds": 0.1693384163081646,
+          "channel": "stderr",
+          "bytes": 1024
+        },
+        {
+          "seconds": 0.16934383288025856,
+          "channel": "stderr",
+          "bytes": 1024
+        },
+        {
+          "seconds": 0.16934870788827538,
+          "channel": "stderr",
+          "bytes": 998
+        },
+        {
+          "seconds": 0.16984370816498995,
+          "channel": "stderr",
+          "bytes": 219
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "",
+      "stderr_b64": "G1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAbWzk0bWNvZGUbWzM5bSBFVVNBR0UNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gYG5wbSBjaWAgY2FuIG9ubHkgaW5zdGFsbCBwYWNrYWdlcyB3aGVuIHlvdXIgcGFja2FnZS5qc29uIGFuZCBwYWNrYWdlLWxvY2suanNvbiBvciBucG0tc2hyaW5rd3JhcC5qc29uIGFyZSBpbiBzeW5jLiBQbGVhc2UgdXBkYXRlIHlvdXIgbG9jayBmaWxlIHdpdGggYG5wbSBpbnN0YWxsYCBiZWZvcmUgY29udGludWluZy4NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gTWlzc2luZzogdGVybWluYWwtZXh0cmFAMS4wLjAgZnJvbSBsb2NrIGZpbGUNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gTWlzc2luZzogdGVybWluYWwtZXh0cmFAMS4wLjAgZnJvbSBsb2NrIGZpbGUNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gQ2xlYW4gaW5zdGFsbCBhIHByb2plY3QNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gVXNhZ2U6DQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltIG5wbSBjaQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBPcHRpb25zOg0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBbLS1pbnN0YWxsLXN0cmF0ZWd5IDxob2lzdGVkfG5lc3RlZHxzaGFsbG93fGxpbmtlZD5dIFstLWxlZ2FjeS1idW5kbGluZ10NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gWy0tZ2xvYmFsLXN0eWxlXSBbLS1vbWl0IDxkZXZ8b3B0aW9uYWx8cGVlcj4gWy0tb21pdCA8ZGV2fG9wdGlvbmFsfHBlZXI+IC4uLl1dDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltIFstLWluY2x1ZGUgPHByb2R8ZGV2fG9wdGlvbmFsfHBlZXI+IFstLWluY2x1ZGUgPHByb2R8ZGV2fG9wdGlvbmFsfHBlZXI+IC4uLl1dDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltIFstLXN0cmljdC1wZWVyLWRlcHNdIFstLWZvcmVncm91bmQtc2NyaXB0c10gWy0taWdub3JlLXNjcmlwdHNdDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltIFstLWFsbG93LWRpcmVjdG9yeSA8YWxsfG5vbmV8cm9vdD5dIFstLWFsbG93LWZpbGUgPGFsbHxub25lfHJvb3Q+XQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBbLS1hbGxvdy1naXQgPGFsbHxub25lfHJvb3Q+XSBbLS1hbGxvdy1yZW1vdGUgPGFsbHxub25lfHJvb3Q+XQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBbLS1hbGxvdy1zY3JpcHRzIDxwYWNrYWdlLWxpc3Q+IFstLWFsbG93LXNjcmlwdHMgPHBhY2thZ2UtbGlzdD4gLi4uXV0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gWy0tc3RyaWN0LWFsbG93LXNjcmlwdHNdIFstLWRhbmdlcm91c2x5LWFsbG93LWFsbC1zY3JpcHRzXSBbLS1uby1hdWRpdF0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gWy0tbm8tYmluLWxpbmtzXSBbLS1uby1mdW5kXSBbLS1kcnktcnVuXQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBbLXd8LS13b3Jrc3BhY2UgPHdvcmtzcGFjZS1uYW1lPiBbLXd8LS13b3Jrc3BhY2UgPHdvcmtzcGFjZS1uYW1lPiAuLi5dXQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBbLS13b3Jrc3BhY2VzXSBbLS1pbmNsdWRlLXdvcmtzcGFjZS1yb290XSBbLS1pbnN0YWxsLWxpbmtzXQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0taW5zdGFsbC1zdHJhdGVneQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgU2V0cyB0aGUgc3RyYXRlZ3kgZm9yIGluc3RhbGxpbmcgcGFja2FnZXMgaW4gbm9kZV9tb2R1bGVzLg0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0tbGVnYWN5LWJ1bmRsaW5nDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBJbnN0ZWFkIG9mIGhvaXN0aW5nIHBhY2thZ2UgaW5zdGFsbHMgaW4gYG5vZGVfbW9kdWxlc2AsIGluc3RhbGwgcGFja2FnZXMNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWdsb2JhbC1zdHlsZQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgT25seSBpbnN0YWxsIGRpcmVjdCBkZXBlbmRlbmNpZXMgaW4gdGhlIHRvcCBsZXZlbCBgbm9kZV9tb2R1bGVzYCwNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLW9taXQNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIERlcGVuZGVuY3kgdHlwZXMgdG8gb21pdCBmcm9tIHRoZSBpbnN0YWxsYXRpb24gdHJlZSBvbiBkaXNrLg0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0taW5jbHVkZQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgT3B0aW9uIHRoYXQgYWxsb3dzIGZvciBkZWZpbmluZyB3aGljaCB0eXBlcyBvZiBkZXBlbmRlbmNpZXMgdG8gaW5zdGFsbC4NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLXN0cmljdC1wZWVyLWRlcHMNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIElmIHNldCB0byBgdHJ1ZWAsIGFuZCBgLS1sZWdhY3ktcGVlci1kZXBzYCBpcyBub3Qgc2V0LCB0aGVuIF9hbnlfDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLS1mb3JlZ3JvdW5kLXNjcmlwdHMNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIFJ1biBhbGwgYnVpbGQgc2NyaXB0cyAoaWUsIGBwcmVpbnN0YWxsYCwgYGluc3RhbGxgLCBhbmQNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWlnbm9yZS1zY3JpcHRzDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBJZiB0cnVlLCBucG0gZG9lcyBub3QgcnVuIHNjcmlwdHMgc3BlY2lmaWVkIGluIHBhY2thZ2UuanNvbiBmaWxlcy4NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWFsbG93LWRpcmVjdG9yeQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgTGltaXRzIHRoZSBhYmlsaXR5IGZvciBucG0gdG8gaW5zdGFsbCBkZXBlbmRlbmNpZXMgZnJvbSBkaXJlY3Rvcmllcy4NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWFsbG93LWZpbGUNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIExpbWl0cyB0aGUgYWJpbGl0eSBmb3IgbnBtIHRvIGluc3RhbGwgZGVwZW5kZW5jaWVzIGZyb20gdGFyYmFsbCBmaWxlcy4NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWFsbG93LWdpdA0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgTGltaXRzIHRoZSBhYmlsaXR5IGZvciBucG0gdG8gZmV0Y2ggZGVwZW5kZW5jaWVzIGZyb20gZ2l0IHJlZmVyZW5jZXMuDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLS1hbGxvdy1yZW1vdGUNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIExpbWl0cyB0aGUgYWJpbGl0eSBmb3IgbnBtIHRvIGZldGNoIGRlcGVuZGVuY2llcyBmcm9tIHVybHMuDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLS1hbGxvdy1zY3JpcHRzDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBDb21tYS1zZXBhcmF0ZWQgbGlzdCBvZiBwYWNrYWdlcyB3aG9zZSBpbnN0YWxsLXRpbWUgbGlmZWN5Y2xlIHNjcmlwdHMNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLXN0cmljdC1hbGxvdy1zY3JpcHRzDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBJZiBgdHJ1ZWAsIHR1cm4gdGhlIGluc3RhbGwtc2NyaXB0IHBvbGljeSBmcm9tIGEgd2FybmluZyBpbnRvIGEgaGFyZA0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0tZGFuZ2Vyb3VzbHktYWxsb3ctYWxsLXNjcmlwdHMNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIElmIGB0cnVlYCwgYnlwYXNzIHRoZSBgYWxsb3dTY3JpcHRzYCBwb2xpY3kgZW50aXJlbHkgYW5kIHJ1biBldmVyeQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0tYXVkaXQNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIFdoZW4gInRydWUiIHN1Ym1pdCBhdWRpdCByZXBvcnRzIGFsb25nc2lkZSB0aGUgY3VycmVudCBucG0gY29tbWFuZCB0byB0aGUNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0NChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAtLWJpbi1saW5rcw0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgVGVsbHMgbnBtIHRvIGNyZWF0ZSBzeW1saW5rcyAob3IgYC5jbWRgIHNoaW1zIG9uIFdpbmRvd3MpIGZvciBwYWNrYWdlDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLS1mdW5kDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBXaGVuICJ0cnVlIiBkaXNwbGF5cyB0aGUgbWVzc2FnZSBhdCB0aGUgZW5kIG9mIGVhY2ggYG5wbSBpbnN0YWxsYA0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0tZHJ5LXJ1bg0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgSW5kaWNhdGVzIHRoYXQgeW91IGRvbid0IHdhbnQgbnBtIHRvIG1ha2UgYW55IGNoYW5nZXMgYW5kIHRoYXQgaXQgc2hvdWxkDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLXd8LS13b3Jrc3BhY2UNChtbMW1ucG0bWzIybSAbWzMxbWVycm9yG1szOW0gICAgIEVuYWJsZSBydW5uaW5nIGEgY29tbWFuZCBpbiB0aGUgY29udGV4dCBvZiB0aGUgY29uZmlndXJlZCB3b3Jrc3BhY2VzIG9mIHRoZQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0td29ya3NwYWNlcw0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgU2V0IHRvIHRydWUgdG8gcnVuIHRoZSBjb21tYW5kIGluIHRoZSBjb250ZXh0IG9mICoqYWxsKiogY29uZmlndXJlZA0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgIC0taW5jbHVkZS13b3Jrc3BhY2Utcm9vdA0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSAgICAgSW5jbHVkZSB0aGUgd29ya3NwYWNlIHJvb3Qgd2hlbiB3b3Jrc3BhY2VzIGFyZSBlbmFibGVkIGZvciBhIGNvbW1hbmQuDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgLS1pbnN0YWxsLWxpbmtzDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltICAgICBXaGVuIHNldCBmaWxlOiBwcm90b2NvbCBkZXBlbmRlbmNpZXMgd2lsbCBiZSBwYWNrZWQgYW5kIGluc3RhbGxlZCBhcw0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBhbGlhc2VzOiBjbGVhbi1pbnN0YWxsLCBpYywgaW5zdGFsbC1jbGVhbiwgaXNudGFsbC1jbGVhbg0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bQ0KG1sxbW5wbRtbMjJtIBtbMzFtZXJyb3IbWzM5bSBSdW4gIm5wbSBoZWxwIGNpIiBmb3IgbW9yZSBpbmZvDQobWzFtbnBtG1syMm0gG1szMW1lcnJvchtbMzltIEEgY29tcGxldGUgbG9nIG9mIHRoaXMgcnVuIGNhbiBiZSBmb3VuZCBpbjogL1VzZXJzL3plcjBjZWxsL3Byb2R1Y3Rpb24vcnVsZXMvdGVybWluYWwvZXZpZGVuY2UvMjAyNjExMjNUMjI1MTE5OTQ5MzM4Wi1qb3VybmV5cy93b3JrL25wbS9jYWNoZS9ucG0vX2xvZ3MvMjAyNi0xMS0yM1QyMl81MV8yMF80ODFaLWRlYnVnLTAubG9nDQo="
+    },
+    "before": {
+      "cache/npm/_logs/2026-11-23T22_51_20_057Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "0766cdb99a299739ae7317c480e2c545d4496bf57fd3e308cde1588cc762ab30",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_304Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "fffb83a9214197219e7948d996e3b9d14444422781e551257dd4fd34dc8faa99",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 288,
+        "sha256": "c84e7e88995f952a778c8a3d505d706ecb45351d51a65570ff41e5395dbaed77",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 435,
+        "sha256": "50a6e80925588139cdf337871336e5b291a3f04f4fa235110652eb3aa5718b5f",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "cd7387dd9ab03f5d8f5107872861086d6207eeafd7ff746cb26681eae878a8eb",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/npm/_logs/2026-11-23T22_51_20_057Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "0766cdb99a299739ae7317c480e2c545d4496bf57fd3e308cde1588cc762ab30",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_304Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "fffb83a9214197219e7948d996e3b9d14444422781e551257dd4fd34dc8faa99",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_481Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 11367,
+        "sha256": "1c20f4fd15a7056fe72995a4b7444cc75e7b9b1d5d92c68945b5015e614c66be",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 288,
+        "sha256": "c84e7e88995f952a778c8a3d505d706ecb45351d51a65570ff41e5395dbaed77",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 435,
+        "sha256": "50a6e80925588139cdf337871336e5b291a3f04f4fa235110652eb3aa5718b5f",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "cd7387dd9ab03f5d8f5107872861086d6207eeafd7ff746cb26681eae878a8eb",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/npm/_logs/2026-11-23T22_51_20_481Z-debug-0.log": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 11367,
+          "sha256": "1c20f4fd15a7056fe72995a4b7444cc75e7b9b1d5d92c68945b5015e614c66be",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [
+        "cache/npm/_logs/2026-11-23T22_51_20_481Z-debug-0.log"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 1,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Reconcile the intended manifest with a normal install; do not erase the manifest change.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

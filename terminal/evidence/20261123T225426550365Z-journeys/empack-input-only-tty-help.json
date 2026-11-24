@@ -1,0 +1,167 @@
+{
+  "v": 1,
+  "surface": "empack",
+  "case": "input-only-tty-help",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/bin/empack",
+        "--help"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/empack/project"
+    },
+    "expectation": "Help must be distinguishable from successful work; record channel, styling, width, and status independently.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "pipe",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/empack/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/empack/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/empack/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": false
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.005819916725158691,
+          "channel": "stdout",
+          "bytes": 4792
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "QXV0aG9yLCBkaXN0cmlidXRlIGFuZCB1cGRhdGUgTWluZWNyYWZ0IHBhY2tzCgpVc2FnZTogZW1wYWNrIFtPUFRJT05TXSBbQ09NTUFORF0KCkF1dGhvcjoKICBpbml0ICAgICAgQ3JlYXRlIGEgcHJvamVjdCBvciBpbXBvcnQgYSBtb2RwYWNrIGFyY2hpdmUKICBhZGQgICAgICAgQWRkIGEgbmV3IGRlcGVuZGVuY3k7IHVzZSB1cGRhdGUgdG8gY2hhbmdlIGFuIGV4aXN0aW5nIHNlbGVjdGlvbgogIHJlbW92ZSAgICBSZW1vdmUgcHJvamVjdHMgZnJvbSB0aGUgbW9kcGFjawogIHN5bmMgICAgICBSZWNvbmNpbGUgaW5zdGFsbGVkIGNvbnRlbnQgd2l0aCByZWNvcmRlZCBpbnRlbnQgYW5kIGV4YWN0CiAgICAgICAgICAgIHNlbGVjdGlvbnMKICB1cGRhdGUgICAgUHJldmlldyBkZXBlbmRlbmN5IHVwZGF0ZXM7IHVzZSAtLWFwcGx5IHRvIGFwcGx5IHRoZSByZXZpZXdlZAogICAgICAgICAgICBjaGFuZ2VzCiAgcGluICAgICAgIFBpbiBjdXJyZW50IHByb3ZpZGVyIHNlbGVjdGlvbnM7IHJlbW92ZSBwZXItZGVwZW5kZW5jeSBhdXRvbWF0aWMKICAgICAgICAgICAgcHJlZmVyZW5jZXMKICB1bnBpbiAgICAgUmVtb3ZlIHByb3ZpZGVyIHBpbnMgd2hpbGUgcmV0YWluaW5nIHRoZSBleGFjdCBjdXJyZW50IHNlbGVjdGlvbnMKICBhZG9wdCAgICAgQWNjZXB0IHZlcmlmaWVkIGluc3RhbGxlZCBjaGFuZ2VzIHdpdGhvdXQgcmV3cml0aW5nIHBheWxvYWRzCiAgbWlncmF0ZSAgIFBsYW4gb3IgYXBwbHkgYSBydW50aW1lIG1pZ3JhdGlvbiB3aXRob3V0IGVkaXRpbmcgbGl2ZSBpbnRlbnQgZmlyc3QKICBtYW5pZmVzdCAgSW5zcGVjdCBhdXRob3JpbmcgaW50ZW50IGFuZCBpdHMgZXhhY3QgbG9jayB3aXRob3V0IG5ldHdvcmsgYWNjZXNzCiAgY2hlY2sgICAgIENoZWNrIGN1cnJlbnQgYXV0aG9yaW5nLCByZWNvcmRlZCByZWxhdGlvbnNoaXBzIGFuZCBhcHBsaWNhYmxlIGxvY2FsCiAgICAgICAgICAgIGNvbnRlbnQKCkluc3RhbGw6CiAgaW5zdGFuY2UgIE1hbmFnZSBleGFjdCByZWxlYXNlcyBpbiBhIHNlcGFyYXRlIGluc3RhbGxlZCBnYW1lIGluc3RhbmNlCgpQdWJsaXNoOgogIGJ1aWxkICAgICBCdWlsZCB2ZXJpZmllZCBkaXN0cmlidXRpb24gYXJjaGl2ZXMKICByZWxlYXNlICAgU2lnbiBhbmQgcHVibGlzaCBuYXRpdmUgcmVsZWFzZXMgZm9yIHN0YXRpYyBIVFRQUyBob3N0aW5nCgpUb29sczoKICBzdGF0dXMgICAgSW5zcGVjdCB3b3Jrc3BhY2UgbWV0YWRhdGEgd2l0aG91dCBuZXR3b3JrIGFjY2VzcyBvciBkdXJhYmxlIGNoYW5nZXMKICBkb2N0b3IgICAgSW5zcGVjdCB0aGlzIGJpbmFyeSBhbmQgbG9jYWwgdG9vbHM7IGV4cGxpY2l0IEphdmEvcnVudGltZSBvcHRpb25zCiAgICAgICAgICAgIHJ1biBhIHZlcnNpb24gcHJvYmUKICBwZW5kaW5nICAgSW5zcGVjdCwgcmVzdW1lIG9yIGRpc2NhcmQgc2F2ZWQgYnVpbGQvaW1wb3J0L3N5bmMvaW5zdGFuY2UgaW5wdXRzCiAgcmVjb3ZlciAgIEluc3BlY3Qgb3IgcmVjb3ZlciBhbiBpbnRlcnJ1cHRlZCBlbmdpbmUgb3BlcmF0aW9uCiAgY2xlYW4gICAgIFJlbW92ZSBnZW5lcmF0ZWQgYnVpbGRzLCBjYWNoZXMgb3Igc2F2ZWQgY29udGludWF0aW9uIGRhdGEKICBoZWxwICAgICAgUHJpbnQgdGhpcyBtZXNzYWdlIG9yIHRoZSBoZWxwIG9mIHRoZSBnaXZlbiBzdWJjb21tYW5kKHMpCgpPcHRpb25zOgogIC13LCAtLXdvcmtkaXIgPFdPUktESVI+CiAgICAgICAgICBBdXRob3JpbmcgcHJvamVjdCwgcHVibGlzaGVyIGRpcmVjdG9yeSBvciBpbnN0YWxsZWQgaW5zdGFuY2Ugcm9vdAogICAgICAgICAgCiAgICAgICAgICBbZW52OiBFTVBBQ0tfV09SS0RJUj1dCgogICAgICAtLXN0YXRlLWRpciA8U1RBVEVfRElSPgogICAgICAgICAgRHVyYWJsZSBvcGVyYXRpb24gYW5kIHJlY292ZXJ5IHN0b3JhZ2UsIHNlcGFyYXRlIGZyb20gZGlzcG9zYWJsZQogICAgICAgICAgY2FjaGVzCiAgICAgICAgICAKICAgICAgICAgIFtlbnY6CiAgICAgICAgICBFTVBBQ0tfU1RBVEVfRElSPS9Vc2Vycy96ZXIwY2VsbC9wcm9kdWN0aW9uL3J1bGVzL3Rlcm1pbmFsL2V2aWRlbmNlLzIwMjYxMTIzVDIyNTQyNjU1MDM2NVotam91cm5leXMvd29yay9lbXBhY2svc3RhdGVdCgogICAgICAtLWNhY2hlLWRpciA8Q0FDSEVfRElSPgogICAgICAgICAgRGlzcG9zYWJsZSBjYWNoZSByb290OyBwcmV2aWV3cyBvbmx5IGluc3BlY3QgZXhpc3Rpbmcgb2JqZWN0cwogICAgICAgICAgCiAgICAgICAgICBbZW52OgogICAgICAgICAgRU1QQUNLX0NBQ0hFX0RJUj0vVXNlcnMvemVyMGNlbGwvcHJvZHVjdGlvbi9ydWxlcy90ZXJtaW5hbC9ldmlkZW5jZS8yMDI2MTEyM1QyMjU0MjY1NTAzNjVaLWpvdXJuZXlzL3dvcmsvZW1wYWNrL2NhY2hlL2VtcGFja10KCiAgLWosIC0tY3B1LWpvYnMgPENQVV9KT0JTPgogICAgICAgICAgTWF4aW11bSBjb25jdXJyZW50IGVuZ2luZSB3b3JrZXJzCiAgICAgICAgICAKICAgICAgICAgIFtlbnY6IEVNUEFDS19DUFVfSk9CUz1dCiAgICAgICAgICBbZGVmYXVsdDogMl0KCiAgLW4sIC0tbmV0LXRpbWVvdXQgPE5FVF9USU1FT1VUPgogICAgICAgICAgQ3VtdWxhdGl2ZSBkZWFkbGluZSBpbiBzZWNvbmRzIGZvciBlYWNoIGNhdGFsb2cgb3IgcGF5bG9hZCBhY3F1aXNpdGlvbgogICAgICAgICAgcGhhc2UKICAgICAgICAgIAogICAgICAgICAgW2VudjogRU1QQUNLX05FVF9USU1FT1VUPV0KICAgICAgICAgIFtkZWZhdWx0OiAzMDBdCgogICAgICAtLWN1cnNlZm9yZ2UtYXBpLWNsaWVudC1rZXkgPENVUlNFRk9SR0VfQVBJX0NMSUVOVF9LRVk+CiAgICAgICAgICBDdXJzZUZvcmdlIEFQSSBDbGllbnQgS2V5CiAgICAgICAgICAKICAgICAgICAgIFtlbnY6IEVNUEFDS19LRVlfQ1VSU0VGT1JHRV0KCiAgICAgIC0tbG9nLWxldmVsIDxMT0dfTEVWRUw+CiAgICAgICAgICBWZXJib3NpdHkgbGV2ZWwgKDA9ZXJyb3IsIDE9d2FybiwgMj1pbmZvLCAzPWRlYnVnLCA0PXRyYWNlKQogICAgICAgICAgCiAgICAgICAgICBbZW52OiBFTVBBQ0tfTE9HX0xFVkVMPV0KICAgICAgICAgIFtkZWZhdWx0OiAwXQoKICAgICAgLS1sb2ctZm9ybWF0IDxMT0dfRk9STUFUPgogICAgICAgICAgTG9nIGZvcm1hdDogY29tcGFjdCB0ZXh0LCBKU09OIGV2ZW50cyBvciBwcmV0dHkgdGV4dAogICAgICAgICAgCiAgICAgICAgICBbZW52OiBFTVBBQ0tfTE9HX0ZPUk1BVD1dCiAgICAgICAgICBbZGVmYXVsdDogdGV4dF0KICAgICAgICAgIFtwb3NzaWJsZSB2YWx1ZXM6IHRleHQsIGpzb24sIHByZXR0eV0KCiAgICAgIC0tbG9nLW91dHB1dCA8TE9HX09VVFBVVD4KICAgICAgICAgIExvZyBvdXRwdXQgc3RyZWFtIChzdGRlcnIsIHN0ZG91dCkKCiAgICAgICAgICBQb3NzaWJsZSB2YWx1ZXM6CiAgICAgICAgICAtIHN0ZGVycjogU1RERVJSCiAgICAgICAgICAtIHN0ZG91dDogU1RET1VUCiAgICAgICAgICAKICAgICAgICAgIFtlbnY6IEVNUEFDS19MT0dfT1VUUFVUPV0KICAgICAgICAgIFtkZWZhdWx0OiBzdGRlcnJdCgogIC1jLCAtLWNvbG9yIDxDT0xPUj4KICAgICAgICAgIENvbG9yIG91dHB1dCBjb250cm9sIChhdXRvLCBhbHdheXMsIG5ldmVyKQoKICAgICAgICAgIFBvc3NpYmxlIHZhbHVlczoKICAgICAgICAgIC0gYXV0bzogICBMZXQgbW9kdWxlIGRldGVjdAogICAgICAgICAgLSBhbHdheXM6IEV4cGxpY2l0bHkgZW5hYmxlICh1c2VmdWwgaW4gbm9uLWludGVyYWN0aXZlKQogICAgICAgICAgLSBuZXZlcjogIEV4cGxpY2l0bHkgZGlzYWJsZSAoYWxzbyB1c2VmdWwgaW4gbm9uLWludGVyYWN0aXZlKQogICAgICAgICAgCiAgICAgICAgICBbZW52OiBFTVBBQ0tfQ09MT1I9XQogICAgICAgICAgW2RlZmF1bHQ6IGF1dG9dCgogIC15LCAtLXllcwogICAgICAgICAgUnVuIHdpdGhvdXQgcHJvbXB0czsgdW5yZXNvbHZlZCBjb250ZW50IGNob2ljZXMgc3RpbGwgZmFpbAogICAgICAgICAgCiAgICAgICAgICBbZW52OiBFTVBBQ0tfWUVTPV0KCiAgICAgIC0tZHJ5LXJ1bgogICAgICAgICAgUHJldmlldyBjaGFuZ2VzIHdpdGhvdXQgcHVibGlzaGluZyBwcm9qZWN0LCBpbnN0YW5jZSBvciBkdXJhYmxlIHN0YXRlCiAgICAgICAgICAKICAgICAgICAgIFtlbnY6IEVNUEFDS19EUllfUlVOPV0KCiAgLWgsIC0taGVscAogICAgICAgICAgUHJpbnQgaGVscCAoc2VlIGEgc3VtbWFyeSB3aXRoICctaCcpCgogIC1WLCAtLXZlcnNpb24KICAgICAgICAgIFByaW50IHZlcnNpb24KClN0YXJ0IGEgcGFjazogZW1wYWNrIGluaXQgbXktcGFjawpBdXRob3IgY2hhbmdlczogZW1wYWNrIC0td29ya2RpciBteS1wYWNrIHN5bmMKRXhwb3J0IGZvciBhIGxhdW5jaGVyOiBlbXBhY2sgLS13b3JrZGlyIG15LXBhY2sgYnVpbGQgbW9kcmludGgKCkF1dGhvciBjb21tYW5kcyB1c2UgZW1wYWNrLnltbCBhbmQgZW1wYWNrLmxvY2suCkluc3RhbmNlIGNvbW1hbmRzIG1hbmFnZSBhIHNlcGFyYXRlIGluc3RhbGxlZCBnYW1lIGRpcmVjdG9yeS4KQXV0aG9yIHVwZGF0ZSBjaGVja3MgZGVwZW5kZW5jeSB2ZXJzaW9uczsgaW5zdGFuY2UgdXBkYXRlIGNoZWNrcyBwdWJsaXNoZWQgcGFjawpyZWxlYXNlcy4KQm90aCBwcmV2aWV3IGJ5IGRlZmF1bHQ7IGFkZCAtLWFwcGx5IHRvIGFwcGx5IHRoZSBzZWxlY3RlZCBjaGFuZ2VzLgpOZWl0aGVyIGNvbW1hbmQgdXBkYXRlcyB0aGUgZW1wYWNrIGV4ZWN1dGFibGUuIFVzZSBlbXBhY2sgc3RhdHVzIHRvIGluc3BlY3QgYQp3b3Jrc3BhY2UuClVzZSAtLWRyeS1ydW4gYmVmb3JlIGEgY29tbWFuZCB0byBwcmV2aWV3IGNoYW5nZXMuClJ1biBlbXBhY2sgPGNvbW1hbmQ+IC0taGVscCBmb3IgaXRzIG9wdGlvbnMuCg==",
+      "stderr_b64": ""
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "c2be68467be7cda6368f5969f73a5f3942bd03a70eb79ee1dfb003711ce9a34d",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "c2be68467be7cda6368f5969f73a5f3942bd03a70eb79ee1dfb003711ce9a34d",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Choose a command from the actual help; do not infer install success.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

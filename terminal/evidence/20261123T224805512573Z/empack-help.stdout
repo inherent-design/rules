@@ -1,0 +1,128 @@
+Author, distribute and update Minecraft packs
+
+Usage: empack [OPTIONS] [COMMAND]
+
+Author:
+  init      Create a project or import a modpack archive
+  add       Add a new dependency; use update to change an existing selection
+  remove    Remove projects from the modpack
+  sync      Reconcile installed content with recorded intent and exact selections
+  update    Preview dependency updates; use --apply to apply the reviewed changes
+  pin       Pin current provider selections; remove per-dependency automatic preferences
+  unpin     Remove provider pins while retaining the exact current selections
+  adopt     Accept verified installed changes without rewriting payloads
+  migrate   Plan or apply a runtime migration without editing live intent first
+  manifest  Inspect authoring intent and its exact lock without network access
+  check     Check current authoring, recorded relationships and applicable local content
+
+Install:
+  instance  Manage exact releases in a separate installed game instance
+
+Publish:
+  build     Build verified distribution archives
+  release   Sign and publish native releases for static HTTPS hosting
+
+Tools:
+  status    Inspect workspace metadata without network access or durable changes
+  doctor    Inspect this binary and local tools; explicit Java/runtime options run a version probe
+  pending   Inspect, resume or discard saved build/import/sync/instance inputs
+  recover   Inspect or recover an interrupted engine operation
+  clean     Remove generated builds, caches or saved continuation data
+  help      Print this message or the help of the given subcommand(s)
+
+Options:
+  -w, --workdir <WORKDIR>
+          Authoring project, publisher directory or installed instance root
+          
+          [env: EMPACK_WORKDIR=]
+
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches
+          
+          [env:
+          EMPACK_STATE_DIR=/Users/zer0cell/production/rules/terminal/evidence/20261123T224805512573Z/work/empack/state]
+
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects
+          
+          [env:
+          EMPACK_CACHE_DIR=/Users/zer0cell/production/rules/terminal/evidence/20261123T224805512573Z/work/empack/cache/empack]
+
+  -j, --cpu-jobs <CPU_JOBS>
+          Maximum concurrent engine workers
+          
+          [env: EMPACK_CPU_JOBS=]
+          [default: 2]
+
+  -n, --net-timeout <NET_TIMEOUT>
+          Cumulative deadline in seconds for each catalog or payload acquisition phase
+          
+          [env: EMPACK_NET_TIMEOUT=]
+          [default: 300]
+
+      --curseforge-api-client-key <CURSEFORGE_API_CLIENT_KEY>
+          CurseForge API Client Key
+          
+          [env: EMPACK_KEY_CURSEFORGE]
+
+      --log-level <LOG_LEVEL>
+          Verbosity level (0=error, 1=warn, 2=info, 3=debug, 4=trace)
+          
+          [env: EMPACK_LOG_LEVEL=]
+          [default: 0]
+
+      --log-format <LOG_FORMAT>
+          Log format: compact text, JSON events or pretty text
+          
+          [env: EMPACK_LOG_FORMAT=]
+          [default: text]
+          [possible values: text, json, pretty]
+
+      --log-output <LOG_OUTPUT>
+          Log output stream (stderr, stdout)
+
+          Possible values:
+          - stderr: STDERR
+          - stdout: STDOUT
+          
+          [env: EMPACK_LOG_OUTPUT=]
+          [default: stderr]
+
+  -c, --color <COLOR>
+          Color output control (auto, always, never)
+
+          Possible values:
+          - auto:   Let module detect
+          - always: Explicitly enable (useful in non-interactive)
+          - never:  Explicitly disable (also useful in non-interactive)
+          
+          [env: EMPACK_COLOR=]
+          [default: auto]
+
+  -y, --yes
+          Run without prompts; unresolved content choices still fail
+          
+          [env: EMPACK_YES=]
+
+      --dry-run
+          Preview changes without publishing project, instance or durable state
+          
+          [env: EMPACK_DRY_RUN=]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
+
+Start a pack: empack init my-pack
+Author changes: empack --workdir my-pack sync
+Export for a launcher: empack --workdir my-pack build modrinth
+
+Author commands use empack.yml and empack.lock.
+Instance commands manage a separate installed game directory.
+Author update checks dependency versions; instance update checks published pack releases.
+Both preview by default; add --apply to apply the selected changes.
+Neither command updates the empack executable. Use empack status to inspect a workspace.
+Use --dry-run before a command to preview changes.
+Run empack <command> --help for its options.

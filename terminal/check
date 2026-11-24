@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+lean=${LEAN:-lean}
+bend=${BEND:-bend}
+export LEAN="$lean" BEND="$bend" LEAN_PATH="$PWD/.build" BEND_NO_TELEMETRY=1
+mkdir -p .build/terminal
+"$lean" --version
+"$bend" version
+for module in Model Npm Pnpm Yarn Empack Candidate; do
+  "$lean" -DwarningAsError=true -o ".build/terminal/$module.olean" "terminal/$module.lean"
+done
+"$bend" terminal/Native.bend --verdict
+"$bend" terminal/Candidate.bend --verdict
+python3 -m unittest discover -s terminal -p test_streams.py
+python3 terminal/replay.py

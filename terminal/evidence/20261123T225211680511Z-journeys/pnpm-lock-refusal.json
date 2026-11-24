@@ -1,0 +1,308 @@
+{
+  "v": 1,
+  "surface": "pnpm",
+  "case": "lock-refusal",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/project"
+    },
+    "expectation": "Manifest was deliberately changed after install. Locked/immutable operation should refuse; measure all scopes.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/cache/empack",
+      "pnpm_config_pm_on_fail": "ignore"
+    },
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.014786708634346724,
+          "channel": "stderr",
+          "bytes": 7
+        },
+        {
+          "seconds": 0.01484058378264308,
+          "channel": "stderr",
+          "bytes": 39
+        },
+        {
+          "seconds": 0.014875583816319704,
+          "channel": "stderr",
+          "bytes": 39
+        },
+        {
+          "seconds": 0.014894624706357718,
+          "channel": "stderr",
+          "bytes": 578
+        },
+        {
+          "seconds": 0.01489991694688797,
+          "channel": "stderr",
+          "bytes": 2
+        },
+        {
+          "seconds": 0.014905833639204502,
+          "channel": "stderr",
+          "bytes": 2
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "",
+      "stderr_b64": "RXJyb3I6IBtbMzFtRVJSX1BOUE1fT1VUREFURURfTE9DS0ZJTEUbWzBtDQoNCiAgG1szMW3DlxtbMG0gaW5zdGFsbGluZyBkZXBlbmRlbmNpZXMNChtbMzFtICDilbDilIDilrYgG1swbUNhbm5vdCBpbnN0YWxsIHdpdGggImZyb3plbi1sb2NrZmlsZSIgYmVjYXVzZSBwbnBtLWxvY2sueWFtbCBpcyBub3QgdXANChtbMzFtICAgICAgG1swbXRvIGRhdGUgd2l0aCBwYWNrYWdlLmpzb24uDQobWzMxbSAgICAgIBtbMG0NChtbMzFtICAgICAgG1swbSAgRmFpbHVyZSByZWFzb246DQobWzMxbSAgICAgIBtbMG0gIHNwZWNpZmllcnMgaW4gdGhlIGxvY2tmaWxlIGRvbid0IG1hdGNoIHNwZWNpZmllcnMgaW4gcGFja2FnZS5qc29uOg0KG1szMW0gICAgICAbWzBtKiBpbiBpbXBvcnRlcnNbIi4iXToNChtbMzFtICAgICAgG1swbSogMSBkZXBlbmRlbmN5IHdhcyBhZGRlZDogdGVybWluYWwtZXh0cmFAZmlsZTouLi9leHRyYQ0KG1szNm0gIGhlbHA6IBtbMG1SZWdlbmVyYXRlIHRoZSBsb2NrZmlsZSB3aXRoIGBwbnBtIGluc3RhbGwgLS1sb2NrZmlsZS1vbmx5YCBzbyB0aGF0DQogICAgICAgIHBucG0tbG9jay55YW1sIHJlZmxlY3RzIHRoZSBjdXJyZW50IHBhY2thZ2UuanNvbiwgdGhlbiByZS1ydW4gYHBucG0NCiAgICAgICAgaW5zdGFsbCAtLWZyb3plbi1sb2NrZmlsZWAuDQoNCg=="
+    },
+    "before": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 794,
+        "sha256": "adaf390af1eb8d1b8c1454d703f8a10ae5db1899d7667116df7c2a248a46fdec",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/87fbfe0e526829fcb73294e5b7964ca2": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 724,
+        "sha256": "e223cf46dc145a562ffeb5f5f6668979b4afb5f14bd61c78a798d72f8e73da58",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 2212,
+        "sha256": "e9692f967511a0db9b811b792d911a08943c0da9efd2d9baa597604cb6bf6ad0",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "4a77201580a9adc6b2dcc33554d38af509f89505dba7620014a3cb6f28a7abe7",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 794,
+        "sha256": "adaf390af1eb8d1b8c1454d703f8a10ae5db1899d7667116df7c2a248a46fdec",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/87fbfe0e526829fcb73294e5b7964ca2": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 724,
+        "sha256": "e223cf46dc145a562ffeb5f5f6668979b4afb5f14bd61c78a798d72f8e73da58",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 2212,
+        "sha256": "e9692f967511a0db9b811b792d911a08943c0da9efd2d9baa597604cb6bf6ad0",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "4a77201580a9adc6b2dcc33554d38af509f89505dba7620014a3cb6f28a7abe7",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 1,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Reconcile the intended manifest with a normal install; do not erase the manifest change.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

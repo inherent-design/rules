@@ -1,0 +1,351 @@
+{
+  "v": 1,
+  "surface": "npm",
+  "case": "interrupt",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "run",
+        "fixture-wait"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/npm/project"
+    },
+    "expectation": "Marker establishes a write before group SIGINT; original project effect should remain.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.12841108394786716,
+          "channel": "stdout",
+          "bytes": 62
+        },
+        {
+          "seconds": 0.1619570842012763,
+          "channel": "stderr",
+          "bytes": 20
+        },
+        {
+          "seconds": 0.16200195904821157,
+          "action": "interrupt"
+        }
+      ],
+      "actionTriggered": true,
+      "stdout_b64": "Cj4gdGVybWluYWwtc3R1ZHlAMS4wLjAgZml4dHVyZS13YWl0Cj4gbm9kZSBmaXh0dXJlLXdhaXQuY2pzCgo=",
+      "stderr_b64": "RklYVFVSRV9XQUlUX1JFQURZDQo="
+    },
+    "before": {
+      "cache/npm/_logs/2026-11-23T22_51_20_057Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "0766cdb99a299739ae7317c480e2c545d4496bf57fd3e308cde1588cc762ab30",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_304Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "fffb83a9214197219e7948d996e3b9d14444422781e551257dd4fd34dc8faa99",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_481Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 11367,
+        "sha256": "1c20f4fd15a7056fe72995a4b7444cc75e7b9b1d5d92c68945b5015e614c66be",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_659Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1631,
+        "sha256": "e2cc15374cb592079ff04909e41db841adb23625fd69ed93fd88f83d4c28b15a",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_844Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 2075,
+        "sha256": "054f623e4cc01150c6e16e0e880586ae4c7f60d9a7fa7f8e141baa0429ac9816",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_044Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1651,
+        "sha256": "f545bc87ce4ca41a9d2838b8b46861458c0f1332860092b57671abe5dbb36954",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_257Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1358,
+        "sha256": "c2d40950af392b442f23b9af7adab52cf6ae1a81f5e2325aed6ed707e5105e4d",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_395Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1360,
+        "sha256": "4f8fc131af389c7e18dc78004abd46d723ade89af10abdbd342c154b8cacd415",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 463,
+        "sha256": "edde8617de950f5d58e990af6c695bd9bd9785a8bef7c09a8e8d99858a4768e7",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": "../../extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 653,
+        "sha256": "f8f2dca31808f9ef8ddc5b1d17c82137bbfb8597b8e4acf3456762fd58582537",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "d61bed1e2a7498c47a293bc354e06ed0e6e0d61185e84beb822b594c60056ff4",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/npm/_logs/2026-11-23T22_51_20_057Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1628,
+        "sha256": "0766cdb99a299739ae7317c480e2c545d4496bf57fd3e308cde1588cc762ab30",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_304Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1497,
+        "sha256": "fffb83a9214197219e7948d996e3b9d14444422781e551257dd4fd34dc8faa99",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_481Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 11367,
+        "sha256": "1c20f4fd15a7056fe72995a4b7444cc75e7b9b1d5d92c68945b5015e614c66be",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_659Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1631,
+        "sha256": "e2cc15374cb592079ff04909e41db841adb23625fd69ed93fd88f83d4c28b15a",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_20_844Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 2075,
+        "sha256": "054f623e4cc01150c6e16e0e880586ae4c7f60d9a7fa7f8e141baa0429ac9816",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_044Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1651,
+        "sha256": "f545bc87ce4ca41a9d2838b8b46861458c0f1332860092b57671abe5dbb36954",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_257Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1358,
+        "sha256": "c2d40950af392b442f23b9af7adab52cf6ae1a81f5e2325aed6ed707e5105e4d",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_395Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1360,
+        "sha256": "4f8fc131af389c7e18dc78004abd46d723ade89af10abdbd342c154b8cacd415",
+        "mode": 420
+      },
+      "cache/npm/_logs/2026-11-23T22_51_21_586Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1129,
+        "sha256": "cc5369d9a1edb7b56de277d84cbc4aef221f4b41b19b5e2200471a57a7a35500",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/interrupt-effect.txt": {
+        "kind": "file",
+        "bytes": 30,
+        "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+        "mode": 420
+      },
+      "project/node_modules/.package-lock.json": {
+        "kind": "file",
+        "bytes": 463,
+        "sha256": "edde8617de950f5d58e990af6c695bd9bd9785a8bef7c09a8e8d99858a4768e7",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": "../../extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": "../../tiny"
+      },
+      "project/package-lock.json": {
+        "kind": "file",
+        "bytes": 653,
+        "sha256": "f8f2dca31808f9ef8ddc5b1d17c82137bbfb8597b8e4acf3456762fd58582537",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "d61bed1e2a7498c47a293bc354e06ed0e6e0d61185e84beb822b594c60056ff4",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/npm/_logs/2026-11-23T22_51_21_586Z-debug-0.log": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 1129,
+          "sha256": "cc5369d9a1edb7b56de277d84cbc4aef221f4b41b19b5e2200471a57a7a35500",
+          "mode": 420
+        }
+      },
+      "project/interrupt-effect.txt": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 30,
+          "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/interrupt-effect.txt"
+      ],
+      "durable": [],
+      "cache": [
+        "cache/npm/_logs/2026-11-23T22_51_21_586Z-debug-0.log"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": null,
+    "signal": 2,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Inspect interrupt-effect.txt and lock/install tree before a deliberate retry.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

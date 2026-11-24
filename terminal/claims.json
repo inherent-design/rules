@@ -1,0 +1,261 @@
+{
+  "v": 1,
+  "claims": [
+    {
+      "id": "npm-help",
+      "statement": "Observed top-level help exits1; not a work result.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T224740171810Z/npm-help.json"
+      ],
+      "models": [
+        "Npm.lean:help_is_not_exit_zero"
+      ],
+      "uxDecision": "Keep empack help exit0; familiarity is not a status law."
+    },
+    {
+      "id": "npm-preview",
+      "statement": "Selected dry run preserves project projection but changes cache/logs.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T224740171810Z/npm-preview.json"
+      ],
+      "models": [
+        "Npm.lean:dry_run_does_not_mean_no_writes"
+      ],
+      "uxDecision": "Name the guaranteed scope; do not promise no filesystem activity."
+    },
+    {
+      "id": "pnpm-fallback",
+      "statement": "Fresh unknown-name fallback installs before missing-command failure.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T224740171810Z/pnpm-refusal.json"
+      ],
+      "models": [
+        "Pnpm.lean:unknown_command_can_follow_install",
+        "Native.bend:refusal_can_have_effects"
+      ],
+      "uxDecision": "Refusal and observed effects are independent; preserve them both."
+    },
+    {
+      "id": "pnpm-prompt",
+      "statement": "Declining dependency installation still executes the requested script.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225424382629Z-journeys/pnpm-narrow-prompt-gate.json"
+      ],
+      "models": [
+        "Pnpm.lean:gate"
+      ],
+      "uxDecision": "Name the decision being declined. The model gate does not promise a successful prompt surface."
+    },
+    {
+      "id": "pnpm-input-only",
+      "statement": "Non-controlling input-only TTY prompt gate exits1 with no captured explanation.",
+      "status": "observed, real-terminal relevance unresolved",
+      "nativeRecords": [
+        "evidence/20261123T225426550365Z-journeys/pnpm-input-only-tty-prompt-gate.json"
+      ],
+      "models": [],
+      "uxDecision": "Keep unavailable-input diagnostics; do not assert a real-terminal defect from this fixture."
+    },
+    {
+      "id": "yarn-lock-mode",
+      "statement": "update-lockfile writes lock/cache and skips link.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T224740171810Z/yarn-resolve-write.json"
+      ],
+      "models": [
+        "Yarn.lean:update_lockfile_is_not_dry_run",
+        "Native.bend:lock_write_is_not_preview"
+      ],
+      "uxDecision": "Do not rename lock-writing resolution as a no-write preview."
+    },
+    {
+      "id": "yarn-ci",
+      "statement": "CI immutable default refuses creating the missing lock with a structured install error.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225425406843Z-journeys/yarn-fully-piped-ci-install.json"
+      ],
+      "models": [
+        "Yarn.lean:immutable_disagreement_refuses"
+      ],
+      "uxDecision": "Document mode defaults separately from TTY capability."
+    },
+    {
+      "id": "yarn-info-error",
+      "statement": "Unready info --json emits a human error/stack on stdout.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T224740171810Z/yarn-inspect.json",
+        "evidence/20261123T225425406843Z-journeys/yarn-fully-piped-ci-json.json"
+      ],
+      "models": [
+        "Yarn.lean:json_flag_alone_does_not_cover_info_failure"
+      ],
+      "uxDecision": "Test failure serialization, not only successful output."
+    },
+    {
+      "id": "yarn-signal",
+      "statement": "Observed signalled script status is129, unlike raw signal2 for npm/pnpm.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225322018614Z-journeys/yarn-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/npm-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/pnpm-interrupt.json"
+      ],
+      "models": [
+        "Yarn.lean:signal_not_universally_130"
+      ],
+      "uxDecision": "Keep exit and signal facts distinct; do not guess130 for another program."
+    },
+    {
+      "id": "empack-machine-failure",
+      "statement": "Malformed lock produces nonzero exit, parseable failure stdout, and stderr diagnostic.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225322018614Z-journeys/empack-lock-refusal.json"
+      ],
+      "models": [
+        "Empack.lean:progress_does_not_own_result_stream"
+      ],
+      "uxDecision": "Preserve and extend this failure behavior consistently to each supported machine command."
+    },
+    {
+      "id": "empack-choice",
+      "statement": "Piped stdout still permits stdin/stderr TTY confirmation; stderr pipe refuses; decline preserves project projection.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225424382629Z-journeys/empack-narrow-approval.json",
+        "evidence/20261123T225426550365Z-journeys/empack-input-only-tty-approval.json"
+      ],
+      "models": [
+        "Empack.lean:stdout_redirection_preserves_choice",
+        "Empack.lean:stdin_required"
+      ],
+      "uxDecision": "Preserve separated capabilities and explicit target approval."
+    },
+    {
+      "id": "empack-preview",
+      "statement": "Local-add dry run preserves project, durable, and cache file projections.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225322018614Z-journeys/empack-add-preview.json"
+      ],
+      "models": [
+        "Empack.lean:previewEffects"
+      ],
+      "uxDecision": "Keep preview boundaries; effect scope excludes unobserved transient/timestamp changes."
+    },
+    {
+      "id": "empack-cancel",
+      "statement": "Early approval cancellation130/no publication; save-phase cancellation completed0 with changes.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T230015174972Z-journeys/empack-cancel-at-approval.json",
+        "evidence/20261123T225322018614Z-journeys/empack-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/empack-recovery-inspect.json"
+      ],
+      "models": [
+        "Empack.lean:late_interrupt_does_not_erase_success",
+        "Candidate.lean:failure_keeps_unknown_effects"
+      ],
+      "uxDecision": "Preserve the actual terminal result and inspect effects before replay."
+    },
+    {
+      "id": "empack-local-lifecycle",
+      "statement": "Local resource add/remove apply verified changes; previews retain state.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225322018614Z-journeys/empack-add-preview.json",
+        "evidence/20261123T225322018614Z-journeys/empack-add.json",
+        "evidence/20261123T225322018614Z-journeys/empack-remove-preview.json",
+        "evidence/20261123T225322018614Z-journeys/empack-remove.json"
+      ],
+      "models": [],
+      "uxDecision": "Keep authored intent, exact lock, and content effects distinguishable."
+    },
+    {
+      "id": "empack-missing-input",
+      "statement": "Two-input add with independent continuation refuses a missing source before publishing anything, without naming the path.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T230015174972Z-journeys/empack-continue-independent.json"
+      ],
+      "models": [],
+      "uxDecision": "Proposed: identify the source path and retry scope. Partial publication is unqualified by this case."
+    },
+    {
+      "id": "script-effects",
+      "statement": "Explicit scripts can write before exit7 or SIGINT; subsequent install retains those effects.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T225322018614Z-journeys/npm-hook-failure.json",
+        "evidence/20261123T225322018614Z-journeys/npm-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/npm-recover-after-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/pnpm-hook-failure.json",
+        "evidence/20261123T225322018614Z-journeys/pnpm-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/pnpm-recover-after-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/yarn-hook-failure.json",
+        "evidence/20261123T225322018614Z-journeys/yarn-interrupt.json",
+        "evidence/20261123T225322018614Z-journeys/yarn-recover-after-interrupt.json"
+      ],
+      "models": [
+        "Model.lean:observed_partial_effects_survive",
+        "Npm.lean:child_failure_retains_project_effect"
+      ],
+      "uxDecision": "Do not describe failure/interruption as rollback. Not install-hook policy coverage."
+    },
+    {
+      "id": "styling",
+      "statement": "All selected machine queries retain parseable stdout with explicit styling enabled/disabled.",
+      "status": "observed",
+      "nativeRecords": [
+        "evidence/20261123T230434898129Z-journeys/npm-color-never.json",
+        "evidence/20261123T230434898129Z-journeys/npm-color-always.json",
+        "evidence/20261123T230434898129Z-journeys/pnpm-color-never.json",
+        "evidence/20261123T230434898129Z-journeys/pnpm-color-always.json",
+        "evidence/20261123T230434898129Z-journeys/yarn-color-never.json",
+        "evidence/20261123T230434898129Z-journeys/yarn-color-always.json",
+        "evidence/20261123T230434898129Z-journeys/empack-color-never.json",
+        "evidence/20261123T230434898129Z-journeys/empack-color-always.json"
+      ],
+      "models": [],
+      "uxDecision": "Preserve serialization independently from display styling; no arbitrary child-output guarantee."
+    },
+    {
+      "id": "target-approval",
+      "statement": "Applying requires current target, sufficient evidence, and exact approval.",
+      "status": "proposed preservation boundary",
+      "nativeRecords": [
+        "evidence/20261123T225424382629Z-journeys/empack-narrow-approval.json"
+      ],
+      "models": [
+        "Candidate.lean:apply_requires_exact_approval",
+        "Candidate.lean:stale_approval_never_applies",
+        "Candidate.bend:stale_target_requires_refresh"
+      ],
+      "uxDecision": "Checked abstract boundary; native concurrent-input/stale-target qualification remains pending."
+    },
+    {
+      "id": "candidate-evidence",
+      "statement": "Incomplete evidence cannot authorize application; unknown effects remain unknown.",
+      "status": "proposed preservation boundary",
+      "nativeRecords": [],
+      "models": [
+        "Candidate.lean:incomplete_evidence_never_applies",
+        "Candidate.bend:incomplete_evidence_refuses",
+        "Model.lean:status_does_not_prove_rollback"
+      ],
+      "uxDecision": "No production/schema/default changes authorized by this report."
+    }
+  ],
+  "colorRun": "20261123T230434898129Z-journeys",
+  "proofBoundary": "Abstract model proofs plus finite native correspondence; not implementation equivalence.",
+  "effectBoundary": "Sampled net regular-file byte/mode and symlink-target projection in isolated work roots; no timestamp/inode/transient/external-write proof.",
+  "report": "report.md",
+  "coverage": "coverage.md"
+}

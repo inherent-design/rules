@@ -1,0 +1,413 @@
+{
+  "v": 1,
+  "surface": "yarn",
+  "case": "recover-after-interrupt",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+        "install",
+        "--json"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/yarn/project"
+    },
+    "expectation": "Reconcile installation after interruption; this does not undo arbitrary script effects.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/yarn/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/yarn/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/yarn/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.11689383303746581,
+          "channel": "stdout",
+          "bytes": 84
+        },
+        {
+          "seconds": 0.12031837506219745,
+          "channel": "stdout",
+          "bytes": 92
+        },
+        {
+          "seconds": 0.13004779210314155,
+          "channel": "stdout",
+          "bytes": 86
+        },
+        {
+          "seconds": 0.13028824981302023,
+          "channel": "stdout",
+          "bytes": 87
+        },
+        {
+          "seconds": 0.13084912486374378,
+          "channel": "stdout",
+          "bytes": 86
+        },
+        {
+          "seconds": 0.13139304192736745,
+          "channel": "stdout",
+          "bytes": 86
+        },
+        {
+          "seconds": 0.13796970807015896,
+          "channel": "stdout",
+          "bytes": 86
+        },
+        {
+          "seconds": 0.13858720799908042,
+          "channel": "stdout",
+          "bytes": 88
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "eyJ0eXBlIjoiaW5mbyIsIm5hbWUiOjAsImRpc3BsYXlOYW1lIjoiWU4wMDAwIiwiaW5kZW50IjoiwrcgIiwiZGF0YSI6Illhcm4gNC4xOS4wIn0KeyJ0eXBlIjoiaW5mbyIsIm5hbWUiOm51bGwsImRpc3BsYXlOYW1lIjoiWU4wMDAwIiwiaW5kZW50IjoiIiwiZGF0YSI6IuKUjCBSZXNvbHV0aW9uIHN0ZXAifQp7InR5cGUiOiJpbmZvIiwibmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOiJZTjAwMDAiLCJpbmRlbnQiOiIiLCJkYXRhIjoi4pSUIENvbXBsZXRlZCJ9CnsidHlwZSI6ImluZm8iLCJuYW1lIjpudWxsLCJkaXNwbGF5TmFtZSI6IllOMDAwMCIsImluZGVudCI6IiIsImRhdGEiOiLilIwgRmV0Y2ggc3RlcCJ9CnsidHlwZSI6ImluZm8iLCJuYW1lIjpudWxsLCJkaXNwbGF5TmFtZSI6IllOMDAwMCIsImluZGVudCI6IiIsImRhdGEiOiLilJQgQ29tcGxldGVkIn0KeyJ0eXBlIjoiaW5mbyIsIm5hbWUiOm51bGwsImRpc3BsYXlOYW1lIjoiWU4wMDAwIiwiaW5kZW50IjoiIiwiZGF0YSI6IuKUjCBMaW5rIHN0ZXAifQp7InR5cGUiOiJpbmZvIiwibmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOiJZTjAwMDAiLCJpbmRlbnQiOiIiLCJkYXRhIjoi4pSUIENvbXBsZXRlZCJ9CnsidHlwZSI6ImluZm8iLCJuYW1lIjowLCJkaXNwbGF5TmFtZSI6IllOMDAwMCIsImluZGVudCI6IsK3ICIsImRhdGEiOiJEb25lIGluIDBzIDIybXMifQo=",
+      "stderr_b64": ""
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/yarn/berry/cache/terminal-extra-file-9e4260d8b2-10c0.zip": {
+        "kind": "file",
+        "bytes": 626,
+        "sha256": "e90a20e2719ed2dd48a2d81458d338dd69184d96702f3aa25e9fac08b59534c2",
+        "mode": 420
+      },
+      "home/data/yarn/berry/cache/terminal-tiny-file-be77a28113-10c0.zip": {
+        "kind": "file",
+        "bytes": 619,
+        "sha256": "6466a286b34599b5b0175b0bc0007fce08f2ca66977cc2f87b2126a6920783f6",
+        "mode": 420
+      },
+      "project/.yarn/cache/.gitignore": {
+        "kind": "file",
+        "bytes": 26,
+        "sha256": "29c84098160fd5c15dc7be6b644fefd9668807f4bc7392e1bf3a1bf83e8b49ac",
+        "mode": 420
+      },
+      "project/.yarn/cache/terminal-extra-file-9e4260d8b2-940794668e.zip": {
+        "kind": "file",
+        "bytes": 626,
+        "sha256": "e90a20e2719ed2dd48a2d81458d338dd69184d96702f3aa25e9fac08b59534c2",
+        "mode": 420
+      },
+      "project/.yarn/cache/terminal-tiny-file-be77a28113-3052eaaceb.zip": {
+        "kind": "file",
+        "bytes": 619,
+        "sha256": "6466a286b34599b5b0175b0bc0007fce08f2ca66977cc2f87b2126a6920783f6",
+        "mode": 420
+      },
+      "project/.yarn/install-state.gz": {
+        "kind": "file",
+        "bytes": 1423,
+        "sha256": "fc465d7031edfc3b762907d608a7f18c4d6e6f09e1391348fd45bb65d192c85b",
+        "mode": 420
+      },
+      "project/.yarnrc.yml": {
+        "kind": "file",
+        "bytes": 71,
+        "sha256": "5584ff54fdd628483770d1c28e3f1c4844d27874cada624ac72bdf0234bf188f",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/interrupt-effect.txt": {
+        "kind": "file",
+        "bytes": 30,
+        "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+        "mode": 420
+      },
+      "project/node_modules/.package-map.json": {
+        "kind": "file",
+        "bytes": 450,
+        "sha256": "5510a8ad5c62d0db345cbe1b1bb38c0e145b219c5fbab7d9bf67d971a44799d7",
+        "mode": 420
+      },
+      "project/node_modules/.yarn-state.yml": {
+        "kind": "file",
+        "bytes": 520,
+        "sha256": "176db68f5e32cab7abe8ad0c96510acb5038b685086b3cc3c3139432a8450a2f",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "9af88a6a15e89a60a35a2cc637e253a5fb1a425beeecb1b8d56f605b33554fa4",
+        "mode": 420
+      },
+      "project/yarn.lock": {
+        "kind": "file",
+        "bytes": 1154,
+        "sha256": "ed1bcf9dd1a58beede0a5d9524d1a413b010a0f9713ad4d6be641e603388288c",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/yarn/berry/cache/terminal-extra-file-9e4260d8b2-10c0.zip": {
+        "kind": "file",
+        "bytes": 626,
+        "sha256": "e90a20e2719ed2dd48a2d81458d338dd69184d96702f3aa25e9fac08b59534c2",
+        "mode": 420
+      },
+      "home/data/yarn/berry/cache/terminal-tiny-file-be77a28113-10c0.zip": {
+        "kind": "file",
+        "bytes": 619,
+        "sha256": "6466a286b34599b5b0175b0bc0007fce08f2ca66977cc2f87b2126a6920783f6",
+        "mode": 420
+      },
+      "project/.yarn/cache/.gitignore": {
+        "kind": "file",
+        "bytes": 26,
+        "sha256": "29c84098160fd5c15dc7be6b644fefd9668807f4bc7392e1bf3a1bf83e8b49ac",
+        "mode": 420
+      },
+      "project/.yarn/cache/terminal-extra-file-9e4260d8b2-940794668e.zip": {
+        "kind": "file",
+        "bytes": 626,
+        "sha256": "e90a20e2719ed2dd48a2d81458d338dd69184d96702f3aa25e9fac08b59534c2",
+        "mode": 420
+      },
+      "project/.yarn/cache/terminal-tiny-file-be77a28113-3052eaaceb.zip": {
+        "kind": "file",
+        "bytes": 619,
+        "sha256": "6466a286b34599b5b0175b0bc0007fce08f2ca66977cc2f87b2126a6920783f6",
+        "mode": 420
+      },
+      "project/.yarn/install-state.gz": {
+        "kind": "file",
+        "bytes": 1421,
+        "sha256": "abf553030f5a7762c6068923a533ecada92bf0fda1cebadec8872cbcf3d4d6aa",
+        "mode": 420
+      },
+      "project/.yarnrc.yml": {
+        "kind": "file",
+        "bytes": 71,
+        "sha256": "5584ff54fdd628483770d1c28e3f1c4844d27874cada624ac72bdf0234bf188f",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/hook-effect.txt": {
+        "kind": "file",
+        "bytes": 25,
+        "sha256": "afff8da0d8d2e564361d55eddca6c8cf5f8948ff46c37ac8c94d4e39a66a9a12",
+        "mode": 420
+      },
+      "project/interrupt-effect.txt": {
+        "kind": "file",
+        "bytes": 30,
+        "sha256": "1a4049d61be98af9fdfb72aee48edfac6272437682c91a81498891651db19c58",
+        "mode": 420
+      },
+      "project/node_modules/.package-map.json": {
+        "kind": "file",
+        "bytes": 450,
+        "sha256": "5510a8ad5c62d0db345cbe1b1bb38c0e145b219c5fbab7d9bf67d971a44799d7",
+        "mode": 420
+      },
+      "project/node_modules/.yarn-state.yml": {
+        "kind": "file",
+        "bytes": 520,
+        "sha256": "176db68f5e32cab7abe8ad0c96510acb5038b685086b3cc3c3139432a8450a2f",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "9af88a6a15e89a60a35a2cc637e253a5fb1a425beeecb1b8d56f605b33554fa4",
+        "mode": 420
+      },
+      "project/yarn.lock": {
+        "kind": "file",
+        "bytes": 1154,
+        "sha256": "ed1bcf9dd1a58beede0a5d9524d1a413b010a0f9713ad4d6be641e603388288c",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "project/.yarn/install-state.gz": {
+        "before": {
+          "kind": "file",
+          "bytes": 1423,
+          "sha256": "fc465d7031edfc3b762907d608a7f18c4d6e6f09e1391348fd45bb65d192c85b",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 1421,
+          "sha256": "abf553030f5a7762c6068923a533ecada92bf0fda1cebadec8872cbcf3d4d6aa",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/.yarn/install-state.gz"
+      ],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Inspect the retained marker separately from package installation success.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

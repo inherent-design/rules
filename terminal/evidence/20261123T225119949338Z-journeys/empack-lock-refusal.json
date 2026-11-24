@@ -1,0 +1,249 @@
+{
+  "v": 1,
+  "surface": "empack",
+  "case": "lock-refusal",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/bin/empack",
+        "check",
+        "--json"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225119949338Z-journeys/work/empack/project"
+    },
+    "expectation": "Malformed saved lock should produce an explicit failure finding without silently erasing it.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.005184667184948921,
+          "channel": "stderr",
+          "bytes": 6
+        },
+        {
+          "seconds": 0.008475834038108587,
+          "channel": "stderr",
+          "bytes": 197
+        },
+        {
+          "seconds": 0.00896229175850749,
+          "channel": "stderr",
+          "bytes": 5
+        },
+        {
+          "seconds": 0.009038624819368124,
+          "channel": "stdout",
+          "bytes": 1023
+        },
+        {
+          "seconds": 0.009046916849911213,
+          "channel": "stderr",
+          "bytes": 6
+        },
+        {
+          "seconds": 0.009058124851435423,
+          "channel": "stderr",
+          "bytes": 63
+        },
+        {
+          "seconds": 0.009065583813935518,
+          "channel": "stderr",
+          "bytes": 6
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "ewogICJzY2hlbWEiOiAxLAogICJzY29wZSI6ICJyZWNvcmRlZCIsCiAgInBhY2siOiAiVGVybWluYWwgRml4dHVyZSIsCiAgImF1dGhvcl9zY2hlbWEiOiA2LAogICJhdXRob3JpbmciOiB7CiAgICAic2NoZW1hIjogMSwKICAgICJhdXRob3Jfc2NoZW1hIjogNiwKICAgICJwYWNrIjogIlRlcm1pbmFsIEZpeHR1cmUiLAogICAgImxvY2tfc3RhdHVzIjogImludmFsaWQiLAogICAgImxvY2tfcmVhc29uIjogIkludmFsaWQgbG9jayBkb2N1bWVudDogZW1wYWNrLmxvY2s6IEV4cGVjdGVkIGFuIG9iamVjdCIsCiAgICAicnVudGltZV9zYXRpc2ZpZWQiOiBudWxsLAogICAgImRlcGVuZGVuY2llcyI6IFtdLAogICAgImVkaXRpbmdfbGltaXRhdGlvbnMiOiBbXQogIH0sCiAgImxvY2siOiAiaW52YWxpZCIsCiAgInZlcmlmaWVkX2ZpbGVzIjogMCwKICAicmVmZXJlbmNlcyI6IDAsCiAgImZpbmRpbmdzIjogWwogICAgewogICAgICAic3ViamVjdCI6ICJBdXRob3JpbmciLAogICAgICAic3RhdGUiOiAicGFzc2VkIiwKICAgICAgInJlcXVpcmVkIjogdHJ1ZSwKICAgICAgIm1lc3NhZ2UiOiAiQXV0aG9yIGZpbGVzIGFyZSB2YWxpZCIsCiAgICAgICJkaWFnbm9zdGljIjogbnVsbAogICAgfSwKICAgIHsKICAgICAgInN1YmplY3QiOiAiZW1wYWNrLmxvY2siLAogICAgICAic3RhdGUiOiAiZmFpbGVkIiwKICAgICAgInJlcXVpcmVkIjogdHJ1ZSwKICAgICAgIm1lc3NhZ2UiOiAiSW52YWxpZCBsb2NrIGRvY3VtZW50OiBlbXBhY2subG9jazogRXhwZWN0ZWQgYW4gb2JqZWN0IiwKICAgICAgImRpYWdub3N0aWMiOiB7CiAgICAgICAgImNvZGUiOiAib3BlcmF0aW9uLWZhaWxlZCIsCiAgICAgICAgInBoYXNlIjogInZlcmlmaWNhdGlvbiIsCiAgICAgICAgIm9iamVjdCI6IG51bGwsCiAgICAgICAgImV4cGVjdGVkIjogbnVsbCwKICAgICAgICAib2JzZXJ2ZWQiOiBudWxsLAogICAgICAgICJyZWNvdmVyeSI6ICJ1bmNsYXNzaWZpZWQiCiAgICAgIH0KICAgIH0KICBdLAogICJjb21wbGV0ZSI6IGZhbHNlCn0K",
+      "stderr_b64": "G1s/MjVoG1szODs1OzI4beKgixtbMG0gUmVjaGVja2luZyBwcm9qZWN0IGlucHV0cyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDRtbMksbWzM4OzU7Mjht4qCZG1swbSBSZWNoZWNraW5nIHByb2plY3QgaW5wdXRzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICANG1sySxtbPzI1aEVycm9yOiBJbnZhbGlkIGxvY2sgZG9jdW1lbnQ6IGVtcGFjay5sb2NrOiBFeHBlY3RlZCBhbiBvYmplY3QNChtbPzI1aA=="
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.lock": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "4f241f91dc6a199f70108e3c1c35e6d1757716281653ce125d7ca0e62a32d1ee",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/journal.json": {
+        "kind": "file",
+        "bytes": 877,
+        "sha256": "4def881d7df58d2aa94b87d5b5631c8ec523a315209dc6cdb0ed11c772d4403f",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/operation.lock": {
+        "kind": "file",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/retention.json": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "5348d180a0423b8416bb8ccd120380ed6a6cd9785d7b24167b6b294adfa335e7",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/root-identity.json": {
+        "kind": "file",
+        "bytes": 253,
+        "sha256": "b237ce6a934d4ce9a61a71d2bcb62a38b216015bbd3ea6d4256d705625189c0f",
+        "mode": 384
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.lock": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "4f241f91dc6a199f70108e3c1c35e6d1757716281653ce125d7ca0e62a32d1ee",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/journal.json": {
+        "kind": "file",
+        "bytes": 877,
+        "sha256": "4def881d7df58d2aa94b87d5b5631c8ec523a315209dc6cdb0ed11c772d4403f",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/operation.lock": {
+        "kind": "file",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/retention.json": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "5348d180a0423b8416bb8ccd120380ed6a6cd9785d7b24167b6b294adfa335e7",
+        "mode": 384
+      },
+      "state/project-0000000001000010-000000000000000000000000114a60bb-6b04c36e-2741df0a/root-identity.json": {
+        "kind": "file",
+        "bytes": 253,
+        "sha256": "b237ce6a934d4ce9a61a71d2bcb62a38b216015bbd3ea6d4256d705625189c0f",
+        "mode": 384
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 2,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Preserve malformed input; inspect diagnostic before restoring or regenerating.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

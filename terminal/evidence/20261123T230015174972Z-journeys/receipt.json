@@ -1,0 +1,179 @@
+{
+  "v": 1,
+  "pins": {
+    "v": 1,
+    "tools": {
+      "node": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "version": "v26.13.1",
+        "sha256": "266dec4dce3a6cdcf5cdc38722a00cf5ae6a12cc51068d2a227655bbb75751ec"
+      },
+      "npm": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "version": "11.20.0",
+        "sha256": "0a6f43cb58b81269aad0d3eff77f68b5d06ea7c241c199a63bee8b0dd337effc"
+      },
+      "pnpm": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "version": "12.21.0",
+        "sha256": "1d10621a2e24e340a16cefc50c36ded0f16b7abfe009f27fa2e3c60c34ce3642"
+      },
+      "empack": {
+        "path": "/Users/zer0cell/.local/bin/empack",
+        "version": "empack 0.8.8-beta",
+        "sha256": "99dabfeac357d25c9ec68f05c4d09b3154dbdcd905baf516c28a866e847d447f"
+      },
+      "yarn": {
+        "path": "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+        "version": "4.19.0",
+        "generation": "Modern/Berry, major4; not Yarn Classic1",
+        "sha256": "070ffef2a2b6877cd871864c16e29e8dd64a1a69cb493aaf4836c9d53c143163",
+        "archiveSha256": "96a5c3ec72472c44e16042caded154ad4c5cf267ab42ed337a9aa1f501a4f735",
+        "registryIntegrity": "sha512-jjv4NIPlz974CUxGIdQDuK7mRb1f26BFIdkCkuFcM/64LT9tTRVj7/UqEv9bcB8DKFvtUw680CVo71bEBsHjuA=="
+      }
+    },
+    "host": {
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64",
+      "sw_vers": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n",
+      "locale": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "shell": "/bin/bash"
+    },
+    "sources": {
+      "npm": "https://github.com/npm/cli/tree/v11.20.0",
+      "pnpm": "https://github.com/pnpm/pnpm/tree/v12.21.0",
+      "yarn": "https://github.com/yarnpkg/berry (distribution @yarnpkg/cli-dist4.19.0)",
+      "empack": "https://github.com/inherent-design/empack/tree/9d0ba2d10340736c39fd94ad21958a03d693cf18"
+    },
+    "limits": "Only this host observed; no Windows/Linux or screen-reader qualification yet."
+  },
+  "profile": {
+    "stdin": "tty",
+    "stdout": "pipe",
+    "stderr": "tty",
+    "width": 80
+  },
+  "cases": [
+    {
+      "tool": "empack",
+      "case": "cancel-at-approval",
+      "exit_code": 130,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "status-after-early-cancel",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "recovery-after-early-cancel",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "apply-after-inspection",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 1,
+        "durable": 5,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "continue-independent",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "status-after-partial",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    },
+    {
+      "tool": "empack",
+      "case": "check-after-partial",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "effects": {
+        "project": 0,
+        "durable": 0,
+        "cache": 0,
+        "home": 0,
+        "temporary": 0
+      }
+    }
+  ],
+  "harness": {
+    "journeys.py": "ffcef3c1d4e69cc57d2c872388a93158121466479aa93129e7935cd7247be8a1",
+    "streams.py": "0cede0ee4da0c0b2a56ed10799dcb0b9b0830a9405fffc93d5410c59720b175f",
+    "study.py": "882f4e2975c50dd72363b7de860f0d66e909fb126dd805c967d618091fb54c6b"
+  },
+  "limits": [
+    "macOS arm64 only; non-controlling PTY",
+    "No claim of universal hook isolation; private environment is not an OS sandbox",
+    "SIGINT is group-directed, not a physical Ctrl-C keypress",
+    "Network was not blocked by OS; package fixtures are local and Yarn network disabled",
+    "Before/after snapshots do not observe transient writes or external paths; no human/screen-reader acceptance"
+  ]
+}

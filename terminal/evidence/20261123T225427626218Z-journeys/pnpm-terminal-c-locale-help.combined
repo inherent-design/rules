@@ -1,0 +1,223 @@
+Package manager
+
+[1m[4mUsage:[0m [1mpnpm[0m [OPTIONS] <COMMAND>
+
+[1m[4mCommands:[0m
+  [1maccess[0m          Manage package access and visibility on the registry
+  [1minit[0m            Initialize a package.json
+  [1mrecursive[0m       Concurrently runs a command in all subdirectory projects [aliases: multi, m]
+  [1madd[0m             Add a package
+  [1minstall[0m         Install packages [alias: i]
+  [1minstall-test[0m    Runs a `pnpm install` followed immediately by a `pnpm test`. Accepts the same arguments as `pnpm install`, plus `--no-bail` to continue running workspace tests after a failure [alias: it]
+  [1mupdate[0m          Update packages to their newest version based on the specified range [aliases: up, upgrade]
+  [1moutdated[0m        Check for outdated package and GitHub Actions dependencies
+  [1maudit[0m           Checks for known security issues with the installed packages
+  [1mchange[0m          Record a change intent: which packages a change affects, the bump type for each, and a summary that becomes the changelog entry
+  [1mversion[0m         Apply the pending change intents (`pnpm version -r`)
+  [1mlane[0m            Manage per-package release lanes
+  [1mbugs[0m            Opens the bug tracker URL of a package in the default browser [alias: issues]
+  [1mlist[0m            List installed packages [alias: ls]
+  [1mll[0m              List installed packages in long format [alias: la]
+  [1mlicenses[0m        Check the licenses of the installed packages [alias: licences]
+  [1mfund[0m            Retrieve the funding information of the installed packages
+  [1mwhy[0m             Shows the packages that depend on `pkg`
+  [1mview[0m            View registry information about a package [aliases: info, show, v]
+  [1msbom[0m            Generate a Software Bill of Materials (SBOM)
+  [1mwhoami[0m          Displays your pnpm username
+  [1mdeprecate[0m       Deprecates a version of a package in the registry
+  [1mundeprecate[0m     Removes deprecation from a version of a package in the registry. Only works on already deprecated versions
+  [1munpublish[0m       Removes a package from the registry
+  [1mstar[0m            Marks a package as a favorite
+  [1munstar[0m          Unmarks a package as a favorite
+  [1mstars[0m           Lists all packages starred by a specific user
+  [1mdist-tag[0m        Manage a package's distribution tags [alias: dist-tags]
+  [1mping[0m            Test connectivity to the configured registry
+  [1mdoctor[0m          Run diagnostics on the pnpm installation and environment
+  [1msearch[0m          Search for packages in the registry [aliases: s, se, find]
+  [1mrebuild[0m         Rebuild a package
+  [1mrb[0m              Rebuild a package
+  [1mpack[0m            Create a tarball from a package
+  [1mpublish[0m         Publish a package to the registry
+  [1mstage[0m           Stage packages for publishing, deferring proof-of-presence (2FA) to a later point in time
+  [1mremove[0m          Removes packages from `node_modules` and from the project's `package.json` [aliases: uninstall, rm, un, uni]
+  [1mpatch[0m           Prepare a package for patching
+  [1mpatch-commit[0m    Generate a patch out of a directory
+  [1mpatch-remove[0m    Remove existing patch files
+  [1mpeers[0m           Checks for unmet or missing peer dependency issues
+  [1mset-script[0m      Set a script in package.json [alias: ss]
+  [1mtest[0m            Runs a package's "test" script, if one was provided [aliases: t, tst]
+  [1mrun[0m             Runs a defined package script [alias: run-script]
+  [1mtasks[0m           Inspect tasks in concurrency groups. A same-named script takes precedence. Use `pnpm pm tasks` to force the built-in
+  [1mpipeline[0m        Runs a named pipeline of workspace tasks the way a CI run would: a frozen install, affected-since-base selection, the task graph in dependency order without bailing, and cached task results restored instead of re-run
+  [1mexec[0m            Run a shell command in the context of a project
+  [1mdlx[0m             Run a package in a temporary environment
+  [1mcreate[0m          Creates a project from a `create-*` starter kit
+  [1mcompletion[0m      Print shell completion code to stdout
+  [1mstart[0m           Runs an arbitrary command specified in the package's start property of its scripts object
+  [1mstop[0m            Runs a package's "stop" script, if one was provided
+  [1mrestart[0m         Restarts a package. Runs "stop", "restart" (if present), and "start" scripts, and associated pre- and post- scripts
+  [1mfind-hash[0m       Lists the packages that include the file with the specified hash
+  [1mruntime[0m         Manage runtimes [alias: rt]
+  [1menv[0m             Manage Node.js versions. Deprecated in favour of `pnpm runtime`
+  [1mshim[0m            Manage context-aware shims for packages that are not installed globally, so a project decides which version runs
+  [1mbin[0m             Print the directory where pnpm will install executables
+  [1mclean[0m           Safely remove `node_modules` directories from the current project (or every workspace project) without following NTFS junctions into their targets. A `clean` script in `package.json` overrides the built-in command
+  [1mpurge[0m           Alias of `clean`: same behavior, except a `purge` script (not a `clean` script) overrides it when present
+  [1mci[0m              Runs clean then install with a frozen lockfile [aliases: clean-install, ic, install-clean]
+  [1mroot[0m            Print the effective `node_modules` directory
+  [1mprefix[0m          Print the current package prefix
+  [1mconfig[0m          Manage the pnpm configuration files [alias: c]
+  [1mget[0m             Print the config value for the provided key. Shorthand for `pnpm config get`
+  [1mset[0m             Set the config key to the value provided. Shorthand for `pnpm config set`
+  [1mpkg[0m             Manages your package.json
+  [1mpack-app[0m        Pack a `CommonJS` entry file into a standalone executable for one or more target platforms
+  [1mstore[0m           Managing the package store
+  [1mcache[0m           Inspect and manage the metadata cache
+  [1mcat-file[0m        Prints the contents of a file based on the hash value stored in the index file
+  [1mcat-index[0m       Prints the index file of a specific package from the store
+  [1mignored-builds[0m  Print the list of packages with blocked build scripts
+  [1mapprove-builds[0m  Approve dependencies for running scripts during installation
+  [1mpermissions[0m     Review what dependencies may do: run build scripts and provide agent skills
+  [1mapprove[0m         Approve or deny what dependencies may do. Same as `pnpm permissions approve`
+  [1mlink[0m            Links a local package as a dependency [alias: ln]
+  [1mimport[0m          Generates a pnpm-lock.yaml from an external lockfile
+  [1mdedupe[0m          Deduplicate packages in the lockfile
+  [1mdeploy[0m          Deploy a package from a workspace
+  [1mprune[0m           Remove extraneous packages
+  [1mfetch[0m           Fetch packages from the lockfile into the virtual store
+  [1munlink[0m          Removes links to a local package and reinstalls it [alias: dislink]
+  [1mdocs[0m            Opens the documentation of a package in the browser [alias: home]
+  [1mrepo[0m            Opens the URL of the package's repository in a browser
+  [1mself-update[0m     Updates pnpm to the latest version (or the one specified)
+  [1msetup[0m           Sets up pnpm
+  [1mlogin[0m           Log in to an npm registry [alias: adduser]
+  [1mteam[0m            Manage organization teams and team memberships
+  [1mowner[0m           Manage package owners on the registry [alias: owners]
+  [1mlogout[0m          Log out of an npm registry
+  [1mwith[0m            Runs pnpm at a specific version (or the currently running one) for a single invocation, ignoring the "packageManager" and "devEngines.packageManager" fields of the project's manifest
+  [1medit[0m            Not implemented in pnpm. Use the npm CLI directly
+  [1mprofile[0m         Change settings on your registry profile
+  [1mtoken[0m           Manage authentication tokens on the registry
+  [1mxmas[0m            Not implemented in pnpm. Use the npm CLI directly
+  [1mhelp[0m            Print this message or the help of the given subcommand(s)
+
+[1m[4mOptions:[0m
+  [1m-v[0m, [1m--version[0m
+          Print the pnpm version
+
+  [1m-y[0m, [1m--yes[0m
+          Automatically answer yes to prompts
+
+      [1m--env-file[0m <PATH>
+          Load environment variables from a dotenv-style file before running. Repeat to layer more files: later files override earlier files, and variables already in the environment are never overridden. Relative paths resolve against the invocation working directory. The loaded variables are visible to config resolution (`PNPM_CONFIG_<KEY>` overrides and `${VAR}` tokens in user-level `.npmrc` files), to lifecycle scripts, and to any pnpm the command dispatches to
+
+  [1m-C[0m, [1m--dir[0m <DIR>
+          Set working directory. Accepted anywhere on the command line, before or after the subcommand, like every other rc-option
+          
+          [default: .]
+
+      [1m--store-dir[0m <DIR>
+          Directory in which the package store is created. Relative paths are resolved from the workspace root, or from `--dir` outside a workspace
+
+      [1m--state-dir[0m <DIR>
+          Directory in which pnpm persists machine-local state
+
+      [1m--npmrc-auth-file[0m <NPMRC_AUTH_FILE>
+          Path to an `.npmrc` to read auth settings from, overriding the default `~/.npmrc`
+          
+          [alias: --userconfig]
+
+      [1m--ignore-workspace[0m
+          Run as if the project were standalone, ignoring any `pnpm-workspace.yaml` above it
+
+      [1m--workspace-packages[0m <WORKSPACE_PACKAGES>
+          Glob patterns selecting the workspace's projects, overriding the `packages` field of `pnpm-workspace.yaml`. Repeat to add more
+
+      [1m--registry[0m <REGISTRY>
+          Base URL of the npm registry to resolve and fetch packages from. Universal rc-option: accepted on every command and layered onto the config like `--config.registry=<url>`. Commands that expose their own `--registry` still read the same value
+
+      [1m--https-proxy[0m <HTTPS_PROXY>
+          Proxy for HTTPS registry and tarball requests
+
+      [1m--http-proxy[0m <HTTP_PROXY>
+          Proxy for HTTP registry and tarball requests
+
+      [1m--no-proxy[0m <NO_PROXY>
+          Hosts that bypass configured proxies
+
+      [1m--color[0m[=<COLOR>]
+          Force colored output
+
+      [1m--reporter[0m <REPORTER>
+          Reporter output format
+
+          Possible values:
+          - [1mdefault[0m:     Rich visual output: a progress line, a packages diff, lifecycle output, and a `Done in ...` summary. Renders in place on a terminal and falls back to `append-only` output when stdout is not a terminal
+          - [1mappend-only[0m: Like `default` but forces the append-only rendering even on a TTY — one line per update, no cursor movement
+          - [1mndjson[0m:      Newline-delimited JSON on stderr
+          - [1msilent[0m:      No progress output
+
+      [1m--loglevel[0m <LOGLEVEL>
+          What level of logs to print. `silent` selects the silent reporter over any `--reporter` choice; the other levels cap the default reporter's output
+          
+          [possible values: silent, error, warn, info, debug]
+
+      [1m--no-progress[0m
+          Disable dependency and download progress output
+
+      [1m--stream[0m
+          Stream a recursive command's script output as it arrives, one prefixed line at a time
+
+      [1m--aggregate-output[0m
+          Hold each script's streamed output until the script exits, then print it as one block
+
+      [1m--use-stderr[0m
+          Divert the reporter's output to stderr, leaving stdout for the command's own result
+
+  [1m-r[0m, [1m--recursive[0m
+          Run the command for every project in the workspace instead of only the project in `--dir`
+
+  [1m-F[0m, [1m--filter[0m <FILTER>
+          Select which workspace projects to run on. Repeat to add more. Each selector can be a name pattern (`@scope/*`), a path (`./pkg`), a dependency query (`foo...`), an exclusion (`!bar`), a directory (`{dir}`), or a changed-since query (`[since]`)
+
+      [1m--filter-prod[0m <FILTER_PROD>
+          Like `--filter`, but follow only production dependencies when selecting projects
+
+  [1m-w[0m, [1m--workspace-root[0m
+          Run the command on the root workspace project
+
+      [1m--fail-if-no-match[0m
+          Exit with code 1 when the `--filter` / `--filter-prod` selectors match no workspace project
+
+      [1m--no-fail-if-no-match[0m
+          Let a command run over an empty selection, overriding a `failIfNoMatch: true` setting
+
+      [1m--include-workspace-root[0m
+          Also run a recursive command on the root workspace project, which `run` / `exec` / `add` / `test` otherwise leave out
+
+      [1m--no-include-workspace-root[0m
+          Leave the root workspace project out of a recursive command, overriding an `includeWorkspaceRoot: true` setting
+
+      [1m--test-pattern[0m <TEST_PATTERN>
+          Glob patterns naming test files, used by the `[since]` `--filter` selector to decide which changes count
+
+      [1m--changed-files-ignore-pattern[0m <CHANGED_FILES_IGNORE_PATTERN>
+          Glob patterns of changed files that the `[since]` `--filter` selector should ignore
+
+      [1m--sort[0m
+          Keep recursive workspace projects sorted topologically
+
+      [1m--no-sort[0m
+          Run recursive workspace projects in workspace order
+
+      [1m--reverse[0m
+          Process recursive workspace projects in reverse order
+
+      [1m--workspace-concurrency[0m <workspace_concurrency>
+          Maximum number of workspace projects to process in parallel, or `Infinity` for no limit
+
+      [1m--parallel[0m
+          Run scripts in every selected workspace project concurrently, disregarding topological sorting
+
+  [1m-h[0m, [1m--help[0m
+          Print help (see a summary with '-h')

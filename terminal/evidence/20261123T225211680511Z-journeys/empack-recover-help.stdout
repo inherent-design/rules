@@ -1,0 +1,45 @@
+Inspect or recover an interrupted engine operation
+
+Usage: empack recover [OPTIONS] [ACTION]
+
+Arguments:
+  [ACTION]
+          Possible values:
+          - inspect: Show interrupted publication and available recovery actions
+          - finish:  Finish publishing the verified candidate
+          - restore: Restore changes owned by the interrupted operation
+          
+          [default: inspect]
+
+Options:
+      --operation <OPERATION>
+          Require the exact operation reported by inspection
+
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable
+          caches
+          
+          [env:
+          EMPACK_STATE_DIR=/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/state]
+
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects
+          
+          [env:
+          EMPACK_CACHE_DIR=/Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/empack/cache/empack]
+
+  -y, --yes
+          Run without prompts; unresolved content choices still fail
+          
+          [env: EMPACK_YES=]
+
+      --dry-run
+          Preview changes without publishing project, instance or durable state
+          
+          [env: EMPACK_DRY_RUN=]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version

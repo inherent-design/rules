@@ -1,0 +1,169 @@
+{
+  "v": 1,
+  "surface": "pnpm",
+  "case": "input-only-tty-json",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "list",
+        "--json"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/pnpm/project"
+    },
+    "expectation": "Observe whether the selected command emits parseable structured output under this stream profile.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "pipe",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/pnpm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/pnpm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/pnpm/cache/empack",
+      "pnpm_config_pm_on_fail": "ignore"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": false
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.011238125152885914,
+          "channel": "stdout",
+          "bytes": 202
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "WwogIHsKICAgICJuYW1lIjogInRlcm1pbmFsLXN0dWR5IiwKICAgICJ2ZXJzaW9uIjogIjEuMC4wIiwKICAgICJwYXRoIjogIi9Vc2Vycy96ZXIwY2VsbC9wcm9kdWN0aW9uL3J1bGVzL3Rlcm1pbmFsL2V2aWRlbmNlLzIwMjYxMTIzVDIyNTQyNjU1MDM2NVotam91cm5leXMvd29yay9wbnBtL3Byb2plY3QiLAogICAgInByaXZhdGUiOiB0cnVlCiAgfQpdCg==",
+      "stderr_b64": ""
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "e9c7f8b0615f838e36147e126390bfdaa7abe61a249597b8efad213b776bac2d",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "e9c7f8b0615f838e36147e126390bfdaa7abe61a249597b8efad213b776bac2d",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Decode the actual stdout/merged stream; do not strip arbitrary human text to manufacture a pass.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "v": 1,
+  "surface": "npm",
+  "case": "input-only-tty-help",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "--help"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/npm/project"
+    },
+    "expectation": "Help must be distinguishable from successful work; record channel, styling, width, and status independently.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "pipe",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/npm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/npm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225426550365Z-journeys/work/npm/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": false
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.09544745879247785,
+          "channel": "stdout",
+          "bytes": 1442
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "bnBtIDxjb21tYW5kPgoKVXNhZ2U6CgpucG0gaW5zdGFsbCAgICAgICAgaW5zdGFsbCBhbGwgdGhlIGRlcGVuZGVuY2llcyBpbiB5b3VyIHByb2plY3QKbnBtIGluc3RhbGwgPGZvbz4gIGFkZCB0aGUgPGZvbz4gZGVwZW5kZW5jeSB0byB5b3VyIHByb2plY3QKbnBtIHRlc3QgICAgICAgICAgIHJ1biB0aGlzIHByb2plY3QncyB0ZXN0cwpucG0gcnVuIDxmb28+ICAgICAgcnVuIHRoZSBzY3JpcHQgbmFtZWQgPGZvbz4KbnBtIDxjb21tYW5kPiAtaCAgIHF1aWNrIGhlbHAgb24gPGNvbW1hbmQ+Cm5wbSAtbCAgICAgICAgICAgICBkaXNwbGF5IHVzYWdlIGluZm8gZm9yIGFsbCBjb21tYW5kcwpucG0gaGVscCA8dGVybT4gICAgc2VhcmNoIGZvciBoZWxwIG9uIDx0ZXJtPgpucG0gaGVscCBucG0gICAgICAgbW9yZSBpbnZvbHZlZCBvdmVydmlldwoKQWxsIGNvbW1hbmRzOgoKICAgIGFjY2VzcywgYWRkdXNlciwgYXBwcm92ZS1zY3JpcHRzLCBhdWRpdCwgYnVncywgY2FjaGUsIGNpLAogICAgY29tcGxldGlvbiwgY29uZmlnLCBkZWR1cGUsIGRlbnktc2NyaXB0cywgZGVwcmVjYXRlLCBkaWZmLAogICAgZGlzdC10YWcsIGRvY3MsIGRvY3RvciwgZWRpdCwgZXhlYywgZXhwbGFpbiwgZXhwbG9yZSwKICAgIGZpbmQtZHVwZXMsIGZ1bmQsIGdldCwgaGVscCwgaGVscC1zZWFyY2gsIGluaXQsIGluc3RhbGwsCiAgICBpbnN0YWxsLWNpLXRlc3QsIGluc3RhbGwtc2NyaXB0cywgaW5zdGFsbC10ZXN0LCBsaW5rLCBsbCwKICAgIGxvZ2luLCBsb2dvdXQsIGxzLCBvcmcsIG91dGRhdGVkLCBvd25lciwgcGFjaywgcGluZywgcGtnLAogICAgcHJlZml4LCBwcm9maWxlLCBwcnVuZSwgcHVibGlzaCwgcXVlcnksIHJlYnVpbGQsIHJlcG8sCiAgICByZXN0YXJ0LCByb290LCBydW4sIHNib20sIHNlYXJjaCwgc2V0LCBzaHJpbmt3cmFwLCBzdGFnZSwKICAgIHN0YXIsIHN0YXJzLCBzdGFydCwgc3RvcCwgdGVhbSwgdGVzdCwgdG9rZW4sIHRydXN0LAogICAgdW5kZXByZWNhdGUsIHVuaW5zdGFsbCwgdW5wdWJsaXNoLCB1bnN0YXIsIHVwZGF0ZSwgdmVyc2lvbiwKICAgIHZpZXcsIHdob2FtaQoKU3BlY2lmeSBjb25maWdzIGluIHRoZSBpbmktZm9ybWF0dGVkIGZpbGU6CiAgICAvVXNlcnMvemVyMGNlbGwvcHJvZHVjdGlvbi9ydWxlcy90ZXJtaW5hbC9ldmlkZW5jZS8yMDI2MTEyM1QyMjU0MjY1NTAzNjVaLWpvdXJuZXlzL3dvcmsvbnBtL2hvbWUvLm5wbXJjCm9yIG9uIHRoZSBjb21tYW5kIGxpbmUgdmlhOiBucG0gPGNvbW1hbmQ+IC0ta2V5PXZhbHVlCgpNb3JlIGNvbmZpZ3VyYXRpb24gaW5mbzogbnBtIGhlbHAgY29uZmlnCkNvbmZpZ3VyYXRpb24gZmllbGRzOiBucG0gaGVscCA3IGNvbmZpZwoKbnBtQDExLjIwLjAgL1VzZXJzL3plcjBjZWxsLy5sb2NhbC9zaGFyZS9taXNlL2luc3RhbGxzL25vZGUvMjYuMTMuMS9saWIvbm9kZV9tb2R1bGVzL25wbQo=",
+      "stderr_b64": ""
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "dae6ba8cacb38b131e86112cf23751413c35a6b267aa5283245e863a80cf67bd",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/npm/_logs/2026-11-23T22_54_26_630Z-debug-0.log": {
+        "kind": "file",
+        "bytes": 1289,
+        "sha256": "f444f7a5ebb3ae46e95e437483ebffa966d164aac9356888f42d96868c3a9f17",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 363,
+        "sha256": "dae6ba8cacb38b131e86112cf23751413c35a6b267aa5283245e863a80cf67bd",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/npm/_logs/2026-11-23T22_54_26_630Z-debug-0.log": {
+        "before": null,
+        "after": {
+          "kind": "file",
+          "bytes": 1289,
+          "sha256": "f444f7a5ebb3ae46e95e437483ebffa966d164aac9356888f42d96868c3a9f17",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [
+        "cache/npm/_logs/2026-11-23T22_54_26_630Z-debug-0.log"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 1,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Choose a command from the actual help; do not infer install success.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

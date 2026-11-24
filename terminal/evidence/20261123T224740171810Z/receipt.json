@@ -1,0 +1,205 @@
+{
+  "v": 1,
+  "profile": "local-macos-arm64-stdout-pipe-stderr-private-pty",
+  "stdin": "pipe",
+  "pins": {
+    "v": 1,
+    "tools": {
+      "node": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+        "version": "v26.13.1",
+        "sha256": "266dec4dce3a6cdcf5cdc38722a00cf5ae6a12cc51068d2a227655bbb75751ec"
+      },
+      "npm": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+        "version": "11.20.0",
+        "sha256": "0a6f43cb58b81269aad0d3eff77f68b5d06ea7c241c199a63bee8b0dd337effc"
+      },
+      "pnpm": {
+        "path": "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "version": "12.21.0",
+        "sha256": "1d10621a2e24e340a16cefc50c36ded0f16b7abfe009f27fa2e3c60c34ce3642"
+      },
+      "empack": {
+        "path": "/Users/zer0cell/.local/bin/empack",
+        "version": "empack 0.8.8-beta",
+        "sha256": "99dabfeac357d25c9ec68f05c4d09b3154dbdcd905baf516c28a866e847d447f"
+      },
+      "yarn": {
+        "path": "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+        "version": "4.19.0",
+        "generation": "Modern/Berry, major4; not Yarn Classic1",
+        "sha256": "070ffef2a2b6877cd871864c16e29e8dd64a1a69cb493aaf4836c9d53c143163",
+        "archiveSha256": "96a5c3ec72472c44e16042caded154ad4c5cf267ab42ed337a9aa1f501a4f735",
+        "registryIntegrity": "sha512-jjv4NIPlz974CUxGIdQDuK7mRb1f26BFIdkCkuFcM/64LT9tTRVj7/UqEv9bcB8DKFvtUw680CVo71bEBsHjuA=="
+      }
+    },
+    "host": {
+      "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+      "architecture": "arm64",
+      "sw_vers": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n",
+      "locale": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LC_CTYPE": "C.UTF-8"
+      },
+      "shell": "/bin/bash"
+    },
+    "sources": {
+      "npm": "https://github.com/npm/cli/tree/v11.20.0",
+      "pnpm": "https://github.com/pnpm/pnpm/tree/v12.21.0",
+      "yarn": "https://github.com/yarnpkg/berry (distribution @yarnpkg/cli-dist4.19.0)",
+      "empack": "https://github.com/inherent-design/empack/tree/9d0ba2d10340736c39fd94ad21958a03d693cf18"
+    },
+    "limits": "Only this host observed; no Windows/Linux or screen-reader qualification yet."
+  },
+  "fixtureSha256": "69681f3aeeb1277c4ad4bfe5221ea0bb4fef197359f9e5040668e06782958e51",
+  "harnessSha256": "882f4e2975c50dd72363b7de860f0d66e909fb126dd805c967d618091fb54c6b",
+  "cases": [
+    {
+      "tool": "npm",
+      "case": "help",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 71
+    },
+    {
+      "tool": "npm",
+      "case": "refusal",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 13
+    },
+    {
+      "tool": "npm",
+      "case": "inspect",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 4
+    },
+    {
+      "tool": "npm",
+      "case": "preview",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 461
+    },
+    {
+      "tool": "pnpm",
+      "case": "help",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "pnpm",
+      "case": "refusal",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 26
+    },
+    {
+      "tool": "pnpm",
+      "case": "inspect",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "pnpm",
+      "case": "preview",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "yarn",
+      "case": "help",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "yarn",
+      "case": "refusal",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "yarn",
+      "case": "inspect",
+      "exit_code": 1,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 1
+    },
+    {
+      "tool": "yarn",
+      "case": "resolve-write",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 4
+    },
+    {
+      "tool": "empack",
+      "case": "help",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "empack",
+      "case": "refusal",
+      "exit_code": 2,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "empack",
+      "case": "inspect",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    },
+    {
+      "tool": "empack",
+      "case": "preview",
+      "exit_code": 0,
+      "signal": null,
+      "timed_out": false,
+      "capture_complete": true,
+      "changedPaths": 0
+    }
+  ],
+  "limits": "No cross-stream total order; private PTY is not a human or a controlling terminal; no hooks requested."
+}

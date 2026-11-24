@@ -1,0 +1,176 @@
+{
+  "v": 1,
+  "surface": "pnpm",
+  "case": "fully-piped-ci-prompt-gate",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "run",
+        "fixture-fail"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225425406843Z-journeys/work/pnpm/project"
+    },
+    "expectation": "Configured prompt gate must distinguish EOF/no terminal from available input. Declining an install is distinct from cancelling the requested script.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "pipe",
+      "stdout": "pipe",
+      "stderr": "pipe",
+      "width": 80
+    },
+    "envOverrides": {
+      "pnpm_config_verify_deps_before_run": "prompt"
+    },
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225425406843Z-journeys/work/pnpm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225425406843Z-journeys/work/pnpm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225425406843Z-journeys/work/pnpm/cache/empack",
+      "pnpm_config_pm_on_fail": "ignore"
+    },
+    "host": {
+      "isatty": {
+        "stdin": false,
+        "stdout": false,
+        "stderr": false
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.012837833259254694,
+          "channel": "stderr",
+          "bytes": 92
+        },
+        {
+          "seconds": 0.012879250105470419,
+          "channel": "stderr",
+          "bytes": 174
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "",
+      "stderr_b64": "RXJyb3I6IEVSUl9QTlBNX1ZFUklGWV9ERVBTX0JFRk9SRV9SVU4KCiAgw5cgQ2Fubm90IGNoZWNrIHdoZXRoZXIgZGVwZW5kZW5jaWVzIGFyZSBvdXRkYXRlZAogIGhlbHA6IFJ1biAicG5wbSBpbnN0YWxsIiBiZWZvcmUgcnVubmluZyBzY3JpcHRzLiBUaGUgInZlcmlmeURlcHNCZWZvcmVSdW46CiAgICAgICAgcHJvbXB0IiBzZXR0aW5nIGNhbm5vdCBwcm9tcHQgZm9yIGNvbmZpcm1hdGlvbiBpbiBub24taW50ZXJhY3RpdmUKICAgICAgICBlbnZpcm9ubWVudHMuCgo="
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "e9c7f8b0615f838e36147e126390bfdaa7abe61a249597b8efad213b776bac2d",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "e9c7f8b0615f838e36147e126390bfdaa7abe61a249597b8efad213b776bac2d",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 1,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Read whether installation was declined and whether the explicitly requested script still ran.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

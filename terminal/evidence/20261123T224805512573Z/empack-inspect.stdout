@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "scope": "documents",
+  "pack": "Terminal Fixture",
+  "author_schema": 6,
+  "authoring": {
+    "schema": 1,
+    "author_schema": 6,
+    "pack": "Terminal Fixture",
+    "lock_status": "missing",
+    "lock_reason": null,
+    "runtime_satisfied": null,
+    "dependencies": [],
+    "editing_limitations": [
+      {
+        "document": "empack.yml",
+        "path": [
+          "pack",
+          "authors"
+        ],
+        "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+      },
+      {
+        "document": "empack.yml",
+        "path": [
+          "runtime",
+          "java"
+        ],
+        "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+      }
+    ]
+  },
+  "lock": "missing",
+  "verified_files": 0,
+  "references": 0,
+  "findings": [
+    {
+      "subject": "Authoring",
+      "state": "passed",
+      "required": true,
+      "message": "Author files are valid",
+      "diagnostic": null
+    },
+    {
+      "subject": "Lock",
+      "state": "unverified",
+      "required": false,
+      "message": "No lock present; recorded dependencies were not checked",
+      "diagnostic": null
+    }
+  ],
+  "complete": true
+}

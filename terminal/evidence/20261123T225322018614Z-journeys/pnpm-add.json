@@ -1,0 +1,393 @@
+{
+  "v": 1,
+  "surface": "pnpm",
+  "case": "add",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+        "add",
+        "../extra",
+        "--ignore-scripts",
+        "--offline"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/project"
+    },
+    "expectation": "Explicitly add a local dependency back; project writes expected.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/cache/empack",
+      "pnpm_config_pm_on_fail": "ignore"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.017962833400815725,
+          "channel": "stdout",
+          "bytes": 63
+        },
+        {
+          "seconds": 0.02052733302116394,
+          "channel": "stdout",
+          "bytes": 15
+        },
+        {
+          "seconds": 0.02119987504556775,
+          "channel": "stdout",
+          "bytes": 60
+        },
+        {
+          "seconds": 0.044360417407006025,
+          "channel": "stdout",
+          "bytes": 45
+        },
+        {
+          "seconds": 0.05063187517225742,
+          "channel": "stdout",
+          "bytes": 33
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "4pyTIExvY2tmaWxlIHBhc3NlcyBzdXBwbHktY2hhaW4gcG9saWNpZXMgKHZlcmlmaWVkIDM4N21zIGFnbykKUGFja2FnZXM6ICsxCisKUHJvZ3Jlc3M6IHJlc29sdmVkIDEsIHJldXNlZCAwLCBkb3dubG9hZGVkIDAsIGFkZGVkIDEsIGRvbmUKCmRlcGVuZGVuY2llczoKKyB0ZXJtaW5hbC1leHRyYSA8LSAuLi9leHRyYQoKRG9uZSBpbiA0MW1zIHVzaW5nIHBucG0gdjEyLjIxLjAK",
+      "stderr_b64": ""
+    },
+    "before": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 1588,
+        "sha256": "4d3282e1dc034ecea29115d815ca294e13405879b119a232fbe33e488a81fa96",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/58a43b2565f9567e94b8c6bcd013693b": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 724,
+        "sha256": "e89bace6e7b951342b825014514ddbfe321ef9f90e5b024d9aa462d11cbd9f9f",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 1815,
+        "sha256": "809648eb04a390fa83b81f36185c1d70812e2baf3710512c22fde62c6767d07f",
+        "mode": 420
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 325,
+        "sha256": "b8ff8499fe512321b9336e98fd03f123529236301d098eb7c8bc2c042bd3712e",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 354,
+        "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "kind": "file",
+        "bytes": 3176,
+        "sha256": "19012d2e556b1e058774c65e2eed492ee399a67928d069832a317518b211e4f4",
+        "mode": 420
+      },
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/index.db": {
+        "kind": "file",
+        "bytes": 12288,
+        "sha256": "5849c8c96649c757ae76f624f57aec3e1725522fee0bbee70d0dce45c3c3c4b7",
+        "mode": 420
+      },
+      "home/data/pnpm/store/v11/projects/58a43b2565f9567e94b8c6bcd013693b": {
+        "kind": "link",
+        "target": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225322018614Z-journeys/work/pnpm/project"
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "project/node_modules/.modules.yaml": {
+        "kind": "file",
+        "bytes": 724,
+        "sha256": "e89bace6e7b951342b825014514ddbfe321ef9f90e5b024d9aa462d11cbd9f9f",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "kind": "file",
+        "bytes": 440,
+        "sha256": "767c72953964587993196b5c0a54ab223351043823e1893caaed2bb1969c6ba6",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "kind": "file",
+        "bytes": 1815,
+        "sha256": "3dd56262f3eb5dff468ab17e96027c6b43e05ecfed7ec1782eff9f9792add315",
+        "mode": 420
+      },
+      "project/node_modules/terminal-extra": {
+        "kind": "link",
+        "target": "../../extra"
+      },
+      "project/node_modules/terminal-tiny": {
+        "kind": "link",
+        "target": ".pnpm/terminal-tiny@file+..+tiny/node_modules/terminal-tiny"
+      },
+      "project/package.json": {
+        "kind": "file",
+        "bytes": 364,
+        "sha256": "bab7a9a431d74b9eb267db12746e207df88aafacacff3a3e4dbb89c03630ffb1",
+        "mode": 420
+      },
+      "project/pnpm-lock.yaml": {
+        "kind": "file",
+        "bytes": 440,
+        "sha256": "767c72953964587993196b5c0a54ab223351043823e1893caaed2bb1969c6ba6",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {
+      "cache/pnpm/lockfile-verified.jsonl": {
+        "before": {
+          "kind": "file",
+          "bytes": 1588,
+          "sha256": "4d3282e1dc034ecea29115d815ca294e13405879b119a232fbe33e488a81fa96",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 3176,
+          "sha256": "19012d2e556b1e058774c65e2eed492ee399a67928d069832a317518b211e4f4",
+          "mode": 420
+        }
+      },
+      "project/node_modules/.pnpm-workspace-state-v1.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 1815,
+          "sha256": "809648eb04a390fa83b81f36185c1d70812e2baf3710512c22fde62c6767d07f",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 1815,
+          "sha256": "3dd56262f3eb5dff468ab17e96027c6b43e05ecfed7ec1782eff9f9792add315",
+          "mode": 420
+        }
+      },
+      "project/node_modules/.pnpm/lock.yaml": {
+        "before": {
+          "kind": "file",
+          "bytes": 354,
+          "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 440,
+          "sha256": "767c72953964587993196b5c0a54ab223351043823e1893caaed2bb1969c6ba6",
+          "mode": 420
+        }
+      },
+      "project/node_modules/terminal-extra": {
+        "before": null,
+        "after": {
+          "kind": "link",
+          "target": "../../extra"
+        }
+      },
+      "project/package.json": {
+        "before": {
+          "kind": "file",
+          "bytes": 325,
+          "sha256": "b8ff8499fe512321b9336e98fd03f123529236301d098eb7c8bc2c042bd3712e",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 364,
+          "sha256": "bab7a9a431d74b9eb267db12746e207df88aafacacff3a3e4dbb89c03630ffb1",
+          "mode": 420
+        }
+      },
+      "project/pnpm-lock.yaml": {
+        "before": {
+          "kind": "file",
+          "bytes": 354,
+          "sha256": "e801eb5cd3eda77483cb0b2d14066e9cb2ca066d74705a32b0585d0d07f31fa2",
+          "mode": 420
+        },
+        "after": {
+          "kind": "file",
+          "bytes": 440,
+          "sha256": "767c72953964587993196b5c0a54ab223351043823e1893caaed2bb1969c6ba6",
+          "mode": 420
+        }
+      }
+    },
+    "effectsByScope": {
+      "project": [
+        "project/node_modules/.pnpm-workspace-state-v1.json",
+        "project/node_modules/.pnpm/lock.yaml",
+        "project/node_modules/terminal-extra",
+        "project/package.json",
+        "project/pnpm-lock.yaml"
+      ],
+      "durable": [],
+      "cache": [
+        "cache/pnpm/lockfile-verified.jsonl"
+      ],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Confirm authored identity and lock agree.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

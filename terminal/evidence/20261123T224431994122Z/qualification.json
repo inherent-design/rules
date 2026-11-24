@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "excludedCases": {
+    "npm/*": "Harness passed a shell wrapper to Node; not npm behavior.",
+    "empack/preview": "Harness placed the root-only net-timeout argument after sync; not a valid sync preview."
+  },
+  "retainedCases": "Other traces remain native observations; interpretation pending.",
+  "correction": "study.py executes the pinned npm wrapper directly and places root options before sync."
+}

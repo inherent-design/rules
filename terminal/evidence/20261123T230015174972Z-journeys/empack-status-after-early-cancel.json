@@ -1,0 +1,178 @@
+{
+  "v": 1,
+  "surface": "empack",
+  "case": "status-after-early-cancel",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/bin/empack",
+        "status",
+        "--json"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T230015174972Z-journeys/work/empack/project"
+    },
+    "expectation": "Inspection should show what actually exists after early cancellation.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "pipe",
+      "stderr": "tty",
+      "width": 80
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T230015174972Z-journeys/work/empack/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T230015174972Z-journeys/work/empack/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T230015174972Z-journeys/work/empack/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": false,
+        "stderr": true
+      },
+      "width": 80,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.0058142091147601604,
+          "channel": "stderr",
+          "bytes": 6
+        },
+        {
+          "seconds": 0.006483500357717276,
+          "channel": "stdout",
+          "bytes": 792
+        },
+        {
+          "seconds": 0.006490417290478945,
+          "channel": "stderr",
+          "bytes": 12
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "ewogICJzY2hlbWEiOiAxLAogICJyb290IjogIi9Vc2Vycy96ZXIwY2VsbC9wcm9kdWN0aW9uL3J1bGVzL3Rlcm1pbmFsL2V2aWRlbmNlLzIwMjYxMTIzVDIzMDAxNTE3NDk3Mlotam91cm5leXMvd29yay9lbXBhY2svcHJvamVjdCIsCiAgInNlbGVjdGVkIjogImF1dGhvciIsCiAgImNvbnRleHRzIjogWwogICAgewogICAgICAiY29udGV4dCI6ICJhdXRob3IiLAogICAgICAic3RhdGUiOiAidmFsaWQiLAogICAgICAibmFtZSI6ICJUZXJtaW5hbCBGaXh0dXJlIiwKICAgICAgInZlcnNpb24iOiAiMS4wLjAiLAogICAgICAibWluZWNyYWZ0IjogIjEuMjEuMSIsCiAgICAgICJsb2FkZXIiOiAiVmFuaWxsYSIsCiAgICAgICJleGFjdCI6IG51bGwsCiAgICAgICJsb2NrIjogIm1pc3NpbmciLAogICAgICAiZ2FtZV9kaXJlY3RvcnkiOiBudWxsLAogICAgICAic2lkZSI6IG51bGwsCiAgICAgICJ1cGRhdGVfb3duZXIiOiAiYXV0aG9yOiB1cGRhdGUgc2VsZWN0cyBkZXBlbmRlbmNpZXM7IHN5bmMgYXBwbGllcyByZWNvcmRlZCBpbnRlbnQiCiAgICB9CiAgXSwKICAiZmluZGluZ3MiOiBbCiAgICB7CiAgICAgICJjb2RlIjogImxvY2stbm90LWN1cnJlbnQiLAogICAgICAibWVzc2FnZSI6ICJBdXRob3IgaW50ZW50IGhhcyBubyB2YWxpZCBtYXRjaGluZyByZXNvbHV0aW9uOyBwcmV2aWV3IHN5bmNocm9uaXphdGlvbiIsCiAgICAgICJuZXh0IjogWwogICAgICAgICItLWRyeS1ydW4iLAogICAgICAgICJzeW5jIgogICAgICBdCiAgICB9CiAgXSwKICAiY29udGVudF92ZXJpZmllZCI6IGZhbHNlCn0K",
+      "stderr_b64": "G1s/MjVoG1s/MjVoG1s/MjVo"
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 200,
+        "sha256": "d880902171f6c8234944ec4e107bae6031e174fb9f8355c3d51dc06e90235f3e",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Do not assume cancellation created or removed a lock.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}

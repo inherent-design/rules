@@ -1,0 +1,57 @@
+{
+  "v": 1,
+  "rulesBase": "7084e0b141c9e0c925fc9c596897f6683bba0b1f",
+  "scope": "terminal/** only; production empack unchanged by this study",
+  "checks": {
+    "command": "LEAN=/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean BEND=/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend terminal/check",
+    "exitCode": 0,
+    "lean": "4.34.0",
+    "bend": "2.0.40",
+    "leanModules": 6,
+    "bendKernelCheckedModules": 2,
+    "subprocessFixtureTests": 5,
+    "nativeAndModelChecks": 86,
+    "negativeControlsRejected": 3,
+    "candidateCombinations": 24,
+    "output": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)\nbend 2.0.40\nALL PROOFS CHECK\nALL PROOFS CHECK\n.....\n----------------------------------------------------------------------\nRan 5 tests in 0.278s\n\nOK\n{\n  \"v\": 1,\n  \"nativeAndModelChecks\": 86,\n  \"negativeControlsRejected\": [\n    \"refusal-assumed-rollback\",\n    \"cancellation-erases-success\",\n    \"progress-contaminates-json\"\n  ],\n  \"candidateCombinations\": 24,\n  \"limits\": \"Finite retained-trace conformance and abstract proofs; not a proof of complete application/source correspondence.\"\n}\n"
+  },
+  "corpus": {
+    "runs": 12,
+    "invocationsIncludingExcludedHarnessCases": 231,
+    "qualifiedScope": "coverage.md; first-run and lifecycle-discovery exclusions retained separately"
+  },
+  "authoredTopLevelSha256": {
+    ".gitignore": "4b4375f2484e2d3a7beb30d3fd0f4e20022a9cca68f2274247475e732f67d136",
+    "Candidate.bend": "4db8d39ba74c92eec1fff63a8aca4ab4bc44c3603599c64c21d0425ff63054d7",
+    "Candidate.lean": "5bd175fec2356654a0afc1799eea4dc88f33b2fb358598fa15fb5bf23c0b42dd",
+    "Empack.lean": "64286ea993b9bd34c8d856b3cf15e1fdf2b0d3420643d1e28f3e27ee8ed54d3b",
+    "Model.lean": "267eab5753fd1a5f2f3fafe8842921f8f6e84785a84250f6dd65925913938670",
+    "Native.bend": "10bd661d256efe3b3eb355b8680e19a7edd076f4b91ad989e81176a989df0875",
+    "Npm.lean": "00ba5a027ea186812cc4712d5a289ab686a6246c0d6c7b44f4eb0c50648b4e9a",
+    "Pnpm.lean": "c0f435a8a2472972cc10b2a048680bd23c38c279f3b3ac076d838a5398917c0d",
+    "README.md": "216d14407bd9e2cb42a782735d58b3b4a04be54727fccdd03042e5f39de58487",
+    "Replay.lean": "c2ec8424503c6365b32eea8a7c31027321224a045cff23f5bd614030e0487f97",
+    "Yarn.lean": "587d6e7a1ecb114c2d0701edc55203f933906f01bd26591a0ea2d4f26abf7529",
+    "check": "972dc8e5988e48699b78295a44b4dac79403b5f3dd02b51fe8870aa7551972f3",
+    "claims.json": "031db1cb5b08ad8d9955cec4571a678ac6b483f07d3ec3c6898a71d814a324dc",
+    "color.py": "a7f34fac631a5b4b69c2311cf992cf96d66bd9f840638a40329cc6e2e96ac0a4",
+    "coverage.md": "a2baaf52c83ba327a3da802a87fd90d4205230309f46d1735f02f48cb3835f36",
+    "edges.py": "2546440282ab5e5a2c883fee113b8a903014e8f6e458185eed94da8ef3757aef",
+    "interpretations.json": "5d9fbecfec1d33cae1bf78ac8dcc287468452601e61752fb6077fa13d79a66a7",
+    "journeys.md": "9ff55cffd5cc96be74b7a83a35c2e54ccccb0178180d377df0403736bb52726a",
+    "journeys.py": "5ef95a4baaa2dad69038e67474f7a379a5645f4b09943130520dec1fd2948637",
+    "profiles.py": "a955534e526cbb71c4adf7b7dd83b983954248e555ca4d98ce408772f60822b1",
+    "replay.py": "0d213990198b1dcea16f1f3e0da9fb3c60b7f6a9eb2b62df253fbf4d24281692",
+    "report.md": "decaebe8b8e0ef2b0282c35647be6077dfdfe1f32dee46e5fbee87e9740a5649",
+    "streams.py": "0cede0ee4da0c0b2a56ed10799dcb0b9b0830a9405fffc93d5410c59720b175f",
+    "study.py": "882f4e2975c50dd72363b7de860f0d66e909fb126dd805c967d618091fb54c6b",
+    "test_streams.py": "278b6f466f10626d1d8c653b3c53aba0cc4f86db87b450dfaca479a5bb5d34ce"
+  },
+  "limitations": [
+    "macOS application evidence only",
+    "Non-controlling private PTYs",
+    "Finite sampled byte/mode/link effects, not inode/timestamp/transient/external writes",
+    "No native journal crash finish/restore or process-tree retirement qualification",
+    "No production acceptance or implementation changes"
+  ]
+}

@@ -1,0 +1,99 @@
+[1mnpm[22m [31merror[39m [94mcode[39m EUSAGE
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m Missing: terminal-extra@1.0.0 from lock file
+[1mnpm[22m [31merror[39m Missing: terminal-extra@1.0.0 from lock file
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m Clean install a project
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m Usage:
+[1mnpm[22m [31merror[39m npm ci
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m Options:
+[1mnpm[22m [31merror[39m [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+[1mnpm[22m [31merror[39m [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+[1mnpm[22m [31merror[39m [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+[1mnpm[22m [31merror[39m [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts]
+[1mnpm[22m [31merror[39m [--allow-directory <all|none|root>] [--allow-file <all|none|root>]
+[1mnpm[22m [31merror[39m [--allow-git <all|none|root>] [--allow-remote <all|none|root>]
+[1mnpm[22m [31merror[39m [--allow-scripts <package-list> [--allow-scripts <package-list> ...]]
+[1mnpm[22m [31merror[39m [--strict-allow-scripts] [--dangerously-allow-all-scripts] [--no-audit]
+[1mnpm[22m [31merror[39m [--no-bin-links] [--no-fund] [--dry-run]
+[1mnpm[22m [31merror[39m [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+[1mnpm[22m [31merror[39m [--workspaces] [--include-workspace-root] [--install-links]
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --install-strategy
+[1mnpm[22m [31merror[39m     Sets the strategy for installing packages in node_modules.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --legacy-bundling
+[1mnpm[22m [31merror[39m     Instead of hoisting package installs in `node_modules`, install packages
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --global-style
+[1mnpm[22m [31merror[39m     Only install direct dependencies in the top level `node_modules`,
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --omit
+[1mnpm[22m [31merror[39m     Dependency types to omit from the installation tree on disk.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --include
+[1mnpm[22m [31merror[39m     Option that allows for defining which types of dependencies to install.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --strict-peer-deps
+[1mnpm[22m [31merror[39m     If set to `true`, and `--legacy-peer-deps` is not set, then _any_
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --foreground-scripts
+[1mnpm[22m [31merror[39m     Run all build scripts (ie, `preinstall`, `install`, and
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --ignore-scripts
+[1mnpm[22m [31merror[39m     If true, npm does not run scripts specified in package.json files.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --allow-directory
+[1mnpm[22m [31merror[39m     Limits the ability for npm to install dependencies from directories.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --allow-file
+[1mnpm[22m [31merror[39m     Limits the ability for npm to install dependencies from tarball files.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --allow-git
+[1mnpm[22m [31merror[39m     Limits the ability for npm to fetch dependencies from git references.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --allow-remote
+[1mnpm[22m [31merror[39m     Limits the ability for npm to fetch dependencies from urls.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --allow-scripts
+[1mnpm[22m [31merror[39m     Comma-separated list of packages whose install-time lifecycle scripts
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --strict-allow-scripts
+[1mnpm[22m [31merror[39m     If `true`, turn the install-script policy from a warning into a hard
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --dangerously-allow-all-scripts
+[1mnpm[22m [31merror[39m     If `true`, bypass the `allowScripts` policy entirely and run every
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --audit
+[1mnpm[22m [31merror[39m     When "true" submit audit reports alongside the current npm command to the
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --bin-links
+[1mnpm[22m [31merror[39m     Tells npm to create symlinks (or `.cmd` shims on Windows) for package
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --fund
+[1mnpm[22m [31merror[39m     When "true" displays the message at the end of each `npm install`
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --dry-run
+[1mnpm[22m [31merror[39m     Indicates that you don't want npm to make any changes and that it should
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   -w|--workspace
+[1mnpm[22m [31merror[39m     Enable running a command in the context of the configured workspaces of the
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --workspaces
+[1mnpm[22m [31merror[39m     Set to true to run the command in the context of **all** configured
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --include-workspace-root
+[1mnpm[22m [31merror[39m     Include the workspace root when workspaces are enabled for a command.
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m   --install-links
+[1mnpm[22m [31merror[39m     When set file: protocol dependencies will be packed and installed as
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m aliases: clean-install, ic, install-clean, isntall-clean
+[1mnpm[22m [31merror[39m
+[1mnpm[22m [31merror[39m Run "npm help ci" for more info
+[1mnpm[22m [31merror[39m A complete log of this run can be found in: /Users/zer0cell/production/rules/terminal/evidence/20261123T225211680511Z-journeys/work/npm/cache/npm/_logs/2026-11-23T22_52_12_213Z-debug-0.log

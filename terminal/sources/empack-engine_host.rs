@@ -1,0 +1,782 @@
+//! CLI composition for the shared engine. Host state is separate from disposable caches.
+use super::{AppConfig, cli::CliRecoveryAction, session::Session};
+use crate::engine::{
+    acquisition::TransferLimits,
+    api::{
+        Engine, EngineConfig, ExecutionGrant, ExecutionOutcome, ExecutionReceipt,
+        NetworkPermission, OperationResources, Preparation, PreparedOperation, ProjectTarget,
+        RecoverRequest, RecoveryAction,
+    },
+    artifacts::ArchiveLimits,
+    resources::{ResourceGovernor, ResourceRequest},
+    runtime::{OperationOutcome, RuntimeError},
+    server_runtime::installer::InstallerExecution,
+    snapshot::SnapshotLimits,
+};
+use anyhow::{Context, Result, ensure};
+use std::{
+    future::Future,
+    path::{Path, PathBuf},
+    time::Duration,
+};
+
+fn counted(count: usize, singular: &str, plural: &str) -> String {
+    format!("{count} {}", if count == 1 { singular } else { plural })
+}
+
+fn absolute(invocation: &Path, selected: &Path) -> PathBuf {
+    if selected.is_absolute() {
+        selected.to_path_buf()
+    } else {
+        invocation.join(selected)
+    }
+}
+fn state_root(config: &AppConfig, invocation: &Path) -> Result<PathBuf> {
+    if let Some(path) = &config.state_dir {
+        ensure!(
+            !path.as_os_str().is_empty(),
+            "State directory cannot be empty"
+        );
+        return Ok(absolute(invocation, path));
+    }
+    let directories = directories::ProjectDirs::from("design", "inherent", "empack")
+        .context("Cannot determine durable state directory; set --state-dir")?;
+    Ok(directories.data_local_dir().join("operations"))
+}
+fn content_cache_root(config: &AppConfig, invocation: &Path) -> Result<PathBuf> {
+    let base = match &config.cache_dir {
+        Some(path) => {
+            ensure!(
+                !path.as_os_str().is_empty(),
+                "Cache directory cannot be empty"
+            );
+            path.clone()
+        }
+        None => crate::platform::cache::cache_root()?,
+    };
+    Ok(absolute(invocation, &base).join("content-v1"))
+}
+fn acquisition_with_cache_lookup(
+    session: &dyn Session,
+    transport: crate::engine::acquisition::HttpAcquisition,
+) -> Result<crate::engine::acquisition::HttpAcquisition> {
+    let (invocation, _) = project_path(session)?;
+    Ok(
+        transport.with_cache_lookup(crate::engine::content::cache::ContentCache::new(
+            content_cache_root(session.config().app_config(), &invocation)?,
+            crate::engine::content::store::ContentStoreLimits::default(),
+        )?),
+    )
+}
+fn governor(config: &AppConfig) -> ResourceGovernor {
+    ResourceGovernor::new(ResourceRequest {
+        jobs: config.cpu_jobs.max(1) as u64,
+        // Includes the installer JVM (1 GiB heap plus overhead) and retained build inputs.
+        memory_bytes: 2 << 30,
+        scratch_bytes: 128 << 30,
+        open_files: 2048,
+    })
+}
+fn operation_resources() -> OperationResources {
+    let work = ResourceRequest {
+        jobs: 1,
+        memory_bytes: 64 << 20,
+        scratch_bytes: 64 << 20,
+        open_files: 64,
+    };
+    let held = ResourceRequest {
+        memory_bytes: 64 << 20,
+        open_files: 8,
+        ..Default::default()
+    };
+    OperationResources {
+        capture: work,
+        prepared: held,
+        local_acquisition: work,
+        acquired: ResourceRequest {
+            scratch_bytes: 64 << 20,
+            ..held
+        },
+        assembly: work,
+        receipt: held,
+    }
+}
+fn installer_execution() -> InstallerExecution {
+    InstallerExecution {
+        java: "java".into(),
+        deadline: Duration::from_secs(1800),
+        heap_megabytes: 1024,
+        // Runtime output is bounded separately from the full project snapshot.
+        // Its worst-case staging and retained leases must fit the host budget together.
+        output: SnapshotLimits {
+            entries: 1024,
+            depth: 128,
+            file_bytes: 2 << 30,
+            total_bytes: 4 << 30,
+        },
+    }
+}
+fn engine(config: &AppConfig, invocation: &Path) -> Result<Engine> {
+    engine_with_governor(config, invocation, governor(config))
+}
+fn engine_with_governor(
+    config: &AppConfig,
+    invocation: &Path,
+    governor: ResourceGovernor,
+) -> Result<Engine> {
+    let cache = crate::engine::content::cache::ContentCache::new(
+        content_cache_root(config, invocation)?,
+        Default::default(),
+    )?;
+    Ok(Engine::new(
+        EngineConfig {
+            state_root: state_root(config, invocation)?,
+            retained_operations: 4,
+            resources: operation_resources(),
+            snapshot: SnapshotLimits::default(),
+            archive: ArchiveLimits::default(),
+            transfer: TransferLimits {
+                deadline: Duration::from_secs(config.net_timeout),
+                ..Default::default()
+            },
+            installer: installer_execution(),
+        },
+        governor,
+    )?
+    .with_content_cache(cache))
+}
+/// Resolve one invocation-relative project selection without changing process cwd.
+fn project_path(session: &dyn Session) -> Result<(PathBuf, PathBuf)> {
+    let invocation = session.invocation().current_dir()?;
+    let selected = session
+        .config()
+        .app_config()
+        .workdir
+        .as_deref()
+        .unwrap_or(&invocation);
+    Ok((invocation.clone(), absolute(&invocation, selected)))
+}
+
+/// Dropping a preparation future cancels its owned workers; the outer host always drains shutdown.
+async fn cancellable<T>(session: &dyn Session, work: impl Future<Output = Result<T>>) -> Result<T> {
+    tokio::pin!(work);
+    let mut ticks = tokio::time::interval(Duration::from_millis(50));
+    loop {
+        tokio::select! {
+            result = &mut work => return result,
+            _ = ticks.tick() => session.process().check_cancelled()?,
+        }
+    }
+}
+pub async fn recover(
+    session: &dyn Session,
+    action: CliRecoveryAction,
+    operation: Option<String>,
+) -> Result<()> {
+    let invocation = session.invocation().current_dir()?;
+    let config = session.config().app_config();
+    let selected = config.workdir.as_deref().unwrap_or(&invocation);
+    let path = absolute(&invocation, selected);
+    let location = crate::engine::publication::RecoveryLocation {
+        project: path.clone(),
+        state: state_root(config, &invocation)?,
+    };
+    let target = match std::fs::symlink_metadata(&path) {
+        Ok(_) => ProjectTarget::Existing(path),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => ProjectTarget::New(path),
+        Err(error) => return Err(error.into()),
+    };
+    let engine = engine(config, &invocation)?;
+    let result = recover_with_engine(session, &engine, target, action, operation, &location)
+        .await
+        .map_err(|error| location.attach(error));
+    engine.shutdown().await;
+    result
+}
+fn show_directory(session: &dyn Session, path: &Path) {
+    // Native debug paths preserve non-Unicode bytes and escape embedded line
+    // breaks. This is a directory label, never a copyable shell command.
+    session
+        .display()
+        .status()
+        .info(&format!("Directory: {path:?}"));
+}
+fn show_target_directory(session: &dyn Session, target: &ProjectTarget) {
+    match target {
+        ProjectTarget::Existing(path) | ProjectTarget::New(path) => show_directory(session, path),
+    }
+}
+
+fn show_changes(session: &dyn Session, files: &empack_core::files::FilePlan) -> Result<()> {
+    use empack_core::files::{FileChange, ObservedPath};
+    for change in files.changes() {
+        let path = crate::engine::layout::ProjectLayout::path(change.target())?;
+        let (action, detail) = match change {
+            FileChange::Replace {
+                before: ObservedPath::Absent,
+                after,
+                ..
+            } => ("create", format!("{} bytes", after.bytes)),
+            FileChange::Replace {
+                before: ObservedPath::File(before),
+                after,
+                ..
+            } => (
+                "replace",
+                format!("{} -> {} bytes", before.bytes, after.bytes),
+            ),
+            FileChange::Remove { before, .. } => ("remove", format!("{} bytes", before.bytes)),
+            FileChange::Replace {
+                before: ObservedPath::Directory,
+                ..
+            } => anyhow::bail!("Recovery cannot replace a directory"),
+        };
+        session
+            .display()
+            .status()
+            .info(&format!("{action} {} ({detail})", path.as_str()));
+    }
+    Ok(())
+}
+async fn recover_with_engine(
+    session: &dyn Session,
+    engine: &Engine,
+    target: ProjectTarget,
+    action: CliRecoveryAction,
+    operation: Option<String>,
+    location: &crate::engine::publication::RecoveryLocation,
+) -> Result<()> {
+    session.process().check_cancelled()?;
+    let status = cancellable(session, engine.inspect_recovery(target.clone())).await?;
+    let Some(status) = status else {
+        ensure!(
+            operation.is_none(),
+            "Requested recovery operation is no longer pending"
+        );
+        session
+            .display()
+            .status()
+            .info("No interrupted engine operation to recover");
+        return Ok(());
+    };
+    ensure!(
+        operation
+            .as_ref()
+            .is_none_or(|value| value == &status.operation),
+        "Pending recovery operation differs from --operation"
+    );
+    session.display().status().info(&format!(
+        "Interrupted operation: {} ({})",
+        status.operation,
+        match status.kind {
+            crate::engine::publication::RecoveryKind::Publication => "file changes",
+            crate::engine::publication::RecoveryKind::Creation => "directory creation",
+        }
+    ));
+    if status.restoring {
+        session
+            .display()
+            .status()
+            .info("This operation is already restoring its prior files");
+    }
+    let action = match action {
+        CliRecoveryAction::Inspect => {
+            super::recovery_guidance::show(session, location, &status);
+            return Ok(());
+        }
+        CliRecoveryAction::Finish => RecoveryAction::Finish,
+        CliRecoveryAction::Restore => RecoveryAction::Restore,
+    };
+    let prepared = match cancellable(
+        session,
+        engine.prepare(
+            target,
+            RecoverRequest {
+                operation: status.operation,
+                action,
+            },
+        ),
+    )
+    .await?
+    {
+        Preparation::Ready(prepared) => prepared,
+        Preparation::NeedsInput(_) => anyhow::bail!("Recovery unexpectedly requires acquisition"),
+    };
+    let view = prepared
+        .view()
+        .recovery()
+        .context("Missing recovery preview")?;
+    session.display().status().info(&format!(
+        "{}: {}",
+        match view.action {
+            RecoveryAction::Finish if status.restoring => "Finish restoring previous files",
+            RecoveryAction::Finish => "Finish saved changes",
+            RecoveryAction::Restore => "Restore previous files",
+        },
+        counted(view.files.changes().len(), "file change", "file changes")
+    ));
+    show_changes(session, &view.files)?;
+    apply(session, engine, prepared, "Recovery", |receipt| {
+        let ExecutionReceipt::Recovery(receipt) = receipt else {
+            anyhow::bail!("Unexpected recovery receipt");
+        };
+        Ok(format!(
+            "{} ({})",
+            match receipt.publication.disposition {
+                crate::engine::publication::PublicationDisposition::Published =>
+                    "Finished saved changes",
+                crate::engine::publication::PublicationDisposition::Restored =>
+                    "Restored previous state",
+            },
+            counted(
+                receipt.publication.changed_files,
+                "file change",
+                "file changes"
+            )
+        ))
+    })
+    .await
+}
+
+/// An application request, never an execution grant or overwrite permission.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ApplicationMode {
+    Preview,
+    Apply,
+}
+impl ApplicationMode {
+    /// Explicit action verbs execute by default; only the shared dry-run setting previews.
+    pub(super) fn for_action(config: &AppConfig) -> Self {
+        if config.dry_run {
+            Self::Preview
+        } else {
+            Self::Apply
+        }
+    }
+}
+
+/// Callers display their exact preview before this shared approval and owned execution boundary.
+async fn apply(
+    session: &dyn Session,
+    engine: &Engine,
+    prepared: PreparedOperation,
+    label: &str,
+    completed: impl FnOnce(&ExecutionReceipt) -> Result<String>,
+) -> Result<()> {
+    apply_in_mode(
+        session,
+        engine,
+        prepared,
+        label,
+        ApplicationMode::Apply,
+        false,
+        completed,
+    )
+    .await
+}
+async fn apply_in_mode(
+    session: &dyn Session,
+    engine: &Engine,
+    prepared: PreparedOperation,
+    label: &str,
+    mode: ApplicationMode,
+    quiet: bool,
+    completed: impl FnOnce(&ExecutionReceipt) -> Result<String>,
+) -> Result<()> {
+    if mode == ApplicationMode::Preview {
+        session
+            .display()
+            .status()
+            .message(if session.config().app_config().dry_run {
+                "Dry run complete - no changes applied"
+            } else {
+                "Preview only; use --apply to apply these changes."
+            });
+        return Ok(());
+    }
+    if !approve(session, label)? {
+        return Ok(());
+    }
+    execute_approved_with_feedback(session, engine, prepared, label, quiet, completed).await
+}
+fn approve(session: &dyn Session, label: &str) -> Result<bool> {
+    if session.config().app_config().dry_run {
+        session
+            .display()
+            .status()
+            .complete("Dry run complete - no changes applied");
+        return Ok(false);
+    }
+    ensure!(
+        session.config().app_config().yes || session.interactive().can_choose(),
+        super::cli::CommandInputRequired(
+            "Noninteractive execution requires --yes; use --dry-run to inspect the plan"
+        )
+    );
+    if !session.config().app_config().yes
+        && !session.interactive().confirm(
+            &format!("Apply this {} plan?", label.to_ascii_lowercase()),
+            false,
+        )?
+    {
+        session
+            .display()
+            .status()
+            .info(&format!("{label} not applied"));
+        return Ok(false);
+    }
+    Ok(true)
+}
+/// The composition root has displayed and approved this exact plan (or a union containing it).
+async fn execute_approved(
+    session: &dyn Session,
+    engine: &Engine,
+    prepared: PreparedOperation,
+    label: &str,
+    completed: impl FnOnce(&ExecutionReceipt) -> Result<String>,
+) -> Result<()> {
+    execute_approved_with_feedback(session, engine, prepared, label, false, completed).await
+}
+
+async fn execute_approved_with_feedback(
+    session: &dyn Session,
+    engine: &Engine,
+    prepared: PreparedOperation,
+    label: &str,
+    quiet: bool,
+    completed: impl FnOnce(&ExecutionReceipt) -> Result<String>,
+) -> Result<()> {
+    session.process().check_cancelled()?;
+    let runs_runtime = matches!(
+        prepared.view(),
+        crate::engine::api::OperationPreview::Launch(_)
+    );
+    let grant = ExecutionGrant {
+        plan: prepared.view().plan(),
+        replacement: prepared.view().replacement(),
+        network: if prepared.view().needs_network() {
+            NetworkPermission::Allow
+        } else {
+            NetworkPermission::Offline
+        },
+        run_installer: prepared.view().runs_installer(),
+        run_runtime: runs_runtime,
+    };
+    let mut handle = engine.start(prepared.authorize(grant)?)?;
+    let mut progress = progress::ProgressDisplay::new(session, quiet);
+    let mut ticks = tokio::time::interval(Duration::from_millis(50));
+    let outcome = loop {
+        tokio::select! {
+            biased;
+            outcome = handle.wait() => break outcome,
+            _ = ticks.tick() => {
+                progress.observe_work(handle.progress());
+                if session.process().check_cancelled().is_err() {
+                    handle.cancel();
+                    break handle.wait().await;
+                }
+            }
+        }
+    };
+    drop(progress);
+    let result = match &*outcome {
+        OperationOutcome::Completed(ExecutionOutcome::Completed(receipt)) => {
+            completed(receipt).map(|message| session.display().status().complete(&message))
+        }
+        OperationOutcome::Completed(ExecutionOutcome::InterruptedBeforePublication)
+        | OperationOutcome::Failed(RuntimeError::Cancelled) => {
+            Err(super::process_runtime::Interrupted.into())
+        }
+        OperationOutcome::Completed(ExecutionOutcome::RecoveryRequired { operation, .. }) => {
+            Err(retained_failure(
+                outcome.clone(),
+                format!("{label} requires recovery for {operation}"),
+            ))
+        }
+        OperationOutcome::Completed(ExecutionOutcome::FailedBeforePublication(_)) => Err(
+            retained_failure(outcome.clone(), failure_summary(label, runs_runtime)),
+        ),
+        OperationOutcome::Completed(ExecutionOutcome::ExecutionUncertain(_)) => {
+            Err(retained_failure(
+                outcome.clone(),
+                format!("{label} outcome is uncertain; inspect recovery before retrying"),
+            ))
+        }
+        OperationOutcome::Completed(ExecutionOutcome::PartiallyCompleted { receipt, .. }) => {
+            if let Ok(message) = completed(receipt) {
+                session.display().status().warning(&message);
+            }
+            Err(retained_failure(
+                outcome.clone(),
+                format!("{label} completed only part of its displayed effects"),
+            ))
+        }
+        OperationOutcome::Completed(ExecutionOutcome::NeedsInput(requirements)) => {
+            build::save_execution_input(session, engine, requirements).await
+        }
+        OperationOutcome::Failed(_) => Err(retained_failure(
+            outcome.clone(),
+            format!("{label} worker failed; inspect recovery before retrying"),
+        )),
+    };
+    engine.release_completed(handle.id());
+    result
+}
+
+// A launch can fail after the runtime ran and retired. Publication wording must
+// not imply that no runtime effects occurred; the retained cause explains the phase.
+fn failure_summary(label: &str, runs_runtime: bool) -> String {
+    if runs_runtime {
+        format!("{label} failed")
+    } else {
+        format!("{label} was not applied")
+    }
+}
+
+// The operation registry can release its entry while the reported error still owns
+// the original typed cause and its retained outcome.
+struct RetainedExecutionError {
+    message: String,
+    outcome: std::sync::Arc<OperationOutcome<ExecutionOutcome>>,
+}
+impl RetainedExecutionError {
+    fn original_cause(&self) -> Option<&anyhow::Error> {
+        match &*self.outcome {
+            OperationOutcome::Completed(
+                ExecutionOutcome::FailedBeforePublication(cause)
+                | ExecutionOutcome::ExecutionUncertain(cause)
+                | ExecutionOutcome::RecoveryRequired { cause, .. }
+                | ExecutionOutcome::PartiallyCompleted { cause, .. },
+            ) => Some(cause),
+            _ => None,
+        }
+    }
+}
+impl std::fmt::Debug for RetainedExecutionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_tuple("RetainedExecutionError")
+            .field(&self.message)
+            .finish()
+    }
+}
+impl std::fmt::Display for RetainedExecutionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(&self.message)
+    }
+}
+impl std::error::Error for RetainedExecutionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        if let Some(cause) = self.original_cause() {
+            return Some(cause.as_ref());
+        }
+        match &*self.outcome {
+            OperationOutcome::Failed(cause) => Some(cause),
+            _ => None,
+        }
+    }
+}
+fn retained_failure(
+    outcome: std::sync::Arc<OperationOutcome<ExecutionOutcome>>,
+    message: String,
+) -> anyhow::Error {
+    let diagnostic = match &*outcome {
+        OperationOutcome::Completed(outcome) => outcome.diagnostic(),
+        OperationOutcome::Failed(_) => {
+            use crate::engine::diagnostics::*;
+            let mut diagnostic = Diagnostic::new(
+                DiagnosticCode::ExecutionUncertain,
+                DiagnosticPhase::Execution,
+            );
+            diagnostic.recovery = RecoveryClassification::InspectRecovery;
+            Some(diagnostic)
+        }
+    };
+    let retained = RetainedExecutionError { message, outcome };
+    let location = retained
+        .original_cause()
+        .and_then(|cause| cause.downcast_ref::<crate::engine::publication::RecoveryLocation>())
+        .cloned();
+    let error = anyhow::Error::new(retained);
+    let error = match location {
+        Some(location) => location.attach(error),
+        None => error,
+    };
+    match diagnostic {
+        Some(diagnostic) => error.context(diagnostic),
+        None => error,
+    }
+}
+
+#[cfg(test)]
+pub(super) mod tests;
+
+pub(super) mod checking;
+pub(super) mod doctor;
+mod file_report;
+mod initialize;
+mod java;
+mod progress;
+pub use initialize::initialize;
+
+mod build;
+pub use build::{BuildDecisions, build, build_with_local_files};
+
+mod dependencies;
+pub use dependencies::{AddHostInput, add, add_providers, adopt_observed, remove, synchronize};
+
+mod cleanup;
+pub use cleanup::clean;
+
+mod import;
+pub use import::{ImportHostRequest, ImportSource, import};
+
+/// Keep service workers and their retained results under the host's shared admission budget.
+async fn scoped<T, F, Fut>(session: &dyn Session, governor: ResourceGovernor, work: F) -> Result<T>
+where
+    T: Send + 'static,
+    F: FnOnce(crate::engine::runtime::WorkScope) -> Fut + Send + 'static,
+    Fut: Future<Output = Result<T>> + Send + 'static,
+{
+    scoped_with_feedback(session, governor, false, work).await
+}
+
+async fn scoped_with_feedback<T, F, Fut>(
+    session: &dyn Session,
+    governor: ResourceGovernor,
+    quiet: bool,
+    work: F,
+) -> Result<T>
+where
+    T: Send + 'static,
+    F: FnOnce(crate::engine::runtime::WorkScope) -> Fut + Send + 'static,
+    Fut: Future<Output = Result<T>> + Send + 'static,
+{
+    scoped_with_selections(session, governor, quiet, None, work).await
+}
+
+async fn scoped_with_selections<T, F, Fut>(
+    session: &dyn Session,
+    governor: ResourceGovernor,
+    quiet: bool,
+    mut questions: Option<tokio::sync::mpsc::Receiver<dependencies::selection::Question>>,
+    work: F,
+) -> Result<T>
+where
+    T: Send + 'static,
+    F: FnOnce(crate::engine::runtime::WorkScope) -> Fut + Send + 'static,
+    Fut: Future<Output = Result<T>> + Send + 'static,
+{
+    session.process().check_cancelled()?;
+    let runtime = crate::engine::runtime::OperationRuntime::new(governor, 1);
+    let (sender, receiver) = tokio::sync::oneshot::channel();
+    let mut handle = runtime.start(move |scope| async move {
+        let _ = sender.send(work(scope).await);
+        Ok(())
+    })?;
+    let mut progress = progress::ProgressDisplay::new(session, quiet);
+    let mut ticks = tokio::time::interval(Duration::from_millis(50));
+    let mut cancellation_requested = false;
+    let outcome = loop {
+        tokio::select! {
+            biased;
+            result = handle.wait() => break result,
+            question = async {
+                match questions.as_mut() {
+                    Some(receiver) => receiver.recv().await,
+                    None => std::future::pending().await,
+                }
+            } => {
+                match question {
+                    Some(question) => {
+                        progress.pause();
+                        question.answer(session);
+                    }
+                    None => questions = None,
+                }
+            }
+            _ = ticks.tick(), if !cancellation_requested => {
+                progress.observe_work(handle.progress());
+                if session.process().check_cancelled().is_err() {
+                    handle.cancel();
+                    cancellation_requested = true;
+                }
+            }
+        }
+    };
+    drop(progress);
+    // A service may already have published a record or deleted owned content.
+    // Retire it and preserve its terminal result instead of replacing that evidence
+    // with the request that caused cancellation.
+    let result = match &*outcome {
+        OperationOutcome::Completed(()) => receiver
+            .await
+            .context("Host service result was lost")
+            .and_then(|result| result),
+        OperationOutcome::Failed(error) => Err(error.clone().into()),
+    };
+    // As with ExecutionOutcome::failed, a result invalidated by this host's
+    // cancellation is interruption. Retain the original cause and its context;
+    // unrelated failures must not be reclassified merely because cancellation raced.
+    let result = result.map_err(|error| {
+        if cancellation_requested
+            && matches!(
+                error.downcast_ref::<RuntimeError>(),
+                Some(RuntimeError::StaleResult)
+            )
+        {
+            error.context(super::process_runtime::Interrupted)
+        } else {
+            error
+        }
+    });
+    runtime.shutdown().await;
+    result
+}
+
+mod files;
+pub use files::add_files;
+
+pub mod cli;
+
+pub(super) mod instance;
+pub(super) mod release;
+mod status_text;
+
+/// Metadata status uses the same report for embedded clients and the CLI.
+pub async fn status(session: &dyn Session, context: Option<String>, json: bool) -> Result<()> {
+    use crate::engine::status::{WorkspaceContext, inspect_workspace};
+    let context = match context.as_deref() {
+        Some("author") => Some(WorkspaceContext::Author),
+        Some("publisher") => Some(WorkspaceContext::Publisher),
+        Some("instance") => Some(WorkspaceContext::Instance),
+        None => None,
+        _ => anyhow::bail!("Unknown workspace context"),
+    };
+    let (invocation, root) = project_path(session)?;
+    let state = state_root(session.config().app_config(), &invocation)?;
+    let report = initialize::discover(session, move |mut scope| async move {
+        let work = scope.spawn_blocking(
+            ResourceRequest {
+                jobs: 1,
+                memory_bytes: 256 << 20,
+                open_files: 16,
+                ..Default::default()
+            },
+            ResourceRequest {
+                memory_bytes: 1 << 20,
+                ..Default::default()
+            },
+            move |cancel| inspect_workspace(&root, &state, context, &cancel),
+        )?;
+        scope.accept(work.wait().await?)?.transpose()
+    })
+    .await?;
+    let text = if json {
+        crate::terminal::json_text(&*report)?
+    } else {
+        status_text::render(&report)
+    };
+    session.display().status().message(&text);
+    Ok(())
+}
+pub(super) mod pending;

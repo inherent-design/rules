@@ -1,0 +1,180 @@
+{
+  "v": 1,
+  "surface": "empack",
+  "case": "terminal-c-locale-json",
+  "observed": {
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.local/bin/empack",
+        "check",
+        "--documents",
+        "--json"
+      ],
+      "cwd": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225427626218Z-journeys/work/empack/project"
+    },
+    "expectation": "Observe whether the selected command emits parseable structured output under this stream profile.",
+    "expectationKind": "reviewer hypothesis, compare native result",
+    "profile": {
+      "stdin": "tty",
+      "stdout": "tty",
+      "stderr": "tty",
+      "width": 28
+    },
+    "envOverrides": {},
+    "configuration": {
+      "npm_config_cache": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225427626218Z-journeys/work/empack/cache/npm",
+      "npm_config_update_notifier": "false",
+      "npm_config_audit": "false",
+      "npm_config_fund": "false",
+      "NODE_DISABLE_COMPILE_CACHE": "1",
+      "EMPACK_STATE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225427626218Z-journeys/work/empack/state",
+      "EMPACK_CACHE_DIR": "/Users/zer0cell/production/rules/terminal/evidence/20261123T225427626218Z-journeys/work/empack/cache/empack"
+    },
+    "host": {
+      "isatty": {
+        "stdin": true,
+        "stdout": true,
+        "stderr": true
+      },
+      "width": 28,
+      "controllingTerminal": false,
+      "events": [
+        {
+          "seconds": 0.035514791030436754,
+          "channel": "combined",
+          "bytes": 12
+        },
+        {
+          "seconds": 0.03880541631951928,
+          "channel": "combined",
+          "bytes": 837
+        },
+        {
+          "seconds": 0.038818708155304193,
+          "channel": "combined",
+          "bytes": 12
+        }
+      ],
+      "actionTriggered": false,
+      "stdout_b64": "",
+      "stderr_b64": "",
+      "combined_b64": "G1s/MjVoG1s/MjVoew0KICAic2NoZW1hIjogMSwNCiAgInNjb3BlIjogImRvY3VtZW50cyIsDQogICJwYWNrIjogIlRlcm1pbmFsIM6pIOaXpeacrCIsDQogICJhdXRob3Jfc2NoZW1hIjogNiwNCiAgImF1dGhvcmluZyI6IHsNCiAgICAic2NoZW1hIjogMSwNCiAgICAiYXV0aG9yX3NjaGVtYSI6IDYsDQogICAgInBhY2siOiAiVGVybWluYWwgzqkg5pel5pysIiwNCiAgICAibG9ja19zdGF0dXMiOiAibWlzc2luZyIsDQogICAgImxvY2tfcmVhc29uIjogbnVsbCwNCiAgICAicnVudGltZV9zYXRpc2ZpZWQiOiBudWxsLA0KICAgICJkZXBlbmRlbmNpZXMiOiBbXSwNCiAgICAiZWRpdGluZ19saW1pdGF0aW9ucyI6IFtdDQogIH0sDQogICJsb2NrIjogIm1pc3NpbmciLA0KICAidmVyaWZpZWRfZmlsZXMiOiAwLA0KICAicmVmZXJlbmNlcyI6IDAsDQogICJmaW5kaW5ncyI6IFsNCiAgICB7DQogICAgICAic3ViamVjdCI6ICJBdXRob3JpbmciLA0KICAgICAgInN0YXRlIjogInBhc3NlZCIsDQogICAgICAicmVxdWlyZWQiOiB0cnVlLA0KICAgICAgIm1lc3NhZ2UiOiAiQXV0aG9yIGZpbGVzIGFyZSB2YWxpZCIsDQogICAgICAiZGlhZ25vc3RpYyI6IG51bGwNCiAgICB9LA0KICAgIHsNCiAgICAgICJzdWJqZWN0IjogIkxvY2siLA0KICAgICAgInN0YXRlIjogInVudmVyaWZpZWQiLA0KICAgICAgInJlcXVpcmVkIjogZmFsc2UsDQogICAgICAibWVzc2FnZSI6ICJObyBsb2NrIHByZXNlbnQ7IHJlY29yZGVkIGRlcGVuZGVuY2llcyB3ZXJlIG5vdCBjaGVja2VkIiwNCiAgICAgICJkaWFnbm9zdGljIjogbnVsbA0KICAgIH0NCiAgXSwNCiAgImNvbXBsZXRlIjogdHJ1ZQ0KfQ0KG1s/MjVoG1s/MjVoG1s/MjVoG1s/MjVo"
+    },
+    "before": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "c2be68467be7cda6368f5969f73a5f3942bd03a70eb79ee1dfb003711ce9a34d",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "after": {
+      "extra/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "extra/package.json": {
+        "kind": "file",
+        "bytes": 46,
+        "sha256": "6f2d7cd5d3c0335f7ed63b4d9000c3d06081abcc003005da8fad451eac9f9bc0",
+        "mode": 420
+      },
+      "project/empack.yml": {
+        "kind": "file",
+        "bytes": 202,
+        "sha256": "c2be68467be7cda6368f5969f73a5f3942bd03a70eb79ee1dfb003711ce9a34d",
+        "mode": 420
+      },
+      "project/fixture-fail.cjs": {
+        "kind": "file",
+        "bytes": 141,
+        "sha256": "fe9bcfa023fac35eddc2cbfd3d7dd80a28f46ede24b3fb702328867b11e4cbdd",
+        "mode": 420
+      },
+      "project/fixture-input.cjs": {
+        "kind": "file",
+        "bytes": 283,
+        "sha256": "22f07abb32fdc49de985bad43c7f260013de8f8ef3c04a8dde092536c711061f",
+        "mode": 420
+      },
+      "project/fixture-wait.cjs": {
+        "kind": "file",
+        "bytes": 154,
+        "sha256": "a74e81e77a713319255744def7e2eb7ece34b883906cf44a042436dc035cea03",
+        "mode": 420
+      },
+      "tiny/index.js": {
+        "kind": "file",
+        "bytes": 20,
+        "sha256": "6e66e366f0aefb84ad8110afcd9b2245702c643c831edf8316ff048fec739d2e",
+        "mode": 420
+      },
+      "tiny/package.json": {
+        "kind": "file",
+        "bytes": 45,
+        "sha256": "091f70122eb6f6576bbd998535ff880cf5d10848a8d4b2dda37ada33a6294787",
+        "mode": 420
+      }
+    },
+    "changes": {},
+    "effectsByScope": {
+      "project": [],
+      "durable": [],
+      "cache": [],
+      "home": [],
+      "temporary": []
+    }
+  },
+  "outcome": {
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "capture_complete": true,
+    "safeNext": "Decode the actual stdout/merged stream; do not strip arbitrary human text to manufacture a pass.",
+    "safeNextKind": "reviewer recommendation"
+  }
+}
