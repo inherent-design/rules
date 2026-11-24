@@ -47,7 +47,7 @@ def decode(payload):
     r=json.loads(payload.decode('utf-8'),object_pairs_hook=pairs);exact(r,['format','schema','record','assets'])
     if r['format']!=FORMAT or type(r['schema'])is not int or r['schema']!=1:raise ValueError('Study format/version')
     record=exact(r['record'],['format','schema','project','revision','attempt','image','draft'])
-    if record['format']!=FORMAT or record['schema']!=1 or record['project']!='fixture-project':raise ValueError('Study record header')
+    if record['format']!=FORMAT or type(record['schema'])is not int or record['schema']!=1 or record['project']!='fixture-project':raise ValueError('Study record header')
     if not isinstance(record['revision'],str)or not re.fullmatch(r'[1-9][0-9]*',record['revision'])or int(record['revision'])>2**64-1:raise ValueError('Study revision')
     if not isinstance(record['attempt'],str)or not re.fullmatch(r'[a-z0-9-]{1,80}',record['attempt']):raise ValueError('Study attempt')
     draft=exact(record['draft'],['label','author','entries','missing']);ref(draft['author'])

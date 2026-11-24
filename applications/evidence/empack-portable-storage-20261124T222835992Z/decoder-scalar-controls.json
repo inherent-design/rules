@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "scope": "Pure study decoder control,not new browser/native CLI execution.",
+  "input": "chromium-complete-backup.json",
+  "inputSha256": "f01f68d1c3134ff2980dc82adb60ac6184c688ab69d485939066b15efce98d3c",
+  "sourceBeforeSha256": "50da85304537230b8c30700cf68e76862af8d351acab2dc88089dcd0a3ac34a3",
+  "sourceAfterSha256": "d14c51908e3719ed69a19abd79a9144afb7025a610c9d6f74396d2791f409fec",
+  "before": [
+    {
+      "value": true,
+      "jsonType": "bool",
+      "accepted": true
+    },
+    {
+      "value": 1.0,
+      "jsonType": "float",
+      "accepted": true
+    },
+    {
+      "value": 1,
+      "jsonType": "int",
+      "accepted": true
+    },
+    {
+      "value": 2,
+      "jsonType": "int",
+      "accepted": false
+    }
+  ],
+  "after": [
+    {
+      "value": true,
+      "jsonType": "bool",
+      "accepted": false
+    },
+    {
+      "value": 1.0,
+      "jsonType": "float",
+      "accepted": false
+    },
+    {
+      "value": 1,
+      "jsonType": "int",
+      "accepted": true
+    },
+    {
+      "value": 2,
+      "jsonType": "int",
+      "accepted": false
+    }
+  ]
+}
