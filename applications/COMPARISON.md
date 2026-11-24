@@ -2,7 +2,7 @@
 
 The studies support simplifying boundaries between values, state, and evidence. They do not support replacing these programs with one package, document, or task model. Preserve each program's purpose and established policies; share host mechanisms only where their premises match.
 
-This is a partial synthesis of the study at repository revision `f570f2ec68de818ee4c4e1fe700f0675e0d239e8`. The [inventory](inventory.json) remains the current coverage index, and [joined scenarios](scenarios.json) retain their larger obligations. Most operations remain pending, and no entire feature family is qualified. A proposed improvement below is not a production implementation decision.
+This is a partial synthesis of the study through the evidence bands linked below; its initial synthesis used repository revision `f570f2ec68de818ee4c4e1fe700f0675e0d239e8`. The [inventory](inventory.json) remains the current coverage index, and [joined scenarios](scenarios.json) retain their larger obligations. Most operations remain pending, and no entire feature family is qualified. A proposed improvement below is not a production implementation decision.
 
 ## Evidence that supports this comparison
 
@@ -11,9 +11,9 @@ The owning reports link exact versions, raw observations, source selections, mod
 | Application | Current evidence | Scope limit |
 | --- | --- | --- |
 | empack | [Core API and native ownership](empack/OWNERSHIP.md); [seed observation demand](empack/OBSERVATIONS.md); [portable-authoring design](empack/AUTHORING.md). | Actual core compilation at `0b4462e` and installed 0.8.8-beta CLI runs are separate evidence; their build correspondence is not proved. Portable authoring is proposed. |
-| npm | [Peer bindings](js-peers/README.md) and [removal/re-adoption](js-peers/REMOVAL.md), using 11.20.0. | Private offline local archives, disabled scripts, and node-modules workspaces/projects; no registry publication or general resolver qualification. |
-| pnpm | The same two fixture families, using 12.21.0, with distinct context and missing-root behavior. | No store-reclamation, filtered deployment, complete peer resolution, or script-policy qualification. |
-| Yarn Berry | The same fixture families, using 4.19.0, plus immutable-install refusal. | Node-modules linker only; no PnP, patch publication, or general virtualization proof. |
+| npm | [Peer bindings](js-peers/README.md), [removal/re-adoption](js-peers/REMOVAL.md), and [script policy](js-scripts/README.md), using 11.20.0. | Private offline local archives and node-modules workspaces/projects; selected hook profiles only, no registry publication or general resolver qualification. |
+| pnpm | The same peer/removal families and script-policy band, using 12.21.0, with distinct context, hook, and missing-root behavior. | No store-reclamation, filtered deployment, complete peer resolution, or general script-policy qualification. |
+| Yarn Berry | The same fixture families, using 4.19.0, plus immutable-install refusal and scoped dependency/root-hook controls. | Node-modules linker only; no PnP, patch publication, or general virtualization proof. |
 | Cargo | [Workspace/unit selection, script freshness, and cleanup](cargo/README.md), using 1.92.0. | Three local packages and one host build script; no cross-target execution or package publication. |
 | restic | [Explicit snapshot forget/prune/restore](restic/README.md), using 0.20.0. | Two snapshots, selected data blobs, local backend, and full prune; grouping, concurrent owners, remote failures, and repair remain open. |
 | MO2 | [Origin ordering](mo2/README.md) and [profile activation](mo2/PROFILES.md), from 2.5.2 source. | Unmodified bodies with fixture adapters; no supported Windows application, Qt delivery, VFS injection, or game execution. |
@@ -29,6 +29,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 **An event clock is not a saved image.** Native VS Code undo returns to a clean save point while its document version increases. Empack's proposed edit epoch rejects stale work, while saved-image identity answers whether the current draft is saved. Returning to the same image does not authorize an old attempt's background result. The file/provider incarnation and admitted storage revision remain separate.
 
 **Completion is scoped to an effect.** Restic forget removes a reference before prune reclaims data. Cargo clean removes its target artifacts while an external script effect remains. MO2 dirty notifications can contain duplicate indices with no net edit. Prism can accept an abort before its base task finishes. A restored browser tab, in-memory handle, finalizer call, and confirmed stored project are different outcomes. Reports should name the affected resource and confirmed or unknown result.
+
+**Permission and execution have scope.** The JavaScript hook study distinguishes dependency review, root hooks, explicit script requests, and command status. The three tools differ legitimately; a disabled default can still allow a particular explicit or workspace action. A failed command can retain selected files and hook-written output. A shared report should preserve those facts rather than impose one universal script switch.
 
 **Evidence demand follows the operation.** Empack can preserve an existing seed without claiming its bytes match the publisher, while the publisher's bundled seed source still requires verified bytes. Cargo's freshness decision covers declared invalidation inputs, not arbitrary script reads. Browser API presence supplies neither permission nor a successful write. These findings support explicit required observations, capability admission, retained inputs, and completion evidence, not a broad “skip verification” switch.
 
@@ -120,6 +122,6 @@ For empack, first preserve constructor authority and native baselines, then impl
 
 ## Remaining work
 
-This comparison covers the completed bounded bands, not every capability in the inventory. Script trust, package publication, multi-owner storage, component/runtime selection, native recovery, game/tool output ownership, full provider saves, and many other feature models still need source/native evidence or explicit unavailable-platform obligations. Joined component evidence must not promote an entire scenario.
+This comparison covers the completed bounded bands, not every capability in the inventory. General script trust beyond the selected local-hook profiles, package publication, multi-owner storage, component/runtime selection, native recovery, game/tool output ownership, full provider saves, and many other feature models still need source/native evidence or explicit unavailable-platform obligations. Joined component evidence must not promote an entire scenario.
 
 The next design work should fill missing domain models and cross-feature transitions, rather than repeatedly adding assertions to these same small fixtures. Review the whole target and its evidence with the host owner before selecting production implementation. Deferred dependency UX work and the 0.9 implementation remain separate decisions.

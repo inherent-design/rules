@@ -4381,13 +4381,30 @@
           "operations": [
             {
               "id": "run",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Policy.lean;js-scripts/Policy.bend",
+              "laws": [
+                "explicit_run_is_a_separate_request",
+                "explicit_probe_survives_install_disabling"
+              ],
+              "nativeEvidence": [
+                "evidence/js-scripts-20261124T054018650056Z/receipt.json",
+                "evidence/js-scripts-20261124T054018650056Z/trace.json",
+                "evidence/js-scripts-20261124T054018650056Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "js-scripts/sources.json"
+              ],
+              "negativeControls": [
+                "Install script disabling is not a universal prohibition of an explicitly requested root script; failed install is not proof of absent effects."
+              ],
+              "uxAssessment": "js-scripts/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated root probe and pre/post wrappers under each pinned Mac effective profile; private offline roots.",
+                "Lean compares controlled cumulative markers and success; Bend compares install admission only, not explicit-run effects."
+              ],
+              "evidenceLimit": "No argument/signal/shell fidelity, prerequisite gate, workspace selection, arbitrary script safety, or cross-platform qualification.",
+              "verificationPlan": "Extend named-script failures, wrappers/config provenance, arguments/signals, prerequisite states, selected workspaces, and platforms before whole-feature qualification."
             },
             {
               "id": "start",
@@ -5717,13 +5734,30 @@
           "operations": [
             {
               "id": "run",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Policy.lean;js-scripts/Policy.bend",
+              "laws": [
+                "explicit_run_is_a_separate_request",
+                "explicit_probe_survives_install_disabling"
+              ],
+              "nativeEvidence": [
+                "evidence/js-scripts-20261124T054018650056Z/receipt.json",
+                "evidence/js-scripts-20261124T054018650056Z/trace.json",
+                "evidence/js-scripts-20261124T054018650056Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "js-scripts/sources.json"
+              ],
+              "negativeControls": [
+                "Install script disabling is not a universal prohibition of an explicitly requested root script; failed install is not proof of absent effects."
+              ],
+              "uxAssessment": "js-scripts/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated root probe and pre/post wrappers under each pinned Mac effective profile; private offline roots.",
+                "Lean compares controlled cumulative markers and success; Bend compares install admission only, not explicit-run effects."
+              ],
+              "evidenceLimit": "No argument/signal/shell fidelity, prerequisite gate, workspace selection, arbitrary script safety, or cross-platform qualification.",
+              "verificationPlan": "Extend named-script failures, wrappers/config provenance, arguments/signals, prerequisite states, selected workspaces, and platforms before whole-feature qualification."
             },
             {
               "id": "exec",
@@ -7375,13 +7409,30 @@
           "operations": [
             {
               "id": "run",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Policy.lean;js-scripts/Policy.bend",
+              "laws": [
+                "explicit_run_is_a_separate_request",
+                "explicit_probe_survives_install_disabling"
+              ],
+              "nativeEvidence": [
+                "evidence/js-scripts-20261124T054018650056Z/receipt.json",
+                "evidence/js-scripts-20261124T054018650056Z/trace.json",
+                "evidence/js-scripts-20261124T054018650056Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "js-scripts/sources.json"
+              ],
+              "negativeControls": [
+                "Install script disabling is not a universal prohibition of an explicitly requested root script; failed install is not proof of absent effects."
+              ],
+              "uxAssessment": "js-scripts/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated root probe and pre/post wrappers under each pinned Mac effective profile; private offline roots.",
+                "Lean compares controlled cumulative markers and success; Bend compares install admission only, not explicit-run effects."
+              ],
+              "evidenceLimit": "No argument/signal/shell fidelity, prerequisite gate, workspace selection, arbitrary script safety, or cross-platform qualification.",
+              "verificationPlan": "Extend named-script failures, wrappers/config provenance, arguments/signals, prerequisite states, selected workspaces, and platforms before whole-feature qualification."
             },
             {
               "id": "exec",

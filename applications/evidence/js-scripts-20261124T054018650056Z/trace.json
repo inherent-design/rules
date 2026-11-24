@@ -1,0 +1,1979 @@
+[
+  {
+    "app": "npm",
+    "case": "unreviewed",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "008ed5b9fe24b74d5d278206c4c27176ea3cd4914dde22de00c20751df039116",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.46746645914390683,
+      "stdoutSha256": "0813912f38315113e4890c1e4de4af0c3c0269c8351edbda0ad289a1b1ec358a",
+      "stderrSha256": "1f2718c1699f6d5e90c01a9af2312a20246d31dbee48db1b3b88eb9371c4f5af"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "unreviewed",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "008ed5b9fe24b74d5d278206c4c27176ea3cd4914dde22de00c20751df039116",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "008ed5b9fe24b74d5d278206c4c27176ea3cd4914dde22de00c20751df039116",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.026239249855279922,
+      "stdoutSha256": "6f1e6df3835af49bdf3463564736c8df85ebd8db8d7f36ae94bf3bb72decd5fb",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.2635110840201378,
+      "stdoutSha256": "77426e0f55a8316a2ddef7a0fc68ecaa6b5114eef83172dd86d38787b3303af1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.026688791811466217,
+      "stdoutSha256": "4ef8e22d912bb72be757e91ce30a72f3833aff83c6167d0ebfab4b103ba22975",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "f1d0ac406b685229f09fb980aba94cced2689e19ad6bddeb327e1ab0e219c821",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.3440793748013675,
+      "stdoutSha256": "419210c00239e9152b446cd3af06e5d6d57f08ecea7291210952cb35e87d5a4c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "f1d0ac406b685229f09fb980aba94cced2689e19ad6bddeb327e1ab0e219c821",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "f1d0ac406b685229f09fb980aba94cced2689e19ad6bddeb327e1ab0e219c821",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.02738500013947487,
+      "stdoutSha256": "4fc5475e98df1a25ff3425713c883370e7515ada98e370289e289b9ced87e70e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "disabled-with-allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund",
+      "--ignore-scripts"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.26435887534171343,
+      "stdoutSha256": "a663e89354641fe45e6400ff6532286e09f28f133e1852419081cb64233ef941",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "disabled-with-allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.02923145843669772,
+      "stdoutSha256": "34af50ae995928ee36c6af54ca648949d7581d6ed8cddbbbc3774481b6b0e8b6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "broad-allow-with-deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund",
+      "--dangerously-allow-all-scripts"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "c0bb9a8cf838d035a052159df3d8b4a95a49c564650a8cf6af7194c810420a56",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.32913929130882025,
+      "stdoutSha256": "0ea36bda052c11ac2cb1a5547270e3b9a9f2f15fa48dbcc4181e8c9baa19b87e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "broad-allow-with-deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "c0bb9a8cf838d035a052159df3d8b4a95a49c564650a8cf6af7194c810420a56",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "a4dafaf4dc109489c6bb4a0154a4b83bc4c29069393044368fc0196c22699e72",
+        "lockSha256": "ed932a72fea3547e49c8f7ba42c39c551b047a22ba22edfa0da7ed36cdca793f",
+        "packageEntryExists": true,
+        "effectsSha256": "c0bb9a8cf838d035a052159df3d8b4a95a49c564650a8cf6af7194c810420a56",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-broad-allow-with-deny/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.027665082830935717,
+      "stdoutSha256": "f8605bc5e1cf1e2f1d7fdbd20e5bb852a96d0e0a217838bf8f5ff2a845cc97d9",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "allowed-failure",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": "d18d5e13a181f9d8dbde74fe4b1b63c4684746d4176888104c7fec2f5878f87d",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.32676408300176263,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "68f93c40230d1cca7973dff4ec6d4782f4d228d0160992d7439e6ad205d7b134"
+    },
+    "outcome": {
+      "exitCode": 7,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "allowed-failure",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": "d18d5e13a181f9d8dbde74fe4b1b63c4684746d4176888104c7fec2f5878f87d",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "15fb02928a63299908d86517ed895fec34d3bffb27f70c27f7a9797a5ead5722",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": "d18d5e13a181f9d8dbde74fe4b1b63c4684746d4176888104c7fec2f5878f87d",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.025313458871096373,
+      "stdoutSha256": "2f8763aff4ec95362f8b90961180e5cf9ade21349c03aaae39193f8770d96c66",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "root-disabled",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--no-audit",
+      "--no-fund",
+      "--ignore-scripts"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "1fba48719bbcbaeedeba98e5d8efece841078291a715548b34f93719e4b029f7",
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.2311224159784615,
+      "stdoutSha256": "22f441fa40626f657351273b22d0c23c84549a33311777de4ac3d79a34836578",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "npm",
+    "case": "root-disabled",
+    "operation": "explicit-root",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "--ignore-scripts",
+      "run",
+      "probe"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "1fba48719bbcbaeedeba98e5d8efece841078291a715548b34f93719e4b029f7",
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "1fba48719bbcbaeedeba98e5d8efece841078291a715548b34f93719e4b029f7",
+        "packageEntryExists": false,
+        "effectsSha256": "4fb47a08716dd3f6a105ebc91d23453cc78a4f1a558af481217e64c749213a72",
+        "effects": [
+          {
+            "scope": "root",
+            "phase": "probe",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/npm-root-disabled/project"
+          }
+        ]
+      },
+      "seconds": 0.12180154211819172,
+      "stdoutSha256": "083af0299f5c792327c1024e4fd8ceec751cf6c010458edfcb36142986e9eee3",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "unreviewed",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-unreviewed/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.09029483376070857,
+      "stdoutSha256": "32ae420de4cd310014c869177a519f77fd75c766bbcacb465930787b4d8d0023",
+      "stderrSha256": "55f287ba1fe5767229fa2728e6310160a5b79ab5f62b3a40d2ef23d6261e9506"
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "unreviewed",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.027571999933570623,
+      "stdoutSha256": "c887fa64e9aab18d23f307acd03f0f587d2c6019374a1fa7a040d445c83ca4c8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-deny/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.05216487497091293,
+      "stdoutSha256": "ba533ef3a0212edff22c8a10f7d892a8635b5920f41c2a21bdef21d6e2318ed2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.02667220775038004,
+      "stdoutSha256": "14000d6f4c57687807dfd4fd845c036862d6347bfeb7099cc71e3e240ac280f0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": "6d22e7c25d398a5a9e0f00e61d086b963fdcb5b63f067cebec4d79f3746b5f7f",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.14264895813539624,
+      "stdoutSha256": "5d424d073baa3130be64c644a5e80f150955501ead23e1fa44e92c35b8528fa1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": "6d22e7c25d398a5a9e0f00e61d086b963fdcb5b63f067cebec4d79f3746b5f7f",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": "6d22e7c25d398a5a9e0f00e61d086b963fdcb5b63f067cebec4d79f3746b5f7f",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allow/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.027207333128899336,
+      "stdoutSha256": "9c81f1ecccb19e65af33f6cb9a29c965393101f1569e18d7703da382f7544e2d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "disabled-with-allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-disabled-with-allow/store",
+      "--ignore-scripts"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.05026533314958215,
+      "stdoutSha256": "016f8cd35b8613da809efd0894f9579ef62fce6054f8cbe48d8afaccb646385a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "disabled-with-allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.02612499985843897,
+      "stdoutSha256": "31c46124d0d10d0f174a26ea91792501df7469970f6dc717e7554fbe701de61a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "broad-allow-with-deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-broad-allow-with-deny/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.04985529091209173,
+      "stdoutSha256": "ca0c8a232e66c6271beb6ac794f14e95203c0ddc3cb4c309438fb7daad30b3d4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "broad-allow-with-deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "cc05f321b41855a791548560f7be046736aa031d98c2870a75de51d769791f03",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.0260194162838161,
+      "stdoutSha256": "85e874552fcd74953357797a20e1fac9d020495d9f181c1655497bac72249130",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "allowed-failure",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": true,
+        "effectsSha256": "bd37eb5a866fe88d21a71a2bca5ba55cbc6523c50e68e7b2a09796b7a4bac586",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.12295375019311905,
+      "stdoutSha256": "e22d40f022b74686e88eea2721f303021151b939f19587cccab0da8ce06bc7f4",
+      "stderrSha256": "0873cf58bf3294bf4ed8a247b5b522eb7365fd27cc413fb133e2f308c85e98c7"
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "allowed-failure",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": true,
+        "effectsSha256": "bd37eb5a866fe88d21a71a2bca5ba55cbc6523c50e68e7b2a09796b7a4bac586",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": true,
+        "effectsSha256": "bd37eb5a866fe88d21a71a2bca5ba55cbc6523c50e68e7b2a09796b7a4bac586",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-allowed-failure/project/node_modules/.pnpm/fixture-hook@file+..+..+archives+fixture-hook-1.0.0.tgz/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.02615824993699789,
+      "stdoutSha256": "796476d8c018be6aab5dcebb57bfc194e8c33a4a554908f49351cee13d6a8b31",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "root-disabled",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--store-dir",
+      "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-root-disabled/store",
+      "--ignore-scripts"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a",
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.0323184160515666,
+      "stdoutSha256": "3fabd1a9ca4d97699d5ed9b8d3eb4b6a7834a7071e5e1ff13b6515d7233f1dff",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "pnpm",
+    "case": "root-disabled",
+    "operation": "explicit-root",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "--ignore-scripts",
+      "run",
+      "probe"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a",
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a",
+        "packageEntryExists": false,
+        "effectsSha256": "86740fd1d68db213372070f102c406cb3753e3daf277d6adede0736afa93ed3b",
+        "effects": [
+          {
+            "scope": "root",
+            "phase": "preprobe",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "probe",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "postprobe",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/pnpm-root-disabled/project"
+          }
+        ]
+      },
+      "seconds": 0.09083941671997309,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "2de2baaa7eb895c6727fe4d69fe3617959ddc3d2e569ac845e5e1b533440b669"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "unreviewed",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "74a5dc27dff5e77a3f8507f7d2272ebc151aca30b8117d79689a131bd3b49e2a",
+        "packageEntryExists": true,
+        "effectsSha256": "f966ff2d4778bdd2af1549ced5fb1832b690cc3c6a064acacfcf39935711ad49",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.7446024590171874,
+      "stdoutSha256": "b2d4eac83f83f85c82a4612d223d30de96c1328280a44b9e74bf3437a5504380",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "unreviewed",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "74a5dc27dff5e77a3f8507f7d2272ebc151aca30b8117d79689a131bd3b49e2a",
+        "packageEntryExists": true,
+        "effectsSha256": "f966ff2d4778bdd2af1549ced5fb1832b690cc3c6a064acacfcf39935711ad49",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "84be4ef335984c2d993d5ec937aa561e70d9ac36a528d6f2f0ad40cba2d643b3",
+        "lockSha256": "74a5dc27dff5e77a3f8507f7d2272ebc151aca30b8117d79689a131bd3b49e2a",
+        "packageEntryExists": true,
+        "effectsSha256": "f966ff2d4778bdd2af1549ced5fb1832b690cc3c6a064acacfcf39935711ad49",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-unreviewed/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.029116499703377485,
+      "stdoutSha256": "be144657312681861c396efc6d1ac3d95858b6bc0d33023c0fddd13674d8f961",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.19778379192575812,
+      "stdoutSha256": "d09c62fa70a23af1715a2aded717a996b3b6e6f18582489b69b5e50f9c82ec75",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.026750458870083094,
+      "stdoutSha256": "ba16e95a1a0bbd248bbba4434cfc73b2b7ee8f4adeb32cfc8c9cbc72fdfe87ab",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "cb0abee1deb23c43a8dd4fef26aa620aa8a0b2f75e875d7f42b363fd7242f109",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.6247092080302536,
+      "stdoutSha256": "ad4b04a1117d11064e4f24720724936b112f6152eb9b596b2c4dd1bbe05ca391",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "cb0abee1deb23c43a8dd4fef26aa620aa8a0b2f75e875d7f42b363fd7242f109",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "cb0abee1deb23c43a8dd4fef26aa620aa8a0b2f75e875d7f42b363fd7242f109",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.02602920914068818,
+      "stdoutSha256": "22f58271df5fdf07a75c05b744d98d06a711e6cc26283a5399e52538c15b2d32",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "disabled-with-allow",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "52ee5090a0abeec189f76383d74fdf61044a0de4727db1aa328ecc8f73c20450",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.6023983331397176,
+      "stdoutSha256": "03c84400a80e462cbd36e7fc530019e0318caa7050d80f10911bd7cc86470d1e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "disabled-with-allow",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "52ee5090a0abeec189f76383d74fdf61044a0de4727db1aa328ecc8f73c20450",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "52ee5090a0abeec189f76383d74fdf61044a0de4727db1aa328ecc8f73c20450",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-disabled-with-allow/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.02601470798254013,
+      "stdoutSha256": "34c2259d6e0d6f335cc8f6d3957138bfd57d543b84938bc5be93591608a572f2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "broad-allow-with-deny",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.19065995793789625,
+      "stdoutSha256": "52b23b59542bdfca3b4299e86ec17c706b618d8abf82a6edf2f1fb2bb0f3f739",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "broad-allow-with-deny",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d7f7ca73fcdfd7f9c13d347d1dca1092155e16c4755b67b7fe1003e1c12ff44e",
+        "lockSha256": "45decd262634f46e906100fe747d5bbbefd86ec5e3f4072999b6a8d55ddbeda7",
+        "packageEntryExists": true,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "seconds": 0.026328125037252903,
+      "stdoutSha256": "768641fa9e6a209ff67619d3aed354abbdf3d2918ca27af0782c5b14cdcfb4c6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "allowed-failure",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "08111845846eb3f541ef1cf06feddda7a3afe08e651b035357caa3a9b4556dc4",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.605189667083323,
+      "stdoutSha256": "c983965a80f2977e6b8844001f42bf50577a9845fbefa21e805f5493778ba186",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "allowed-failure",
+    "operation": "inspect-module",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "try { console.log(JSON.stringify({available:true,value:require(\"fixture-hook\"),path:require.resolve(\"fixture-hook\")})) } catch(e) { console.log(JSON.stringify({available:false,error:e.code})) }"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "08111845846eb3f541ef1cf06feddda7a3afe08e651b035357caa3a9b4556dc4",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "d6caba3008eaf2950174416346f3fad4e10db6c35a93ae05d5948059c200b7ab",
+        "lockSha256": "f5be2c2ded0b108c5d87f7d232a194e92fa66eaa8289b0ce81e70119aa460e1f",
+        "packageEntryExists": true,
+        "effectsSha256": "08111845846eb3f541ef1cf06feddda7a3afe08e651b035357caa3a9b4556dc4",
+        "effects": [
+          {
+            "scope": "dependency",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          },
+          {
+            "scope": "dependency",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-allowed-failure/project/node_modules/fixture-hook"
+          }
+        ]
+      },
+      "seconds": 0.027174250222742558,
+      "stdoutSha256": "21851a672e4b7fb5628f11ea68f81a36310d6035d80a8d5dba251c06666f030b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "root-disabled",
+    "operation": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": null,
+        "packageEntryExists": false,
+        "effectsSha256": null,
+        "effects": []
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "dbd45fbc7b2b19f612b08bfbc63583db9bce74a4386e4617779f3b7bec2da41d",
+        "packageEntryExists": false,
+        "effectsSha256": "191f1326fb12e1e63a897fa48b9680b9ee194b9f45772ba1e2ed4a0348f2dfe8",
+        "effects": [
+          {
+            "scope": "root",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          }
+        ]
+      },
+      "seconds": 0.564369291998446,
+      "stdoutSha256": "19d96bca93ee58c5cb629c44cfaaf877d32cfa686dc5e56b6dd4db5db692b50e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "app": "yarn",
+    "case": "root-disabled",
+    "operation": "explicit-root",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "run",
+      "probe"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "dbd45fbc7b2b19f612b08bfbc63583db9bce74a4386e4617779f3b7bec2da41d",
+        "packageEntryExists": false,
+        "effectsSha256": "191f1326fb12e1e63a897fa48b9680b9ee194b9f45772ba1e2ed4a0348f2dfe8",
+        "effects": [
+          {
+            "scope": "root",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          }
+        ]
+      },
+      "after": {
+        "manifestSha256": "73bfdd2e51444b37f208fa2a73162ab3775d14b9403d43c031fbc0f7e21fa8f9",
+        "lockSha256": "dbd45fbc7b2b19f612b08bfbc63583db9bce74a4386e4617779f3b7bec2da41d",
+        "packageEntryExists": false,
+        "effectsSha256": "bd4fef6fbeee6028632d3353a2f05cd32c6f83d71cb74d2327b92f425eec5408",
+        "effects": [
+          {
+            "scope": "root",
+            "phase": "preinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "install",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "postinstall",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          },
+          {
+            "scope": "root",
+            "phase": "probe",
+            "cwd": "/private/tmp/rules-js-scripts-sppqyt2g/yarn-root-disabled/project"
+          }
+        ]
+      },
+      "seconds": 0.2715940000489354,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "app": "npm",
+    "id": "unreviewed",
+    "approval": null,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "deny",
+    "approval": false,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": false\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": false\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "allow",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "disabled-with-allow",
+    "approval": true,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "broad-allow-with-deny",
+    "approval": false,
+    "disabled": false,
+    "broad": true,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": false\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": false\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "allowed-failure",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": true,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    },
+    "installExit": 7,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"allowScripts\": {\n    \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\": true\n  }\n}\n"
+    }
+  },
+  {
+    "app": "npm",
+    "id": "root-disabled",
+    "approval": null,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "root",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "unreviewed",
+    "approval": null,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 1,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "deny",
+    "approval": false,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": false}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": false}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "allow",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "disabled-with-allow",
+    "approval": true,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "broad-allow-with-deny",
+    "approval": false,
+    "disabled": false,
+    "broad": true,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": false}\ndangerouslyAllowAllBuilds: true\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": false}\ndangerouslyAllowAllBuilds: true\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "allowed-failure",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": true,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 1,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {\"fixture-hook@file:../../archives/fixture-hook-1.0.0.tgz\": true}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "pnpm",
+    "id": "root-disabled",
+    "approval": null,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "root",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {}\ndangerouslyAllowAllBuilds: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n",
+      "pnpm-workspace.yaml": "nodeLinker: isolated\nenableGlobalVirtualStore: false\nallowBuilds: {}\ndangerouslyAllowAllBuilds: false\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "unreviewed",
+    "approval": null,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "deny",
+    "approval": false,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": false\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": false\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "allow",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "disabled-with-allow",
+    "approval": true,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "broad-allow-with-deny",
+    "approval": false,
+    "disabled": false,
+    "broad": true,
+    "fail": false,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": false\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": false\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "allowed-failure",
+    "approval": true,
+    "disabled": false,
+    "broad": false,
+    "fail": true,
+    "scope": "dependency",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    },
+    "installExit": 1,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"dependencies\": {\n    \"fixture-hook\": \"file:/private/tmp/rules-js-scripts-sppqyt2g/archives/fixture-hook-1.0.0.tgz\"\n  },\n  \"dependenciesMeta\": {\n    \"fixture-hook\": {\n      \"built\": true\n    }\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: true\n"
+    }
+  },
+  {
+    "app": "yarn",
+    "id": "root-disabled",
+    "approval": null,
+    "disabled": true,
+    "broad": false,
+    "fail": false,
+    "scope": "root",
+    "configurationBefore": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n"
+    },
+    "installExit": 0,
+    "configurationAfter": {
+      "package.json": "{\n  \"name\": \"fixture-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"preinstall\": \"node hook.cjs root preinstall\",\n    \"install\": \"node hook.cjs root install\",\n    \"postinstall\": \"node hook.cjs root postinstall\",\n    \"preprobe\": \"node hook.cjs root preprobe\",\n    \"probe\": \"node hook.cjs root probe\",\n    \"postprobe\": \"node hook.cjs root postprobe\"\n  }\n}\n",
+      ".yarnrc.yml": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n"
+    }
+  }
+]
