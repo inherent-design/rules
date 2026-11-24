@@ -4,6 +4,8 @@ This is a design proposal within the application study. It preserves the checked
 
 The separate [current ownership band](OWNERSHIP.md) has actual core API and installed-CLI evidence. The [synchronization scope band](SYNCHRONIZATION.md) separately models nonempty retained graphs, fresh resolution scope, alias rebinding, and exact runtime retention. It does not qualify the proposed portable-authoring implementation. The [Java policy band](JAVA.md) separately compares exact-game profiles, preference, constraint intersections, and actual-major admission; native engine probing and whole-modpack compatibility remain distinct.
 
+The [channel band](CHANNELS.md) keeps incoming offer authentication, saved-envelope revalidation, durable observation, and installed release separate. Its candidate exact saved-floor check can reuse current authentication/equality; it does not require another trust system or change the no-expiry policy. Root, publication, and acquisition behavior remain implementation/verification obligations.
+
 The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.
 
 ## Keep the current guarantees

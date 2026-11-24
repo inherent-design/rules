@@ -32,7 +32,7 @@
       "sha256": "cc636aa4291675916b1a6b0c21b01f200dc148f4eb12f20c22683b301025fd4a",
       "bytes": 14302,
       "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/instance/subscription.rs",
-      "inspected": "1\u2013155,203\u2013344: strict local data vs proof, reauthentication, current binding, fetching selected offer and acquisition guards; source-only."
+      "inspected": "1\u2013344: local record decoding, cached authentication, root-bound stable read, new-offer/release fetch ordering and selected-floor guard. First record methods and require_selected_offer additionally compiled in saved-observation fixture; root/recovery/network portions source-only."
     },
     {
       "path": "crates/empack-lib/src/engine/api/subscription.rs",
@@ -65,6 +65,14 @@
       "bytes": 11191,
       "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/publishing.md",
       "inspected": "1\u201325,59\u201381: publisher/recipient/author roles, immutable assets before pointers, snapshot vs enrollment, channel variants; contract/source-only."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/instance.rs",
+      "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+      "sha256": "bfd8f9e81e698ec350f0762941781fc704478f2ea09108d8355e89582b69f791",
+      "bytes": 50029,
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/instance.rs",
+      "inspected": "371\u2013390 read_optional regular-file dispatch only; generic stable document read is not a semantic observation/floor equality check. Full instance planner/publication not executed by this band."
     }
   ]
 }

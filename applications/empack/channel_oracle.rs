@@ -43,7 +43,7 @@ fn encoded(doc: &ChannelDocument, keys: &[&SigningKey]) -> (Vec<u8>, Vec<u8>) {
     (payload, envelope)
 }
 
-fn main() {
+fn channel_cases() {
     let a = SigningKey::from_bytes(&[7; 32]);
     let b = SigningKey::from_bytes(&[8; 32]);
     let va = a.verifying_key();
@@ -128,4 +128,65 @@ fn main() {
     let duplicated_signer = sign(EnvelopeKind::Channel, &payload, &[&a, &a]);
     println!("{}", json!({"case":"duplicate-signing-input","request":{"payloadSha256":digest(&payload)},
         "observed":{"phase":"sign","accepted":duplicated_signer.is_ok(),"error":duplicated_signer.err().map(|e|format!("{e:#}"))}}));
+}
+
+#[cfg(saved_observation)]
+fn saved_cases() {
+    use engine::instance::subscription::{SubscriptionRecord, fixture_selected};
+    let a = SigningKey::from_bytes(&[7; 32]);
+    let va = a.verifying_key();
+    let public = va.as_bytes().iter().map(|b| format!("{b:02x}")).collect::<String>();
+    let doc3 = ChannelDocument { schema: 2, pack: "fixture-pack".into(), channel: "stable".into(), sequence: 3,
+        release: ChannelRelease { id: digest(b"fixture release not fetched"),
+            url: "https://publisher.invalid/releases/fixture/release.json".into(), maximum_bytes: 4096 },
+        minimum_engine: ">=0.8.5-beta".into() };
+    let mut doc4 = doc3.clone(); doc4.sequence = 4;
+    let (_, envelope3) = encoded(&doc3, &[&a]);
+    let (_, envelope4) = encoded(&doc4, &[&a]);
+    let engine = semver::Version::parse("0.8.8-beta").unwrap();
+    let trust = PublisherTrust::enroll("fixture-pack".into(), "https://publisher.invalid", vec![va]).unwrap();
+    let floor3 = trust.channel(&envelope3, "stable", &engine, None).unwrap().floor().clone();
+    let floor4 = trust.channel(&envelope4, "stable", &engine, Some(&floor3)).unwrap().floor().clone();
+    let base = SubscriptionRecord { schema: 1, root: "fixture-root".into(), pack: "fixture-pack".into(),
+        channel: "stable".into(), url: "https://publisher.invalid/channels/stable.json".into(), keys: vec![public],
+        floor: Some(floor3.clone()), observed: Some(String::from_utf8(envelope3.clone()).unwrap()) };
+    for name in ["consistent", "newer-observation", "older-observation", "wrong-payload-floor", "one-sided-observation",
+        "revoked-keys", "changed-expected-floor", "empty-observation", "floor-binding-mismatch"] {
+        let mut record = base.clone();
+        let mut expected = floor3.clone();
+        match name {
+            "newer-observation" => record.observed = Some(String::from_utf8(envelope4.clone()).unwrap()),
+            "older-observation" => { record.floor = Some(floor4.clone()); expected = floor4.clone(); },
+            "wrong-payload-floor" => { record.floor.as_mut().unwrap().payload = "00".repeat(32); expected = record.floor.clone().unwrap(); },
+            "one-sided-observation" => record.observed = None,
+            "revoked-keys" => record.keys.clear(),
+            "changed-expected-floor" => expected = floor4.clone(),
+            "empty-observation" => {record.floor = None; record.observed = None;},
+            "floor-binding-mismatch" => record.floor.as_mut().unwrap().pack = "other-pack".into(),
+            _ => {},
+        }
+        let bytes = serde_json::to_vec(&record).unwrap();
+        match SubscriptionRecord::decode(&bytes) {
+            Err(error) => println!("{}", json!({"case":name,"request":{"record":record,"expected":expected},
+                "observed":{"decoded":false,"error":format!("{error:#}")}})),
+            Ok(decoded) => {
+                let selected = fixture_selected(&decoded, &expected);
+                let selected_error = selected.as_ref().err().map(|e|format!("{e:#}"));
+                let (authenticated, returned) = outcome(decoded.authenticated_channel(&engine));
+                let exact = returned.as_ref().is_some_and(|floor| Some(floor) == decoded.floor.as_ref());
+                println!("{}", json!({"case":name,"request":{"record":record,"expected":expected},
+                    "observed":{"decoded":true,"selectedGuard":selected.is_ok(),"selectedError":selected_error,
+                    "authenticated":authenticated,"returnedFloorEqualsSaved":exact,
+                    "recordBytesUnchanged":serde_json::to_vec(&decoded).unwrap() == bytes,
+                    "currentSelectionChecksPass":selected.is_ok() && returned.is_some()}}));
+            }
+        }
+    }
+}
+
+fn main() {
+    #[cfg(saved_observation)]
+    saved_cases();
+    #[cfg(not(saved_observation))]
+    channel_cases();
 }

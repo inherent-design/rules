@@ -28,6 +28,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 **A desired-state index is not an observed installation.** Resolution-only updates in all three JavaScript tools leave an older package runnable while their root locks select the newer archive. In npm's measured profile, the hidden install index also advances; a later ordinary install reports success while retaining the old payload. Removing that private index lets a fresh install reconcile correctly, and a clean frozen install also corrects it. Preserve selected, cached-claim, and observed identities across optimization boundaries. [Native reproduction, controls, and limits](js-peers/LOCK-MODES.md).
 
+**Incoming evidence and saved evidence can need different checks.** Empack's selected channel APIs correctly permit a newer signed offer, but reusing that admission for a stored envelope also accepts an inconsistent older stored floor. Exact saved-pair validation is a narrower proposed caller obligation, not a change to cryptography or monotone offer advancement. This finding comes from independent in-memory source checks, not a reproduced normal update or crash. [Source/model scope](empack/CHANNELS.md).
+
 **An event clock is not a saved image.** Native VS Code undo returns to a clean save point while its document version increases. Empack's proposed edit epoch rejects stale work, while saved-image identity answers whether the current draft is saved. Returning to the same image does not authorize an old attempt's background result. The file/provider incarnation and admitted storage revision remain separate.
 
 **Creating an artifact is not qualifying it.** Cargo retains a local archive after a deliberately failed build check and permits packaging with verification skipped. Its transformed distribution manifest and original author manifest have different roles. Consumers need the actual checked outcome and exact artifact identity before delivery; an expected pathname alone cannot supply either.
@@ -144,6 +146,8 @@ Trust predicates reinforce that support metadata is not full admission. Explicit
 
 ### empack
 
+The [channel band](empack/CHANNELS.md) supports keeping current enrollment, authenticated offer, exact recorded observation, durable floor, acquired release, and installed release distinct. Reuse authentication and floor equality for the proposed saved-pair guard; preserve new-offer advancement, revoked-record inspection, and nonexpiring channels. The corrected diagnostic probe recovers existing typed anyhow contexts and supplies no product diagnostic-loss finding. Real root/publication/recovery/acquisition tests are still required before adopting the guard.
+
 The [synchronization band](empack/SYNCHRONIZATION.md) separates affected resolution roots, allowed proposed closure, changed dependency records, and the whole lock delta. Shared prerequisites cannot bypass protected explicit roots or retained dependents; root demotion does not authorize deletion. Graph/coverage-only differences need attributable reporting but are retained by the inspected full-lock publication path. Portable result reuse must preserve current search-revision and exact-runtime policies rather than infer authority from an unchanged label or unpinned request.
 
 The [document/approval band](empack/DOCUMENTS.md) supports keeping semantic currency separate from raw write preconditions. Actual approval-time author/lock comments and absent-to-empty bindings refuse pending metadata publication while preserving the later edits; fresh preparation succeeds. Portable editors may retain useful semantic results without granting old prepared writes. This is not a new automatic rebasing or cache protocol.
@@ -170,6 +174,6 @@ For empack, first preserve constructor authority and native baselines, then impl
 
 ## Remaining work
 
-This comparison covers the completed bounded bands, not every capability in the inventory. General script trust beyond the selected local-hook profiles, package publication, multi-owner storage, component/runtime selection, native recovery, game/tool output ownership, full provider saves, and many other feature models still need source/native evidence or explicit unavailable-platform obligations. Joined component evidence must not promote an entire scenario.
+This comparison covers the completed bounded bands, not every capability in the inventory. General script trust beyond the selected local-hook profiles, real-registry publication, multi-owner storage, complete component/runtime selection, native recovery, game/tool output ownership, full provider saves, and many other feature models still need source/native evidence or explicit unavailable-platform obligations. Joined component evidence must not promote an entire scenario.
 
 The next design work should fill missing domain models and cross-feature transitions, rather than repeatedly adding assertions to these same small fixtures. Review the whole target and its evidence with the host owner before selecting production implementation. Deferred dependency UX work and the 0.9 implementation remain separate decisions.

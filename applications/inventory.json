@@ -1682,13 +1682,28 @@
             },
             {
               "id": "verify-offer",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "empack/Channels.lean;empack/Channels.bend",
+              "laws": [
+                "Enrollment, signature witnesses, exact payload floors, and engine admission remain distinct; proposed exact saved revalidation is stricter than current cached admission without blocking new-offer advancement."
+              ],
+              "nativeEvidence": [
+                "evidence/empack-channels-20261124T130523942359Z/receipt.json",
+                "evidence/empack-channels-20261124T133716623327Z/receipt.json",
+                "evidence/empack-channels-20261124T130523942359Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/empack-channel-selections.json"
+              ],
+              "negativeControls": [
+                "Unknown signer, malformed signature metadata, changed payload at equal sequence, older sequence, wrong identity, revoked keys, malformed saved pairing, eight malformed research inputs, and an unsupported crypto witness."
+              ],
+              "uxAssessment": "empack/CHANNELS.md",
+              "status": "source-modeled",
+              "evidenceLimit": "48 unique selected-source observations with Rust 1.99.1 and reused direct dependencies; 39 corrected diagnostic repeat cases are not counted twice. Saved guard and authentication are independent in-memory evaluations, not a full update trace. No installed CLI, release decoder, network, durable publication, root/recovery, acquisition, or installation qualification. Exact saved revalidation is proposed only.",
+              "verificationPlan": "Inject inconsistent saved floor/envelope pairs through a disposable real engine root; require refusal before acquisition while preserving legitimate observe/advance, key revocation, stale-root/basis refusal, committed floors across cancellation/failure, and installed rollback.",
+              "proofPremises": [
+                "Crypto validity and normalized identities are admitted fixture witnesses; fixed URL and six SemVer profiles only. Host-current and write authorization are separate premises; commit projection is not a storage implementation."
+              ]
             },
             {
               "id": "retain-sequence",
@@ -1900,13 +1915,28 @@
             },
             {
               "id": "authenticate-select",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "empack/Channels.lean;empack/Channels.bend",
+              "laws": [
+                "Enrollment, signature witnesses, exact payload floors, and engine admission remain distinct; proposed exact saved revalidation is stricter than current cached admission without blocking new-offer advancement."
+              ],
+              "nativeEvidence": [
+                "evidence/empack-channels-20261124T130523942359Z/receipt.json",
+                "evidence/empack-channels-20261124T133716623327Z/receipt.json",
+                "evidence/empack-channels-20261124T130523942359Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/empack-channel-selections.json"
+              ],
+              "negativeControls": [
+                "Unknown signer, malformed signature metadata, changed payload at equal sequence, older sequence, wrong identity, revoked keys, malformed saved pairing, eight malformed research inputs, and an unsupported crypto witness."
+              ],
+              "uxAssessment": "empack/CHANNELS.md",
+              "status": "source-modeled",
+              "evidenceLimit": "48 unique selected-source observations with Rust 1.99.1 and reused direct dependencies; 39 corrected diagnostic repeat cases are not counted twice. Saved guard and authentication are independent in-memory evaluations, not a full update trace. No installed CLI, release decoder, network, durable publication, root/recovery, acquisition, or installation qualification. Exact saved revalidation is proposed only.",
+              "verificationPlan": "Inject inconsistent saved floor/envelope pairs through a disposable real engine root; require refusal before acquisition while preserving legitimate observe/advance, key revocation, stale-root/basis refusal, committed floors across cancellation/failure, and installed rollback.",
+              "proofPremises": [
+                "Crypto validity and normalized identities are admitted fixture witnesses; fixed URL and six SemVer profiles only. Host-current and write authorization are separate premises; commit projection is not a storage implementation."
+              ]
             },
             {
               "id": "plan-update",

@@ -4,7 +4,7 @@ An authenticated offer is separate from a durable subscription observation, rele
 
 ## Compiled source and adapters
 
-The [collector](channel_probe.py) compiles selected unchanged functions from `engine/release/trust.rs`, actual release helper functions, and the diagnostic definitions/constructor. The [source ledger](../sources/empack-channel-selections.json) identifies eight implementation/contract files and inspected ranges. The native receipt additionally identifies each selected source range, generated file, compiler, direct dependency artifact, and resulting binary.
+The [collector](channel_probe.py) compiles selected unchanged functions from `engine/release/trust.rs`, actual release helper functions, and the diagnostic definitions/constructor. The [source ledger](../sources/empack-channel-selections.json) identifies nine implementation/contract files and inspected ranges. The native receipt additionally identifies each selected source range, generated file, compiler, direct dependency artifact, and resulting binary.
 
 These APIs are in the engine, not the previously reused pure-core library. Existing dependency artifacts require the matching Rust 1.99.1 toolchain. The fixture reuses seven direct libraries from the existing dependency directory; it performs no Cargo or full-engine build. Transitive dependency source and reproducible-build correspondence are not established. The source-fragment executable is its own tested artifact.
 
@@ -52,6 +52,30 @@ All 39 original inputs, phases, acceptance decisions, messages, and floors agree
 
 Floor ordering/identity checks use plain `ensure!` errors in the selected source. The fixture does not run the production classifier's fallback or final CLI rendering. A future reporting proposal must distinguish an authenticated but stale offer from a failed signature without claiming a currently observed CLI code or parsing English text as machine authority.
 
+## Saved observation versus new offer
+
+A new channel offer may advance a saved floor. Revalidating the envelope already recorded as that floor has a different job: it should establish that the stored pair still describes the same observation. The current `SubscriptionRecord::authenticated_channel()` reuses the new-offer validator, which permits advancement.
+
+The [saved-record receipt](../evidence/empack-channels-20261124T133716623327Z/receipt.json) adds nine source-fragment observations using the unchanged record decoder, authentication method, and `require_selected_offer` helper. The helper and authentication method are evaluated independently in memory. Their reported conjunction is a source composition, not a complete acquisition trace; a real caller stops when its first guard fails.
+
+| Stored input or selected basis               | Decode | Selected-floor guard | Saved authentication | Returned floor equals stored floor |
+| -------------------------------------------- | ------ | -------------------- | -------------------- | ---------------------------------- |
+| Consistent observed envelope and floor       | Accept | Accept               | Accept               | Yes                                |
+| Signed sequence 4 envelope, sequence 3 floor | Accept | Accept               | Accept               | **No**                             |
+| Older observed envelope                      | Accept | Accept               | Refuse               | No                                 |
+| Same sequence, wrong payload digest in floor | Accept | Accept               | Refuse               | No                                 |
+| Only one of envelope/floor present           | Refuse | Not run              | Not run              | Not run                            |
+| Keys revoked                                 | Accept | Accept               | Refuse               | No                                 |
+| Caller selected a different floor            | Accept | Refuse               | Accept               | Yes                                |
+| Neither observation nor floor present        | Accept | Refuse               | Refuse               | No                                 |
+| Floor bound to another identity              | Refuse | Not run              | Not run              | Not run                            |
+
+The sequence 4 case preserves the input record bytes. Authentication returns a newer floor without establishing equality with the recorded sequence 3 floor. The fixture changes the sequence while retaining the same release reference; it does not demonstrate acquisition of different release content. Stable root/record reads and an expected-floor comparison do not themselves establish this pair's semantic consistency. No ordinary update, interruption, crash, or recovery path was reproduced producing the inconsistent record.
+
+The candidate correction is narrow: after authenticating a **saved** envelope, require its returned `SequenceFloor` to equal the saved floor. Keep monotonic advancement for a **new** offer. Existing floor equality and authentication can supply this check; no new crypto system, schema, or migration framework is needed. If separate proof types help callers, distinguish an authenticated incoming offer from an exactly revalidated recorded offer without duplicating their parser or verifier.
+
+Do not move current-key authentication into record decoding. Records with revoked keys must remain inspectable and recoverable even though they cannot authorize a release. Do not clear or lower a floor to repair inconsistency automatically. A future diagnostic should name the saved observation mismatch and offer inspection/recovery without implying that authentication or installation succeeded. This is an implementation proposal, not an applied production fix or a qualified release blocker.
+
 ## Source-only lifecycle boundaries
 
 The strict subscription record is local data, not an authentication proof. Its observed envelope is reverified against current enrollment before release selection. Replacing or revoking keys preserves the sequence floor. An authenticated observation updates the floor and retained envelope through recoverable publication; it does not install release content.
@@ -60,8 +84,22 @@ Release fetching requires the selected floor to be durable and still equal both 
 
 Channels have no calendar-expiry input. Current schema 2 rejects the former field instead of silently restoring an expiry policy. An unchanged offer does not need renewal; choosing an older release intentionally requires a newer offer sequence. The observed same-sequence checks are about exact payload bytes, not elapsed time. No clock-change experiment was run.
 
+## Models and retained comparison
+
+[Lean](Channels.lean) checks 36 laws; [Bend](Channels.bend) checks 13. They model enrolled identities, attributable signature witnesses, exact payload floors, engine admission, saved/current selection, and distinct installation state. Host-current and write-authorization premises remain explicit; the successful-commit projection is not a filesystem protocol. Installation rollback and key replacement preserve the observation floor. Authentication alone neither persists that floor nor installs content.
+
+The [pure replay](channel_conformance.py), [Lean input adapter](ChannelsCase.lean), and [comparison receipt](../evidence/empack-channels-20261124T130523942359Z/conformance.json) match both models to 39 corrected channel observations plus nine saved-record observations. The original 39 diagnostic-projection cases are checked for agreement, not counted again. Eight malformed research inputs and an unsupported crypto witness are refused. The replay compiles the exact Lean model afresh before importing it, and records that artifact identity; a failed compile cannot fall back to an older model artifact.
+
+Signature validity comes from a closed catalog of actual producer signatures and named invalid controls, not a nonzero-byte guess or a new Ed25519 implementation. URL normalization and the six engine requirements are selected fixture profiles. The models use opaque labels for their admitted identities, not general URL, JSON, or SemVer parsers. The decoder's negative controls validate the research adapter, not all production input bounds.
+
+The model retains the current mismatched-record acceptance. A separate proposed saved check refuses that mismatch while preserving the consistent case and new-offer advancement. These checks do not promote the proposal to implemented behavior. No complete feature family or joined scenario is qualified.
+
+## Compatibility and verification before implementation
+
+Preserve exact payload identity, explicit key enrollment, signature-entry policy, authored engine bounds, nonexpiring offers, and floors independent of installed releases. Keep error causes typed through the existing diagnostic mechanism; the corrected harness supplies no reason to replace it. A CLI or SDK can distinguish offer authentication, durable observation, acquisition, and installation using the facts already present, rather than reporting a single ambiguous update-success flag.
+
+Before adopting exact saved revalidation, inject an inconsistent pair into a disposable real engine fixture and require refusal before acquisition. Compare a correctly observed newer offer, revoked keys, an empty subscription, stale selected basis, and different release content. Exercise actual observe/publication ordering and failures: acquisition failure or cancellation must not lower a committed floor; rolling back installed content must not reset it. Recheck root association, current subscription bytes, and recovery behavior. The source-fragment result cannot replace these tests, and existing callers may reject an inconsistent root earlier.
+
 ## Evidence limits
 
-This record establishes bounded source observations. It claims no completed Lean/Bend model, general decoder, crypto proof, or full application conformance. The owning task checkpoint records the remaining formal comparison and design work; this report is not a second progress ledger.
-
-Crypto validity in later domain models must remain an explicit premise or attributable fixture witness. Origin normalization, JSON bounds, SemVer interpretation, and direct dependency identities also have narrower scope than complete transport or host authority. Private source-fragment work is retained under ignored `work/`; no public service, personal state, installed executable, or production source changed.
+This record establishes bounded source/model comparisons. It does not qualify a complete engine, installed CLI, publisher transaction, HTTP redirect policy, release decoding, acquisition, filesystem recovery, or consumer installation. There is no proof of crypto algorithms or dependency reproducibility. No public service, personal state, installed executable, or production source changed. Original captures and the corrected diagnostic disposition remain retained; private generated source and binaries live under ignored `work/`.

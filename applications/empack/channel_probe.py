@@ -12,6 +12,7 @@ from pathlib import Path
 import platform
 import signal
 import subprocess
+import sys
 import time
 
 HERE = Path(__file__).resolve().parent
@@ -22,10 +23,14 @@ sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 
 
 def main():
+    assert sys.argv[1:] in [[], ['--saved-observation']]
+    saved = sys.argv[1:] == ['--saved-observation']
     repo = ROOT.parent / 'empack'
     assert subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip() == REVISION
     paths = ['crates/empack-lib/src/engine/release/trust.rs', 'crates/empack-lib/src/engine/release.rs',
              'crates/empack-lib/src/engine/diagnostics.rs']
+    if saved:
+        paths.append('crates/empack-lib/src/engine/instance/subscription.rs')
     sources = {}
     for name in paths:
         data = subprocess.check_output(['git', '-C', str(repo), 'show', REVISION + ':' + name])
@@ -50,7 +55,7 @@ def main():
             sha256=hashlib.sha256(selected.encode()).hexdigest(), bytes=len(selected.encode())))
         return selected
 
-    trust_path, release_path, diagnostic_path = paths
+    trust_path, release_path, diagnostic_path = paths[:3]
     trust = sources[trust_path].decode()
     first_stop = '    /// Signature, expected identity, pack and engine compatibility are all checked before use.'
     first = trust[:trust.index(first_stop)]
@@ -79,7 +84,15 @@ def main():
     scaffold += 'pub mod release {\nuse anyhow::{Context, Result, ensure};\nuse serde::{Serialize, Deserialize};\n'
     scaffold += 'use sha2::{Digest, Sha256};\nuse std::collections::BTreeSet;\n' + limit_line + '\n'
     scaffold += 'pub struct DecodedRelease;\nimpl DecodedRelease { pub fn decode(_: &[u8]) -> Result<Self> { anyhow::bail!("Release decoding is outside this channel-only fixture") } }\n'
-    scaffold += helpers + '\npub mod trust {\n' + selected_trust + '\n}\n}\n}\n'
+    scaffold += helpers + '\npub mod trust {\n' + selected_trust + '\n}\n}\n'
+    if saved:
+        subscription_path = paths[3]
+        record = cut(subscription_path, '//! Strict local subscription state, distinct from signature-verification proofs.',
+                     '/// Release authentication bound to the current durable enrollment and observed channel.')
+        selected = cut(subscription_path, 'fn require_selected_offer(', 'fn asset_base(')
+        scaffold += 'pub mod instance { pub mod subscription {\n' + record + selected
+        scaffold += 'pub fn fixture_selected(record: &SubscriptionRecord, expected: &SequenceFloor) -> Result<()> { require_selected_offer(record, expected) }\n}\n}\n'
+    scaffold += '}\n'
     scaffold += 'include!(' + json.dumps(str(run / 'driver.rs')) + ');\n'
     (work / 'main.rs').write_text(scaffold)
     deps = repo / 'target/debug/deps'
@@ -116,7 +129,8 @@ def main():
         assert not timeout
         return child.returncode
 
-    receipt = dict(schema=1, revision=REVISION, sourceSha256={name: hashlib.sha256(data).hexdigest() for name, data in sources.items()},
+    receipt = dict(schema=1, revision=REVISION, profile='saved-observation' if saved else 'channel',
+        sourceSha256={name: hashlib.sha256(data).hexdigest() for name, data in sources.items()},
         sourceSelections=parts, compiler=dict(path=str(rustc), sha256=sha(rustc), version=compiler_version),
         libraries=libraries, dependencyResolutionDirectory=str(deps), cargoLockSha256=sha(repo / 'Cargo.lock'),
         producerSha256=hashlib.sha256(PRODUCER).hexdigest(), driverSha256=sha(run / 'driver.rs'),
@@ -132,6 +146,8 @@ def main():
                 '-L', 'dependency=' + str(deps), str(work / 'main.rs'), '-o', str(binary)]
         for name, item in libraries.items():
             argv += ['--extern', name + '=' + item['path']]
+        if saved:
+            argv += ['--cfg', 'saved_observation']
         if command('compile', argv) != 0:
             receipt['disposition'] = 'Excluded build: no oracle observations. Preserve original diagnostics.'
             return
