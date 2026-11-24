@@ -1,0 +1,51 @@
+{
+  "name": "rules-private-config-fixture",
+  "publisher": "rules-study",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.147.0"
+  },
+  "main": "./extension.cjs",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Rules fixture",
+      "properties": {
+        "fixture.scope.value": {
+          "type": "string",
+          "default": "base-default",
+          "scope": "language-overridable"
+        },
+        "fixture.scope.object": {
+          "type": "object",
+          "default": {
+            "defaultOnly": "d",
+            "nested": {
+              "d": "d",
+              "x": "default"
+            },
+            "arr": [
+              "default"
+            ]
+          },
+          "scope": "language-overridable"
+        },
+        "fixture.scope.nullable": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "base-nullable",
+          "scope": "language-overridable"
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[javascript]": {
+        "fixture.scope.value": "language-default"
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "user": {
+    "workbench.startupEditor": "none",
+    "files.autoSave": "off",
+    "files.hotExit": "off",
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "none",
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "security.workspace.trust.enabled": false,
+    "git.enabled": false,
+    "chat.disableAIFeatures": true,
+    "fixture.scope.value": "user",
+    "fixture.scope.object": {
+      "userOnly": "u",
+      "nested": {
+        "u": "u",
+        "x": "user"
+      },
+      "arr": [
+        "user"
+      ]
+    },
+    "fixture.scope.nullable": null
+  },
+  "workspace": {
+    "folders": [
+      {
+        "path": "a"
+      },
+      {
+        "path": "b"
+      }
+    ],
+    "settings": {
+      "fixture.scope.value": "workspace",
+      "fixture.scope.object": {
+        "workspaceOnly": "w",
+        "nested": {
+          "w": "w"
+        },
+        "arr": [
+          "workspace"
+        ]
+      }
+    }
+  },
+  "folderA": {
+    "fixture.scope.value": "folder-a",
+    "fixture.scope.object": {
+      "folderOnly": "a",
+      "nested": {
+        "a": "a",
+        "x": "folder-a"
+      },
+      "arr": [
+        "folder-a"
+      ]
+    }
+  },
+  "folderB": {
+    "fixture.scope.value": "folder-b"
+  }
+}

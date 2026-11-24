@@ -18,7 +18,7 @@ The owning reports link exact versions, raw observations, source selections, mod
 | restic | [Explicit snapshot forget/prune/restore](restic/README.md) and [selection/group previews](restic/SELECTION.md), using 0.20.0. | Selected local snapshot/blob lifecycle plus six-snapshot filters and keep-last-one previews; general retention, concurrent owners, remote failures, and repair remain open. |
 | MO2 | [Origin ordering](mo2/README.md) and [profile activation](mo2/PROFILES.md), from 2.5.2 source. | Unmodified bodies with fixture adapters; no supported Windows application, Qt delivery, VFS injection, or game execution. |
 | Prism | [mrpack update planning](prism/README.md) and [launch-task lifecycle](prism/LAUNCH.md), from 11.1.1 source. | Update impacts are simulations after a source filter; launch uses supported real Qt with controlled steps. Neither is full GUI/game acceptance. |
-| VS Code desktop / vscode.dev | [Serial file editing](vscode/README.md), [one untitled reload](vscode/WEB.md), and [browser handle registration](vscode/HANDLES.md), at 1.147.0. | Different native/UI/source-fragment scopes. The custom-provider save race remains unresolved; reload is not durable project or file-save evidence. |
+| VS Code desktop / vscode.dev | [Serial file editing](vscode/README.md), [one untitled reload](vscode/WEB.md), and [browser handle registration](vscode/HANDLES.md), and [local configuration scopes](vscode/CONFIGURATION.md), at 1.147.0. | Different native/UI/source-fragment scopes. The custom-provider save race remains unresolved; reload is not durable project or file-save evidence. Configuration trust/remote/UI are not qualified; documented null inspection disagrees with the correct getter. |
 
 ## Distinctions that must survive simplification
 
@@ -107,6 +107,8 @@ Preserve resource/incarnation, event version, undo/save point, current buffer, b
 Two candidates address different boundaries. An additive save result could expose captured basis, actual write outcome, current unsaved work, and uncertainty already known internally. A browser registry could use immutable entry keys shared across handle kinds, descriptive names, transactional allocation, and separate in-memory/persisted outcomes. Source-fragment alias collisions and aborted registration motivate the latter; normal picker/save consequences remain unqualified.
 
 Keep the Boolean save API and normal UI for existing callers where sufficient. Registry changes must preserve known old bindings, refuse ambiguous rebindings, and request re-selection where identity is unknown; a basename cannot migrate a saved resource. Verify delayed/failed saves, undo, real pickers, permissions, concurrent tabs, quota/restart, and exact write targets. [Desktop](vscode/README.md), [browser recovery](vscode/WEB.md), [handles](vscode/HANDLES.md).
+
+Configuration adds a separate provenance boundary: a saved lower-scope edit can remain masked, language defaults can beat ordinary folder values, and a documented inspection field can omit a present null that the getter correctly returns. Preserve source assignments, effective scope, write target, and presence separately. A focused inspection-carrier correction is a candidate, with existing aggregate/application semantics to review; do not change the demonstrated getter or infer missing source from lossy metadata. [Configuration evidence and candidate](vscode/CONFIGURATION.md).
 
 ### empack
 

@@ -13413,43 +13413,143 @@
           "operations": [
             {
               "id": "resolve-settings",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Configuration.lean and vscode/Configuration.bend",
+              "laws": [
+                "absent_layer_preserves",
+                "explicit_null_is_present",
+                "arrays_replace",
+                "strings_replace",
+                "language_default_masks_generic_folder",
+                "source_change_can_be_masked",
+                "current_projection_drops_local_null",
+                "proposed_projection_preserves_null"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-configuration-20261124T071100228669Z/observed.json",
+                "evidence/vscode-configuration-20261124T071100228669Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-configuration-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/configuration_conformance.py:documentedInspectionReconstructionDisagreements",
+                "vscode/configuration_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "vscode/CONFIGURATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One trusted local desktop multi-root workspace;trust explicitly disabled,not qualified",
+                "Three registered keys,two folders,two languages,eleven serial phases;explicit target writes",
+                "Lean recursive JSON merge;Bend scalar-only projection;scope carriers preserve null separately from absence",
+                "Thirty-six documented inspect/globalValue counterexamples preserved;raw source and effective getter agree",
+                "Private user-data/extensions with ordinary HOME/in-memory secrets;existing shared storage opened,its writes unmeasured"
+              ],
+              "verificationPlan": "Exercise Settings UI,other nullable scopes,application/default profile,managed/remote/memory/combined language overrides,trust,write failures,concurrent writers and restart. Keybindings remain pending;no whole-feature qualification."
             },
             {
               "id": "edit-user",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Configuration.lean and vscode/Configuration.bend",
+              "laws": [
+                "absent_layer_preserves",
+                "explicit_null_is_present",
+                "arrays_replace",
+                "strings_replace",
+                "language_default_masks_generic_folder",
+                "source_change_can_be_masked",
+                "current_projection_drops_local_null",
+                "proposed_projection_preserves_null"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-configuration-20261124T071100228669Z/observed.json",
+                "evidence/vscode-configuration-20261124T071100228669Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-configuration-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/configuration_conformance.py:documentedInspectionReconstructionDisagreements",
+                "vscode/configuration_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "vscode/CONFIGURATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One trusted local desktop multi-root workspace;trust explicitly disabled,not qualified",
+                "Three registered keys,two folders,two languages,eleven serial phases;explicit target writes",
+                "Lean recursive JSON merge;Bend scalar-only projection;scope carriers preserve null separately from absence",
+                "Thirty-six documented inspect/globalValue counterexamples preserved;raw source and effective getter agree",
+                "Private user-data/extensions with ordinary HOME/in-memory secrets;existing shared storage opened,its writes unmeasured"
+              ],
+              "verificationPlan": "Exercise Settings UI,other nullable scopes,application/default profile,managed/remote/memory/combined language overrides,trust,write failures,concurrent writers and restart. Keybindings remain pending;no whole-feature qualification."
             },
             {
               "id": "edit-workspace",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Configuration.lean and vscode/Configuration.bend",
+              "laws": [
+                "absent_layer_preserves",
+                "explicit_null_is_present",
+                "arrays_replace",
+                "strings_replace",
+                "language_default_masks_generic_folder",
+                "source_change_can_be_masked",
+                "current_projection_drops_local_null",
+                "proposed_projection_preserves_null"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-configuration-20261124T071100228669Z/observed.json",
+                "evidence/vscode-configuration-20261124T071100228669Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-configuration-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/configuration_conformance.py:documentedInspectionReconstructionDisagreements",
+                "vscode/configuration_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "vscode/CONFIGURATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One trusted local desktop multi-root workspace;trust explicitly disabled,not qualified",
+                "Three registered keys,two folders,two languages,eleven serial phases;explicit target writes",
+                "Lean recursive JSON merge;Bend scalar-only projection;scope carriers preserve null separately from absence",
+                "Thirty-six documented inspect/globalValue counterexamples preserved;raw source and effective getter agree",
+                "Private user-data/extensions with ordinary HOME/in-memory secrets;existing shared storage opened,its writes unmeasured"
+              ],
+              "verificationPlan": "Exercise Settings UI,other nullable scopes,application/default profile,managed/remote/memory/combined language overrides,trust,write failures,concurrent writers and restart. Keybindings remain pending;no whole-feature qualification."
             },
             {
               "id": "language-override",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "vscode/Configuration.lean and vscode/Configuration.bend",
+              "laws": [
+                "absent_layer_preserves",
+                "explicit_null_is_present",
+                "arrays_replace",
+                "strings_replace",
+                "language_default_masks_generic_folder",
+                "source_change_can_be_masked",
+                "current_projection_drops_local_null",
+                "proposed_projection_preserves_null"
+              ],
+              "nativeEvidence": [
+                "evidence/vscode-configuration-20261124T071100228669Z/observed.json",
+                "evidence/vscode-configuration-20261124T071100228669Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/vscode-configuration-selections.json"
+              ],
+              "negativeControls": [
+                "vscode/configuration_conformance.py:documentedInspectionReconstructionDisagreements",
+                "vscode/configuration_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "vscode/CONFIGURATION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One trusted local desktop multi-root workspace;trust explicitly disabled,not qualified",
+                "Three registered keys,two folders,two languages,eleven serial phases;explicit target writes",
+                "Lean recursive JSON merge;Bend scalar-only projection;scope carriers preserve null separately from absence",
+                "Thirty-six documented inspect/globalValue counterexamples preserved;raw source and effective getter agree",
+                "Private user-data/extensions with ordinary HOME/in-memory secrets;existing shared storage opened,its writes unmeasured"
+              ],
+              "verificationPlan": "Exercise Settings UI,other nullable scopes,application/default profile,managed/remote/memory/combined language overrides,trust,write failures,concurrent writers and restart. Keybindings remain pending;no whole-feature qualification."
             },
             {
               "id": "keybindings",
@@ -13462,8 +13562,8 @@
               "status": "pending"
             }
           ],
-          "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "inventoryBasis": "sources/vscode-configuration-selections.json and generated desktop1.147 configuration API capture; broad inventory retains pending scopes.",
+          "disposition": "Selected local configuration API behavior observed and modeled; documented null-inspection gap retained. Keybindings and full scope/authority/UI remain unqualified.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -14720,7 +14820,13 @@
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
         }
       ],
-      "improvementCandidates": [],
+      "improvementCandidates": [
+        {
+          "id": "present-null-configuration-provenance",
+          "status": "proposed; documented globalValue gap native/source-confirmed in bounded local fixture",
+          "document": "vscode/CONFIGURATION.md"
+        }
+      ],
       "preservationDecisions": [],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",
