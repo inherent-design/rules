@@ -1,0 +1,282 @@
+{
+  "schema": 1,
+  "project": 1,
+  "incarnation": 1,
+  "initial": {
+    "epoch": 0,
+    "current": 10,
+    "saved": 10,
+    "savedRevision": 1
+  },
+  "actions": [
+    {
+      "kind": "observe",
+      "image": 0,
+      "epoch": 0,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "edit",
+      "image": 20,
+      "epoch": 0,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "background",
+      "image": 10,
+      "epoch": 0,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 20,
+      "epoch": 0,
+      "revision": 2,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "edit",
+      "image": 30,
+      "epoch": 0,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 10,
+      "epoch": 0,
+      "revision": 1,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 20,
+      "epoch": 0,
+      "revision": 3,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "edit",
+      "image": 20,
+      "epoch": 0,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "background",
+      "image": 20,
+      "epoch": 1,
+      "revision": 0,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 30,
+      "epoch": 0,
+      "revision": 99,
+      "project": 9,
+      "incarnation": 1,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 30,
+      "epoch": 0,
+      "revision": 99,
+      "project": 1,
+      "incarnation": 2,
+      "confirmed": true
+    },
+    {
+      "kind": "save",
+      "image": 30,
+      "epoch": 0,
+      "revision": 99,
+      "project": 1,
+      "incarnation": 1,
+      "confirmed": false
+    }
+  ],
+  "readiness": [
+    {
+      "id": "invalid-raw-draft",
+      "valid": false,
+      "complete": false,
+      "capable": true,
+      "available": [
+        1
+      ],
+      "missing": [
+        2
+      ],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1
+      ]
+    },
+    {
+      "id": "missing-required-local-content",
+      "valid": true,
+      "complete": true,
+      "capable": true,
+      "available": [
+        1
+      ],
+      "missing": [
+        2
+      ],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1
+      ]
+    },
+    {
+      "id": "available-claim-not-retained",
+      "valid": true,
+      "complete": true,
+      "capable": true,
+      "available": [
+        1,
+        2
+      ],
+      "missing": [],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1
+      ]
+    },
+    {
+      "id": "missing-unselected-content",
+      "valid": true,
+      "complete": true,
+      "capable": true,
+      "available": [
+        1
+      ],
+      "missing": [
+        2
+      ],
+      "required": [
+        1
+      ],
+      "held": [
+        1
+      ]
+    },
+    {
+      "id": "incomplete-selected-source-discovery",
+      "valid": true,
+      "complete": false,
+      "capable": true,
+      "available": [
+        1,
+        2
+      ],
+      "missing": [],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "required-capability-unavailable",
+      "valid": true,
+      "complete": true,
+      "capable": false,
+      "available": [
+        1,
+        2
+      ],
+      "missing": [],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "complete-local-jar-and-config",
+      "valid": true,
+      "complete": true,
+      "capable": true,
+      "available": [
+        1,
+        2
+      ],
+      "missing": [],
+      "required": [
+        1,
+        2
+      ],
+      "held": [
+        1,
+        2
+      ]
+    }
+  ],
+  "retention": {
+    "saved": [
+      1,
+      6
+    ],
+    "current": [
+      1,
+      3
+    ],
+    "history": [
+      5
+    ],
+    "plans": [
+      2
+    ],
+    "pending": [
+      4
+    ],
+    "stored": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9
+    ]
+  }
+}

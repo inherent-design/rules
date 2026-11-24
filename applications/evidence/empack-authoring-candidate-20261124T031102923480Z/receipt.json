@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "Proposed protocol examples;not native implementation conformance",
+  "editorStatesMatchBothModels": 12,
+  "readinessCasesMatchBothModels": 7,
+  "leanRetentionExampleMatches": true,
+  "unknownActionRefused": true,
+  "rejectedInterpretations": [
+    "edit epoch alone establishes unsaved changes",
+    "same image alone admits stale background work",
+    "a late save replaces the current editor image",
+    "current draft alone covers retention roots",
+    "invalid authoring must be discarded before saving",
+    "missing unselected content blocks every export"
+  ],
+  "inputSha256": "a37eb407e8b1b6633437ab00dbe8da013f69bfe4e756438b8950abce312f88e9",
+  "expectedSha256": "cb61eb0115230c889a8344119cc42c5ae718262c0e4163ebedb7b6978ba7b94e",
+  "adapterSha256": "c4f6927ab230096756e691185d24a3db6303bb96aa833380a18f2d8df2b5b76f",
+  "models": {
+    "Authoring.lean": "fe266e504e219a1152342c63407a140076d019b084371d8f46bd7cab01970820",
+    "Authoring.bend": "07a5c71f8f94eec644d30484e6519398b48eba95254af72cc62f940a726c4b19",
+    "AuthoringCase.lean": "23b63aaf034154f44d9aec2d10ce54b0278e11d40356c7262b2ddd6c933e9e7e",
+    "Lifecycle.lean": "c50244b60f0eced63a3219725791a1deff5697db29e7b8d5db1ab43389fe4483"
+  },
+  "limits": [
+    "Design examples are manually specified policy expectations,not observations from empack0.9.",
+    "Image and asset IDs are admitted symbolic identities;no raw-document codec,hashing,lease implementation,or actual export is modeled.",
+    "Host save revisions and finalization are premises;no browser storage,multi-tab transaction,native publication,or crash test.",
+    "Retention example uses the shared pure classifier under complete coordinated roots;Bend replay covers editor/readiness only."
+  ]
+}

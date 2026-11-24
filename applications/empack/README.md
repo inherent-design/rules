@@ -1,0 +1,96 @@
+# empack: current contracts and a portable target model
+
+This is a design proposal within the application study. It preserves the checked-out native contracts at `0b4462e3032b4f09230b15329722eabefb7f574c` and considers the separate 0.9 portable-authoring candidate. The [source selections](../sources/empack-selections.json) identify the inspected files and ranges. This proposal changes no production code, schema, command, or release requirement. Most feature-level implementation comparisons remain pending in the [inventory](../inventory.json).
+
+The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.
+
+## Keep the current guarantees
+
+The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
+
+`PreparedOperation` retains private engine-owned data. Authorization checks the exact plan, network/installer/runtime permission, and replacement footprint. `Engine::start` checks the owning engine. These distinctions survive extraction: a preview, serialized plan description, imported project, or UI Boolean cannot construct the execution proof.
+
+`ContentLease` retains private bytes and verifies copies. `DependencyContent` distinguishes materialized bytes from admissible remote obligations; local and archive-member content require materialization. Keep that distinction when a consumer can distribute references. “Export ready” does not always mean that every remote mod has been downloaded locally, while a custom local JAR cannot become a filename-only reference.
+
+The existing native publisher, instance reconciler, and process supervisor retain their own authority. A portable source path is not a native root, an accepted local edit is not publisher content, and cancelling a task is not proof that its process or writer retired. No generic host callback may attest all of these by returning success.
+
+## Target values and owners
+
+| Boundary | Proposed values and relations | Owning responsibility |
+| --- | --- | --- |
+| Editable project | `DraftDocumentSet`, stable authored-entry keys, source mappings, unresolved requests, profiles, choices, extension data | Preserve all editable meaning and original bytes, including absent versus empty bindings. |
+| Editor session | Project identity, session incarnation, edit epoch, current immutable `ProjectImage`, history, selected saved image | Order work and preserve drafts; present save state without using an edit counter as a content comparison. |
+| Interpretation | `Interpretation` with image basis, validated intent when available, diagnostics, unresolved decisions | Reuse strict semantic validation; an invalid interpretation does not prevent saving raw work. |
+| Exact selection | Runtime, logical dependency keys, provider identities, pins, file roles, placements, closure evidence | Preserve sync, update, adoption, and runtime migration as distinct policies. |
+| Sources and assets | Declared source obligations, immutable retained assets, original assertions, observed content IDs, portable attributes | Separate requested content, observed bytes, authenticity, availability, and physical backing ownership. |
+| Prepared work | Target-specific required inputs, capabilities, immutable capture, plan identity, exact authorization | A sealed operation owns its inputs; changing the editor cannot mutate them. |
+| Verified output | Consumer inventory, portable attributes, consumer evidence, immutable artifact bytes | Verify the chosen recipe and its representational losses before delivery. |
+| Delivery and publication | Destination-bound finalization, native publication receipts, recovery state | Report actual effects and uncertainty; do not treat writer start or object creation as completion. |
+| Installation | Exact release, side, choices, managed/seed ownership, local deviations, retained history | Preserve the recipient's state and update authority independently of author editing. |
+| Execution | Host-selected program, runtime compatibility, owned process group/job, terminal and instance leases | Native execution and recovery stay native; browser capability absence is explicit. |
+
+`ProjectImage` identifies the complete saveable project projection: raw authoring inputs, virtual source mappings, authored policies, unresolved decisions, and relevant extension state. Its exact wire representation and hash are not selected here. The project format must explicitly decide which session/history state persists; saving the current image is not a blanket claim that undo history was backed up. Display names, native inodes, and an edit counter are unsuitable identities. Live permissions and storage availability are observed host state, with attributed saved observations; they are not perpetual properties of an image.
+
+An `AssetId` addresses an immutable captured asset. A `ContentId` describes observed bytes; an asset can also carry source assertions and original provenance. Physical backing identities and leases belong to storage. Several placements or selections can use the same payload without becoming the same dependency, entry, or deletion authority. The JavaScript peer-context and restic lineage studies explain why bytes and provenance edges cannot substitute for every other relation.
+
+## Session and operation interfaces
+
+These are boundary sketches, not existing Rust signatures:
+
+```text
+DraftSession.capture() -> RetainedProjectImage
+Engine.interpret(image) -> Interpretation { basis, valid_intent?, diagnostics, decisions }
+Engine.propose(image, edit_request) -> ProposedEdit { basis, change_set, evidence }
+DraftSession.accept(proposed_edit) -> Changed | StaleBasis
+
+Engine.prepare_export(image, recipe, decisions, capabilities)
+    -> Ready(PreparedExport) | NeedsInput | UnsupportedCapability
+PreparedExport.authorize(exact_grant) -> ApprovedExport
+Engine.start(approved_export) -> OwnedOperation<VerifiedOutput>
+
+ProjectStore.prepare_save(image, expected_saved_revision) -> PreparedProjectSave
+ProjectStore.commit(prepared_save) -> ProjectSaveOutcome
+DraftSession.observe(save_receipt) -> UpdatedSavedBasis | HistoricalReceipt | ForeignBasis
+```
+
+An asynchronous worker takes a captured image rather than holding a mutable editor borrow across its work. Background interpretation may be retained historically, but only a matching session/epoch/image basis may replace the current interpretation. An edit proposal requires explicit acceptance against its basis. Diagnostics and a proposal are not write authorization.
+
+Saving project data is not native valid-project initialization. A new native draft-restoration operation must coordinate its files and host metadata recoverably without constructing a valid resolved project from malformed inputs. Existing initialize/import/publication operations retain their current stricter proofs. A portable project archive cannot supply a native recovery journal or a trusted tool execution request.
+
+The [authoring lifecycle model](AUTHORING.md) separates edit ordering, saved images, receipt ordering, incomplete drafts, and retained plan inputs. An export deliberately captured at image A may finish while the editor moves to B, provided the operation owns every required immutable input and its other proofs remain valid. Its receipt names A. It cannot mark B exported or saved. This is an additional portable snapshot boundary; an ordinary native plan still revalidates its native root/read set and cannot bypass a changed file by calling it an old snapshot.
+
+## Feature coverage and extraction boundaries
+
+The [boundary map](boundaries.json) assigns all 52 inventoried empack feature families to the following owners. It is a target-design map, not implementation or test coverage.
+
+| Area | Preserve through the target model |
+| --- | --- |
+| Authoring and selection | Schema/identity rules, source-specific assertions, stable selectors and file roles, layers, optionality, templates, exact pins, and distinct sync/update/adopt/remove/runtime-migration effects. |
+| Consumer and publisher | Recipe-specific inventory, reference versus bundled delivery, immutable native releases, publisher trust, channel observation/sequence, and generated automation. Signing still needs explicit key custody. |
+| Installation and recovery | Native roots, release baselines, seed/world protection, local decisions, exact repair, deliberate update, rollback versus interrupted-publication recovery, and runtime ownership. |
+| Services and host use | Bounded archives/network, manual-input continuation, cache/retention, Java and installers, bootstrap, process/terminal handling, batch effects, configuration, diagnostics, and operation lifetimes. |
+| Portable authoring | Raw incomplete drafts, immutable assets, undo/redo, background work, project save/reopen, verified export/delivery, browser routes, and the joined native/browser workflow. |
+
+Extract by authority boundary, not by copying a command handler into each host. Keep pure validated values and planners in core, shared interpretation/recipes/verification in the portable engine, and root capture/publication/processes in native services. Browser storage implements the agreed host retention and publication protocol. The CLI and graphical clients translate requests, decisions, progress, and terminal results; they do not maintain independent resolvers or reconciliation rules.
+
+Producer tools and game-specific validation can attach attributed results to an exact image, selection, or verified inventory through the existing extension boundary. Their findings do not authenticate source bytes, prove an empack artifact, or certify gameplay. External generators remain deliberate native tool operations where needed; this proposal does not add arbitrary command execution from project metadata or a second browser compiler.
+
+## Interface consequences
+
+Show distinct facts: “Not saved yet,” “Unsaved changes,” “Saved,” “Content missing,” and “Export ready” answer different questions. A restored draft is still editable even if content or permissions are missing. A completed older save updates the known stored basis without discarding newer edits. Stale background work cannot replace current diagnostics. An older export is labeled with its captured project image, not presented as the current draft's result.
+
+Keep ordinary results concise and actionable. Details and structured output retain the same typed facts, source basis, uncertainty, and effect scope. A failed command may have cache/log effects or verified partial results; a nonzero process status does not prove no effects. Native recovery, terminal cleanup, and runtime retirement remain separately reported facts. No progress notification determines completion.
+
+Existing command meanings and the recorded deferred UX work remain separate from this proposal. This study does not activate the deferred removal/re-adoption or update-preview implementation intent. Review CLI naming and grouping against the shared operation model before introducing additional commands or aliases.
+
+## Adoption and verification plan
+
+1. Audit the existing public constructor boundaries and strict codecs against their actual tests. Move reusable semantics without relaxing proofs. Establish native behavior baselines before extracting implementation.
+2. Add immutable draft images and operation-specific interpretation as new concepts. Preserve original raw documents and missing references. Keep current native author schemas strict; the first new project format needs an explicit version and unknown-version refusal, not a speculative migration framework.
+3. Implement the retention/session protocol with fault tests. Include stale work, undo returning to the saved image, late/out-of-order receipts, quota failure, worker loss, competing tabs, permission changes, and incomplete source discovery.
+4. Prove and exercise the local-JAR/configuration import, placement editing, preview, project save/reopen, and Prism export flow on actual native and browser adapters. Compare semantic inventory, required attributes, and consumer interpretation. A simulated protocol or native in-memory adapter does not establish browser support.
+5. Integrate the remaining provider, consumer, native installation, runtime, and publisher operations using their existing obligations and explicit capability admissions. Review the full target and evidence graph with the host owner before selecting production implementation.
+
+The keep-current alternative remains useful: improve native library boundaries and expose typed operations while leaving browser project editing unimplemented. That avoids claiming unsupported capabilities, but does not satisfy the 0.9 portable-authoring candidate. A GUI-only wrapper around today's valid-project native model would still be unable to preserve incomplete editable projects correctly.
+
+This design chooses no new service, generic plugin scheduler, publication platform, or migration framework. Unsupported current internal state must remain protected; a clean format break is not deletion authority. Most feature-level models, native comparisons, joined flows, and application-specific proposals across the broader study remain open.

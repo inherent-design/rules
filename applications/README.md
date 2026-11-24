@@ -16,7 +16,9 @@ MO2 2.5.2 requires Windows 10 1809+ or Windows 11. Its native Windows behavior i
 
 The first [restic band](restic/README.md) has source/native/model evidence for a selected local snapshot-forget/prune/restore flow. The first [Cargo band](cargo/README.md) compares workspace metadata, selected build features, build-script input declarations, and cleanup. The [JavaScript peer-context band](js-peers/README.md) compares npm, pnpm, and Yarn without erasing their different installed bindings. [MO2](mo2/README.md) and [Prism](prism/README.md) have bounded source-fragment/model comparisons, with full native-product qualification still pending. These leave most operations and application models pending. [Inventory checks](check_inventory.py) verify structure and bookkeeping constraints, not product correctness.
 
-The first [VS Code desktop band](vscode/README.md) adds native serial file-backed document evidence and separates event versions from undo/save-point identity. It leaves the earlier custom-provider race unresolved and does not qualify vscode.dev.
+The first [VS Code desktop band](vscode/README.md) adds native serial file-backed document evidence and separates event versions from undo/save-point identity. It leaves the earlier custom-provider race unresolved. Separate browser bands cover [one untitled reload](vscode/WEB.md) and [source-fragment handle registration](vscode/HANDLES.md); local-file saves, normal picker behavior, and durable project storage remain unqualified.
+
+The [empack target model](empack/README.md) maps all current and candidate feature families to authority boundaries. Its first [authoring lifecycle](empack/AUTHORING.md) has proposed models and design examples, not native or browser implementation evidence. It preserves strict native validation while introducing saveable incomplete drafts, revision-bound work, and retained operation inputs.
 
 ## Working order
 
