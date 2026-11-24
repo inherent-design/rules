@@ -74,7 +74,7 @@ def main():
     assert all(sha(ROOT/path)==digest for path,digest in basis.items())
     print(json.dumps(dict(schema=1,helpCommands=6,packageAndRuntimeCommands=77,freshPnpmControlReproducesSuccessWithUnpatchedPayload=True,
         forcedRepairObserved=True,retryOfSameInvalidPatchStillRefused=True,sourcePins=len(json.loads(ledger.read_text())),
-        limits='Observation checks only;Lean/Bend models,formal replay,full source mechanism and joined lifecycle qualification pending.'),indent=2))
+        limits='Observation checks only;does not run formal models or establish the full source mechanism or joined lifecycle qualification.'),indent=2))
 
 
 if __name__=='__main__':main()

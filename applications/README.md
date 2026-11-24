@@ -26,6 +26,8 @@ The [installation-mode band](js-peers/LOCK-MODES.md) separates resolution-only u
 
 The [Prism component band](prism/COMPONENTS.md) adds requirement composition, protected choices, activation and obsolete-dependency policy, cached-state round trips, and source-loop progress after an actual permission refusal. Its source/Qt models preserve exact identity versus rank and proposal versus completed mutation. Actual instance construction, persistence, and GUI/game behavior remain pending.
 
+The [pnpm/Yarn patch band](js-patches/README.md) separates editable preparation, saved recipes, lock selections, live targets, and runtime bytes. It reproduces a bounded pnpm restoration defect with a fresh control and keeps Yarn's save/install and linker policies distinct. Models preserve partial effects and compare a separate private-candidate policy; general patch and workspace flows remain pending.
+
 The [publication band](js-peers/PUBLICATION.md) separates generated archive identity, fixture registry acceptance, client acknowledgement, local hooks, and the command’s final status. Thirty outcomes across npm, pnpm, and Yarn demonstrate response loss before and after acceptance, plus acknowledged uploads followed by failed hooks. Real registry policy, authorization, durability, and larger publication workflows remain pending.
 
 The [restore-policy band](restic/RESTORE.md) separates existing content, overwrite/mtime admission, verification of actually restored files, and selected-directory deletion. It preserves the upstream whole-directory policy alongside a separately modeled child-preserving alternative. Seventeen private target outcomes leave general metadata, traversal, concurrency, and recovery pending.

@@ -6,7 +6,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/patch.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__cli__src__cli_args__patch.rs",
     "sha256": "3ada26880b55042dec65323f8107109e0316bc6a9cafb34a1e62be7b3085eb4d",
-    "inspection": "lines1-201,273-325,379-394:arguments,admitted target and edit-state/base/existing-patch preparation;remaining code not inspected"
+    "inspection": "Lines 1\u2013201, 273\u2013325, and 379\u2013394: request arguments, target/edit state, and clean versus existing-patch preparation. Other helpers were not inspected."
   },
   {
     "application": "pnpm",
@@ -15,7 +15,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/patch_commit.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__cli__src__cli_args__patch_commit.rs",
     "sha256": "fe0b57a604ac22b6a98cd2eb6557e4554c3b6835a8c4671a1c9d393d7b249f2f",
-    "inspection": "lines1-240:diff against clean source,record named/versioned patch recipe andupdate lock snapshots beforecallerinstall;remaining helpersnotinspected"
+    "inspection": "Lines 1\u2013240: diff against clean source, record the named or versioned patch, and update lock snapshots before the caller installs. Remaining helpers were not inspected."
   },
   {
     "application": "pnpm",
@@ -24,7 +24,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/patch_remove.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__cli__src__cli_args__patch_remove.rs",
     "sha256": "ff6bc38101caadd2d80fd65d4126e2cf297c77dcffbff4653a9a6f4611d80a69",
-    "inspection": "lines1-177:exact configured keyvalidation,patch removal,workspace metadata persistence;generalpathhelpersnotinspected"
+    "inspection": "Lines 1\u2013177: validate exact configured keys, remove patch files, and persist workspace metadata. General path helpers were not inspected."
   },
   {
     "application": "pnpm",
@@ -33,7 +33,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/patching/src/hash.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__patching__src__hash.rs",
     "sha256": "8aec88b5d527c820c22197dc1acf96d3d643375c624636be3edc0b221d65bc88",
-    "inspection": "whole:SHA256 afterlossyUTF8 andCRLFnormalization;source-only generalrule,fixtureASCIIpatchhashcheckedseparately"
+    "inspection": "Whole file: SHA-256 after lossy UTF-8 decoding and CRLF normalization. General decoding behavior is source-only; the native fixture uses ASCII text."
   },
   {
     "application": "pnpm",
@@ -42,7 +42,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/patching/src/apply.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__patching__src__apply.rs",
     "sha256": "334e42c2a01033d9052e430b5b8f1b89ff4f520bc898e7998110df20141fdad2",
-    "inspection": "lines1-197:filebyfileapply andpathvalidation contract;not a fullinstall rollback orsecurity qualification"
+    "inspection": "Lines 1\u2013197: file-by-file application and the path-validation contract. This is not a full-install rollback or security qualification."
   },
   {
     "application": "yarn",
@@ -51,7 +51,7 @@
     "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-patch/sources/commands/patch.ts",
     "cache": "applications/tools/source-cache/js-patches/yarn__packages__plugin-patch__sources__commands__patch.ts",
     "sha256": "f57b7a216aaa5a9f554d24c634eee3766dcda3e5cea0577df348b89ae072c8cc",
-    "inspection": "whole:exactlocatordiscovery/defaultunpatched versus-updatepatched preparation andNDJSONpath;fixturebinarysourcecorrespondence notcompiledhere"
+    "inspection": "Whole file: exact locator discovery, clean versus --update preparation, and the NDJSON path. The comparator was not rebuilt from this source."
   },
   {
     "application": "yarn",
@@ -60,7 +60,7 @@
     "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-patch/sources/commands/patchCommit.ts",
     "cache": "applications/tools/source-cache/js-patches/yarn__packages__plugin-patch__sources__commands__patchCommit.ts",
     "sha256": "df90ea886f42e9a0145b33f4a335b5dca1df113676684e2957dd37df3d2dbfd3",
-    "inspection": "whole:diff/stdout versus-save,workspace directdescriptorchange versus transitive resolutions,persist;no implicitinstall here"
+    "inspection": "Whole file: stdout versus --save, direct workspace descriptor changes versus transitive resolutions, and persistence. This method does not install."
   },
   {
     "application": "yarn",
@@ -69,7 +69,7 @@
     "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-patch/sources/PatchFetcher.ts",
     "cache": "applications/tools/source-cache/js-patches/yarn__packages__plugin-patch__sources__PatchFetcher.ts",
     "sha256": "611d4e8a43f4193dcc12e52182af8e225b09be5c5d73f6dce0efa282e8e82ff7",
-    "inspection": "lines35-151:copiedarchive,perpatchsave/discard,optional/missing/unmatchedhunk handling;onlymandatoryonehunknativeprofiletested"
+    "inspection": "Lines 35\u2013151: copied archive, per-patch save/discard, optional/missing/unmatched-hunk handling. Only one mandatory hunk is tested natively."
   },
   {
     "application": "yarn",
@@ -78,7 +78,7 @@
     "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-patch/sources/PatchResolver.ts",
     "cache": "applications/tools/source-cache/js-patches/yarn__packages__plugin-patch__sources__PatchResolver.ts",
     "sha256": "8f5deab55c61a5a829a4c75ff585f299ae6db44ddc9a89027e82130ff69b26a0",
-    "inspection": "whole:source descriptor dependency,candidate patch hash,derived locator exactmatching,sourcepackage metadata reuse"
+    "inspection": "Whole file: source descriptor dependency, candidate hash, derived locator matching, and source-package metadata reuse."
   },
   {
     "application": "yarn",
@@ -87,7 +87,7 @@
     "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-patch/sources/patchUtils.ts",
     "cache": "applications/tools/source-cache/js-patches/yarn__packages__plugin-patch__sources__patchUtils.ts",
     "sha256": "6bf6b58d8daea04e771fd6c9e501cceb285214f108bf7bd50f96c24ca33633da",
-    "inspection": "lines110-113,221-285,317-345:locator composition,extracted source/user/meta,diff command,parsed-effects/version-filtered6hexcachehash;otherhelpersuninspected"
+    "inspection": "Lines 110\u2013113, 221\u2013285, and 317\u2013345: locator composition, extracted source/user metadata, diff invocation, and the version-filtered six-digit cache hash. Other helpers were not inspected."
   },
   {
     "application": "pnpm",
@@ -96,7 +96,7 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/dispatch_install/patches.rs",
     "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__cli__src__cli_args__dispatch_install__patches.rs",
     "sha256": "dbe688fe0c65ec0920ed20da3d44819c200a27b57329909dc248f585db45063f",
-    "inspection": "whole:commit/remove helpersfollowedbyreresolving install;the command can failafterauthored metadata changes"
+    "inspection": "Whole file: commit/remove helpers are followed by a re-resolving install. The command can fail after authored metadata changes."
   },
   {
     "application": "pnpm",
@@ -105,6 +105,51 @@
     "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/install/run/dispatch.rs",
     "cache": "applications/tools/source-cache/js-lock-modes/pnpm-dispatch.rs",
     "sha256": "de3fdb06c80dd11718782ee3e3545146deef4d3ea5ac5d80395c7868e809d9fe",
-    "inspection": "lines1-110,153-197:current/wantedlock dispatch andup-to-date modules state handoff;causal explanation ofobserved skipped relink remains incomplete"
+    "inspection": "Lines 1\u2013110 and 153\u2013197: current/wanted lock dispatch and the up-to-date modules-state handoff. The complete cause of the skipped relink remains unresolved."
+  },
+  {
+    "application": "pnpm",
+    "commit": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+    "path": "pnpm/crates/package-manager/src/install/prepare_modules_state.rs",
+    "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/install/prepare_modules_state.rs",
+    "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__install__prepare_modules_state.rs",
+    "sha256": "9e646bb0cca7972b90d1296127f6cdd4d218d69cbb3633fc07b46eb488a1a37e",
+    "inspection": "Lines 1\u201395: current layout/state preparation, the up-to-date gate, and return without materialization. This does not establish the complete native causal path."
+  },
+  {
+    "application": "pnpm",
+    "commit": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+    "path": "pnpm/crates/package-manager/src/install/prepare_modules_state/up_to_date.rs",
+    "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/install/prepare_modules_state/up_to_date.rs",
+    "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__install__prepare_modules_state__up_to_date.rs",
+    "sha256": "fffa64c58629a8ef7cd8170dd2df8dde836dcb054f116dce9cf496fd4f13443b",
+    "inspection": "Lines 1\u2013230: force/frozen/configuration/layout/content/bin/build gates and reporting inputs. The native case has additional premises not reconstructed here."
+  },
+  {
+    "application": "pnpm",
+    "commit": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+    "path": "pnpm/crates/package-manager/src/optimistic_repeat_install.rs",
+    "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/optimistic_repeat_install.rs",
+    "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__optimistic_repeat_install.rs",
+    "sha256": "e0964b684bdb464d53387baa84c2856f6e6a36885ddaefb8a44505a14aaeebef",
+    "inspection": "Lines 72\u2013128: workspace-state freshness policy and the request to check direct links. The complete freshness graph was not inspected."
+  },
+  {
+    "application": "pnpm",
+    "commit": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+    "path": "pnpm/crates/package-manager/src/optimistic_repeat_install/up_to_date.rs",
+    "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/optimistic_repeat_install/up_to_date.rs",
+    "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__optimistic_repeat_install__up_to_date.rs",
+    "sha256": "a71db9743d7db2536554c5010321fd4e9230859612f399ceab537d0eff8f9f80",
+    "inspection": "Lines 1\u2013185: the separate CLI shortcut before asynchronous installation and recorded/file-check dispatch. Which shortcut serves each native success remains unresolved."
+  },
+  {
+    "application": "pnpm",
+    "commit": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+    "path": "pnpm/crates/package-manager/src/optimistic_repeat_install/modules_dirs/direct_links.rs",
+    "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/optimistic_repeat_install/modules_dirs/direct_links.rs",
+    "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__optimistic_repeat_install__modules_dirs__direct_links.rs",
+    "sha256": "20012350d3fc12e5fa6dcf0089ae7773be0391c486387ce20230fd90e7bc06fd",
+    "inspection": "Lines 1\u2013180 and 208\u2013229: dangling/local-missing link checks and healthy-entry classification by filesystem metadata. Presence alone does not establish selected target or bytes; other admission checks remain unqualified."
   }
 ]

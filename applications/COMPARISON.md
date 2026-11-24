@@ -68,6 +68,8 @@ The [publication band](js-peers/PUBLICATION.md) supports retaining acknowledged 
 
 ### pnpm
 
+The [patch lifecycle](js-patches/README.md) adds a concrete restoration defect: after an invalid patch changed the live target, restoring the exact valid patch can return success with the old good lock but unpatched runtime bytes. A fresh project reproduces it; forced installation repairs that fixture. Preserve current-state uncertainty after failure and require a valid selected backing before reuse. The conservative private-candidate alternative is modeled, while the complete materializer cause and an efficient production fix remain open.
+
 The [configuration band](js-config/README.md) distinguishes global default writes from project-effective reads and key-specific INI/YAML destinations. Keep the current typed setting and routing rules. A per-key origin view needs attributable collector evidence; merged values alone cannot supply it.
 
 Preserve peer-context identity and the distinction between root visibility and retained reachability. In the fixture, the leaf stops being root-resolvable after direct removal while its parent still loads it. A root-level module lookup is therefore insufficient for either retention or absence claims.
@@ -81,6 +83,8 @@ The [lock-mode comparison](js-peers/LOCK-MODES.md) supports preserving pnpm's ex
 pnpm’s [single-publication path](js-peers/PUBLICATION.md) already has an internal published-summary error record, but drops it when rendering a later hook failure. Preserve that existing fact across the caller boundary rather than inventing another publication model. Ordinary registry conflicts, pnpr release confirmation, and availability polling have different evidence obligations.
 
 ### Yarn Berry
+
+The [patch comparison](js-patches/README.md) preserves saved recipe versus installed content. Direct saved patches rewrite the workspace dependency in this profile, while transitive source handling can use resolutions; clarify that distinction and the required install step in help/reporting. Mandatory hunk failure preserved the previous patched runtime here. Keep that bounded observation separate from general rollback, PnP, nested patches, and optional-patch policy.
 
 The [configuration band](js-config/README.md) supports a focused set-result correction using the requested stored value and existing effective/source facts. Its custom-basename home read/write mismatch also needs a deliberate compatible target policy. Preserve environment precedence and current explicit JSON provenance; do not silently combine old conflicting home files.
 

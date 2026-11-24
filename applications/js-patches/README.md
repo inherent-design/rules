@@ -1,6 +1,6 @@
 # pnpm and Yarn: patch recipes and installed content
 
-This is an intermediate source/native record. Lean/Bend models and formal replay are still pending. No inventory operation is promoted, and no production change is selected.
+This study compares selected patch lifecycles and a separately proposed finalization policy. Its models match the retained native profile; full patch features and joined workflows remain unqualified. No production change is selected.
 
 The selected tools are pnpm 12.21.0, Yarn Berry 4.19.0, and Node 26.13.1. [Tool pins](../sources/local-pins.json) identify the actual executables; [source selections](../sources/js-patches-selections.json) identify inspected pinned source and remaining omissions. The native profile is one generated local tarball, one direct dependency, one ordinary text hunk, the `node-modules` linker, private home/configuration/cache/store, disabled scripts, and offline or disabled network. No user package or registry is changed.
 
@@ -49,7 +49,7 @@ Yarn's invalid mandatory hunk fails while retaining the previously observed patc
 
 Keep the selected base package, patch selector, authored patch file, derived locator, lock selection, admitted installation record, live link, and executable bytes separate. A hash-bearing directory name does not prove that the patch finished or that the current link matches the selected lock. Likewise, a saved patch descriptor is not proof of installation.
 
-pnpm's source hashes normalized patch text; Yarn's source derives a short cache hash from parsed effects and applicable version ranges. These are different invalidation policies, not interchangeable content-authentication proofs. The source relations and native hash fields still need a bounded codec/model comparison; no general hash-collision or integrity claim is made here.
+pnpm's source hashes normalized patch text; Yarn's source derives a short cache hash from parsed effects and applicable version ranges. These are different invalidation policies, not interchangeable content-authentication proofs. The replay decodes the selected native fields into opaque identity labels. It verifies pnpm's normalized hash against the captured patch text; Yarn's effects-based hash is not reimplemented. These are closed research readers, not general codecs or a hash-collision/integrity qualification.
 
 For pnpm, investigate retaining the previous live target until the candidate patch completes, invalidating installation evidence after partial failure, and checking the actual selected target before an up-to-date success. Reuse existing materialization and state checks; do not introduce a second package resolver. First trace `prepare_modules_state` and the relevant linking/publication path to choose the smallest correct change. A proposed guard must distinguish failed candidate work from an admitted backing and must preserve recoverable partial effects.
 
@@ -57,8 +57,18 @@ For Yarn, clarify direct versus transitive saved references and report that a sa
 
 For empack, the corresponding design obligation is to preserve source identity, transformations, asserted/observed content, publication, and installed ownership separately. This comparison does not add patch execution to empack or activate the deferred UX implementation.
 
+## Models and retained comparison
+
+[Lean](Patches.lean) checks twenty laws; [Bend](Patches.bend) checks ten. The [comparison](comparison.json) matches both to 77 retained command outcomes and projected before/after images, including ten prepared-directory results and 33 separate fresh-process readbacks. Ten unsupported research inputs are refused. The [replay](conformance.py) recompiles its exact Lean dependency before use and runs no package manager or native collector.
+
+The projected image preserves authored recipe, lock selection, live target, payload, and patch-file presence. It does not compare arbitrary package trees, cached state, scripts, or every incidental file effect. pnpm's live target is classified from the observed derived path; Yarn's flat path intentionally stays the same across different payloads. Patch selector admission and command options come from requests; measured statuses and outputs are used only for comparison.
+
+The current pnpm model is a projection of the observed profile, not a reconstruction of every source admission condition. Source inspection identifies both the CLI shortcut and the install path's separate frozen-tree gate. The direct-link probe distinguishes present from dangling/missing entries; that classification alone does not establish the selected target. Other source gates inspect additional state. Which complete path supplies each native success is unresolved; the model must not imply that production literally checks only lock equality.
+
+A separate conservative model leaves the old live scope intact after candidate failure and rematerializes without an admitted reuse proof. Seven individual projections differ from current observations. They are alternatives evaluated against each captured input, not replacement native results or a complete alternate native history. A two-step law separately checks failed private preparation followed by valid restoration. Efficient reuse needs an explicit valid backing/admission basis; a link with the expected identity can still have wrong bytes, and the model retains that counterexample. Native staging, ownership, finalization, and reusable receipts remain implementation obligations.
+
 ## Remaining verification
 
-Model observed transitions and the separately proposed repair/admission rule in Lean and Bend. Compare full prepared, recipe, lock, live-target, and runtime observations; include a counterexample to lock-equality-only success. Check selectors and patch-file persistence without confusing derived keys with display names. Keep failure and successful restoration separate.
+Extend the closed-profile models only with separately attributed source/native profiles. Keep raw patch selectors and complete derived locators separate from the equality labels used here. Qualify dependency metadata and efficient reuse without treating a directory's name, presence, or successful command status as content proof.
 
 Trace the pnpm up-to-date and materialization path before assigning the exact implementation cause. Preserve native/source correspondence limits: binaries and official source pins are retained, but neither comparator was rebuilt here. Qualify PnP/unplug, transitive and multiple versions, aliases, workspaces, nested or optional patches, dependency-manifest changes, unsupported/binary hunks, unavailable inputs, concurrent writers, interrupted finalization, and other platforms before broader adoption. No complete patch feature or joined workspace workflow is qualified yet.
