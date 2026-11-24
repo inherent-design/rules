@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "scope": "Collector cleanup helper only; not an empack initializer case or general subprocess-tree proof.",
+  "helperSha256": "132a681b9406db6261d92dd081a9d3b5f90a6f23cf1115920b350ba01e0c7340",
+  "testSourceSha256": "5705e379cb87c2ed835ea37c18ee1645ac417f9aca1ad364ce4e2796d2f17260",
+  "cases": [
+    {
+      "case": "owned-isolated-child",
+      "exitCode": -9,
+      "ownedGroupAbsent": true,
+      "secondCallIsNoop": true
+    },
+    {
+      "case": "nonisolated-child",
+      "groupKillRefused": true,
+      "childWasStillAlive": true,
+      "explicitChildOnlyCleanupExit": -9
+    }
+  ]
+}

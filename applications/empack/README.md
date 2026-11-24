@@ -10,6 +10,8 @@ The [native identity band](IDENTITY.md) separates live object equality, durable 
 
 The [state discovery band](ROOT-STATE.md) compares actual directory lookup with Lean and Bend and retains a source-supported initialization-lock concern. The complete writer/interruption test remains pending. A returned state key alone supplies no observed state or execution authority.
 
+The intermediate [initializer band](INITIALIZATION.md) reproduces the current source's post-lock association interruption window through the selected complete initializer chain. A private copied-source candidate permits retry in that schedule while retaining unknown-state refusal. Formal trace comparison, mixed-version coordination, complete Engine callers, and platform qualification remain pending.
+
 The [channel band](CHANNELS.md) keeps incoming offer authentication, saved-envelope revalidation, durable observation, and installed release separate. Its candidate exact saved-floor check can reuse current authentication/equality; it does not require another trust system or change the no-expiry policy. Root, publication, and acquisition behavior remain implementation/verification obligations.
 
 The proposed split is between editable project data, interpreted meaning, retained exact inputs, verified outputs, and host effects. It should make browser authoring possible without turning incomplete documents into valid intent or weakening native publication and process ownership.

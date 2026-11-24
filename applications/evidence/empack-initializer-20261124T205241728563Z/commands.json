@@ -1,0 +1,442 @@
+[
+  {
+    "label": "compile-current",
+    "pid": 32235,
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "-Cdebuginfo=0",
+      "-Cstrip=debuginfo",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current.rs",
+      "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+      "--extern",
+      "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "--extern",
+      "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "--extern",
+      "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "--extern",
+      "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "--extern",
+      "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "--extern",
+      "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+      "--extern",
+      "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+      "--extern",
+      "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "compile-candidate",
+    "pid": 32544,
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "-Cdebuginfo=0",
+      "-Cstrip=debuginfo",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate.rs",
+      "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+      "--extern",
+      "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "--extern",
+      "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "--extern",
+      "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "--extern",
+      "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "--extern",
+      "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "--extern",
+      "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+      "--extern",
+      "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+      "--extern",
+      "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-normal",
+    "pid": 32804,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "015d78f29d05bf9dda19c49dae90f7df9b7bdb1487f22e4cedd73af6e2b20d30",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-idempotent",
+    "pid": 32805,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "6a8b89d1dcab6d301cd7416916eadabb31d7bcc0b67ab910c59ff154d9cc5f8d",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-concurrent",
+    "pid": 32807,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "109cb620b3cef539c6faafc98b66955c5d31ebc345a37ae0340a4d90c496a1cd",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-paused",
+    "pid": 32806,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+      "initialize",
+      "locked"
+    ],
+    "exitCode": -9,
+    "timedOut": false,
+    "intentionalKill": true,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "cd082621646a4e8b657f98d478649836e9996c6ca2e1257f2cffc404631fde4f",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-after-kill-lookup",
+    "pid": 32808,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "38217c8a66c010bbb80f0545bccd230dfbdc0986a62cb877184825d0332cbb7e",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-retry",
+    "pid": 32809,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "9541c9835c82e1295528a35f87af7ec0a49aa59cbc6b6c719756a086ff9bec60",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-after-completed",
+    "pid": 32810,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+      "initialize",
+      "completed"
+    ],
+    "exitCode": -9,
+    "timedOut": false,
+    "intentionalKill": true,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "1be27b808ca7fee094762fe0447fea27f97cad8e040d214b115f21e4fbc4f9aa",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-completed-lookup",
+    "pid": 32811,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "6f760c8546c786ae6506feaaf98967a36e39994331b651ac56b6f263002b2076",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-completed-retry",
+    "pid": 32812,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "8b6d4892c2483dc7ca4572943307b87f21045b7ec5517b1496a53f6601ff2bb1",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-normal",
+    "pid": 32813,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-normal",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "fb556e4dfc293a487119a0b4e84dffb7d1aa652d5da8276360e931ace126230d",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-idempotent",
+    "pid": 32814,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-normal",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "d9f02e16e0aeffba193449af805e0b6fa51b01e54bc0df21c965a4ed2e702b3a",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-concurrent",
+    "pid": 32816,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "98cd8de34c8fad3e27632cea32c07f190f42676f36ae37df8defa41ed3a50b58",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-paused",
+    "pid": 32815,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+      "initialize",
+      "locked"
+    ],
+    "exitCode": -9,
+    "timedOut": false,
+    "intentionalKill": true,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "28c0feadfd3e428302ee7ef6d3d5f0fa297ee876f9c1b96bf2d3d492531cc0a9",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-after-kill-lookup",
+    "pid": 32817,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "c2f77ddeb2c12441adefc1563adc1b87fe09086f5660193076308429167f82b5",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-retry",
+    "pid": 32818,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "626d81436e3dfe4e3b92f975260fbf11247ec416f3abd459541fd107863e3fb8",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-after-completed",
+    "pid": 32819,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+      "initialize",
+      "completed"
+    ],
+    "exitCode": -9,
+    "timedOut": false,
+    "intentionalKill": true,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "af29cfb84883888270d9060fd83c62db47e136d918b0e35b30830daf85ac6b90",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-completed-lookup",
+    "pid": 32821,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "0f0221bfffccacb85c04dbd6fdadcd3f1d0bcc44c05df8fd9c59a946afcd33de",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-completed-retry",
+    "pid": 32822,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "ee51af359bcfdb06db492b3069d2a882d75bd853e814c15af183418bd9077541",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-current-interop",
+    "pid": 32823,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "197c5b36e1c60be005b5784a549c04632a59c85306b812b977f4a2c0fc302c0d",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-key",
+    "pid": 32824,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "970fb649dd9953a6239cc7461a00b2e4bda6eee6f9dd479a5461518772058c7e",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "current-unknown-refusal",
+    "pid": 32826,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "f1eca82363c4ac2deeb4b082a72969ea9d7eab5ba300fdc439192dc735b535d7",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-key",
+    "pid": 32828,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state",
+      "lookup",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "7a9c9f9c20b5e6d5a7f737e1da969669aac303713eb7d849bafe3108f0a072e2",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "candidate-unknown-refusal",
+    "pid": 32829,
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state",
+      "initialize",
+      ""
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "intentionalKill": false,
+    "ownedGroupAbsent": true,
+    "stdoutSha256": "369fc8ea81355734645467336b4279fd9343c326a374d2dd9f34bb009ea7f7a5",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

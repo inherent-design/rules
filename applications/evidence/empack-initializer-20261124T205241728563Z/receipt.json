@@ -1,0 +1,1385 @@
+{
+  "schema": 1,
+  "sourceRevision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "scaffold": "applications/evidence/empack-root-state-20261124T201907525187Z/work/main.rs",
+  "scaffoldSha256": "b76dab285c6ff074dd1c1d60f60a92062c1b62dfd02c6f1f5e72bb643dae2a0d",
+  "scaffoldReceipt": "applications/evidence/empack-root-state-20261124T201907525187Z/receipt.json",
+  "scaffoldReceiptSha256": "142cd79345d10d9ad1f4d3e067b77ee212aac00eb6b6acab271bac91058b41ab",
+  "sourceSha256": {
+    "crates/empack-lib/src/engine/native.rs": "7fa4bddfa4f77b508c1475d18d6119f4f4c92e7c4f5db13239eb993cbebb5b2e",
+    "crates/empack-lib/src/engine/native/persistent.rs": "c6af33a5c39716391da9197421d8e1a5553d904da00681a0c91eb01e66e34e67",
+    "crates/empack-lib/src/engine/snapshot.rs": "459845d9b66ba6777d498913fe30841c66b36712683d7a2b0a42505e597aabf2",
+    "crates/empack-lib/src/engine/publication.rs": "945bdf2751623520264ea57ff83c5dd721462b0790ab7ed87f5e2eca6151f856",
+    "crates/empack-lib/src/engine/publication/root_state.rs": "18f4ea3339fdbe91b892784abcd7623b2242ce24a5f13ddd22d1e5723b5b295b",
+    "crates/empack-lib/src/engine/io.rs": "6b1d3a71bc3e949356d62c60b4647ba1aadecf0755cf27b5f2f047045760b2b7",
+    "crates/empack-lib/src/engine/publication/tests/root_state.rs": "7b7fa260044d8764a41e765346d4eeba2e33c9be76982a66b444ce958d9e119e",
+    "crates/empack-lib/src/engine/publication/recovery.rs": "e239232338b5a61f9fc02b1d9408fc957cae992a652bee5c5ca6b22fc25df18a",
+    "crates/empack-core/src/path.rs": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b",
+    "crates/empack-lib/src/application/process_runtime.rs": "d0f3c42534586fdd7168f04ff55c5172cfbebe70519f1bf511627c27df3a51b9",
+    "crates/empack-lib/src/engine/publication/instance_runtime.rs": "09084420b972c5e00812924845763c0d70e6b6825b3d30929c6e254efde9d146",
+    "crates/empack-lib/src/engine/staging.rs": "9ec4ad1ac40a19b8dc0850a754d2012b813670521765980fec4241cecb17e675"
+  },
+  "sourceSelections": [
+    {
+      "path": "crates/empack-lib/src/engine/native.rs",
+      "start": "#[cfg(unix)]\npub(super) fn readable_directory(",
+      "stop": "\n#[cfg(all(test, unix))]",
+      "sha256": "45ee9e2433e3109dff495f13c0db5e8061e21a88af7dbc640d7c5d45b64ecf31"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "fn private_directory(",
+      "stop": "\nfn lock(directory:",
+      "sha256": "8ffd5152d20e264bade46d1992cca185e4754c6008b68003841c6ac68af01d0e"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "fn sync_directory(",
+      "stop": "\nfn write_journal(",
+      "sha256": "871245a06d42582166c2321d357261e368483a638b31004764133e4f7dfec945"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "fn write_record(",
+      "stop": "\nfn load_journal(",
+      "sha256": "25c37fa28bf9051a01dab7fb8f6a7286bae352f883f5faf0d2701d27abccf24f"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/staging.rs",
+      "start": "pub(super) fn create_temporary(",
+      "stop": "\n/// Private seekable scratch storage",
+      "sha256": "8458f37bdfbddadb37b4bab6f03925fb1c03c93a3a349358b6ebf09191644dc0"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/publication.rs",
+      "start": "    fn project_state(",
+      "stop": "\n}\n\nfn candidate_name(",
+      "sha256": "585f26a9c7fe0898a50de5241fe5330835dc843f3c47c328afbde0098f71bd0c"
+    }
+  ],
+  "compiler": {
+    "path": "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+    "sha256": "1ba7bb8e273bd64125f4048d2ecce530e0a6470e565ab1b3aecf0b82b532f7b1",
+    "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: aarch64-apple-darwin\nrelease: 1.99.1\nLLVM version: 23.1.1\n"
+  },
+  "libraries": {
+    "anyhow": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "sha256": "de0aec8659ffc513a77813f88dca2b4c20dcb284232cdc030507a04ee5367992",
+      "bytes": 1215808
+    },
+    "serde": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "sha256": "33518018aae21f5ae89f51de6f10ef446056dd1f90b7a5c4f621bda287c369c6",
+      "bytes": 1090840
+    },
+    "serde_json": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "sha256": "b5aecadc5340d057acb06a2c76bb8ae2bc9bababef597c64b9f805f83bd47170",
+      "bytes": 3534032
+    },
+    "sha2": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+      "sha256": "9dd5472a352b9226503f156dc0f771545f56b39446fc7e0940d9f50d4fdc3f39",
+      "bytes": 1577112
+    },
+    "libc": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+      "sha256": "cb731ec6df481246cf20a955d8f8a6179a33e76211aa201109229f1300393567",
+      "bytes": 3776832,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/libc-57e3d4331ab41dea/lib-libc.json",
+      "fingerprintSha256": "42e70a0f2714864b68bca669985aff196179e8f03c2337aa2cbdc51f6e8f6b36",
+      "features": "[\"default\", \"extra_traits\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "cap_std": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+      "sha256": "5fb7ab7c704487cec359fbd9e16924e219a6941d068bdd099490188abbd90256",
+      "bytes": 540848,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/cap-std-946277b4935028e3/lib-cap_std.json",
+      "fingerprintSha256": "1dfaf9c0c0a645b38830b99eea601f5daaa71a62a6c5deeb46895018ad7fc10f",
+      "features": "[\"default\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "cap_fs_ext": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+      "sha256": "6678e3b075a0fa75851f9ff4984f89a08e12a58d028fcb5c8c088878eb316579",
+      "bytes": 68800,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/cap-fs-ext-6077db0c19acb2fa/lib-cap_fs_ext.json",
+      "fingerprintSha256": "5eef7cdda738105bfb345388b08ec44c1709b598c4f90eb3efa1690ec83c2d11",
+      "features": "[\"cap-std\", \"default\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    },
+    "thiserror": {
+      "path": "/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+      "sha256": "472a529da535eff7c5fb47f36cbb7e7c0df2f8f13f8c2741892f46351ddb521d",
+      "bytes": 33008,
+      "fingerprint": "/Users/zer0cell/production/empack/target/debug/.fingerprint/thiserror-2ff5673840ad1f11/lib-thiserror.json",
+      "fingerprintSha256": "a217c826acfc549efe03b5fe2d233adcaeca05b41e981c155ac3e972444843a2",
+      "features": "[\"default\", \"std\"]",
+      "rustcFingerprint": 13976775244188850736
+    }
+  },
+  "producerSha256": "32c1f08cd85d66515f4da85d76c331471577619f8f866e6b4c89e32ec5d68e09",
+  "driverSha256": "6a38e878730877538511a86439349d8e5a09f2bd6e4f0842c773a9bac05e79bb",
+  "generatedSha256": {
+    "current.rs": "9741deea6c742b1d7894f3b92bee5f80a53feab943563eae697e22ba2725c845",
+    "candidate.rs": "daa6cd59de99b887af028ad65d7830630d3a7df35bdb756c4b2192a3298c66f3"
+  },
+  "candidatePatch": {
+    "path": "crates/empack-lib/src/engine/publication/root_state.rs",
+    "old": "let _lock = lock(state)?;",
+    "new": "let _lock = association_lock(state)?;",
+    "count": 1
+  },
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "commands": [
+    {
+      "label": "compile-current",
+      "pid": 32235,
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-Cdebuginfo=0",
+        "-Cstrip=debuginfo",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current.rs",
+        "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+        "--extern",
+        "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+        "--extern",
+        "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+        "--extern",
+        "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+        "--extern",
+        "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+        "--extern",
+        "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+        "--extern",
+        "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+        "--extern",
+        "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+        "--extern",
+        "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+        "-o",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compile-candidate",
+      "pid": 32544,
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-Cdebuginfo=0",
+        "-Cstrip=debuginfo",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate.rs",
+        "-Ldependency=/Users/zer0cell/production/empack/target/debug/deps",
+        "--extern",
+        "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+        "--extern",
+        "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+        "--extern",
+        "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+        "--extern",
+        "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib",
+        "--extern",
+        "libc=/Users/zer0cell/production/empack/target/debug/deps/liblibc-57e3d4331ab41dea.rlib",
+        "--extern",
+        "cap_std=/Users/zer0cell/production/empack/target/debug/deps/libcap_std-946277b4935028e3.rlib",
+        "--extern",
+        "cap_fs_ext=/Users/zer0cell/production/empack/target/debug/deps/libcap_fs_ext-6077db0c19acb2fa.rlib",
+        "--extern",
+        "thiserror=/Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib",
+        "-o",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer"
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-normal",
+      "pid": 32804,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "015d78f29d05bf9dda19c49dae90f7df9b7bdb1487f22e4cedd73af6e2b20d30",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-idempotent",
+      "pid": 32805,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "6a8b89d1dcab6d301cd7416916eadabb31d7bcc0b67ab910c59ff154d9cc5f8d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-concurrent",
+      "pid": 32807,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "109cb620b3cef539c6faafc98b66955c5d31ebc345a37ae0340a4d90c496a1cd",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-paused",
+      "pid": 32806,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": -9,
+      "timedOut": false,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "cd082621646a4e8b657f98d478649836e9996c6ca2e1257f2cffc404631fde4f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-after-kill-lookup",
+      "pid": 32808,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "38217c8a66c010bbb80f0545bccd230dfbdc0986a62cb877184825d0332cbb7e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-retry",
+      "pid": 32809,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "9541c9835c82e1295528a35f87af7ec0a49aa59cbc6b6c719756a086ff9bec60",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-after-completed",
+      "pid": 32810,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+        "initialize",
+        "completed"
+      ],
+      "exitCode": -9,
+      "timedOut": false,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "1be27b808ca7fee094762fe0447fea27f97cad8e040d214b115f21e4fbc4f9aa",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-completed-lookup",
+      "pid": 32811,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "6f760c8546c786ae6506feaaf98967a36e39994331b651ac56b6f263002b2076",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-completed-retry",
+      "pid": 32812,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-completed-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "8b6d4892c2483dc7ca4572943307b87f21045b7ec5517b1496a53f6601ff2bb1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-normal",
+      "pid": 32813,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-normal",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "fb556e4dfc293a487119a0b4e84dffb7d1aa652d5da8276360e931ace126230d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-idempotent",
+      "pid": 32814,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-normal",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "d9f02e16e0aeffba193449af805e0b6fa51b01e54bc0df21c965a4ed2e702b3a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-concurrent",
+      "pid": 32816,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "98cd8de34c8fad3e27632cea32c07f190f42676f36ae37df8defa41ed3a50b58",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-paused",
+      "pid": 32815,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": -9,
+      "timedOut": false,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "28c0feadfd3e428302ee7ef6d3d5f0fa297ee876f9c1b96bf2d3d492531cc0a9",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-after-kill-lookup",
+      "pid": 32817,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "c2f77ddeb2c12441adefc1563adc1b87fe09086f5660193076308429167f82b5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-retry",
+      "pid": 32818,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-locked-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "626d81436e3dfe4e3b92f975260fbf11247ec416f3abd459541fd107863e3fb8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-after-completed",
+      "pid": 32819,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+        "initialize",
+        "completed"
+      ],
+      "exitCode": -9,
+      "timedOut": false,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "af29cfb84883888270d9060fd83c62db47e136d918b0e35b30830daf85ac6b90",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-completed-lookup",
+      "pid": 32821,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "0f0221bfffccacb85c04dbd6fdadcd3f1d0bcc44c05df8fd9c59a946afcd33de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-completed-retry",
+      "pid": 32822,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-completed-interruption",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "ee51af359bcfdb06db492b3069d2a882d75bd853e814c15af183418bd9077541",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-current-interop",
+      "pid": 32823,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-normal",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "197c5b36e1c60be005b5784a549c04632a59c85306b812b977f4a2c0fc302c0d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-key",
+      "pid": 32824,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "970fb649dd9953a6239cc7461a00b2e4bda6eee6f9dd479a5461518772058c7e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "current-unknown-refusal",
+      "pid": 32826,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "f1eca82363c4ac2deeb4b082a72969ea9d7eab5ba300fdc439192dc735b535d7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-key",
+      "pid": 32828,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "7a9c9f9c20b5e6d5a7f737e1da969669aac303713eb7d849bafe3108f0a072e2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "candidate-unknown-refusal",
+      "pid": 32829,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "timedOut": false,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "369fc8ea81355734645467336b4279fd9343c326a374d2dd9f34bb009ea7f7a5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Complete selected association initialization chain with supplied host Dir;not Publisher::open,Engine/CLI operation or project publication.",
+    "Injected post-lock pause wraps and delegates actual ensure_stopped;completed pause is after successful source method return. SIGKILL is owned child termination,not reboot or power-loss durability.",
+    "Candidate copied source changes only association-lock call;new helper uses dedicated state.lock with actual no-follow lock primitive and runtime predicate. No production edits.",
+    "All roots and state are disposable private fixtures;no live operation store,user project,Moment recovery,launcher,game or network accessed."
+  ],
+  "cases": [
+    {
+      "label": "current-normal",
+      "variant": "current",
+      "fixture": "fixtures/current-normal",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-normal-before.json",
+        "sha256": "53f0b78c3044a52d25072c96afc7f970018cca63db3aef6f64e95885f6150f16"
+      },
+      "after": {
+        "image": "images/current-normal-after.json",
+        "sha256": "0ea4fd432f7d6b275c7ff60c52265188e65e921b430d7cd7b2ebd1c66eb6b8fe"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f4514-6b05f91b-9b6be66",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            162971238
+          ],
+          "object": "292504852",
+          "persistent": [
+            194,
+            42,
+            239,
+            209,
+            99,
+            197,
+            23,
+            212,
+            135,
+            147,
+            24,
+            178,
+            30,
+            81,
+            188,
+            38,
+            112,
+            240,
+            194,
+            111,
+            77,
+            169,
+            32,
+            140,
+            62,
+            201,
+            76,
+            120,
+            193,
+            247,
+            161,
+            74
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "current-idempotent",
+      "variant": "current",
+      "fixture": "fixtures/current-normal",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-idempotent-before.json",
+        "sha256": "0ea4fd432f7d6b275c7ff60c52265188e65e921b430d7cd7b2ebd1c66eb6b8fe"
+      },
+      "after": {
+        "image": "images/current-idempotent-after.json",
+        "sha256": "0ea4fd432f7d6b275c7ff60c52265188e65e921b430d7cd7b2ebd1c66eb6b8fe"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f4514-6b05f91b-9b6be66",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            162971238
+          ],
+          "object": "292504852",
+          "persistent": [
+            194,
+            42,
+            239,
+            209,
+            99,
+            197,
+            23,
+            212,
+            135,
+            147,
+            24,
+            178,
+            30,
+            81,
+            188,
+            38,
+            112,
+            240,
+            194,
+            111,
+            77,
+            169,
+            32,
+            140,
+            62,
+            201,
+            76,
+            120,
+            193,
+            247,
+            161,
+            74
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "current-concurrent",
+      "variant": "current",
+      "fixture": "fixtures/current-locked-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-concurrent-before.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "after": {
+        "image": "images/current-concurrent-after.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "outcome": {
+        "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/host/project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+        "ok": false,
+        "unassociated": [
+          "project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a"
+        ]
+      }
+    },
+    {
+      "label": "current-paused",
+      "variant": "current",
+      "fixture": "fixtures/current-locked-interruption",
+      "action": "terminated-after-lock",
+      "before": {
+        "image": "images/current-paused-before.json",
+        "sha256": "b0d8d7328da496cff10dee6eb843ca07a953781430b88440bdf5bf9a7dd27707"
+      },
+      "during": {
+        "image": "images/current-paused-during.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "after": {
+        "image": "images/current-paused-after.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "phase": {
+        "event": "phase",
+        "phase": "locked",
+        "pid": 32806
+      },
+      "kernelLockHeldBeforeKill": true,
+      "kernelLockAvailableAfterKill": true
+    },
+    {
+      "label": "current-after-kill-lookup",
+      "variant": "current",
+      "fixture": "fixtures/current-locked-interruption",
+      "action": "lookup",
+      "before": {
+        "image": "images/current-after-kill-lookup-before.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "after": {
+        "image": "images/current-after-kill-lookup-after.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "outcome": {
+        "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/host/project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+        "ok": false,
+        "unassociated": [
+          "project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a"
+        ]
+      }
+    },
+    {
+      "label": "current-retry",
+      "variant": "current",
+      "fixture": "fixtures/current-locked-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-retry-before.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "after": {
+        "image": "images/current-retry-after.json",
+        "sha256": "5b7cceb03e4c3a85d6b5de6ac8d77a6454df1cc4fd7f60cf4fa1c11c48643600"
+      },
+      "outcome": {
+        "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-locked-interruption/host/project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+        "ok": false,
+        "unassociated": [
+          "project-0000000001000010-000000000000000000000000116f4523-6b05f91b-19d0429a"
+        ]
+      }
+    },
+    {
+      "label": "current-after-completed",
+      "variant": "current",
+      "fixture": "fixtures/current-completed-interruption",
+      "action": "terminated-after-initializer-return",
+      "before": {
+        "image": "images/current-after-completed-before.json",
+        "sha256": "555a0b1577d7098ac1a147b02e600bce04c8e73ee58435b24050a92d017afdbe"
+      },
+      "after": {
+        "image": "images/current-after-completed-after.json",
+        "sha256": "a04c1794417c19e3c59d540f4187ca8976d8c138f2c440da544182ca93ed3e61"
+      },
+      "phase": {
+        "event": "phase",
+        "phase": "completed",
+        "pid": 32810
+      }
+    },
+    {
+      "label": "current-completed-lookup",
+      "variant": "current",
+      "fixture": "fixtures/current-completed-interruption",
+      "action": "lookup",
+      "before": {
+        "image": "images/current-completed-lookup-before.json",
+        "sha256": "a04c1794417c19e3c59d540f4187ca8976d8c138f2c440da544182ca93ed3e61"
+      },
+      "after": {
+        "image": "images/current-completed-lookup-after.json",
+        "sha256": "a04c1794417c19e3c59d540f4187ca8976d8c138f2c440da544182ca93ed3e61"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f453a-6b05f91b-1b749978",
+        "ok": true,
+        "selected": "project-0000000001000010-000000000000000000000000116f453a-6b05f91b-1b749978"
+      }
+    },
+    {
+      "label": "current-completed-retry",
+      "variant": "current",
+      "fixture": "fixtures/current-completed-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-completed-retry-before.json",
+        "sha256": "a04c1794417c19e3c59d540f4187ca8976d8c138f2c440da544182ca93ed3e61"
+      },
+      "after": {
+        "image": "images/current-completed-retry-after.json",
+        "sha256": "a04c1794417c19e3c59d540f4187ca8976d8c138f2c440da544182ca93ed3e61"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f453a-6b05f91b-1b749978",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            460626296
+          ],
+          "object": "292504890",
+          "persistent": [
+            231,
+            188,
+            163,
+            220,
+            156,
+            250,
+            26,
+            52,
+            135,
+            173,
+            71,
+            0,
+            4,
+            53,
+            92,
+            194,
+            206,
+            148,
+            133,
+            237,
+            132,
+            94,
+            228,
+            153,
+            162,
+            30,
+            26,
+            158,
+            194,
+            228,
+            81,
+            98
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "candidate-normal",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-normal",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-normal-before.json",
+        "sha256": "fd5c012e947c951f014d9572a5443b5e8f08944e146ebb1c4d58bcf579e2171c"
+      },
+      "after": {
+        "image": "images/candidate-normal-after.json",
+        "sha256": "a7076285957723f2adf629ccc850a0f248565a353ea0a50b31597a74192e1785"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f454d-6b05f91b-1d6b95e9",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            493589993
+          ],
+          "object": "292504909",
+          "persistent": [
+            251,
+            225,
+            18,
+            34,
+            115,
+            80,
+            0,
+            132,
+            107,
+            12,
+            59,
+            255,
+            219,
+            74,
+            26,
+            143,
+            188,
+            237,
+            213,
+            227,
+            41,
+            235,
+            77,
+            227,
+            250,
+            146,
+            34,
+            216,
+            163,
+            49,
+            100,
+            156
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "candidate-idempotent",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-normal",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-idempotent-before.json",
+        "sha256": "a7076285957723f2adf629ccc850a0f248565a353ea0a50b31597a74192e1785"
+      },
+      "after": {
+        "image": "images/candidate-idempotent-after.json",
+        "sha256": "a7076285957723f2adf629ccc850a0f248565a353ea0a50b31597a74192e1785"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f454d-6b05f91b-1d6b95e9",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            493589993
+          ],
+          "object": "292504909",
+          "persistent": [
+            251,
+            225,
+            18,
+            34,
+            115,
+            80,
+            0,
+            132,
+            107,
+            12,
+            59,
+            255,
+            219,
+            74,
+            26,
+            143,
+            188,
+            237,
+            213,
+            227,
+            41,
+            235,
+            77,
+            227,
+            250,
+            146,
+            34,
+            216,
+            163,
+            49,
+            100,
+            156
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "candidate-concurrent",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-locked-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-concurrent-before.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "after": {
+        "image": "images/candidate-concurrent-after.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "outcome": {
+        "error": "Native root association initialization is busy: lock acquisition failed because the operation would block",
+        "ok": false,
+        "unassociated": null
+      }
+    },
+    {
+      "label": "candidate-paused",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-locked-interruption",
+      "action": "terminated-after-lock",
+      "before": {
+        "image": "images/candidate-paused-before.json",
+        "sha256": "6c722fb43a3befddfb07c2fa3c6728202eaedf10a723ffdcaadefef2467a114e"
+      },
+      "during": {
+        "image": "images/candidate-paused-during.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "after": {
+        "image": "images/candidate-paused-after.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "phase": {
+        "event": "phase",
+        "phase": "locked",
+        "pid": 32815
+      },
+      "kernelLockHeldBeforeKill": true,
+      "kernelLockAvailableAfterKill": true
+    },
+    {
+      "label": "candidate-after-kill-lookup",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-locked-interruption",
+      "action": "lookup",
+      "before": {
+        "image": "images/candidate-after-kill-lookup-before.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "after": {
+        "image": "images/candidate-after-kill-lookup-after.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f455c-6b05f91b-2d13d4c0",
+        "ok": true,
+        "selected": null
+      }
+    },
+    {
+      "label": "candidate-retry",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-locked-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-retry-before.json",
+        "sha256": "af0667033a6c79e3662be61f3dd5d1e3e0d1caf90694165aa7ccd63f19fb7e6f"
+      },
+      "after": {
+        "image": "images/candidate-retry-after.json",
+        "sha256": "9d463cf232a63d7164df405108f3b7703f47cb92371b3739b8df4390b27a387a"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f455c-6b05f91b-2d13d4c0",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            756274368
+          ],
+          "object": "292504924",
+          "persistent": [
+            237,
+            132,
+            255,
+            186,
+            165,
+            110,
+            34,
+            194,
+            242,
+            253,
+            215,
+            216,
+            209,
+            56,
+            185,
+            149,
+            199,
+            247,
+            168,
+            60,
+            133,
+            56,
+            12,
+            242,
+            84,
+            127,
+            243,
+            84,
+            135,
+            226,
+            165,
+            199
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "candidate-after-completed",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-completed-interruption",
+      "action": "terminated-after-initializer-return",
+      "before": {
+        "image": "images/candidate-after-completed-before.json",
+        "sha256": "1eec8ae183630fd5c71ae6e7a340d6d2ee0a56a110c96117384b83816df5ddfd"
+      },
+      "after": {
+        "image": "images/candidate-after-completed-after.json",
+        "sha256": "768bb0811c6613c5ffc60d1f8a0fda7007ba5ae5a2caf4e735c9f80caac37838"
+      },
+      "phase": {
+        "event": "phase",
+        "phase": "completed",
+        "pid": 32819
+      }
+    },
+    {
+      "label": "candidate-completed-lookup",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-completed-interruption",
+      "action": "lookup",
+      "before": {
+        "image": "images/candidate-completed-lookup-before.json",
+        "sha256": "768bb0811c6613c5ffc60d1f8a0fda7007ba5ae5a2caf4e735c9f80caac37838"
+      },
+      "after": {
+        "image": "images/candidate-completed-lookup-after.json",
+        "sha256": "768bb0811c6613c5ffc60d1f8a0fda7007ba5ae5a2caf4e735c9f80caac37838"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f4574-6b05f91b-2f54b8fc",
+        "ok": true,
+        "selected": "project-0000000001000010-000000000000000000000000116f4574-6b05f91b-2f54b8fc"
+      }
+    },
+    {
+      "label": "candidate-completed-retry",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-completed-interruption",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-completed-retry-before.json",
+        "sha256": "768bb0811c6613c5ffc60d1f8a0fda7007ba5ae5a2caf4e735c9f80caac37838"
+      },
+      "after": {
+        "image": "images/candidate-completed-retry-after.json",
+        "sha256": "768bb0811c6613c5ffc60d1f8a0fda7007ba5ae5a2caf4e735c9f80caac37838"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f4574-6b05f91b-2f54b8fc",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            794081532
+          ],
+          "object": "292504948",
+          "persistent": [
+            248,
+            205,
+            41,
+            168,
+            24,
+            223,
+            89,
+            187,
+            245,
+            210,
+            114,
+            37,
+            52,
+            45,
+            73,
+            214,
+            251,
+            200,
+            6,
+            223,
+            29,
+            225,
+            150,
+            190,
+            212,
+            245,
+            100,
+            53,
+            240,
+            24,
+            224,
+            152
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "candidate-current-interop",
+      "variant": "candidate",
+      "fixture": "fixtures/current-normal",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-current-interop-before.json",
+        "sha256": "0ea4fd432f7d6b275c7ff60c52265188e65e921b430d7cd7b2ebd1c66eb6b8fe"
+      },
+      "after": {
+        "image": "images/candidate-current-interop-after.json",
+        "sha256": "0ea4fd432f7d6b275c7ff60c52265188e65e921b430d7cd7b2ebd1c66eb6b8fe"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f4514-6b05f91b-9b6be66",
+        "ok": true,
+        "root": {
+          "created": [
+            1795553563,
+            162971238
+          ],
+          "object": "292504852",
+          "persistent": [
+            194,
+            42,
+            239,
+            209,
+            99,
+            197,
+            23,
+            212,
+            135,
+            147,
+            24,
+            178,
+            30,
+            81,
+            188,
+            38,
+            112,
+            240,
+            194,
+            111,
+            77,
+            169,
+            32,
+            140,
+            62,
+            201,
+            76,
+            120,
+            193,
+            247,
+            161,
+            74
+          ],
+          "volume": "16777232"
+        }
+      }
+    },
+    {
+      "label": "current-key",
+      "variant": "current",
+      "fixture": "fixtures/current-unknown-state",
+      "action": "lookup",
+      "before": {
+        "image": "images/current-key-before.json",
+        "sha256": "57249dd55e5cad61802e0a18ebbae6ea2634a1d7e3d573db74bc596479c81cec"
+      },
+      "after": {
+        "image": "images/current-key-after.json",
+        "sha256": "57249dd55e5cad61802e0a18ebbae6ea2634a1d7e3d573db74bc596479c81cec"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f458b-6b05f91b-319c7da1",
+        "ok": true,
+        "selected": null
+      }
+    },
+    {
+      "label": "current-unknown-refusal",
+      "variant": "current",
+      "fixture": "fixtures/current-unknown-state",
+      "action": "initialize",
+      "before": {
+        "image": "images/current-unknown-refusal-before.json",
+        "sha256": "ac7f9d7ed11ed916a0133246202faedb4c645cde78c819c7fef9c3d2d10bfe51"
+      },
+      "after": {
+        "image": "images/current-unknown-refusal-after.json",
+        "sha256": "ac7f9d7ed11ed916a0133246202faedb4c645cde78c819c7fef9c3d2d10bfe51"
+      },
+      "outcome": {
+        "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/current-unknown-state/host/project-0000000001000010-000000000000000000000000116f458b-6b05f91b-319c7da1\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+        "ok": false,
+        "unassociated": [
+          "project-0000000001000010-000000000000000000000000116f458b-6b05f91b-319c7da1"
+        ]
+      }
+    },
+    {
+      "label": "candidate-key",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-unknown-state",
+      "action": "lookup",
+      "before": {
+        "image": "images/candidate-key-before.json",
+        "sha256": "d7b097661471e80f5a77b6349490f45590397b77a6fe2c0c10eed00c7285b0b6"
+      },
+      "after": {
+        "image": "images/candidate-key-after.json",
+        "sha256": "d7b097661471e80f5a77b6349490f45590397b77a6fe2c0c10eed00c7285b0b6"
+      },
+      "outcome": {
+        "key": "project-0000000001000010-000000000000000000000000116f459a-6b05f91b-32429f74",
+        "ok": true,
+        "selected": null
+      }
+    },
+    {
+      "label": "candidate-unknown-refusal",
+      "variant": "candidate",
+      "fixture": "fixtures/candidate-unknown-state",
+      "action": "initialize",
+      "before": {
+        "image": "images/candidate-unknown-refusal-before.json",
+        "sha256": "b66d57b58cdc16d938b226438adf9c9aaa95568abf7ec1357d88079b9064ec64"
+      },
+      "after": {
+        "image": "images/candidate-unknown-refusal-after.json",
+        "sha256": "b66d57b58cdc16d938b226438adf9c9aaa95568abf7ec1357d88079b9064ec64"
+      },
+      "outcome": {
+        "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/fixtures/candidate-unknown-state/host/project-0000000001000010-000000000000000000000000116f459a-6b05f91b-32429f74\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+        "ok": false,
+        "unassociated": [
+          "project-0000000001000010-000000000000000000000000116f459a-6b05f91b-32429f74"
+        ]
+      }
+    }
+  ],
+  "binaries": {
+    "current": {
+      "path": "applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "sha256": "a6087fdd11c38cbc0de553cd3e7c8934470e12194edbb0bc143e7a8f73e0cadc",
+      "bytes": 2046864
+    },
+    "candidate": {
+      "path": "applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "sha256": "a7e2b68a6c812bef055bab2e16a907ac454bd448e82d93ff77abeabee58a086b",
+      "bytes": 2049776
+    }
+  }
+}
