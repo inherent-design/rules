@@ -12809,43 +12809,127 @@
           "operations": [
             {
               "id": "restore",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Restore.lean and restic/Restore.bend",
+              "laws": [
+                "matching_metadata_can_keep_wrong_bytes",
+                "verify_does_not_check_metadata_only_file",
+                "equal_mtime_is_not_newer",
+                "current_loses_excluded_descendant",
+                "proposed_preserves_excluded_descendant_and_parent"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-restore-20261124T123833241400Z/trace.json",
+                "evidence/restic-restore-20261124T123833241400Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-restore-selections.json"
+              ],
+              "negativeControls": [
+                "restic/restore_conformance.py:unsupportedResearchInputsRefused",
+                "restic/restore_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "restic/RESTORE.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated three-file snapshot and fresh private targets on pinned macOS arm64 binary; fixed subtree/patterns and observed hashes/size/mtime.",
+                "Native replay compares content/presence/status; VerifyFiles eligibility is source-derived, not an instrumented native read count.",
+                "Upstream tests explicitly expect whole selected-directory deletion; child-preserving deletion is a separate compatibility proposal.",
+                "No general pattern codec, metadata/ACL/hardlink handling, arbitrary symlink safety, concurrent target or interrupted restore proof."
+              ],
+              "verificationPlan": "Extend filtered regular-file selection with changed unselected payloads, metadata/ACL/xattrs/ownership, hardlinks/sparse/large files, permissions, unavailable data, concurrent/interrupted targets and other hosts. Preserve skipped verification scope and current directory-deletion policy unless a separately reviewed compatible mode changes it."
             },
             {
               "id": "select-path",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Restore.lean and restic/Restore.bend",
+              "laws": [
+                "matching_metadata_can_keep_wrong_bytes",
+                "verify_does_not_check_metadata_only_file",
+                "equal_mtime_is_not_newer",
+                "current_loses_excluded_descendant",
+                "proposed_preserves_excluded_descendant_and_parent"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-restore-20261124T123833241400Z/trace.json",
+                "evidence/restic-restore-20261124T123833241400Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-restore-selections.json"
+              ],
+              "negativeControls": [
+                "restic/restore_conformance.py:unsupportedResearchInputsRefused",
+                "restic/restore_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "restic/RESTORE.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated three-file snapshot and fresh private targets on pinned macOS arm64 binary; fixed subtree/patterns and observed hashes/size/mtime.",
+                "Native replay compares content/presence/status; VerifyFiles eligibility is source-derived, not an instrumented native read count.",
+                "Upstream tests explicitly expect whole selected-directory deletion; child-preserving deletion is a separate compatibility proposal.",
+                "No general pattern codec, metadata/ACL/hardlink handling, arbitrary symlink safety, concurrent target or interrupted restore proof."
+              ],
+              "verificationPlan": "Extend filtered regular-file selection with changed unselected payloads, metadata/ACL/xattrs/ownership, hardlinks/sparse/large files, permissions, unavailable data, concurrent/interrupted targets and other hosts. Preserve skipped verification scope and current directory-deletion policy unless a separately reviewed compatible mode changes it."
             },
             {
               "id": "verify-restored",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Restore.lean and restic/Restore.bend",
+              "laws": [
+                "matching_metadata_can_keep_wrong_bytes",
+                "verify_does_not_check_metadata_only_file",
+                "equal_mtime_is_not_newer",
+                "current_loses_excluded_descendant",
+                "proposed_preserves_excluded_descendant_and_parent"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-restore-20261124T123833241400Z/trace.json",
+                "evidence/restic-restore-20261124T123833241400Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-restore-selections.json"
+              ],
+              "negativeControls": [
+                "restic/restore_conformance.py:unsupportedResearchInputsRefused",
+                "restic/restore_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "restic/RESTORE.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated three-file snapshot and fresh private targets on pinned macOS arm64 binary; fixed subtree/patterns and observed hashes/size/mtime.",
+                "Native replay compares content/presence/status; VerifyFiles eligibility is source-derived, not an instrumented native read count.",
+                "Upstream tests explicitly expect whole selected-directory deletion; child-preserving deletion is a separate compatibility proposal.",
+                "No general pattern codec, metadata/ACL/hardlink handling, arbitrary symlink safety, concurrent target or interrupted restore proof."
+              ],
+              "verificationPlan": "Extend filtered regular-file selection with changed unselected payloads, metadata/ACL/xattrs/ownership, hardlinks/sparse/large files, permissions, unavailable data, concurrent/interrupted targets and other hosts. Preserve skipped verification scope and current directory-deletion policy unless a separately reviewed compatible mode changes it."
             },
             {
               "id": "overwrite-policy",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Restore.lean and restic/Restore.bend",
+              "laws": [
+                "matching_metadata_can_keep_wrong_bytes",
+                "verify_does_not_check_metadata_only_file",
+                "equal_mtime_is_not_newer",
+                "current_loses_excluded_descendant",
+                "proposed_preserves_excluded_descendant_and_parent"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-restore-20261124T123833241400Z/trace.json",
+                "evidence/restic-restore-20261124T123833241400Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-restore-selections.json"
+              ],
+              "negativeControls": [
+                "restic/restore_conformance.py:unsupportedResearchInputsRefused",
+                "restic/restore_conformance.py:rejectedInterpretations"
+              ],
+              "uxAssessment": "restic/RESTORE.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated three-file snapshot and fresh private targets on pinned macOS arm64 binary; fixed subtree/patterns and observed hashes/size/mtime.",
+                "Native replay compares content/presence/status; VerifyFiles eligibility is source-derived, not an instrumented native read count.",
+                "Upstream tests explicitly expect whole selected-directory deletion; child-preserving deletion is a separate compatibility proposal.",
+                "No general pattern codec, metadata/ACL/hardlink handling, arbitrary symlink safety, concurrent target or interrupted restore proof."
+              ],
+              "verificationPlan": "Extend filtered regular-file selection with changed unselected payloads, metadata/ACL/xattrs/ownership, hardlinks/sparse/large files, permissions, unavailable data, concurrent/interrupted targets and other hosts. Preserve skipped verification scope and current directory-deletion policy unless a separately reviewed compatible mode changes it."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",

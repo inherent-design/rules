@@ -110,6 +110,8 @@ Scope is also part of selection. In the private fixture, empty grouping still le
 
 The lock band adds operation-specific coordination: compatible appenders can coexist, but check is exclusive. A retired process can leave a blocking record;normal stale cleanup and actual integrity remain separate. A published candidate is weaker evidence than admitted ownership. Unix SIGHUP probe failures also motivate a source-derived non-intrusive absent/unknown classification candidate,without claiming a reproduced permission/PID-reuse incident. Preserve existing cleanup and status policy; qualify the probe and reporting changes separately. [Lock evidence, privacy, and verification](restic/LOCKS.md).
 
+The [restore band](restic/RESTORE.md) shows why a successful `--verify` request need not check files skipped by overwrite policy or matching size/mtime. Keep those documented tradeoffs, but identify skipped scope and distinguish file content from directory/metadata progress. Selected unexpected-directory deletion also removes an individually excluded descendant; upstream tests explicitly allow that subtree policy. A leaf-aware alternative needs a compatibility decision, existing filter reuse, and partial-effect checks rather than an assumed bug fix.
+
 ### Mod Organizer 2
 
 Preserve profile-local activation, installed metadata, eligible origins, backing-kind rank, plugin rules, and the effective view. The source ordering compares loose/archive kinds and their own rank, rather than only mod priority. The activation source also shows why dirty notification history cannot supply a unique net-change count.

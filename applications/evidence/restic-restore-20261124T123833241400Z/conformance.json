@@ -1,0 +1,314 @@
+{
+  "schema": 1,
+  "nativeCommands": 20,
+  "modeledRestoreOutcomes": 17,
+  "bothModelsMatch": true,
+  "unsupportedResearchInputsRefused": 7,
+  "observedScope": [
+    {
+      "case": "empty-always",
+      "beforeKind": "missing",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "existing-never",
+      "beforeKind": "different",
+      "afterKind": "different",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "same-metadata-if-changed",
+      "beforeKind": "different",
+      "afterKind": "different",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "same-metadata-always",
+      "beforeKind": "different",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "older-if-newer",
+      "beforeKind": "different",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "newer-if-newer",
+      "beforeKind": "different",
+      "afterKind": "different",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "equal-if-newer",
+      "beforeKind": "different",
+      "afterKind": "different",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "changed-mtime-if-changed",
+      "beforeKind": "different",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "delete-extra",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "delete-exclude-root-file",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "delete-exclude-nested-file",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "delete-exclude-extra-directory",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "dry-delete-exclude-nested",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": false,
+      "exitCode": 0
+    },
+    {
+      "case": "include-only-alpha",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 0
+    },
+    {
+      "case": "mutually-exclusive-filters",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": false,
+      "exitCode": 1
+    },
+    {
+      "case": "mutually-exclusive-dry-verify",
+      "beforeKind": "correct",
+      "afterKind": "correct",
+      "extrasAfter": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "targetImageUnchanged": true,
+      "verificationRequested": true,
+      "exitCode": 1
+    },
+    {
+      "case": "symlink-owned-canary",
+      "beforeKind": "symlink",
+      "afterKind": "correct",
+      "extrasAfter": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "targetImageUnchanged": false,
+      "verificationRequested": true,
+      "exitCode": 0
+    }
+  ],
+  "adapterSha256": "1d5283d32959a3d5f8a1bbf2562accfb2c31409cab80b39fb3f44e5561e4a4b3",
+  "basisSha256": {
+    "applications/restic/Restore.lean": "a80f497c91686e0611bc6374cd272b6882d34bdfdf22a428a3ee18392e33bb53",
+    "applications/restic/RestoreCase.lean": "6c757d2911ea5204543b77ab121a3eb01e31e7aab2c9701fe5196d70275012be",
+    "applications/restic/Restore.bend": "ef618c4e78b3a50d2b915d740a318d57ab7173e69880718a1e06a1c9a264f968",
+    "applications/sources/restic-restore-selections.json": "4f188d789b3113be067906e1f7892d2c1fbed6ef439ed0cbdb1ec68e5754d668",
+    "applications/evidence/restic-restore-20261124T123833241400Z/backup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/backup.stdout": "ea69a4a272c3fb772e115ad116b45c7515ec5b6f766c7c172f7098ee8b2bf19a",
+    "applications/evidence/restic-restore-20261124T123833241400Z/changed-mtime-if-changed.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/changed-mtime-if-changed.stdout": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-extra-directory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-extra-directory.stdout": "f4812d09262c25cc1b4f81468d065b5ac79b78cab05661eab2980ef1b36a28a3",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-nested-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-nested-file.stdout": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-root-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-exclude-root-file.stdout": "8cee66f627e3884f9d13d97de6ec209692a0a8be9c35ad24aab4b6efdc4c4252",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-extra.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/delete-extra.stdout": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+    "applications/evidence/restic-restore-20261124T123833241400Z/dry-delete-exclude-nested.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/dry-delete-exclude-nested.stdout": "f7b7a05f066767b2a631aafdc14add7509fb615daddb38a7d03f2be3c95d91b3",
+    "applications/evidence/restic-restore-20261124T123833241400Z/empty-always.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/empty-always.stdout": "47160f0c5bc3d047cf164965eab40576c66333428b6bb9cdb3b3aad6b54506ec",
+    "applications/evidence/restic-restore-20261124T123833241400Z/equal-if-newer.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/equal-if-newer.stdout": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+    "applications/evidence/restic-restore-20261124T123833241400Z/existing-never.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/existing-never.stdout": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+    "applications/evidence/restic-restore-20261124T123833241400Z/help.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/help.stdout": "23a9255fc6bf06cf45ee58c67c5c1cbf27543ee163d195adc18bee29561626e5",
+    "applications/evidence/restic-restore-20261124T123833241400Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-restore-20261124T123833241400Z/include-only-alpha.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/include-only-alpha.stdout": "aa11175a173bab52c876333514a42057a7f43510c2ae90ad123a9402d0ba8793",
+    "applications/evidence/restic-restore-20261124T123833241400Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/init.stdout": "0f0bcff10232888af187df2513d7b916de161dd966a1456cb1025e426c38b143",
+    "applications/evidence/restic-restore-20261124T123833241400Z/mutually-exclusive-dry-verify.stderr": "2db50d1498ffd4d1764da2b7cc72f83b53d3e528222ea59651d47089128174a3",
+    "applications/evidence/restic-restore-20261124T123833241400Z/mutually-exclusive-dry-verify.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/mutually-exclusive-filters.stderr": "f41099b8493e2bfc551847b3af204c081786c238816dcd24d89e7a5042013bdc",
+    "applications/evidence/restic-restore-20261124T123833241400Z/mutually-exclusive-filters.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/newer-if-newer.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/newer-if-newer.stdout": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+    "applications/evidence/restic-restore-20261124T123833241400Z/older-if-newer.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/older-if-newer.stdout": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+    "applications/evidence/restic-restore-20261124T123833241400Z/probe.py": "e505a12a8435cd8a74dd3a2b0c7bcf7c1c36b8ccd131277fd48946a4c2a80067",
+    "applications/evidence/restic-restore-20261124T123833241400Z/receipt.json": "5b83a0cb00e35a7586bb9f3639c7ce28fd7de852a57c2cbe2c955e01d824bea0",
+    "applications/evidence/restic-restore-20261124T123833241400Z/same-metadata-always.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/same-metadata-always.stdout": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+    "applications/evidence/restic-restore-20261124T123833241400Z/same-metadata-if-changed.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/same-metadata-if-changed.stdout": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+    "applications/evidence/restic-restore-20261124T123833241400Z/source-image.json": "804b1217cc4da3c2c23d33fed435b1bc12264ead0116d0eca485f0b2a5a150cc",
+    "applications/evidence/restic-restore-20261124T123833241400Z/symlink-owned-canary.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-restore-20261124T123833241400Z/symlink-owned-canary.stdout": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+    "applications/evidence/restic-restore-20261124T123833241400Z/trace.json": "b933831958ba09146e848c22d746538b4c61c32f3e1ae5ff2c0c12c558028e9e"
+  },
+  "ownerLocalPrivateStreams": 40,
+  "rejectedInterpretations": [
+    "verify request checks every retained existing file",
+    "if-changed always compares payload bytes",
+    "a child exclusion necessarily protects it from recursive parent deletion",
+    "dry-run deleted action means removal occurred",
+    "restore success proves application consistency"
+  ],
+  "limits": [
+    "Generated three-file subtree and fresh private targets; not a general restic restore implementation.",
+    "Verification eligibility and proposed child-preserving deletion are source/model claims, not native read counters or adopted changes.",
+    "Current upstream tests explicitly allow selected unexpected directory deletion without selecting each child.",
+    "Canary result is one owned leaf-symlink case, not general path/permission/hardlink/platform security qualification.",
+    "Raw/public stream attribution requires retained owner-local originals; no real user backup or remote service used."
+  ]
+}

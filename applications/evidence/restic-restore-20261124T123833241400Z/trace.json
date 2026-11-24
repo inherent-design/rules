@@ -1,0 +1,2262 @@
+[
+  {
+    "case": "help",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "--help"
+    ],
+    "pid": 23810,
+    "seconds": 0.022489999886602163,
+    "request": null,
+    "observed": {
+      "before": null,
+      "after": null,
+      "streams": {
+        "stdout": {
+          "rawSha256": "23a9255fc6bf06cf45ee58c67c5c1cbf27543ee163d195adc18bee29561626e5",
+          "publicSha256": "23a9255fc6bf06cf45ee58c67c5c1cbf27543ee163d195adc18bee29561626e5",
+          "rawPrivatePath": "work/private/help.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/help.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "init",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "pid": 23811,
+    "seconds": 3.0206079171039164,
+    "request": null,
+    "observed": {
+      "before": null,
+      "after": null,
+      "streams": {
+        "stdout": {
+          "rawSha256": "1ea325168c00ade52b1282706f36e54ebb70381a00a09cd9927bf269423903f2",
+          "publicSha256": "0f0bcff10232888af187df2513d7b916de161dd966a1456cb1025e426c38b143",
+          "rawPrivatePath": "work/private/init.stdout",
+          "redacted": true
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/init.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "backup",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "backup",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--host",
+      "restore-fixture-host",
+      "--tag",
+      "restore-policy"
+    ],
+    "pid": 24776,
+    "seconds": 0.750487582758069,
+    "request": null,
+    "observed": {
+      "before": null,
+      "after": null,
+      "streams": {
+        "stdout": {
+          "rawSha256": "ea69a4a272c3fb772e115ad116b45c7515ec5b6f766c7c172f7098ee8b2bf19a",
+          "publicSha256": "ea69a4a272c3fb772e115ad116b45c7515ec5b6f766c7c172f7098ee8b2bf19a",
+          "rawPrivatePath": "work/private/backup.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/backup.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "empty-always",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/empty-always",
+      "--overwrite",
+      "always",
+      "--verify"
+    ],
+    "pid": 24993,
+    "seconds": 0.6957358750514686,
+    "request": {
+      "setup": "empty",
+      "overwrite": "always",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {},
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "47160f0c5bc3d047cf164965eab40576c66333428b6bb9cdb3b3aad6b54506ec",
+          "publicSha256": "47160f0c5bc3d047cf164965eab40576c66333428b6bb9cdb3b3aad6b54506ec",
+          "rawPrivatePath": "work/private/empty-always.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/empty-always.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "existing-never",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/existing-never",
+      "--overwrite",
+      "never",
+      "--verify"
+    ],
+    "pid": 25065,
+    "seconds": 0.712958708871156,
+    "request": {
+      "setup": "same-mtime-changed-bytes",
+      "overwrite": "never",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "publicSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "rawPrivatePath": "work/private/existing-never.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/existing-never.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "same-metadata-if-changed",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/same-metadata-if-changed",
+      "--overwrite",
+      "if-changed",
+      "--verify"
+    ],
+    "pid": 25385,
+    "seconds": 0.6871977089904249,
+    "request": {
+      "setup": "same-mtime-changed-bytes",
+      "overwrite": "if-changed",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "publicSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "rawPrivatePath": "work/private/same-metadata-if-changed.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/same-metadata-if-changed.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "same-metadata-always",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/same-metadata-always",
+      "--overwrite",
+      "always",
+      "--verify"
+    ],
+    "pid": 25664,
+    "seconds": 0.7024739170446992,
+    "request": {
+      "setup": "same-mtime-changed-bytes",
+      "overwrite": "always",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "publicSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "rawPrivatePath": "work/private/same-metadata-always.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/same-metadata-always.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "older-if-newer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/older-if-newer",
+      "--overwrite",
+      "if-newer",
+      "--verify"
+    ],
+    "pid": 25672,
+    "seconds": 0.7059701248072088,
+    "request": {
+      "setup": "older-changed-bytes",
+      "overwrite": "if-newer",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1699999999000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "publicSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "rawPrivatePath": "work/private/older-if-newer.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/older-if-newer.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "newer-if-newer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/newer-if-newer",
+      "--overwrite",
+      "if-newer",
+      "--verify"
+    ],
+    "pid": 25992,
+    "seconds": 0.6888028751127422,
+    "request": {
+      "setup": "newer-changed-bytes",
+      "overwrite": "if-newer",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000001000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000001000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "publicSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "rawPrivatePath": "work/private/newer-if-newer.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/newer-if-newer.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "equal-if-newer",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/equal-if-newer",
+      "--overwrite",
+      "if-newer",
+      "--verify"
+    ],
+    "pid": 26277,
+    "seconds": 0.7093953746370971,
+    "request": {
+      "setup": "same-mtime-changed-bytes",
+      "overwrite": "if-newer",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "publicSha256": "ecb3a2375ee0134340d7903be41a06b44a9972887bb6738eed0c3b92e67e287b",
+          "rawPrivatePath": "work/private/equal-if-newer.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/equal-if-newer.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "changed-mtime-if-changed",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/changed-mtime-if-changed",
+      "--overwrite",
+      "if-changed",
+      "--verify"
+    ],
+    "pid": 26278,
+    "seconds": 0.7067748750559986,
+    "request": {
+      "setup": "newer-changed-bytes",
+      "overwrite": "if-changed",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000001000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "72c84ba99d77ee766e9468a0de36433a44888e5dec4afb84f8019777800b7364"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "publicSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "rawPrivatePath": "work/private/changed-mtime-if-changed.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/changed-mtime-if-changed.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "delete-extra",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/delete-extra",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--verify"
+    ],
+    "pid": 26602,
+    "seconds": 0.696385458111763,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523922678160265,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523922678125890,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523922678191766,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523922678048472,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+          "publicSha256": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+          "rawPrivatePath": "work/private/delete-extra.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/delete-extra.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "delete-exclude-root-file",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/delete-exclude-root-file",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--exclude",
+      "/extra.txt",
+      "--verify"
+    ],
+    "pid": 26890,
+    "seconds": 0.6923730839043856,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--exclude",
+        "/extra.txt",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523923376402202,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523923376370993,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523923376439869,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523923376301159,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523923376301159,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "8cee66f627e3884f9d13d97de6ec209692a0a8be9c35ad24aab4b6efdc4c4252",
+          "publicSha256": "8cee66f627e3884f9d13d97de6ec209692a0a8be9c35ad24aab4b6efdc4c4252",
+          "rawPrivatePath": "work/private/delete-exclude-root-file.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/delete-exclude-root-file.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "delete-exclude-nested-file",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/delete-exclude-nested-file",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--exclude",
+      "/extra/protected.txt",
+      "--verify"
+    ],
+    "pid": 27122,
+    "seconds": 0.7069812919944525,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--exclude",
+        "/extra/protected.txt",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523924070844472,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924070813805,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924070870806,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924070753638,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+          "publicSha256": "be946e4e952bf6be5c394a896199793dae0b1b2c911a7e93e6618c6854a6fb9f",
+          "rawPrivatePath": "work/private/delete-exclude-nested-file.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/delete-exclude-nested-file.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "delete-exclude-extra-directory",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/delete-exclude-extra-directory",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--exclude",
+      "/extra",
+      "--verify"
+    ],
+    "pid": 27211,
+    "seconds": 0.713147500064224,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--exclude",
+        "/extra",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523924779790986,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924779764444,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924779819111,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924779710193,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523924779790986,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924779764444,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523924779819111,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "f4812d09262c25cc1b4f81468d065b5ac79b78cab05661eab2980ef1b36a28a3",
+          "publicSha256": "f4812d09262c25cc1b4f81468d065b5ac79b78cab05661eab2980ef1b36a28a3",
+          "rawPrivatePath": "work/private/delete-exclude-extra-directory.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/delete-exclude-extra-directory.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "dry-delete-exclude-nested",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/dry-delete-exclude-nested",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--exclude",
+      "/extra/protected.txt",
+      "--dry-run",
+      "-vv"
+    ],
+    "pid": 27491,
+    "seconds": 0.7105476250872016,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--exclude",
+        "/extra/protected.txt",
+        "--dry-run",
+        "-vv"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523925494756981,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494727940,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494784940,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494668397,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523925494756981,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494727940,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494784940,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523925494668397,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "ced7216452ce87e3feed533b4256c84d70a4bd10ac253e894c0f94c85295ce05",
+          "publicSha256": "f7b7a05f066767b2a631aafdc14add7509fb615daddb38a7d03f2be3c95d91b3",
+          "rawPrivatePath": "work/private/dry-delete-exclude-nested.stdout",
+          "redacted": true
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/dry-delete-exclude-nested.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "include-only-alpha",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/include-only-alpha",
+      "--overwrite",
+      "always",
+      "--delete",
+      "--include",
+      "/alpha.txt",
+      "--verify"
+    ],
+    "pid": 27778,
+    "seconds": 0.7107327077537775,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--delete",
+        "--include",
+        "/alpha.txt",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926207091240,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926207055157,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926207117657,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926206991448,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926207091240,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926207055157,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926207117657,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926206991448,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "aa11175a173bab52c876333514a42057a7f43510c2ae90ad123a9402d0ba8793",
+          "publicSha256": "aa11175a173bab52c876333514a42057a7f43510c2ae90ad123a9402d0ba8793",
+          "rawPrivatePath": "work/private/include-only-alpha.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/include-only-alpha.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "mutually-exclusive-filters",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/mutually-exclusive-filters",
+      "--overwrite",
+      "always",
+      "--include",
+      "/alpha.txt",
+      "--exclude",
+      "/options.txt"
+    ],
+    "pid": 27820,
+    "seconds": 0.01275254087522626,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--include",
+        "/alpha.txt",
+        "--exclude",
+        "/options.txt"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926919832212,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919805462,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919860337,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919750294,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926919832212,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919805462,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919860337,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926919750294,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/mutually-exclusive-filters.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "f41099b8493e2bfc551847b3af204c081786c238816dcd24d89e7a5042013bdc",
+          "publicSha256": "f41099b8493e2bfc551847b3af204c081786c238816dcd24d89e7a5042013bdc",
+          "rawPrivatePath": "work/private/mutually-exclusive-filters.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "mutually-exclusive-dry-verify",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/mutually-exclusive-dry-verify",
+      "--overwrite",
+      "always",
+      "--dry-run",
+      "--verify"
+    ],
+    "pid": 27821,
+    "seconds": 0.012280500028282404,
+    "request": {
+      "setup": "extra",
+      "overwrite": "always",
+      "flags": [
+        "--dry-run",
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926934378289,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934352205,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934403414,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934298496,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "extra": {
+          "mode": 493,
+          "mtimeNs": 1795523926934378289,
+          "kind": "directory"
+        },
+        "extra/protected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934352205,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra/unselected.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934403414,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "extra.txt": {
+          "mode": 420,
+          "mtimeNs": 1795523926934298496,
+          "kind": "file",
+          "bytes": 17,
+          "sha256": "11386b5e6a5a1ea0f998fad55168816133cfcd248ac5fd3c681fe5243edef2ac"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/mutually-exclusive-dry-verify.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "2db50d1498ffd4d1764da2b7cc72f83b53d3e528222ea59651d47089128174a3",
+          "publicSha256": "2db50d1498ffd4d1764da2b7cc72f83b53d3e528222ea59651d47089128174a3",
+          "rawPrivatePath": "work/private/mutually-exclusive-dry-verify.stderr",
+          "redacted": false
+        }
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false
+    }
+  },
+  {
+    "case": "symlink-owned-canary",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/repository",
+      "--password-file",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/password",
+      "--json",
+      "restore",
+      "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787:/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source",
+      "--target",
+      "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/targets/symlink-owned-canary",
+      "--overwrite",
+      "always",
+      "--verify"
+    ],
+    "pid": 27822,
+    "seconds": 0.7079530418850482,
+    "request": {
+      "setup": "symlink",
+      "overwrite": "always",
+      "flags": [
+        "--verify"
+      ],
+      "snapshot": "94212c891b571ad8704d5df35739988fc24116e06f9a902940e0ab6086f11787",
+      "subtree": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/source"
+    },
+    "observed": {
+      "before": {
+        "alpha.txt": {
+          "mode": 493,
+          "mtimeNs": 1795523926948656988,
+          "kind": "symlink",
+          "link": "/Users/zer0cell/production/rules/applications/evidence/restic-restore-20261124T123833241400Z/work/canary.txt"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "after": {
+        "alpha.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 16,
+          "sha256": "43bc9e4ae9ad5f80d99017737a9850f1c3cf99a700ea61eb042b1399ce72c2a2"
+        },
+        "options.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 18,
+          "sha256": "5ab67c8cc6f080352afa89eb0df5b8320dbcd1afefeecda6ed289d699c06c90f"
+        },
+        "sub": {
+          "mode": 493,
+          "mtimeNs": 1795523913261714183,
+          "kind": "directory"
+        },
+        "sub/beta.txt": {
+          "mode": 416,
+          "mtimeNs": 1700000000000000000,
+          "kind": "file",
+          "bytes": 15,
+          "sha256": "3bfd14a2ac7fe94497e0854566aa49aceec10477aa34c1b4d9468ab78f227a89"
+        }
+      },
+      "streams": {
+        "stdout": {
+          "rawSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "publicSha256": "06234d2303eddd4cd7faadc1c627085fb4f312b11502baa7091ae2aff03a2ae1",
+          "rawPrivatePath": "work/private/symlink-owned-canary.stdout",
+          "redacted": false
+        },
+        "stderr": {
+          "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "rawPrivatePath": "work/private/symlink-owned-canary.stderr",
+          "redacted": false
+        }
+      },
+      "canary": {
+        "beforeSha256": "446bf4d32b5225cbcc4b629b53107bda1c7974523847e43d05917876e72c4244",
+        "afterSha256": "446bf4d32b5225cbcc4b629b53107bda1c7974523847e43d05917876e72c4244"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false
+    }
+  }
+]

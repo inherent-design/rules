@@ -28,6 +28,8 @@ The [Prism component band](prism/COMPONENTS.md) adds requirement composition, pr
 
 The [publication band](js-peers/PUBLICATION.md) separates generated archive identity, fixture registry acceptance, client acknowledgement, local hooks, and the command’s final status. Thirty outcomes across npm, pnpm, and Yarn demonstrate response loss before and after acceptance, plus acknowledged uploads followed by failed hooks. Real registry policy, authorization, durability, and larger publication workflows remain pending.
 
+The [restore-policy band](restic/RESTORE.md) separates existing content, overwrite/mtime admission, verification of actually restored files, and selected-directory deletion. It preserves the upstream whole-directory policy alongside a separately modeled child-preserving alternative. Seventeen private target outcomes leave general metadata, traversal, concurrency, and recovery pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
