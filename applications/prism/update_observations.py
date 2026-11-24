@@ -102,7 +102,7 @@ def main():
     report = dict(schema=1, primaryCases=30, cleanupCases=22, joinedOverrideCases=8,
         priorCaptureCases=28, unchangedFragmentHashes=True, sourcePins=len(ledger),
         saveEquivalentPathCases=4, overridePathLossCases=losses, partialCleanupFailurePreserved=True,
-        notes=['Native observations verified against preserved fixtures and source fragments; Lean/Bend policy comparison remains pending.',
+        notes=['Native observations verified against preserved fixtures and source fragments;cleanup_conformance.py separately compares the scoped Lean/Bend policies.',
             'Unchanged primitive hashes across two runs; earlier capture predates joined override cleanup and two cached-No cases.',
             'Directory traversal order is not qualified; override path bags and scoped effects require separate formal comparison.',
             'Dialog state is explicitly initialized by fixture. Native constructor/initialization, whole archive import/update, downloads, publication and platform qualification remain open.'])

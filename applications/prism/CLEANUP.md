@@ -1,6 +1,6 @@
 # Prism: update cleanup and override records
 
-This is an intermediate source/native record for Prism Launcher 11.1.1 at `7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4`. The formal policy models and replay remain pending. No inventory operation is promoted, production change is selected, or full-launcher defect is claimed.
+This band compares selected source methods and their disposable native fixtures with formal models for Prism Launcher 11.1.1 at `7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4`. It establishes cleanup and record-path counterexamples at this method boundary. It does not qualify complete launcher updates or select a production change.
 
 ## Captured boundary
 
@@ -18,7 +18,23 @@ Dialog answers, the save-choice cache, the override flag, and the task event/con
 - **Failure does not undo preceding cleanup.** A scheduled directory fails `QFile::remove`, but the loop still removes regular files before and after it, then reports failure. No rollback occurs in this selected block. A failed task must not be described as having made no changes.
 - **Other cases retain distinct meanings.** Indexed-file scheduling includes enabled/disabled counterparts; override scheduling does not request that pairing. Missing files and dangling links are skipped by the existence check. A valid file symlink is removed while its fixture target remains. A changed `options.txt` scheduled as an old override is removed; these methods provide no seed-ownership policy.
 
-The [observation checker](update_observations.py) validates source/fragment identities, captured streams, inputs, preserved post-run fixtures, recorded path losses, cached refusal cases, and partial effects. The [summary](update-observations.json) records the bounded findings. It runs no compiler, launcher, or deletion operation. Formal comparison is still pending; native exit zero and this consistency check do not establish the complete update policy.
+The [observation checker](update_observations.py) validates source/fragment identities, captured streams, inputs, preserved post-run fixtures, recorded path losses, cached refusal cases, and partial effects. The [summary](update-observations.json) records the bounded findings. It runs no compiler, launcher, or deletion operation. Native probe exit zero means collection completed; individual cleanup failures remain recorded inside that successful collection.
+
+## Models and replay
+
+[Lean](Cleanup.lean) models lexical normalization, cached save choices, scheduling, disabled pairing, ordered cleanup over typed static nodes, current record transformation, and proposed destination-preserving rules. Twenty laws include failure persistence, preservation of untargeted cells, known-No protection, accepted filename preservation, and the concrete counterexamples. They retain the input-state and host-profile premises; they do not establish native construction or realpath safety.
+
+[Bend](Cleanup.bend) implements scheduling, record text, and failure aggregation, with nine checked laws. Failure aggregation consumes admitted paths, including the protection decision, rather than every requested path. Its normalized destination is an independently checked lexical host witness. It does not independently model the complete typed filesystem mutation. Small character-list operations keep the Lean laws kernel-reducible; the models do not claim equivalence with every QString UTF-16 or Unicode-whitespace operation.
+
+The [replay](cleanup_conformance.py) derives inputs from captured requests and preimages, then compares the Lean model with 22 cleanup outcomes and eight joined record/effect outcomes. Bend matches all 22 schedules, eight record bags, and 22 failure summaries. The proposed schedules also agree between the models. Override record/path comparisons use bags because filesystem iterator order is not qualified. The joined final effects match these particular fixtures; this does not prove arbitrary cleanup reordering is harmless.
+
+The proposed destination guard preserves all four aliased-save fixtures. Correct relative recording and delimiter-safe reading preserve unrelated canaries in five other fixtures; a newline filename is refused before any candidate deletion. These ten changed outcomes are model comparisons, not execution of a patched launcher. Nineteen malformed research inputs are refused by the Lean decoder, including unknown state/operation/profile, missing answers, unsafe paths, ambiguous cells, unmodeled link changes, and unsupported UTF-16 slicing. Research refusals are not claims about Prism's own input validation.
+
+```sh
+LEAN=<pinned-lean> BEND=<pinned-bend> python3 applications/prism/cleanup_conformance.py
+```
+
+This command compiles the current Lean model into ignored private output and replays retained data. It runs no native collector, launcher, or deletion operation. The [comparison receipt](cleanup-comparison.json) retains the model/source/stream basis. `scripts/check-rules.py` separately checks all tracked formal modules.
 
 ## Design and verification direction
 
@@ -28,4 +44,4 @@ A focused override-record candidate should derive paths relative to the known ov
 
 The save-choice field is declared without an initializer, and the selected Modrinth constructor does not initialize it. This fixture supplies explicit states. Native constructor/initialization behavior remains an unresolved source-level obligation; do not infer a reliable NotAsked state from these controlled calls or manufacture a product observation by reading indeterminate storage.
 
-Next, model current scheduling, cached choice, disabled pairing, ordered cleanup, record-path derivation, and observed partial effects in Lean and Bend. Compare destination-preserving candidates separately. Keep enumeration order, source versus installed bytes, and constructor authority explicit. Then qualify actual archive admission, extraction, optional resources, staging failure, publication, cancellation, historical records, symlinked ancestors, and supported platforms through separate native flows. The earlier [indexed hash-filter study](README.md) remains a distinct planning boundary.
+Actual archive admission, extraction, optional resources, staging failure, publication, cancellation, historical records, symlinked ancestors, dynamic referents, and supported platforms still need separate native flows. Keep enumeration order, source versus installed bytes, and constructor authority explicit. The earlier [indexed hash-filter study](README.md) remains a distinct planning boundary. Most Prism features and the full joined transition remain pending.
