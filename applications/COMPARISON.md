@@ -122,6 +122,8 @@ Trust predicates reinforce that support metadata is not full admission. Explicit
 
 ### empack
 
+The [document/approval band](empack/DOCUMENTS.md) supports keeping semantic currency separate from raw write preconditions. Actual approval-time author/lock comments and absent-to-empty bindings refuse pending metadata publication while preserving the later edits; fresh preparation succeeds. Portable editors may retain useful semantic results without granting old prepared writes. This is not a new automatic rebasing or cache protocol.
+
 The [Java band](empack/JAVA.md) supports retaining separate game admission, constraint evidence, author preference, resolved output requirements, and host executable observations. A known preference is not an exact-major requirement; an unknown profile deliberately requires the explicit major. Installed JDKs do not expand admission. This distinction should survive portable editing, and reports should identify which constraints were actually collected rather than implying whole-pack Java compatibility.
 
 Preserve the current authority boundaries. The native core/CLI comparison supports seed preservation, explicit managed adoption, retained overrides, and exact repair under its stated scope. Publication, world protection, root observations, grants, and runtime ownership remain separate obligations. The sparse seed refusal identifies a read-footprint limitation, not data loss or permission to weaken verification.

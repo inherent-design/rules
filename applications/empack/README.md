@@ -8,7 +8,7 @@ The proposed split is between editable project data, interpreted meaning, retain
 
 ## Keep the current guarantees
 
-The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
+The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
 
 `PreparedOperation` retains private engine-owned data. Authorization checks the exact plan, network/installer/runtime permission, and replacement footprint. `Engine::start` checks the owning engine. These distinctions survive extraction: a preview, serialized plan description, imported project, or UI Boolean cannot construct the execution proof.
 
