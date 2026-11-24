@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "metadataLibraryFeatures": [
+    "blue",
+    "red"
+  ],
+  "appOnly": {
+    "red": true,
+    "blue": false,
+    "input": "first"
+  },
+  "workspaceApp": {
+    "red": true,
+    "blue": true,
+    "input": "first"
+  },
+  "appOnlyAgain": {
+    "red": true,
+    "blue": false,
+    "input": "first"
+  },
+  "undeclaredInput": {
+    "red": true,
+    "blue": false,
+    "input": "first"
+  },
+  "declaredInput": {
+    "red": true,
+    "blue": false,
+    "input": "second"
+  },
+  "declaredChangedInput": {
+    "red": true,
+    "blue": false,
+    "input": "third"
+  },
+  "lockStableAcrossBuilds": true,
+  "coldMetadataCreatedLock": true,
+  "allCompilerArtifactsFreshWithUndeclaredChange": true,
+  "cleanRemovedTargetButKeptScriptSideEffect": true,
+  "limits": [
+    "Three local packages; no registry, cross-compilation, build-dependency feature split, unsafe environment, or concurrent cargo process.",
+    "The fixture intentionally violates input/output guidance before the corrected-input phase.",
+    "Observed fresh flags are not a proof that every build input was declared."
+  ]
+}

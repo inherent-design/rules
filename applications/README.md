@@ -14,7 +14,7 @@ Each feature must eventually link its domain values/relations, transition model,
 
 MO2 2.5.2 requires Windows 10 1809+ or Windows 11. Its native Windows behavior is not qualified on this Mac. VS Code desktop 1.147 and the browser service have separately identified evidence obligations; a shared UI does not establish equal filesystem, extension, or process capabilities. Vortex and Yarn Classic have not been selected.
 
-The first [restic band](restic/README.md) has source/native/model evidence for a selected local snapshot-forget/prune/restore flow. It leaves restic's other operations and the other application models pending. [Inventory checks](check_inventory.py) verify structure and bookkeeping constraints, not product correctness.
+The first [restic band](restic/README.md) has source/native/model evidence for a selected local snapshot-forget/prune/restore flow. The first [Cargo band](cargo/README.md) compares workspace metadata, selected build features, build-script input declarations, and cleanup. Both leave their other operations and most application models pending. [Inventory checks](check_inventory.py) verify structure and bookkeeping constraints, not product correctness.
 
 ## Working order
 

@@ -1,0 +1,596 @@
+[
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.graph-inspection",
+    "operationId": "metadata",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "0",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "metadata",
+        "--format-version=1",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": null,
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": null,
+        "targetExists": false
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": null,
+        "targetExists": false
+      },
+      "seconds": 0.05655245902016759,
+      "stdoutSha256": "5cd8ab983658866d2f68436c85ca3e8d568a7d3bed54819c32c08e65d7946b10",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.build-units",
+    "operationId": "red-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "1",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "-p",
+        "fixture-app",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": null,
+        "targetExists": false
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 1.0372032090090215,
+      "stdoutSha256": "fd248e2ef5f934232efc63a4581474ba8766a6b26bc68d469854b2552c93f2b3",
+      "stderrSha256": "b92d35993ae805584d8036814d6418961706031432c5133399a376eae8df8b61"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "red-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "2",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.2047831667587161,
+      "stdoutSha256": "db70acd4daa798862f3e33463ec00eeaeaaa0f2f14f48aa7b904eaf3df6808da",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.build-units",
+    "operationId": "workspace-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "3",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "--workspace",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.35354662500321865,
+      "stdoutSha256": "ec57efaea538430ff8a1f523ca1fe06ba0100081ed49264d9277686b913cdfa5",
+      "stderrSha256": "623d5db1bdbab486c2eafa0f4d63cce98dccf08fbf983c457cdc262659ab7af4"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "workspace-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "4",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.20471141673624516,
+      "stdoutSha256": "b094d46679fd9543f8477931ae466582fbd41e3c6e5edf8c2c70d175855e0d36",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.build-units",
+    "operationId": "red-again-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "5",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "-p",
+        "fixture-app",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.01169462502002716,
+      "stdoutSha256": "646a2f9a0493a592233ea21d5531addc7560807f3daa01cb51528756659c1343",
+      "stderrSha256": "23b9a21bbaf189889e08dc27ed8eba521021280c5852db22205f721db08b2c7c"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "red-again-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "6",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "inputText": "first",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.12281337473541498,
+      "stdoutSha256": "db70acd4daa798862f3e33463ec00eeaeaaa0f2f14f48aa7b904eaf3df6808da",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.freshness",
+    "operationId": "undeclared-input-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "7",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "-p",
+        "fixture-app",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.012007459066808224,
+      "stdoutSha256": "646a2f9a0493a592233ea21d5531addc7560807f3daa01cb51528756659c1343",
+      "stderrSha256": "23b9a21bbaf189889e08dc27ed8eba521021280c5852db22205f721db08b2c7c"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "undeclared-input-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "8",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "28defe00057961020a21ecf9d5c1a43a34db2d42da07df9c64f7803acf9c1867",
+        "declaresInput": false,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "seconds": 0.1220720843411982,
+      "stdoutSha256": "db70acd4daa798862f3e33463ec00eeaeaaa0f2f14f48aa7b904eaf3df6808da",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.freshness",
+    "operationId": "declared-input-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "9",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "-p",
+        "fixture-app",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "targetExists": true
+      },
+      "seconds": 0.3148724171333015,
+      "stdoutSha256": "5fa1ee6ba55adba04fb9f98deb3d053614d975d1d247cabfd974accda4e711c0",
+      "stderrSha256": "f63a16bb9b3d28f11a2a62240fa2b7d3b89acb1c1016460052184120e26b2fc5"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "declared-input-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "10",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "inputText": "second",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "targetExists": true
+      },
+      "seconds": 0.19900979194790125,
+      "stdoutSha256": "8cc09d11ddbffba424f41f37cbd78eef69a25ec8c1e846020c3878c086931b67",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.freshness",
+    "operationId": "declared-input-change-build",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "11",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "-p",
+        "fixture-app",
+        "--message-format=json",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "480c2336b410f1ad5f8bf1b28944490255804b65350c527787e74ebdd511e3a4",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "targetExists": true
+      },
+      "seconds": 0.22496733395382762,
+      "stdoutSha256": "e700d198307caa7775d1b889143f795c7a9bd548ba36912abed95275833f5c0a",
+      "stderrSha256": "b4e67faeccea64779720ec8eb053335fe5d3d874c4f2264e6c9945447e66191f"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.execution-tests",
+    "operationId": "declared-input-change-run",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "12",
+    "request": {
+      "argv": [
+        "/private/tmp/rules-cargo-fm7w4p3o/target/debug/fixture-app"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "targetExists": true
+      },
+      "seconds": 0.20094866584986448,
+      "stdoutSha256": "268dbb074971317dd4f7499805e4a44516008fc3f02c85d8127cf80b34a980f8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 2,
+    "app": "cargo",
+    "feature": "cargo.artifact-cleanup",
+    "operationId": "clean",
+    "profile": "cargo-1.92-darwin-arm64-offline-path-workspace",
+    "target": "/private/tmp/rules-cargo-fm7w4p3o/project",
+    "basis": "13",
+    "request": {
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "clean",
+        "--offline"
+      ]
+    },
+    "observed": {
+      "before": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "targetExists": true
+      },
+      "after": {
+        "lockSha256": "b8a3e9f4e04b6742921150e6ff41d1827b9a4c87bb6de8f49c62e6c8083d53ec",
+        "inputSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "inputText": "third",
+        "buildScriptSha256": "3e8ca1098d83a0993fddf7d2a6e82221941711f6fd008fbade36da8e838456de",
+        "declaresInput": true,
+        "sideEffectSha256": "5eef8098ed6ec0a16249fc7c12422027fc9fd75b16130cc9382cf09102014796",
+        "targetExists": false
+      },
+      "seconds": 0.03681841725483537,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "aa1a884c5d256a8b714c46a822155d6611fc3c37c5104421658455603e99cfd3"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  }
+]

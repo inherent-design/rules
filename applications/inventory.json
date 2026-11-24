@@ -9865,23 +9865,55 @@
           "operations": [
             {
               "id": "select-features",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "workspace_selection_changes_features"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:metadataAsSelectedUnitCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "unify-features",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "workspace_selection_changes_features"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:metadataAsSelectedUnitCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "default-features",
@@ -9991,13 +10023,29 @@
           "operations": [
             {
               "id": "build",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "different_features_different_units"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:metadataAsSelectedUnitCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "check",
@@ -10069,13 +10117,30 @@
             },
             {
               "id": "rerun-if-changed",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "complete_signature_yields_current",
+                "changed_signature_captures_current"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:freshAsCompleteInputProofCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "rerun-if-env-changed",
@@ -10089,13 +10154,29 @@
             },
             {
               "id": "reuse-artifact",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "unchanged_signature_reuses_capture"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:freshAsCompleteInputProofCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -10329,13 +10410,29 @@
           "operations": [
             {
               "id": "metadata",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "workspace_selection_changes_features"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:metadataAsSelectedUnitCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "tree",
@@ -10455,13 +10552,30 @@
           "operations": [
             {
               "id": "clean",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo/Build.lean and cargo/Build.bend",
+              "laws": [
+                "clean_keeps_unowned_effect",
+                "clean_idempotent"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-20261124T005523371598Z/trace.json",
+                "evidence/cargo-20261124T005523371598Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-selections.json"
+              ],
+              "negativeControls": [
+                "cargo/conformance.py:cleanAsUndoAllEffectsCounterexampleRejected"
+              ],
+              "uxAssessment": "cargo/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Three local packages; selected normal edges under resolver2 only",
+                "Watched-signature adapter is not Cargo fingerprint implementation",
+                "Input completeness is conditional, deliberately absent in one negative fixture",
+                "Target cleanup does not own arbitrary script effects"
+              ],
+              "verificationPlan": "Expand to resolver/target/profile splits, failure/concurrency, and full fingerprint implementation; no whole-feature qualification."
             },
             {
               "id": "select-target-dir",

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "formalCommand": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 scripts/check-rules.py",
+  "formalResult": "34 Lean modules and 7 Bend files passed; no applications executed",
+  "nativeCommand": "python3 applications/cargo_probe.py",
+  "nativeRun": "cargo-20261124T005523371598Z",
+  "conformanceCommand": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 applications/cargo/conformance.py applications/evidence/cargo-20261124T005523371598Z",
+  "conformance": "Six retained build cases agree in both models; three interpretation counterexamples rejected",
+  "additionalChecks": [
+    "Python AST syntax",
+    "local Markdown links",
+    "exact retained collector hash/bytes",
+    "inventory bookkeeping",
+    "unchanged host feature projection",
+    "git diff --cached --check"
+  ],
+  "scope": "applications/** only; no production application changes",
+  "limits": "Checks cover this selected Cargo band. Most of the nine-application goal remains pending."
+}
