@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "kind": "Post-run inspection of retained archive bytes matching original native receipt digests",
+  "archives": {
+    "fixture-parent-1.0.0.tgz": {
+      "archiveSha256": "d6d7e964af63f051b06416139492834eeee330c678b22e9e5047fb32a220ee64",
+      "manifest": {
+        "name": "fixture-parent",
+        "version": "1.0.0",
+        "main": "index.js",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        }
+      },
+      "source": "module.exports = require(\"fixture-leaf\");\n"
+    },
+    "fixture-leaf-1.0.0.tgz": {
+      "archiveSha256": "d1daea7ab3c2b472d3c260695614fcfcc223d579656c7c58b042ba4c262bc579",
+      "manifest": {
+        "name": "fixture-leaf",
+        "version": "1.0.0",
+        "main": "index.js",
+        "dependencies": {}
+      },
+      "source": "module.exports = \"leaf-one\";\n"
+    }
+  }
+}

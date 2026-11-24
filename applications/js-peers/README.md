@@ -2,6 +2,8 @@
 
 This band compares npm 11.20.0, pnpm 12.21.0, and Yarn Berry 4.19.0 on macOS arm64 with Node 26.13.1. It covers a generated local-tarball workspace, the `node_modules` layout, and one frozen-install refusal. The tools' resolver and policy differences are preserved. This is not a general package-manager equivalence claim.
 
+A separate [removal and re-adoption band](REMOVAL.md) follows direct declarations, retained transitive dependencies, and root lookup through normal edits. Its distinct fixture preserves the peer-context observations here.
+
 ## Fixture and evidence
 
 Two workspaces consume the same plugin archive. The plugin declares `fixture-api: "*"` as a peer. The left workspace supplies API 1; the right supplies API 2. All archives contain only generated manifests and JavaScript. Scripts are disabled, stores/configuration are private, and installation uses offline flags or disabled network. These explicit settings do not describe the tools' defaults.

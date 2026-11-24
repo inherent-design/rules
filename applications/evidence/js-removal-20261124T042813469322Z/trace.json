@@ -1,0 +1,1214 @@
+[
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": null
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "c7a3513e494061115cfe18c0ea4414652ea332b01f22488093762e7e0d12ffa7"
+      },
+      "seconds": 0.38119520898908377,
+      "stdoutSha256": "0d0982dc5dd9c524dddd4d74382f574b094ef43b1086adfb67fc147997caf4ac",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "installed-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "c7a3513e494061115cfe18c0ea4414652ea332b01f22488093762e7e0d12ffa7"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "c7a3513e494061115cfe18c0ea4414652ea332b01f22488093762e7e0d12ffa7"
+      },
+      "seconds": 0.03096274985000491,
+      "stdoutSha256": "0877c7c41ee3823f889f184e49c13b0791f8b6d67e9d4fa8099616500ec6278c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-direct-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "uninstall",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "c7a3513e494061115cfe18c0ea4414652ea332b01f22488093762e7e0d12ffa7"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "seconds": 0.20966508286073804,
+      "stdoutSha256": "33fb8d08a05070bcb26bc9743308c3a0f8299a990f7a288bedb3650fb5befb22",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-direct-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "seconds": 0.026977709028869867,
+      "stdoutSha256": "0877c7c41ee3823f889f184e49c13b0791f8b6d67e9d4fa8099616500ec6278c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-transitive-only",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "uninstall",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "seconds": 0.15722345933318138,
+      "stdoutSha256": "7fcf8b8515b6b5241534856858ae3faf785e72e9e67e296e77dc75b0c277ab3a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-transitive-only-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "seconds": 0.02607629168778658,
+      "stdoutSha256": "0877c7c41ee3823f889f184e49c13b0791f8b6d67e9d4fa8099616500ec6278c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "readopt-identical-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "install",
+      "fixture-leaf@file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "efb09afef77dee73567fd1806e52c86b6a405a1958baf34270ee412b7b786e6c"
+      },
+      "after": {
+        "manifestSha256": "74eba6a43ba4079ae87a6c12549e6d19d62e58652cba447a247a6b2cb98ea23c",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "f5bf8f9059682b1992805ac4b6c836a1fac8435a13db018ffcf941dc51daa0fe"
+      },
+      "seconds": 0.26082683401182294,
+      "stdoutSha256": "0dc73a2a4bf2c1eea33257d0e4eeb31b27b5a469554f83586185b7129740dcdd",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "readopt-identical-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "74eba6a43ba4079ae87a6c12549e6d19d62e58652cba447a247a6b2cb98ea23c",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "f5bf8f9059682b1992805ac4b6c836a1fac8435a13db018ffcf941dc51daa0fe"
+      },
+      "after": {
+        "manifestSha256": "74eba6a43ba4079ae87a6c12549e6d19d62e58652cba447a247a6b2cb98ea23c",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "f5bf8f9059682b1992805ac4b6c836a1fac8435a13db018ffcf941dc51daa0fe"
+      },
+      "seconds": 0.030645125079900026,
+      "stdoutSha256": "0877c7c41ee3823f889f184e49c13b0791f8b6d67e9d4fa8099616500ec6278c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-parent",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "uninstall",
+      "fixture-parent",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "74eba6a43ba4079ae87a6c12549e6d19d62e58652cba447a247a6b2cb98ea23c",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "f5bf8f9059682b1992805ac4b6c836a1fac8435a13db018ffcf941dc51daa0fe"
+      },
+      "after": {
+        "manifestSha256": "216c0fea4678017dbb8982ea91d1f69ed406b2c7df75b7510988b119842305db",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "6a7511565a94ec9a9002ecb7754d80912c0b4ff56db2bd637c98d47c6d4c6b8e"
+      },
+      "seconds": 0.19811133295297623,
+      "stdoutSha256": "656a2399e7cd75d9a8ef156967a1bf07b80d38daec2ee5fb380c5bd75b0dfc25",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-parent-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "216c0fea4678017dbb8982ea91d1f69ed406b2c7df75b7510988b119842305db",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "6a7511565a94ec9a9002ecb7754d80912c0b4ff56db2bd637c98d47c6d4c6b8e"
+      },
+      "after": {
+        "manifestSha256": "216c0fea4678017dbb8982ea91d1f69ed406b2c7df75b7510988b119842305db",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "6a7511565a94ec9a9002ecb7754d80912c0b4ff56db2bd637c98d47c6d4c6b8e"
+      },
+      "seconds": 0.05248404107987881,
+      "stdoutSha256": "2a8332fb88304fdfc671b5c7985e3b01917b348a7a543a1429956b83566699ae",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-last-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/npm",
+      "uninstall",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "216c0fea4678017dbb8982ea91d1f69ed406b2c7df75b7510988b119842305db",
+        "dependencies": {
+          "fixture-leaf": "file:../../archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "6a7511565a94ec9a9002ecb7754d80912c0b4ff56db2bd637c98d47c6d4c6b8e"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "547d7380d1f5e3125b506414b6ed02ad5f8d1fc70b418dcf8411d7a85b4ca22c"
+      },
+      "seconds": 0.18135391594842076,
+      "stdoutSha256": "92f92cf7a5a113ea9bece3c2905b5e69123aee76e53aefb7e27038807f938ec4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "npm",
+    "case": "remove-last-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "547d7380d1f5e3125b506414b6ed02ad5f8d1fc70b418dcf8411d7a85b4ca22c"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "547d7380d1f5e3125b506414b6ed02ad5f8d1fc70b418dcf8411d7a85b4ca22c"
+      },
+      "seconds": 0.03687087493017316,
+      "stdoutSha256": "d5e10cf503334dd45ffe3b585e482cfa6f7a81ea429c49331e342cb22f5c2d0c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "install",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": null
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "seconds": 0.08430387498810887,
+      "stdoutSha256": "e4ba6abd9c0791327aad593dd5d964fa56906180c56139e2b0e970daf09670de",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "installed-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "seconds": 0.029855875298380852,
+      "stdoutSha256": "56a05aea30676407a70c6d40cf57535888a6bc7a0bdfaf9c91ad5bb27f7b57f6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-direct-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "remove",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "seconds": 0.05247875023633242,
+      "stdoutSha256": "d6b69b2b05243f2ace4e7031b46b5c5cd1fed3b2b651c1e1d026715480dbd76f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-direct-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "seconds": 0.027220875024795532,
+      "stdoutSha256": "4fd0e185372346694ef2ccdb2178668a5d472a0044189762a770c55ac799893a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-transitive-only",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "remove",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "seconds": 0.017398207914084196,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "b8fd4b0d562cf2c0935ccfbab2cb9458c11d42cd3b21316c64b363b4d2bb6d27"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-transitive-only-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "seconds": 0.02886295784264803,
+      "stdoutSha256": "4fd0e185372346694ef2ccdb2178668a5d472a0044189762a770c55ac799893a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "readopt-identical-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "add",
+      "fixture-leaf@file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "5d4744b144caaf35ca71ab6ba624932766395ee50fef91c0e3e1e73da8e42475"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "seconds": 0.048190082889050245,
+      "stdoutSha256": "8686131b4bcda9a3e71282022467d67fa1d6e245ac410cc5c7839ddc70c6d88a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "readopt-identical-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "seconds": 0.02918670792132616,
+      "stdoutSha256": "56a05aea30676407a70c6d40cf57535888a6bc7a0bdfaf9c91ad5bb27f7b57f6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-parent",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "remove",
+      "fixture-parent",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "61ae0cf8b6fbf5e8d572abc9e705060cdc15190d3d83af2ec0c6b9dfa30b3f6c"
+      },
+      "after": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "c4461c7f5e6bb10dcd3eeaf9fa98c27bcc78e635c3630787a533aac0e1920d63"
+      },
+      "seconds": 0.04780716588720679,
+      "stdoutSha256": "c71a9003aa911cb56005c54209e4e76d817a837801b713f8b124832fa5cd17e6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-parent-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "c4461c7f5e6bb10dcd3eeaf9fa98c27bcc78e635c3630787a533aac0e1920d63"
+      },
+      "after": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "c4461c7f5e6bb10dcd3eeaf9fa98c27bcc78e635c3630787a533aac0e1920d63"
+      },
+      "seconds": 0.029762708116322756,
+      "stdoutSha256": "b156b77a884d732ced99e64c505b90caae62ef7d20a996ef156d955deee0ecb8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-last-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "remove",
+      "fixture-leaf",
+      "--offline",
+      "--ignore-scripts",
+      "--store-dir",
+      "/private/tmp/rules-js-removal-pdq7wxc0/pnpm/store"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "c4461c7f5e6bb10dcd3eeaf9fa98c27bcc78e635c3630787a533aac0e1920d63"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a"
+      },
+      "seconds": 0.031989125069230795,
+      "stdoutSha256": "2cd35a1ef02288941e455ca1066d841492d23fb87007262606310fd1d0d9bfb5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "pnpm",
+    "case": "remove-last-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a"
+      },
+      "seconds": 0.027563958894461393,
+      "stdoutSha256": "d5e10cf503334dd45ffe3b585e482cfa6f7a81ea429c49331e342cb22f5c2d0c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": null
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "seconds": 0.19883549958467484,
+      "stdoutSha256": "c1a2292d0fae99b229488f769d1a86d16fe61584015ccb3e501a7751666437ef",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "installed-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "seconds": 0.02841104194521904,
+      "stdoutSha256": "135dfb77b12cd3b82b73802cc914160aaf60743c8409481676a1e4c1b49cd82b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-direct-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "remove",
+      "fixture-leaf"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "seconds": 0.19920945819467306,
+      "stdoutSha256": "4360977ba21f77705cbf853cfd748b741f2ea9c929b72b5e2c8a53dd01492694",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-direct-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "seconds": 0.0274769589304924,
+      "stdoutSha256": "135dfb77b12cd3b82b73802cc914160aaf60743c8409481676a1e4c1b49cd82b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-transitive-only",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "remove",
+      "fixture-leaf"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "seconds": 0.13819016702473164,
+      "stdoutSha256": "8902309f67f1bde2b5a6a3a741f92e6f1990fcbbf8a49568bbf5d30f24f6c453",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 1
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-transitive-only-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "after": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "seconds": 0.027089084032922983,
+      "stdoutSha256": "135dfb77b12cd3b82b73802cc914160aaf60743c8409481676a1e4c1b49cd82b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "readopt-identical-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "add",
+      "fixture-leaf@file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "80305bd0da86ca384878aee00e7a23606dda945fe5f9fd8bab44f2c96a799f64",
+        "dependencies": {
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "afb24f7f5cea5e3a50d8290642a472e6496a44b236c8d2d71b4446198ae0cb65"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "seconds": 0.20083254110068083,
+      "stdoutSha256": "c3474f2192a7b8202924e112e9fce33870d0c985a65d6e288ec5ec6784a26f88",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "readopt-identical-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "after": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "seconds": 0.028420708142220974,
+      "stdoutSha256": "135dfb77b12cd3b82b73802cc914160aaf60743c8409481676a1e4c1b49cd82b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-parent",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "remove",
+      "fixture-parent"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "e4d79c5c038e138339bacc8b176812998de04e994fd966bc55bc184461a537b4",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz",
+          "fixture-parent": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz"
+        },
+        "lockSha256": "d1658135d4adc74d3adaf8728f97e1f0f05d3001f404867f413d31acae4371c7"
+      },
+      "after": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "63f13a6f55c2c95d3e6c31e29312392b709db614a00fd70de69b7df2de949b88"
+      },
+      "seconds": 0.2045373748987913,
+      "stdoutSha256": "1b1326704ef2fc5d28e79a371da613039a4eb35e020194a253ead615a11caa0b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-parent-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "63f13a6f55c2c95d3e6c31e29312392b709db614a00fd70de69b7df2de949b88"
+      },
+      "after": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "63f13a6f55c2c95d3e6c31e29312392b709db614a00fd70de69b7df2de949b88"
+      },
+      "seconds": 0.02823462476953864,
+      "stdoutSha256": "a802cddf770bc080ea1558836feb6e4054257d12d93f9423bc1dcf07646f3ad5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-last-leaf",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "remove",
+      "fixture-leaf"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "a5e4ddd4c010fc7d5de75b1c58bb6659da98a4d33cd4700e2bd6429abf31d77d",
+        "dependencies": {
+          "fixture-leaf": "file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-leaf-1.0.0.tgz"
+        },
+        "lockSha256": "63f13a6f55c2c95d3e6c31e29312392b709db614a00fd70de69b7df2de949b88"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "076027a0564ed82ed9fd51759c40c5670fda3b6839d99161cc807a1917b03947"
+      },
+      "seconds": 0.1994252922013402,
+      "stdoutSha256": "664dea29ba4372ca65bbcc817e8c5bf1308873e01d50b876b21d8691352139c8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  },
+  {
+    "v": 1,
+    "app": "yarn",
+    "case": "remove-last-leaf-runtime",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "-e",
+      "const fs=require('fs'), out={};\nfor (const name of ['fixture-parent','fixture-leaf']) {\n try {out[name]={value:require(name),path:require.resolve(name)};}\n catch(e) {out[name]={error:e.code};}\n}\nconsole.log(JSON.stringify(out));"
+    ],
+    "observed": {
+      "before": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "076027a0564ed82ed9fd51759c40c5670fda3b6839d99161cc807a1917b03947"
+      },
+      "after": {
+        "manifestSha256": "c6d5701733f7492290e664fdfc1cfe8eef5f833d7597fcdf6f2b2b9ba57ebcdc",
+        "dependencies": {},
+        "lockSha256": "076027a0564ed82ed9fd51759c40c5670fda3b6839d99161cc807a1917b03947"
+      },
+      "seconds": 0.027824250049889088,
+      "stdoutSha256": "d5e10cf503334dd45ffe3b585e482cfa6f7a81ea429c49331e342cb22f5c2d0c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "outcome": {
+      "exitCode": 0
+    }
+  }
+]

@@ -1,0 +1,31 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      fixture-parent:
+        specifier: file:/private/tmp/rules-js-removal-pdq7wxc0/archives/fixture-parent-1.0.0.tgz
+        version: file:../../archives/fixture-parent-1.0.0.tgz
+
+packages:
+
+  fixture-leaf@file:../../archives/fixture-leaf-1.0.0.tgz:
+    resolution: {integrity: sha512-gUrbtroWC/fOjH/1s69F14vZJwzeomPLW1ahNKFScQaYBpRFuQWVS6B063NRlLPMfyMRLswhNvMbCna8xHXwZQ==, tarball: file:../../archives/fixture-leaf-1.0.0.tgz}
+    version: 1.0.0
+
+  fixture-parent@file:../../archives/fixture-parent-1.0.0.tgz:
+    resolution: {integrity: sha512-2Anm4rgslM+qW3UUnXX55XR41C8axxxoTGELOmaJaB2ef+y3QWzIr9kefODOPZlEwCAYWhsM1vLmy0M9BeFm4w==, tarball: file:../../archives/fixture-parent-1.0.0.tgz}
+    version: 1.0.0
+
+snapshots:
+
+  fixture-leaf@file:../../archives/fixture-leaf-1.0.0.tgz: {}
+
+  fixture-parent@file:../../archives/fixture-parent-1.0.0.tgz:
+    dependencies:
+      fixture-leaf: file:../../archives/fixture-leaf-1.0.0.tgz
