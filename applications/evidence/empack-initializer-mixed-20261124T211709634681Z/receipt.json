@@ -1,0 +1,1080 @@
+{
+  "schema": 1,
+  "sourceRevision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "priorReceipt": "applications/evidence/empack-initializer-20261124T205241728563Z/receipt.json",
+  "priorReceiptSha256": "9250e18e21afced9ea4d1f715ee8da2fa2e9d34b11a7fc5cd926a23c9554ab56",
+  "binaries": {
+    "current": {
+      "path": "applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+      "sha256": "a6087fdd11c38cbc0de553cd3e7c8934470e12194edbb0bc143e7a8f73e0cadc",
+      "bytes": 2046864
+    },
+    "candidate": {
+      "path": "applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+      "sha256": "a7e2b68a6c812bef055bab2e16a907ac454bd448e82d93ff77abeabee58a086b",
+      "bytes": 2049776
+    }
+  },
+  "producerSha256": "1db870b7baddef2eefc1bfca13b7251029a1d37277b6ecf99a9533b6adef5327",
+  "retireHelperSha256": "132a681b9406db6261d92dd081a9d3b5f90a6f23cf1115920b350ba01e0c7340",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "limits": [
+    "Existing private copied current/candidate initializer binaries;no source compilation or production edits.",
+    "Controlled post-lock schedules on fresh owned roots using private stdin readiness;not complete Engine/CLI or project publication.",
+    "Same physical root and association schema;does not qualify all protocol-version,platform,rename/fsync or power-loss behavior."
+  ],
+  "commands": [
+    {
+      "label": "one-current",
+      "pid": 59109,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/candidate-first-current-completes",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "412a2b7576e2db4d01d0059cf72a72cd972cb57799bd606bdac98794b748bb42",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "one-candidate",
+      "pid": 59108,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/candidate-first-current-completes",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "3ece8a06f71e4a0083302fd92a37a14b4e0db3cc1e3f81d4ae8809b4fcc109ed",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "two-current",
+      "pid": 59114,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-dies-candidate-completes",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": -9,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "24d0137e2615b162e9cf71d79ce978b627f7de1641fa29ecfb3979d2f125f2b6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "two-candidate",
+      "pid": 59111,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-dies-candidate-completes",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e8ae13096f2d6d7d922431f8c32aa59878f1b37ede5cafab33d9fdc4033085f4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "two-lookup",
+      "pid": 59115,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-dies-candidate-completes",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "47d097f03a8ecb822a45fadd8a6e4905f822bda11005c45c559a1c37184d6d1d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "three-current",
+      "pid": 59118,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": -9,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "8ee82836c596c1e9524479d08104e3452778cbdb86e5826f75ee96cd44654f16",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "three-candidate",
+      "pid": 59117,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": -9,
+      "intentionalKill": true,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "6d7ceef6a31814f5ee9142a1188d19f63a66c807526f0c2fd5d21493f0ddc574",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "three-lookup",
+      "pid": 59119,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains",
+        "lookup",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "dd0833a702df3364999c156acba9bb2e597b660caeaa33771820d77b3cbb3bfc",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "three-retry",
+      "pid": 59120,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "fee66e34e88de89d63476e1b007b94ee3b9c868ae7136023d0b69255d800bfbd",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "four-candidate-refused",
+      "pid": 59122,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "a7849efe173145b72745b8013286d6ea6dc2754d59c480ff0db795301b9de60f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "four-current",
+      "pid": 59121,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/current-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries",
+        "initialize",
+        "locked"
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "5bb3a4064cb0c720f64cfb28d20f9cca25edb62212a4a4ee8c7e8dc52a138ec4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "four-candidate-retry",
+      "pid": 59123,
+      "argv": [
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-20261124T205241728563Z/work/candidate-initializer",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries",
+        "initialize",
+        ""
+      ],
+      "exitCode": 0,
+      "intentionalKill": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "2ab0160389e4ee7637e4143cbbff6ccbfa8b265746b7d88c4cdc963a5fa16bb1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "candidate-first-current-completes",
+      "fixture": "fixtures/candidate-first-current-completes",
+      "events": [
+        {
+          "event": "started",
+          "label": "one-candidate",
+          "variant": "candidate",
+          "pid": 59108,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "one-candidate",
+          "phase": "locked",
+          "pid": 59108
+        },
+        {
+          "event": "started",
+          "label": "one-current",
+          "variant": "current",
+          "pid": 59109,
+          "action": "initialize",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "one-current",
+          "pid": 59109,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a40-6b05fed5-26f1ec1b",
+            "ok": true,
+            "root": {
+              "created": [
+                1795555029,
+                653388827
+              ],
+              "object": "292567616",
+              "persistent": [
+                207,
+                84,
+                107,
+                201,
+                204,
+                210,
+                69,
+                58,
+                189,
+                81,
+                165,
+                177,
+                33,
+                101,
+                110,
+                50,
+                9,
+                29,
+                189,
+                126,
+                61,
+                191,
+                101,
+                39,
+                160,
+                41,
+                58,
+                28,
+                174,
+                143,
+                171,
+                100
+              ],
+              "volume": "16777232"
+            }
+          }
+        },
+        {
+          "event": "finished",
+          "label": "one-candidate",
+          "pid": 59108,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a40-6b05fed5-26f1ec1b",
+            "ok": true,
+            "root": {
+              "created": [
+                1795555029,
+                653388827
+              ],
+              "object": "292567616",
+              "persistent": [
+                207,
+                84,
+                107,
+                201,
+                204,
+                210,
+                69,
+                58,
+                189,
+                81,
+                165,
+                177,
+                33,
+                101,
+                110,
+                50,
+                9,
+                29,
+                189,
+                126,
+                61,
+                191,
+                101,
+                39,
+                160,
+                41,
+                58,
+                28,
+                174,
+                143,
+                171,
+                100
+              ],
+              "volume": "16777232"
+            }
+          }
+        }
+      ],
+      "views": [
+        {
+          "label": "candidate-first-current-completes-initial",
+          "image": "images/candidate-first-current-completes-initial.json",
+          "sha256": "5bf27c659c6a9a563b6bdc65329a3912ad9b7a4387b7ab1e0fbb401efcdb2ff9"
+        },
+        {
+          "label": "one-candidate-paused",
+          "image": "images/one-candidate-paused.json",
+          "sha256": "447563715256835428903f9512ccc22ac3505f91fcc017e6118f9ce4d7f8fd21"
+        },
+        {
+          "label": "one-current-returned",
+          "image": "images/one-current-returned.json",
+          "sha256": "9771e6545543b8f8f4686ec223388daf7a75b3b64657823f68dfe270f12b3e90"
+        },
+        {
+          "label": "one-candidate-returned",
+          "image": "images/one-candidate-returned.json",
+          "sha256": "9771e6545543b8f8f4686ec223388daf7a75b3b64657823f68dfe270f12b3e90"
+        }
+      ],
+      "results": {
+        "current": {
+          "key": "project-0000000001000010-00000000000000000000000011703a40-6b05fed5-26f1ec1b",
+          "ok": true,
+          "root": {
+            "created": [
+              1795555029,
+              653388827
+            ],
+            "object": "292567616",
+            "persistent": [
+              207,
+              84,
+              107,
+              201,
+              204,
+              210,
+              69,
+              58,
+              189,
+              81,
+              165,
+              177,
+              33,
+              101,
+              110,
+              50,
+              9,
+              29,
+              189,
+              126,
+              61,
+              191,
+              101,
+              39,
+              160,
+              41,
+              58,
+              28,
+              174,
+              143,
+              171,
+              100
+            ],
+            "volume": "16777232"
+          }
+        },
+        "candidate": {
+          "key": "project-0000000001000010-00000000000000000000000011703a40-6b05fed5-26f1ec1b",
+          "ok": true,
+          "root": {
+            "created": [
+              1795555029,
+              653388827
+            ],
+            "object": "292567616",
+            "persistent": [
+              207,
+              84,
+              107,
+              201,
+              204,
+              210,
+              69,
+              58,
+              189,
+              81,
+              165,
+              177,
+              33,
+              101,
+              110,
+              50,
+              9,
+              29,
+              189,
+              126,
+              61,
+              191,
+              101,
+              39,
+              160,
+              41,
+              58,
+              28,
+              174,
+              143,
+              171,
+              100
+            ],
+            "volume": "16777232"
+          }
+        }
+      }
+    },
+    {
+      "id": "current-dies-candidate-completes",
+      "fixture": "fixtures/current-dies-candidate-completes",
+      "events": [
+        {
+          "event": "started",
+          "label": "two-candidate",
+          "variant": "candidate",
+          "pid": 59111,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "two-candidate",
+          "phase": "locked",
+          "pid": 59111
+        },
+        {
+          "event": "started",
+          "label": "two-current",
+          "variant": "current",
+          "pid": 59114,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "two-current",
+          "phase": "locked",
+          "pid": 59114
+        },
+        {
+          "event": "kernel-locks-held",
+          "label": "two-both-held",
+          "names": [
+            "state.lock",
+            "operation.lock"
+          ]
+        },
+        {
+          "event": "finished",
+          "label": "two-current",
+          "pid": 59114,
+          "exitCode": -9,
+          "outcome": null
+        },
+        {
+          "event": "finished",
+          "label": "two-candidate",
+          "pid": 59111,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d",
+            "ok": true,
+            "root": {
+              "created": [
+                1795555029,
+                681932381
+              ],
+              "object": "292567632",
+              "persistent": [
+                231,
+                139,
+                86,
+                65,
+                8,
+                177,
+                166,
+                96,
+                233,
+                8,
+                249,
+                183,
+                158,
+                17,
+                58,
+                23,
+                3,
+                239,
+                175,
+                90,
+                180,
+                93,
+                182,
+                37,
+                22,
+                51,
+                248,
+                105,
+                136,
+                74,
+                20,
+                38
+              ],
+              "volume": "16777232"
+            }
+          }
+        },
+        {
+          "event": "started",
+          "label": "two-lookup",
+          "variant": "candidate",
+          "pid": 59115,
+          "action": "lookup",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "two-lookup",
+          "pid": 59115,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d",
+            "ok": true,
+            "selected": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d"
+          }
+        }
+      ],
+      "views": [
+        {
+          "label": "current-dies-candidate-completes-initial",
+          "image": "images/current-dies-candidate-completes-initial.json",
+          "sha256": "ed9fd0e499b6aa9a6bf9d482f770885fc6ad4a3c0074f6a0e0aa605b3ff438d9"
+        },
+        {
+          "label": "two-both-paused",
+          "image": "images/two-both-paused.json",
+          "sha256": "3df7fe00a49214e1dd62676d0affafc072b79f0892d7237222271af8210be9cd"
+        },
+        {
+          "label": "two-current-terminated",
+          "image": "images/two-current-terminated.json",
+          "sha256": "3df7fe00a49214e1dd62676d0affafc072b79f0892d7237222271af8210be9cd"
+        },
+        {
+          "label": "two-candidate-returned",
+          "image": "images/two-candidate-returned.json",
+          "sha256": "03905afad1f235ceec3bf67228449d80b01f9ae9c2883ccc469a5a456e82c3c8"
+        },
+        {
+          "label": "two-reopened",
+          "image": "images/two-reopened.json",
+          "sha256": "03905afad1f235ceec3bf67228449d80b01f9ae9c2883ccc469a5a456e82c3c8"
+        }
+      ],
+      "results": {
+        "candidate": {
+          "key": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d",
+          "ok": true,
+          "root": {
+            "created": [
+              1795555029,
+              681932381
+            ],
+            "object": "292567632",
+            "persistent": [
+              231,
+              139,
+              86,
+              65,
+              8,
+              177,
+              166,
+              96,
+              233,
+              8,
+              249,
+              183,
+              158,
+              17,
+              58,
+              23,
+              3,
+              239,
+              175,
+              90,
+              180,
+              93,
+              182,
+              37,
+              22,
+              51,
+              248,
+              105,
+              136,
+              74,
+              20,
+              38
+            ],
+            "volume": "16777232"
+          }
+        },
+        "lookup": {
+          "key": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d",
+          "ok": true,
+          "selected": "project-0000000001000010-00000000000000000000000011703a50-6b05fed5-28a5765d"
+        }
+      }
+    },
+    {
+      "id": "both-die-old-footprint-remains",
+      "fixture": "fixtures/both-die-old-footprint-remains",
+      "events": [
+        {
+          "event": "started",
+          "label": "three-candidate",
+          "variant": "candidate",
+          "pid": 59117,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "three-candidate",
+          "phase": "locked",
+          "pid": 59117
+        },
+        {
+          "event": "started",
+          "label": "three-current",
+          "variant": "current",
+          "pid": 59118,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "three-current",
+          "phase": "locked",
+          "pid": 59118
+        },
+        {
+          "event": "kernel-locks-held",
+          "label": "three-both-held",
+          "names": [
+            "state.lock",
+            "operation.lock"
+          ]
+        },
+        {
+          "event": "finished",
+          "label": "three-current",
+          "pid": 59118,
+          "exitCode": -9,
+          "outcome": null
+        },
+        {
+          "event": "finished",
+          "label": "three-candidate",
+          "pid": 59117,
+          "exitCode": -9,
+          "outcome": null
+        },
+        {
+          "event": "started",
+          "label": "three-lookup",
+          "variant": "candidate",
+          "pid": 59119,
+          "action": "lookup",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "three-lookup",
+          "pid": 59119,
+          "exitCode": 0,
+          "outcome": {
+            "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/host/project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+            "ok": false,
+            "unassociated": [
+              "project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820"
+            ]
+          }
+        },
+        {
+          "event": "started",
+          "label": "three-retry",
+          "variant": "candidate",
+          "pid": 59120,
+          "action": "initialize",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "three-retry",
+          "pid": 59120,
+          "exitCode": 0,
+          "outcome": {
+            "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/host/project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+            "ok": false,
+            "unassociated": [
+              "project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820"
+            ]
+          }
+        }
+      ],
+      "views": [
+        {
+          "label": "both-die-old-footprint-remains-initial",
+          "image": "images/both-die-old-footprint-remains-initial.json",
+          "sha256": "85fc595327e26f21e31ad36c48470cf379fa89d46920119b6d535156734a6036"
+        },
+        {
+          "label": "three-both-paused",
+          "image": "images/three-both-paused.json",
+          "sha256": "980dc14b2ad3e2dba19535ac25fd0059af2288849ed51f9f51e18247aa20167b"
+        },
+        {
+          "label": "three-terminated",
+          "image": "images/three-terminated.json",
+          "sha256": "980dc14b2ad3e2dba19535ac25fd0059af2288849ed51f9f51e18247aa20167b"
+        },
+        {
+          "label": "three-lookup-result",
+          "image": "images/three-lookup-result.json",
+          "sha256": "980dc14b2ad3e2dba19535ac25fd0059af2288849ed51f9f51e18247aa20167b"
+        },
+        {
+          "label": "three-retry-result",
+          "image": "images/three-retry-result.json",
+          "sha256": "980dc14b2ad3e2dba19535ac25fd0059af2288849ed51f9f51e18247aa20167b"
+        }
+      ],
+      "results": {
+        "lookup": {
+          "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/host/project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+          "ok": false,
+          "unassociated": [
+            "project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820"
+          ]
+        },
+        "retry": {
+          "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/both-die-old-footprint-remains/host/project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+          "ok": false,
+          "unassociated": [
+            "project-0000000001000010-00000000000000000000000011703a63-6b05fed5-2a39a820"
+          ]
+        }
+      }
+    },
+    {
+      "id": "current-first-candidate-retries",
+      "fixture": "fixtures/current-first-candidate-retries",
+      "events": [
+        {
+          "event": "started",
+          "label": "four-current",
+          "variant": "current",
+          "pid": 59121,
+          "action": "initialize",
+          "point": "locked"
+        },
+        {
+          "event": "phase",
+          "label": "four-current",
+          "phase": "locked",
+          "pid": 59121
+        },
+        {
+          "event": "started",
+          "label": "four-candidate-refused",
+          "variant": "candidate",
+          "pid": 59122,
+          "action": "initialize",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "four-candidate-refused",
+          "pid": 59122,
+          "exitCode": 0,
+          "outcome": {
+            "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries/host/project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+            "ok": false,
+            "unassociated": [
+              "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430"
+            ]
+          }
+        },
+        {
+          "event": "finished",
+          "label": "four-current",
+          "pid": 59121,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430",
+            "ok": true,
+            "root": {
+              "created": [
+                1795555029,
+                730731568
+              ],
+              "object": "292567671",
+              "persistent": [
+                60,
+                110,
+                165,
+                138,
+                157,
+                98,
+                135,
+                211,
+                217,
+                57,
+                207,
+                209,
+                127,
+                26,
+                237,
+                247,
+                90,
+                161,
+                44,
+                231,
+                230,
+                72,
+                110,
+                78,
+                212,
+                147,
+                43,
+                70,
+                243,
+                250,
+                218,
+                17
+              ],
+              "volume": "16777232"
+            }
+          }
+        },
+        {
+          "event": "started",
+          "label": "four-candidate-retry",
+          "variant": "candidate",
+          "pid": 59123,
+          "action": "initialize",
+          "point": ""
+        },
+        {
+          "event": "finished",
+          "label": "four-candidate-retry",
+          "pid": 59123,
+          "exitCode": 0,
+          "outcome": {
+            "key": "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430",
+            "ok": true,
+            "root": {
+              "created": [
+                1795555029,
+                730731568
+              ],
+              "object": "292567671",
+              "persistent": [
+                60,
+                110,
+                165,
+                138,
+                157,
+                98,
+                135,
+                211,
+                217,
+                57,
+                207,
+                209,
+                127,
+                26,
+                237,
+                247,
+                90,
+                161,
+                44,
+                231,
+                230,
+                72,
+                110,
+                78,
+                212,
+                147,
+                43,
+                70,
+                243,
+                250,
+                218,
+                17
+              ],
+              "volume": "16777232"
+            }
+          }
+        }
+      ],
+      "views": [
+        {
+          "label": "current-first-candidate-retries-initial",
+          "image": "images/current-first-candidate-retries-initial.json",
+          "sha256": "3d6e504b81cc0875b875f89ae48e1c1bb9223c1157af8f5a6ab0fbb1b7001388"
+        },
+        {
+          "label": "four-current-paused",
+          "image": "images/four-current-paused.json",
+          "sha256": "3de7dd3513050c47261b3f62c4644190431be3db8d27fe56877ebdf70d291a09"
+        },
+        {
+          "label": "four-candidate-refused",
+          "image": "images/four-candidate-refused.json",
+          "sha256": "3de7dd3513050c47261b3f62c4644190431be3db8d27fe56877ebdf70d291a09"
+        },
+        {
+          "label": "four-current-returned",
+          "image": "images/four-current-returned.json",
+          "sha256": "7e6aa001fb76e361a1a5ccd312a93495fd1f4f7fb5636206f6f2a6c5bdc294e4"
+        },
+        {
+          "label": "four-candidate-retried",
+          "image": "images/four-candidate-retried.json",
+          "sha256": "7e6aa001fb76e361a1a5ccd312a93495fd1f4f7fb5636206f6f2a6c5bdc294e4"
+        }
+      ],
+      "results": {
+        "first": {
+          "error": "Saved operations cannot be matched safely to this project\nProject: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries/project\"\nMissing directory identity: \"/Users/zer0cell/production/rules/applications/evidence/empack-initializer-mixed-20261124T211709634681Z/work/fixtures/current-first-candidate-retries/host/project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430\"\nKeep these records; they may contain unfinished changes. Use the empack version that created them to inspect that work before retrying; this version cannot adopt them safely.",
+          "ok": false,
+          "unassociated": [
+            "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430"
+          ]
+        },
+        "current": {
+          "key": "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430",
+          "ok": true,
+          "root": {
+            "created": [
+              1795555029,
+              730731568
+            ],
+            "object": "292567671",
+            "persistent": [
+              60,
+              110,
+              165,
+              138,
+              157,
+              98,
+              135,
+              211,
+              217,
+              57,
+              207,
+              209,
+              127,
+              26,
+              237,
+              247,
+              90,
+              161,
+              44,
+              231,
+              230,
+              72,
+              110,
+              78,
+              212,
+              147,
+              43,
+              70,
+              243,
+              250,
+              218,
+              17
+            ],
+            "volume": "16777232"
+          }
+        },
+        "retry": {
+          "key": "project-0000000001000010-00000000000000000000000011703a77-6b05fed5-2b8e1430",
+          "ok": true,
+          "root": {
+            "created": [
+              1795555029,
+              730731568
+            ],
+            "object": "292567671",
+            "persistent": [
+              60,
+              110,
+              165,
+              138,
+              157,
+              98,
+              135,
+              211,
+              217,
+              57,
+              207,
+              209,
+              127,
+              26,
+              237,
+              247,
+              90,
+              161,
+              44,
+              231,
+              230,
+              72,
+              110,
+              78,
+              212,
+              147,
+              43,
+              70,
+              243,
+              250,
+              218,
+              17
+            ],
+            "volume": "16777232"
+          }
+        }
+      }
+    }
+  ]
+}

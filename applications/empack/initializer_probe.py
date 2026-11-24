@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Owner-run association initializer/termination study on private native fixtures."""
+import argparse
 import atexit
 from datetime import datetime, timezone
 import fcntl
@@ -35,6 +36,8 @@ def retire_owned(proc):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--temporary-only',action='store_true')
+    options=parser.parse_args()
     assert platform.system() == 'Darwin', 'Selected macOS profile only.'
     repo = ROOT.parent / 'empack'
     assert subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip() == REV
@@ -94,7 +97,17 @@ fn association_lock(state:&Dir)->Result<File> {
     parent += cut(pub, 'fn private_directory(', '\nfn lock(directory:')
     parent += cut(pub, 'fn sync_directory(', '\nfn write_journal(')
     parent += cut(pub, 'fn write_record(', '\nfn load_journal(')
-    parent += cut(staging, 'pub(super) fn create_temporary(', '\n/// Private seekable scratch storage')
+    temporary = cut(staging, 'pub(super) fn create_temporary(', '\n/// Private seekable scratch storage')
+    if options.temporary_only:
+        parent += 'mod actual_staging {use super::*;\n' + temporary + '\n}\n'
+        parent += '''
+fn create_temporary(parent:&Dir)->Result<(String,File)> {
+ let value=actual_staging::create_temporary(parent)?;
+ fixture_phase("temporary")?;Ok(value)
+}
+'''
+    else:
+        parent += temporary
     parent += 'impl Publisher {\n' + cut(pub, '    fn project_state(', '\n}\n\nfn candidate_name(') + '\n}\n'
     root_source = sources[state]
     old_call = 'let _lock = lock(state)?;'; new_call = 'let _lock = association_lock(state)?;'
@@ -156,13 +169,13 @@ fn association_lock(state:&Dir)->Result<File> {
         result, _ = finish('compile-' + name, proc)
         print(result['label'], result['exitCode'], flush=True)
         if result['exitCode'] != 0: break
-    receipt = dict(schema=1, sourceRevision=REV, scaffold=str(scaffold.relative_to(ROOT)), scaffoldSha256=sha(scaffold),
+    receipt = dict(schema=1, profile='temporary-allocation-termination' if options.temporary_only else 'lock-and-return-termination', sourceRevision=REV, scaffold=str(scaffold.relative_to(ROOT)), scaffoldSha256=sha(scaffold),
         scaffoldReceipt=str((previous / 'receipt.json').relative_to(ROOT)), scaffoldReceiptSha256=sha(previous / 'receipt.json'),
         sourceSha256={p['path']: p['sha256'] for p in ledger}, sourceSelections=selections, compiler=old['compiler'], libraries=old['libraries'],
         producerSha256=sha(run / 'probe.py'), driverSha256=sha(run / 'driver.rs'), generatedSha256={p.name: sha(p) for p in work.glob('*.rs')},
         candidatePatch=dict(path=state, old=old_call, new=new_call, count=1), platform=platform.platform(), commands=commands,
         limits=['Complete selected association initialization chain with supplied host Dir;not Publisher::open,Engine/CLI operation or project publication.',
-            'Injected post-lock pause wraps and delegates actual ensure_stopped;completed pause is after successful source method return. SIGKILL is owned child termination,not reboot or power-loss durability.',
+            'Post-lock pause delegates actual ensure_stopped;completed pause is after successful method return. Temporary-only profile delegates actual allocation then pauses before record bytes are written. SIGKILL is owned child termination,not reboot or power-loss durability.',
             'Candidate copied source changes only association-lock call;new helper uses dedicated state.lock with actual no-follow lock primitive and runtime predicate. No production edits.',
             'All roots and state are disposable private fixtures;no live operation store,user project,Moment recovery,launcher,game or network accessed.'])
     def save():
@@ -194,6 +207,18 @@ fn association_lock(state:&Dir)->Result<File> {
         ready = proc.stdout.readline(); prefixes[proc.pid] = ready; selector.close(); event = json.loads(ready)
         assert event == dict(event='phase', phase=point, pid=proc.pid) and proc.poll() is None, (label, ready)
         return proc, ready, before
+    if options.temporary_only:
+        for variant in ['current','candidate']:
+            p=fixture(variant+'-temporary-interruption');label=variant+'-temporary-paused'
+            proc,ready,before=paused(label,variant,p,'temporary');during=snapshot(label+'-during',p)
+            state=next((p/'host').glob('project-*'));scratch=list(state.glob('.empack-candidate-*'))
+            assert len(scratch)==1 and scratch[0].is_file() and scratch[0].stat().st_size==0
+            os.killpg(proc.pid,signal.SIGKILL);cmd,rows=finish(label,proc,ready,interrupted=True)
+            assert cmd['exitCode']==-signal.SIGKILL and rows[0]['phase']=='temporary'
+            cases.append(dict(label=label,variant=variant,fixture=str(p.relative_to(work)),action='terminated-after-temporary-allocation',
+                before=before,during=during,after=snapshot(label+'-after',p),phase=json.loads(ready),scratchName=scratch[0].name));save()
+            completed(variant+'-temporary-lookup',variant,p,'lookup');completed(variant+'-temporary-retry',variant,p)
+        save();print(json.dumps(dict(run=str(run),cases=len(cases),commands=len(commands),profile=receipt['profile']),indent=2));return
     for variant in ['current', 'candidate']:
         p = fixture(variant + '-normal'); completed(variant + '-normal', variant, p); completed(variant + '-idempotent', variant, p)
         p = fixture(variant + '-locked-interruption')

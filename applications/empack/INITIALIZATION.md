@@ -1,47 +1,76 @@
 # Association initialization, interruption, and retry
 
-This intermediate source/native protocol band follows [state discovery](ROOT-STATE.md) at empack source `0b4462e3032b4f09230b15329722eabefb7f574c`. It executes the complete selected association initializer through a controlled child-termination boundary. It reproduces a stranded initialization slot in the current source and tests a private candidate against that window. Formal trace models and comparison remain pending; no production change is selected.
+This source/native protocol band follows [state discovery](ROOT-STATE.md) at empack source `0b4462e3032b4f09230b15329722eabefb7f574c`. The selected initializer strands a new state slot when its child is terminated before association publication. A private metadata-lock candidate improves one window but fails at the next allocation boundary. Keep that failed scope explicit; no production change is selected.
 
 ## Scope and provenance
 
-The [collector](initializer_probe.py), [caller](initializer_oracle.rs), and [ledger](../sources/empack-initializer-selections.json) retain 12 source pins. The [receipt](../evidence/empack-initializer-20261124T205241728563Z/receipt.json) identifies the inherited source scaffold, exact additional selections, Rust compiler, reused dependencies, generated programs, binaries, commands, and input/output images. No Cargo or complete-engine build occurs.
+The [collector](initializer_probe.py), [caller](initializer_oracle.rs), and [ledger](../sources/empack-initializer-selections.json) retain 12 source pins. The [first receipt](../evidence/empack-initializer-20261124T205241728563Z/receipt.json) identifies the inherited scaffold, exact source selections, compiler, reused libraries, generated programs, binaries, commands, and images. No Cargo or complete-engine build occurs.
 
-The selected chain includes `retain_root_association`, `project_state`, association lookup, `associate_project_state`, and `associate_identity`. It uses the actual private-directory permissions, native root checks, no-follow lock primitive, runtime-marker predicate, temporary-file creation, record serialization, file synchronization, rename, and directory synchronization. The fixture provides an already-opened host capability; `Publisher::open`, the normal Engine/CLI request, and project publication are outside this test.
+The selected chain includes `retain_root_association`, `project_state`, association lookup, `associate_project_state`, and `associate_identity`. It uses actual native root checks, no-follow locks, the runtime-marker predicate, private-directory permissions, temporary allocation, serialization, file synchronization, rename, and directory synchronization. The fixture supplies an already-opened host capability. `Publisher::open`, the normal Engine/CLI request, project publication, and recovery remain outside this execution.
 
-A wrapper delegates the actual `ensure_stopped` predicate, then pauses on a private stdin pipe after lock acquisition. A separate pause follows successful return from the selected initializer. The parent waits for the child's explicit phase, checks the owned process, and terminates only its isolated group with SIGKILL. This exercises process termination and kernel-lock release, not a reboot, power loss, or every interruption point.
+The two copied-source programs differ by one call inside `associate_identity`. The candidate calls a dedicated helper using `state.lock`, the existing no-follow primitive, a nonblocking kernel lock, and the actual runtime predicate. Reader policy and Association schema remain unchanged. This is candidate A below, not a patched empack executable.
 
-The current and candidate generated programs differ by one call inside `associate_identity`: the candidate calls a dedicated association-lock helper. Both programs contain the same helper and instrumentation. The helper uses `state.lock`, the existing no-follow file primitive, a nonblocking OS lock, and the actual runtime predicate. Reader policy and Association schema remain unchanged. This is a private copied-source experiment, not a patched empack binary.
+Controlled wrappers delegate actual source operations, then pause through private stdin after lock acquisition or temporary allocation. Another pause follows successful initializer return. The parent waits for explicit readiness and terminates only its isolated child group with SIGKILL. Historical process/group observations authorize no later PID action. These are termination tests on this Mac, not reboot or power-loss tests.
 
-## Observed results
+## First interruption window
 
-The capture has 23 cases across 25 commands. Nineteen ordinary result rows contain 13 successful API results and six expected refusals; four children are deliberately terminated. Two commands compile the small programs. A fixture process exiting zero means it recorded its result; the separate API outcome determines whether initialization succeeded.
+The first capture contains 23 cases across 25 commands: two small compilations, 19 ordinary API results (13 successes and six refusals), and four deliberately terminated children. Two terminations follow successful initializer return. The fixture exits zero when it records a result; API success is a separate field.
 
-| Boundary                                                             | Current selected source                                                              | Private candidate                                                                            |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| Normal initialization and repeated call                              | Association published; repeated call preserves it.                                   | Association published; repeated call preserves it.                                           |
-| Second initializer while the first holds its initialization lock     | Refuses the unassociated `operation.lock` slot.                                      | Reports the metadata initialization lock as busy.                                            |
-| Termination after acquiring the lock, before writing the association | Leaves an empty `operation.lock`; fresh lookup and retry refuse without changing it. | Leaves an empty `state.lock`; fresh lookup observes no association, and retry publishes one. |
-| Termination after the initializer returned successfully              | Association remains discoverable; retry succeeds without rewriting it.               | Association remains discoverable; retry succeeds without rewriting it.                       |
-| Existing unknown journal and operation-lock footprint                | Refuses and preserves the unknown bytes.                                             | Refuses and preserves the unknown bytes.                                                     |
+| Boundary                                            | Current selected source                                           | Metadata-lock candidate A                                                   |
+| --------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Normal initialization and repeat                    | Publishes once; repeat preserves the record.                      | Publishes once; repeat preserves the record.                                |
+| Same-variant contender while the lock is held       | Refuses the unassociated `operation.lock` slot.                   | Reports initialization as busy.                                             |
+| Termination after lock, before temporary allocation | Leaves `operation.lock`; fresh lookup and retry refuse unchanged. | Leaves `state.lock`; lookup observes absence, and retry registers the root. |
+| Termination after successful initializer return     | Record remains discoverable; retry preserves it.                  | Record remains discoverable; retry preserves it.                            |
+| Authored unknown journal and operation lock         | Refuses and preserves unknown bytes.                              | Refuses and preserves unknown bytes.                                        |
 
-The candidate also reads an association published by the current variant without adding a file or rewriting it. Normal records have mode `0600`, their containing state directories have mode `0700`, and no temporary candidate remains after successful initialization on this Mac.
+An independent `flock` attempt confirms the initialization lock is held before termination and available afterward. The file remains. Candidate A also accepts a current-source published record without adding a file or rewriting it. Normal record and directory modes are `0600` and `0700`; successful initialization leaves no scratch file.
 
-For the post-lock terminations, an independent `flock` attempt confirms the kernel lock is held before termination and available afterward. The lock file itself survives. All 25 owned command groups were observed absent when retired; those historical observations do not authorize later PID-based actions.
+The [checker](initializer_observations.py) and [summary](initializer-observations.json) verify source/artifact identities, streams, images, protections, and final private postimages. Image comparisons retain paths, bytes, mode, inode/device, and modification time; access and change times are excluded.
 
-The [observation checker](initializer_observations.py) independently verifies pinned source and artifacts, the one-call difference between generated programs, streams, images, control outcomes, and final private fixture contents. The [summary](initializer-observations.json) keeps the source-source comparison, helper controls, and qualification limits separate. Input images preserve bytes, names, mode, inode/device, and modification time; access and change times are excluded.
+## Mixed protocols do not share exclusion
 
-## Finding and candidate direction
+The [mixed collector](initializer_mixed_probe.py) reuses those two binaries on four fresh roots, without recompiling them. Its [receipt](../evidence/empack-initializer-mixed-20261124T211709634681Z/receipt.json), [checker](initializer_mixed_observations.py), and [summary](initializer-mixed-observations.json) retain four schedules and 12 commands: nine ordinary API results (six successes and three refusals) and three deliberate terminations.
 
-The current source's association writer creates ordinary operation-lock state before retaining the association needed to classify that state. Termination in this window leaves a new slot that this same source version refuses to discover or initialize. The reader's refusal is protective. The creating-version diagnostic does not provide a sufficient recovery path for this reproduced case.
+- Both kernel locks can be held simultaneously. A shared record format does not establish shared coordination.
+- Current source can publish while candidate A waits at its own lock boundary. The candidate's second read accepts the record without rewriting it.
+- A candidate admitted before the current-source footprint appears can finish after that current-source child dies. This is an admitted writer completing, not a fresh reader adopting unknown state.
+- If both die before registration, the old `operation.lock` footprint remains. Fresh candidate lookup and retry refuse it unchanged.
+- A current-first writer blocks a fresh candidate as unassociated. After current-source completion, candidate retry accepts the published record without changing it.
 
-Keep that refusal for unknown existing records. The candidate moves only association initialization to metadata coordination that the current reader already recognizes as an incomplete current slot. It prevents this new-writer window in the tested schedule and lets a later candidate initializer finish registration. It does not adopt or repair an old unassociated operation/journal footprint, and it does not establish general recovery authority.
+These are copied-source protocol variants at one pinned revision, not independently qualified released versions or a proof of general concurrency safety. Events and views are separately ordered arrays; the frozen producer supplies their placement, not a fabricated shared timestamp sequence.
 
-The evidence supports investigating this focused protocol change before introducing another index, state schema, or migration mechanism. Preserving serialized Association meaning does not by itself prove coordination compatibility. Concurrent old/current and candidate initializers have not been tested together; the controlled contention cases use matching variants. Mixed-version behavior, normal Engine callers, and platform differences remain explicit obligations.
+## Temporary allocation defeats the general fix
 
-## Harness and remaining qualification
+Actual `write_record` allocates a scratch file before writing association bytes. The [temporary profile receipt](../evidence/empack-initializer-20261124T212854359074Z/receipt.json) retains two new small compilations and six cases across eight commands. Two owned children are terminated after actual zero-byte allocation. All four subsequent lookup/retry calls refuse.
 
-The collector now tracks its owned children for cleanup if its own work fails. A [separate helper check](../evidence/empack-initializer-20261124T205241728563Z/harness_cleanup_probe.py) verifies isolated-child retirement, an idempotent second cleanup, and refusal to kill a nonisolated process group. Its [result](../evidence/empack-initializer-20261124T205241728563Z/harness-cleanup-recheck.json) does not add initializer coverage. The original native capture retains its original producer; the later cleanup guard was tested separately, without rerunning these initializer cases.
+Both variants leave their coordination file and an empty `.empack-candidate-*` file, with no association. The reader tolerates only `state.lock` in an incomplete current slot; scratch remains unclassified. Both lookup and retry preserve that footprint. The [checker](initializer_temporary_observations.py) and [summary](initializer-temporary-observations.json) retain the counterexample.
 
-Next, model the initializer phases and compare current and proposed traces against the captured states. Keep source API return, process exit, kernel ownership, persistent footprint, discovery, and retry as separate facts. A child terminated after a successful method return still has a terminated command outcome.
+**Candidate A is incomplete as a general interruption fix.** Its post-lock improvement remains observed, but simply changing the lock filename does not make initialization restartable. Do not weaken the reader, delete scratch by its name, or imply that an older executable repairs this state.
 
-Before production adoption, exercise mixed-version initialization, malformed or nonregular metadata-lock inputs, ordinary Engine/CLI composition, failure around rename and synchronization, and supported native platforms. Complete publication, creation, approval/revision checks, retained-image recovery, and real reboot behavior remain pending. The source host capability is provided directly, and Windows privacy or directory semantics are not qualified by this Mac capture. Live projects, operation stores, Moment recovery data, launchers, games, and network services are untouched.
+## Models and replay
+
+[Lean](Initialization.lean) provides 23 laws and [Bend](Initialization.bend) provides 12. They model the selected successful-IO protocol phases. File presence, per-actor kernel ownership, API result, command acknowledgement/termination, association publication, and scratch retention remain separate. The laws retain both interruption counterexamples, same-variant contention, mixed-lock coexistence, second-read convergence, unknown-state refusal, and success followed by a killed command.
+
+The [replay](initializer_conformance.py) derives footprints and matching record witnesses from the retained images and expected API/command results from native output. It reconstructs causal phases from the frozen producers. Receipt finish order is not actor start order. An awaited command branches on model state; its recorded expected success does not select the modeled branch. The [research decoder](InitializationCase.lean) bounds actors, events, masks, versions, and profiles.
+
+Both models match 81 retained projections across 16 traces, covering the first capture, all four mixed schedules, and both temporary-allocation traces. Eleven unsupported research inputs refuse, and four changed observation expectations are detected. Model results, research-input refusals, observation mutation controls, and frozen basis identities belong in the [comparison receipt](../evidence/empack-initializer-20261124T205241728563Z/conformance.json). This is pure retained-data replay, not additional empack execution.
+
+External decoding supplies a matching schema-1 association witness. The models neither parse native JSON text nor mint root/capability authority. Successful allocation/write/sync/rename is abstracted; unsampled partial bytes, IO failures, first-error priority, arbitrary schedules, and durable crash recovery remain outside the comparison. Observed marker changes count registrations in sampled views and cannot exclude unsampled rewrites.
+
+```sh
+LEAN=/path/to/pinned/lean BEND=/path/to/pinned/bend \
+  python3 applications/empack/initializer_conformance.py
+```
+
+## Revised proposal and verification plan
+
+Investigate preparing a complete association-bearing private directory outside the discoverable `project-*` namespace, then publishing it with identity-checked no-replace directory machinery. The [source-only primitive pin](../sources/empack-initializer-directory-proposal.json) identifies existing `native/creation.rs`; it was inspected, not invoked here. The abstract admission laws describe proposed requirements, not an implemented candidate B.
+
+Preparation must retain and synchronize the complete image, revalidate the root and candidate identity, publish without replacing an existing target, and check/synchronize the parent. A racing matching record may be accepted through strict discovery; an unknown target must remain untouched. Preserve serialized Association meaning and physical keys unless a separate decision establishes a need to change them. No index or migration framework is justified by these results.
+
+This moves incomplete preparation into a private orphan, which still needs ownership-qualified retention and cleanup. Never unlink a reused path through path-only cleanup after rename. Preserve unexpected/recovery content, and account for private candidates in the existing host-entry cap. Atomicity, identity, synchronization, and capacity are premises to qualify, not guarantees supplied by the model. An older writer can still leave its historical incomplete slot; the new design must not silently adopt it.
+
+Before implementation selection, qualify existing-target races, identity changes, private orphan handling, failure around allocation/rename/synchronization, ordinary Engine/CLI composition, and supported native platforms. Add initialization to the broader recovery/approval/retained-image work without conflating those authorities. Real reboot behavior remains pending.
+
+The [separate cleanup-helper check](../evidence/empack-initializer-20261124T205241728563Z/harness_cleanup_probe.py) verifies owned isolated-child retirement, idempotent cleanup, and refusal to kill a nonisolated group. Its [result](../evidence/empack-initializer-20261124T205241728563Z/harness-cleanup-recheck.json) adds no initializer coverage. Original producers and failed interpretations remain retained. Live projects, operation stores, Moment recovery, launchers, games, and network services are untouched.

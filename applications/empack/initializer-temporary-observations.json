@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "sourcePins": 12,
+  "commands": 8,
+  "cases": 6,
+  "intentionalTerminations": 2,
+  "refusedOrdinaryAPIResults": 4,
+  "capturedImagesVerified": 14,
+  "finalPrivateFixturesVerified": 2,
+  "finding": "Both current source and the metadata-lock candidate strand initialization after temporary allocation but before association write. Empty scratch is preserved;fresh lookup/retry refuse unchanged.",
+  "candidateDisposition": "Metadata-lock-only candidate is incomplete as a general interruption fix. Its earlier post-lock improvement remains a bounded observation.",
+  "nextDesign": "Investigate preparing a complete association-bearing private directory and publishing it with existing identity-checked no-replace directory machinery;proposed only,no implementation/native qualification.",
+  "limits": [
+    "This checker verifies retained source/effects;separate initializer_conformance.py compares initializer/mixed/temporary traces.",
+    "Selected source chain with supplied host Dir and delegated allocation pause;not Engine/CLI startup or arbitrary crash/power-loss qualification.",
+    "Owned SIGKILL after actual zero-byte allocation;no partial association bytes or post-rename/pre-fsync failure sampled.",
+    "No scratch cleanup or unknown-state adoption is authorized. Candidate directory primitive source inspected only. Production and live stores unchanged."
+  ]
+}

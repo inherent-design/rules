@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "sourceRevision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "scenarios": 4,
+  "commands": 12,
+  "intentionalTerminations": 3,
+  "ordinaryAPIResults": 9,
+  "successfulOrdinaryResults": 6,
+  "refusedOrdinaryResults": 3,
+  "imagesVerified": 19,
+  "finalPrivateFixturesVerified": 4,
+  "findings": [
+    "The current-source and private-candidate initializers can hold different kernel locks simultaneously;shared Association format does not imply shared lock exclusion.",
+    "A current initializer can publish while a candidate is paused;candidate double-read accepts the existing record without rewriting.",
+    "A candidate already admitted before the old footprint appears can finish after current-source termination;this is not fresh adoption of unknown state.",
+    "If both die before registration,the old operation.lock remains;fresh candidate lookup/retry refuse unchanged.",
+    "Current-first registration blocks a fresh candidate as unassociated;after current completion,candidate retry accepts the published record without rewriting."
+  ],
+  "limits": [
+    "This checker verifies retained source/result/postimages;separate initializer_conformance.py compares formal mixed traces.",
+    "Two copied-source protocol variants at the same pinned source,not independently qualified released engine versions.",
+    "Four controlled same-root schedules;not general linearizability,all crash points,root replacement,malicious metadata or supported-platform qualification.",
+    "Provided host Dir and selected association initializer chain,not Engine/CLI operation,project publication or recovery.",
+    "OS group/lock observations are historical and do not authorize later PID actions. No Rust build or baseline repetition was performed."
+  ]
+}

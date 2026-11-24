@@ -109,7 +109,7 @@ def main():
             'Candidate reads a current-profile published association without a new file or rewrite.',
             'Source initialization completes through temporary file,fsync,rename anddirectory sync;normal record mode600/directory700 observed onmacOS.',
             'All25 owned command groups observed absent onretirement;four deliberateSIGKILL outcomes are not successful command exits. Kernel lock held before andavailable after post-lock termination.'],
-        limits=['Formal initializer trace comparison pending;retained source/effects checker only.',
+        limits=['This checker verifies retained source/effects;separate initializer_conformance.py compares formal traces.',
             'Supplied host capability and complete selected initializer chain,not full Engine/CLI request,Publisher::open,project publication or recovery.',
             'Actual post-lock pause delegates real runtime predicate;controlled instrumentation andSIGKILL,not OSreboot,power-loss proof or arbitrarycrash-point coverage.',
             'Candidate is privatecopied source plus onechangedcall;no production implementation/adoption. Windows/Linux,post-rename pre-fsync failure,malicious metadata lock types andgeneral concurrent lifecycle remainunqualified.',

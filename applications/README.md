@@ -32,9 +32,9 @@ The [publication band](js-peers/PUBLICATION.md) separates generated archive iden
 
 The [restore-policy band](restic/RESTORE.md) separates existing content, overwrite/mtime admission, verification of actually restored files, and selected-directory deletion. It preserves the upstream whole-directory policy alongside a separately modeled child-preserving alternative. Seventeen private target outcomes leave general metadata, traversal, concurrency, and recovery pending.
 
-The [empack native identity band](empack/IDENTITY.md) compares 58 source-function outcomes with Lean and Bend. It separates live identity, durable comparison, content fingerprints, absence, unavailable evidence, and strict inner binding shape. Actual state lookup, root capture/revalidation, reboot behavior, and recovery execution remain pending.
+The [empack native identity band](empack/IDENTITY.md) compares 58 source-function outcomes with Lean and Bend. It separates live identity, durable comparison, content fingerprints, absence, unavailable evidence, and strict inner binding shape. The following discovery band qualifies selected lookup methods; full root capture/revalidation, reboot behavior, and recovery execution remain pending.
 
-The [empack discovery band](empack/ROOT-STATE.md) compares 35 actual source-method cases, including complete 4,096/4,097-entry views. It preserves state absence, unresolved history, physical association, and derived keys separately. An actual lock prefix exposes an initialization concern; complete writer/interruption and recovery qualification remain pending.
+The [empack discovery band](empack/ROOT-STATE.md) compares 35 actual source-method cases, including complete 4,096/4,097-entry views. It preserves state absence, unresolved history, physical association, and derived keys separately. The [initializer band](empack/INITIALIZATION.md) then executes the selected writer chain, controlled termination, mixed protocols, and temporary allocation. Its models retain a metadata-lock candidate that improves one window but fails at the next. Full Engine callers, revised directory publication, and recovery qualification remain pending.
 
 ## Working order
 
