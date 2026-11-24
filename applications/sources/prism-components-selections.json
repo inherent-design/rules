@@ -6,7 +6,7 @@
     "cache": "applications/tools/source-cache/prism-components/ComponentUpdateTask.cpp",
     "sha256": "9f559af636fdd1be21bbb569e49f709488cbc2adc68a35c7c6b6c19cc85c45ab",
     "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/ComponentUpdateTask.cpp",
-    "inspection": "lines253-418: RequireEx, composition, gathering, obsolete-candidate and trivial-change decisions; 463-554 caller check-only/removal/addition ordering inspected but not executed by fragment"
+    "inspection": "lines253-418: RequireEx, composition, gathering, obsolete-candidate and trivial-change decisions; 463-554 caller check-only/removal/addition ordering inspected but not executed by fragment; removal-loop prefix through while condition compiled unchanged with explicit bounded fixture guard before fourth getComponent call; caller tail remains source-only"
   },
   {
     "application": "prism",
@@ -15,7 +15,7 @@
     "cache": "applications/tools/source-cache/prism-components/Component.cpp",
     "sha256": "d8d7aa22006f1b23924eac6503107df1523c4de7775b7497d2100d087646cd7d",
     "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/Component.cpp",
-    "inspection": "lines85-101,147-150,170-207,252-258,426-449: disabled application, cached getters/activation/custom predicates, important flag and cache refresh; selected getters compiled, cache/loading effects source only"
+    "inspection": "lines85-101,147-150,170-207,252-258,426-449: disabled application, cached getters/activation/custom predicates, important flag and cache refresh; selected getters compiled, cache/loading effects source only; lines392-451 deepCompare/updateCachedData compiled in boundary fixture, constructors/loading still adapters"
   },
   {
     "application": "prism",
@@ -78,7 +78,7 @@
     "cache": "applications/tools/source-cache/prism-components/PackProfile.cpp",
     "sha256": "0372bae8133d121c2a65be9b0628fdf654441c8c0205f506a7bfd9f29f92174e",
     "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/PackProfile.cpp",
-    "inspection": "lines88-146,310-377,432-464,742-765,951-1006: persisted flags/volatile key mismatch, duplicate UID retention, refresh, removal refusal/failure, profile application and component update dispatch; caller effects and codec not executed by fixture"
+    "inspection": "lines88-146,310-377,432-464,742-765,951-1006: persisted flags/volatile key mismatch, duplicate UID retention, refresh, removal refusal/failure, profile application and component update dispatch; caller effects and codec not executed by fixture; lines92-146 codecs and432-464,742-785 removal methods compiled unchanged in bounded fixture; row/save hooks are adapters"
   },
   {
     "application": "prism",
@@ -88,5 +88,23 @@
     "sha256": "26cb6c4002d6dc7c71614638e4281fbc93266eca8ba6c3fd5052a97b57dcec33",
     "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/launch/VerifyJavaInstall.cpp",
     "inspection": "lines48-95: empty-or-containing-major admission and explicit compatibility bypass warning; source only"
+  },
+  {
+    "application": "prism",
+    "commit": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+    "path": "launcher/meta/JsonFormat.cpp",
+    "cache": "applications/tools/source-cache/prism-components/launcher__meta__JsonFormat.cpp",
+    "sha256": "c3cb5f7b1eb43adba32e6f4f3d2bf1cdae926c2e0d142418ba5d188a667d232d",
+    "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/meta/JsonFormat.cpp",
+    "inspection": "lines166-199: valid Require arrays parse/serialize; compiled unchanged with typed Json conversion adapters"
+  },
+  {
+    "application": "prism",
+    "commit": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+    "path": "launcher/minecraft/PackProfile.h",
+    "cache": "applications/tools/source-cache/prism-components/PackProfile.h",
+    "sha256": "134929bc37894334585aa3c5549e18fc46b23c505326aa69e1bf5fcd1ed6c54a",
+    "url": "https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/PackProfile.h",
+    "inspection": "lines63-76,104-123: existing Result success/error convention, boolean removal signatures and reload API; source-only reuse/compatibility candidate"
   }
 ]

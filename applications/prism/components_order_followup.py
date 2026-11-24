@@ -19,7 +19,8 @@ def main():
     for name, digest in receipt['generatedSha256'].items():
         assert sha((original / 'work' / name).read_bytes()) == digest
     selections = json.loads((ROOT / 'applications/sources/prism-components-selections.json').read_text())
-    assert receipt['sources'] == {r['path']: r['sha256'] for r in selections}
+    current = {r['path']: r['sha256'] for r in selections}
+    assert all(current.get(path) == digest for path, digest in receipt['sources'].items())
     for row in selections:
         assert sha((ROOT / row['cache']).read_bytes()) == row['sha256']
 

@@ -24,6 +24,8 @@ The [empack target model](empack/README.md) maps all current and candidate featu
 
 The [installation-mode band](js-peers/LOCK-MODES.md) separates resolution-only updates, frozen lock admission, installed payloads, and observed runtime. All three JavaScript tools can have a current lock with an older installed package. A separate npm sequence reproduces a stale ordinary install after lock-only publication, with hidden-index removal and clean-install controls. This is a bounded current-product finding; the proposed correction remains separate from production adoption.
 
+The [Prism component band](prism/COMPONENTS.md) adds requirement composition, protected choices, activation and obsolete-dependency policy, cached-state round trips, and source-loop progress after an actual permission refusal. Its source/Qt models preserve exact identity versus rank and proposal versus completed mutation. Actual instance construction, persistence, and GUI/game behavior remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
