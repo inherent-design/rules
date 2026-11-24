@@ -58,3 +58,5 @@ npm's unreviewed warning appears after hooks have already run under the measured
 These candidates can be additive reports from existing policy/execution facts. They need no lock-format rewrite, shared universal script policy, new scheduler, or weakened permission gate. Verify them against registry/local identities, policy layers, strict review, explicit approval/rebuild, workspace selection, failures before and during hooks, and existing machine-output callers before adoption.
 
 For empack, this evidence supports keeping a requested operation, admitted capability, captured inputs, runtime outcome, and observed effects distinct. It does not select arbitrary third-party generators for portable authoring or define their trust model. Current recipe-owned integration remains separate from general executable author content. No production implementation changed.
+
+A separate [workspace band](WORKSPACES.md) compares root/member scope, exact versus dependency selection, serial scheduling, missing scripts, and partial effects. It does not expand this hook-policy band into parallel execution or general task-graph qualification.

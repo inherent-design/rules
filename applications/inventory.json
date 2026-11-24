@@ -4095,37 +4095,103 @@
             },
             {
               "id": "select",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "include-root",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "run-workspaces",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected serial workspace command profiles modeled and observed;full workspace discovery/filtering/scheduler/platform coverage remains pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -5451,7 +5517,13 @@
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
         }
       ],
-      "improvementCandidates": [],
+      "improvementCandidates": [
+        {
+          "id": "workspace-terminal-results",
+          "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
+          "document": "js-scripts/WORKSPACES.md"
+        }
+      ],
       "preservationDecisions": [],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",
@@ -5776,23 +5848,67 @@
           "operations": [
             {
               "id": "recursive",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "filter",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "filter-prod",
@@ -5806,13 +5922,35 @@
             },
             {
               "id": "sort",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "parallel",
@@ -5826,7 +5964,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected serial workspace command profiles modeled and observed;full workspace discovery/filtering/scheduler/platform coverage remains pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -7010,7 +7148,13 @@
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
         }
       ],
-      "improvementCandidates": [],
+      "improvementCandidates": [
+        {
+          "id": "workspace-terminal-results",
+          "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
+          "document": "js-scripts/WORKSPACES.md"
+        }
+      ],
       "preservationDecisions": [],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",
@@ -7404,13 +7548,35 @@
           "operations": [
             {
               "id": "workspace",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             },
             {
               "id": "workspaces-list",
@@ -7434,17 +7600,39 @@
             },
             {
               "id": "foreach",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-scripts/Workspaces.lean and js-scripts/Workspaces.bend",
+              "laws": [
+                "exact_selection_does_not_expand_dependencies",
+                "root_selection_is_explicit",
+                "member_selection_excludes_root",
+                "ready_requires_selected_dependency",
+                "dependency_agnostic_ready",
+                "empty_selection_has_no_started_script"
+              ],
+              "nativeEvidence": [
+                "evidence/js-workspaces-20261124T074930267486Z/trace.json",
+                "evidence/js-workspaces-20261124T074930267486Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-workspaces-selections.json"
+              ],
+              "negativeControls": [
+                "js-scripts/workspaces_conformance.py:rejectedInterpretations",
+                "js-scripts/workspaces_conformance.py:refusedResearchInputs"
+              ],
+              "uxAssessment": "js-scripts/WORKSPACES.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Generated root/four members,one A-to-B normal workspace edge,serial execution;one missing-script member",
+                "Only captured root/member/exact/closure profiles;not general discovery/globs/resolution",
+                "Lean compares24observable start/failure/status traces;Bend seven local failure-continuation decisions,not entire scheduler",
+                "Selected source/lock hashes and generated effects measured;not every cache/log/global effect or native descendant retirement"
+              ],
+              "verificationPlan": "Expand root-only/nested/multiple graphs,scriptless dependency bridges,cycles,dev/peer/optional edges,multiple failures,parallel jobs,signals,changed manifests,existing dry-run/JSON reporters and other platforms. Keep source-derived selection/block reasons distinct from observed script effects;no whole-family qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Selected serial workspace command profiles modeled and observed;full workspace discovery/filtering/scheduler/platform coverage remains pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#yarn",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
@@ -8187,7 +8375,13 @@
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
         }
       ],
-      "improvementCandidates": [],
+      "improvementCandidates": [
+        {
+          "id": "workspace-terminal-results",
+          "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
+          "document": "js-scripts/WORKSPACES.md"
+        }
+      ],
       "preservationDecisions": [],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",

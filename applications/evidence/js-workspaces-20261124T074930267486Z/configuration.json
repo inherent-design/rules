@@ -1,0 +1,26 @@
+{
+  "npm": {
+    "package.json": "{\n  \"name\": \"fixture-root\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"workspaces\": [\n    \"packages/*\"\n  ],\n  \"scripts\": {\n    \"probe\": \"node probe.cjs fixture-root\"\n  }\n}\n",
+    "probe.cjs": "const fs=require('node:fs');\nconst actor=process.argv[2];\nconst record=phase=>fs.appendFileSync(process.env.FIXTURE_LOG,JSON.stringify({actor,phase,cwd:process.cwd()})+'\\n');\nrecord('start');\nif(actor===process.env.FIXTURE_FAIL){record('failed');process.exit(7);}\nrecord('succeeded');\n",
+    "packages/a/package.json": "{\n  \"name\": \"fixture-a\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-a\"\n  },\n  \"dependencies\": {\n    \"fixture-b\": \"1.0.0\"\n  }\n}\n",
+    "packages/b/package.json": "{\n  \"name\": \"fixture-b\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-b\"\n  }\n}\n",
+    "packages/c/package.json": "{\n  \"name\": \"fixture-c\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-c\"\n  }\n}\n",
+    "packages/d/package.json": "{\n  \"name\": \"fixture-d\",\n  \"version\": \"1.0.0\",\n  \"private\": true\n}\n"
+  },
+  "pnpm": {
+    "package.json": "{\n  \"name\": \"fixture-root\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"workspaces\": [\n    \"packages/*\"\n  ],\n  \"scripts\": {\n    \"probe\": \"node probe.cjs fixture-root\"\n  }\n}\n",
+    "probe.cjs": "const fs=require('node:fs');\nconst actor=process.argv[2];\nconst record=phase=>fs.appendFileSync(process.env.FIXTURE_LOG,JSON.stringify({actor,phase,cwd:process.cwd()})+'\\n');\nrecord('start');\nif(actor===process.env.FIXTURE_FAIL){record('failed');process.exit(7);}\nrecord('succeeded');\n",
+    "packages/a/package.json": "{\n  \"name\": \"fixture-a\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-a\"\n  },\n  \"dependencies\": {\n    \"fixture-b\": \"workspace:*\"\n  }\n}\n",
+    "packages/b/package.json": "{\n  \"name\": \"fixture-b\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-b\"\n  }\n}\n",
+    "packages/c/package.json": "{\n  \"name\": \"fixture-c\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-c\"\n  }\n}\n",
+    "packages/d/package.json": "{\n  \"name\": \"fixture-d\",\n  \"version\": \"1.0.0\",\n  \"private\": true\n}\n"
+  },
+  "yarn": {
+    "package.json": "{\n  \"name\": \"fixture-root\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"workspaces\": [\n    \"packages/*\"\n  ],\n  \"scripts\": {\n    \"probe\": \"node probe.cjs fixture-root\"\n  },\n  \"packageManager\": \"yarn@4.19.0\"\n}\n",
+    "probe.cjs": "const fs=require('node:fs');\nconst actor=process.argv[2];\nconst record=phase=>fs.appendFileSync(process.env.FIXTURE_LOG,JSON.stringify({actor,phase,cwd:process.cwd()})+'\\n');\nrecord('start');\nif(actor===process.env.FIXTURE_FAIL){record('failed');process.exit(7);}\nrecord('succeeded');\n",
+    "packages/a/package.json": "{\n  \"name\": \"fixture-a\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-a\"\n  },\n  \"dependencies\": {\n    \"fixture-b\": \"workspace:*\"\n  }\n}\n",
+    "packages/b/package.json": "{\n  \"name\": \"fixture-b\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-b\"\n  }\n}\n",
+    "packages/c/package.json": "{\n  \"name\": \"fixture-c\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"probe\": \"node ../../probe.cjs fixture-c\"\n  }\n}\n",
+    "packages/d/package.json": "{\n  \"name\": \"fixture-d\",\n  \"version\": \"1.0.0\",\n  \"private\": true\n}\n"
+  }
+}

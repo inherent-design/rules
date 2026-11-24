@@ -11,8 +11,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 | Application | Current evidence | Scope limit |
 | --- | --- | --- |
 | empack | [Core API and native ownership](empack/OWNERSHIP.md); [seed observation demand](empack/OBSERVATIONS.md); [source and projection decisions](empack/SOURCES.md); [portable-authoring design](empack/AUTHORING.md). | Actual core compilation at `0b4462e` and installed 0.8.8-beta CLI runs are separate evidence; their build correspondence is not proved. Portable authoring is proposed. |
-| npm | [Peer bindings](js-peers/README.md), [removal/re-adoption](js-peers/REMOVAL.md), and [script policy](js-scripts/README.md), using 11.20.0. | Private offline local archives and node-modules workspaces/projects; selected hook profiles only, no registry publication or general resolver qualification. |
-| pnpm | The same peer/removal families and script-policy band, using 12.21.0, with distinct context, hook, and missing-root behavior. | No store-reclamation, filtered deployment, complete peer resolution, or general script-policy qualification. |
+| npm | [Peer bindings](js-peers/README.md), [removal/re-adoption](js-peers/REMOVAL.md), and [script policy](js-scripts/README.md), and [workspace execution](js-scripts/WORKSPACES.md), using 11.20.0. | Private offline local archives and node-modules workspaces/projects; selected hook profiles only, no registry publication or general resolver qualification. |
+| pnpm | The same peer/removal, script-policy, and workspace-execution bands, using 12.21.0, with distinct context, hook, and missing-root behavior. | No store-reclamation, filtered deployment, complete peer resolution, or general script-policy qualification. |
 | Yarn Berry | The same fixture families, using 4.19.0, plus immutable-install refusal and scoped dependency/root-hook controls. | Node-modules linker only; no PnP, patch publication, or general virtualization proof. |
 | Cargo | [Workspace/unit selection, script freshness, and cleanup](cargo/README.md), plus [source packaging](cargo/PACKAGING.md), using 1.92.0. | Local packages/build script and five generated no-dependency packaging profiles; no cross-target execution or registry publication. |
 | restic | [Explicit snapshot forget/prune/restore](restic/README.md) and [selection/group previews](restic/SELECTION.md), using 0.20.0. | Selected local snapshot/blob lifecycle plus six-snapshot filters and keep-last-one previews; general retention, concurrent owners, remote failures, and repair remain open. |
@@ -63,6 +63,8 @@ Preserve descriptors, resolved packages, virtual peer contexts, and materializat
 Explore a context explanation that connects the requiring descriptor, effective peer provider, selected linker, and direct declaration. Keep workspace-scoped removal/refusal and identical re-adoption. Review existing peer explanations and project structures before adding API surface. Do not transfer node-modules observations to PnP.
 
 Keep serialized locators and immutable-mode semantics stable. The keep-current alternative is the existing inspection workflow. Qualification must cover PnP, patches, workspace selectors, virtual-package round trips, and immutable failure/partial effects. [Detailed findings](js-peers/README.md), [removal comparison](js-peers/REMOVAL.md).
+
+Workspace runs add selected membership, scripts present, dependency readiness, dispatch, and completion as separate facts. npm continues its workspace loop after B fails; pnpm no-bail permits independent C while blocking A that needs B; the tested Yarn serial topological loop stops. Root inclusion and missing-script policy differ. Preserve those policies and make completed, blocked, and undispatched outcomes visible through existing reporter mechanisms before inventing another scheduler. [Native scope and terminal-results candidate](js-scripts/WORKSPACES.md).
 
 ### Cargo
 
