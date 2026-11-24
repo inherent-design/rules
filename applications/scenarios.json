@@ -331,6 +331,16 @@
             "restic/SELECTION.md",
             "evidence/restic-selection-20261124T061409701179Z/conformance.json"
           ]
+        },
+        {
+          "status": "native-observed",
+          "evidence": [
+            "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+            "evidence/restic-integrity-20261124T085942925906Z/conformance.json",
+            "restic/INTEGRITY.md"
+          ],
+          "scope": "One independent four-pack byte copy:metadata/full/half checks,data-body fault,index repair,exact dump and external pristine restoration,then missing-index rebuild.",
+          "remaining": "Does not establish joined retention-policy deletion,full restore,remote failures,arbitrary corruption or concurrent-owner safety;parent scope unchanged."
         }
       ]
     },

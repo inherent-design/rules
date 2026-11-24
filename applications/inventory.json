@@ -12428,13 +12428,38 @@
           "operations": [
             {
               "id": "dump",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             },
             {
               "id": "mount",
@@ -12486,33 +12511,108 @@
           "operations": [
             {
               "id": "check-index",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             },
             {
               "id": "check-data",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             },
             {
               "id": "read-data-subset",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -12967,13 +13067,38 @@
           "operations": [
             {
               "id": "repair-index",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             },
             {
               "id": "repair-snapshot",
@@ -12997,13 +13122,38 @@
             },
             {
               "id": "check-after",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Integrity.lean and restic/Integrity.bend",
+              "laws": [
+                "metadata_success_is_not_body_success",
+                "successful_half_does_not_claim_all",
+                "rebuild_preserves_data_health",
+                "successful_rebuild_does_not_repair_body",
+                "missing_index_blocks_check"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-integrity-20261124T085942925906Z/receipt.json",
+                "evidence/restic-integrity-20261124T085942925906Z/trace.json",
+                "evidence/restic-integrity-20261124T085942925906Z/controls.json",
+                "evidence/restic-integrity-20261124T085942925906Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-integrity-selections.json"
+              ],
+              "negativeControls": [
+                "restic/integrity_conformance.py:rejectedInterpretations",
+                "restic/integrity_conformance.py:invalidResearchInputsRefused"
+              ],
+              "uxAssessment": "restic/INTEGRITY.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Four-pack/two-snapshot independent private byte copy;original image unchanged;all20owned processes retired.",
+                "One known24-byte single-chunk file,data-body XOR preserves length/header;trees and keys intact.",
+                "Default check temporary cache;half subsets select by first ID byte modulo2.",
+                "Successful index reconstruction is an explicit header-recoverability premise;does not restore payload.",
+                "External fixture restoration of pristine pack is not restic recovery;missing-index rebuild is a separate positive control.",
+                "Public streams redacted;full replay needs owner-private originals and ignored pinned source cache."
+              ],
+              "verificationPlan": "Qualify tree/header/key faults,interrupted repair,remote/partial reads,snapshot filters,cache reuse,multichunk output and restore policies separately.No whole-family qualification."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",

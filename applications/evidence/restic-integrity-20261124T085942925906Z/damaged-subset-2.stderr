@@ -1,0 +1,9 @@
+pack b5638ba25b7f86848514873d67a876927e0261b5a5e2ea6768cdcbec42d83702 contains 2 errors: [blob aa19ab4f57fb77896f42896dad9527c58f4b04fdeca4529af4f65e3e54e0cca6: decrypting blob <data/aa19ab4f> from pack b5638ba25b7f86848514873d67a876927e0261b5a5e2ea6768cdcbec42d83702 failed: ciphertext verification failed unexpected pack id 26dd6d0f6a1b6ff74ee4d3fb112d00bbc684024123927c4c0342037d904917a3]
+
+The repository contains damaged pack files. These damaged files must be removed to repair the repository. This can be done using the following commands. Please read the troubleshooting guide at https://restic.readthedocs.io/en/stable/077_troubleshooting.html first.
+
+restic repair packs b5638ba25b7f86848514873d67a876927e0261b5a5e2ea6768cdcbec42d83702
+restic repair snapshots --forget
+
+Damaged pack files can be caused by backend problems, hardware problems or bugs in restic. Please open an issue at https://github.com/restic/restic/issues/new/choose for further troubleshooting!
+Fatal: repository contains errors

@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "internal/checker/checker.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/checker/checker.go",
+      "cache": "applications/tools/source-cache/restic-integrity/internal__checker__checker.go",
+      "sha256": "73e355aaf6b3daaf4120379ac347d8b18a94eb4b2f4eaad2577bb0fdf6745b90",
+      "bytes": 9189,
+      "inspection": "lines299-327:all vs snapshot-filtered pack read scope;filters unexercised"
+    },
+    {
+      "path": "cmd/restic/cmd_repair_index.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_repair_index.go",
+      "cache": "applications/tools/source-cache/restic-integrity/cmd__restic__cmd_repair_index.go",
+      "sha256": "75fc3526637fc7b813da3b2a5ebfff2dc08d97fd2a793ff44f1bc5a5a9077e3a",
+      "bytes": 2516,
+      "inspection": "whole:exclusive repair boundary and read-all-packs option"
+    },
+    {
+      "path": "internal/repository/repair_index.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/repair_index.go",
+      "cache": "applications/tools/source-cache/restic-integrity/internal__repository__repair_index.go",
+      "sha256": "3cd870acb1cba530b15fdfef234aece677f03601b1edab42916d7eedb469a1b1",
+      "bytes": 3419,
+      "inspection": "whole:index namespace reconstruction/removal;no payload restoration"
+    },
+    {
+      "path": "internal/repository/checker.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/checker.go",
+      "cache": "applications/tools/source-cache/restic-integrity/internal__repository__checker.go",
+      "sha256": "f4a452a9968b59f90b2f18eaea1b6dd5adc4da968ac6ec0aaa8b3512aba35c41",
+      "bytes": 14193,
+      "inspection": "lines185-242:pack existence/length;247-328:read selected pack set;351-485:blob verification and actual pack hash"
+    },
+    {
+      "path": "cmd/restic/cmd_check.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_check.go",
+      "cache": "applications/tools/source-cache/restic-locks/cmd__restic__cmd_check.go",
+      "sha256": "d46a84d773be5663f32a846490eb7b288d3f58364a1741e0c25df09bc0adcd7c",
+      "bytes": 18136,
+      "inspection": "lines175-225:temporary check cache;229-435:metadata versus read filter;438-515:all/half subset selector"
+    }
+  ],
+  "fetchFailures": [
+    {
+      "path": "internal/repository/index.go",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "internal/repository/check.go",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "Inspected pinned sources and separately ran local same-size body fault plus missing-index controls. No snapshot-filter/remote/tree/header-corruption qualification."
+}

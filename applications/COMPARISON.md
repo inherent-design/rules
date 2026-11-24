@@ -80,6 +80,8 @@ Cargo workspace metadata adds effective-manifest context to the inspection basis
 
 ### restic
 
+The [integrity band](restic/INTEGRITY.md) supports preserving metadata-only, subset, and full-data checks as distinct operations. A same-size data fault can pass metadata checks, and a successful index rebuild can leave file data unreadable. Candidate reports should name their checked set and repaired namespace. The keep-current option remains sound; no exit-code, repository-format, or automatic destructive-repair change is selected. Post-repair full reads and exact known-file comparison stay separate acceptance evidence.
+
 Preserve reference removal, reachable data, physical packs, and restore as distinct operations. The local run removes snapshot A, leaves pack bytes unchanged, and later prunes A-only data while retaining snapshot B's shared/new data. B's historical parent relation does not retain A's content.
 
 Candidate snapshot/tree/blob/pack ID wrappers can protect high-risk internal boundaries without changing digest bytes on disk. This is a typing opportunity, not a reproduced namespace bug. An optional explicit-ID deletion receipt could distinguish preview, confirmed reference removal, unknown backend acceptance, and requested pruning; the tested explicit-ID JSON commands were silent.
