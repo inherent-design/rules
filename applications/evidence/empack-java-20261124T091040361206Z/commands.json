@@ -1,0 +1,100 @@
+[
+  {
+    "case": "compile-driver",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-java-20261124T091040361206Z/driver.rs",
+      "--extern",
+      "empack_core=/Users/zer0cell/production/rules/applications/evidence/empack-projection-20261124T063515339963Z/work/libempack_core.rlib",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-java-20261124T091040361206Z/work/java-policy-driver"
+    ],
+    "exitCode": 0,
+    "seconds": 0.9636580417864025,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "compile-driver.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "compile-driver.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "private": false
+  },
+  {
+    "case": "observed-core",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/empack-java-20261124T091040361206Z/work/java-policy-driver"
+    ],
+    "exitCode": 0,
+    "seconds": 0.25396362505853176,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "observed-core.stdout",
+        "sha256": "86a37317e3b63151e63041c4ca2167ad0195f2787c049a72f10239aa5c47a795",
+        "bytes": 28699
+      },
+      "stderr": {
+        "path": "observed-core.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "private": false
+  },
+  {
+    "case": "jdk-21",
+    "argv": [
+      "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+      "-XshowSettings:properties",
+      "-version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.028586916159838438,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "work/private/jdk-21.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "work/private/jdk-21.stderr",
+        "sha256": "f04e4226a9e00e8a0883dee6ff75b6986d5a5e77d898d1c28a5efbc7c82c599e",
+        "bytes": 2596
+      }
+    },
+    "private": true
+  },
+  {
+    "case": "jdk-27",
+    "argv": [
+      "/opt/homebrew/Cellar/openjdk/27.0.1.1/libexec/openjdk.jdk/Contents/Home/bin/java",
+      "-XshowSettings:properties",
+      "-version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.07548912474885583,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "work/private/jdk-27.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "work/private/jdk-27.stderr",
+        "sha256": "0813411e4b477ff93874b0c65c40a2ebee262921fcfeeb1c4732ebc98039f676",
+        "bytes": 2582
+      }
+    },
+    "private": true
+  }
+]

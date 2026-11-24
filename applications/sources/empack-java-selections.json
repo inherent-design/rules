@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sources": [
+    {
+      "path": "crates/empack-core/src/java.rs",
+      "sha256": "91771182225eed4692c81d32d015a8aecceed0a03ac848012bf3406f8b19c67f",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/java.rs",
+      "inspection": "lines1-145:exact-profile lookup,minimum/admitted/recommended,nonmutating constrain,select/actual admission"
+    },
+    {
+      "path": "crates/empack-core/src/java_profiles.csv",
+      "sha256": "d99f8241974cac19d7265bf6b77006f277efa2321a76d8c0805773b47283df66",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/java_profiles.csv",
+      "inspection": "whole112-row exact-game table;Prism metadata revision in header;upstream not refetched in this band"
+    },
+    {
+      "path": "crates/empack-core/src/model.rs",
+      "sha256": "7d5d2a637f2abaf5db51f6e048e119d3e57f4be648171d093750077f950163d7",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-core/src/model.rs",
+      "inspection": "lines862-897:author validation calls exact game policy with explicit preference"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/release.rs",
+      "sha256": "5e159c453e61ac1687416cacd574f58eaca41d12d6c7c5d94b5f56a1bb05ae2d",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/release.rs",
+      "inspection": "lines107-196:serialized preference/minimum/support/policy,validation,actual admission andminimum narrowing;source-only"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/release/producer.rs",
+      "sha256": "2006e233dbd4fdf1c70afb82503f6c9bb24f6dee8ba1b5ddd3890faa79499d1a",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/release/producer.rs",
+      "inspection": "lines85-108:verified server metadata minimum preserves author preference;source-only"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/build/server.rs",
+      "sha256": "250aacd1d35d8dc21db6f052747122add5619bbd5a8715c0d5f9be154aa4f0bc",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/build/server.rs",
+      "inspection": "lines455-475:generated server script uses release policy narrowed by verified minimum;source-only"
+    },
+    {
+      "path": "crates/empack-lib/src/application/engine_host/java.rs",
+      "sha256": "d5a2782cf8c4a6999fb59210d098f2f21062f7be8ab33dd67620f45dea0023bf",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/application/engine_host/java.rs",
+      "inspection": "whole:recommendation andexplicit/interactive/noninteractive selection;source-only"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/java.rs",
+      "sha256": "1126e9f7f07ac8d4def70bb8853618ae187a50bed9e96cce037d7bb2018a107d",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/java.rs",
+      "inspection": "whole:bounded scoped Java properties capture andstrict unique-major parser;source-only,fixture decoder is separate"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/launch.rs",
+      "sha256": "44dbc39579300f21f91c4cfe2d802d36aa6ca7449a185ef1b98aa552978a4a73",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/launch.rs",
+      "inspection": "lines294-306:runtime check consumes probed actual under caller ownership;source-only"
+    },
+    {
+      "path": "docs/design/java.md",
+      "sha256": "360c1b9a3bf585c64622c1c28e7f5862da9169a77c84de62f78dbc31c373a63c",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/design/java.md",
+      "inspection": "whole:author preference,finite policy,host/distribution responsibilities andmaintenance command"
+    }
+  ],
+  "callSiteObservation": "Repository .constrain( scan finds only java.rs tests;do not claim provider/mod constraints are automatically aggregated. ReleaseJava.require_minimum production sites are verified server metadata paths. Source scan is scoped to this checkout/revision,not proof about uninspected dynamic extensions."
+}

@@ -122,6 +122,8 @@ Trust predicates reinforce that support metadata is not full admission. Explicit
 
 ### empack
 
+The [Java band](empack/JAVA.md) supports retaining separate game admission, constraint evidence, author preference, resolved output requirements, and host executable observations. A known preference is not an exact-major requirement; an unknown profile deliberately requires the explicit major. Installed JDKs do not expand admission. This distinction should survive portable editing, and reports should identify which constraints were actually collected rather than implying whole-pack Java compatibility.
+
 Preserve the current authority boundaries. The native core/CLI comparison supports seed preservation, explicit managed adoption, retained overrides, and exact repair under its stated scope. Publication, world protection, root observations, grants, and runtime ownership remain separate obligations. The sparse seed refusal identifies a read-footprint limitation, not data loss or permission to weaken verification.
 
 The [coherent target](empack/README.md) separates saveable raw drafts, immutable project images, interpretation, exact selection, retained assets, prepared work, verified output, delivery, installation, and native execution. Edit epochs reject stale attempts; saved-image identity supports undo; host-admitted saved revisions order receipts. Required observations depend on the selected operation and source/destination role. Portable export does not mint native initialization, recovery, or execution authority.
