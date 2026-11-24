@@ -49,10 +49,12 @@ Acceptance should include exact-ID and policy-group forms, missing IDs, changed 
 
 ## Remaining feature work
 
-General snapshot grouping and policy evaluation beyond the selected keep-last-one fixtures, scans and partial backup, general multiple readers/writers and stale-lock decisions, remote backends, corruption and repair, keys, format migration, mount/dump, copy, exclusions/metadata, and cache/resource policy remain pending. The inventory keeps those entries separate. A passing local restore does not qualify them.
+General snapshot grouping and policy evaluation beyond the selected keep-last-one fixtures, scans and partial backup, general multiple readers/writers and stale-lock decisions, remote backends, corruption and repair, keys, format migration, mount/dump, general copy beyond the later local band, exclusions/metadata, and cache/resource policy remain pending. The inventory keeps those entries separate. A passing local restore does not qualify them.
 
 A later [lock/interruption band](LOCKS.md) tests selected compatible appenders, exclusive maintenance refusal, retry, known-process cleanup, and published-versus-admitted evidence. Backend/identity/age/refresh and partial-data recovery remain open.
 
 The later [restore-policy band](RESTORE.md) separately compares overwrite/mtime admission, verification scope, filtered deletion, dry-run effects, and a leaf-symlink control. Those observations do not expand this earlier retention projection’s premises.
 
 The later [backup-capture band](BACKUP.md) distinguishes metadata-based content reuse, forced reading, partial snapshot publication, dry-run result IDs, and unchanged suppression. These fixed local cases do not qualify general backup or live-source consistency.
+
+The later [copy band](COPY.md) separates persistent origin, metadata-sensitive skip, retained file bytes, and encrypted destination snapshot IDs. Its three generated repositories and repeat/tag/password controls leave remote and interrupted-copy qualification open.

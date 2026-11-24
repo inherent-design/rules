@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "cmd/restic/cmd_copy.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_copy.go",
+      "cache": "applications/tools/source-cache/restic-copy/cmd__restic__cmd_copy.go",
+      "sha256": "ba60e9dbc6efd4f734ad970be76481cf989202615ea004f5c6e292774fe24dd8",
+      "bytes": 11134,
+      "inspected": "21-67,70-190,192-310,350-366: CLI and selection, source/destination locks and indexes, Original/ID lookup plus field comparison, data-before-snapshot batching, copying raw tree bytes, Parent reset and persistent Original. Full remote and interruption behavior not qualified."
+    },
+    {
+      "path": "internal/data/snapshot.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/snapshot.go",
+      "cache": "applications/tools/source-cache/restic-copy/internal__data__snapshot.go",
+      "sha256": "2c9bde348134b41ff0f6b0ae65b789e19012ffe90509024935e28405bf26b590",
+      "bytes": 7021,
+      "inspected": "19-42,60-106: persisted snapshot properties versus private plaintext ID, new snapshot identity, load/save boundaries. Remaining snapshot operations not qualified. Also inspected hasTag/HasTags/HasPaths membership rules, lines177-229. No duplicate-input native reachability claim."
+    },
+    {
+      "path": "doc/045_working_with_repos.rst",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/doc/045_working_with_repos.rst",
+      "cache": "applications/tools/source-cache/restic-copy/doc__045_working_with_repos.rst",
+      "sha256": "40baa5d92adf00ebc60362b4c03b6b1b4f55ee4b8bae7b01d5ebfc62db7c020a",
+      "bytes": 29548,
+      "inspected": "202-310: copy direction, skipped snapshots and verbose output, different encryption, no rechunking, chunker configuration, filters and documented retry. Documentation only; remote/retry not native-qualified."
+    },
+    {
+      "path": "internal/repository/repository.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/repository.go",
+      "cache": "applications/tools/source-cache/restic-copy/internal__repository__repository.go",
+      "sha256": "30f664e1242331faf358080fb135625df537509eb5072d0d49ddad904ada956c",
+      "bytes": 39320,
+      "inspected": "490-556: compress, fresh nonce/encrypt, verify readback, hash ciphertext (non-config), save backend. Snapshot file ID is not the plaintext semantic-image hash. Cryptographic correctness not modeled."
+    },
+    {
+      "path": "internal/restic/json.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restic/json.go",
+      "cache": "applications/tools/source-cache/restic-copy/internal__restic__json.go",
+      "sha256": "7a3cdaeaf4c0012b92fb3483baa3f1ebf4fcd2d97545ced856c25374c3594cc4",
+      "bytes": 898,
+      "inspected": "24-32: JSON marshaling delegates snapshot storage and identity to repository.SaveUnpacked."
+    }
+  ]
+}

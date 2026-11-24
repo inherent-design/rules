@@ -14057,13 +14057,27 @@
             },
             {
               "id": "copy-snapshots",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Copy.lean;restic/Copy.bend",
+              "laws": [
+                "Persistent Original survives transitive copy; Parent is cleared. Skip requires both origin lookup and selected metadata comparison. Snapshot object ID is separate from source content and provenance."
+              ],
+              "nativeEvidence": [
+                "evidence/restic-copy-20261124T231054816138Z/receipt.json",
+                "evidence/restic-copy-20261124T231054816138Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-copy-selections.json"
+              ],
+              "negativeControls": [
+                "Repeat copy and empty selection preserve destination; wrong source key refuses with status12. Metadata-tagged variant remains distinct. Seven malformed research inputs refuse; four expected-field mutations detected."
+              ],
+              "uxAssessment": "restic/COPY.md",
+              "status": "native-observed",
+              "evidenceLimit": "Eight copy requests on three new local macOS repositories; 54 total commands including one preserved harness-path failure and seven read-only completion commands. Thirteen selected-source decisions compare with both models. No interrupted-copy,remote,concurrent-writer,encryption/durability or general filter qualification. Public redaction hides fields needed to reconstruct owner-local raw scalar witnesses.",
+              "verificationPlan": "Exercise interrupted batches,retry,concurrent destination changes,missing/corrupt blobs,remote acknowledgement and hostile metadata. Establish duplicate-tag/path reachability and intended Summary/ProgramVersion policy before changing comparison.",
+              "proofPremises": [
+                "Selected source set and scalar equality labels are externally decoded from actual observations. A copy-needed decision is not a publication receipt; normalized metadata is compared only for actual new destination snapshots. Cryptography,tree traversal and storage finalization remain external."
+              ]
             },
             {
               "id": "verify-destination",
@@ -14077,7 +14091,7 @@
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Partially observed/modelled for selected local copying; general source selection, destination verification, remote and interruption obligations remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

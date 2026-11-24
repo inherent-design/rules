@@ -47,3 +47,5 @@ The [empack recovery band](empack/RECOVERY.md) compares 45 installed CLI command
 5. Review the complete proposals with the host owner. Production implementation needs a separately selected decision.
 
 The canonical active checkpoint is in the Moment incident for the application-models intent. It is the only current task checkpoint. Repository artifacts carry evidence and coverage, not a second running task ledger.
+
+The [restic copy band](restic/COPY.md) compares eight local copy requests and 13 selected-source decisions across three disposable repositories. It preserves provenance, metadata variants, encrypted object identity, and separately verified content; remote, interrupted-copy, and general feature qualification remain pending.

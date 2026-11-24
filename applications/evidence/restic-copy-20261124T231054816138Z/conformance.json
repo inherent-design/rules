@@ -1,0 +1,830 @@
+{
+  "schema": 1,
+  "scope": "Native local copy decisions and destination normalization;source-only duplicate/ignored-field laws remain separate.",
+  "nativeCopyCases": 8,
+  "nativeCommands": 54,
+  "modeledSourceDecisions": 13,
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "identity",
+    "label",
+    "list",
+    "boolean"
+  ],
+  "expectedFieldMutations": [
+    "field-0",
+    "field-1",
+    "field-2",
+    "field-3"
+  ],
+  "comparisons": [
+    {
+      "case": "explicit-first",
+      "sourceId": "aaec66e3b6176c35ff41f87a31aa86937ab532c94010a78b28ff1cbed8a3aadc",
+      "input": {
+        "source": {
+          "id": 2,
+          "original": null,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [],
+        "sourceKeyAccepted": true,
+        "copiedId": 1
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/2/-/1",
+      "modelResult": "1/2/-/1"
+    },
+    {
+      "case": "all-source",
+      "sourceId": "aaec66e3b6176c35ff41f87a31aa86937ab532c94010a78b28ff1cbed8a3aadc",
+      "input": {
+        "source": {
+          "id": 2,
+          "original": null,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 1,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 2
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/2/-/1",
+      "modelResult": "0/2/-/1"
+    },
+    {
+      "case": "all-source",
+      "sourceId": "ff260424e1dc502c7f890d0c3583d3d28b90abd9fc6e1d64278044868eb7d3ab",
+      "input": {
+        "source": {
+          "id": 4,
+          "original": null,
+          "parent": 2,
+          "fixed": 2,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 2
+        },
+        "destination": [
+          {
+            "id": 1,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 3
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/4/-/2",
+      "modelResult": "1/4/-/2"
+    },
+    {
+      "case": "repeat-source",
+      "sourceId": "aaec66e3b6176c35ff41f87a31aa86937ab532c94010a78b28ff1cbed8a3aadc",
+      "input": {
+        "source": {
+          "id": 2,
+          "original": null,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 1,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 3,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 2
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/2/-/1",
+      "modelResult": "0/2/-/1"
+    },
+    {
+      "case": "repeat-source",
+      "sourceId": "ff260424e1dc502c7f890d0c3583d3d28b90abd9fc6e1d64278044868eb7d3ab",
+      "input": {
+        "source": {
+          "id": 4,
+          "original": null,
+          "parent": 2,
+          "fixed": 2,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 2
+        },
+        "destination": [
+          {
+            "id": 1,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 3,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 4
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/4/parent/2",
+      "modelResult": "0/4/-/2"
+    },
+    {
+      "case": "transitive",
+      "sourceId": "8115e6e3825f33b31531ad6f0b377c6f9ac3dd5e0d823d5221952e6ee552fe99",
+      "input": {
+        "source": {
+          "id": 1,
+          "original": 2,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [],
+        "sourceKeyAccepted": true,
+        "copiedId": 5
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/2/-/1",
+      "modelResult": "1/2/-/1"
+    },
+    {
+      "case": "transitive",
+      "sourceId": "019e6b2cf01af225fc02b456f487f5b5d56a09bfe427a6567da7ff75a0838903",
+      "input": {
+        "source": {
+          "id": 3,
+          "original": 4,
+          "parent": null,
+          "fixed": 2,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 2
+        },
+        "destination": [],
+        "sourceKeyAccepted": true,
+        "copiedId": 6
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/4/-/2",
+      "modelResult": "1/4/-/2"
+    },
+    {
+      "case": "restore-baseline-copy",
+      "sourceId": "aaec66e3b6176c35ff41f87a31aa86937ab532c94010a78b28ff1cbed8a3aadc",
+      "input": {
+        "source": {
+          "id": 2,
+          "original": null,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 8,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2,
+              3
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 3,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 7
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/2/-/1",
+      "modelResult": "1/2/-/1"
+    },
+    {
+      "case": "restore-baseline-copy",
+      "sourceId": "ff260424e1dc502c7f890d0c3583d3d28b90abd9fc6e1d64278044868eb7d3ab",
+      "input": {
+        "source": {
+          "id": 4,
+          "original": null,
+          "parent": 2,
+          "fixed": 2,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 2
+        },
+        "destination": [
+          {
+            "id": 8,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2,
+              3
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 3,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 4
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/4/parent/2",
+      "modelResult": "0/4/-/2"
+    },
+    {
+      "case": "transitive-variant",
+      "sourceId": "3df5e869020bfc83c6f289b07581490b6a6d9670730f449eec6fb9f498b21280",
+      "input": {
+        "source": {
+          "id": 8,
+          "original": 2,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2,
+            3
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 5,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 6,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 9
+      },
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "expected": "1/2/-/1",
+      "modelResult": "1/2/-/1"
+    },
+    {
+      "case": "transitive-variant",
+      "sourceId": "3feffe811bff105b0dbf630edc95f3ae0bb95fdd5bad5f418d76125c4f36db14",
+      "input": {
+        "source": {
+          "id": 7,
+          "original": 2,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 5,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 6,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 7
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/2/-/1",
+      "modelResult": "0/2/-/1"
+    },
+    {
+      "case": "transitive-variant",
+      "sourceId": "019e6b2cf01af225fc02b456f487f5b5d56a09bfe427a6567da7ff75a0838903",
+      "input": {
+        "source": {
+          "id": 3,
+          "original": 4,
+          "parent": null,
+          "fixed": 2,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 2
+        },
+        "destination": [
+          {
+            "id": 5,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 6,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": true,
+        "copiedId": 3
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "0/4/-/2",
+      "modelResult": "0/4/-/2"
+    },
+    {
+      "case": "wrong-source-password",
+      "sourceId": "aaec66e3b6176c35ff41f87a31aa86937ab532c94010a78b28ff1cbed8a3aadc",
+      "input": {
+        "source": {
+          "id": 2,
+          "original": null,
+          "parent": null,
+          "fixed": 1,
+          "paths": [
+            1
+          ],
+          "tags": [
+            2
+          ],
+          "excludes": [],
+          "ignored": 1
+        },
+        "destination": [
+          {
+            "id": 5,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 9,
+            "original": 2,
+            "parent": null,
+            "fixed": 1,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2,
+              3
+            ],
+            "excludes": [],
+            "ignored": 1
+          },
+          {
+            "id": 6,
+            "original": 4,
+            "parent": null,
+            "fixed": 2,
+            "paths": [
+              1
+            ],
+            "tags": [
+              2
+            ],
+            "excludes": [],
+            "ignored": 2
+          }
+        ],
+        "sourceKeyAccepted": false,
+        "copiedId": 2
+      },
+      "measuredFields": [
+        0
+      ],
+      "expected": "12/2/-/1",
+      "modelResult": "12/2/-/1"
+    }
+  ],
+  "basisSha256": {
+    "applications/evidence/restic-copy-20261124T231054816138Z/__pycache__/helper.cpython-315.pyc": "bc3323db1387dab9a874d90e5d6ff3a70cc2c9e3ce61ca02da2f0441c4080a7c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-after.stdout": "1abf73fada06a9671a6406e116856181ef3a3b3ee0504d5e624dd535e65b4388",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-before.stdout": "a2d82e404f07594d1559b0cbfcec983d648f4581d986f47ec170c9527b72a54a",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source-source.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/all-source.stdout": "880576bbca6f58632b35953ecd0f7379d2548a5342470aeed8349ee81964f6c0",
+    "applications/evidence/restic-copy-20261124T231054816138Z/b-after-tag.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/b-after-tag.stdout": "a92ff37261f661630d848dc1ef56d0e33c3da6843b75eebde5f203b57307e809",
+    "applications/evidence/restic-copy-20261124T231054816138Z/b-before-tag.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/b-before-tag.stdout": "1abf73fada06a9671a6406e116856181ef3a3b3ee0504d5e624dd535e65b4388",
+    "applications/evidence/restic-copy-20261124T231054816138Z/backup-first.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/backup-first.stdout": "437ba3fc9f7c437de1f95ff9d2ee7b2c99ca81a3218e820c95879fc87978a27e",
+    "applications/evidence/restic-copy-20261124T231054816138Z/backup-second.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/backup-second.stdout": "fa14e086d234598be3118a01d174de6b1fa0a70b619ef6b6626c115f6c2c24dc",
+    "applications/evidence/restic-copy-20261124T231054816138Z/commands.json": "3acf6c466e76e9a66984dd7c9b3cfc077a4764934eac40440b1bd86745ffee2f",
+    "applications/evidence/restic-copy-20261124T231054816138Z/dump-c-0.stderr": "5cbf3cc465d5ac0fbcfe101a200a3f020d4f72172205d60fd0aaa22839509505",
+    "applications/evidence/restic-copy-20261124T231054816138Z/dump-c-0.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-after.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-before.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection-source.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/empty-tag-selection.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-after.stdout": "a2d82e404f07594d1559b0cbfcec983d648f4581d986f47ec170c9527b72a54a",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-before.stdout": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first-source.stdout": "16a31ad32023f18d8f7927c89a8467d748b2f09fff6f653fe18259ad2fc963a2",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/explicit-first.stdout": "6619e7628e01fa07ed420b6fbeeb6e1145ab0c481444223dfe83a492f8350bbe",
+    "applications/evidence/restic-copy-20261124T231054816138Z/final-c.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/final-c.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-commands.json": "1158b6457ccdb53c8515f7a1476b1393ba74c8328e7ba69c9e2ef4e00b25dd62",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-a.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-a.stdout": "f70bf6778a751b226547ecb340a512dea59319e9ca1bdc0086ada7c2790f323f",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-b.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-b.stdout": "864245376e3b348f2b935228817d279c2c351c2a20cc1e153c85c58ef5121f6e",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-c.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-config-c.stdout": "a12f4900d7d5fddffd62dd789a5cb14af0497b8da057c4efe39558025c60baac",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-0.stdout": "3e0ba3e901fd8d7a3bc9e24296c6a46c106ade8815739e626b449f1af7b46b8a",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-1.stdout": "3e0ba3e901fd8d7a3bc9e24296c6a46c106ade8815739e626b449f1af7b46b8a",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-dump-2.stdout": "e65f56b6faac4926e543b720f7d73007c7f337546f44fc8fd424f6321722751f",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish-ls.stdout": "51c4cf295b8cd7b6a95ea29324e7a2ee9967858603e2ea8c5d2526fd7571900f",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finish.py": "14619cc8bf42e7fc1649072d844df88e0425a782a7af7833a8835f0852ee314f",
+    "applications/evidence/restic-copy-20261124T231054816138Z/finished-observations.json": "a54bc8c549c0eb8d0d0a8749d155caad5e8768fadbf98bd2dd67743a45b0b880",
+    "applications/evidence/restic-copy-20261124T231054816138Z/first-snapshot.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/first-snapshot.stdout": "16a31ad32023f18d8f7927c89a8467d748b2f09fff6f653fe18259ad2fc963a2",
+    "applications/evidence/restic-copy-20261124T231054816138Z/help-copy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/help-copy.stdout": "219e2bc0085b2810c0175ec5865d4ade102e8e6c16b8992b0f4c2437cb2de430",
+    "applications/evidence/restic-copy-20261124T231054816138Z/help-tag.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/help-tag.stdout": "b58cd6a58a600691255107272d472b17550a6aa1eebe968465b4663a85498aac",
+    "applications/evidence/restic-copy-20261124T231054816138Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-a.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-a.stdout": "a37a3188fd24c9d2f809de69e12b2735f370cfa28eadbb24b03a8dcdbd05f8f5",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-b.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-b.stdout": "587f3372cfd25745b273d43d61147f6e69c91ce1c024709cca80941681fd9075",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-c.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/init-c.stdout": "0124e0b24586d89f3023a3562d7e64797857fc131c577aea9e47975ff32876c6",
+    "applications/evidence/restic-copy-20261124T231054816138Z/observations.json": "69ce76a45beb8978dc9fb65604fafdf8da25e19c2fdc66327202c181e5f69fe8",
+    "applications/evidence/restic-copy-20261124T231054816138Z/owned-processes.json": "1eb199824d460fa491bfdc995fba6c9fe918502a8e06cf5050286f622799d6ab",
+    "applications/evidence/restic-copy-20261124T231054816138Z/probe.py": "e0e1e14dadca40e6192e22e4540d1d1bd468e6346b84c648f45939eee070ec1b",
+    "applications/evidence/restic-copy-20261124T231054816138Z/receipt.json": "78a15a42e8446d8e084773bb760f034f7a2830db09b175aac57608cf18dc7d2b",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-after.stdout": "1abf73fada06a9671a6406e116856181ef3a3b3ee0504d5e624dd535e65b4388",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-before.stdout": "1abf73fada06a9671a6406e116856181ef3a3b3ee0504d5e624dd535e65b4388",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source-source.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/repeat-source.stdout": "f4801a6db4882dd3041365362d9c371a8ecf51c74bdcafe56c8df304d5943586",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-after.stdout": "70607e276c3e1b8e5ef3af96aba061e1257d59cf97c8efc85a36a0a30c1c6399",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-before.stdout": "a92ff37261f661630d848dc1ef56d0e33c3da6843b75eebde5f203b57307e809",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy-source.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/restore-baseline-copy.stdout": "9f43c67c3b05f2849434770764919930e425f69d0b5e7d7e5bb990c3a0766dc4",
+    "applications/evidence/restic-copy-20261124T231054816138Z/tag-copy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/tag-copy.stdout": "5c4d1c85e2530daf2cae6383e1dc6bb5b8bf41844f7d6aa0c61c5a08d367e84d",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-after.stdout": "6a6859cf44145ffee03cfe160a87c1aa02aa41d19d8f89c3320716720cc7b4f9",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-before.stdout": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-source.stdout": "1abf73fada06a9671a6406e116856181ef3a3b3ee0504d5e624dd535e65b4388",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-after.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-before.stdout": "6a6859cf44145ffee03cfe160a87c1aa02aa41d19d8f89c3320716720cc7b4f9",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant-source.stdout": "70607e276c3e1b8e5ef3af96aba061e1257d59cf97c8efc85a36a0a30c1c6399",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive-variant.stdout": "aa82dc63ba4d06fac2d30e6427c0ee7f6554774e2562d3498d9ade10ae007beb",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/transitive.stdout": "192ad4721df1711734ba6a92c75eed8cc34dc2e1e1633250649d8ed4587bd24d",
+    "applications/evidence/restic-copy-20261124T231054816138Z/two-source-snapshots.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/two-source-snapshots.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/verify-c.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/verify-c.stdout": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-after.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-after.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-before.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-before.stdout": "d4634b7befbb1ba58dea9ee5780bb4aa13702f0b0924a417f3ae17a5c05efa17",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-source.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password-source.stdout": "4e66c9e825110741138df23394afe35e05b7b0f743f9d0ee74c563d48fbb5a6c",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password.stderr": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+    "applications/evidence/restic-copy-20261124T231054816138Z/wrong-source-password.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/restic/Copy.bend": "e1ee1ae780b6f0a73c01352f8f923f3393d93e3229d049965f34445712077a41",
+    "applications/restic/Copy.lean": "76ee8a43dca457f5ffd7a9f8525366aec606df248c8cc07a88e7f8c5d6e564c8",
+    "applications/restic/CopyCase.lean": "f7068272c4ab980ede92402f60c5f786675e16e785580a79437de24733ec65e6",
+    "applications/restic/copy_conformance.py": "6cdef7457ea661e93670707ec8221290d954c911f5c07996758f45369aef80cf",
+    "applications/restic/copy_probe.py": "f4cde9c6100b4ad5f146f7bf5468b7adc573c0231aa76202a6aaaa216d7ac62e",
+    "applications/restic/locks_probe.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/sources/restic-copy-selections.json": "b184cc7eae171ad94a95ef9d9d334f2a13782814e51ccda0be1f6fbe18f5062f"
+  },
+  "driverSha256": "6e957ff83bb00d83ad990b58f1ccebfd481f3a14e876aa1c9b3285e25cb7f889",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No new restic/backup/copy/restore execution. Source fixed-field labels are built from owner-local raw observations;public user fields were redacted and alone cannot reconstruct those witnesses.",
+    "Scalar labels and destination snapshot IDs are externally observed identities;no crypto,packing,hash collision,concurrency,remote or interruption proof.",
+    "Copy-needed is a selection decision,not publication. Normalized metadata compares only actual added snapshots;skips/refusals compare only decisions. Filter selection is an observed input,not a modeled filter API.",
+    "Initial failed dump is a harness path error. Its original records remain;seven read-only commands complete verification without repeating copy. Whole feature/parent scenario remains pending."
+  ]
+}
