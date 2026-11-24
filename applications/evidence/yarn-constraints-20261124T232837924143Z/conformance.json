@@ -1,0 +1,1867 @@
+{
+  "schema": 1,
+  "scope": "Owned Modern JS callbacks/current command loop versus source/native effects;final-validation candidate remains proposed.",
+  "nativeCommands": 23,
+  "nativeConstraintCommands": 17,
+  "nativeOutcomeComparisons": 17,
+  "callbackTraceComparisons": 17,
+  "humanGuidanceComparisons": 17,
+  "callbackWorkspaceVisits": 143,
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "mode",
+    "counter",
+    "license",
+    "object",
+    "boolean"
+  ],
+  "observationMutations": [
+    "outcome-0",
+    "outcome-1",
+    "outcome-2",
+    "outcome-3",
+    "outcome-4",
+    "outcome-5",
+    "input-0",
+    "input-1",
+    "input-2",
+    "human-guidance"
+  ],
+  "comparisons": [
+    {
+      "case": "simple",
+      "label": "check",
+      "input": {
+        "mode": 0,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 2,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "simple",
+      "label": "fix",
+      "input": {
+        "mode": 0,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/1/1/0/0/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/1/1/0/0/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "simple",
+      "label": "recheck",
+      "input": {
+        "mode": 0,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 1,
+        "childLicense": 1,
+        "object": 0
+      },
+      "expected": "0/1/1/0/0/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/1/1/0/0/1",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "mixed",
+      "label": "check",
+      "input": {
+        "mode": 1,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 2,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "mixed",
+      "label": "fix",
+      "input": {
+        "mode": 1,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/1/0/1/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": "MIT"
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/0/1/0/1/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "chain",
+      "label": "check",
+      "input": {
+        "mode": 2,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "chain",
+      "label": "fix",
+      "input": {
+        "mode": 2,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "10/0/0/0/0/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 1,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 2,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 3,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 4,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 5,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 6,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 7,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 8,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 9,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "10/0/0/0/0/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "chain",
+      "label": "post-cap-check",
+      "input": {
+        "mode": 2,
+        "fix": false,
+        "counter": 10,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "10/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 10,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "10/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            10,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "chain",
+      "label": "finish-fix",
+      "input": {
+        "mode": 2,
+        "fix": true,
+        "counter": 10,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "12/0/0/0/0/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 10,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 11,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "12/0/0/0/0/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            10,
+            0,
+            0,
+            0
+          ],
+          [
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "chain",
+      "label": "recheck",
+      "input": {
+        "mode": 2,
+        "fix": false,
+        "counter": 12,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "12/0/0/0/0/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 12,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "12/0/0/0/0/1",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            12,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "late-throw",
+      "label": "check",
+      "input": {
+        "mode": 3,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "late-throw",
+      "label": "fix",
+      "input": {
+        "mode": 3,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "1/0/0/0/1/2",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 1,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 8,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "1/0/0/0/1/2",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "same-object",
+      "label": "check",
+      "input": {
+        "mode": 4,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 1,
+        "humanGuidance": true
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": true,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "same-object",
+      "label": "fix",
+      "input": {
+        "mode": 4,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/1/0/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/0/0/1/0/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "same-object",
+      "label": "recheck",
+      "input": {
+        "mode": 4,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 1
+      },
+      "expected": "0/0/0/1/0/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 0,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/0/0/1/0/1",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "proposal": 0
+      }
+    },
+    {
+      "case": "equal-objects",
+      "label": "check",
+      "input": {
+        "mode": 5,
+        "fix": false,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/1",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/0/0/0/1/1",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    },
+    {
+      "case": "equal-objects",
+      "label": "fix",
+      "input": {
+        "mode": 5,
+        "fix": true,
+        "counter": 0,
+        "rootLicense": 0,
+        "childLicense": 0,
+        "object": 0
+      },
+      "expected": "0/0/0/0/1/10",
+      "visits": [
+        {
+          "pass": 1,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 1,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 2,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 3,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 4,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 5,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 6,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 7,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 8,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 9,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": ".",
+          "counter": 0,
+          "license": null
+        },
+        {
+          "pass": 10,
+          "workspace": "packages/child",
+          "counter": 0,
+          "license": null
+        }
+      ],
+      "presentation": {
+        "jsonRows": 1,
+        "nonJsonRows": 0,
+        "humanGuidance": false
+      },
+      "model": {
+        "current": "0/0/0/0/1/10",
+        "humanGuidance": false,
+        "inputs": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "proposal": 1
+      }
+    }
+  ],
+  "basisSha256": {
+    "applications/evidence/yarn-constraints-20261124T232739517544Z/commands.json": "1f7f5e60a91facec17ae8c977ff80731bdf08b62f9689c913609fea6b72ed327",
+    "applications/evidence/yarn-constraints-20261124T232739517544Z/owned-processes.json": "4c3389b10a6c2eb6103491ea222416e73a9ab7fe244b79fd779d662e400f629c",
+    "applications/evidence/yarn-constraints-20261124T232739517544Z/probe.py": "de3aadd28f32532ba4bb432931f4fdd64d0f9c758d260dcd533f023cbe7e492d",
+    "applications/evidence/yarn-constraints-20261124T232739517544Z/simple-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232739517544Z/simple-install.stdout": "2d3f4ae8ae1f070fb06c1f638f9fe5042ee8b67e78a410755451f03fb85e6996",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-check.stdout": "2b790549b495d4fda054a2aa0f322758269259145ac283ea117a05840ac3609a",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-finish-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-finish-fix.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-fix.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-install.stdout": "ebfe19720f54633fcc97cd6ece948f56e9e2b38c3cfef87f900586c8927b9969",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-post-cap-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-post-cap-check.stdout": "f78f8efdb1cfd59e16090d67f58e7916accd60e6dfb0bf721dfa9fbfdc97ceb2",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-recheck.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/chain-recheck.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/commands.json": "e485b33b1496483ebd74c08f3d5751381a49494553634ee1231b30335f183269",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-check.stdout": "80b47c28c03f55b6a157588f50f68b20f4b3f26bb4ba133e8340ea69a80f414c",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-fix.stdout": "80b47c28c03f55b6a157588f50f68b20f4b3f26bb4ba133e8340ea69a80f414c",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/equal-objects-install.stdout": "09a7506a1bd1f940ea7b8a7b6b1c1b9ce5acfe6c5e62b345dcd4c126e2d048cf",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-check.stdout": "3e7cbc510967bff04ee10d9a12ad37aac004fba832034270739997c19934060a",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-fix.stdout": "63040f7f2df22416c4d203a73fc855039564c4b84c5bc86075fd0b61b0f0284b",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/late-throw-install.stdout": "c17e3a1e502ffe08a779d9f7b011bd50af23010d8743f835c30c815da3a8cba9",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-check.stdout": "f17085b5090909e2d686825025d48cf79c3215e5a8c445afa8cb3e96416545ae",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-fix.stdout": "71d06b0c75548670f8b51b5d786346bb82176ace1bcd9be112a8c12a75fd7cc5",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/mixed-install.stdout": "f22f3a51a8a42271dce6b400848cb452c1b6b57f0e167a61a8f92dd05fc05902",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/observations.json": "886ae2024a6b96392d65f8b582f697594c8359e04ff208eb5c31c304e3c2fd7e",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/owned-processes.json": "0c684cfee00f31b6275c83e0f29620ead277720fac39c61186b2598d52a989a9",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/probe.py": "50701a931180dee078d7e4ac768156bee36e94d70ce06efb01820c77a2ef375e",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/receipt.json": "ca8ffec56ac495c1a5f3c8eacdfb395cbdb249ba345a85cfa029b361b71605ce",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-check.stdout": "34a9fd42efb3a22f37d3031ff46dd3519c36b7f0bf0825740000315d450c8fa5",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-fix.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-install.stdout": "fd6d82a649db1e98836f29fd3cdda80faf644314a7fcb9a6b858b06c96b0e748",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-recheck.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/same-object-recheck.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/setup-correction.json": "472752f6412fdeddf4e59536b7f163c153fd1bbdd22668f61085ec6a7b45c90f",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-check.stdout": "1642561bd59d890a9d2fef44a801f6e2ebd911df9382cad39660bb74e1e1ad08",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-fix.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-fix.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-install.stdout": "a40835bfdb171ec3d3a76e3950b2f347a095766d9840f4c37f984d973e312db0",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-recheck.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/yarn-constraints-20261124T232837924143Z/simple-recheck.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/sources/yarn-constraints-selections.json": "811a8603be51dde64865592dec288d928851dacaf5ac4b08a35fa121f3b099fc",
+    "applications/yarn-constraints/Constraints.bend": "c1628a927589cf5a4f8aa989daad18aa437226f3e143cc5e75cff5aa0950ae14",
+    "applications/yarn-constraints/Constraints.lean": "3f9fe7f2c042a582eb1a5e17d518aff855c5c1b3d90e3b07c9b706e54f3f8796",
+    "applications/yarn-constraints/ConstraintsCase.lean": "a629bd42ca6263ff8138bcde4eccf43f7dc94204cace89689d948d88e6b22430",
+    "applications/yarn-constraints/conformance.py": "2df414bfa0e9ddef8b325ee7c8174edc372eb9431cde2ca683dd8486edcd93d9",
+    "applications/yarn-constraints/observations.py": "6d7717e5fa2b9321b1afe1f8faa019f6ccc0bbe71454d16907dbb0b567c347e3",
+    "applications/yarn-constraints/probe.py": "50701a931180dee078d7e4ac768156bee36e94d70ce06efb01820c77a2ef375e"
+  },
+  "driverSha256": "0087cf4e28c48a18713aa2204b0ad34a55c41f6d9f8f8b046dcc5634cbb08702",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No new Yarn/install/constraint execution. Models cover six selected owned rules and a flat manifest projection,not the constraint language or engine/registry as a whole.",
+    "Only root counter/license and visited child license are compared at callback entry. Object presence has final disk observations but no per-pass callback witness.",
+    "Candidate status has pure cross-model agreement and conditional laws,not patched/native execution. It neither undoes saved effects nor qualifies arbitrary callback reexecution/concurrency.",
+    "Callback visits are in-memory observations;per-pass manifest disk writes are source-derived,not syscall receipts. Final manifests/lock/config are independently captured.",
+    "The initial invalid install mode is a preserved setup failure,excluded from constraint outcomes. No Prolog,dependency compatibility,publication or complete parent promotion."
+  ]
+}

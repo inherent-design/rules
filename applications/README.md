@@ -38,6 +38,10 @@ The [empack discovery band](empack/ROOT-STATE.md) compares 35 actual source-meth
 
 The [empack recovery band](empack/RECOVERY.md) compares 45 installed CLI commands on authored one-file journals. It connects inspection, preparation, actual confirmation, stale observations, saved restoration direction, and distinct project/private-state effects. Real producer interruption, multi-file recovery, root races, and general approval ownership remain pending.
 
+The [restic copy band](restic/COPY.md) compares eight local copy requests and 13 selected-source decisions across three disposable repositories. It preserves provenance, metadata variants, encrypted object identity, and separately verified content; remote, interrupted-copy, and general feature qualification remain pending.
+
+The [Yarn Modern constraints band](yarn-constraints/README.md) compares check/fix status, callback inputs, saved edits, conflicts, and capped convergence. It retains a success followed by a failed check, reference-versus-value ambiguity, and partial edits after later failure. Proposed final validation is separate from current native behavior.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
@@ -47,5 +51,3 @@ The [empack recovery band](empack/RECOVERY.md) compares 45 installed CLI command
 5. Review the complete proposals with the host owner. Production implementation needs a separately selected decision.
 
 The canonical active checkpoint is in the Moment incident for the application-models intent. It is the only current task checkpoint. Repository artifacts carry evidence and coverage, not a second running task ledger.
-
-The [restic copy band](restic/COPY.md) compares eight local copy requests and 13 selected-source decisions across three disposable repositories. It preserves provenance, metadata variants, encrypted object identity, and separately verified content; remote, interrupted-copy, and general feature qualification remain pending.

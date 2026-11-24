@@ -1,0 +1,63 @@
+[
+  {
+    "case": "simple",
+    "label": "install",
+    "argv": [
+      "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "/Users/zer0cell/production/rules/terminal/tools/yarn-4.19.0/package/bin/yarn.js",
+      "install",
+      "--mode=skip-builds"
+    ],
+    "before": {
+      "package.json": {
+        "bytes": 178,
+        "sha256": "c9bae2103477e4ebbc29c1f07ad65d3bf3b48215603922487b30722c40a1771a",
+        "text": "{\n  \"name\": \"constraints-study-simple\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"packageManager\": \"yarn@4.19.0\",\n  \"workspaces\": [\n    \"packages/*\"\n  ],\n  \"studyCounter\": 0\n}\n"
+      },
+      "packages/child/package.json": {
+        "bytes": 75,
+        "sha256": "1837685dc122cff4d67cc855f3a0fbe7ba6d91125a4a90302ddb89dae3fb5ae8",
+        "text": "{\n  \"name\": \"constraints-child\",\n  \"version\": \"1.0.0\",\n  \"private\": true\n}\n"
+      },
+      "yarn.config.cjs": {
+        "bytes": 1069,
+        "sha256": "c1a83c426c8a526f5bf1bebd50ce36253f3375c9fb78a28adde7f511d555125e",
+        "text": "const MODE=\"simple\";\nconst fs=require('node:fs');\nmodule.exports={constraints:({Yarn})=>{\n  const observations=[];\n  for(const w of Yarn.workspaces()){\n    const counter=w.manifest.studyCounter??0;\n    observations.push({workspace:w.cwd,counter,license:w.manifest.license??null});\n    if(MODE==='simple')w.set('license','MIT');\n    if(MODE==='mixed'){\n      if(w.cwd==='.') {w.set('license','MIT');w.set('license','Apache-2.0');}\n      else w.set('license','MIT');\n    }\n    if(MODE==='chain'&&w.cwd==='.'&&counter<12)w.set('studyCounter',counter+1);\n    if(MODE==='late-throw'&&w.cwd==='.'){\n      if(counter===1)throw Error('Owned rule fails after earlier pass saved counter1');\n      w.set('studyCounter',1);\n    }\n    if(MODE==='same-object'&&w.cwd==='.'){\n      const value={mode:'plain'};w.set('studyObject',value);w.set('studyObject',value);\n    }\n    if(MODE==='equal-objects'&&w.cwd==='.'){\n      w.set('studyObject',{mode:'plain'});w.set('studyObject',{mode:'plain'});\n    }\n  }\n  fs.appendFileSync('rule-calls.ndjson',JSON.stringify(observations)+'\\n');\n}};\n"
+      }
+    },
+    "after": {
+      "package.json": {
+        "bytes": 178,
+        "sha256": "c9bae2103477e4ebbc29c1f07ad65d3bf3b48215603922487b30722c40a1771a",
+        "text": "{\n  \"name\": \"constraints-study-simple\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"packageManager\": \"yarn@4.19.0\",\n  \"workspaces\": [\n    \"packages/*\"\n  ],\n  \"studyCounter\": 0\n}\n"
+      },
+      "packages/child/package.json": {
+        "bytes": 75,
+        "sha256": "1837685dc122cff4d67cc855f3a0fbe7ba6d91125a4a90302ddb89dae3fb5ae8",
+        "text": "{\n  \"name\": \"constraints-child\",\n  \"version\": \"1.0.0\",\n  \"private\": true\n}\n"
+      },
+      "yarn.config.cjs": {
+        "bytes": 1069,
+        "sha256": "c1a83c426c8a526f5bf1bebd50ce36253f3375c9fb78a28adde7f511d555125e",
+        "text": "const MODE=\"simple\";\nconst fs=require('node:fs');\nmodule.exports={constraints:({Yarn})=>{\n  const observations=[];\n  for(const w of Yarn.workspaces()){\n    const counter=w.manifest.studyCounter??0;\n    observations.push({workspace:w.cwd,counter,license:w.manifest.license??null});\n    if(MODE==='simple')w.set('license','MIT');\n    if(MODE==='mixed'){\n      if(w.cwd==='.') {w.set('license','MIT');w.set('license','Apache-2.0');}\n      else w.set('license','MIT');\n    }\n    if(MODE==='chain'&&w.cwd==='.'&&counter<12)w.set('studyCounter',counter+1);\n    if(MODE==='late-throw'&&w.cwd==='.'){\n      if(counter===1)throw Error('Owned rule fails after earlier pass saved counter1');\n      w.set('studyCounter',1);\n    }\n    if(MODE==='same-object'&&w.cwd==='.'){\n      const value={mode:'plain'};w.set('studyObject',value);w.set('studyObject',value);\n    }\n    if(MODE==='equal-objects'&&w.cwd==='.'){\n      w.set('studyObject',{mode:'plain'});w.set('studyObject',{mode:'plain'});\n    }\n  }\n  fs.appendFileSync('rule-calls.ndjson',JSON.stringify(observations)+'\\n');\n}};\n"
+      }
+    },
+    "ruleCalls": [],
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.13572854222729802,
+    "streams": {
+      "stdout": {
+        "file": "simple-install.stdout",
+        "sha256": "2d3f4ae8ae1f070fb06c1f638f9fe5042ee8b67e78a410755451f03fb85e6996"
+      },
+      "stderr": {
+        "file": "simple-install.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  }
+]
