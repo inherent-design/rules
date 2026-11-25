@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import re
 import urllib.parse
+from tree_identity import verify_receipt
 
 HERE = Path(__file__).resolve().parent
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
@@ -84,6 +85,25 @@ def main():
     facts = json.loads(gzip.decompress(artifact.read_bytes()))
     targets = json.loads((HERE.parent / 'targets.json').read_text())
     verify(catalog, facts, targets)
+    identity = json.loads((HERE.parent / 'evidence/bedrock-tree-identities.json').read_text())
+    verify_receipt(identity, targets)
+    identity_negatives = []
+    for operation in range(4):
+        i, t = copy.deepcopy(identity), copy.deepcopy(targets)
+        if operation == 0:
+            t['bedrockReferences'][0]['source']['gitTree'] = t['bedrockReferences'][0]['source']['commit']
+        elif operation == 1:
+            i['records'][0]['gitTree'] = i['records'][0]['treeResponseName']
+        elif operation == 2:
+            i['records'][0]['rootEntries'][0]['sha'] = '0' * 40
+        else:
+            i['records'][0]['rootEntries'][0]['mode'] = 'invalid'
+        try:
+            verify_receipt(i, t)
+        except (AssertionError, ValueError):
+            identity_negatives.append('refused')
+        else:
+            raise AssertionError('Incorrect tree object identity admitted')
     negative = []
     for operation in range(5):
         c, f = copy.deepcopy(catalog), copy.deepcopy(facts)
@@ -110,7 +130,7 @@ def main():
     assert [(n['pointer'], n.get('type')) for n in witness['nodes']] == [('', 'object'), ('/properties/type', 'string'), ('/properties/required', 'boolean')]
     assert witness['nodes'][0]['required'] == ['type']
     print(json.dumps(dict(status='passed', profiles=len(catalog['profiles']), sourceFiles=len(catalog['sources']),
-                          **catalog['counts'], changedSourceMapRefusals=len(negative), schemaLocationControl='passed',
+                          **catalog['counts'], changedSourceMapRefusals=len(negative), changedTreeIdentityRefusals=len(identity_negatives), schemaLocationControl='passed',
                           limits='Integrity/census only;not native client,JSON Schema conformance or complete semantic coverage.')))
 
 

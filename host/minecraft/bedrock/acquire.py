@@ -10,6 +10,7 @@ from pathlib import Path
 import urllib.parse
 import urllib.request
 import uuid
+from tree_identity import verify_recursive
 
 HERE = Path(__file__).resolve().parent
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
@@ -48,6 +49,7 @@ def main():
         assert sha(path) == source['treeResponseSha256']
         tree = json.loads(path.read_text())
         assert not tree.get('truncated')
+        assert verify_recursive(tree)[0] == source['gitTree']
         rows, families = select(tree)
         plans.append(dict(target=target['id'], commit=source['commit'], treeResponseSha256=sha(path),
                           selectedFiles=len(rows), exampleAnchors=families))
