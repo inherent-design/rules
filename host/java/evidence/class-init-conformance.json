@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "status": "passed-authored-serial-class-lookup-host-comparison",
+  "profiles": [
+    {
+      "java": 17,
+      "profile": {
+        "JAVA_VERSION": "17.0.21.1",
+        "JAVA_RUNTIME_VERSION": "17.0.21.1+2",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "comparisons": 19
+    },
+    {
+      "java": 21,
+      "profile": {
+        "JAVA_VERSION": "21.0.13.1",
+        "JAVA_RUNTIME_VERSION": "21.0.13.1+2-LTS",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "comparisons": 19
+    },
+    {
+      "java": 25,
+      "profile": {
+        "JAVA_VERSION": "25.0.4.1",
+        "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "comparisons": 19
+    }
+  ],
+  "comparisons": 57,
+  "leanLaws": 22,
+  "bendLaws": 14,
+  "decoderRefusals": 11,
+  "observationAdapterRefusals": 7,
+  "changedObservationControls": 10,
+  "originalProviderCaller": {
+    "artifactSha256": "7c78b6f425d84a85dc1dcdc6d2d00073fbe16f9de0217325467d9d218a5cd96d",
+    "call": {
+      "kind": "invoke",
+      "caller": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager",
+      "method": "parseWithLevel",
+      "descriptor": "(Lnet/mehvahdjukaar/polytone/common/struc/AssetsFiles;Lnet/minecraft/resources/RegistryOps;Lnet/minecraft/core/RegistryAccess;)V",
+      "elementOrdinal": 118,
+      "family": "reflection-loading",
+      "opcode": "INVOKESTATIC",
+      "owner": "java/lang/Class",
+      "name": "forName",
+      "type": "(Ljava/lang/String;)Ljava/lang/Class;"
+    },
+    "qualification": "original static instruction;not provider runtime execution"
+  },
+  "basisSha256": {
+    "host/java/ClassInit.bend": "cdc331fd438263cc1657bb6aafe4ebd8ef5b75ba53dc0792f116144bfc244c11",
+    "host/java/ClassInit.lean": "acbc2e139a0c5433bfb8f6ad7a8e2041137c5518a755b0ad088cfb2a61014df1",
+    "host/java/ClassInitCase.lean": "feb208ed92e466d38ba6df17c8e48dcdb357480c24c61c9b0d4c37a3670cfd55",
+    "host/java/class_init_conformance.py": "a5518073f2360f845607620e2802a13667dae09826594e312cba1054312aca31",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/ClassInitProbe.java": "7c6733a7ce802ffb99577b39479d2c9182ea508b0ee270c5fe9bfcd00a7762f9",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/class_init_probe.py": "afbfed3314732e0aba487972103f72e104f66312c15230893f3e6f5d29611ae9",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/execute.stdout": "66dd346eb11578c6282a01efc170de40b9080add93993e6dbe08e65765c270db",
+    "host/java/evidence/class-init-17-20261125T110836234813Z/receipt.json": "466afb88ceded6636a295a076b96735a8b69d03693dd5bdfc94ab9178cf695a2",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/ClassInitProbe.java": "7c6733a7ce802ffb99577b39479d2c9182ea508b0ee270c5fe9bfcd00a7762f9",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/class_init_probe.py": "afbfed3314732e0aba487972103f72e104f66312c15230893f3e6f5d29611ae9",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/execute.stdout": "eb3df0268d507490f3db15dfa0781e545349ebbdc86f402db57d1d58b3d5feb2",
+    "host/java/evidence/class-init-21-20261125T110911696411Z/receipt.json": "6461040c71134bbe05a3f4ef804d538307bd61635a51721274c5740e11b0676b",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/ClassInitProbe.java": "7c6733a7ce802ffb99577b39479d2c9182ea508b0ee270c5fe9bfcd00a7762f9",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/class_init_probe.py": "afbfed3314732e0aba487972103f72e104f66312c15230893f3e6f5d29611ae9",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/execute.stdout": "7c04b29fb846f8fec401da461bb89a1f75badc1e10ba1bc5b6ebd894ff4cfe7e",
+    "host/java/evidence/class-init-25-20261125T110912140164Z/receipt.json": "085796e292fe4241bb51cba2b733f8fd8a3c22aeee06a8dab8489a126206861f",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/HostApiScan.java": "61f0bad497e5b8f3ae1d04768a28b3f3b42b685729c91b60c13f9bfe59a7aeec",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/inspect.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/inspect.stdout": "47bbace57610b479707bc62c9b7dc8647f4ace81a712e41521728f7234028b5e",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/receipt.json": "63f3e4308eb24956700732a22c0da66ff09a69a6a81bbaf97f0b567633baf016",
+    "host/minecraft/evidence/polytone-class-target-invoke-20261125T111850323262Z/scan_polytone_class_target.py": "88b5a18d27b33d5f1f21c0cd00d7b46248d0ba2bbdde5d7064f6104d9a2620fc",
+    "host/minecraft/polytone-lifecycles.json": "21de1551a3d8ac9ea64a702dadd36b0223d0fbfee93b71fa6908b5ab825dfbb4"
+  },
+  "limits": [
+    "Serial authored targets,controlled loaders and named JDK/macOS profiles only;no general VM/concurrency/loader/effect-closure proof.",
+    "Initialization state is an abstract model predicting measured calls/effects,not a private-JVM-state readback.",
+    "Class identity labels are first-seen ordinals of actual Class references in this fixture;not stable identifiers across processes.",
+    "The Polytone call is confirmed statically. No pack,target class,GUI,provider hook or actual application failure was executed.",
+    "No native Windows/Linux class-initialization observation;ordinary CI runs these retained models without Java."
+  ]
+}

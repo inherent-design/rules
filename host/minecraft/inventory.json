@@ -277,7 +277,16 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "polytone-manager-effects-source",
+          "status": "partial:source interpretation across28managers;not native orchestration,consumer closure or rendering",
+          "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
+          "map": "host/minecraft/polytone-lifecycles.json",
+          "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        }
+      ]
     },
     {
       "id": "reload.failure",
@@ -302,7 +311,16 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "polytone-manager-effects-source",
+          "status": "partial:source interpretation across28managers;not native orchestration,consumer closure or rendering",
+          "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
+          "map": "host/minecraft/polytone-lifecycles.json",
+          "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        }
+      ]
     },
     {
       "id": "models.blockstates",
@@ -1261,7 +1279,16 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "polytone-manager-effects-source",
+          "status": "partial:source interpretation across28managers;not native orchestration,consumer closure or rendering",
+          "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
+          "map": "host/minecraft/polytone-lifecycles.json",
+          "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        }
+      ]
     },
     {
       "id": "game.registry",
@@ -1442,6 +1469,15 @@
       ],
       "nativeComparisons": [
         "host/minecraft/evidence/polytone-priority-20261125T051441802200Z/execute.stdout"
+      ],
+      "componentEvidence": [
+        {
+          "id": "polytone-manager-effects-source",
+          "status": "partial:source interpretation across28managers;not native orchestration,consumer closure or rendering",
+          "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
+          "map": "host/minecraft/polytone-lifecycles.json",
+          "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        }
       ]
     }
   ],
@@ -1536,8 +1572,13 @@
     "polytone-Ty5Aowoi": {
       "map": "host/minecraft/polytone-managers.json",
       "report": "host/minecraft/POLYTONE.md",
-      "status": "source-discovery-only;all28managersemantic/runtimequalificationsincomplete",
-      "sharedPolicyEvidence": "host/minecraft/evidence/polytone-priority-conformance.json"
+      "status": "partial:28manager source/effect review and bounded shared-policy/host evidence;all manager runtime qualifications incomplete",
+      "sharedPolicyEvidence": "host/minecraft/evidence/polytone-priority-conformance.json",
+      "contracts": "host/minecraft/polytone-contracts.json",
+      "lifecycles": "host/minecraft/polytone-lifecycles.json",
+      "lifecycleReport": "host/minecraft/POLYTONE-LIFECYCLES.md",
+      "codecEvidence": "host/minecraft/evidence/schema-record-conformance.json",
+      "classLookupHostEvidence": "host/java/evidence/class-init-conformance.json"
     }
   },
   "laterSourceStudies": {

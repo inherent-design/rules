@@ -1,0 +1,2457 @@
+{
+  "schema": 1,
+  "provider": "polytone-Ty5Aowoi",
+  "artifactSha256": "7c78b6f425d84a85dc1dcdc6d2d00073fbe16f9de0217325467d9d218a5cd96d",
+  "contractsSha256": "4bc7d4bd1575d86ce06d69fe5730f978e19ee48e5b33af8c3dd102782d48e369",
+  "generatorSha256": "71b54a4026d6da2bc3732600482042a8dbbab4685d9f86d0cfc708bdb7dee88b",
+  "sourceReceiptSha256": "a35681f6347a8a0267a1de286fa0b05af984b8294b5e3b2e9f2e01bc7ceeebdf",
+  "managers": [
+    {
+      "id": "polytone.configs",
+      "reloadOrder": 0,
+      "stateSymbols": [
+        "configs",
+        "activeLoadConfigs",
+        "configFileSnapshot",
+        "needsPackReload"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited directory/image collection. Construction loads polytone_options.json; pack/reload config overlays also have independent entrypoints.",
+        "parse": "Both world-aware and worldless hooks clear/rebuild the option registry from builtins and enabled definitions, applying the retained config-file snapshot.",
+        "apply": "Own apply and reset bodies are empty. UI edits call a separate disk writer and can request a later pack reload.",
+        "reset": "Empty hook does not clear configs, the file snapshot, thread-local active registry, or reload-request flag.",
+        "live": "Value lookup prefers a thread-local active registry, then the main registry; unknown keys warn and return numeric zero. Pack UI and main-menu UI are separate callers."
+      },
+      "methodAnchors": {
+        "parseConfigs": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 326,
+          "bodySha256": "4af33a271e88b5acfa76ecb54069f8460d1ebc15c36f132e78fc140620ef56e0"
+        },
+        "saveConfigsToDisk": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 187,
+          "bodySha256": "dcc45b1b989c39d4fcc3ed1f2d8267238f2c642b060b3a1568f37a47a5aa0b56"
+        },
+        "loadConfigFromDisk": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 207,
+          "bodySha256": "e8b71b64b82c90de84b95edb03b0149c71be1264c67e734a7f4d2960b4f01a6b"
+        },
+        "getValue": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 228,
+          "bodySha256": "513e225bbe801cdc141088d8bc5c8a7c06471159b82028867a2131ad57b79f35"
+        },
+        "loadCurrentPackConfigs": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 242,
+          "bodySha256": "69ad70d6b532cdb75d03746b14f235774b5aca4e206259651499c61494ba306d"
+        },
+        "loadCurrentReloadConfigs": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 274,
+          "bodySha256": "51ac3a4c0cff879d9e02a56b8981b3fd748eae0d096f30a82f25df6e3f0a2b44"
+        },
+        "clearCurrentPackConfigs": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 295,
+          "bodySha256": "c85c7dfdd82b1ea4150cd2152aaccb1555f95dacf634eebb141f39c5dc8fcd20"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 315,
+          "bodySha256": "f887760be0fe3a6d29325c14c2cbc234834daafb6d3528f76441272bab50681b"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 321,
+          "bodySha256": "f887760be0fe3a6d29325c14c2cbc234834daafb6d3528f76441272bab50681b"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 340,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+          "line": 344,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "replaces",
+          "target": "option-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithoutLevel",
+          "relation": "replaces",
+          "target": "option-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "saveConfigsToDisk",
+          "relation": "writes",
+          "target": "options-file",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "loadCurrentReloadConfigs",
+          "relation": "publishes",
+          "target": "thread-local-config-view",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "clearCurrentPackConfigs",
+          "relation": "revokes",
+          "target": "thread-local-config-view",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Atomic text replacement is a delegated FilesUtil contract; no durability or multi-writer claim.",
+        "Follow UI edit/save/reload acknowledgement and cleanup of temporary config views."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.noises",
+      "reloadOrder": 1,
+      "stateSymbols": [
+        "noises"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode each noise configuration, build/register it, then regenerate expression noise functions.",
+        "apply": "Own apply hook is empty; registration and expression-function changes occur in parse.",
+        "reset": "Clear the noise registry; downstream function ownership remains a separate dependency.",
+        "live": "Expression consumers call generated noise functions rather than the empty apply hook."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java",
+          "line": 37,
+          "bodySha256": "9f3f2fe71b1fad12d798b3d03ac7bbdb9e00653c209b5c4b5cd48e9e4b4af687"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java",
+          "line": 53,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java",
+          "line": 32,
+          "bodySha256": "378b12878e22a7ea6006ba149b16c4f627fb18c4abcf6579d25726da8180a260"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "noise-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "expression-noise-functions",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "noise-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify partial registration if a later decode/build fails and lifetime of previously generated function references."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.global_expression",
+      "reloadOrder": 2,
+      "stateSymbols": [
+        "expressions",
+        "values",
+        "lastGameTime"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Register enabled expressions and mutable value slots initialized to each declared default.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear expression/value maps and set lastGameTime to Long.MIN_VALUE.",
+        "live": "tick reads level game time, suppresses a repeated time value, and evaluates entries on interval multiples; getValue returns zero for a missing slot."
+      },
+      "methodAnchors": {
+        "tick": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 57,
+          "bodySha256": "76b4db6e5aa7f4d65b8277ddc15acaf37415fc130a639706cf1548dd5dff5b80"
+        },
+        "getValue": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 74,
+          "bodySha256": "71cc1d2cf78dca0a2ba36338fead9eff5434f6da359e7df0580a1a63c4dda2d4"
+        },
+        "slots": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 79,
+          "bodySha256": "03fa370f0214e23de94579468888596e26eedbef6a7ee8c94844ddd77cfb9d68"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 35,
+          "bodySha256": "e09819578279e45f31047e6400f0d0364a72214d7b2fa76272fba0949992c4fe"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 47,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+          "line": 51,
+          "bodySha256": "6bac219a4743ba698619bb5bfe8d8f2da675ea9abf4111ba6c785fadb26a1c73"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "expression-slots",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "tick",
+          "relation": "mutates",
+          "target": "expression-slots",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "expression-slots",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Game time is not a wall-clock deadline. Qualify level changes, expression context, off-thread readers, and retained Slot references."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.sound_types",
+      "reloadOrder": 3,
+      "stateSymbols": [
+        "soundEvents",
+        "customSoundEvents",
+        "customSoundTypes"
+      ],
+      "phaseSemantics": {
+        "prepare": "Parse sound_events CSV into the manager field before returning default prepared assets.",
+        "parse": "Construct missing sound events, dynamically register them, then decode/register enabled direct sound types. Existing IDs log and skip.",
+        "apply": "Request SoundManager.reload when custom sound events exist; that request is not playback or reload completion.",
+        "reset": "Unregister custom event IDs, then clear sound-event/type registries.",
+        "live": "Block-set/property consumers reference sound types; actual sound files and playback remain separate."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java",
+          "line": 44,
+          "bodySha256": "2d006551abc7be21722685a29f2494d79d600157caa221fcdbd62646e6eca1ad"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java",
+          "line": 50,
+          "bodySha256": "d8af452826d2f53d439bae6091dbedad8e72d3df731aced769e60a694ea3842d"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java",
+          "line": 77,
+          "bodySha256": "dda93c3afc70f66fcb28b187a0e5398ec102e678e455402036898dadefdac27d"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java",
+          "line": 90,
+          "bodySha256": "478af0c80343ec82c03f3c802194cd901a92030e2a011d8e5d5ba918267ee27d"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "prepare",
+          "relation": "replaces",
+          "target": "sound-event-csv",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "registers",
+          "target": "sound-event-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "schedules",
+          "target": "sound-manager-reload",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "unregisters",
+          "target": "sound-event-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify asynchronous sound reload and overlap between dynamic IDs, decoded types, sounds.json, and retained playback consumers."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.biome_id_mappers",
+      "reloadOrder": 4,
+      "stateSymbols": [
+        "biomeIdMappers"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode and register biome mappers; registration exceptions warn as duplicates, while decoder failures escape.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear mapper registry.",
+        "live": "Colormap consumers resolve biome identity through the selected mapper."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java",
+          "line": 29,
+          "bodySha256": "1b20dd823f0f8d6ca11620e9ca01442473da1ca0d59e2b31b2d3ee593d061784"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java",
+          "line": 49,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java",
+          "line": 24,
+          "bodySha256": "db42b2a0a581b7df639c3466b74adcbd3321f455c4d0a96bd11dd763616ccfb2"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "biome-mapper-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "biome-mapper-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Do not treat every caught registration error as an independently proved duplicate. Mapper arithmetic and actual biome identity need their own contract."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.colormaps",
+      "reloadOrder": 5,
+      "stateSymbols": [
+        "colormaps",
+        "concurrentColormaps"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited JSON/companion-image collection.",
+        "parse": "Add builtins, retry pending definitions while progress occurs, strict-decode leftovers, then create default colormaps for orphan textures.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear colormap registries and unregister custom platform color resolvers.",
+        "live": "Color getters and biome/render consumers can retain references independently of the registry."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java",
+          "line": 103,
+          "bodySha256": "e4429c33bfecda126893896dad5d342b064a73e36fe38359d39f9050a418dfe5"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java",
+          "line": 143,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java",
+          "line": 160,
+          "bodySha256": "3d925d5d7b5e3ee7d9e79af18ccba389daedf7c307b41fe94c8d15e7c85ae4e3"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "colormap-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "colormap-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "unregisters",
+          "target": "platform-color-resolvers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify reference cycles/ordering, image identity, concurrent getter instances, and active consumer invalidation."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.custom_particles",
+      "reloadOrder": 6,
+      "stateSymbols": [
+        "customParticleFactories",
+        "gpuParticles",
+        "overwrittenVanillaProviders"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection. Early processing separately decodes model-only data and requests model registration.",
+        "parse": "Decode factories, register/override providers, attach sprite sets, add GPU renderers, then resolve lazy emitter dependencies.",
+        "apply": "Own apply hook is empty; factory/provider effects already occur in parse.",
+        "reset": "Unregister custom types/providers, move active GPU renderers to pending retirement, and restore overwritten vanilla providers.",
+        "live": "CPU providers, emitter callbacks, GPU renderer list, and level-render-tail retirement are different consumers."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java",
+          "line": 66,
+          "bodySha256": "c69d51753e6d75e38fb1d9c75911723d4b05ab6a394e72b9d3a23fe50e73dbbd"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java",
+          "line": 123,
+          "bodySha256": "fb15d86e79f840875f5c8ef5e800c4b0bd9babc6b39648092fcce65569dda0b7"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java",
+          "line": 119,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java",
+          "line": 83,
+          "bodySha256": "254b022ab2e288b6c35425d55deb89c5f22f6412a97fa112f1af92cbd359cb2b"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "earlyProcess",
+          "relation": "registers",
+          "target": "custom-model-requests",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "registers",
+          "target": "particle-provider-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "retains",
+          "target": "gpu-particle-renderers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "requests-retirement",
+          "target": "gpu-particle-renderers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "vanilla-particle-providers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "retireAll is not close: pending renderers close in a later render call. No GPU-completion or full logout reclamation proof."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.colors",
+      "reloadOrder": 7,
+      "stateSymbols": [
+        "vanillaMapColors",
+        "vanillaDiffuseColors",
+        "vanillaEffectColors",
+        "vanillaChatFormatting",
+        "customSheepColors"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited single-file stack collection and legacy conversion; not the default directory-only path.",
+        "parse": "Parse color sections with direct mutation of vanilla presentation objects, manager fields, and other managers; per-file exceptions log and continue, then sheep colors regenerate.",
+        "apply": "Call LevelRenderer.createStars; derived sheep colors regenerate in parse, not this hook.",
+        "reset": "Restore captured map/dye/effect/text/egg/border values and explicit defaults; reset is field-specific rather than a generic rollback.",
+        "live": "Map/environment/dye/particle/fishing/lightning/outline/painting/border/effect/egg/sheep/xporb/redstone/text/palette and entity-shadow paths have separate consumers."
+      },
+      "methodAnchors": {
+        "parseColorJson": {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "line": 188,
+          "bodySha256": "6ca0c71b604f4821c94993e3ebeee7ff3801ef2877a5c195aaf3419d7b715206"
+        },
+        "regenSheepColors": {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "line": 647,
+          "bodySha256": "2c89c7f2c4de457f803cf0542e83e745fddfde28d31b04e2dac8b545382acbf4"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/SingleFileContentManager.java",
+          "line": 29,
+          "bodySha256": "3634f3c7b7af260bd37334abad412c0a1dba1858f294491094c85a7c83f97e41"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "line": 170,
+          "bodySha256": "dedd728e505c0e3c358f8633d596046df7d7c7114bb171109d09cc39d86b7ef9"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "line": 534,
+          "bodySha256": "e51dd41c1505c64e5b25f528c9919c6731fe54f6c0c25c0964f7459bb3377fca"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "line": 539,
+          "bodySha256": "50dc0d705121e3d3dd0f2edc300091c0bc2463b3014db0a33bb1307492a08590"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "mutates",
+          "target": "vanilla-presentation-state",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "cross-manager-color-inputs",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "invokes",
+          "target": "level-renderer-create-stars",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "captured-presentation-state",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Section and per-entry failure can preserve earlier mutations. Complete field/default/restoration coverage and each renderer consumer remain open."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.colored_lights",
+      "reloadOrder": 8,
+      "stateSymbols": [
+        "textureLightColors",
+        "lightSources",
+        "pointLightStorage",
+        "blockLights",
+        "particleLights"
+      ],
+      "phaseSemantics": {
+        "prepare": "Optionally detect texture-derived light colors and replace textureLightColors before returning prepared assets.",
+        "parse": "Resolve enabled typed block/entity/item/particle targets and add their light definitions.",
+        "apply": "Add texture lights, flatten aliases, select configured backend storage, then install available light-source consumers.",
+        "reset": "Clear definitions/aliases, clear each source and storage, then detach source/storage references.",
+        "live": "Backend storage, moving/block light sources, voxel aliases, and shader patches require separate renderer capability gates."
+      },
+      "methodAnchors": {
+        "reset": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "line": 300,
+          "bodySha256": "80b013db13fe707fc0161eb81403d4ec5c2d593719249c371d1d5ded2389e422"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "line": 72,
+          "bodySha256": "3993546fecafd18d4483ac9117e288141543be0b5626198d96bb34ee0f589fe8"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "line": 78,
+          "bodySha256": "fa59b6bcf9b6f110a6479ccc09bf00407b06fc4f3e2f7df8aebcb54d36e354ea"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "line": 207,
+          "bodySha256": "8dc265b2ff5ce07e9906439456869f1ba6cf93a753d0338d5a856e4b30755cde"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "line": 283,
+          "bodySha256": "48b13479f8456250d4a989e08f0246d371ef59d8a6687ebd9bd9f07c95f830ef"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "prepare",
+          "relation": "replaces",
+          "target": "texture-light-candidates",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "light-definitions",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "publishes",
+          "target": "backend-light-sources",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "backend-light-storage",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Backend selection and non-null storage do not establish active shader ownership, device compatibility, or retirement of all consumers."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.block_set",
+      "reloadOrder": 9,
+      "stateSymbols": [
+        "blockSetTypes",
+        "counter"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Register vanilla block-set providers and decoded custom providers.",
+        "apply": "Log the resulting registry size.",
+        "reset": "Clear block-set registry and reset generated-name counter.",
+        "live": "Block-property consumers use these providers to build/apply sound-related block-set data."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java",
+          "line": 36,
+          "bodySha256": "37b8d22ecc39e68910c391f4e48142c5b8cf4c12f933085ebb732b4bd84de4ce"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java",
+          "line": 52,
+          "bodySha256": "5d82e86e0c3852926b9281db16d468bef53e8f7898e645b37e96eb4c92918e9f"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java",
+          "line": 30,
+          "bodySha256": "9f6bad55aa4675c670d5984d7f30a9618b15ba0003bef6a4acd43a10a76a9041"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "block-set-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "block-set-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify registry identity, generated names, duplicate policy, and captured references in modified blocks."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.block_modifiers",
+      "reloadOrder": 10,
+      "stateSymbols": [
+        "ofProperties",
+        "modifiers",
+        "vanillaProperties",
+        "particleAndSoundEmitters",
+        "terrainParticleTintOverrides"
+      ],
+      "phaseSemantics": {
+        "prepare": "Merge legacy OptiFine/Colormatic inputs and own images; replace ofProperties before returning copied maps.",
+        "parse": "Convert legacy/inlined palettes, feed fluid/dimension inputs, decode full/partial modifiers, fill images, add enabled/orphan modifiers, and add colored lights.",
+        "apply": "Apply each modifier to blocks, retain returned prior properties, and install tick/sound/particle/tint behavior.",
+        "reset": "Apply captured prior properties, clear modifier/ticker/tint tables, and restore captured grass/foliage resolvers.",
+        "live": "Block colors/properties, random tick emitters, terrain particles, fluid/dimension conversion and light consumers are distinct edges."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+          "line": 100,
+          "bodySha256": "f830b50f190da712ee5d7150dd97278fbf69015be872f3643b783c46922c4166"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+          "line": 118,
+          "bodySha256": "db8de223d2c170532bc9c41c98924c621348554a416a85ab91c6831b2b4af73a"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+          "line": 193,
+          "bodySha256": "7ae225c59c65ed59f9047bfeefb78293e9ce3d0eaaed8f2a8069ac4e97246d05"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+          "line": 170,
+          "bodySha256": "8d2fbdff146b1f9a082412a0d92a1ecbd46230a9a4238bc8ec57e3f689104f73"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "prepare",
+          "relation": "replaces",
+          "target": "legacy-block-properties",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "cross-manager-modifiers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "mutates",
+          "target": "block-presentation-objects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "retains",
+          "target": "block-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "block-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Captured prior values and enabled/partial inputs are not a transaction across managers. Actual tick and renderer hooks remain unqualified."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.fluid_modifiers",
+      "reloadOrder": 11,
+      "stateSymbols": [
+        "modifiers",
+        "extraModifiers",
+        "extraImages",
+        "vanillaWaterColorResolver"
+      ],
+      "phaseSemantics": {
+        "prepare": "Merge own images and converted Colormatic images.",
+        "parse": "Merge extra legacy inputs, parse always, fill/adopt texture roles, and add enabled or texture-only modifiers.",
+        "apply": "Log installed modifier count; platform wrapper installation occurs through delegated paths.",
+        "reset": "Clear modifier/extra tables, clear platform-specific wrappers, and restore captured water resolver.",
+        "live": "Platform fluid extension wrappers and fog/color samplers consume the resulting state."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java",
+          "line": 60,
+          "bodySha256": "91928ca14adaa6a1ed32cdf3fd62f4e7ac7fd9879a384b80ec87a5cd3b9413a4"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java",
+          "line": 70,
+          "bodySha256": "40d9a54dd4ba2526c077e1750baac37e0d0c1aef05b87d410236b257f756c108"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java",
+          "line": 111,
+          "bodySha256": "72b51e21886829f905090b68a38e8e3b0c4f9a3b59a4fe05e88f8d87bed55a06"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java",
+          "line": 118,
+          "bodySha256": "7817f766b3802e49b976e5ffed26e13d103e321a1a1dcaca82367098a11e771b"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "fluid-modifier-tables",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "platform-fluid-wrappers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "water-color-resolver",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Follow platform clearSpecial/addModifier into NeoForge wrappers and confirm active readers retain the intended generation."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.custom_models",
+      "reloadOrder": 12,
+      "stateSymbols": [
+        "models",
+        "layers"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Clear model/layer registries, decode models, register definitions, then build layers; layer construction exceptions log and continue.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear model and layer registries.",
+        "live": "Model-layer registration/baking consumes generated layer definitions later."
+      },
+      "methodAnchors": {
+        "load": {
+          "source": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java",
+          "line": 61,
+          "bodySha256": "36d5b468318ae56bb68da9f76a10f01aebd54e68cfc71e5b7f303bdff8519a6b"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java",
+          "line": 46,
+          "bodySha256": "91a786da71139519c49a6ac5e9737392fbd8e7b6ccd5c0dfddb563f773c0401e"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java",
+          "line": 52,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java",
+          "line": 56,
+          "bodySha256": "b7f5fc2563aee85dd1827d22b1cafc98b1d92ae16ed423bf5180b074dbc5e286"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "custom-model-definitions",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "custom-model-layers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "custom-model-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "A registered model with a failed layer is a distinct partial result. Full renderer/bake consumers remain open."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.item_modifiers",
+      "reloadOrder": 13,
+      "stateSymbols": [
+        "modifiers",
+        "vanillaProperties"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection; early model-only decoding separately requests models.",
+        "parse": "Parse always, fill companion textures, and add enabled or image-only modifiers.",
+        "apply": "Apply to items, capture returned prior properties, attach selected modifiers, then clear pending modifier map.",
+        "reset": "Apply retained prior properties and detach item modifiers; the shown reset does not itself clear vanillaProperties.",
+        "live": "Item colors/tooltips/rarity/armor/models/pose/overlay and emitted lights are different consumers."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "line": 46,
+          "bodySha256": "65ef4fec33fb0682077f4e5c4c455a8da066b0ee99449e6bf0cdf9c9eb87c120"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "line": 64,
+          "bodySha256": "991873232eba5cd1b7b476b1e63a7c63b8e92c1c42ed2ae5cc02750eee99cca6"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "line": 117,
+          "bodySha256": "a29d4b8da9aa8ff3a6f214633134965f5358a2d4bbd89ddbfe2346479abe5cc0"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "line": 107,
+          "bodySha256": "2e8e227c56ea8759a423f89db574972a140daca6f19f1a596d07b0aa215ee0d3"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "earlyProcess",
+          "relation": "registers",
+          "target": "custom-model-requests",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "mutates",
+          "target": "item-presentation-objects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "retains",
+          "target": "item-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "item-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify retained prior-property lifetime and repeated reload paths rather than assuming every table empties at reset."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.item_models",
+      "reloadOrder": 14,
+      "stateSymbols": [
+        "itemModels",
+        "autoGeneratedModels",
+        "itemModifiersModels"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection; early model-only decoding requests non-auto models.",
+        "parse": "Rebuild override lists from item-modifier contributions plus enabled standalone definitions; produce auto-model descriptors.",
+        "apply": "Populate override model references using registry access.",
+        "reset": "Clear override and auto-model lists.",
+        "live": "Actual item override selection and model bake consume these lists outside reload."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+          "line": 46,
+          "bodySha256": "2193ae038b7206ed8f56fa9255737bb618dafedf95bb96e092543fa98b0e4e44"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+          "line": 60,
+          "bodySha256": "a6b0a892af8a545825d1546ed4bb13f594d11f95a9708d084eae5554fa4edb9b"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+          "line": 89,
+          "bodySha256": "6a8b7414f73b5242471dcbc2abc6986e568c5858758f454d1ea0887c907d2e5c"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+          "line": 40,
+          "bodySha256": "25e9102fb6ec4e08268d25c9d1bc376f1946cdce97802ef0fd01382bdf3bad4d"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "earlyProcess",
+          "relation": "registers",
+          "target": "custom-model-requests",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "item-override-lists",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "resolves",
+          "target": "item-override-models",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "item-override-lists",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify transfer of itemModifiersModels, early/late enablement, generated model ownership, and coexistence with Modefite/Compat."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.biome_modifiers",
+      "reloadOrder": 15,
+      "stateSymbols": [
+        "needsDynamicApplication",
+        "effectsToApply",
+        "vanillaEffects",
+        "fogParametersModifiers"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode enabled effects and resolve their biome targets into effectsToApply.",
+        "apply": "On login/dynamic application, mutate resolved biome effects, retain before-images, and register fog-parameter consumers.",
+        "reset": "Restore retained effects in the current level registry when available, then clear effect and fog tables and request dynamic application.",
+        "live": "Biome registry incarnation and current level are part of restoration/lookup identity."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java",
+          "line": 48,
+          "bodySha256": "1dcc18d49485e80d059f30b402eecae52845f3c97483923d0ef0345c9d9ceed3"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java",
+          "line": 65,
+          "bodySha256": "771faa7c393a642aff0974955b469a43ab5f73ff28cf5b04e289baa348d8154e"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java",
+          "line": 94,
+          "bodySha256": "6e747820959a4903d207c40ffdeb9017550fd1d19fde854ef151e33d22b464ee"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "biome-effect-plan",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "mutates",
+          "target": "biome-effects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "retains",
+          "target": "biome-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "current-registry-biome-effects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "A resource ID alone does not identify a biome object across registry/level generations. No cross-world restoration proof."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.variant_textures",
+      "reloadOrder": 16,
+      "stateSymbols": [
+        "blocksWithVariants",
+        "variantQuadsCache",
+        "forceTintBlocks"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode enabled variants and build block/texture mappings.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear block mappings, quad cache, and forced-tint block set.",
+        "live": "Quad transformation uses biome/region context and selected atlas sprites; cached quads can outlive the lookup operation."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java",
+          "line": 44,
+          "bodySha256": "6e00b17ee1dfe5f386283ad25071caf798d71ad8bcf725b53fb586e73c11ccfa"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java",
+          "line": 55,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java",
+          "line": 68,
+          "bodySha256": "2f0a96eac41a22a31a87aab3cde2c5dc93365f663eabf4ced5b04d561693fd69"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "variant-texture-mappings",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "variant-quad-cache",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify atlas generations, retained quad/sprite identity, world/biome context, and custom renderer paths."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.lightmaps",
+      "reloadOrder": 17,
+      "stateSymbols": [
+        "lightmaps",
+        "lastDimension",
+        "currentLightmap"
+      ],
+      "phaseSemantics": {
+        "prepare": "Merge converted OptiFine/Colormatic and own lightmap images.",
+        "parse": "Clear current selection, validate image heights, group normal/rain/thunder images, decode/default associated definitions, add enabled maps, and reject leftover JSON without images.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear map registry; current selection is reset by parse rather than this hook.",
+        "live": "Dimension/weather/lightning and time-dependent light-texture consumers select and sample maps."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java",
+          "line": 52,
+          "bodySha256": "e856a8dda57942ea746cce76007ac4334705a311a6194bd4caaba341edfa4c45"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java",
+          "line": 64,
+          "bodySha256": "c1f40bdca27a86d8494730ba8ca6b7d7b2723615f43f7485159dc1e4d7357562"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java",
+          "line": 119,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java",
+          "line": 123,
+          "bodySha256": "c1fe40310aa88147ef96b66a317751ba690e5f4b9c3c7e09c344e7b2406e0a09"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "replaces",
+          "target": "current-lightmap-selection",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "lightmap-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "lightmap-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Dimension selection, retained currentLightmap, dimensions/image widths and renderer upload are independently pending."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.dimension_modifiers",
+      "reloadOrder": 18,
+      "stateSymbols": [
+        "needsDynamicApplication",
+        "dimensionEffects",
+        "alteredVanillaEffects",
+        "cloudFunctions",
+        "extraMods"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Merge decoded and legacy modifiers, fill companion textures, and resolve enabled/orphan targets.",
+        "apply": "On login/dynamic application, apply inplace effect changes and current-dimension selection.",
+        "reset": "Request dynamic application and clear selected definition/color/cloud/darkening tables; helper paths own any further restoration.",
+        "live": "Dimension transitions, sky/fog/weather/cloud/lightmap and sunset callbacks consume live/cached state."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java",
+          "line": 105,
+          "bodySha256": "c602c9ee867b2d60b5e65ef9c8a783b96c6e4759e6d8065d88fd0a11681e120c"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java",
+          "line": 144,
+          "bodySha256": "6bf123ca0c261575c1aa478396a7ad96e7bb3c7090f716cb588428b87e95bdf3"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java",
+          "line": 89,
+          "bodySha256": "18dbc24c0a5a279ad588a05f7aa5f9e16bfe557ece4414d9156a19657afc4ac1"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "dimension-modifier-tables",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "mutates",
+          "target": "dimension-effect-objects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "dimension-selection-tables",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Track alteredVanillaEffects and current-dimension consumers through actual generation changes; reset method name is not restoration evidence."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.particle_modifiers",
+      "reloadOrder": 19,
+      "stateSymbols": [
+        "particleModifiers",
+        "xpOrbReplaceJson",
+        "xpOrbReplaceParticle"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode full/partial modifiers, attach companion color data and enabled/orphan modifiers, then decode a separately supplied XP-orb replacement.",
+        "apply": "Log modifier count.",
+        "reset": "Clear particle modifier table; the shown hook does not clear the separate XP-orb fields.",
+        "live": "Particle creation/update and XP-orb replacement have different state roots."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java",
+          "line": 54,
+          "bodySha256": "f6c4d561b4b39f0035c3d651eea523fabf8ac623fba195a83568dcae116ce4bb"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java",
+          "line": 92,
+          "bodySha256": "eb6449e8f53774df12a02280aaeb08c0a51b77770a247c0ae750895cc64bc5e6"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java",
+          "line": 108,
+          "bodySha256": "c2911678a9fcfd4b66d1dbbcf64f4ae17cf3b42f2922a18b82d2363b141fd631"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "particle-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "xp-orb-replacement",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "particle-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Qualify lifetimes of existing particles and separate XP-orb state rather than deriving reset of both from one clear."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.slotify",
+      "reloadOrder": 20,
+      "stateSymbols": [
+        "byClass",
+        "byMenuId",
+        "byTitle",
+        "slotsByClass",
+        "slotsByMenuId",
+        "slotsByTitle"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode enabled GUI definitions; resolve class/menu/title targets into modifier and slot indexes. General class names use Class.forName(String), not metadata-only lookup.",
+        "apply": "Log nonempty target indexes.",
+        "reset": "Clear menu/class/title and slot indexes.",
+        "live": "Screen/menu/slot consumers match actual class, registry ID or title; class lookup can initialize existing code before index publication."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java",
+          "line": 62,
+          "bodySha256": "b3d9e580c7ef9cfb22e8731c0dbeba0479035a0e6af9e07c7bce2bb2a7440c7a"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java",
+          "line": 115,
+          "bodySha256": "5585232c0e3d2d2a86ecfd3240a00bb6ad03cb32962e8a945ba8b221d06f96b4"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java",
+          "line": 52,
+          "bodySha256": "9064c2384f1fa69fb7460567f9624bf3462163bccbb67d411824ee6f39f4229e"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "initializes",
+          "target": "named-java-class",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "gui-target-indexes",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "gui-target-indexes",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "ClassNotFoundException is handled locally; initialization/linkage failures are different. No actual GUI pack or security exploit is qualified."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.overlay_modifiers",
+      "reloadOrder": 21,
+      "stateSymbols": [
+        "blitModifiers",
+        "active",
+        "index"
+      ],
+      "phaseSemantics": {
+        "prepare": "Reload heart-sprite metadata before returning default assets.",
+        "parse": "Decode enabled modifiers and replace matching texture IDs with a warning.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear blit modifier table.",
+        "live": "An active render region and incrementing blit index determine application; heart sprites and render-state boundaries are separate."
+      },
+      "methodAnchors": {
+        "reloadHearths": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+          "line": 135,
+          "bodySha256": "e83e32bec580974f3cfc75fc9138805df0f0320f643bb0637c2932d28df988c1"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+          "line": 59,
+          "bodySha256": "048c871be6296183fbc8f6877802654edb8fe1572f604d2127c3ad4b7d8a4b6b"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+          "line": 40,
+          "bodySha256": "bc124704b1edf09e766627c3d7e32fa252d718f654f869c9e908a1765bbc9b6d"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+          "line": 55,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+          "line": 35,
+          "bodySha256": "01ee36dc9f59f43a4168f04b40907c4ede6ce171e728b8ede0e2a20bf1157c43"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "prepare",
+          "relation": "replaces",
+          "target": "heart-sprite-metadata",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "blit-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "blit-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Follow index scope, interception order, heart metadata, render-state restoration, and mixed GUI consumers."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.entity_modifiers",
+      "reloadOrder": 22,
+      "stateSymbols": [
+        "emittersPerEntity"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Register enabled entity modifiers.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear emittersPerEntity.",
+        "live": "Entity tick/emitter and colored-light consumers use resolved entity-type mappings."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java",
+          "line": 27,
+          "bodySha256": "cf1a770d40c580cda642c16f5dc8690151c4542428a7a3dcc9625e8d73b9d84a"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java",
+          "line": 45,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java",
+          "line": 49,
+          "bodySha256": "afc42327ebcb5c2c32f22587a41578716d7d4d9fc45ff138348107ed1e7b51e4"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "entity-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "entity-modifier-table",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Actual entity identity, emission timing and already-created particles are outside table clearing."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.creative_tabs_modifiers",
+      "reloadOrder": 23,
+      "stateSymbols": [
+        "extraTabs",
+        "customTabs",
+        "vanillaTabs",
+        "needsRefresh",
+        "modifiers"
+      ],
+      "phaseSemantics": {
+        "prepare": "Parse creative_tabs CSV into extraTabs before returning default assets.",
+        "parse": "Register CSV/declared new tabs, add enabled modifiers, and enqueue tab sorting when custom tabs exist.",
+        "apply": "Invalidate cached creative-tab parameters when refresh is needed.",
+        "reset": "Clear preview, unregister custom tabs, enqueue logout sorting, restore captured attributes, mark old modifiers for refresh, then clear pending modifiers.",
+        "live": "Creative inventory rebuild/preview and tab order consume registry entries and refresh state."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java",
+          "line": 47,
+          "bodySha256": "895265c4a312cd45fa8f3b31c1864a4c50359592fc96660c9db10c8396e13862"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java",
+          "line": 75,
+          "bodySha256": "61f58e0b87e6e6114c56cb3d28fa29099c9e7c68f7bc6b026c34ed2a7836eae4"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java",
+          "line": 114,
+          "bodySha256": "2441eb9475195597569529d58c81a42703669943612f1935fcde8bd554996fee"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java",
+          "line": 53,
+          "bodySha256": "db35a8687bde9a054f862736644d303e0812da82a5f403babd7d2fccbf66da78"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "prepare",
+          "relation": "replaces",
+          "target": "extra-tab-csv",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "registers",
+          "target": "creative-tab-registry",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "schedules",
+          "target": "creative-tab-sort",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "invalidates",
+          "target": "creative-tab-cache",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "restores",
+          "target": "creative-tab-before-images",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Enqueued sort is not completed sorting, and unregister does not prove all open screens dropped a tab reference."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.post_targets",
+      "reloadOrder": 24,
+      "stateSymbols": [
+        "targets",
+        "definitions",
+        "dirty"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode per-target specs with logged partial results, publish a copied definition map and set dirty.",
+        "apply": "Own apply hook is empty.",
+        "reset": "Clear definitions and call destroyAll on existing render targets.",
+        "live": "ensureAllocated creates/resizes targets later; getTarget returns references used by post chains."
+      },
+      "methodAnchors": {
+        "ensureAllocated": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 70,
+          "bodySha256": "ab0d1450d6eb721e23448fbe6e11c57ec8ba59f16fc0a98498425b577b4a1f97"
+        },
+        "destroyAll": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 95,
+          "bodySha256": "3a69bed1beac7e2b7e69075a1c318ad5abac4bf36e3ac86607d3c1062f7cefd4"
+        },
+        "getTarget": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 62,
+          "bodySha256": "f49194ee71deaabe3ba7912a97cd206d69d06e0ff427601a2f69ae9b38427df4"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 36,
+          "bodySha256": "120f790ae9752cf47835e0d670997aab58430376e2b406f760a57bbeced916f3"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 52,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+          "line": 56,
+          "bodySha256": "0c79b646173cbdcec53a9f64a83754528c286357ec9df8e0d02bcc255148e440"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "post-target-definitions",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "requests-retirement",
+          "target": "render-target-buffers",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "destroyBuffers does not establish GPU completion or retirement of references held by post chains."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.post_chains",
+      "reloadOrder": 25,
+      "stateSymbols": [
+        "effects",
+        "activeChains",
+        "failedChains",
+        "depthSnapshot",
+        "processingEffect"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Close previous chains/depth state before decoding enabled effects into the effect list.",
+        "apply": "Inherited empty hook; live tick/render owns later loading and application.",
+        "reset": "Close active chains, clear definitions/failures, and close depth snapshot.",
+        "live": "Tick admission, chain loading, depth capture, resize, processing, sampler bindings and rendering are separate operations."
+      },
+      "methodAnchors": {
+        "closeEverything": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 224,
+          "bodySha256": "4dca662c9ea394d44f1697e0b86dd71c2bed90ddf758dfb7c8b170732c555b4c"
+        },
+        "closeActiveChains": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 216,
+          "bodySha256": "5f2ca0198a29e31681469f036e1a612ff6df8d89ad5f6e716f552185f23b189c"
+        },
+        "tick": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 61,
+          "bodySha256": "8e331ec5dde299f22218ecda3662fb868a7e50d4f62f83253f18af0a55d2f168"
+        },
+        "renderAfterMainPostEffect": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 171,
+          "bodySha256": "edf0fd2a20fbd75aa0bcabc88c533be3f946d7edbea325262dcbe76a227f21f0"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 48,
+          "bodySha256": "94686b12cf62aa5bcd23ce93b887aca394b8a3fe073bf70f469c7f192cb57aaf"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 144,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "line": 57,
+          "bodySha256": "f1aba237ae8f3fcca17f7818da64ece4ed13ba422da93fbade9946c0ebeb86fe"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "requests-retirement",
+          "target": "prior-post-chains",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "parseWithLevel",
+          "relation": "publishes",
+          "target": "post-chain-effects",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "requests-retirement",
+          "target": "post-chain-depth-resources",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Failure after old-chain closure is not rollback. Target/sampler references, backend/device generation and actual GPU lifetime remain open."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.voxel_volume",
+      "reloadOrder": 26,
+      "stateSymbols": [
+        "volume",
+        "changedBlocks",
+        "palette",
+        "requestedThisFrame",
+        "registerCallbacks"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited collector with no constructor directory; callback registration is the principal input.",
+        "parse": "Clear block/provider flags and invoke registration callbacks admitted by activation policy and colored-light availability.",
+        "apply": "Close current volume and compute spread state; reset frame demand.",
+        "reset": "Close volume, close palette only on logout, close both compute helpers, and reset requestedThisFrame.",
+        "live": "World/block changes, renderer demand, async queues, palette and compute/storage resources have distinct custody."
+      },
+      "methodAnchors": {
+        "closeVolume": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "line": 316,
+          "bodySha256": "16da30d3e5c7c874b7ebec5a7cc7c98e10dfa7c48536034823b438ab4e9688e8"
+        },
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "line": 75,
+          "bodySha256": "7d4680381bd066f5e58cbe068913ed218de051b45d91cdd3c7feaabc75ba1625"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "line": 89,
+          "bodySha256": "f35157eae0e3c35a32d8cde92fdb494647b2d83a29af0fa48eaa00477feb4bff"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "line": 97,
+          "bodySha256": "f5c43b83b74cbca489787b81ce873514300517b3c6f0779fe1e6b22ba1e19ca9"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "invokes",
+          "target": "registered-voxel-callbacks",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "requests-retirement",
+          "target": "voxel-volume",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "requests-retirement",
+          "target": "voxel-palette-on-logout",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "Callback invocation executes external code. Track shared palette lifetime, queued changes, compute submissions and device/world generations."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    },
+    {
+      "id": "polytone.shader_uniforms",
+      "reloadOrder": 27,
+      "stateSymbols": [
+        "parsed",
+        "uniformsByShader"
+      ],
+      "phaseSemantics": {
+        "prepare": "Inherited resource collection.",
+        "parse": "Decode enabled per-shader expression maps into a new parsed map.",
+        "apply": "Publish parsed map as uniformsByShader.",
+        "reset": "Replace both maps with empty maps.",
+        "live": "Expression evaluation and actual shader binding occur later under rendering context."
+      },
+      "methodAnchors": {
+        "earlyProcess": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 131,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "prepare": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 134,
+          "bodySha256": "12349b91eee407a887f321553b1f0e07e2e5d3e5a256e8f934e8e62aeb9da673"
+        },
+        "parseWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java",
+          "line": 25,
+          "bodySha256": "6bba99fd8c1222a1d6f04a4e76762515795b553bd77683fdfbd2d684c19cb971"
+        },
+        "parseWithoutLevel": {
+          "source": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java",
+          "line": 141,
+          "bodySha256": "bca20d05f414bd5a8fb7ca06a75dedffe8ba654e06b6f8bd9d40aaa4f8a93572"
+        },
+        "applyWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java",
+          "line": 36,
+          "bodySha256": "b68e2bf2fa8f01ae70462a26e6f93c56ad3837a875fd3435e22dd64b17d7f8f4"
+        },
+        "resetWithLevel": {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java",
+          "line": 41,
+          "bodySha256": "02c8de23599e5266c74b5850a198165f17c6c2df54adc4e7a2de5cf728fe9900"
+        }
+      },
+      "effectEdges": [
+        {
+          "operation": "parseWithLevel",
+          "relation": "replaces",
+          "target": "parsed-uniform-definitions",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "applyWithLevel",
+          "relation": "publishes",
+          "target": "shader-uniform-map",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        },
+        {
+          "operation": "resetWithLevel",
+          "relation": "clears",
+          "target": "shader-uniform-map",
+          "evidence": "source-interpretation;not-native-or-complete-effect-closure"
+        }
+      ],
+      "questions": [
+        "A published expression map is not an initialized shader uniform or proof of active backend compatibility."
+      ],
+      "qualification": "bounded source review;manager incomplete"
+    }
+  ],
+  "delegatedMethods": [
+    {
+      "source": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticles.java",
+      "method": "retireAll",
+      "line": 28,
+      "bodySha256": "48299d006d552eb60da8351e20092b4dbd2d4f629abe4a2663f5babd50954d26",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticles.java",
+      "method": "render",
+      "line": 33,
+      "bodySha256": "63d83b3e33feab70c051c2ef4ba49453f61b1bfc7aa181c15695dacb4785cd6f",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleRenderer.java",
+      "method": "close",
+      "line": 260,
+      "bodySha256": "c75f39b31028434a6a26556a35f33aae29400021d70a4dbfa8b5794d3d1ca14a",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleHeightmap.java",
+      "method": "close",
+      "line": 70,
+      "bodySha256": "4abeb4a0bb9f54ebdf6d5a98dbb8ad5aa44c6d735f14cc9182e65a17a16e3dd7",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java",
+      "method": "reload",
+      "line": 42,
+      "bodySha256": "bc3b2ee03be08a7a9062e787e06b32f4059d1ccd3320306e1000d444ad759d7e",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java",
+      "method": "applyWithLevel",
+      "line": 91,
+      "bodySha256": "a3a934a2518aa2f1d91fc48ac2d07e64dfcf94816b7e22c45dbcb0f5f3882290",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java",
+      "method": "resetWithLevel",
+      "line": 156,
+      "bodySha256": "ca5869cd3b137efb11c2400c4072ec7fb7ad1927fab15826952337b3edcbe30b",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java",
+      "method": "recordFailure",
+      "line": 143,
+      "bodySha256": "a5737a1785599d102d7ddf57093100c7b37b152eb56ea531c598220259bdb3e2",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    },
+    {
+      "source": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java",
+      "method": "polytone$captureLevelDepth",
+      "line": 127,
+      "bodySha256": "411690c58cb9b105bb6912e1bbf947f6ea715e3b2213da3aba0cac7e7cffdd74",
+      "qualification": "selected declared method;not hook reachability or GPU completion"
+    }
+  ],
+  "sources": {
+    "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java": {
+      "viewSha256": "0d45ed4efa8b6c8e605cfcd20140d36bd258d462511c262b535170cd323886e3",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.class",
+      "originalClassSha256": "e9ab8ae3a751638eb8719c64bb576fd95f4ca9bbbc6b319f4d6ac95bbce85dcd"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java": {
+      "viewSha256": "c608383a8767bc14a342ace538ed4fa6ee603f20912482159d2a52ec0dfcb6a0",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.class",
+      "originalClassSha256": "252c187fc0051d06c656995ed900840c22138a8e68f54295e69a8807ae2e70b1"
+    },
+    "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java": {
+      "viewSha256": "ba402eab1e9feae56cb3ff07028cb9e9da49fe8469e55fcb67f9e406f211d0e0",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.class",
+      "originalClassSha256": "50a9b5c376c615bf9aa4e5fa8d942e5baadbc3436fa42bc10f0aff14ed012a40"
+    },
+    "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java": {
+      "viewSha256": "fe65b8234d8c4db9b1eb0bf089d8f8aac9986eb38009ef55f79c66ae73e5c1dd",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.class",
+      "originalClassSha256": "578321acbad896d9aa11ad1fec19345ee25fe29fa4a00cf41eebd70f44bb2874"
+    },
+    "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java": {
+      "viewSha256": "8e0bb050507a4ffdf3bd70a637a4f0959a75b54c94c3a07429ab9dca7e241c8d",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.class",
+      "originalClassSha256": "2558d6ca86c918085d6a574b4c221fb8788153beb025871603c2065eff36e62c"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java": {
+      "viewSha256": "0aa71d4b0b4d762d5c4595b1afc687aba54080907cb9a718f8fe33bb49db6a17",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.class",
+      "originalClassSha256": "3d9816e8baa9447122685bb6a9e7a3d4429fd2d53c8d02330ad22fe3468de137"
+    },
+    "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java": {
+      "viewSha256": "ebca57c982cbdbdf227a1f9e5d10fcbaa726e4d35a53cd385225651e80fbde34",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.class",
+      "originalClassSha256": "10f4da932097c2598c677b19faeaaaf6741643dbb06b73ce235a0af220532a7f"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java": {
+      "viewSha256": "f07052c21926ed5e3037ed4096d524f39197cfed3b2bcc5bef8805b0d3d0c735",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.class",
+      "originalClassSha256": "a6d55297559770c11eb34dd371c267a3a41f20b9ce69fd08d53336e812d904db"
+    },
+    "net/mehvahdjukaar/polytone/content/color/ColorManager.java": {
+      "viewSha256": "865cfa95a71c919591f20dd36f0004e02707363f3d6de922890646d80ff9c0dc",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/color/ColorManager.class",
+      "originalClassSha256": "7e77684d0373ab126f8f19e6383d15d0a3f0715940d70507448b9355aa3fed2b"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/SingleFileContentManager.java": {
+      "viewSha256": "a2d46c6995445c27d1b175b8aa585207391ac53d473394d808d81423f60fe973",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/common/reloader/SingleFileContentManager.class",
+      "originalClassSha256": "1c31cf843d1b68c0ea71c9b282b45e72c8295935877a8662cf504fb3268fd2f6"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java": {
+      "viewSha256": "1f65e69bf8c116f8b224e523eb70de99a1bf1d48eafb551c3f1b33e2a631b478",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.class",
+      "originalClassSha256": "10d1991a39479a1f76f8ada6acdb767f027bd705ac35d191360d4668f09c6e8e"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java": {
+      "viewSha256": "d8b8dbb44c84d07e4cde438ce2d62848659047d41f0552d7924ac2ba0d159396",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.class",
+      "originalClassSha256": "b4027661bae618698d1510b8e49fca13de8340636668dcf5db4cd1f6407b2eab"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java": {
+      "viewSha256": "2e34125ad37a191cb720a2271492d1f9ceab406b5db0547121a20faca7013d27",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.class",
+      "originalClassSha256": "d3adca8dcdd07e683bf2d328d55efb995d87db1c3c143c585102660c782fe951"
+    },
+    "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java": {
+      "viewSha256": "d478fa876753f7abecf0ff8846be36257b6d85cf4644705bbed0255914a2a673",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.class",
+      "originalClassSha256": "4bcf2c9836ce91d85c4b9140a4e2b88d9ef3969c0cacf384c06c2d11622bfc7a"
+    },
+    "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java": {
+      "viewSha256": "515582970354795112373333665aecb95a0c0021587e28b3d609addafd5a6222",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.class",
+      "originalClassSha256": "7369a852a238ac0332f6ecaff1b2610384e0c540c113381b071845ede7a83af7"
+    },
+    "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java": {
+      "viewSha256": "6c1af02b40aa5f438e262713d0e16a5aa215eb2c37ebd3f7a7d48eeae9842844",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.class",
+      "originalClassSha256": "f6a4cc5eb5c03b17630781323b9fc09c48457c0205514ef1ecd594a26e259612"
+    },
+    "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java": {
+      "viewSha256": "9c793534ffd25ce464b71bc368b448240eb2a6d33f0c6f165003d34e961d0bdf",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.class",
+      "originalClassSha256": "7426afb41c4fd7fc857b4561b15aaceddb9c5ec47d67061fd59b4fe1a9c877e2"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java": {
+      "viewSha256": "8431418114c72a1da6f97110c1bb9416de094be631fa244db75647b12d2fad4d",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.class",
+      "originalClassSha256": "5748d45008830f6953a702e8d34c9c8450b60b29a425821c52a589420e24d3f3"
+    },
+    "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java": {
+      "viewSha256": "f2af0cc72406e6d5a10fbb06896f61205e6c8843a9551c8fb5fd34d216f24c07",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.class",
+      "originalClassSha256": "e6615711ba17bf0724b81c1e0d4c3c39641ac9a1faac6c38f883d30b78786bee"
+    },
+    "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java": {
+      "viewSha256": "d15471cc0a5ca48d4788e5ac4cc67d455ae666830e5da880d05ea25f1f962418",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.class",
+      "originalClassSha256": "e633517a71f6b040a40c81ae073da937ab7deb34963613451cd24bf127a8d658"
+    },
+    "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java": {
+      "viewSha256": "66522425866d706b5d9ce09b7dd5dc209811a69defda8b7d37f58f612796dae2",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.class",
+      "originalClassSha256": "ea390a3da8d854c154b5ec35edfc8e6ae84ff3d5b1c625fa5f3df31357ae31cb"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java": {
+      "viewSha256": "7105703af2120730a2faf25ee633684aeaab23aa958499039f3c310b1659843f",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.class",
+      "originalClassSha256": "27172a92c5642ee54bc8531166906383f3288eea3a3ec0b2cb2476ddf4e5231a"
+    },
+    "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java": {
+      "viewSha256": "d81120c93f44a0496cb83eb922cef1b2ebc626a0437b6f7cb59de895eea28010",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.class",
+      "originalClassSha256": "67c7c04a0b1f8e1a346dc33789de2a8a7255c0d581751f1f981138195e42c3e8"
+    },
+    "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java": {
+      "viewSha256": "f5217fb20a6c1759cebdbf45c059b108f4d001a564e03df24603ca3cda883fde",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.class",
+      "originalClassSha256": "f6948c003a9e78528aa52745376351ab40cb5204497764e43119d3c22b2af464"
+    },
+    "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java": {
+      "viewSha256": "60a753e4220b724be5949f9e2807b564daa8d041cde0f0e2781764216f42e90d",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.class",
+      "originalClassSha256": "3b96260f15d33bf97f3848c67960b5fa25c29d2a6baab2ff91bec4c6b0f80620"
+    },
+    "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java": {
+      "viewSha256": "8b6c5ab4d7df31d176c99a8577713bdc9fc78ad7cdae468e7d83f3693ad72295",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.class",
+      "originalClassSha256": "dc6fa41d66457a4be5cb9e3ca26a2682083ac7e2f8afe601d21944508d0f8724"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java": {
+      "viewSha256": "eba433d1ea5fa345395e157b01b6d9ad106f1652a064e382bb161228b9ffb1a3",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.class",
+      "originalClassSha256": "9cdf65b6663178ef25cc36ec2c499cc3059caeb630bfed3fc299c5b1d0ecc3d1"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java": {
+      "viewSha256": "8b804b0ad8ed96b6ab3dedbea6f982e35c13f395f04c4c5aed2dad0ce83019d7",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.class",
+      "originalClassSha256": "908fbfcd7108c9f53f08536771bfa62fd00a941043dfdd9c68888bb534aac9a2"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java": {
+      "viewSha256": "a7563d8a80faee806424b068c514f7a0f4fd4c5ec2b6093f7d2c4fb0f938ab75",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.class",
+      "originalClassSha256": "06ff26282185fe9abf7b336ed49d39525f800eca651f9381c1da93ef0a9a0482"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java": {
+      "viewSha256": "34553ebf91d001218bb2c6d75a59f619382606f0ef3d8844fb7be746fd5f71fe",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.class",
+      "originalClassSha256": "6856370d9553f84d7860f567c9c94adf5337730045c2dfe7053a5444d6b97018"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticles.java": {
+      "viewSha256": "7589c7f27a2867902ef9a3cc479d660ea202e7c3c72e40a1224e861b10af2bcd",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticles.class",
+      "originalClassSha256": "ac6056f8aeb8170b9d23f16cd3d00ba22c3e4e8f71e73f766bc516004237c97d"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleRenderer.java": {
+      "viewSha256": "5c7a5886c3c59035e48abc6dfa2b8acdcbeee709e008010aacd26a65336bc018",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleRenderer.class",
+      "originalClassSha256": "10d3d7340e1532ec9242e91e1cf7a31f64fc8214b15c55e0815a876c3195379a"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleHeightmap.java": {
+      "viewSha256": "1f84a7c397db2b110b92c51ded3ed1fe39909648c31e186c6f45f6e7f495feed",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/content/particle/gpu/GpuParticleHeightmap.class",
+      "originalClassSha256": "0a89b63b2ad35384292fd9970b59aadb7dcfc8a24a7d6401e899f1dde5110eef"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java": {
+      "viewSha256": "d877ee9e388e9d6159771fc7ddd3bf501aa894f99abab49f752fb42dfe052e55",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.class",
+      "originalClassSha256": "66018da0224bc3d0ae9b4c2e37b5e80d7ef2b06558fe114d9e46e854cd4bbde8"
+    },
+    "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java": {
+      "viewSha256": "ec2e6cd2538150e937f98e2783b75632db3c701a19a7baa7f4603ab0107074ce",
+      "originalClassEntry": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.class",
+      "originalClassSha256": "b97eb84cd5140f13b0a54538fc6b67a02a9f4c3b2129380c27d380139da48388"
+    }
+  },
+  "commonContracts": [
+    "common/Lifecycle.lean",
+    "common/Lifecycle.bend"
+  ],
+  "limits": [
+    "All28 manager records remain incomplete;source interpretation is not translation equivalence or native behavior.",
+    "Method anchors/state names/typed effect edges are reviewed locators,not a complete alias,call,effect or retaining-root analysis.",
+    "Shared orchestrator callback order does not make prepare/parse pure or the multi-manager operation atomic.",
+    "No game/provider/GUI/world/account operation executed;no actual class-target initialization or GPU close occurred in this source review."
+  ]
+}

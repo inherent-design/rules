@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "status": "passed-owner-local-lifecycle-source-and-class-lookup-cohort",
+  "testedBase": "4715260332bec46f4b76ac2bfc92e92df299a652",
+  "sourceReview": {
+    "managers": 28,
+    "typedEffectEdges": 93,
+    "sourceViews": 35,
+    "delegatedMethods": 9,
+    "completeManagers": 0,
+    "mapSha256": "21de1551a3d8ac9ea64a702dadd36b0223d0fbfee93b71fa6908b5ab825dfbb4"
+  },
+  "fullSourceGate": {
+    "leanModules": 180,
+    "bendFiles": 81,
+    "exitCode": 0,
+    "stdoutSha256": "fbeac1c8f5f29a7da325d610c45ad201841cc63e927fdb44f7c55cc67f3ba670",
+    "sourceProjection": "JSON tracked path->SHA256 with sort_keys=True and separators=(comma,colon)",
+    "sourceProjectionSha256": "493d31560b9147ea0af570de3871915e1e66db00b400294da3c9ec4d8d3ae431"
+  },
+  "nativeAndModels": {
+    "authoredHostCalls": 57,
+    "jdkMajors": [
+      17,
+      21,
+      25
+    ],
+    "nativeCompilerAndExecutionGroupsAbsent": 6,
+    "originalProviderStaticInspectionGroupsAbsent": 1,
+    "originalProviderClassesExecuted": 0,
+    "leanLaws": 22,
+    "bendLaws": 14,
+    "decoderRefusals": 11,
+    "adapterRefusals": 7,
+    "changedObservationControls": 10,
+    "conformanceSha256": "0f4cfae95cfe1b22dea631070601ebf44545d7cbf98f5867512a8616918aecaa"
+  },
+  "checks": [
+    {
+      "command": "scripts/check-rules.py (pinned tools)",
+      "exitCode": 0
+    },
+    {
+      "command": "class_init_conformance.py --output host/java/evidence/class-init-conformance.json (isolated compiled ClassInit module)",
+      "exitCode": 0
+    },
+    {
+      "command": "polytone_lifecycles.py --check --artifact <exact Polytone> --views <frozen original views>",
+      "exitCode": 0
+    },
+    {
+      "command": "export_class_init.py --check <three frozen captures>",
+      "exitCode": 0
+    },
+    {
+      "command": "scripts/check-meta.py",
+      "exitCode": 0
+    },
+    {
+      "command": "mise run format:check && mise run check:ci",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --cached --check",
+      "exitCode": 0
+    }
+  ],
+  "sourceIdentityLimits": [
+    "Decompiled source interpretation is not translation equivalence or manager runtime qualification.",
+    "One original invoke instruction is confirmed statically;no GUI target,provider startup or pack operation executed.",
+    "Native observations cover authored serial classes on named macOS JDK builds only.",
+    "The full source gate excludes the application owner unready joined-study files.",
+    "Initializer state is a model premise/abstraction;only authored effects,results,identity and catch flags are observed."
+  ],
+  "scanScope": "Exact source/history suppressions cover independently recomputed stream/scanner-source hashes only;no broad rule or path exclusion."
+}

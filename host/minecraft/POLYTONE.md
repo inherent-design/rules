@@ -6,6 +6,8 @@ The exact uninstalled NeoForge artifact selected in [targets](targets.json), Pol
 
 The [codec and inheritance extension](POLYTONE-CONTRACTS.md) resolves all 168 effective reload hooks, including 74 inherited bindings, and adds 294 definition-field locators across 62 class/view identities. Three bundled libraries sit outside the earlier outer-JAR census. A separate original CodecUI comparison qualifies 30 authored API-call outcomes; its schema hints and decoder admission remain distinct. No manager becomes complete through that extension.
 
+The [manager lifecycle review](POLYTONE-LIFECYCLES.md) adds source-owned state, 93 typed effect relationships, and distinct prepare/parse/apply/reset/live-consumer obligations across all 28 managers. The Java lookup witness and original GUI-manager instruction scan connect one concrete host boundary without executing the provider. Runtime consumer closure and retirement remain open.
+
 ## Definition families
 
 | Manager | Definition entry | Consumer and effect to qualify |

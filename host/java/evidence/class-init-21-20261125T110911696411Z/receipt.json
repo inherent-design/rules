@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "scope": "Authored class literals,Class.forName defaults/explicit initialization and controlled child-first class loaders; no application/provider/game/GUI class or native plugin loaded.",
+  "profile": {
+    "JAVA_VERSION": "21.0.13.1",
+    "JAVA_RUNTIME_VERSION": "21.0.13.1+2-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "host": {
+    "system": "Darwin",
+    "kernelRelease": "25.6.0",
+    "machine": "arm64",
+    "swVers": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n"
+  },
+  "jdkReleaseSha256": "2f1cd602bf21d35e6e2976d6a351693ff609bfcb285762263a54bf20e8a40afd",
+  "sourcesSha256": {
+    "ClassInitProbe.java": "7c6733a7ce802ffb99577b39479d2c9182ea508b0ee270c5fe9bfcd00a7762f9",
+    "class_init_probe.py": "afbfed3314732e0aba487972103f72e104f66312c15230893f3e6f5d29611ae9",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "limits": [
+    "Selected authored classes/serial requests on the recorded JDK/host; no simultaneous initialization,custom module,security-manager or arbitrary-loader contract.",
+    "initialize=false suppresses initialization of the named non-array class here; custom loader code can still execute and have effects.",
+    "Class identities are observer labels of actual Class reference equality, not executable capabilities or persistent identities.",
+    "Initialization failures retain authored counter effects; no application rollback/recovery or Polytone runtime defect is established.",
+    "JVM heap/CPU settings and group retirement do not measure total host memory or global reclamation.",
+    "Stdout contains authored target/counter observations and hashes of actual runtime Class/ClassLoader bytes, not every VM/native dependency."
+  ],
+  "classesSha256": {
+    "study/host/ClassInitProbe$Good.class": "bf07693cc7d18d188f93d309c2823f69e7171af6d68318d9612abf5942c70d01",
+    "study/host/ClassInitProbe.class": "334f43efaaad8d73be3afd4d35eadf2354b19f827ab5d56ebe8b3e1ef2de5081",
+    "study/host/ClassInitProbe$CountingLoader.class": "fb62ff7b2e43fe95de14f1597305a223cfdb744af1017755a621aaf391e01b0e",
+    "study/host/ClassInitProbe$Bad.class": "5d3c460e02a2146fce94fa82a77e2c13b24e44671d389ed9a633b960e280afc8",
+    "study/host/ClassInitProbe$ArrayElement.class": "52f38280d3cd5da34ad3712206e8a6b653af44c75c22ed9cfe067aa0e21aa684",
+    "study/host/ClassInitProbe$Lookup.class": "7e48182cc1c152752b9ed481d1a39f47be903f86b10f02ffc7308019b058cd33",
+    "study/host/ClassInitProbe$HardBad.class": "ab20a12e9cd590cdde571a582c7b9998ea8d7c2b53e84b471fc84250f9095456"
+  },
+  "cases": 19,
+  "runtimeClassesSha256": {
+    "java/lang/Class.class": "b7c8164c4a7cfefec12b2fa51bd44e582c1e93dd69083c121b4d8846d62f18af",
+    "java/lang/ClassLoader.class": "1a3959527c8a805391bb21d0bccf9a0bb738383b444a24e87ed4ba130b4e788d"
+  },
+  "observedSha256": "eb3df0268d507490f3db15dfa0781e545349ebbdc86f402db57d1d58b3d5feb2",
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "ecf20ae96db9c6237e18c5c7684fbf70ebc19472b16248d1844868584e2c9783"
+    }
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.3192703751847148,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv retained privately; frozen producer constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.085551249794662,
+      "stdoutSha256": "eb3df0268d507490f3db15dfa0781e545349ebbdc86f402db57d1d58b3d5feb2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv retained privately; frozen producer constructs it."
+    }
+  ],
+  "privateReceiptSha256": "493f673e9d56ca9c2cac9e7afb7d137e38251a637a18fe469892f1ff695af7f1"
+}
