@@ -1,0 +1,6760 @@
+{
+  "schema": 1,
+  "kind": "Draft7Validator library observations; not Bedrock client",
+  "cases": [
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "ordinary",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "not-object",
+      "kind": "culling",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "empty-object",
+      "kind": "culling",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "missing-description",
+      "kind": "culling",
+      "input": {
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "null-description",
+      "kind": "culling",
+      "input": {
+        "description": null,
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "missing-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {},
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "empty-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "numeric-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description",
+            "identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "properties",
+            "identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "missing-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "null-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "empty-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "null-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "empty-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "unknown-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "null-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "type"
+          ]
+        },
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "geometry-missing-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "null-geometry",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "empty-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-negative",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "minimum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "minimum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-zero",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-whole-float",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-fraction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-bool",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "cube-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "face-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "face-uppercase",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "face"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "face",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "condition-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "condition-number",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        },
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "condition-null",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        },
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "opaque-true",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "opaque-false",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "opaque-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "cull_against_full_and_opaque"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "cull_against_full_and_opaque",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "unknown-property",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.20.60/block/Culling.json",
+      "case": "duplicate-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Atmosphere Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Color Grading Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Lighting Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.90.3:metadata/json_schemas/client/1.21.70/biome/Water Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "ordinary",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "not-object",
+      "kind": "culling",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-object",
+      "kind": "culling",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-description",
+      "kind": "culling",
+      "input": {
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-description",
+      "kind": "culling",
+      "input": {
+        "description": null,
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {},
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "numeric-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description",
+            "identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "properties",
+            "identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "unknown-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "geometry-missing-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-geometry",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-negative",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "minimum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "minimum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-zero",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-whole-float",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-fraction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-bool",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "face-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "face-uppercase",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "face"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "face",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-number",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-null",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-true",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-false",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "unknown-property",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "duplicate-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "ordinary",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "not-object",
+      "kind": "culling",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-object",
+      "kind": "culling",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-description",
+      "kind": "culling",
+      "input": {
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-description",
+      "kind": "culling",
+      "input": {
+        "description": null,
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {},
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "numeric-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description",
+            "identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "properties",
+            "identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "unknown-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "geometry-missing-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-geometry",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-negative",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "minimum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "minimum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-zero",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-whole-float",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-fraction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-bool",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "face-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "face-uppercase",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "face"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "face",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-number",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-null",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-true",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-false",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "cull_against_full_and_opaque"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "cull_against_full_and_opaque",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "unknown-property",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.21.120.4:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "duplicate-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "cubemap_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "cubemap_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "cubemap_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "cubemap_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "cubemap_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "cubemap_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "cubemap_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "cubemap_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "cubemap_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.130/Cubemap Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "atmosphere_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "atmosphere_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "atmosphere_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Atmosphere Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "color_grading_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "color_grading_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "color_grading_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Color Grading Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "lighting_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "lighting_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "lighting_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Lighting Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "ordinary",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings"
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "empty-string",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": ""
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "numeric",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": 1
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "null",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "water_identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "water_identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "missing",
+      "kind": "biome-identifier",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "wrong-field",
+      "kind": "biome-identifier",
+      "input": {
+        "unrelated": "study:settings"
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "extra-property",
+      "kind": "biome-identifier",
+      "input": {
+        "water_identifier": "study:settings",
+        "unknown_property": {
+          "nested": null
+        }
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/biome/1.21.70/Water Identifier Client Biome Component.json",
+      "case": "not-object",
+      "kind": "biome-identifier",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "ordinary",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "not-object",
+      "kind": "culling",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-object",
+      "kind": "culling",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-description",
+      "kind": "culling",
+      "input": {
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-description",
+      "kind": "culling",
+      "input": {
+        "description": null,
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {},
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "numeric-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description",
+            "identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "properties",
+            "identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "missing-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "unknown-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "geometry-missing-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "null-geometry",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "empty-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-negative",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "minimum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "minimum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-zero",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-whole-float",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-fraction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-bool",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "cube-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "face-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "face-uppercase",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "face"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "face",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-number",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "condition-null",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-true",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-false",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "opaque-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "unknown-property",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.20.60/Culling.json",
+      "case": "duplicate-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "ordinary",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "not-object",
+      "kind": "culling",
+      "input": [],
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [],
+          "schemaPath": [
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-object",
+      "kind": "culling",
+      "input": {},
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-description",
+      "kind": "culling",
+      "input": {
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-description",
+      "kind": "culling",
+      "input": {
+        "description": null,
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {},
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "description"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "numeric-identifier",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "description",
+            "identifier"
+          ],
+          "schemaPath": [
+            "properties",
+            "description",
+            "properties",
+            "identifier",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "missing-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [],
+          "schemaPath": [
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-rule",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        },
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "unknown-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-direction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "direction"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "direction",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "geometry-missing-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "required",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "required"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "null-geometry",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "empty-bone",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-negative",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "minimum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "minimum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-zero",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-whole-float",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-fraction",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-bool",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "cube-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "cube"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "cube",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "face-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "face-uppercase",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "geometry_part",
+            "face"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "geometry_part",
+            "properties",
+            "face",
+            "enum"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-valid",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-number",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "condition-null",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "enum",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "enum"
+          ]
+        },
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "condition"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "condition",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-true",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-false",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "opaque-string",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      },
+      "accepted": false,
+      "instanceUnchanged": true,
+      "errors": [
+        {
+          "keyword": "type",
+          "instancePath": [
+            "rules",
+            0,
+            "cull_against_full_and_opaque"
+          ],
+          "schemaPath": [
+            "properties",
+            "rules",
+            "items",
+            "properties",
+            "cull_against_full_and_opaque",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "unknown-property",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    },
+    {
+      "source": "bedrock-samples-1.26.30.5:metadata/json_schemas/client/block/1.21.80/Culling.json",
+      "case": "duplicate-rules",
+      "kind": "culling",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      },
+      "accepted": true,
+      "instanceUnchanged": true,
+      "errors": []
+    }
+  ]
+}

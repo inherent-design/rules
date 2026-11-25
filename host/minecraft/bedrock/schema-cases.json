@@ -1,0 +1,506 @@
+{
+  "schema": 1,
+  "kind": "authored schema-validator requests; not native-client inputs",
+  "culling": [
+    {
+      "id": "ordinary",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "not-object",
+      "input": []
+    },
+    {
+      "id": "empty-object",
+      "input": {}
+    },
+    {
+      "id": "missing-description",
+      "input": {
+        "rules": []
+      }
+    },
+    {
+      "id": "null-description",
+      "input": {
+        "description": null,
+        "rules": []
+      }
+    },
+    {
+      "id": "missing-identifier",
+      "input": {
+        "description": {},
+        "rules": []
+      }
+    },
+    {
+      "id": "empty-identifier",
+      "input": {
+        "description": {
+          "identifier": ""
+        },
+        "rules": []
+      }
+    },
+    {
+      "id": "numeric-identifier",
+      "input": {
+        "description": {
+          "identifier": 1
+        },
+        "rules": []
+      }
+    },
+    {
+      "id": "missing-rules",
+      "input": {
+        "description": {
+          "identifier": "x"
+        }
+      }
+    },
+    {
+      "id": "null-rules",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": null
+      }
+    },
+    {
+      "id": "empty-rules",
+      "input": {
+        "description": {
+          "identifier": "x"
+        },
+        "rules": []
+      }
+    },
+    {
+      "id": "null-rule",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          null
+        ]
+      }
+    },
+    {
+      "id": "empty-rule",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {}
+        ]
+      }
+    },
+    {
+      "id": "unknown-direction",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "NORTH",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "null-direction",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": null,
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "geometry-missing-bone",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "null-geometry",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "empty-bone",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-negative",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": -1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-zero",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-whole-float",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-fraction",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": 1.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-bool",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cube-string",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "cube": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "face-valid",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "south"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "face-uppercase",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root",
+              "face": "SOUTH"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "condition-valid",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": "same_block"
+          }
+        ]
+      }
+    },
+    {
+      "id": "condition-number",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": 123
+          }
+        ]
+      }
+    },
+    {
+      "id": "condition-null",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "condition": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "opaque-true",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "opaque-false",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "opaque-string",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "cull_against_full_and_opaque": "true"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-property",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            },
+            "newer_host_field": {
+              "nested": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "duplicate-rules",
+      "input": {
+        "description": {
+          "identifier": "study:culling"
+        },
+        "rules": [
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          },
+          {
+            "direction": "north",
+            "geometry_part": {
+              "bone": "root"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "biome": [
+    {
+      "id": "ordinary",
+      "value": "study:settings"
+    },
+    {
+      "id": "empty-string",
+      "value": ""
+    },
+    {
+      "id": "numeric",
+      "value": 1
+    },
+    {
+      "id": "null",
+      "value": null
+    },
+    {
+      "id": "missing",
+      "missing": true
+    },
+    {
+      "id": "wrong-field",
+      "wrongField": true
+    },
+    {
+      "id": "extra-property",
+      "value": "study:settings",
+      "extra": true
+    },
+    {
+      "id": "not-object",
+      "notObject": true
+    }
+  ]
+}

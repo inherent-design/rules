@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "status": "passed-bounded-source-schema-comparison",
+  "comparisons": {
+    "schema": 1,
+    "status": "passed-retained-validator-comparisons",
+    "validatorObservations": 274,
+    "sourceSchemas": 18,
+    "nativeClientObservations": 0,
+    "decoderRefusals": 7,
+    "changedSourceProfiles": 3,
+    "changedPremises": 5,
+    "basisSha256": {
+      "host/minecraft/bedrock/SchemaContracts.lean": "d99f0af2465ab59893eef62e0f4e0c4aee781a4a91d70443e14625e90f164141",
+      "host/minecraft/bedrock/SchemaContracts.bend": "430a84a9e7d327a2d020ccde9ff70876e8031ec791389a37e0ba788f4d0a3613",
+      "host/minecraft/bedrock/SchemaCase.lean": "97fb6b66d879e0af367d2426a0fece435bbb060d1bb7ef1a8d622b4133dd4a85",
+      "host/minecraft/bedrock/schema-profiles.json": "2caa7f61cc68ae75f1ecc5c0ba591a67087d404ddb55b9edc7f3a8b18f3a8b6d",
+      "host/minecraft/bedrock/compile_schemas.py": "a938a42bfc9479921ae28a520e11fc0ef78a606ca5077664952c7988f35301e9",
+      "host/minecraft/bedrock/schema_conformance.py": "eb13ecab0fdef76cd50a006842ea078b07436189ff6d8a86d4517704dedaf647",
+      "host/minecraft/bedrock/source-facts.json.gz": "aae43afc8ac67895e33ef46faf12a5890d393c38ca124d640a7b838afd7b1529",
+      "host/minecraft/bedrock/catalog.json": "0938ff2a46c159000214c9287396d3fa27d72878776744613e7adbe3e6f65fc3",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/observed.json": "622dca4f6b83a9d53fe98d3fd6b6ef48569b75f979b3baa84569246ccd854fa8",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/receipt.json": "17466dfda55c3c4b7df712df23a3d2ba24bf75dd3252f144409b95f19dda6932",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/schema-cases.json": "acc7799064b1590636ee5b203e1135d0215232fa2cb6784d19a08949c645fc0e",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/schema_probe.py": "17230452afbd9f9f8b21e4b9624b9017c10d7324f968b73210fa2655476c3e6f",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/sources.json": "64fdeb53bdc6d6610a0cb2ed1a6048520db17212500426474a5c2f6623f8d2d1",
+      "host/minecraft/bedrock/evidence/bedrock-schema-20261125T090157538761Z/tool-inputs.json": "312a645900e719341778212aae1897a10903a93d1a02995eee5c35a9f3df33e5"
+    },
+    "limits": [
+      "Original Draft 7 schemas evaluated by jsonschema4.26.0, not by a Bedrock executable.",
+      "Projected parsed-JSON field/type states; no general wire grammar or complete schema engine proof.",
+      "Validation does not insert defaults, resolve geometry/settings, cull faces, or apply a rendering pipeline."
+    ]
+  },
+  "sourceAudit": {
+    "schema": 1,
+    "status": "passed-owner-local-source-audit",
+    "producerSha256": "73881e060918897799f5f5483511b3b0aaee633fbecaa9228cf63a1f63894eb7",
+    "sourceSchemas": 18,
+    "wheelArtifacts": 5,
+    "wheelLogicalBytes": 545432,
+    "sourceHashesAndGitBlobsRecomputed": true,
+    "validatorReruns": 0,
+    "nativeClientOperations": 0,
+    "compilerUnsupportedDriftRefusals": 5,
+    "installedLibraryInputsVerifiedAtCapture": 112,
+    "originalCaptureReceiptSha256": "17466dfda55c3c4b7df712df23a3d2ba24bf75dd3252f144409b95f19dda6932",
+    "findingsSha256": "8df905e84148379c4f9626315f39910164b8aafd2ca5d9185c0aa22fa6a6c40f"
+  },
+  "newFormalGate": {
+    "command": "LEAN=<pinned4.34.0> BEND=<pinned2.0.40> python3 scripts/check-rules.py",
+    "scope": "Isolated checkout of two new Lean modules and one Bend file; existing checked formal inputs rechecked unchanged.",
+    "leanModules": 2,
+    "bendFiles": 1,
+    "stdoutSha256": "06dbba3d5b37ec6c888b52912b59a27a9be95e4b99c05f186f8b1cf99639ada7"
+  },
+  "retirement": {
+    "scope": "Exact Python collector argv only; not host-wide process or syscall audit",
+    "collectorArgvMatches": [],
+    "wrapperExitCode": 0,
+    "sourceDeclaresSubprocesses": 0
+  },
+  "limits": [
+    "Native Bedrock/client/render observations remain zero.",
+    "Formal and adapter agreement is bounded by the inspected schema subset and retained parsed instances.",
+    "Tools/caches/evidence writes are separate from in-memory instance nonmutation.",
+    "Combined remote CI remains a later publication check, without validator/client execution."
+  ]
+}

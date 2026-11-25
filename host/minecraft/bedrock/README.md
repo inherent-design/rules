@@ -63,4 +63,6 @@ The check verifies provenance relationships, edition/source boundaries, declarat
 
 The first [bounded texture-set models](TEXTURE-SETS.md) interpret an independently pinned Microsoft documentation revision. They cover local reference ownership, eligible definition replacement, selected layer/channel restrictions, and separate declaration evidence. Authored cases are not native observations, and current documentation does not qualify the earlier sample tags.
 
+The [culling and biome models](SCHEMAS.md) separately compare 274 retained Draft 7 validator-library results on 18 original schemas. They expose same-format declaration differences, open unknown properties, default annotations, and string-versus-resource resolution. A schema validator is not the native client or renderer.
+
 Continue interpreting bounded rules across the other families, with exact consumer/context and pipeline premises. Native admission, reference resolution, behavior, reload and rendered checks remain unqualified. A faithful backport, restricted asset conversion, explicit approximation and unsupported/unknown outcome must remain independently selectable; no combined mod implementation or pack change is selected.
