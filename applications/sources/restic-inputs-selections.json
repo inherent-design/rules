@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "internal/filter/filter.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__filter__filter.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/filter/filter.go",
+      "sha256": "84627df4edec1f47c2a765d9fe381718fd2246a5b5b99792b7cdb59ac42bca91",
+      "gitBlobSha1": "c4a26cdd5f39d01a3684e2f1fb28964ab99864c5",
+      "bytes": 8663,
+      "inspection": "Inspected preparePattern/path splitting,match and double-wildcard dispatch,Validate/ParsePatterns and ordered List fold. General pattern grammar remains unqualified;native cases select simple patterns."
+    },
+    {
+      "path": "internal/filter/exclude.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__filter__exclude.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/filter/exclude.go",
+      "sha256": "b44258978a5f225654c4f69a515ca2be707ef99547738928758cb2a8c55513da",
+      "gitBlobSha1": "44f4331c05ad1e4daf40ce18453cc88fff27316e",
+      "bytes": 4845,
+      "inspection": "Entire:RejectByPattern,case-insensitive wrapper,file pattern expansion and collector group ordering. Native cases do not exercise exclude files/environment expansion."
+    },
+    {
+      "path": "internal/filter/include.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__filter__include.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/filter/include.go",
+      "sha256": "7ebe38cf4707c67d4cfa66ea15e1b1acd380c44b263fc3f1fdf384b3480206be",
+      "gitBlobSha1": "ae512b5211e19aff9babca7156a851de50a8f35d",
+      "bytes": 3657,
+      "inspection": "Selected declarations and CollectPatterns/IncludeByPattern:separate restore include with childMayMatch. Not a backup include switch;no native restore-include execution in this band."
+    },
+    {
+      "path": "internal/filter/doc.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__filter__doc.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/filter/doc.go",
+      "sha256": "a7387bbc50302c002b2f63110b75f51d6e0ac9fd1b53680894fffb6015847a48",
+      "gitBlobSha1": "38c22e541c4786ec96d3581e52b0c7c28d2eccbb",
+      "bytes": 254,
+      "inspection": "Entire package contract:filepath.Match components plus recursive double wildcard;source-only attribution."
+    },
+    {
+      "path": "internal/filter/filter_test.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__filter__filter_test.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/filter/filter_test.go",
+      "sha256": "2c55aa57abf413d3f6d67d984a1e516696886673f0744834ebbbd9827db1d0d1",
+      "gitBlobSha1": "573c2ede6c512d23881b23aed6f4023cfc80a0cf",
+      "bytes": 14111,
+      "inspection": "Acquired and Git-blob verified;selected input-policy sections next. Not yet native/model qualified."
+    },
+    {
+      "path": "internal/archiver/archiver.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__archiver__archiver.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/archiver/archiver.go",
+      "sha256": "b8e49ce179c2687c396620faee393ea4b1e872cbdf99543234c5b4a61c16df32",
+      "gitBlobSha1": "1aec7078544303218d8bf3f584656e4eac0ae0a0",
+      "bytes": 29202,
+      "inspection": "23-29,461-496 selected:name/metadata filters skip explicitly requested roots and rejected directories are not walked. No complete archiver concurrency or persistence proof."
+    },
+    {
+      "path": "cmd/restic/cmd_backup.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/cmd__restic__cmd_backup.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_backup.go",
+      "sha256": "982ff7e20a3038342b4d7f3c3f7f0927cd7a53cff110387fda656a49e79df683",
+      "gitBlobSha1": "63814fb93c4f3f9ba885e3679f54cd5d354dc217",
+      "bytes": 21990,
+      "inspection": "183-297 and406-465:existence filtering,normal/verbatim line lists,NUL raw framing,glob/comment/whitespace behavior,target aggregation. Partial-source status established by actual CLI capture,not complete source error-flow proof. Also332-354,550-554,628-635:callback collection and CombineRejectByNames admission source-only;actual combiner selected separately."
+    },
+    {
+      "path": "doc/040_backup.rst",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/doc__040_backup.rst",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/doc/040_backup.rst",
+      "sha256": "ffe01e38fa00fdc30424d971f665e2083551ada4869a6e326115fa57ed04c38b",
+      "gitBlobSha1": "1f664881a0399342476d8a2f7f2eedc7de7a6be3",
+      "bytes": 34830,
+      "inspection": "340-506:exclusions,explicit roots,component matching,ordered negation and inability to reopen descendants of a pruned parent. Device/special/cloud policies untested."
+    },
+    {
+      "path": "internal/archiver/exclude.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-inputs/internal__archiver__exclude.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/archiver/exclude.go",
+      "sha256": "64a920b03b488467262b4f26e05c90677da5b2faea06d5578db80eefc53a3f7e",
+      "gitBlobSha1": "57168092949310f54ac084b75ac54d4fb3ba57ef",
+      "bytes": 9705,
+      "inspection": "27-36 CombineRejectByNames:returns false if any rejection callback matches. Added/inspected after native collection;source-only composition support,not a separately executed helper or full callback set proof."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "case": "init",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "seconds": 2.9574319580569863,
+    "streams": {
+      "stdout": {
+        "rawSha256": "9f70591418da684763faba0a2d13b96e611f65c3ec5540eb40cec2095cf3609b",
+        "publicSha256": "f728d27fd4b65f851bea67b3e9a4227a238bce892a243fd8e69803bcf9c4a3bf",
+        "rawPrivatePath": "work/private/init.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/init.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    }
+  },
+  {
+    "case": "directory",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/password",
+      "--json",
+      "backup",
+      ".",
+      "--host",
+      "input-fixture-host"
+    ],
+    "seconds": 0.7550233751535416,
+    "streams": {
+      "stdout": {
+        "rawSha256": "217abd14e02402fe5fcc16acb6c22a317df6b2ab3ecb1fe976e5d5b86d251f7f",
+        "publicSha256": "217abd14e02402fe5fcc16acb6c22a317df6b2ab3ecb1fe976e5d5b86d251f7f",
+        "rawPrivatePath": "work/private/directory.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/directory.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    }
+  },
+  {
+    "case": "directory-ls",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-inputs-20261125T024920808343Z/work/password",
+      "--json",
+      "ls",
+      "ea66077ef5dcc063c8624b842202dbf34d956e0ab85f61624c33a7cf85e0263e"
+    ],
+    "seconds": 0.7098999577574432,
+    "streams": {
+      "stdout": {
+        "rawSha256": "57d371af88f4946d48ddd6c283918dc508f6483c35a08bd878a98eacf5d4a511",
+        "publicSha256": "8f309e8b6ad2aefa5764e37225192c6091c77acbadcd03a7bc337033f6cf8666",
+        "rawPrivatePath": "work/private/directory-ls.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/directory-ls.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    }
+  }
+]

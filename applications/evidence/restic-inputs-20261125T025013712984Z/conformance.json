@@ -1,0 +1,1153 @@
+{
+  "schema": 1,
+  "cases": 20,
+  "nativeCommands": 37,
+  "files": [
+    "#literal.txt",
+    "[literal].txt",
+    "keep.txt",
+    "line\nbreak.txt",
+    "nested/keep.txt",
+    "nested/secret.tmp",
+    "pruned/keep.txt",
+    "secret.tmp",
+    "space name.txt",
+    "\u03a9 \u65e5\u672c.txt"
+  ],
+  "comparisons": [
+    {
+      "case": "directory",
+      "input": {
+        "groups": [],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "exclude-descendants",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "explicit-file",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "secret.tmp"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "explicit-directory",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested",
+                "nested/keep.txt",
+                "nested/secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "nested"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "ordered-reinclude",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            },
+            {
+              "negated": true,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "ordered-reexclude",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": true,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            },
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "pruned-parent",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "pruned",
+                "pruned/keep.txt"
+              ]
+            },
+            {
+              "negated": true,
+              "hits": [
+                "pruned/keep.txt"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "reopened-parent",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "pruned",
+                "pruned/keep.txt"
+              ]
+            },
+            {
+              "negated": true,
+              "hits": [
+                "pruned",
+                "pruned/keep.txt"
+              ]
+            },
+            {
+              "negated": true,
+              "hits": [
+                "pruned/keep.txt"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "insensitive",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "sensitive",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": []
+            }
+          ]
+        ],
+        "roots": [
+          "."
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "normal-list",
+      "input": {
+        "groups": [],
+        "roots": [
+          "keep.txt",
+          "space name.txt"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "verbatim-list",
+      "input": {
+        "groups": [],
+        "roots": [
+          "keep.txt",
+          "#literal.txt",
+          "space name.txt"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "glob-list",
+      "input": {
+        "groups": [
+          [
+            {
+              "negated": false,
+              "hits": [
+                "nested/secret.tmp",
+                "secret.tmp"
+              ]
+            }
+          ]
+        ],
+        "roots": [
+          "secret.tmp"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "verbatim-glob",
+      "input": {
+        "groups": [],
+        "roots": [],
+        "skippedMissing": true,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 1,
+        "snapshot": false,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 1,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": false
+      }
+    },
+    {
+      "case": "normal-brackets",
+      "input": {
+        "groups": [],
+        "roots": [],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 1,
+        "snapshot": false,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 1,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": false
+      }
+    },
+    {
+      "case": "verbatim-brackets",
+      "input": {
+        "groups": [],
+        "roots": [
+          "[literal].txt"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "raw-newline",
+      "input": {
+        "groups": [],
+        "roots": [
+          "line\nbreak.txt",
+          "#literal.txt"
+        ],
+        "skippedMissing": false,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 0,
+        "snapshot": true,
+        "selected": [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 0,
+        "selected": [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    },
+    {
+      "case": "raw-unterminated",
+      "input": {
+        "groups": [],
+        "roots": [],
+        "skippedMissing": false,
+        "framingValid": false
+      },
+      "expected": {
+        "exitCode": 1,
+        "snapshot": false,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 1,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": false
+      }
+    },
+    {
+      "case": "raw-empty",
+      "input": {
+        "groups": [],
+        "roots": [],
+        "skippedMissing": false,
+        "framingValid": false
+      },
+      "expected": {
+        "exitCode": 1,
+        "snapshot": false,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 1,
+        "selected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": false
+      }
+    },
+    {
+      "case": "partial-list",
+      "input": {
+        "groups": [],
+        "roots": [
+          "keep.txt"
+        ],
+        "skippedMissing": true,
+        "framingValid": true
+      },
+      "expected": {
+        "exitCode": 3,
+        "snapshot": true,
+        "selected": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "model": {
+        "exitCode": 3,
+        "selected": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "snapshot": true
+      }
+    }
+  ],
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "root",
+    "root-bound",
+    "group-bound",
+    "path-witness",
+    "duplicate-witness",
+    "boolean",
+    "missing-field"
+  ],
+  "normalizedPremiseMutations": [
+    "framing-witness",
+    "comment-witness",
+    "ordered-rule-witness",
+    "pruned-parent-witness"
+  ],
+  "observationMutations": [
+    "explicit-file",
+    "pruned-parent",
+    "verbatim-comment",
+    "raw-newline",
+    "invalid-framing",
+    "partial-status",
+    "empty-tree"
+  ],
+  "driverSha256": "5aedd65b5cf1af308536b9d4d0944eee5e66d2fe9a8d32bf956e8cef60cdf074",
+  "basisSha256": {
+    "applications/evidence/restic-inputs-20261125T024920808343Z/collector-failure.json": "3a01521698173432cdef16446227c7004c15f4083fab0ae2ea545246b098c45c",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/commands.json": "0946142deafa6a2779209b78c62779514f11577dddd611e731c618dd98814fe0",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/directory-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/directory-ls.stdout": "8f309e8b6ad2aefa5764e37225192c6091c77acbadcd03a7bc337033f6cf8666",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/directory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/directory.stdout": "217abd14e02402fe5fcc16acb6c22a317df6b2ab3ecb1fe976e5d5b86d251f7f",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/init.stdout": "f728d27fd4b65f851bea67b3e9a4227a238bce892a243fd8e69803bcf9c4a3bf",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/owned-processes.json": "560d061cbc191699cfcd95685dcc28e98d16b3e9df30a5abb7fc0b95b7e0c0da",
+    "applications/evidence/restic-inputs-20261125T024920808343Z/probe.py": "e791a74df14599341dafe39979fcf4e65f61f0129e59060d9fb96d9150f1ed20",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/commands.json": "152b47cc5744ca09f9b2e8e3d9243490436eaa9f7cc8e9335f5b9d8719c2cac1",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/directory-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/directory-ls.stdout": "d3a79c64bc8bf5d65ea53ca5be568a5412ab0eccd504b8f39cda9e92c22a728f",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/directory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/directory.stdout": "ed6f9769f6f8d8f6e2720c6340e3d7b8083366c730f73613f43277163e4e6607",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/exclude-descendants-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/exclude-descendants-ls.stdout": "8939a526124e2a1188b7665478e20828d9663eda4dd6738b92b040c9598e417d",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/exclude-descendants.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/exclude-descendants.stdout": "bcd5658c937bb15600bc6a4f2a6ded24c6cb7c3bc12a30787dc692f22331505d",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-directory-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-directory-ls.stdout": "81f0ebe27d73eb152e2515a4b60bbb457b84ee3846b13618b33ea536078b0629",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-directory.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-directory.stdout": "d1b3977e81b1dfdf1b0b5d3fdb757fd761a2b6c1cde87c8a16e514afd2b942bc",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-file-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-file-ls.stdout": "0b8f7a9abe5fffa42571535e44ec1c137090f721ae0e79eddd86f889c5fa9f23",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/explicit-file.stdout": "2830bd8c3d1326b90197b0ad969bad7e3d3d3d979776e63351a0ad26bbeafc70",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/glob-list-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/glob-list-ls.stdout": "be289a4c5221fae1f41920e15fc5d6f3c73264fbf8576dad256ff5fbe2ba844e",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/glob-list.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/glob-list.stdout": "3412e96c42f331cf6d239236ab74de28bde2e19678db5e49f2f5b020f9ac1ff1",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/init.stdout": "27abad223c6168fc4745c93b8bc9eaaedf3eae97659c276b5330711930861ec3",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/insensitive-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/insensitive-ls.stdout": "0050747b415038e6f6c37452542d0a1bf7539cfbb41ec24fc682404f608387f8",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/insensitive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/insensitive.stdout": "247fd80fd9ebb6fb52150a5b0eda451da84e0942fbd16a970d9e87faa17eec62",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-brackets.stderr": "eae84b014e81085259b1a5df0b1cfafd1cf56ee32b5499cd32eddfb524452d84",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-brackets.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-list-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-list-ls.stdout": "f8c3e21bd9f77787a680068fbb1f163094986c2f5af0726de85c857ff8bf6cf8",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-list.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/normal-list.stdout": "cf0e5b71d73e5e8e05ebfe1a7791a145594353a339639cb35c17ddaf9fae9bde",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/observations.json": "4eb64bd14f5ed92ebbff7daf234acb72f0fcec78ad7f2ee4f41310724d245d86",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reexclude-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reexclude-ls.stdout": "4ca95cb50006585f18558cf0d0f4a99f9c50e3fb4dc95f9ffe55b0f54535866d",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reexclude.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reexclude.stdout": "3b0d2e45a196a3d0d9dfd40383519280b6ba9161bb819d78fbfc52b97cb8a98a",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reinclude-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reinclude-ls.stdout": "5b706d3769231cfb53df37c5979cf99b87cd386e8c2c7b4fba995dca62b158de",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reinclude.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/ordered-reinclude.stdout": "efd95631fcc5fe37ae3c34750142d5ee4016d81f0b268d3cf0c7f50cc6f7a6ac",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/owned-processes.json": "ae62968d9b8617b22ccf6ae04813e6c8c1f1fed0555060cf9d78cdb3627ac1cb",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/partial-list-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/partial-list-ls.stdout": "13cf9adfe4f1446bd806fb0e0c7e7163cb0f35a057bf5b63c9cfacbf5e1d2ab8",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/partial-list.stderr": "cf5185189591f574f034586445b18aa1226f91926c294a68a91858e0c57c8a6f",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/partial-list.stdout": "b6b2bb486e5bf84bd30c2c1cf6e2554f982e5fd460fca387b96e616c5a8459c0",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/probe.py": "b1c4fec2907d80c290bedde788cee09155614b3d8281a4cae940622923b58b81",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/pruned-parent-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/pruned-parent-ls.stdout": "de5e3cb97b22dedd76da1f39933915b75381bb42c9cee32eba7a163accd46df3",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/pruned-parent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/pruned-parent.stdout": "0b771f331da891e478c8d95c65109d2dff26768b479e5058a3818eaa0b017485",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-empty.stderr": "e723429ade9d9a1585ab987ec1323b015fca4ccbf1a336da033d0a812542d26d",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-empty.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-newline-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-newline-ls.stdout": "595db372c288d483fd1b05801f08793ae0efcbd51beaddc86869e48f6e14b1dd",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-newline.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-newline.stdout": "0f75481ffad86497044780b98a0c6e9db803091d01b7a8d2ca90914f2c0e1661",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-unterminated.stderr": "6612489084a241a73053c6d02c3b1368aad603add30c74e92e5f5e6216c0241c",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/raw-unterminated.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/receipt.json": "dd4aef25d780f1265435aa7cb4f8600d2fe117caba8eceab40f6665e6e22d1cd",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/reopened-parent-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/reopened-parent-ls.stdout": "1630cc0afa66c351f8692a3b6fa80f0f085193e0e2afa223880a671564dcdd7f",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/reopened-parent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/reopened-parent.stdout": "7d159b521158423af1f093100a1495dd7f2a07ffca464d9851aeff4099fac4b0",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/sensitive-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/sensitive-ls.stdout": "93ea04e4ee6a2126a326e07788ab886586ac1323db0c0e20d194df40fd903ca3",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/sensitive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/sensitive.stdout": "94208049b43a56293541500c92403c83d112a79a4202d28a04360338332755a5",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-brackets-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-brackets-ls.stdout": "7520238e1e259986c58c76de8671ae0d814619bde7834b7aa3b3bec8e244ff91",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-brackets.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-brackets.stdout": "2cf03054c5afd79f18cd944e93b61dee2ece9b98f4a635d32d884da66b15fca6",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-glob.stderr": "85f26fcaa6170986740fbf3d20ea2fb4e653d51b5e9b1739b7943f911e0731f0",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-glob.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-list-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-list-ls.stdout": "0066044764bd279522edabad6fd3ebecf8fe61cd6b7393a4e1d7964ce9df5da2",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-list.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-inputs-20261125T025013712984Z/verbatim-list.stdout": "4c2900e8142dc1d588fa279afee39aca1302766c21629d82b6f146f726b99320",
+    "applications/restic/Inputs.bend": "c10adfe7f705ffc7d9a940c57099256ad2455eb701cfe5af829231e70fbf7e9c",
+    "applications/restic/Inputs.lean": "240f8d9de89333ea7b94161adffb4188f299ab319996b580d88fa3fc2f2adcf4",
+    "applications/restic/InputsCase.lean": "4a0d9504ea327fb053e9f9fd0e26a314e55cb1f9379cb3d3776b5095353fb4b5",
+    "applications/restic/inputs_conformance.py": "ca3b3f462b454c34c417409ec814a609f72be1a43494163a298b00592e7ebe66",
+    "applications/restic/inputs_observations.py": "2a98409aa1e58083d538a82e6bade2cb4e9464555f6286df7a6c914b5043d6d5",
+    "applications/restic/inputs_probe.py": "b1c4fec2907d80c290bedde788cee09155614b3d8281a4cae940622923b58b81",
+    "applications/sources/restic-inputs-selections.json": "93f837b3c734925bc8ee0e172c81b049cdaf1575a5903f5336acf0626592b908"
+  },
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "Pure replay;no restic,repository mutation,backup/restore or native fixture execution.",
+    "Both models compare finite ordered exclusion/traversal/outcome projections after target admission. Python supplies checked finite match/list witnesses;no formal general Go glob,raw/line parser,Unicode-case or filesystem admission proof.",
+    "Native saved paths/types/sizes are checked,not per-file restored bytes,repository encryption/chunking,durability or crash consistency.",
+    "One local macOS regular-file fixture with relative targets. No absolute-root,special/symlink,permission/cloud/device or remote/race scope.",
+    "Cross-group negation law is model/source-only;native cases exercise one ordinary or one insensitive group at a time.",
+    "Initial successful backup/ls followed by a collector host-path projection assertion remains retained separately;corrected fresh run is not reattributed to it.",
+    "Restic restore include options are separate;this backup cohort tests ordered negative excludes,not native restore include."
+  ]
+}

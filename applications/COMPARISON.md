@@ -144,6 +144,8 @@ The [restore band](restic/RESTORE.md) shows why a successful `--verify` request 
 
 The [copy band](restic/COPY.md) distinguishes current encrypted snapshot IDs, persistent Original provenance, compared metadata, source content, and destination publication. Tagged variants can coexist; a matching origin alone does not justify skipping one. Copies clear lineage while preserving persistent origin. This supports role-specific identifiers and an explicit copy result, not treating every provenance edge as a retaining root or an authentication statement.
 
+The [input-policy band](restic/INPUTS.md) preserves explicit roots, admitted sources, visited descendants, exclusions, and saved entries as separate facts. Ordered negation cannot restore an unvisited child, and nonzero status can accompany a saved partial snapshot. Keep these documented policies; an improved report should expose the existing distinctions and snapshot ID rather than infer “nothing saved” or introduce a universal exclude-wins rule.
+
 ### Mod Organizer 2
 
 The [mapping-plan band](mo2/ROUTING.md) supports an explicitly resolved profile/target context. Current method admission can accept a nonregular name without ordinary create-target rows, and local saves follow the ambient profile even when another profile is requested. These are API-boundary source observations with unresolved ordinary-caller reachability. Review the override contract before choosing stronger target admission or selected-profile settings; assembled flags do not prove physical routing. Plugin contributions also prevent a universal one-target rule for the final list.

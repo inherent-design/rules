@@ -13540,7 +13540,7 @@
         {
           "id": "restic.input-policy",
           "title": "Include/exclude and metadata policies",
-          "domainValuesAndRelations": "Input traversal policy + source observations -> retained inventory",
+          "domainValuesAndRelations": "Requested/list-expanded targets, admitted existing roots, traversal/exclusion policy, observed source entries, and saved snapshot inventory have distinct roles.",
           "invariantQuestions": "Excluded is not missing; stored metadata and sparse/special files need platform-specific scope.",
           "hostWitnesses": [
             "files",
@@ -13609,11 +13609,23 @@
               "status": "pending"
             }
           ],
-          "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "inventoryBasis": "Pinned restic 0.20.0 source and 20 local backup/list cases; finite selection, traversal, and outcome projections. Full pattern/list parsing and broader filesystem profiles remain pending.",
+          "disposition": "Bounded input selection components compared; full input-policy operation coverage remains pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "20 real local backup cases and 37 commands with generated regular files and normal, verbatim, and raw lists. Saved paths, types, sizes, and source preservation checked. Lean and Bend compare finite admitted-root, ordered-exclusion, traversal, and publication projections. Native partial-source status 3 saves a snapshot.",
+              "remaining": "General glob, list, parser, and Unicode-case proof; absolute/overlapping targets, permissions, special/symlink/device/cloud paths, remote/race cases, per-file restore, and crash durability. Restore include is a separate path. Parent operations stay pending.",
+              "evidence": [
+                "restic/INPUTS.md",
+                "evidence/restic-inputs-20261125T025013712984Z/receipt.json",
+                "evidence/restic-inputs-20261125T025013712984Z/conformance.json"
+              ]
+            }
+          ]
         },
         {
           "id": "restic.comparison",

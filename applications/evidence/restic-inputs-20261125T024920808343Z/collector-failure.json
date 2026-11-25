@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "status": "Preserved collector failure;not restic failure",
+  "error": "AssertionError: directory snapshot file /#literal.txt is not an absolute path under physical source root",
+  "nativeCommandsSucceeded": [
+    "init",
+    "directory",
+    "directory-ls"
+  ],
+  "source": "Original .build/restic-inputs-native.log;frozen probe.py retains mistaken predicate",
+  "correction": "All requested source targets/list entries are relative to fixed source cwd;decode snapshot paths relative to snapshot root,not absolute host source root.",
+  "next": "Fresh corrected cohort;original source/streams/repository retained unchanged"
+}

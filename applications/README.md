@@ -52,6 +52,8 @@ The [package-execution band](js-exec/README.md) separates package-command acquis
 
 The [Prism accounts band](prism/ACCOUNTS.md) distinguishes actor identity, profile readiness, refresh deadlines, and captured sessions. Thirty synthetic source-method cases compare units and partial launch components; all five complete account operations remain pending. Name-based claims and accept-only profile setup have separate bounded counterexamples and candidate corrections.
 
+The [restic input-policy band](restic/INPUTS.md) compares explicit roots, ordered exclusions, parent traversal, and normal/verbatim/raw file lists. Twenty local backup cases preserve the distinction between refusal, filtered content, and a partial snapshot saved with status 3. Formal projections use finite admission/match witnesses; general parsing and filesystem coverage remain open.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
