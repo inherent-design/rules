@@ -25,6 +25,8 @@ The [particle map](../minecraft/PARTICLES.md) separates constructed identity, ad
 
 The application owner’s [world-group comparison](../../applications/empack/WORLDS.md) adds a policy-history distinction. Retained initialization metadata can prevent reseeding even after the backing directory disappears. A record can therefore affect future authority without retaining content bytes. The typed-retention projection only describes backing reachability; a non-retaining history edge is not automatically disposable or irrelevant to admission. The fixture uses synthetic marker files, not gameplay validation.
 
+The [font and shader source chains](../minecraft/FONTS-TEXT.md) add effect/admission boundaries: an inactive font filter is not a promise that its provider was never loaded, and shader source preparation can allocate native buffers and start compilation before a publication barrier. A per-include release callback can deliberately leave a cached allocation owned elsewhere. Track each source, pending compilation, cache generation, compiled object, and submitted use through its actual owner protocol. Those source facts do not establish physical reclamation or all-platform execution.
+
 ## Ownership and trace contract
 
 The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.

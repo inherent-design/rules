@@ -31,6 +31,8 @@ The [manager lifecycle review](POLYTONE-LIFECYCLES.md) then maps each manager's 
 
 The [server-pack band](SERVER-PACKS.md) compares 385 original manager actions across all five selected Java releases. Consent, download results, activation, feedback, and callback custody have separate rules. The models compare selected branches; actual HTTP, prompt UI, full reload, provider coexistence, and renderer retirement remain open.
 
+The [font/text field and consumer map](FONTS-TEXT.md) expands all five provider types, locale metadata, internal font descriptions, glyph/cache ownership, and 1,820 original two-option filter comparisons. The [shader map](SHADERS.md) separately follows versioned program/post schemas, native include buffers, compilation, cache publication, and retirement. Their shared ledger keeps schema/source interpretation, internal capabilities, native predicate evidence, and actual rendered qualification separate.
+
 The [particle band](PARTICLES.md) maps definition, provider, admission, reload, and render-state ownership across the five releases. Its original sprite-set helper comparison retains 186 method calls plus ten input controls, with separate Lean/Bend models. Queue policies, real provider execution, atlas/GPU use, and physical retirement remain independently unqualified.
 
 The [sound band](SOUNDS.md) attributes definition and audio-consumer boundaries, compares 110 original weighted controls across five Java releases, and retains 55 independent weight-decoder calibrations. Shared Java 17/21/25 arithmetic is checked separately. Sound registration, preload scheduling, actual decode, device availability, and playback remain distinct; provider execution and complete audio retirement are open.

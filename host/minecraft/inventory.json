@@ -1000,12 +1000,26 @@
           "net.minecraft.client.gui.font.providers.GlyphProviderType"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
-      "rules": [],
-      "proofs": [],
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
+      "rules": [
+        "host/minecraft/FontFilter.bend"
+      ],
+      "proofs": [
+        "host/minecraft/FontFilter.lean"
+      ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-fonts-definitions",
+          "status": "source field/consumer map plus original option-filter API comparison",
+          "report": "host/minecraft/FONTS-TEXT.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "1820original filter predicate/custody results,not provider JSON decode,full font references or glyph rendering.",
+          "conformance": "host/minecraft/evidence/font-filter-conformance.json"
+        }
       ]
     },
     {
@@ -1031,10 +1045,19 @@
           "net.minecraft.client.gui.font.glyphs.BakedGlyph"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-fonts-glyphs",
+          "status": "selected source/asset interpretation;not runtime qualification",
+          "report": "host/minecraft/FONTS-TEXT.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "Field scopes,internal descriptions,source effects and actual consumers remain separate;no glyph/languageUI/shader/backend execution."
+        }
+      ]
     },
     {
       "id": "text.language",
@@ -1056,10 +1079,19 @@
           "net.minecraft.client.resources.language.LanguageManager"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-text-language",
+          "status": "selected source/asset interpretation;not runtime qualification",
+          "report": "host/minecraft/FONTS-TEXT.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "Field scopes,internal descriptions,source effects and actual consumers remain separate;no glyph/languageUI/shader/backend execution."
+        }
+      ]
     },
     {
       "id": "text.components",
@@ -1082,10 +1114,19 @@
           "net.minecraft.network.chat.Style"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-text-components",
+          "status": "selected source/asset interpretation;not runtime qualification",
+          "report": "host/minecraft/FONTS-TEXT.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "Field scopes,internal descriptions,source effects and actual consumers remain separate;no glyph/languageUI/shader/backend execution."
+        }
+      ]
     },
     {
       "id": "text.builtin_lists",
@@ -1253,10 +1294,19 @@
           "net.minecraft.client.renderer.ShaderManager"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-shaders-programs",
+          "status": "selected source/asset interpretation;not runtime qualification",
+          "report": "host/minecraft/SHADERS.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "Field scopes,internal descriptions,source effects and actual consumers remain separate;no glyph/languageUI/shader/backend execution."
+        }
+      ]
     },
     {
       "id": "shaders.post_effects",
@@ -1276,7 +1326,7 @@
           "net.minecraft.client.renderer.PostPass"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
+      "review": "partial: five-version scoped source field/consumer linework; full delegated grammar, concrete runtime/providers/native/rendering remain pending",
       "rules": [
         "host/minecraft/Decoding.lean",
         "host/minecraft/Decoding.bend"
@@ -1286,6 +1336,15 @@
       ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "font-text-shader-selected-source-shaders-post_effects",
+          "status": "selected source/asset interpretation;not runtime qualification",
+          "report": "host/minecraft/SHADERS.md",
+          "sourceMap": "host/minecraft/text-shader-sources.json",
+          "limits": "Field scopes,internal descriptions,source effects and actual consumers remain separate;no glyph/languageUI/shader/backend execution."
+        }
       ]
     },
     {
