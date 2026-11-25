@@ -1,0 +1,26 @@
+Restore a retained release's managed content while preserving edited user files
+
+Usage: empack instance rollback [OPTIONS] <RELEASE>
+
+Arguments:
+  <RELEASE>  Exact SHA-256 of a retained completed release payload
+
+Options:
+      --preserve <PATH>        Keep your file as a local override; use the path shown in the
+                               conflict options
+      --replace <PATH>         Use the release version of a conflicting file, or remove it if no
+                               longer included
+      --merge <PATH=FILE>      Use your prepared merged file as a local override
+      --state-dir <STATE_DIR>  Durable operation and recovery storage, separate from disposable
+                               caches [env: EMPACK_STATE_DIR=]
+      --assets <ASSETS>        Directory containing the selected release's immutable asset paths
+      --cache-dir <CACHE_DIR>  Disposable cache root; previews only inspect existing objects [env:
+                               EMPACK_CACHE_DIR=]
+      --file <KEY=PATH>        Associate exact missing content with its release file key
+      --choice <KEY=VALUE>     Resolve alternatives no longer present in the current saved choices
+  -y, --yes                    Run without prompts; unresolved content choices still fail [env:
+                               EMPACK_YES=]
+      --dry-run                Preview changes without publishing project, instance or durable state
+                               [env: EMPACK_DRY_RUN=]
+  -h, --help                   Print help
+  -V, --version                Print version
