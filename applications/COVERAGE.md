@@ -41,6 +41,8 @@ The checker's negative controls must fail for the intended reason. A missing mod
 
 ## Advancing the study
 
+The [interim scope audit](SCOPE-AUDIT.md) compares the full intent with existing component evidence and orders the remaining investigation. Its dated counts are a snapshot; query the inventory for current references. It changes no operation status.
+
 Keep unresolved operations visible. Choose the next investigation from the actual implementation, existing evidence, domain importance, and missing host distinctions. Preserve each application's purpose and policy; a shared host concept does not supply application behavior.
 
 Before advancing a recorded status, identify the particular API or workflow, admitted version/host/input profile, observed or source-derived transitions, laws and their premises, meaningful controls, UX implications, and remaining verification. Reuse existing evidence when it answers the question. A bookkeeping repair or additional slice link alone changes no application evidence status and qualifies no broader workflow.
