@@ -73,3 +73,5 @@ The [JavaScript update-selection band](js-updates/README.md) compares range refr
 5. Review the complete proposals with the host owner. Production implementation needs a separately selected decision.
 
 The canonical active checkpoint is in the Moment incident for the application-models intent. It is the only current task checkpoint. Repository artifacts carry evidence and coverage, not a second running task ledger.
+
+The [Cargo freshness band](cargo/FRESHNESS.md) separates metadata replay from physical script execution, partial generated outputs from retained binaries, and invalidated work from successful reuse. It compares watched/omitted environment inputs and downstream missing-file failures in one offline unit context.

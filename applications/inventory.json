@@ -12418,7 +12418,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "One offline Cargo 1.92 profile on macOS arm64: watched absent/empty/value inputs, omitted environment input, automatic macro dependency, failure invalidation, missing generated includes, and cached metadata. Both models compare 16 build/clean outcomes.",
+              "remaining": "General dependency graphs, profiles/targets, proc macros, trust, concurrent or interrupted work, adversarial timestamps/checksum freshness, registry/cache behavior, partial cleanup, and other platforms remain pending.",
+              "evidence": [
+                "cargo/FRESHNESS.md",
+                "evidence/cargo-freshness-conformance.json",
+                "evidence/cargo-freshness-20261125T074348425999Z/receipt.json"
+              ]
+            }
+          ]
         },
         {
           "id": "cargo.profiles-config",
@@ -12524,7 +12536,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "An independent script journal distinguishes physical execution from cached metadata and compiled build-script artifacts. Controlled failure after a write preserves partial generated data and the previous executable; 15 runtime checks identify the retained products.",
+              "remaining": "General dependency graphs, profiles/targets, proc macros, trust, concurrent or interrupted work, adversarial timestamps/checksum freshness, registry/cache behavior, partial cleanup, and other platforms remain pending.",
+              "evidence": [
+                "cargo/FRESHNESS.md",
+                "evidence/cargo-freshness-conformance.json",
+                "evidence/cargo-freshness-20261125T074348425999Z/receipt.json"
+              ]
+            }
+          ]
         },
         {
           "id": "cargo.execution-tests",
@@ -12847,7 +12871,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "One full cleanup of the owned target removes compiler intermediates. The explicit external journal and a separately retained small binary remain; the fixture occupies about 480 KiB.",
+              "remaining": "General dependency graphs, profiles/targets, proc macros, trust, concurrent or interrupted work, adversarial timestamps/checksum freshness, registry/cache behavior, partial cleanup, and other platforms remain pending.",
+              "evidence": [
+                "cargo/FRESHNESS.md",
+                "evidence/cargo-freshness-conformance.json",
+                "evidence/cargo-freshness-20261125T074348425999Z/receipt.json"
+              ]
+            }
+          ]
         },
         {
           "id": "cargo.binary-install",

@@ -65,3 +65,5 @@ General workspace defaults/discovery, arbitrary feature graphs, profiles, cross-
 The later [workspace-context band](WORKSPACES.md) observes selected root/virtual defaults, member context, explicit manifest paths, and CLI exclusion versus checked dependencies. It does not qualify general discovery or the full compiler-unit graph.
 
 The [feature-context band](FEATURES.md) compares resolver 1/2/3, positive root/dependency defaults, forwarded requests across normal/build roles, test-only development features, and inactive target declarations. Metadata remains broader than the selected compiler context; actual Windows compilation and general target filtering remain pending.
+
+The [environment/partial-output band](FRESHNESS.md) separately compares watched optional environment values, automatic Rust macro dependencies, cached script metadata, failed-script invalidation, missing generated includes, and retained older executables. It does not extend the selected profile into a general fingerprint or repair guarantee.

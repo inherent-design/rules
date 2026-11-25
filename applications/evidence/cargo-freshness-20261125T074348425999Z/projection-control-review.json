@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "scope": "Pure research adapter control,not native collection failure.",
+  "rejectedControl": {
+    "case": "fail-retry",
+    "mutation": "Replace after.generated with before.generated",
+    "reason": "Both values are exactly equal: repeated physical failed execution wrote the same bytes. The mutation was a no-op and cannot falsify a projection."
+  },
+  "replacement": {
+    "case": "tracked-empty",
+    "mutation": "Replace after.generated with its different before.generated",
+    "requirement": "Must disagree with the independently captured generated-file SHA256."
+  },
+  "nativeOutcomesChanged": false,
+  "nativeCollectionRepeated": false
+}

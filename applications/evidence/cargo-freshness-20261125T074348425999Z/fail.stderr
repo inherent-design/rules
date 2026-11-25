@@ -1,0 +1,16 @@
+   Compiling rules-freshness v0.1.0 (/private/tmp/rules-cargo-freshness-n_tdec8f/project)
+error: failed to run custom build command for `rules-freshness v0.1.0 (/private/tmp/rules-cargo-freshness-n_tdec8f/project)`
+
+Caused by:
+  process didn't exit successfully: `/private/tmp/rules-cargo-freshness-n_tdec8f/target/debug/build/rules-freshness-fc0f365517b91408/build-script-build` (exit status: 101)
+  --- stdout
+  cargo::rerun-if-changed=build.rs
+  cargo::rerun-if-changed=input.txt
+  cargo::rerun-if-env-changed=RULES_TRACKED
+  cargo::rerun-if-env-changed=RULES_FAIL
+
+  --- stderr
+
+  thread 'main' (1768150069) panicked at build.rs:21:9:
+  controlled failure after generated-file write
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

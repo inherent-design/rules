@@ -122,6 +122,8 @@ The [Modern project-constraints band](yarn-constraints/README.md) separately dem
 
 ### Cargo
 
+The [freshness/environment band](cargo/FRESHNESS.md) adds a concrete invalidation rule: a dirty unit loses reuse eligibility before work runs, even when its old executable still exists. Cached build-script JSON is output availability, not a process-start witness. A producer can remain fresh while a required generated input is absent downstream; neither a valid producer marker nor an old runnable binary proves the requested build completed. Keep those identities and effects separate in new operation/event interfaces.
+
 Preserve `PackageId`, resolved graph, activated features, compiler `Unit`, and freshness evidence separately. The native app changes compiled features while its lock stays identical. An undeclared external build-script input can change while Cargo still reuses the previous artifact. This is evidence about the declared watch set, not a demand that Cargo infer every arbitrary file read.
 
 For internal consumers, carry the selected unit/request and declared input basis. For operators, a candidate cleanup receipt can name the target root and confirmed scope without promising to undo external script effects. Existing JSON and cleanup APIs need review before choosing a new flag or schema.

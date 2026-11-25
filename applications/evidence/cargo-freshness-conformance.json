@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "capture": "applications/evidence/cargo-freshness-20261125T074348425999Z",
+  "nativeCommands": 31,
+  "modeledAttempts": 16,
+  "runtimeChecks": 15,
+  "leanMatches": 16,
+  "bendMatches": 16,
+  "schemaRefusals": 6,
+  "changedPremises": [
+    {
+      "case": "same",
+      "original": "0/0/1/1/1/3/3/1/3/1/1",
+      "changed": "0/1/1/0/1/3/3/1/3/1/2"
+    },
+    {
+      "case": "macro-env",
+      "original": "0/0/1/0/1/3/4/1/4/2/4",
+      "changed": "0/0/1/1/1/3/4/1/4/1/4"
+    },
+    {
+      "case": "fail",
+      "original": "101/1/0/2/0/4/6/0/5/2/6",
+      "changed": "0/1/1/0/1/5/6/1/6/2/6"
+    },
+    {
+      "case": "recover",
+      "original": "0/1/1/0/1/4/5/1/5/2/8",
+      "changed": "0/0/1/0/1/4/6/1/6/2/7"
+    },
+    {
+      "case": "missing-output",
+      "original": "101/0/1/2/1/4/0/0/5/2/8",
+      "changed": "0/0/1/1/1/4/5/1/5/2/8"
+    }
+  ],
+  "changedNativeObservations": [
+    {
+      "case": "same",
+      "detectedMismatch": true
+    },
+    {
+      "case": "fail",
+      "rejected": true
+    },
+    {
+      "case": "tracked-empty",
+      "rejected": true
+    },
+    {
+      "case": "cold",
+      "rejected": true
+    }
+  ],
+  "sourcePins": 4,
+  "catalog": {
+    "bases": [
+      {
+        "id": 1,
+        "tracked": "",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 2,
+        "tracked": "value",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 3,
+        "tracked": null,
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 4,
+        "tracked": null,
+        "file": "second",
+        "fail": false
+      },
+      {
+        "id": 5,
+        "tracked": null,
+        "file": "second",
+        "fail": true
+      },
+      {
+        "id": 6,
+        "tracked": null,
+        "file": "third",
+        "fail": false
+      }
+    ],
+    "values": [
+      {
+        "id": 1,
+        "tracked": "",
+        "hidden": "hidden-second",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 2,
+        "tracked": "value",
+        "hidden": "hidden-second",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 3,
+        "tracked": null,
+        "hidden": "hidden-first",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 4,
+        "tracked": null,
+        "hidden": "hidden-second",
+        "file": "first",
+        "fail": false
+      },
+      {
+        "id": 5,
+        "tracked": null,
+        "hidden": "hidden-second",
+        "file": "second",
+        "fail": false
+      },
+      {
+        "id": 6,
+        "tracked": null,
+        "hidden": "hidden-second",
+        "file": "second",
+        "fail": true
+      },
+      {
+        "id": 7,
+        "tracked": null,
+        "hidden": "hidden-second",
+        "file": "third",
+        "fail": false
+      }
+    ]
+  },
+  "runtimeIdentities": 7,
+  "basisSha256": {
+    "applications/cargo/Freshness.bend": "fb4867e04614d65a9b8299a0a4bfd5ba3f2146f2b2610377f72b53bdb33b68d4",
+    "applications/cargo/Freshness.lean": "aaff3ebfff587ebc3c69f3905d2124ee9df458332a43a77b54d983dfc5ade4bd",
+    "applications/cargo/FreshnessCase.lean": "cd7f3d8e59a2e3299d3d75d383d1cdc8778f90b233cda3ffa11fc14d8b11c96f",
+    "applications/cargo/freshness_conformance.py": "bef31982f024afd0d4f2dc9688f4b2382660dce9c98b192467c2bcab8c04423f",
+    "applications/cargo/freshness_observations.py": "95369dd4637c5c2ffded0fd8951dcf32de3d62f8f76a162926aeb1203b8137bc",
+    "applications/cargo/freshness_probe.py": "7acf9d73481549b195d8a64e7d1ce1d668e2f46ddaaee0b452e993505c20b1c0",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/clean.stderr": "57590788460eec6db090d1908aaad4295db22db32fa6ac98b5c103ec68fd25fd",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/clean.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/cold-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/cold-run.stdout": "596115e36ed43f93a2ed399100aca8b1a3b1635b14998be5f8440d706ca929c5",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/cold.stderr": "3cf62bf51413e325f57986ff787e3fe10225b1ceda9cd750a74b56c96a329f2c",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/cold.stdout": "33e67e1badd58f495b6aac1d268b1a2ac142596da8841b95f02151dabd75026a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/commands.json": "d511f520ecd033dcfb42fdb35b2a438efdeb0cc5a36db42041c7abdd13f197ef",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/edits.json": "4d3eac4b6b406abdb9688ba32b02aacdb06f11d51382133779c3880fa7297fb4",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-retry-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-retry-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-retry.stderr": "30b50977cc4ce2975ce67c7a48db663c1349eba4306ac5d5dfc8275e509951e4",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-retry.stdout": "8a2b374cfa00fedcbe42144a6e39cce9922b6b4ffd562e4dac15d6d0447ee65f",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail.stderr": "137d185517b3a38a4847d1eaa0c9be04ae40b5ad06fb5203503f1bebb2f7ee0a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/fail.stdout": "8a2b374cfa00fedcbe42144a6e39cce9922b6b4ffd562e4dac15d6d0447ee65f",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/final-generated.txt": "954586ef4ac1fed8bb7962a19418cdfc8113364b1d5cf78496139bcf70a9fe20",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/hidden-env-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/hidden-env-run.stdout": "596115e36ed43f93a2ed399100aca8b1a3b1635b14998be5f8440d706ca929c5",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/hidden-env.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/hidden-env.stdout": "c1cd0eece2e656114f6df4200d50b568199e15d9de408d6bc5685827ac6c69da",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/macro-env-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/macro-env-run.stdout": "b33234ca3882b2821624658243d34bfc58c1fc7c040d960944e50b2391e00d27",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/macro-env.stderr": "32f229d9dc75be761ca4ee239c6224ab22d576ed6bcbf3f2e8c2d2513e4ae6f6",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/macro-env.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-retry-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-retry-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-retry.stderr": "69e529dd19f42933e8d3c7c7d8b8b99325c741b5e16ecf6f96da7481fd5a05b6",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-retry.stdout": "a4c643c6d90ab309e9b6865c5f33c3c4f88973a130be980b8e8d2c1f849d74aa",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output.stderr": "69e529dd19f42933e8d3c7c7d8b8b99325c741b5e16ecf6f96da7481fd5a05b6",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/missing-output.stdout": "a4c643c6d90ab309e9b6865c5f33c3c4f88973a130be980b8e8d2c1f849d74aa",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/probe.py": "7acf9d73481549b195d8a64e7d1ce1d668e2f46ddaaee0b452e993505c20b1c0",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/processes.json": "f4ef717239129a7d08c64ee229156c0e6267e4a7edd0c50f21eb4793f72fc2ac",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/projection-control-review.json": "2dde5c8bc17c50ad119cde7f10cc67696ae1b0f5b5f9a422c1255cf23e136344",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/receipt.json": "f4b31c460172a62d75af5dbfdeb2f2ca290ce1cba106ae5281c826a4eeb51891",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/recover-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/recover-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/recover.stderr": "98c59c3cb3c926e27d640576e56121ef26534e954c7aecef4fb3fb49cf335f4a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/recover.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/restored-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/restored-run.stdout": "55151abceb574917f8102adcace502ff92cbe5b13b0761fda7b0b4550e0a56fa",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/restored.stderr": "98c59c3cb3c926e27d640576e56121ef26534e954c7aecef4fb3fb49cf335f4a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/restored.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-restored-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-restored-run.stdout": "55151abceb574917f8102adcace502ff92cbe5b13b0761fda7b0b4550e0a56fa",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-restored.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-restored.stdout": "c1cd0eece2e656114f6df4200d50b568199e15d9de408d6bc5685827ac6c69da",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same-run.stdout": "596115e36ed43f93a2ed399100aca8b1a3b1635b14998be5f8440d706ca929c5",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same.stderr": "8f3ae2616dd1e18d0fe1f4076d35b698a81fb5dae3fa8b45c2750e9a19508e5e",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/same.stdout": "c1cd0eece2e656114f6df4200d50b568199e15d9de408d6bc5685827ac6c69da",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/script-invocations.log": "c686ded4e7bb66cf5d5fa6ee8291b8e1235f91205cccb37ab2bf33aa0405b125",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/setup.json": "d79d96d996d2a224600b71f66cd9c393feefc67fcdd6a93a0def9591aa52b642",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/source/Cargo.toml": "f06096f79b452d20c63648d04e804522c9402a93aab3d810ead7b1cc68e11daa",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/source/build.rs": "a58282d503f044722668652ce963003a93b446060d04bc29bad96878d49ff096",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/source/input.txt": "b640e840b19d378660b32fb51ae18d67dccb4a8596a29e7bd72c1b2ae5928f41",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/source/src/main.rs": "7d0462f9b9e1f4b32eab55f8ea58c36674986004b88970af520a32a013311aef",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/started.json": "3a805bce478ce8f190024c7e0de4b5271aa2d4bab50e9f81068ed55b38f76a25",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-empty-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-empty-run.stdout": "f921ac0474e069c71329fd349ccbe2268e86b62101cc198552d6761cd6a3060d",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-empty.stderr": "e5f1bc6db90b67f37dc7417656e6f32320b2734a46110189920834e0c7e15322",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-empty.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-unset-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-unset-run.stdout": "d4193c1932182fe494a61790656ded5f84ba58e72d2f5b84cd8ac1e2519e2414",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-unset.stderr": "98c59c3cb3c926e27d640576e56121ef26534e954c7aecef4fb3fb49cf335f4a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-unset.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-value-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-value-run.stdout": "a91e5ea9b4fe772ab2001f2b99b69408ffc13cd062a0296855b0fff5db0f0dea",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-value.stderr": "cd95ecc3490ddb7df61c1ee1cf4ab4097c9bd7f8c79bd16da0ffdd835cc1892a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/tracked-value.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/watched-file-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/watched-file-run.stdout": "3eb2e684f94cdb0194147786a6a7ae42c5fe959b37f250d0f2401943e00348ec",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/watched-file.stderr": "98c59c3cb3c926e27d640576e56121ef26534e954c7aecef4fb3fb49cf335f4a",
+    "applications/evidence/cargo-freshness-20261125T074348425999Z/watched-file.stdout": "49d8bd011f69b0b5795cc8f517e9ca00c8c68c498439cb1e1d135409293b3f66",
+    "applications/sources/cargo-freshness-selections.json": "3e15649f6aaf32e106c2f9a87aa7c486ba78b4f00a4e5b530a7404ad4c438ea0"
+  },
+  "limits": [
+    "No Cargo/rustc/runtime execution by replay.",
+    "One small Cargo 1.92 context on macOS arm64; no general mtime/hash/feature/dependency graph decoder.",
+    "Labels distinguish observed optional environment, file, and failed-input meanings; not production fingerprint serialization.",
+    "Fresh JSON can replay cached script output; actual runs come from a separate owned journal.",
+    "Target cleaned; one small final product, source, and journal retained; interrupted work, concurrency, registry, and proc macros unqualified."
+  ]
+}

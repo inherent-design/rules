@@ -691,6 +691,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cargo-freshness-generated-backing",
+      "features": [
+        "cargo.freshness",
+        "cargo.scripts",
+        "cargo.build-units",
+        "cargo.artifact-cleanup"
+      ],
+      "flow": "Change watched and omitted inputs, distinguish compiler/script reuse, fail after generating output, inspect the retained executable, remove generated backing, restore through a watched input, and clean the owned target.",
+      "counterexamples": [
+        "Treat cached script metadata as physical execution.",
+        "Treat a previous successful basis as current reuse authority after failure.",
+        "Treat an old runnable binary as new build success.",
+        "Infer required generated backing from a fresh producer alone."
+      ],
+      "hostWitnesses": [
+        "revision and content observations",
+        "invalidated work",
+        "retained input/output roles",
+        "scoped effects after failure"
+      ],
+      "status": "pending",
+      "evidence": [],
+      "componentEvidence": [
+        {
+          "status": "native-observed",
+          "scope": "15 build attempts, 15 runtime checks, and cleanup; both models compare 16 build/clean outcomes.",
+          "remaining": "General graph/target/host behavior, interruption, and generated-output repair remain pending.",
+          "evidence": [
+            "cargo/FRESHNESS.md",
+            "evidence/cargo-freshness-conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }
