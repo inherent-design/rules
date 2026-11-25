@@ -4,6 +4,8 @@ The exact uninstalled NeoForge artifact selected in [targets](targets.json), Pol
 
 [polytone-managers.json](polytone-managers.json) indexes all 28 built-in content-manager registrations, their actual reload order, constructor resource roots, codec-reference candidates, phase declarations, and static consumer-reference locations. Its source identities bind original class entries and private views. Folder literals were independently found in their corresponding original class entries. Method names and references are locators for semantic work, not qualified user operations or proofs of active injection. Every manager remains incomplete.
 
+The [codec and inheritance extension](POLYTONE-CONTRACTS.md) resolves all 168 effective reload hooks, including 74 inherited bindings, and adds 294 definition-field locators across 62 class/view identities. Three bundled libraries sit outside the earlier outer-JAR census. A separate original CodecUI comparison qualifies 30 authored API-call outcomes; its schema hints and decoder admission remain distinct. No manager becomes complete through that extension.
+
 ## Definition families
 
 | Manager | Definition entry | Consumer and effect to qualify |
@@ -49,7 +51,7 @@ The selected per-ID map also has more rules than “last one wins.” A first en
 
 Folder alias order is a different stage: default directory scans merge each successive folder map with `putAll`. Single-file colors traverse resource stacks, warn on duplicates, and log per-file decode failures while continuing. Those policies must not be collapsed into the later parsed-entry priority rule or ordinary pack priority.
 
-Preparation uses parallel futures and a barrier. Later work stores prepared resources, resets children, parses in child order, then applies in child order. Per-child parse/apply exceptions are collected while subsequent children continue; the accumulated error is thrown afterward. Reset exceptions and preparation failures have different paths. There is no shared rollback transaction in this selected method. Whether a particular child restores its own earlier state or leaves partial effects requires that child's full contract and evidence.
+Preparation uses parallel futures and a barrier. Later work stores prepared resources, resets children, parses in child order, then applies in child order. Per-child parse/apply exceptions are collected while subsequent children continue, provided failure reporting and aggregation themselves return successfully; the accumulated error is thrown afterward. Reset exceptions and preparation failures have different paths. There is no shared rollback transaction in this selected method. Whether a particular child restores its own earlier state or leaves partial effects requires that child's full contract and evidence.
 
 World/tag reception and logout are separate entrypoints. Configs can parse without a world; most default manager hooks do nothing in that phase. Source inspection also finds log-file writes and failure toasts. The saved log, accumulated exception, UI message, completed future and resulting resource state need separate observations; one error flag cannot stand for all of them.
 

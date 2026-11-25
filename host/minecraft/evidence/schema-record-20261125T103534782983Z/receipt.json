@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "scope": "Original bundled CodecUI record builder and supplied DFU/Gson dependencies under authored one-field callers; no Polytone manager, loader, Minecraft, renderer, GUI or account/world access.",
+  "bundledSha256": "389766940c13572819b4ba79cf9466c571256f01ecd0cb43dc3ac4b11ff3805a",
+  "metadataSha256": "46bd44d2732fd1cd187724de9b5cab9fc98678d8de46509410659b5c6f103ff8",
+  "reusedReceiptSha256": "af4d936a59289280d3d70821088706962650b091033d8b961b827c7b9e3ae9a4",
+  "profile": {
+    "JAVA_VERSION": "21.0.13.1",
+    "JAVA_RUNTIME_VERSION": "21.0.13.1+2-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "jdkReleaseSha256": "2f1cd602bf21d35e6e2976d6a351693ff609bfcb285762263a54bf20e8a40afd",
+  "sourcesSha256": {
+    "SchemaRecordProbe.java": "6ae495cd0605d2e8934a7f3f2c951af035cf077a90efb64ed5e856cb979706c4",
+    "schema_record_probe.py": "c16e49dfdc5d3ec041943811439f3b4ca72678e83f1dafe809179823e44c23a7",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "limits": [
+    "Explicit primitive schema avoids reflective schema inference and all game/registry classes.",
+    "All six forms are authored API callers; null-default and custom MapCodec cases are not shown reachable in a Polytone pack.",
+    "Only one-field group and selected integer/missing/null/wrong-string inputs; no full DFU grammar or floating/duplicate-key/partial semantics.",
+    "Class-path library choice is fixed by this study, not a native JarJar negotiation result.",
+    "No original class, JAR, decompiled third-party source or class-load log exported.",
+    "Loaded classes are not a complete initialization, execution, dependency, or host-effect graph.",
+    "JVM heap/CPU settings and retired process groups do not establish physical-memory bounds or global reclamation."
+  ],
+  "observerClassesSha256": {
+    "study/minecraft/SchemaRecordProbe$Box.class": "b1c7de364c5b7016c79ab636ce29976747affaeb254dbef250a5844756c7e3b4",
+    "study/minecraft/SchemaRecordProbe$OptBox.class": "c13d13603d19a58d4f7d7fd7b03dbbda8a2f886732827b4e915670d60ace6096",
+    "study/minecraft/SchemaRecordProbe.class": "0510f15ca94608d3d5f9507e7daba7f10d6d3ba682a0e4a3bed46a593f4aa415"
+  },
+  "observedSha256": "5212eac04cf70f34e5c9a9cfb8a68fc2cd4088784b735712e8a5456b212680ec",
+  "classLoadLogSha256": "31bb0aade09fe983116e08d557f3d80cca8602382fd953ab36cc0888afab7935",
+  "loadedBundledClassEntriesSha256": {
+    "net/mehvahdjukaar/codecui/SchemaRecord$Group.class": "75eb54cc72c5da924596c2913247b36ae8fd9449ee3ab73aee842b1731529a2f",
+    "net/mehvahdjukaar/codecui/Schema.class": "37eb01110e09739add81a533e70a1775f2c2fcdffc05ba87ab9743595911710d",
+    "net/mehvahdjukaar/codecui/Schema$IntRange.class": "b86d2654415522fcdc117f9ae192aaab090c060aa81964314cdde0d89d170dba",
+    "net/mehvahdjukaar/codecui/SchemaCodec.class": "d35961b1e6d9bc595c89556b62d37e080519143e54cecf8fdbde05a77fe2c582",
+    "net/mehvahdjukaar/codecui/SchemaCodec$SimpleSchemaCodec.class": "6701833018ca69c1a4997864de5e8615fde99625ea467f6a57c9800b57ee6816",
+    "net/mehvahdjukaar/codecui/SchemaRecord$Instance.class": "837595720de8ff269e5acebaeabe4243d21ca0d73eea76e939d9e8c70eddaa0a",
+    "net/mehvahdjukaar/codecui/SchemaRecord.class": "eb02c473cd3b92f0aba6aad4cc9889d71ca43648865b4f7af4bcbca6c54a0dae",
+    "net/mehvahdjukaar/codecui/SchemaRecord$FieldRef.class": "ed3a175d2627b72ad041d70f75bc4e0e7e9674945214a8c1d82b8ddc115b1be3",
+    "net/mehvahdjukaar/codecui/SchemaRecord$Group1.class": "d2a16503a0b3ee46ab1edb90d730b2b0168dc32a098ba088f82f27cc4583532e",
+    "net/mehvahdjukaar/codecui/SchemaCodec$LazySchemaCodec.class": "36549fda884df7ce578dd239dffb0c72bbd2bac32e4d418f2ff54af1dda3efa4",
+    "net/mehvahdjukaar/codecui/Schema$Field.class": "a420dee55035c95daf85ee6633a0aa77e9719753bd9e3359c17e73b01e65611c",
+    "net/mehvahdjukaar/codecui/Schema$Record.class": "fcd6c707bfeb9a330146adf87e8748734691c317ae1144b710cd719884f93f45"
+  },
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "ecf20ae96db9c6237e18c5c7684fbf70ebc19472b16248d1844868584e2c9783"
+    }
+  },
+  "libraries": [
+    {
+      "name": "com.google.code.gson:gson:2.10.1",
+      "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593",
+      "sha1": "b3add478d4382b78ea20b1671390a858002feb6c",
+      "bytes": 283367,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar",
+      "file": "gson-2.10.1.jar"
+    },
+    {
+      "name": "com.google.guava:guava:32.1.2-jre",
+      "sha256": "bc65dea7cfd9e4dacf8419d8af0e741655857d27885bb35d943d7187fc3a8fce",
+      "sha1": "5e64ec7e056456bef3a4bc4c6fdaef71e8ab6318",
+      "bytes": 3041591,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar",
+      "file": "guava-32.1.2-jre.jar"
+    },
+    {
+      "name": "com.google.guava:failureaccess:1.0.1",
+      "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26",
+      "sha1": "1dcf1de382a0bf95a3d8b0849546c88bac1292c9",
+      "bytes": 4617,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar",
+      "file": "failureaccess-1.0.1.jar"
+    },
+    {
+      "name": "com.mojang:datafixerupper:8.0.16",
+      "sha256": "ffc138bc2596c291781b0d5e211ccac51f0f2345f27fc2742f335cedf7e2870d",
+      "sha1": "67d4de6d7f95d89bcf5862995fb854ebaec02a34",
+      "bytes": 724313,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/com/mojang/datafixerupper/8.0.16/datafixerupper-8.0.16.jar",
+      "file": "datafixerupper-8.0.16.jar"
+    },
+    {
+      "name": "it.unimi.dsi:fastutil:8.5.12",
+      "sha256": "b5543ee08d062d551cf0a5c9bc0fb70588b0382079029ba48941fa9c9be8a5d4",
+      "sha1": "c24946d46824bd528054bface3231d2ecb7e95e8",
+      "bytes": 23326598,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/it/unimi/dsi/fastutil/8.5.12/fastutil-8.5.12.jar",
+      "file": "fastutil-8.5.12.jar"
+    },
+    {
+      "name": "org.slf4j:slf4j-api:2.0.9",
+      "sha256": "0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c",
+      "sha1": "7cf2726fdcfbc8610f9a71fb3ed639871f315340",
+      "bytes": 64579,
+      "origin": "read-only reuse; exact official 1.21.1 metadata artifact",
+      "url": "https://libraries.minecraft.net/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar",
+      "file": "slf4j-api-2.0.9.jar"
+    }
+  ],
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.39872174989432096,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact argv retained privately; frozen authored collector constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.07624295772984624,
+      "stdoutSha256": "5212eac04cf70f34e5c9a9cfb8a68fc2cd4088784b735712e8a5456b212680ec",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact argv retained privately; frozen authored collector constructs it."
+    }
+  ],
+  "privateReceiptSha256": "0d85701050c1ffc596f92d9528076ad5f85239e48d33f955c30952d4aca9b5a9"
+}

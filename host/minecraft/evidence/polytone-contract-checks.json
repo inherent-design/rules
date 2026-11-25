@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "status": "passed-owner-local-source-native-model-and-publication-checks",
+  "testedBase": "f77fec7eb60db29e749bee441ce8e2d24de47f74",
+  "scope": "Root-owned manager/library cohort; application working-tree successor excluded.",
+  "fullSourceGate": {
+    "leanModules": 178,
+    "bendFiles": 80,
+    "exitCode": 0,
+    "stdoutSha256": "092eff755178ed222053220aa591bdc4771db2554a8bad86b86f4c7f228d7058",
+    "formalSourceProjectionEncoding": "JSON object of tracked path -> SHA256, sort_keys=True, separators=(comma,colon), UTF-8",
+    "formalSourceProjectionSha256": "baa4dcdec879f547e4e187549728738d99f839e099a69bb8fb7acf6d102a2d07"
+  },
+  "sourceMap": {
+    "managerCount": 28,
+    "phaseBindings": 168,
+    "inheritedBindings": 74,
+    "originalViewIdentities": 62,
+    "libraryPolicyViewIdentities": 5,
+    "fieldDeclarationLocators": 294,
+    "completeManagers": 0,
+    "selectedSourceDistinctionsChecked": 7
+  },
+  "privateReceiptSha256": {
+    "polytone-libraries-20261125T102930105618Z": "e872d0d3274f7afa05c9df890c8e3e97d71db14609cee9ad821799fe29a908b7",
+    "schema-record-20261125T103534782983Z": "0d85701050c1ffc596f92d9528076ad5f85239e48d33f955c30952d4aca9b5a9"
+  },
+  "conformanceSha256": "af006a0f7637b910b5ea6ba64c3f832bf88f463c55cdbd8c97722c357ca5db64",
+  "commands": [
+    {
+      "command": "scripts/check-rules.py (pinned Lean/Bend)",
+      "exitCode": 0
+    },
+    {
+      "command": "polytone_contracts.py --check (exact private artifact/views/libraries)",
+      "exitCode": 0
+    },
+    {
+      "command": "export_schema_record.py --check (exact private capture/bundled JAR)",
+      "exitCode": 0
+    },
+    {
+      "command": "schema_record_conformance.py --output host/minecraft/evidence/schema-record-conformance.json",
+      "exitCode": 0
+    },
+    {
+      "command": "scripts/check-meta.py",
+      "exitCode": 0
+    },
+    {
+      "command": "mise run format:check && mise run check:ci",
+      "exitCode": 0
+    }
+  ],
+  "retirement": {
+    "decompilerGroupsAbsent": 3,
+    "nativeCompilerAndJvmGroupsAbsent": 2,
+    "finalExactOwnedJavaArgvMatches": [],
+    "signalsSent": 0
+  },
+  "limitations": [
+    "All manager and provider runtime/rendering qualifications remain incomplete.",
+    "Original source/bytecode, bundled JARs, tool/JVM logs, exact local paths and class-loading graph stay private.",
+    "The source gate checks tracked formal files; unready application working-tree files are intentionally excluded.",
+    "No full game/provider/JarJar negotiation, GUI, account/world access, product implementation or native Windows/Linux comparison.",
+    "No host-wide free-memory or storage reclamation measurement."
+  ]
+}

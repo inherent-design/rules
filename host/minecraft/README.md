@@ -25,6 +25,8 @@ The [registry discovery map](REGISTRIES.md) expands item nodes, properties, tint
 
 The [Polytone breadth map](POLYTONE.md) separately locates all 28 built-in content managers, their definition roots, shared policies, and static consumer references. It is source discovery; semantic laws, original-method comparisons, live consumers and provider coexistence remain incomplete.
 
+Its [codec and inheritance extension](POLYTONE-CONTRACTS.md) resolves effective reload hooks across all 28 managers, inspects three bundled libraries, and compares 30 original CodecUI API-call outcomes. Schema metadata, actual decoding, encoded field presence, and runtime dependency selection have separate contracts; the selected library fixture does not qualify manager or provider execution.
+
 The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. The [later decoding band](LATER-DECODING.md) now compares 40 original 26.3 method/codec inputs with Lean and Bend. Actual provider hooks, full pack/model decoding, rendering and 1.21.11 remain independently unqualified.
 
 The [consumer extension](CONSUMERS.md) closes the selected space-font inspection gap and follows the built-in block-presentation factory into registry/state dependencies. The [Bedrock source map](bedrock/README.md) separately indexes client schema declarations, documentation sketches and example anchors at three exact source tags. Neither source lane counts as native client or rendered qualification.
