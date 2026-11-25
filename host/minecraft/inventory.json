@@ -1211,12 +1211,26 @@
           "net.minecraft.client.particle.ParticleProvider"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
-      "rules": [],
-      "proofs": [],
+      "review": "partial: original sprite-set helper across five Java releases and source definition/provider/admission/render ownership; full concrete consumer/provider/backend qualification pending",
+      "rules": [
+        "host/minecraft/SpriteSet.bend"
+      ],
+      "proofs": [
+        "host/minecraft/SpriteSet.lean"
+      ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "java-five-version-particle-sprite-controls",
+          "status": "bounded original helper comparison; broader engine/render effects source-only",
+          "report": "host/minecraft/PARTICLES.md",
+          "conformance": "host/minecraft/evidence/sprite-set-conformance.json",
+          "sourceMap": "host/minecraft/particle-sources.json",
+          "limits": "196boundaries(186methodcalls+10authored input mutations);opaque constructor-bypassed identities,no renderer or provider execution."
+        }
       ]
     },
     {

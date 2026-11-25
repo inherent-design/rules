@@ -26,7 +26,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     for name in ['client', 'java', 'decompiler', 'private']:
         p.add_argument('--' + name, type=Path, required=True)
-    p.add_argument('--surface', choices=['font-block', 'server-packs', 'sound-contracts'], default='font-block')
+    p.add_argument('--surface', choices=['font-block', 'server-packs', 'sound-contracts', 'particle-contracts'], default='font-block')
     args = p.parse_args()
     target = next(t for t in json.loads((HERE / 'targets.json').read_text())['javaReferences'] if t['release'] == '26.3')
     assert sha(args.client) == target['source']['clientSha256']
@@ -46,11 +46,21 @@ def main():
         elif args.surface == 'server-packs':
             members = sorted(n.removesuffix('.class') for n in archive.namelist()
                 if n.startswith('net/minecraft/client/resources/server/') and n.endswith('.class'))
-        else:
+        elif args.surface == 'sound-contracts':
             roots = ['net/minecraft/client/sounds/' + n for n in ['WeighedSoundEvents','Weighted','SoundManager',
                 'SoundEngine','SoundBufferLibrary','ChannelAccess','SoundEngineExecutor']]
             roots += ['net/minecraft/client/resources/sounds/' + n for n in ['Sound','SoundEventRegistration','SoundEventRegistrationSerializer']]
             roots += ['com/mojang/blaze3d/audio/' + n for n in ['Library','Channel','SoundBuffer']]
+            members = sorted(n.removesuffix('.class') for n in archive.namelist() if n.endswith('.class')
+                and any(n == root + '.class' or n.startswith(root + '$') for root in roots))
+        else:
+            roots = ['net/minecraft/client/particle/' + n for n in ['ParticleDescription', 'ParticleEngine',
+                'ParticleGroup', 'ParticleProvider', 'ParticleRenderType', 'ParticleResources', 'TrackingEmitter',
+                'QuadParticleGroup', 'NoRenderParticleGroup', 'ItemPickupParticleGroup', 'ElderGuardianParticleGroup',
+                'Particle', 'SingleQuadParticle']]
+            roots += ['net/minecraft/core/particles/ParticleLimit']
+            roots += ['net/minecraft/client/renderer/state/level/' + n for n in
+                ['ParticleGroupRenderState', 'ParticlesRenderState', 'QuadParticleRenderState']]
             members = sorted(n.removesuffix('.class') for n in archive.namelist() if n.endswith('.class')
                 and any(n == root + '.class' or n.startswith(root + '$') for root in roots))
         assert members
