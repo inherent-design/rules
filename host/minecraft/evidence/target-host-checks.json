@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "status": "passed-bounded-cohort",
+  "sourceRevision": "b24f40ce576c556667004f1da35a22b845e3e02c",
+  "formal": {
+    "leanModules": 145,
+    "bendKernelFiles": 63,
+    "command": "python3 scripts/check-rules.py",
+    "exitCode": 0
+  },
+  "pureChecks": [
+    "host/minecraft/codec_conformance.py",
+    "host/minecraft/resource_conformance.py",
+    "host/minecraft/artifact_versions_conformance.py",
+    "host/java/arena_conformance.py",
+    "host/minecraft/host_api_replay.py"
+  ],
+  "nativeScope": "One macOS Java25 arena witness;static original-client parse without game class loading.",
+  "publicAudit": {
+    "exactStagedWorkingBytes": 46,
+    "stagedTree": "62c9e207ae2ec6921df3cfe53da974156dddfc94",
+    "fullSourceScan": "Passed after exact reviewed public-key-ID/source-hash fingerprints;no rule disabled.",
+    "pendingCommitHistoryScan": "Five commits scanned successfully;source-only reviewed fingerprints also apply to this history scan."
+  },
+  "otherChecks": [
+    "Repository metadata/local navigation",
+    "dprint check",
+    "actionlint",
+    "Python AST/JSON/local Markdown links",
+    "Original target identities/11383class entry digests and headers",
+    "Git whitespace"
+  ],
+  "limits": [
+    "No complete host/Minecraft/application goal claim.",
+    "No game/GUI/provider install,driver/backend or rendered qualification.",
+    "New arena API evidence is macOS only;Java17/21/25 profiles keep independent API/platform boundaries.",
+    "OrdinaryCI uses pure comparisons/retained facts;does not run java,javac,game,package manager or application paths."
+  ],
+  "privateOutputSha256": {
+    "expanded-host-formal.stdout": "cbf0b4d1e3aacf1e72358a7e4033de07691b776b68d34b5f175c8ad9c74cdfc7",
+    "expanded-host-formal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host-cohort-pure.stdout": "fa4e8adaccbb41ca4d7579bf7385746b21891b13646a249c0312202bdec12566",
+    "host-cohort-pure.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
