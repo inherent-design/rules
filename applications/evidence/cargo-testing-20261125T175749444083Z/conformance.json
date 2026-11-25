@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "nativeCommands": 13,
+  "testRequests": 11,
+  "observedInvocations": 21,
+  "bodyEvents": 23,
+  "bendFields": 44,
+  "leanLaws": 14,
+  "bendLaws": 8,
+  "negativeControls": [
+    "compile-is-run",
+    "empty-filter-tests-body",
+    "custom-obeys-libtest-filter",
+    "fail-fast-stops-inside-harness",
+    "continue-makes-success",
+    "all-targets-runs-docs",
+    "no-run-doc-body-executed",
+    "doc-no-run-succeeds",
+    "schema",
+    "scope",
+    "filter",
+    "unsupported-filter-context"
+  ],
+  "availableSources": [
+    "src/cargo/ops/cargo_test.rs",
+    "src/bin/cargo/commands/test.rs",
+    "src/doc/src/commands/cargo-test.md",
+    "src/doc/src/reference/cargo-targets.md"
+  ],
+  "unavailableSources": [],
+  "artifacts": {
+    "cargo": "identity checked, not executed",
+    "rustc": "identity checked, not executed",
+    "rustdoc": "identity checked, not executed"
+  },
+  "basisFiles": 55,
+  "peakTargetAllocatedKiB": 5216,
+  "limits": [
+    "One std-only fixture, captured compiler/target order, and closed request profile.",
+    "Target category and successful harness status do not establish test intent, API fidelity, or complete flow coverage.",
+    "No benchmarks, custom runner failure, parallel scheduling, Windows, or empack test execution."
+  ]
+}

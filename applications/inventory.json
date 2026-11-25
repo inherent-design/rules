@@ -13133,7 +13133,25 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "One std-only offline Cargo1.92/Rust1.92 Mac fixture;11 test requests/21 target-phase invocations/23 body events;compile-only,empty filter,ignored selection,custom harness,executable failure continuation,doctest categories and all-targets scope.",
+              "remaining": "Parent operations remain pending:general run/bench,target selection/order,scheduling,cancellation,custom-runner failures,cross-platform behavior and semantic test/API fidelity are not qualified.",
+              "evidence": [
+                "cargo/TESTING.md",
+                "cargo/Testing.lean",
+                "cargo/Testing.bend",
+                "sources/cargo-testing-selections.json",
+                "evidence/cargo-testing-20261125T175749444083Z/conformance.json"
+              ],
+              "operationSlices": {
+                "test": "Closed fixture request profile;native argv/compile outputs/harness invocations/body markers/status compared separately.",
+                "doctest": "One runnable,no_run,compile_fail and ignored block;observed categories and invocation scope,not general rustdoc conformance."
+              }
+            }
+          ]
         },
         {
           "id": "cargo.developer-fixes",
