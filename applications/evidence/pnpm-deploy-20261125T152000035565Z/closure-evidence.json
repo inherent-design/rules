@@ -1,0 +1,147 @@
+[
+  {
+    "id": "production",
+    "installed": [
+      "rules-deploy-app",
+      "rules-deploy-lib",
+      "rules-deploy-leaf",
+      "rules-deploy-opt",
+      "rules-deploy-ext"
+    ],
+    "exposed": [
+      1,
+      3,
+      4
+    ],
+    "runtimeApp": {
+      "app": "app",
+      "lib": {
+        "lib": "lib",
+        "leaf": "leaf"
+      },
+      "ext": "external-v1"
+    },
+    "backing": "All recorded relative symlinks resolve within the copied output snapshot.",
+    "manifestSourceReferences": [
+      "rules-deploy-ext@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz",
+      "rules-deploy-lib@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/lib",
+      "rules-deploy-opt@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/opt"
+    ]
+  },
+  {
+    "id": "production-no-optional",
+    "installed": [
+      "rules-deploy-app",
+      "rules-deploy-lib",
+      "rules-deploy-leaf",
+      "rules-deploy-ext"
+    ],
+    "exposed": [
+      1,
+      3
+    ],
+    "runtimeApp": {
+      "app": "app",
+      "lib": {
+        "lib": "lib",
+        "leaf": "leaf"
+      },
+      "ext": "external-v1"
+    },
+    "backing": "All recorded relative symlinks resolve within the copied output snapshot.",
+    "manifestSourceReferences": [
+      "rules-deploy-ext@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz",
+      "rules-deploy-lib@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/lib"
+    ]
+  },
+  {
+    "id": "all-groups",
+    "installed": [
+      "rules-deploy-app",
+      "rules-deploy-dev",
+      "rules-deploy-lib",
+      "rules-deploy-leaf",
+      "rules-deploy-opt",
+      "rules-deploy-ext"
+    ],
+    "exposed": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "runtimeApp": {
+      "app": "app",
+      "lib": {
+        "lib": "lib",
+        "leaf": "leaf"
+      },
+      "ext": "external-v1"
+    },
+    "backing": "All recorded relative symlinks resolve within the copied output snapshot.",
+    "manifestSourceReferences": [
+      "rules-deploy-ext@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz",
+      "rules-deploy-lib@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/lib",
+      "rules-deploy-opt@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/opt",
+      "rules-deploy-dev@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/dev"
+    ]
+  },
+  {
+    "id": "outside-new",
+    "installed": [
+      "rules-deploy-app",
+      "rules-deploy-lib",
+      "rules-deploy-leaf",
+      "rules-deploy-opt",
+      "rules-deploy-ext"
+    ],
+    "exposed": [
+      1,
+      3,
+      4
+    ],
+    "runtimeApp": {
+      "app": "app",
+      "lib": {
+        "lib": "lib",
+        "leaf": "leaf"
+      },
+      "ext": "external-v1"
+    },
+    "backing": "All recorded relative symlinks resolve within the copied output snapshot.",
+    "manifestSourceReferences": [
+      "rules-deploy-ext@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz",
+      "rules-deploy-lib@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/lib",
+      "rules-deploy-opt@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/opt"
+    ]
+  },
+  {
+    "id": "forced-child",
+    "installed": [
+      "rules-deploy-app",
+      "rules-deploy-lib",
+      "rules-deploy-leaf",
+      "rules-deploy-opt",
+      "rules-deploy-ext"
+    ],
+    "exposed": [
+      1,
+      3,
+      4
+    ],
+    "runtimeApp": {
+      "app": "app",
+      "lib": {
+        "lib": "lib",
+        "leaf": "leaf"
+      },
+      "ext": "external-v1"
+    },
+    "backing": "All recorded relative symlinks resolve within the copied output snapshot.",
+    "manifestSourceReferences": [
+      "rules-deploy-ext@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz",
+      "rules-deploy-lib@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/lib",
+      "rules-deploy-opt@file:///private/tmp/rules-pnpm-deploy-fmt_2qk4/project/packages/opt"
+    ]
+  }
+]

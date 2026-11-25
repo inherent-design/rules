@@ -1,0 +1,48 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/app:
+    dependencies:
+      rules-deploy-ext:
+        specifier: file:/private/tmp/rules-pnpm-deploy-fmt_2qk4/archives/external.tgz
+        version: file:../archives/external.tgz
+      rules-deploy-lib:
+        specifier: workspace:*
+        version: link:../lib
+    devDependencies:
+      rules-deploy-dev:
+        specifier: workspace:*
+        version: link:../dev
+    optionalDependencies:
+      rules-deploy-opt:
+        specifier: workspace:*
+        version: link:../opt
+
+  packages/dev: {}
+
+  packages/leaf: {}
+
+  packages/lib:
+    dependencies:
+      rules-deploy-leaf:
+        specifier: workspace:*
+        version: link:../leaf
+
+  packages/opt: {}
+
+packages:
+
+  rules-deploy-ext@file:../archives/external.tgz:
+    resolution: {integrity: sha512-/muoiAcmJIw3NRDoTg/PW/gMaTdhbe+REzuROcY2Wl8KxCv9n2n35DnpsPctJgtNvlD31rDOyTVKKZQsNKdu0Q==, tarball: file:../archives/external.tgz}
+    version: 1.0.0
+
+snapshots:
+
+  rules-deploy-ext@file:../archives/external.tgz: {}

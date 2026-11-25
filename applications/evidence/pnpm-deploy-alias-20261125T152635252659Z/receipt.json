@@ -1,0 +1,527 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf",
+  "producerSha256": "7523157f6d28cd73879b368c38692338a4ffa0e55cf4743e421045537f8f6419",
+  "helperSha256": "a783bd317ebcf858e72ad11602d6c986e35b253b4c4514eeced64195b42efb23",
+  "tools": {
+    "pnpm": {
+      "path": "/Users/zer0cell/.local/share/mise/installs/aqua-pnpm-pnpm/12.21.0/pnpm",
+      "version": "12.21.0",
+      "sha256": "1d10621a2e24e340a16cefc50c36ded0f16b7abfe009f27fa2e3c60c34ce3642",
+      "bytes": 47917792
+    },
+    "node": {
+      "path": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin/node",
+      "version": "v26.13.1",
+      "sha256": "266dec4dce3a6cdcf5cdc38722a00cf5ae6a12cc51068d2a227655bbb75751ec",
+      "bytes": 147366176
+    }
+  },
+  "environment": {
+    "PATH": "/Users/zer0cell/.local/share/mise/installs/node/26.13.1/bin:/usr/bin:/bin",
+    "LANG": "en_US.UTF-8",
+    "TMPDIR": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/tmp",
+    "XDG_CONFIG_HOME": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/config",
+    "XDG_CACHE_HOME": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/cache",
+    "XDG_STATE_HOME": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/state",
+    "PNPM_HOME": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/global",
+    "PNPM_CONFIG_STATE_DIR": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/state",
+    "NPM_CONFIG_USERCONFIG": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/config/user.npmrc",
+    "NPM_CONFIG_GLOBALCONFIG": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/config/global.npmrc",
+    "NPM_CONFIG_CACHE": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/cache/npm",
+    "NPM_CONFIG_REGISTRY": "http://127.0.0.1:9",
+    "NPM_CONFIG_FETCH_RETRIES": "0",
+    "NPM_CONFIG_IGNORE_SCRIPTS": "true",
+    "NPM_CONFIG_UPDATE_NOTIFIER": "false",
+    "COREPACK_ENABLE_NETWORK": "0",
+    "DO_NOT_TRACK": "1",
+    "NO_COLOR": "1",
+    "TERM": "dumb"
+  },
+  "commands": [
+    {
+      "label": "install",
+      "args": [
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-frozen-lockfile"
+      ],
+      "pid": 34663,
+      "exitCode": 0,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "6d3fd79c699e366d30cdce1cbba1b6034474b8828ab66d25cf4505ced298966e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "exact-source",
+      "args": [
+        "--filter",
+        "rules-deploy-custody-app",
+        "deploy",
+        "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/project/packages/app",
+        "--force",
+        "--offline",
+        "--ignore-scripts"
+      ],
+      "pid": 34664,
+      "exitCode": 1,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "eefde1d254e4db4c8c38ecb561dcb5129850ff52d7970abbce86412be23b1262"
+    },
+    {
+      "label": "case-alias-source",
+      "args": [
+        "--filter",
+        "rules-deploy-custody-app",
+        "deploy",
+        "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/project/packages/APP",
+        "--force",
+        "--offline",
+        "--ignore-scripts"
+      ],
+      "pid": 34665,
+      "exitCode": 0,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "f0e27f9089d918f5cd867d26b5714ecb19e4869966dfcecfb6075f446e5c5693",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cases": [
+    {
+      "id": "exact-source",
+      "available": true,
+      "target": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/project/packages/app",
+      "sameSourceObjectBefore": true,
+      "identityBefore": {
+        "original": {
+          "device": "16777232",
+          "inode": "294949012"
+        },
+        "alias": {
+          "device": "16777232",
+          "inode": "294949012"
+        }
+      },
+      "before": {
+        "node_modules": {
+          "kind": "directory"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "d4aba0322bc793031e1f8a1fedcfee5c9ef4dfcb3b7cc016423c9f6987b7f710",
+          "bytes": 61,
+          "mode": 420,
+          "mtimeNs": "1795620395255209328"
+        },
+        "packages": {
+          "kind": "directory"
+        },
+        "pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "1f4f93a515b148728382fd2f39bf616b9b81e34608c90279cdbb8795eeffcbb2",
+          "bytes": 134,
+          "mode": 420,
+          "mtimeNs": "1795620395285478983"
+        },
+        "pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "982ebfcb33c10b610eba6e0f27c5784c3d7db5bc9a646b0b785daf2e2b7c79b9",
+          "bytes": 93,
+          "mode": 420,
+          "mtimeNs": "1795620395255285869"
+        },
+        "node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "364b7803805996801ac9b53d36896697e20cf8867cd99b8c925d878610dd4557",
+          "bytes": 614,
+          "mode": 420,
+          "mtimeNs": "1795620395293729343"
+        },
+        "node_modules/.pnpm": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "86d64e099ee96aaa6a3f7305174b62abe6653737444dfe654f22c4f706de69ad",
+          "bytes": 2499,
+          "mode": 420,
+          "mtimeNs": "1795620395294120509"
+        },
+        "node_modules/.pnpm/node_modules": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm/node_modules/rules-deploy-custody-app": {
+          "kind": "symlink",
+          "target": "../../../packages/app"
+        },
+        "packages/app": {
+          "kind": "directory"
+        },
+        "packages/app/index.cjs": {
+          "kind": "file",
+          "sha256": "3f1b80b82ff809ebb8db17682b53de5d92b2e1e470b2c32f7031d8717dfe4848",
+          "bytes": 40,
+          "mode": 420,
+          "mtimeNs": "1795620395255423244"
+        },
+        "packages/app/package.json": {
+          "kind": "file",
+          "sha256": "8c782d2ee56d14395dc070167ffd8b8fc9fbe6385a964b8f9fdfc09a5b1942a6",
+          "bytes": 120,
+          "mode": 420,
+          "mtimeNs": "1795620395255363577"
+        },
+        "packages/app/private.txt": {
+          "kind": "file",
+          "sha256": "dc233addc44972f7845e9bd3b245a3bc1d7ae5bacac2eee5dd53f890f400af83",
+          "bytes": 46,
+          "mode": 420,
+          "mtimeNs": "1795620395255486619"
+        }
+      },
+      "after": {
+        "node_modules": {
+          "kind": "directory"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "d4aba0322bc793031e1f8a1fedcfee5c9ef4dfcb3b7cc016423c9f6987b7f710",
+          "bytes": 61,
+          "mode": 420,
+          "mtimeNs": "1795620395255209328"
+        },
+        "packages": {
+          "kind": "directory"
+        },
+        "pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "1f4f93a515b148728382fd2f39bf616b9b81e34608c90279cdbb8795eeffcbb2",
+          "bytes": 134,
+          "mode": 420,
+          "mtimeNs": "1795620395285478983"
+        },
+        "pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "982ebfcb33c10b610eba6e0f27c5784c3d7db5bc9a646b0b785daf2e2b7c79b9",
+          "bytes": 93,
+          "mode": 420,
+          "mtimeNs": "1795620395255285869"
+        },
+        "node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "364b7803805996801ac9b53d36896697e20cf8867cd99b8c925d878610dd4557",
+          "bytes": 614,
+          "mode": 420,
+          "mtimeNs": "1795620395293729343"
+        },
+        "node_modules/.pnpm": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "86d64e099ee96aaa6a3f7305174b62abe6653737444dfe654f22c4f706de69ad",
+          "bytes": 2499,
+          "mode": 420,
+          "mtimeNs": "1795620395294120509"
+        },
+        "node_modules/.pnpm/node_modules": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm/node_modules/rules-deploy-custody-app": {
+          "kind": "symlink",
+          "target": "../../../packages/app"
+        },
+        "packages/app": {
+          "kind": "directory"
+        },
+        "packages/app/index.cjs": {
+          "kind": "file",
+          "sha256": "3f1b80b82ff809ebb8db17682b53de5d92b2e1e470b2c32f7031d8717dfe4848",
+          "bytes": 40,
+          "mode": 420,
+          "mtimeNs": "1795620395255423244"
+        },
+        "packages/app/package.json": {
+          "kind": "file",
+          "sha256": "8c782d2ee56d14395dc070167ffd8b8fc9fbe6385a964b8f9fdfc09a5b1942a6",
+          "bytes": 120,
+          "mode": 420,
+          "mtimeNs": "1795620395255363577"
+        },
+        "packages/app/private.txt": {
+          "kind": "file",
+          "sha256": "dc233addc44972f7845e9bd3b245a3bc1d7ae5bacac2eee5dd53f890f400af83",
+          "bytes": 46,
+          "mode": 420,
+          "mtimeNs": "1795620395255486619"
+        }
+      },
+      "exitCode": 1,
+      "sourceExists": true,
+      "sourceSnapshot": {
+        "index.cjs": {
+          "kind": "file",
+          "sha256": "3f1b80b82ff809ebb8db17682b53de5d92b2e1e470b2c32f7031d8717dfe4848",
+          "bytes": 40,
+          "mode": 420,
+          "mtimeNs": "1795620395255423244"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "8c782d2ee56d14395dc070167ffd8b8fc9fbe6385a964b8f9fdfc09a5b1942a6",
+          "bytes": 120,
+          "mode": 420,
+          "mtimeNs": "1795620395255363577"
+        },
+        "private.txt": {
+          "kind": "file",
+          "sha256": "dc233addc44972f7845e9bd3b245a3bc1d7ae5bacac2eee5dd53f890f400af83",
+          "bytes": 46,
+          "mode": 420,
+          "mtimeNs": "1795620395255486619"
+        }
+      }
+    },
+    {
+      "id": "case-alias-source",
+      "available": true,
+      "target": "/private/tmp/rules-pnpm-deploy-alias-fvc1awaf/project/packages/APP",
+      "sameSourceObjectBefore": true,
+      "identityBefore": {
+        "original": {
+          "device": "16777232",
+          "inode": "294949012"
+        },
+        "alias": {
+          "device": "16777232",
+          "inode": "294949012"
+        }
+      },
+      "before": {
+        "node_modules": {
+          "kind": "directory"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "d4aba0322bc793031e1f8a1fedcfee5c9ef4dfcb3b7cc016423c9f6987b7f710",
+          "bytes": 61,
+          "mode": 420,
+          "mtimeNs": "1795620395255209328"
+        },
+        "packages": {
+          "kind": "directory"
+        },
+        "pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "1f4f93a515b148728382fd2f39bf616b9b81e34608c90279cdbb8795eeffcbb2",
+          "bytes": 134,
+          "mode": 420,
+          "mtimeNs": "1795620395285478983"
+        },
+        "pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "982ebfcb33c10b610eba6e0f27c5784c3d7db5bc9a646b0b785daf2e2b7c79b9",
+          "bytes": 93,
+          "mode": 420,
+          "mtimeNs": "1795620395255285869"
+        },
+        "node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "364b7803805996801ac9b53d36896697e20cf8867cd99b8c925d878610dd4557",
+          "bytes": 614,
+          "mode": 420,
+          "mtimeNs": "1795620395293729343"
+        },
+        "node_modules/.pnpm": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "86d64e099ee96aaa6a3f7305174b62abe6653737444dfe654f22c4f706de69ad",
+          "bytes": 2499,
+          "mode": 420,
+          "mtimeNs": "1795620395294120509"
+        },
+        "node_modules/.pnpm/node_modules": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm/node_modules/rules-deploy-custody-app": {
+          "kind": "symlink",
+          "target": "../../../packages/app"
+        },
+        "packages/app": {
+          "kind": "directory"
+        },
+        "packages/app/index.cjs": {
+          "kind": "file",
+          "sha256": "3f1b80b82ff809ebb8db17682b53de5d92b2e1e470b2c32f7031d8717dfe4848",
+          "bytes": 40,
+          "mode": 420,
+          "mtimeNs": "1795620395255423244"
+        },
+        "packages/app/package.json": {
+          "kind": "file",
+          "sha256": "8c782d2ee56d14395dc070167ffd8b8fc9fbe6385a964b8f9fdfc09a5b1942a6",
+          "bytes": 120,
+          "mode": 420,
+          "mtimeNs": "1795620395255363577"
+        },
+        "packages/app/private.txt": {
+          "kind": "file",
+          "sha256": "dc233addc44972f7845e9bd3b245a3bc1d7ae5bacac2eee5dd53f890f400af83",
+          "bytes": 46,
+          "mode": 420,
+          "mtimeNs": "1795620395255486619"
+        }
+      },
+      "after": {
+        "node_modules": {
+          "kind": "directory"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "d4aba0322bc793031e1f8a1fedcfee5c9ef4dfcb3b7cc016423c9f6987b7f710",
+          "bytes": 61,
+          "mode": 420,
+          "mtimeNs": "1795620395255209328"
+        },
+        "packages": {
+          "kind": "directory"
+        },
+        "pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "1f4f93a515b148728382fd2f39bf616b9b81e34608c90279cdbb8795eeffcbb2",
+          "bytes": 134,
+          "mode": 420,
+          "mtimeNs": "1795620395285478983"
+        },
+        "pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "982ebfcb33c10b610eba6e0f27c5784c3d7db5bc9a646b0b785daf2e2b7c79b9",
+          "bytes": 93,
+          "mode": 420,
+          "mtimeNs": "1795620395255285869"
+        },
+        "node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "364b7803805996801ac9b53d36896697e20cf8867cd99b8c925d878610dd4557",
+          "bytes": 614,
+          "mode": 420,
+          "mtimeNs": "1795620395293729343"
+        },
+        "node_modules/.pnpm": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "86d64e099ee96aaa6a3f7305174b62abe6653737444dfe654f22c4f706de69ad",
+          "bytes": 2499,
+          "mode": 420,
+          "mtimeNs": "1795620395294120509"
+        },
+        "node_modules/.pnpm/node_modules": {
+          "kind": "directory"
+        },
+        "node_modules/.pnpm/node_modules/rules-deploy-custody-app": {
+          "kind": "symlink",
+          "target": "../../../packages/app"
+        },
+        "packages/APP": {
+          "kind": "directory"
+        },
+        "packages/APP/node_modules": {
+          "kind": "directory"
+        },
+        "packages/APP/package.json": {
+          "kind": "file",
+          "sha256": "888df96363bdd0bfcc3ea779b52e4e27d467900b407a135e908b173dfa03403d",
+          "bytes": 197,
+          "mode": 420,
+          "mtimeNs": "1795620395330574028"
+        },
+        "packages/APP/pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a",
+          "bytes": 114,
+          "mode": 420,
+          "mtimeNs": "1795620395320736629"
+        },
+        "packages/APP/pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "b66368d687f5bbe4c6928fdd4d09d82ce55bf21052a099d957b9451fd4611a28",
+          "bytes": 281,
+          "mode": 420,
+          "mtimeNs": "1795620395325606453"
+        },
+        "packages/APP/node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "33e97771886f8662ca47bf2256bc3e8bbca948959c53c8612b0207d453dfd6d6",
+          "bytes": 539,
+          "mode": 420,
+          "mtimeNs": "1795620395340720594"
+        },
+        "packages/APP/node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "6b1264e33c1e7806b276c0c993c51ea28b91bf9a9bdadc47205d8e3e653c2d30",
+          "bytes": 2210,
+          "mode": 420,
+          "mtimeNs": "1795620395341055843"
+        }
+      },
+      "exitCode": 0,
+      "sourceExists": true,
+      "sourceSnapshot": {
+        "node_modules": {
+          "kind": "directory"
+        },
+        "package.json": {
+          "kind": "file",
+          "sha256": "888df96363bdd0bfcc3ea779b52e4e27d467900b407a135e908b173dfa03403d",
+          "bytes": 197,
+          "mode": 420,
+          "mtimeNs": "1795620395330574028"
+        },
+        "pnpm-lock.yaml": {
+          "kind": "file",
+          "sha256": "17c814b167307942d3609c7b9d916ceddb85839573ab39baa114e30edb132a1a",
+          "bytes": 114,
+          "mode": 420,
+          "mtimeNs": "1795620395320736629"
+        },
+        "pnpm-workspace.yaml": {
+          "kind": "file",
+          "sha256": "b66368d687f5bbe4c6928fdd4d09d82ce55bf21052a099d957b9451fd4611a28",
+          "bytes": 281,
+          "mode": 420,
+          "mtimeNs": "1795620395325606453"
+        },
+        "node_modules/.modules.yaml": {
+          "kind": "file",
+          "sha256": "33e97771886f8662ca47bf2256bc3e8bbca948959c53c8612b0207d453dfd6d6",
+          "bytes": 539,
+          "mode": 420,
+          "mtimeNs": "1795620395340720594"
+        },
+        "node_modules/.pnpm-workspace-state-v1.json": {
+          "kind": "file",
+          "sha256": "6b1264e33c1e7806b276c0c993c51ea28b91bf9a9bdadc47205d8e3e653c2d30",
+          "bytes": 2210,
+          "mode": 420,
+          "mtimeNs": "1795620395341055843"
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Only a fresh owned dependency-free workspace;source preimages retained before force control.",
+    "One exact-spelling refusal and one case-only alias;if the host has distinct objects the alias control is unavailable.",
+    "No user checkout,old fixture,global store,world,or product source is modified. No restoration is claimed from this probe."
+  ],
+  "complete": true,
+  "privateKiB": 52
+}
