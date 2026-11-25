@@ -85,3 +85,5 @@ The [deduplication band](js-dedupe/README.md) separates author constraints, save
 The [package-contents band](js-package-contents/README.md) compares authored rules, required entry points, regular bytes, and typed links across local npm/pnpm/Yarn archives. It leaves consumer extraction, publication, and general matching behavior pending.
 
 The [npm manifest band](npm-manifest/README.md) separates field presence, output shape, typed edits, and per-workspace saved effects. It compares npm 11 with targeted npm 12 getters and retains an explicit partial-save/repair/retry case; complete validation and crash safety remain pending.
+
+The [Yarn version-decision band](yarn-version/README.md) separates deferred policy, selected targets, saved versions, ranges, and checks. It retains a controlled apply failure that consumes an unapplied record and an explicit repair/retry; proposed acknowledgement laws remain separate from production recovery.

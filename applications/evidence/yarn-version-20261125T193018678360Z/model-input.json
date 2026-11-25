@@ -1,0 +1,988 @@
+{
+  "scopes": [
+    {
+      "id": "yarn-version-20261125T193018678360Z:scope-alpha",
+      "root": 0,
+      "recursive": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:scope-beta",
+      "root": 1,
+      "recursive": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:scope-gamma",
+      "root": 2,
+      "recursive": true
+    }
+  ],
+  "records": [
+    {
+      "id": "yarn-version-20261125T193018678360Z:record-alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:record-beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-record",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-record",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": true,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:record-changed",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:decline-dependent",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": true,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193101756734Z:record-changed",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193101756734Z:decline-dependent",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": true,
+      "force": false,
+      "dryRun": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:record-before-failure",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "priorDecision": false,
+      "priorBump": false,
+      "decline": false,
+      "force": false,
+      "dryRun": false
+    }
+  ],
+  "applies": [
+    {
+      "id": "yarn-version-20261125T193018678360Z:preview-alpha:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:preview-alpha:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:preview-alpha:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-alpha:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-alpha:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-alpha:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-all:alpha",
+      "current": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-all:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-all:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-again:alpha",
+      "current": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-again:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-again:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-apply:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "hasRelease": true,
+      "anySelectedLower": true,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-apply:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": true,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-apply:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": true,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-apply:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "hasRelease": true,
+      "anySelectedLower": true,
+      "force": true,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-apply:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": true,
+      "force": true,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-apply:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": true,
+      "force": true,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:preview-before-failure:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": false,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:preview-before-failure:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": false,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:preview-before-failure:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": true,
+      "inputAvailable": false,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:apply-missing-file:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "hasRelease": true,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": false,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:apply-missing-file:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": false,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:apply-missing-file:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": false,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:retry-after-repair:alpha",
+      "current": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": true
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:retry-after-repair:beta",
+      "current": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:retry-after-repair:gamma",
+      "current": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "hasRelease": false,
+      "anySelectedLower": false,
+      "force": false,
+      "dryRun": false,
+      "inputAvailable": true,
+      "selected": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "yarn-version-20261125T193101756734Z:check-undecided",
+      "changedA": true,
+      "changedB": false,
+      "changedC": false,
+      "decidedA": false,
+      "decidedB": false,
+      "decidedC": false,
+      "bumpA": false,
+      "bumpB": false
+    },
+    {
+      "id": "yarn-version-20261125T193101756734Z:check-dependent-undecided",
+      "changedA": true,
+      "changedB": false,
+      "changedC": false,
+      "decidedA": true,
+      "decidedB": false,
+      "decidedC": false,
+      "bumpA": true,
+      "bumpB": false
+    },
+    {
+      "id": "yarn-version-20261125T193101756734Z:check-complete",
+      "changedA": true,
+      "changedB": false,
+      "changedC": false,
+      "decidedA": true,
+      "decidedB": true,
+      "decidedC": false,
+      "bumpA": true,
+      "bumpB": false
+    }
+  ],
+  "ranges": [
+    {
+      "id": "yarn-version-20261125T193018678360Z:preview-alpha:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:preview-alpha:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-alpha:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "saved": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-alpha:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-all:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-all:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "saved": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-again:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "target": {
+        "major": 1,
+        "minor": 3,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:apply-again:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 1
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-apply:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:refuse-lower-apply:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-apply:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 1,
+        "patch": 0
+      },
+      "saved": true
+    },
+    {
+      "id": "yarn-version-20261125T193018678360Z:force-lower-apply:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:preview-before-failure:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:preview-before-failure:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:apply-missing-file:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 4
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:apply-missing-file:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:retry-after-repair:beta->alpha",
+      "old": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "target": {
+        "major": 1,
+        "minor": 2,
+        "patch": 3
+      },
+      "saved": false
+    },
+    {
+      "id": "yarn-version-20261125T193206031858Z:retry-after-repair:gamma->beta",
+      "old": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "target": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "saved": false
+    }
+  ],
+  "schema": 1
+}
