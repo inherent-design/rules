@@ -1,0 +1,928 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "pre-ok-release",
+      "variant": "release",
+      "requestFile": "pre-ok-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child success \"two words\" \"\u03a9 \u65e5\u672c\"",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "success",
+            "two words",
+            "\u03a9 \u65e5\u672c"
+          ],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child success \"two words\" \"\u03a9 \u65e5\u672c\"",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "success",
+            "two words",
+            "\u03a9 \u65e5\u672c"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Pre-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child success \"two words\" \"\u03a9 \u65e5\u672c\""
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 0."
+            },
+            {
+              "level": 3,
+              "text": "Pre-Launch command ran successfully.\n\n"
+            }
+          ],
+          "mode": "pre",
+          "phase": "after",
+          "reason": "",
+          "successful": true,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "success",
+          "two words",
+          "\u03a9 \u65e5\u672c"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76576,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "post-ok-release",
+      "variant": "release",
+      "requestFile": "post-ok-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child success",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "success"
+          ],
+          "mode": "post",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child success",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "success"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Post-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child success"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 0."
+            },
+            {
+              "level": 3,
+              "text": "Post-Launch command ran successfully.\n\n"
+            }
+          ],
+          "mode": "post",
+          "phase": "after",
+          "reason": "",
+          "successful": true,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "success"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76578,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "pre-exit7-release",
+      "variant": "release",
+      "requestFile": "pre-exit7-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child exit7",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "exit7"
+          ],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child exit7",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "exit7"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Pre-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child exit7"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 7."
+            },
+            {
+              "level": 10,
+              "text": "Pre-Launch command failed with code 7.\n\n"
+            }
+          ],
+          "mode": "pre",
+          "phase": "after",
+          "reason": "Pre-Launch command failed with code 7.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "exit7"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76580,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "post-exit7-release",
+      "variant": "release",
+      "requestFile": "post-exit7-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child exit7",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "exit7"
+          ],
+          "mode": "post",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child exit7",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "exit7"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Post-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child exit7"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 7."
+            },
+            {
+              "level": 10,
+              "text": "Post-Launch command failed with code 7.\n\n"
+            }
+          ],
+          "mode": "post",
+          "phase": "after",
+          "reason": "Post-Launch command failed with code 7.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "exit7"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76608,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "pre-missing-release",
+      "variant": "release",
+      "requestFile": "pre-missing-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Pre-Launch command: /private/tmp/rules-prism-commands-pn3twm74/not-installed"
+            },
+            {
+              "level": 10,
+              "text": "The process failed to start: Child process set up failed: execve: No such file or directory"
+            },
+            {
+              "level": 10,
+              "text": "Pre-Launch command failed with code 0.\n\n"
+            }
+          ],
+          "mode": "pre",
+          "phase": "after",
+          "reason": "Pre-Launch command failed with code 0.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "post-missing-release",
+      "variant": "release",
+      "requestFile": "post-missing-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ],
+          "mode": "post",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Post-Launch command: /private/tmp/rules-prism-commands-pn3twm74/not-installed"
+            },
+            {
+              "level": 10,
+              "text": "The process failed to start: Child process set up failed: execve: No such file or directory"
+            },
+            {
+              "level": 10,
+              "text": "Post-Launch command failed with code 0.\n\n"
+            }
+          ],
+          "mode": "post",
+          "phase": "after",
+          "reason": "Post-Launch command failed with code 0.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "pre-abort-release",
+      "variant": "release",
+      "requestFile": "pre-abort-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child hold",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "hold"
+          ],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child hold",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "hold"
+          ]
+        },
+        {
+          "abortAccepted": true,
+          "abortCalled": true,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Pre-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child hold"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 9,
+              "text": "Process was killed by user."
+            },
+            {
+              "level": 10,
+              "text": "Pre-Launch command failed with code 9.\n\n"
+            }
+          ],
+          "mode": "pre",
+          "phase": "after",
+          "reason": "Pre-Launch command failed with code 9.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "hold"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76831,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "post-abort-release",
+      "variant": "release",
+      "requestFile": "post-abort-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release child hold",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "hold"
+          ],
+          "mode": "post",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE child hold",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "child",
+            "hold"
+          ]
+        },
+        {
+          "abortAccepted": true,
+          "abortCalled": true,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Running Post-Launch command: /private/tmp/rules-prism-commands-pn3twm74/probe-release child hold"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 9,
+              "text": "Process was killed by user."
+            },
+            {
+              "level": 10,
+              "text": "Post-Launch command failed with code 9.\n\n"
+            }
+          ],
+          "mode": "post",
+          "phase": "after",
+          "reason": "Post-Launch command failed with code 9.\n\n",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "hold"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76853,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "pre-space-release",
+      "variant": "release",
+      "requestFile": "pre-space-release-input.json",
+      "helperExitCode": -11,
+      "packets": [
+        {
+          "expanded": "   ",
+          "hookArgs": [],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "   ",
+          "wrapperArgs": []
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "pre-space-checked",
+      "variant": "checked",
+      "requestFile": "pre-space-checked-input.json",
+      "helperExitCode": -6,
+      "packets": [
+        {
+          "expanded": "   ",
+          "hookArgs": [],
+          "mode": "pre",
+          "phase": "before",
+          "qtNoDebug": false,
+          "qtVersion": "6.12.0",
+          "raw": "   ",
+          "wrapperArgs": []
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "post-empty-quotes-release",
+      "variant": "release",
+      "requestFile": "post-empty-quotes-release-input.json",
+      "helperExitCode": -11,
+      "packets": [
+        {
+          "expanded": "\"\"",
+          "hookArgs": [],
+          "mode": "post",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "\"\"",
+          "wrapperArgs": []
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "wrapper-none-release",
+      "variant": "release",
+      "requestFile": "wrapper-none-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "",
+          "hookArgs": [],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "",
+          "wrapperArgs": []
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 0."
+            }
+          ],
+          "mode": "wrapper",
+          "phase": "after",
+          "reason": "",
+          "successful": true,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "success",
+          "original game argument",
+          "\u03a9 \u65e5\u672c"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76858,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "wrapper-space-release",
+      "variant": "release",
+      "requestFile": "wrapper-space-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "   ",
+          "hookArgs": [],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "   ",
+          "wrapperArgs": []
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 0."
+            }
+          ],
+          "mode": "wrapper",
+          "phase": "after",
+          "reason": "",
+          "successful": true,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "child",
+          "success",
+          "original game argument",
+          "\u03a9 \u65e5\u672c"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76860,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "wrapper-ok-release",
+      "variant": "release",
+      "requestFile": "wrapper-ok-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/probe-release wrapper-child \"wrapper argument\"",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "wrapper-child",
+            "wrapper argument"
+          ],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$PROBE wrapper-child \"wrapper argument\"",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+            "wrapper-child",
+            "wrapper argument"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 3,
+              "text": "Wrapper command is:\n/private/tmp/rules-prism-commands-pn3twm74/probe-release wrapper-child \"wrapper argument\"\n\n"
+            },
+            {
+              "level": 1,
+              "text": "child-output \u03a9 \u65e5\u672c"
+            },
+            {
+              "level": 3,
+              "text": "Process exited with code 0."
+            }
+          ],
+          "mode": "wrapper",
+          "phase": "after",
+          "reason": "",
+          "successful": true,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": {
+        "argv": [
+          "wrapper-child",
+          "wrapper argument",
+          "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+          "child",
+          "success",
+          "original game argument",
+          "\u03a9 \u65e5\u672c"
+        ],
+        "cwd": "/private/tmp/rules-prism-commands-pn3twm74/game \u03a9 \u65e5\u672c",
+        "pid": 76862,
+        "value": "two words"
+      },
+      "childAbsent": true
+    },
+    {
+      "id": "wrapper-missing-release",
+      "variant": "release",
+      "requestFile": "wrapper-missing-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "hookArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "/private/tmp/rules-prism-commands-pn3twm74/not-installed",
+          "wrapperArgs": [
+            "/private/tmp/rules-prism-commands-pn3twm74/not-installed"
+          ]
+        },
+        {
+          "abortAccepted": false,
+          "abortCalled": false,
+          "logs": [
+            {
+              "level": 10,
+              "text": "The wrapper command \"/private/tmp/rules-prism-commands-pn3twm74/not-installed\" couldn't be found."
+            }
+          ],
+          "mode": "wrapper",
+          "phase": "after",
+          "reason": "The wrapper command \"/private/tmp/rules-prism-commands-pn3twm74/not-installed\" couldn't be found.",
+          "successful": false,
+          "terminal": true,
+          "timedOut": false
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "wrapper-expanded-space-release",
+      "variant": "release",
+      "requestFile": "wrapper-expanded-space-release-input.json",
+      "helperExitCode": -11,
+      "packets": [
+        {
+          "expanded": "   ",
+          "hookArgs": [],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "$RULES_SPACE",
+          "wrapperArgs": []
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "wrapper-expanded-space-checked",
+      "variant": "checked",
+      "requestFile": "wrapper-expanded-space-checked-input.json",
+      "helperExitCode": -6,
+      "packets": [
+        {
+          "expanded": "   ",
+          "hookArgs": [],
+          "mode": "wrapper",
+          "phase": "before",
+          "qtNoDebug": false,
+          "qtVersion": "6.12.0",
+          "raw": "$RULES_SPACE",
+          "wrapperArgs": []
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "parse-single-quotes-release",
+      "variant": "release",
+      "requestFile": "parse-single-quotes-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "program 'two words'",
+          "hookArgs": [
+            "program",
+            "'two",
+            "words'"
+          ],
+          "mode": "parse",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "program 'two words'",
+          "wrapperArgs": [
+            "program",
+            "two words"
+          ]
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "parse-tab-release",
+      "variant": "release",
+      "requestFile": "parse-tab-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "program\targument",
+          "hookArgs": [
+            "program",
+            "argument"
+          ],
+          "mode": "parse",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "program\targument",
+          "wrapperArgs": [
+            "program\targument"
+          ]
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "parse-empty-argument-release",
+      "variant": "release",
+      "requestFile": "parse-empty-argument-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "program \"\" tail",
+          "hookArgs": [
+            "program",
+            "tail"
+          ],
+          "mode": "parse",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "program \"\" tail",
+          "wrapperArgs": [
+            "program",
+            "tail"
+          ]
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "parse-unquoted-value-release",
+      "variant": "release",
+      "requestFile": "parse-unquoted-value-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "program two words",
+          "hookArgs": [
+            "program",
+            "two",
+            "words"
+          ],
+          "mode": "parse",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "program $RULES_VALUE",
+          "wrapperArgs": [
+            "program",
+            "two",
+            "words"
+          ]
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    },
+    {
+      "id": "parse-quoted-value-release",
+      "variant": "release",
+      "requestFile": "parse-quoted-value-release-input.json",
+      "helperExitCode": 0,
+      "packets": [
+        {
+          "expanded": "program \"two words\"",
+          "hookArgs": [
+            "program",
+            "two words"
+          ],
+          "mode": "parse",
+          "phase": "before",
+          "qtNoDebug": true,
+          "qtVersion": "6.12.0",
+          "raw": "program \"$RULES_VALUE\"",
+          "wrapperArgs": [
+            "program",
+            "two words"
+          ]
+        }
+      ],
+      "child": null,
+      "childAbsent": null
+    }
+  ]
+}

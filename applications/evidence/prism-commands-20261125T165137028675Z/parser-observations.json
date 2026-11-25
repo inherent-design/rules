@@ -1,0 +1,59 @@
+[
+  {
+    "id": "parse-single-quotes-release",
+    "hook": [
+      "program",
+      "'two",
+      "words'"
+    ],
+    "wrapper": [
+      "program",
+      "two words"
+    ]
+  },
+  {
+    "id": "parse-tab-release",
+    "hook": [
+      "program",
+      "argument"
+    ],
+    "wrapper": [
+      "program\targument"
+    ]
+  },
+  {
+    "id": "parse-empty-argument-release",
+    "hook": [
+      "program",
+      "tail"
+    ],
+    "wrapper": [
+      "program",
+      "tail"
+    ]
+  },
+  {
+    "id": "parse-unquoted-value-release",
+    "hook": [
+      "program",
+      "two",
+      "words"
+    ],
+    "wrapper": [
+      "program",
+      "two",
+      "words"
+    ]
+  },
+  {
+    "id": "parse-quoted-value-release",
+    "hook": [
+      "program",
+      "two words"
+    ],
+    "wrapper": [
+      "program",
+      "two words"
+    ]
+  }
+]

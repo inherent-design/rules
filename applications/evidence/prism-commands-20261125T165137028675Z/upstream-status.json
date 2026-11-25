@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "observedAt": "2026-11-25T17:07:34.124087+00:00",
+  "observedExitCode": 0,
+  "response": {
+    "publishedAt": "2026-09-28T22:55:19Z",
+    "tag": "11.1.1",
+    "target": "develop",
+    "url": "https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.1.1"
+  },
+  "scope": "Latest released tag only; no current develop-source fix or shipped binary correspondence qualification.",
+  "argv": [
+    "gh",
+    "api",
+    "repos/PrismLauncher/PrismLauncher/releases/latest",
+    "--jq",
+    "{tag: .tag_name, publishedAt: .published_at, url: .html_url, target: .target_commitish}"
+  ]
+}

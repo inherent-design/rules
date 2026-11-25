@@ -188,6 +188,8 @@ Leave saved profile markers and priority interpretation intact. The keep-current
 
 ### Prism Launcher
 
+The [command band](prism/COMMANDS.md) supports parsed-command admission before taking a program and stage-aware failure reporting. Controlled source helpers fail at empty tokens, while missing hooks retain a useful start-error log beneath a misleading code-zero summary. Keep the proposed guard distinct from current behavior, preserve the two consumer grammars, and treat post-exit eligibility as a sequence contract rather than universal cleanup. Full UI/settings/game qualification remains open.
+
 The [instance-library band](prism/LIBRARY.md) adds a canonical-key asymmetry and a retry-reference boundary: UUID resolution does not make the caller spelling a valid saved group key, and popping undo history before restoration can remove retry context while payload remains. Preserve directory/UUID/label roles, current effects, saved membership, and remaining restore items separately. The native method fixtures include a repaired canonical-key candidate, but complete GUI/watcher/OS-trash behavior remains unqualified.
 
 Preserve destination identity alongside content identity. The pinned mrpack filter drops equal-hash pairs without requiring equal paths; its empty-list reparse guard repairs some cases but not the moved/swapped-content cases with other pending work. The focused candidate is path-plus-hash reuse, with explicit verified copy/move if cross-path reuse is later wanted. It changes selection, not mrpack's format, and remains unimplemented. Verify the complete installed inventory and current upstream state before proposing a production patch.
