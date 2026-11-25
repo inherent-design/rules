@@ -59,3 +59,5 @@ The [selected shader source chain](../minecraft/SHADERS.md) identifies LWJGL/sha
 ## Aggregate futures and listener ownership
 
 The [original reload-orchestrator comparison](../minecraft/RELOAD-SCHEDULING.md) observes 108 controlled snapshots across four Java 21 client profiles and the selected Java 25 client. A failed aggregate can coexist with a pending listener future; partial authored application effects can remain after failure. An empty listener set can complete independently of its initial gate. These are selected library/consumer contracts, not a new Java 17 run or a proof of real worker retirement. Direct executors and manual futures make order observable without claiming scheduler latency, cancellation, native completion, or rollback.
+
+The [long arithmetic and buffer contract](WORD64-AND-BUFFERS.md) follows the actual image-header consumer into signed widening, wrapped multiplication, narrowing, checked arithmetic, and mutable read-only-view metadata. It retains separate Java 17/21/25 arithmetic witnesses and Java 21/25 consumer calls; PNG decoding, allocation, Windows/Linux JVM execution, and device lifetime remain unqualified.

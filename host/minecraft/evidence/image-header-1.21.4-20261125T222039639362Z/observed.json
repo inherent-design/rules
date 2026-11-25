@@ -1,0 +1,754 @@
+{
+  "schema": 1,
+  "os": "Mac OS X",
+  "osVersion": "26.7.1",
+  "architecture": "aarch64",
+  "javaVersion": "21.0.13.1",
+  "originalClass": "aze",
+  "originalSigners": 4,
+  "cases": [
+    {
+      "id": "valid-prefix",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-0",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 0,
+        "capacity": 33,
+        "remaining": 0,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 0,
+        "capacity": 33,
+        "remaining": 0,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-7",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 7,
+        "capacity": 33,
+        "remaining": 7,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 7,
+        "capacity": 33,
+        "remaining": 7,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-8",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 8,
+        "capacity": 33,
+        "remaining": 8,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 8,
+        "capacity": 33,
+        "remaining": 8,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-11",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 11,
+        "capacity": 33,
+        "remaining": 11,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 11,
+        "capacity": 33,
+        "remaining": 11,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-12",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 12,
+        "capacity": 33,
+        "remaining": 12,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 12,
+        "capacity": 33,
+        "remaining": 12,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-15",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 15,
+        "capacity": 33,
+        "remaining": 15,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "threw",
+      "errorClass": "java.lang.IndexOutOfBoundsException",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 15,
+        "capacity": 33,
+        "remaining": 15,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-16",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 16,
+        "capacity": 33,
+        "remaining": 16,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 16,
+        "capacity": 33,
+        "remaining": 16,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-25",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 25,
+        "capacity": 33,
+        "remaining": 25,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 25,
+        "capacity": 33,
+        "remaining": 25,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-26",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 26,
+        "capacity": 33,
+        "remaining": 26,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 26,
+        "capacity": 33,
+        "remaining": 26,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit-32",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 32,
+        "capacity": 33,
+        "remaining": 32,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 32,
+        "capacity": 33,
+        "remaining": 32,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "bad-magic",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "Bad PNG Signature",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      }
+    },
+    {
+      "id": "bad-length",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d2373811b255307b4fedd1aa2e120e7b9f349e6f2aa7a821878339b536a74ebb"
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "Bad length for IHDR chunk!",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d2373811b255307b4fedd1aa2e120e7b9f349e6f2aa7a821878339b536a74ebb"
+      }
+    },
+    {
+      "id": "bad-type",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "f9141cd2210d02eff1a32b25360a23856a53c6986abb871ef76b8caeb631dc22"
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "Bad type for IHDR chunk!",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "f9141cd2210d02eff1a32b25360a23856a53c6986abb871ef76b8caeb631dc22"
+      }
+    },
+    {
+      "id": "zero-width",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "5f78592b5e8abf413131597d7ea93106b3f510b30d6d7d89b4a0ba8e980a01ed"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "5f78592b5e8abf413131597d7ea93106b3f510b30d6d7d89b4a0ba8e980a01ed"
+      }
+    },
+    {
+      "id": "negative-height",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d366af9c5d10de291d1ceb88c17e262a54bdb544afaabde1d8a4664e43e522c7"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d366af9c5d10de291d1ceb88c17e262a54bdb544afaabde1d8a4664e43e522c7"
+      }
+    },
+    {
+      "id": "invalid-depth",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "7f3a8131aef7c8947278edcd1164d0e66c43dd97c7f239a6bb9c0c34e379ede2"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "7f3a8131aef7c8947278edcd1164d0e66c43dd97c7f239a6bb9c0c34e379ede2"
+      }
+    },
+    {
+      "id": "invalid-color",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "b4bdfb20b8a35ebebc1f02966cfce7830661ec5ca736404ea2d622f8f541d67f"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "b4bdfb20b8a35ebebc1f02966cfce7830661ec5ca736404ea2d622f8f541d67f"
+      }
+    },
+    {
+      "id": "incompatible-depth-color",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d8eb07e2ea98afd16d01ec23e2af484e314ae8e0a822937f24cd718186d324ee"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d8eb07e2ea98afd16d01ec23e2af484e314ae8e0a822937f24cd718186d324ee"
+      }
+    },
+    {
+      "id": "depth16-small",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d6232626c446b164962119f7907f2dc831dcf8547784ee1f91cbc9996cdef3b2"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "d6232626c446b164962119f7907f2dc831dcf8547784ee1f91cbc9996cdef3b2"
+      }
+    },
+    {
+      "id": "depth16-int-overflow",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "9ec1e28510232e84ab858ca5bde453ab7270e8593d16826bb44bf6dd45751345"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "9ec1e28510232e84ab858ca5bde453ab7270e8593d16826bb44bf6dd45751345"
+      }
+    },
+    {
+      "id": "depth16-long-wrap-negative",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "6829e9cf4088f934d89752ea77f39f5ffb52547c209077aa7a8486cb88f24cae"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "6829e9cf4088f934d89752ea77f39f5ffb52547c209077aa7a8486cb88f24cae"
+      }
+    },
+    {
+      "id": "depth16-long-wrap-positive",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "4708df9f713a85694a4d02a9c4f22f5150a1985301771c9118b461b87bdedcbe"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "4708df9f713a85694a4d02a9c4f22f5150a1985301771c9118b461b87bdedcbe"
+      }
+    },
+    {
+      "id": "bad-crc",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "adeb0d10ad5b61956de3c37fa522356d23224735585c3b267ca7911ff2b5f4a4"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "adeb0d10ad5b61956de3c37fa522356d23224735585c3b267ca7911ff2b5f4a4"
+      }
+    },
+    {
+      "id": "nonzero-compression",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "c63876dd6ef8bea2f044314ea6d8c66f4b12a8dceddd9bff43c433bb6c7e5bc0"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "c63876dd6ef8bea2f044314ea6d8c66f4b12a8dceddd9bff43c433bb6c7e5bc0"
+      }
+    },
+    {
+      "id": "nonzero-filter",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "e603f3b48a0e4d34b82ad141cb4de7e16eb9f3447f8aaf231f43a1ae793764f9"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "e603f3b48a0e4d34b82ad141cb4de7e16eb9f3447f8aaf231f43a1ae793764f9"
+      }
+    },
+    {
+      "id": "nonzero-interlace",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "3d8d21dd68dd3c3b7adfb5ea85370c5eb0cbc3fd076c8c54b2834a4abf741c58"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "3d8d21dd68dd3c3b7adfb5ea85370c5eb0cbc3fd076c8c54b2834a4abf741c58"
+      }
+    },
+    {
+      "id": "readonly-valid",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": true,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": true,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "readonly-bad-magic",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": true,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "Bad PNG Signature",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": true,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      }
+    },
+    {
+      "id": "big-endian-valid",
+      "before": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "big-endian-bad-magic",
+      "before": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "Bad PNG Signature",
+      "after": {
+        "order": "BIG_ENDIAN",
+        "position": 0,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 33,
+        "readOnly": false,
+        "bytesSha256": "2e3ed7216d0d6e94c5a4fbf5ac2f745d40117ef194aa127a9c0c111214e91db7"
+      }
+    },
+    {
+      "id": "position-32",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 32,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 1,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 32,
+        "limit": 33,
+        "capacity": 33,
+        "remaining": 1,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    },
+    {
+      "id": "limit16-position15",
+      "before": {
+        "order": "LITTLE_ENDIAN",
+        "position": 15,
+        "limit": 16,
+        "capacity": 33,
+        "remaining": 1,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      },
+      "status": "returned",
+      "after": {
+        "order": "LITTLE_ENDIAN",
+        "position": 15,
+        "limit": 16,
+        "capacity": 33,
+        "remaining": 1,
+        "readOnly": false,
+        "bytesSha256": "69fc8cd5b7135fe846887cfbab21ff930fdfed0b5aaeb33c231327cca7ad4484"
+      }
+    }
+  ],
+  "arithmetic": []
+}

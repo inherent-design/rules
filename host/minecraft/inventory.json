@@ -1304,7 +1304,7 @@
           "net.minecraft.client.renderer.texture.TextureManager"
         ]
       },
-      "review": "pending",
+      "review": "scoped partial",
       "rules": [],
       "proofs": [],
       "nativeComparisons": [],
@@ -1317,6 +1317,26 @@
           "sources": "host/minecraft/breadth-sources.json",
           "map": "host/minecraft/breadth-contracts.json",
           "limits": "Only named reviewed clauses, not complete family/dependency grammar or game/renderer execution. New original-method comparisons and proofs remain pending."
+        },
+        {
+          "id": "original-png-header",
+          "status": "bounded original header predicate and buffer effects; no image decoded",
+          "report": "host/minecraft/IMAGE-HEADERS.md",
+          "sources": "host/minecraft/image-header-captures.json",
+          "conformance": "host/minecraft/evidence/image-header-conformance.json",
+          "rules": [
+            "host/minecraft/ImageHeader.lean",
+            "host/minecraft/ImageHeader.bend",
+            "host/java/Word64.lean",
+            "host/java/Word64.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ImageHeader.lean",
+            "host/minecraft/ImageHeader.bend",
+            "host/java/Word64.lean",
+            "host/java/Word64.bend"
+          ],
+          "limits": "165 original calls on 33-byte heap buffers;12 Java17/21/25 arithmetic checks on macOS/aarch64. Not full PNG/STB/NativeImage,allocation,provider,upload,device,other host or universal compiler/JVM qualification."
         }
       ]
     },

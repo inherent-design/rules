@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "headerCalls": 165,
+  "arithmeticCalls": 12,
+  "scalarHeaderFields": 7,
+  "leanLaws": 26,
+  "bendLaws": 20,
+  "decoderRefusals": [
+    "schema",
+    "contract",
+    "release",
+    "limit",
+    "position",
+    "duplicate",
+    "needed-magic",
+    "needed-depth",
+    "needed-width",
+    "wide-int",
+    "java18",
+    "nonpositive-math",
+    "too-many"
+  ],
+  "acceptedUnneededUnknowns": [
+    "short-magic",
+    "old-depth",
+    "depth8-width"
+  ],
+  "rejectedInterpretations": [
+    "old-size-as-new",
+    "absolute-as-relative",
+    "invalid-depth-as-allowed",
+    "huge-pair-as-small"
+  ],
+  "rawObservationControls": [
+    "lost-order-effect",
+    "lost-position",
+    "lost-limit",
+    "changed-byte-content",
+    "lost-readonly",
+    "lost-remaining",
+    "lost-error"
+  ],
+  "additionalModelOnlyWordCases": 8,
+  "formalSha256": {
+    "ImageHeader.lean": "446057b82e5a64765c4649388ba08d32d64a676d0b22834cf989e4ae4273fe54",
+    "ImageHeaderCase.lean": "4d7af2f162a4122c6f2ebe02e4f5c63cf68bea72ad01faa3e89fa8a35777eccf",
+    "ImageHeader.bend": "810e92bad5658898a4c77a83e656c1630e78b9f13b40a8eff12aeeac3deebaca",
+    "../java/Word64.lean": "c6fd9ca03c7091c513a44793497eefb2f954eb0e1e3df154047fee49a1745940",
+    "../java/Word64.bend": "561f663cd6ba585a3541091f34d2b7a5e08bdcd52c99f14b05c8d12ed626b293"
+  },
+  "basisSha256": {
+    "image-header-captures.json": "e29d9c5c832b2248b07caeca7465d40f8c38e955af26a81c604ac3d4f31b6723",
+    "image_header_conformance.py": "0d4ca4b16111d8fc3013ce50d724d639d11071d1effe737d74d26733be513edd"
+  },
+  "limits": "Only original header predicate and buffer effects; JDK arithmetic calibration, not PNG validity, downstream STB/NativeImage allocation or GPU/game behavior."
+}

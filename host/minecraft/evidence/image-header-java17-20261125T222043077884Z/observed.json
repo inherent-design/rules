@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "os": "Mac OS X",
+  "osVersion": "26.7.1",
+  "architecture": "aarch64",
+  "javaVersion": "17.0.21.1",
+  "cases": [],
+  "arithmetic": [
+    {
+      "id": "small",
+      "wrappedLong": "48",
+      "narrowedInt": "48",
+      "roundtrip": true,
+      "checked": "48"
+    },
+    {
+      "id": "int-overflow",
+      "wrappedLong": "2147483648",
+      "narrowedInt": "-2147483648",
+      "roundtrip": false,
+      "checked": "2147483648"
+    },
+    {
+      "id": "long-wrap-negative",
+      "wrappedLong": "-16",
+      "narrowedInt": "-16",
+      "roundtrip": true,
+      "checkedError": "java.lang.ArithmeticException"
+    },
+    {
+      "id": "long-wrap-positive",
+      "wrappedLong": "846110592",
+      "narrowedInt": "846110592",
+      "roundtrip": true,
+      "checkedError": "java.lang.ArithmeticException"
+    }
+  ]
+}

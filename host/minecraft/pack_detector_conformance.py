@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Retained-data/model comparison only; no Java, game, pack opening or filesystem fixture."""
 import copy
+import argparse
 import hashlib
 import json
 import os
@@ -112,7 +113,14 @@ def row(id: Nat,result: M.PDOutcome) -> String:
     return json.loads(result.stdout)
 
 
+def require_receipt(receipt, public):
+    assert json.loads(public.read_text()) == receipt, "Portable pack-detector receipt is stale; review and explicitly refresh."
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--refresh-receipt", action="store_true")
+    args = parser.parse_args()
     work = ROOT / ".build/minecraft/pack-detection-conformance"
     work.mkdir(parents=True, exist_ok=True)
     packet, observed, basis = load()
@@ -179,6 +187,13 @@ def main():
         formalSha256={n: sha(HERE / n) for n in ["PackDetection.lean", "PackDetectionCase.lean", "PackDetection.bend"]},
         basisSha256={n: sha(HERE / n) for n in ["pack-detector-cases.json", "pack-detector-captures.json", "pack_detector_conformance.py"]},
         limits="Quiescent authored fixtures, matcher and pack factories; candidate parent anchoring is model-only, not a native patch or full-game qualification.")
+    public = HERE / "evidence/pack-detector-conformance.json"
+    if args.refresh_receipt: public.write_text(json.dumps(receipt, indent=2) + "\n")
+    require_receipt(receipt, public)
+    stale = copy.deepcopy(receipt); stale["nativeRows"] -= 1
+    try: require_receipt(stale, public)
+    except AssertionError: pass
+    else: raise AssertionError("Stale receipt control unexpectedly passed.")
     (work / "conformance.json").write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt))
 
