@@ -14,7 +14,7 @@ For the six host surfaces, see the [host behavior map](host/README.md), [native 
 
 The [application study](applications/README.md) owns the feature-by-feature inventory, per-program models, and design proposals. Its evidence status is tracked per operation. The first [restic retention model](applications/restic/README.md) covers a bounded snapshot lifecycle.
 
-The [Minecraft host addendum](host/minecraft/README.md) maps resource definitions and their consumers across vanilla 1.21.1, vanilla 1.21.5, and the selected Modefite and Skyweave Compat refinements. Its four models are in progress; the breadth inventory does not establish capability or completed proofs.
+The [Minecraft host study](host/minecraft/README.md) maps resource and graphics definitions and their actual consumers across selected editions, releases, loaders, and Modefite/Polytone/Compat variants. Its initial comparison nodes and expanded versioned research remain in progress; the breadth inventory does not establish capability or completed proofs.
 
 ## Check the models
 

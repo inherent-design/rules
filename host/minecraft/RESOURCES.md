@@ -1,6 +1,6 @@
 # Resource selection and metadata ownership
 
-Thirty-six original-client scenarios, 18 per vanilla version, compare generated folder packs through `PathPackResources` and `MultiPackResourceManager`. Both [Lean](ResourceSelection.lean) and [Bend](ResourceSelection.bend) match the observed single-resource and resource-stack results: source identity, opened bytes, metadata absence/flags/failure, and stack order. The [comparison receipt](evidence/resource-conformance.json) records seven decoder refusals and eight changed-observation controls. This is a local, bounded band; it does not complete any of the four host models.
+Thirty-six original-client scenarios, 18 per vanilla version, compare generated folder packs through `PathPackResources` and `MultiPackResourceManager`. Both [Lean](ResourceSelection.lean) and [Bend](ResourceSelection.bend) match the observed single-resource and resource-stack results: source identity, opened bytes, metadata absence/flags/failure, and stack order. The [comparison receipt](evidence/resource-conformance.json) records seven decoder refusals and eight changed-observation controls. This is a local, bounded band; it does not complete the [expanded host research](intent.md).
 
 ## Selection rules
 

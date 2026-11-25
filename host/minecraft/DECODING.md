@@ -2,7 +2,7 @@
 
 The first native band exercises **169 generated inputs across 15 resource families** against the original signed Minecraft clients: 76 calls in 1.21.1 and 93 in 1.21.5. These are headless parser and codec calls with explicit vanilla registry initialization. They do not start a game client, resolve a resource stack, bake models, allocate GPU targets, render a frame, join a server, or read an account or world.
 
-The [Lean rules](Decoding.lean), [Bend rules](Decoding.bend), and [retained comparison](evidence/codec-conformance.json) cover **96 cases in eight families**, including selected decoded values. The remaining 73 observations are retained without claiming model agreement. All four requested host models remain incomplete. In particular, these vanilla observations do not qualify either modded profile.
+The [Lean rules](Decoding.lean), [Bend rules](Decoding.bend), and [retained comparison](evidence/codec-conformance.json) cover **96 cases in eight families**, including selected decoded values. The remaining 73 observations are retained without claiming model agreement. The [expanded host research](intent.md) remains incomplete. These vanilla observations do not qualify modded profiles or later comparison targets.
 
 ## Findings and consequences
 
@@ -46,4 +46,4 @@ python3 host/minecraft/codec_conformance.py
 
 Set `LEAN` and `BEND` to the pinned tools if they are not on PATH. This command uses retained generated evidence only. `native_codecs.py` and `export_codecs.py` are owner-run collection/export tools; ordinary CI must not run them. Acquisition is explicit and private, and the collector does not download missing inputs.
 
-The next broad operational band is pack priority, resource stacks and filters, metadata attachment, and reload prepare/apply/failure behavior. Other remaining work includes full definition/property inventories, consumer/context relationships, sound/font/atlas merge policies, native lifetime boundaries, the exact Modefite and Compat refinements and gates, later-feature provenance, and the final four-profile completion audit. No backport or production change is selected.
+The [resource-selection band](RESOURCES.md) adds scoped pack priority, resource-stack, filter, and metadata observations. Remaining work includes reload prepare/apply/failure behavior, full definition/property inventories, consumer/context relationships, sound/font/atlas merge policies, native lifetime boundaries, exact provider refinements/gates, and the expanded version/edition/provider audit. No backport or production change is selected.
