@@ -6,6 +6,8 @@ The later [profile activation band](PROFILES.md) examines scalar/bulk enabled-st
 
 The [game-plugin band](PLUGINS.md) separately compares raw setters, notification helpers, priority/index rebuilding, load-order synchronization, and missing-master checks. Its source-method fixtures do not qualify Windows MO2, LOOT, saving, or game behavior.
 
+The [process-policy band](PROCESSES.md) separates return values, UI unlock, waiting, and refresh decisions. Its caller trace distinguishes ordinary active-profile launches from the plugin API's profile override; Windows process and VFS behavior remain pending.
+
 ## Domain and source
 
 An installed mod, an enabled profile entry, an origin contributing a file, and the winning file backing are different objects. Reordering a mod changes the profile's priority; it does not move every physical file into the game directory. The selected source stores a primary origin and alternatives for a file.

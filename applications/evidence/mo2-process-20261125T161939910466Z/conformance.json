@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "sourceMethods": 2,
+  "controlledCases": 20,
+  "leanOutcomeMatch": true,
+  "bendScalarComparisons": 180,
+  "leanLaws": 15,
+  "bendLaws": 7,
+  "negativeControls": [
+    "early-unlock-refresh",
+    "background-ui",
+    "cancel-as-completed",
+    "unhooked-wait",
+    "ignored-refresh-flag",
+    "schema",
+    "flags",
+    "reason",
+    "wait-result",
+    "boolean"
+  ],
+  "sourceCachesChecked": [
+    "src/processrunner.cpp",
+    "src/processrunner.h",
+    "src/commandline.cpp",
+    "src/moapplication.cpp",
+    "src/organizerproxy.cpp",
+    "src/uilocker.cpp",
+    "src/mainwindow.cpp",
+    "src/organizercore.cpp"
+  ],
+  "sourceCachesUnavailable": [],
+  "selectedBodiesReconstructed": true,
+  "artifacts": {
+    "/private/tmp/rules-mo2-process-kl6kd6ze/main.cpp": "identity checked, not executed",
+    "/private/tmp/rules-mo2-process-kl6kd6ze/probe": "identity checked, not executed",
+    "/usr/bin/clang++": "identity checked, not executed"
+  },
+  "basisFiles": 19,
+  "limits": [
+    "Only selected postRun/shouldRefresh bodies execute; all host/lifecycle APIs are controlled adapters.",
+    "Running is an injected typed outcome, not proof the real wait loop returns it.",
+    "Source-only callers/profile guards/handle transfer are not full Windows MO2 qualification.",
+    "Wait return, lock release, requested refresh and event-loop adapter are not child retirement, saved output or durable refresh acknowledgement."
+  ]
+}

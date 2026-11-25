@@ -10549,7 +10549,27 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#mo2",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "process-policy-source-branches",
+              "status": "source-modeled",
+              "scope": "20 controlled calls to unchanged postRun/shouldRefresh bodies with inert host APIs; source-only ordinary/plugin caller profile and result contracts.",
+              "evidence": [
+                "mo2/PROCESSES.md",
+                "mo2/Process.lean",
+                "mo2/Process.bend",
+                "evidence/mo2-process-20261125T161939910466Z/conformance.json",
+                "sources/mo2-process-selections.json"
+              ],
+              "operationSlices": {
+                "launch": "Source-only selected/current-profile and handle-transfer caller trace; no actual launch.",
+                "wait": "Controlled return/lock/refresh branches; no Windows process retirement.",
+                "close-ui": "Inspected unlock/cancel handlers and adapter lock-pointer decisions; no real UI execution."
+              },
+              "remaining": "Complete operations remain pending: Windows jobs/handles/children,Qt delivery,VFS,profiles,output capture and persistence."
+            }
+          ]
         },
         {
           "id": "mo2.overwrite",

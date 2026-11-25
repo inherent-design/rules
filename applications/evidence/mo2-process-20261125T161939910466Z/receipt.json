@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "complete": true,
+  "work": "/private/tmp/rules-mo2-process-kl6kd6ze",
+  "cases": 20,
+  "producerSha256": "a322b08ce31e34158fae28843de300352372c0f2c58ffb48af1c2c2a5fe0e141",
+  "driverSha256": "f1a6b9de72e04436e7a7bff6f221daa26c53fa05a2c3b937fcb1c5396dc4ead0",
+  "inputSha256": "196caeff20e1568d16be11c2725ee648df90361e73e6be63f071e21bf7e54f82",
+  "source": {
+    "path": "src/processrunner.cpp",
+    "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+    "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/processrunner.cpp",
+    "cache": "applications/tools/source-cache/mo2-plugins/src__processrunner.cpp",
+    "sha256": "3ef2bd8f17cc2c5978a96c8de6eebe206a6bb3a45df962f2d3f977ef8cbdc734",
+    "gitBlob": "65e44598a1c9aced07ef8a94cf458ef779aa0a5b",
+    "bytes": 26852,
+    "inspection": "805\u2013925: shouldRefresh/postRun selected for unchanged method execution with inert adapters; 220\u2013440,545\u2013680,750\u2013804 inspected only."
+  },
+  "cuts": [
+    {
+      "start": "bool ProcessRunner::shouldRefresh(",
+      "end": "\nProcessRunner::Results ProcessRunner::postRun(",
+      "textOffset": 22049,
+      "textLength": 1032,
+      "sha256": "b18cb57bb373a9aa7adf1390b405ff0f5da943aca22f580b9b355fb5994971f3"
+    },
+    {
+      "start": "ProcessRunner::Results ProcessRunner::postRun(",
+      "end": "\nProcessRunner::Results ProcessRunner::attachToProcess(",
+      "textOffset": 23082,
+      "textLength": 2474,
+      "sha256": "27abe65d9e8bce4b4c65944e135b28a6c86440086d1bcc07a07fd1d24f46ff84"
+    }
+  ],
+  "generatedSha256": "7576cfa57751398391bf49e0abb8e7e5c1504446ac282bb36d3ffb5aaa6672fa",
+  "binarySha256": "70105fda0f3f91669a788ef4afa916f4ca947db341e38b7936826ce88f9eb144",
+  "compilerSha256": "5b1ddb7e9c11b87a034fc88b212e8ac243cfe2b4db696d767aa44c79595fc09a",
+  "commands": [
+    {
+      "name": "compiler",
+      "argv": [
+        "/usr/bin/clang++",
+        "--version"
+      ],
+      "pid": 33507,
+      "processGroup": 33507,
+      "processGroupAbsent": true,
+      "exitCode": 0,
+      "stdoutSha256": "2f695e8ead1d2404c2829c51b53b3e7082de6995b84e1840f2449e4e63dcb286",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "compile",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "main.cpp",
+        "-o",
+        "probe"
+      ],
+      "pid": 33508,
+      "processGroup": 33508,
+      "processGroupAbsent": true,
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "observed",
+      "argv": [
+        "/private/tmp/rules-mo2-process-kl6kd6ze/probe"
+      ],
+      "pid": 33763,
+      "processGroup": 33763,
+      "processGroupAbsent": true,
+      "exitCode": 0,
+      "stdoutSha256": "4aa0554e6f6e1845073c93126d68a17fa4c78e84dc9c3280fd40596252b47f73",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Unchanged selected methods; all Qt, lock, wait, refresh and process APIs are inert adapters.",
+    "No Windows child, MO2/Qt UI, live profile, event acknowledgement or persistence qualification."
+  ]
+}

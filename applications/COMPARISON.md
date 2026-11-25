@@ -172,6 +172,8 @@ The [comparison band](restic/INSPECTION.md) supports a focused search-completion
 
 ### Mod Organizer 2
 
+The [process-policy band](mo2/PROCESSES.md) preserves actual branch order: an early force-unlocked return can skip refresh, while an unlock from waiting can trigger it. Neither is child-retirement evidence. Ordinary GUI/forwarded CLI paths constrain profile selection; a plugin API exposes the override route. Source-only callers and inert host adapters leave Windows processes, real refresh, and saved output unqualified.
+
 The [game-plugin band](mo2/PLUGINS.md) separates raw enabled-state edits, write requests, priority/index rebuilding, load indices, and master-presence evidence. Complete refresh composes richer game-specific corrections. Tests must identify their entry-point contract instead of treating a setter as a saved or launch-ready list. Partial order uses catalog fallback; a duplicate-order control drops an index while retaining the catalog row. Full-app reachability and game/writer effects remain open.
 
 The [mapping-plan band](mo2/ROUTING.md) supports an explicitly resolved profile/target context. Current method admission can accept a nonregular name without ordinary create-target rows, and local saves follow the ambient profile even when another profile is requested. These are API-boundary source observations with unresolved ordinary-caller reachability. Review the override contract before choosing stronger target admission or selected-profile settings; assembled flags do not prove physical routing. Plugin contributions also prevent a universal one-target rule for the final list.
