@@ -64,6 +64,8 @@ The [restic comparison/search band](restic/INSPECTION.md) distinguishes diff eve
 
 The [JavaScript update-selection band](js-updates/README.md) compares range refreshes, deliberate declaration rewrites, retagged targets, and inspection scope across npm, pnpm, and Yarn. It keeps saved and installed selections distinct, retains npm's empty successful report after a selected 404, and separates prior catalog evidence from a successful new lookup. General resolver, cache, and graph guarantees remain open.
 
+The [coverage guide](COVERAGE.md) explains operation references, bounded component slices, and related-only evidence. Use `python3 applications/query_inventory.py` to query the canonical inventory without treating link counts as completion.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

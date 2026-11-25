@@ -3,22 +3,65 @@
 import copy
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 REQUIRED = {'empack', 'npm', 'pnpm', 'yarn', 'mo2', 'prism', 'cargo', 'restic', 'vscode'}
 
 
-def validate_components(owner):
+MODEL_PATH = re.compile(r'[A-Za-z0-9_./-]+\.(?:lean|bend)\b')
+FILE_PREFIX = re.compile(r'^([A-Za-z0-9_./-]+\.(?:jsonl?|md|py|rs|lean|bend|stdout|stderr|txt|zip))(?=$|[:#; ])')
+SIMPLE_LAW = re.compile(r'[A-Za-z_]\w*')
+
+
+def require_file(path, owner):
+    selected = ROOT / path
+    assert selected.resolve().is_relative_to(ROOT.parent), (owner, 'reference escapes repository', path)
+    assert selected.is_file(), (owner, 'missing evidence file', path)
+    return selected
+
+
+def validate_operation_references(owner, operation):
+    models = MODEL_PATH.findall(operation.get('model') or '')
+    assert not operation.get('model') or models, (owner, 'model has no declared module path')
+    laws = set()
+    for path in models:
+        source = require_file(path, owner).read_text()
+        laws.update(re.findall(r'^\s*(?:theorem|lemma|law)\s+(\w+)', source, re.MULTILINE))
+    for law in operation.get('laws', []):
+        if SIMPLE_LAW.fullmatch(law):
+            assert law in laws, (owner, 'missing named law', law)
+    for field in ['nativeEvidence', 'sourceComparison', 'negativeControls', 'uxAssessment']:
+        values = operation.get(field) or []
+        if isinstance(values, str):
+            values = [values]
+        for value in values:
+            match = FILE_PREFIX.match(value)
+            if field != 'negativeControls':
+                assert match, (owner, 'unrecognized file reference', field, value)
+            if match:
+                require_file(match[1], owner)
+
+
+def validate_components(owner, operation_ids=None):
     for component in owner.get('componentEvidence', []):
         assert component['status'] in {'native-observed', 'source-modeled', 'proposed'}, owner['id']
         assert component['scope'] and component['remaining'], owner['id']
-        assert component['evidence'] and all((ROOT / path).is_file() for path in component['evidence']), (owner['id'], 'missing component evidence')
+        assert component['evidence'], (owner['id'], 'missing component evidence')
+        for path in component['evidence']:
+            require_file(path, owner['id'])
+        if operation_ids is not None:
+            slices = component.get('operationSlices')
+            assert isinstance(slices, dict), (owner['id'], 'missing operation slice map')
+            assert set(slices) <= operation_ids, (owner['id'], 'unknown component operation')
+            assert all(isinstance(scope, str) and scope.strip() for scope in slices.values()), (owner['id'], 'empty operation scope')
+            assert slices or component.get('relationOnly'), (owner['id'], 'unmapped component needs an explicit relation-only scope')
 
 
 def validate(catalog, scenarios):
     apps = catalog['applications']
-    assert {a['id'] for a in apps} == REQUIRED and len(apps) == len(REQUIRED)
+    assert {a['id'] for a in apps} == REQUIRED and len(apps) == len(REQUIRED), 'required application scope changed'
     ids, operations = set(), set()
     for app in apps:
         assert app['features'], app['id']
@@ -28,12 +71,13 @@ def validate(catalog, scenarios):
             ids.add(fid)
             for field in ('title', 'domainValuesAndRelations', 'invariantQuestions', 'hostWitnesses', 'operations', 'disposition'):
                 assert feature[field], (fid, field)
-            validate_components(feature)
+            validate_components(feature, {op['id'] for op in feature['operations']})
             for op in feature['operations']:
                 oid = fid + '/' + op['id']
                 assert oid not in operations
                 operations.add(oid)
                 assert op['status'] in catalog['statusVocabulary'], (oid, 'unknown status')
+                validate_operation_references(oid, op)
                 if op['status'] == 'verified-bounded':
                     for field in ('model', 'laws', 'sourceComparison', 'negativeControls', 'uxAssessment', 'verificationPlan', 'proofPremises'):
                         assert op.get(field), (oid, 'missing qualified evidence', field)
@@ -62,11 +106,37 @@ def main():
         'remaining': 'Native implementation', 'evidence': ['evidence/no-such-component-record.json']}]
     feature_missing = copy.deepcopy(catalog)
     feature_missing['applications'][0]['features'][0]['componentEvidence'] = missing['scenarios'][0]['componentEvidence']
+    bad_model = copy.deepcopy(catalog)
+    selected = next(op for app in bad_model['applications'] for feature in app['features'] for op in feature['operations'] if op.get('model'))
+    selected['model'] = 'missing-study-model.lean'
+    bad_law = copy.deepcopy(catalog)
+    selected = next(op for app in bad_law['applications'] for feature in app['features'] for op in feature['operations'] if op.get('model'))
+    selected['laws'].append('missing_research_law')
+    bad_slice = copy.deepcopy(catalog)
+    selected = next(feature for app in bad_slice['applications'] for feature in app['features'] if feature.get('componentEvidence'))
+    selected['componentEvidence'][0]['operationSlices'] = {'missing-operation': 'An undeclared operation cannot acquire evidence from a component.'}
+    no_scope = copy.deepcopy(catalog)
+    selected = next(feature for app in no_scope['applications'] for feature in app['features'] if feature.get('componentEvidence'))
+    selected['componentEvidence'][0]['operationSlices'] = {}
+    selected['componentEvidence'][0].pop('relationOnly', None)
     for name, value, joined in [('dropped-application', narrowed, scenarios), ('unsupported-completion-claim', fake, scenarios),
-                               ('missing-component-evidence', catalog, missing), ('missing-feature-component-evidence', feature_missing, scenarios)]:
+                               ('missing-component-evidence', catalog, missing), ('missing-feature-component-evidence', feature_missing, scenarios),
+                               ('missing-model-reference', bad_model, scenarios), ('missing-law-reference', bad_law, scenarios),
+                               ('unknown-operation-slice', bad_slice, scenarios), ('unmapped-component-without-scope', no_scope, scenarios)]:
         try:
             validate(value, joined)
-        except AssertionError:
+        except AssertionError as error:
+            expected = {
+                'dropped-application': 'required application scope changed',
+                'unsupported-completion-claim': 'missing qualified evidence',
+                'missing-component-evidence': 'missing evidence file',
+                'missing-feature-component-evidence': 'missing evidence file',
+                'missing-model-reference': 'missing evidence file',
+                'missing-law-reference': 'missing named law',
+                'unknown-operation-slice': 'unknown component operation',
+                'unmapped-component-without-scope': 'unmapped component needs an explicit relation-only scope',
+            }[name]
+            assert expected in str(error), (name, 'refused for an unrelated reason', str(error))
             rejected.append(name)
         else:
             raise AssertionError('Invalid bookkeeping accepted: ' + name)
