@@ -76,6 +76,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 The [empack local signed-input join](empack/subscribed-flow/README.md) adds a distinct native example: an authenticated offer remains saved after failed local acquisition, and rollback changes installed content without lowering that offer's replay floor. The current `ensure` also retains the completed release when an old consumer supplies an older snapshot. Preserve those product policies and expose each stage's actual effects; do not generalize registry retry, backup retention, and installed-release rollback into one universal transaction. The missing explicit-file diagnostic can reuse empack's existing typed acquisition context rather than create a second reporting system.
 
+The [native saved-offer follow-up](empack/saved-offer/README.md) confirms why proof roles matter inside one application: using incoming-offer admission to revalidate an already saved envelope accepts a deliberately inconsistent older floor through local installation and a passing check. Preserve monotonic new-offer admission while requiring exact saved-pair agreement. This is an application validation gap under authored corrupt input; native root identity and current-byte revalidation still work as scoped. It supplies no reason to redesign the shared host identity contract or claim a remotely induced failure.
+
 ## Application-specific decisions
 
 ### npm
