@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "initialAssumption": "Every recorded registry GET has status200.",
+  "actual": "Four pnpm self-package metadata requests at seed/add-later returned the owned fixture404;all response hashes match,authorization absent,and allnative commands succeeded. Required generated dependency responses remain200.",
+  "correction": "Admit only exact /pnpm404 at those pnpm setup cases with exact owned not-found body;do not normalize missing required dependencies.",
+  "nativeRecollection": false,
+  "originalsChanged": false,
+  "pathRoleCorrection": {
+    "initial": "Compared npm preview package-directory path with Node resolved index.js file path.",
+    "actual": "Preview names the package directory;Node require.resolve returns its entry file.",
+    "correction": "Compare Path(runtime.leaf).parent to the package directory;retain exact original paths and version checks.",
+    "nativeRecollection": false,
+    "originalsChanged": false
+  }
+}

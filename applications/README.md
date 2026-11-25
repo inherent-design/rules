@@ -4,7 +4,7 @@ This is the active successor to the [terminal study](../terminal/README.md). It 
 
 The [comparative report](COMPARISON.md) connects the bounded findings, per-application preservation decisions, candidate changes, compatibility costs, and verification plans. It is a partial synthesis; the inventory remains the coverage authority.
 
-The first [inventory](inventory.json) maps 208 feature families and 971 semantic operations across all nine applications. Those counts describe decomposition, not verification. Operation names are research identifiers, not assertions that a program exposes a command with that spelling. Every operation begins pending. Reading help or a contract establishes an inventory basis, not implementation conformance. The inventory is the single maintained feature/assessment source; its one-off initialization generator has been retired.
+The [inventory](inventory.json) maps 208 feature families and 972 semantic operations across all nine applications. Those counts describe decomposition, not verification. Operation names are research identifiers, not assertions that a program exposes a command with that spelling. Every operation begins pending. Reading help or a contract establishes an inventory basis, not implementation conformance. The inventory is the single maintained feature/assessment source; its one-off initialization generator has been retired.
 
 ## Evidence and ownership
 
@@ -79,3 +79,5 @@ The canonical active checkpoint is in the Moment incident for the application-mo
 The [Cargo freshness band](cargo/FRESHNESS.md) separates metadata replay from physical script execution, partial generated outputs from retained binaries, and invalidated work from successful reuse. It compares watched/omitted environment inputs and downstream missing-file failures in one offline unit context.
 
 The [joined empack authoring band](empack/PORTABLE-JOINED.md) connects the shared codec/core to actual native and browser storage, save/reopen, and verified Prism downloads. Independent backend/archive reads and an installed0.8.8 reference support the selected vanilla research flow. This does not qualify the production0.9 engine or promote the pending parent operations.
+
+The [deduplication band](js-dedupe/README.md) separates author constraints, saved selections, physical copies, and preview/application effects across npm, pnpm, and Yarn. It also corrects the omitted Yarn `dedupe` operation; the inventory now has 972 operations, with existing parent statuses preserved.

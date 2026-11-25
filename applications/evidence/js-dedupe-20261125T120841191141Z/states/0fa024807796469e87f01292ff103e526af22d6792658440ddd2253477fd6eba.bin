@@ -1,0 +1,37 @@
+{
+  "packages": {
+    ".": {
+      "url": "..",
+      "dependencies": {
+        "rules-dedupe-fixed": "rules-dedupe-fixed",
+        "rules-dedupe-later": "rules-dedupe-later"
+      }
+    },
+    "rules-dedupe-fixed": {
+      "url": "./rules-dedupe-fixed",
+      "dependencies": {
+        "rules-dedupe-fixed": "rules-dedupe-fixed",
+        "rules-dedupe-leaf": "rules-dedupe-leaf"
+      }
+    },
+    "rules-dedupe-later": {
+      "url": "./rules-dedupe-later",
+      "dependencies": {
+        "rules-dedupe-later": "rules-dedupe-later",
+        "rules-dedupe-leaf": "rules-dedupe-later/node_modules/rules-dedupe-leaf"
+      }
+    },
+    "rules-dedupe-later/node_modules/rules-dedupe-leaf": {
+      "url": "./rules-dedupe-later/node_modules/rules-dedupe-leaf",
+      "dependencies": {
+        "rules-dedupe-leaf": "rules-dedupe-later/node_modules/rules-dedupe-leaf"
+      }
+    },
+    "rules-dedupe-leaf": {
+      "url": "./rules-dedupe-leaf",
+      "dependencies": {
+        "rules-dedupe-leaf": "rules-dedupe-leaf"
+      }
+    }
+  }
+}
