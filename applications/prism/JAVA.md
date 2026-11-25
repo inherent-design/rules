@@ -36,6 +36,8 @@ A valid instance probe can therefore update global saved probe fields as well as
 
 `VerifyJavaInstall` reads the resulting saved version and architecture. An empty allowed-major list permits continuation. Otherwise it requires a listed major or the explicit compatibility bypass. A 32-bit runtime configured above 2,048 MiB produces an error-level diagnostic and continues to that major-version decision; the memory warning itself is not refusal. These are current policies, independent of whether an actual JVM will accept the eventual invocation.
 
+The bitness cases deliberately inject the `32` field while retaining `aarch64` as the real-architecture field. They isolate the verifier's predicate and do not establish that Prism's actual Java checker can produce that pair. General discovery and cross-field consistency remain outside this fixture.
+
 The retained invalid-output case has saved Java 21, a changed signature, and allowed major 21. The check warns, retains Java 21, and the later compatibility predicate succeeds. With no saved version, the source parser supplies major `0`; a nonempty requirement refuses it, while an empty list permits continuation. Successful verification alone consequently does not prove that the currently selected executable was identified successfully. These are controlled source-method observations, not reproduced full-launcher incidents or a claim that every invalid probe occurs in ordinary use.
 
 ## Reporting proposal and preservation decisions
