@@ -1,0 +1,208 @@
+{
+  "admissions": [
+    {
+      "id": "continued-implicit-module",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-ambiguous-zip",
+      "admitted": false,
+      "reason": 1,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-preview-resource",
+      "admitted": true,
+      "reason": 0,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-resource",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-shader",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-datapack",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-unknown-module",
+      "admitted": false,
+      "reason": 5,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-project-as-mod",
+      "admitted": false,
+      "reason": 4,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-interpreted-world",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 2
+    },
+    {
+      "id": "continued-ambiguous-world",
+      "admitted": false,
+      "reason": 6,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-resource-jar",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-resource-upper",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    },
+    {
+      "id": "continued-mixed-resource",
+      "admitted": true,
+      "reason": 0,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "continued-mixed-datapack",
+      "admitted": true,
+      "reason": 0,
+      "materialized": false,
+      "outputs": 0
+    },
+    {
+      "id": "sync-declared-unknown",
+      "admitted": true,
+      "reason": 0,
+      "materialized": true,
+      "outputs": 1
+    }
+  ],
+  "metadata": [
+    {
+      "id": "stored:data",
+      "content": "data-pack",
+      "serverRequired": true,
+      "sourceKind": "local",
+      "destinations": [
+        "config/paxi/datapacks/data.zip"
+      ]
+    },
+    {
+      "id": "stored:module",
+      "content": "mod",
+      "serverRequired": true,
+      "sourceKind": "local",
+      "destinations": [
+        "mods/module.jar"
+      ]
+    },
+    {
+      "id": "stored:resource",
+      "content": "resource-pack",
+      "serverRequired": false,
+      "sourceKind": "local",
+      "destinations": [
+        "resourcepacks/resource.zip"
+      ]
+    },
+    {
+      "id": "stored:resource-jar",
+      "content": "resource-pack",
+      "serverRequired": false,
+      "sourceKind": "local",
+      "destinations": [
+        "resourcepacks/resource-jar.jar"
+      ]
+    },
+    {
+      "id": "stored:resource-upper",
+      "content": "resource-pack",
+      "serverRequired": false,
+      "sourceKind": "local",
+      "destinations": [
+        "resourcepacks/resource-upper.ZIP"
+      ]
+    },
+    {
+      "id": "stored:shader",
+      "content": "shader-pack",
+      "serverRequired": false,
+      "sourceKind": "local",
+      "destinations": [
+        "shaderpacks/shader.zip"
+      ]
+    },
+    {
+      "id": "stored:world",
+      "content": "world",
+      "serverRequired": true,
+      "sourceKind": "local-files",
+      "destinations": [
+        "saves/world/level.dat",
+        "saves/world/region/r.0.0.mca"
+      ]
+    },
+    {
+      "id": "stored:unknown",
+      "content": "mod",
+      "serverRequired": true,
+      "sourceKind": "local",
+      "destinations": [
+        "mods/unknown.jar"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "id": "layout:module",
+      "destination": "mods/module.jar"
+    },
+    {
+      "id": "layout:unknown",
+      "destination": "custom-mods/unknown.jar"
+    }
+  ],
+  "suffixes": [
+    {
+      "id": "vanilla-source:resource",
+      "candidate": true
+    },
+    {
+      "id": "vanilla-source:resource-jar",
+      "candidate": false
+    },
+    {
+      "id": "vanilla-source:resource-upper",
+      "candidate": false
+    }
+  ]
+}

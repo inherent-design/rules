@@ -87,3 +87,5 @@ The [package-contents band](js-package-contents/README.md) compares authored rul
 The [npm manifest band](npm-manifest/README.md) separates field presence, output shape, typed edits, and per-workspace saved effects. It compares npm 11 with targeted npm 12 getters and retains an explicit partial-save/repair/retry case; complete validation and crash safety remain pending.
 
 The [Yarn version-decision band](yarn-version/README.md) separates deferred policy, selected targets, saved versions, ranges, and checks. It retains a controlled apply failure that consumes an unapplied record and an explicit repair/retry; proposed acknowledgement laws remain separate from production recovery.
+
+The [empack direct-content band](empack/content-kinds/README.md) separates type intent, marker recognition, explicit acceptance, world interpretation, and placement. It compares CLI addition with authored-source sync and fixed bindings with automatic layout; vanilla filename detection remains a qualified source comparison.
