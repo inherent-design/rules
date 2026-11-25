@@ -322,10 +322,21 @@
           "net.minecraft.server.packs.resources.SimpleReloadInstance"
         ]
       },
-      "review": "pending",
-      "rules": [],
-      "proofs": [],
-      "nativeComparisons": [],
+      "review": "partial: controlled original orchestration;real listener/worker/resource/renderer behavior pending",
+      "rules": [
+        "host/minecraft/ReloadSchedule.lean",
+        "host/minecraft/ReloadSchedule.bend"
+      ],
+      "proofs": [
+        "host/minecraft/evidence/reload-conformance.json"
+      ],
+      "nativeComparisons": [
+        "host/minecraft/evidence/reload-native-1.21.1-20261125T171404982601Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.4-20261125T171406555515Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.5-20261125T171408073404Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.11-20261125T171409740934Z/observed.json",
+        "host/minecraft/evidence/reload-native-26.3-20261125T171347033489Z/observed.json"
+      ],
       "componentEvidence": [
         {
           "id": "polytone-manager-effects-source",
@@ -333,6 +344,14 @@
           "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
           "map": "host/minecraft/polytone-lifecycles.json",
           "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        },
+        {
+          "id": "java-original-reload-scheduling",
+          "status": "partial:original factory/barrier/future with authored listeners and direct executors;not full reload qualification",
+          "report": "host/minecraft/RELOAD-SCHEDULING.md",
+          "sources": "host/minecraft/reload-sources.json",
+          "conformance": "host/minecraft/evidence/reload-conformance.json",
+          "limits": "34executed controlled cases/108snapshots;real workers,resource-manager replacement,pack fallback,coexistence,devices and rendering remain open."
         }
       ]
     },
@@ -356,10 +375,21 @@
           "net.minecraft.client.gui.screens.LoadingOverlay"
         ]
       },
-      "review": "pending",
-      "rules": [],
-      "proofs": [],
-      "nativeComparisons": [],
+      "review": "partial: controlled original orchestration;real listener/worker/resource/renderer behavior pending",
+      "rules": [
+        "host/minecraft/ReloadSchedule.lean",
+        "host/minecraft/ReloadSchedule.bend"
+      ],
+      "proofs": [
+        "host/minecraft/evidence/reload-conformance.json"
+      ],
+      "nativeComparisons": [
+        "host/minecraft/evidence/reload-native-1.21.1-20261125T171404982601Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.4-20261125T171406555515Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.5-20261125T171408073404Z/observed.json",
+        "host/minecraft/evidence/reload-native-1.21.11-20261125T171409740934Z/observed.json",
+        "host/minecraft/evidence/reload-native-26.3-20261125T171347033489Z/observed.json"
+      ],
       "componentEvidence": [
         {
           "id": "polytone-manager-effects-source",
@@ -367,6 +397,14 @@
           "report": "host/minecraft/POLYTONE-LIFECYCLES.md",
           "map": "host/minecraft/polytone-lifecycles.json",
           "limits": "Typed state/effect and retirement relationships;all manager/runtime/provider combinations remain incomplete."
+        },
+        {
+          "id": "java-original-reload-scheduling",
+          "status": "partial:original factory/barrier/future with authored listeners and direct executors;not full reload qualification",
+          "report": "host/minecraft/RELOAD-SCHEDULING.md",
+          "sources": "host/minecraft/reload-sources.json",
+          "conformance": "host/minecraft/evidence/reload-conformance.json",
+          "limits": "34executed controlled cases/108snapshots;real workers,resource-manager replacement,pack fallback,coexistence,devices and rendering remain open."
         }
       ]
     },

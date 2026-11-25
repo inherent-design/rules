@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "ordered",
+      "count": 2,
+      "initial": 0,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": 1,
+          "value": 1
+        },
+        {
+          "target": 0,
+          "value": 1
+        },
+        {
+          "target": -1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "prepare-failure",
+      "count": 2,
+      "initial": 1,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": 0,
+          "value": 2
+        },
+        {
+          "target": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "apply-failure",
+      "count": 2,
+      "initial": 1,
+      "barrier0": true,
+      "applyFails0": true,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": 1,
+          "value": 1
+        },
+        {
+          "target": 0,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "initial-failure",
+      "count": 2,
+      "initial": 0,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": -1,
+          "value": 2
+        },
+        {
+          "target": 0,
+          "value": 1
+        },
+        {
+          "target": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "bypassed-barrier",
+      "count": 2,
+      "initial": 0,
+      "barrier0": false,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": 0,
+          "value": 1
+        },
+        {
+          "target": 1,
+          "value": 1
+        },
+        {
+          "target": -1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "empty-listeners",
+      "count": 0,
+      "initial": 0,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": false,
+      "actions": [
+        {
+          "target": -1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shared-hooks",
+      "count": 2,
+      "initial": 1,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": -1,
+      "requiresSharedState": true,
+      "actions": [
+        {
+          "target": 0,
+          "value": 1
+        },
+        {
+          "target": 1,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shared-hook-failure",
+      "count": 2,
+      "initial": 1,
+      "barrier0": true,
+      "applyFails0": false,
+      "sharedFails": 1,
+      "requiresSharedState": true,
+      "actions": []
+    }
+  ]
+}

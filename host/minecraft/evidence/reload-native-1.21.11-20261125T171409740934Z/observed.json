@@ -1,0 +1,819 @@
+{
+  "schema": 1,
+  "observerErrors": 0,
+  "cases": [
+    {
+      "id": "ordered",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            0,
+            1
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-1",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1,
+            0
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1",
+            "barrier0"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete--1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 1,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            1,
+            1
+          ],
+          "effects": [
+            0,
+            1
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1,
+            0
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1",
+            "barrier0",
+            "effect0",
+            "effect1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "prepare-failure",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-2",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 2,
+          "preparations": [
+            2,
+            0
+          ],
+          "listenerFutures": [
+            2,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 2,
+          "preparations": [
+            2,
+            1
+          ],
+          "listenerFutures": [
+            2,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "apply-failure",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            0,
+            1
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 2,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            2,
+            2
+          ],
+          "effects": [
+            0
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1,
+            0
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier1",
+            "barrier0",
+            "effect0"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "initial-failure",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete--1-2",
+          "factory": "returned",
+          "initial": 2,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-1",
+          "factory": "returned",
+          "initial": 2,
+          "overall": 0,
+          "preparations": [
+            1,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            0
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier0"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 2,
+          "overall": 2,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            2,
+            2
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            0,
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier0",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "bypassed-barrier",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-1",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            1,
+            0
+          ],
+          "listenerFutures": [
+            1,
+            0
+          ],
+          "effects": [
+            0
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "effect0"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 0,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            1,
+            0
+          ],
+          "effects": [
+            0
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "effect0",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete--1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            1,
+            0
+          ],
+          "effects": [
+            0
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "effect0",
+            "barrier1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "empty-listeners",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 0,
+          "overall": 1,
+          "preparations": [],
+          "listenerFutures": [],
+          "effects": [],
+          "invoked": [],
+          "shared": [],
+          "barriers": [],
+          "events": [],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete--1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 1,
+          "preparations": [],
+          "listenerFutures": [],
+          "effects": [],
+          "invoked": [],
+          "shared": [],
+          "barriers": [],
+          "events": [],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "shared-hooks",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-0-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 0,
+          "preparations": [
+            1,
+            0
+          ],
+          "listenerFutures": [
+            0,
+            0
+          ],
+          "effects": [],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            0
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier0"
+          ],
+          "sameSharedContext": true
+        },
+        {
+          "phase": "complete-1-1",
+          "factory": "returned",
+          "initial": 1,
+          "overall": 1,
+          "preparations": [
+            1,
+            1
+          ],
+          "listenerFutures": [
+            1,
+            1
+          ],
+          "effects": [
+            0,
+            1
+          ],
+          "invoked": [
+            0,
+            1
+          ],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [
+            0,
+            1
+          ],
+          "events": [
+            "shared0",
+            "shared1",
+            "invoke0",
+            "invoke1",
+            "barrier0",
+            "barrier1",
+            "effect0",
+            "effect1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    },
+    {
+      "id": "shared-hook-failure",
+      "snapshots": [
+        {
+          "phase": "created",
+          "factory": "threw-FixtureFailure",
+          "initial": 1,
+          "overall": 3,
+          "preparations": [
+            0,
+            0
+          ],
+          "listenerFutures": [
+            3,
+            3
+          ],
+          "effects": [],
+          "invoked": [],
+          "shared": [
+            0,
+            1
+          ],
+          "barriers": [],
+          "events": [
+            "shared0",
+            "shared1"
+          ],
+          "sameSharedContext": true
+        }
+      ]
+    }
+  ]
+}

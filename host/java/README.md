@@ -49,3 +49,7 @@ The [class-lookup contract](CLASS-INITIALIZATION.md) is shared across the 17 bas
 ## Managed scopes and library-owned native addresses
 
 The [selected shader source chain](../minecraft/SHADERS.md) identifies LWJGL/shaderc allocations in Minecraft Java Edition 26.3 resource preparation, with separate include-cache, compiler, pending-result, and pipeline-cache owners. Original bytecode confirms the selected allocation/free calls; none was executed by that source inspection. These pointers are outside the Arena witness. Java 25 availability and Arena close checks do not qualify arbitrary native addresses, library callbacks, device completion, or safe post-close access. Keep native library/backend, host, thread/context, generation, and operation retirement as explicit profile obligations.
+
+## Aggregate futures and listener ownership
+
+The [original reload-orchestrator comparison](../minecraft/RELOAD-SCHEDULING.md) observes 108 controlled snapshots across four Java 21 client profiles and the selected Java 25 client. A failed aggregate can coexist with a pending listener future; partial authored application effects can remain after failure. An empty listener set can complete independently of its initial gate. These are selected library/consumer contracts, not a new Java 17 run or a proof of real worker retirement. Direct executors and manual futures make order observable without claiming scheduler latency, cancellation, native completion, or rollback.

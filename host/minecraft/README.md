@@ -23,6 +23,8 @@ The [resource-selection band](RESOURCES.md) compares 36 generated folder-pack sc
 
 The [linked-filesystem band](LINKED-FILESYSTEM.md) follows virtual asset entries into their physical backing across all five selected Java releases. It retains 115 original API/control snapshots and compares 105 selected results with Lean and Bend. Logical equality, entry presence, dummy metadata, backing reads, and no-op close remain distinct; index parsing, full pack loading, provider coexistence, and rendering are unqualified.
 
+The [reload scheduling band](RELOAD-SCHEDULING.md) compares 108 snapshots of original orchestrators with authored listeners and direct executors. Preparation barriers, ordered application, fail-fast summaries, partial effects, and newer shared hooks have separate contracts. Real worker scheduling, resource-manager replacement, full pack fallback, and renderer retirement remain unqualified.
+
 The [registry discovery map](REGISTRIES.md) expands item nodes, properties, tints, special renderers, atlas sources, and font providers into 161 source entries across the initial profiles. Its associated-file field candidates remain pending semantic review; they do not establish schema or capability equivalence.
 
 The [Polytone breadth map](POLYTONE.md) separately locates all 28 built-in content managers, their definition roots, shared policies, and static consumer references. It is source discovery; semantic laws, original-method comparisons, live consumers and provider coexistence remain incomplete.
