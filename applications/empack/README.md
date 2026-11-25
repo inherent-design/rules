@@ -34,6 +34,8 @@ The [joined portable-authoring band](PORTABLE-JOINED.md) now exercises actual im
 
 The [selection-policy source map](SELECTION.md) connects catalog scope and ordering, exact pins, required relationships, update preparation, synchronization, migration, and partial application. It identifies existing test boundaries without claiming a new test run or broader native conformance.
 
+The [author-to-recipient band](update-flow/README.md) joins one released-CLI provider update, delayed materialization, bundled/reference Prism snapshots, and first native recipient preparation. It compares saved selections with actual payloads and scoped checks. No bootstrap, Prism, or game launch ran; an existing recipient's later update and subscribed delivery remain pending.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.

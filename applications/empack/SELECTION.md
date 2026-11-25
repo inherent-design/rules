@@ -4,6 +4,8 @@ This source map connects empack's current assessment, synchronization, update, a
 
 The missing design question is larger than an update label: which identity and policy did the caller request, what evidence was obtained, which exact candidate was interpreted, what could be prepared against retained state, and what was actually published? These are different values in the current implementation. Preserve them before changing commands or extracting a portable API.
 
+The later [released-CLI join](update-flow/README.md) supplies one successful public-provider handoff through physical preview/application, optional materialization, two snapshot exports, and first native recipient preparation. It does not qualify the error, graph, stale-basis, subscribed-update, or runtime paths described below.
+
 ## Owners and transitions
 
 | Boundary | Current owner and values | What it establishes |

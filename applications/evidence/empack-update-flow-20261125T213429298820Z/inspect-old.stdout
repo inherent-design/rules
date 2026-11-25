@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "author_schema": 6,
+  "pack": "Rules selection handoff",
+  "lock_status": "current",
+  "lock_reason": null,
+  "runtime_satisfied": true,
+  "dependencies": [
+    {
+      "key": "ferrite",
+      "explicit": true,
+      "effective": {
+        "content": "mod",
+        "environment": {
+          "client": "required",
+          "server": "required"
+        },
+        "placement": "automatic",
+        "releases": null,
+        "selection": {
+          "mode": "provider-pin",
+          "pin": {
+            "id": "wmIZ4wP4",
+            "provider": "modrinth"
+          }
+        },
+        "source": {
+          "kind": "provider-selector",
+          "request": {
+            "provider": "modrinth",
+            "selector": "uXXizFIs"
+          }
+        }
+      },
+      "canonical_project": {
+        "project": "uXXizFIs",
+        "provider": "modrinth"
+      },
+      "source_binding_current": true,
+      "locked_selection": {
+        "id": "wmIZ4wP4",
+        "provider": "modrinth"
+      },
+      "evidence_policy": null,
+      "release_policy": null,
+      "policy_origin": null,
+      "selection_satisfied": true,
+      "reason": null
+    }
+  ],
+  "editing_limitations": [
+    {
+      "document": "empack.yml",
+      "path": [
+        "pack"
+      ],
+      "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+    },
+    {
+      "document": "empack.yml",
+      "path": [
+        "runtime"
+      ],
+      "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+    },
+    {
+      "document": "empack.yml",
+      "path": [
+        "build",
+        "default"
+      ],
+      "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+    },
+    {
+      "document": "empack.yml",
+      "path": [
+        "build",
+        "profiles",
+        "client"
+      ],
+      "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+    }
+  ]
+}
