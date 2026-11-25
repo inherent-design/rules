@@ -42,6 +42,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 **Query value, protocol, coverage, and status can disagree.** Restic's selected root-tree failure makes pattern search return status 0 with human diagnostics before its JSON array. A failing listing still exposes a useful snapshot header. Preserve partial facts and incomplete traversal separately; do not normalize either into an ordinary empty result. A metadata-only query can succeed while payload reading fails. [Query evidence and proposed completion](restic/INSPECTION.md).
 
+**A target label is not an ordering or compatibility proof.** The [update-selection band](js-updates/README.md) moves a registry's `latest` tag backward while retaining the newer release. npm's explicit tag install and Yarn's classic upgrade follow it; pnpm's latest-update policy retains the higher permitted version. The tools also differ in declaration writing and the meaning of `wanted`. Preserve request policy, tag direction, admitted constraints, observation basis, saved selection, and actual installation separately. Satisfying a direct range does not qualify the rest of a dependency graph.
+
 **Cleanup must agree with saved ownership.** Cargo's binary-install study preserves successful replacement of existing binaries after another replacement fails. A different mixed new/replacement case saves registration for a new binary, then unwinding removes that binary. Registration, surviving content, cleanup responsibility, and overall command failure need separate evidence. A truthful partial result is useful; a saved claim contradicted by later cleanup needs correction at that boundary. [Pinned Cargo observations and candidate policy](cargo-install/README.md).
 
 **A credential change needs an exact target.** Restic changes one password wrapper around an existing repository master key. Another wrapper can still accept the old password, and the current key is chosen for each process. Preserve old/new key identities and confirmed effects instead of reporting an account-wide or cryptographic rotation. Publisher signing keys, repository access wrappers, and service credentials require their own trust models. [Key-custody observations and reporting proposal](restic/KEYS.md).
@@ -62,6 +64,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 ### npm
 
+The [update-selection band](js-updates/README.md) supports preserving range-respecting `update` separately from explicit version/tag installation. Its current/wanted/latest distinction is useful, but a selected 404 can produce an empty status-0 report, and a backward-moving tag can still produce an outdated row. An additive explanation should name unavailable inspection and target direction without changing existing JSON/status semantics silently. Keep the resolver and reification boundaries; a new report must not claim complete graph compatibility or successful fresh lookup from an empty result.
+
 The [configuration band](js-config/README.md) supports retaining the user default write target and existing per-file provenance list. Global-mode reads still include the user layer, so label the effective scope accurately rather than promising a raw global-file read.
 
 Preserve Arborist's distinction between edge validity, placement, and the provider a module actually resolves. The observed shared plugin uses API 1 for both consumers even though the right workspace directly supplies API 2. That valid binding should not be relabeled a failed installation merely because another package manager creates distinct contexts.
@@ -78,6 +82,8 @@ The [cache band](npm-cache/README.md) adds a scope distinction: successful cache
 
 ### pnpm
 
+The [update-selection band](js-updates/README.md) supports preserving default range refreshes and exact pins while exposing when pnpm advances a written range lower bound. Its latest rewrite retains exact-versus-range style and can keep a higher permitted version than the current tag. Keep the existing selection/version/save options rather than replacing them with a generic “latest” Boolean at reporting boundaries. Inspection's `wanted` is the saved current version in this source; review existing compatible-target inspection before adding an optional, explicitly named constrained-target field. A prior catalog returned after a selected 404 should remain attributable prior evidence, not a new successful lookup. Exact cache-read and cold-cache behavior remain unqualified.
+
 The [patch lifecycle](js-patches/README.md) adds a concrete restoration defect: after an invalid patch changed the live target, restoring the exact valid patch can return success with the old good lock but unpatched runtime bytes. A fresh project reproduces it; forced installation repairs that fixture. Preserve current-state uncertainty after failure and require a valid selected backing before reuse. The conservative private-candidate alternative is modeled, while the complete materializer cause and an efficient production fix remain open.
 
 The [configuration band](js-config/README.md) distinguishes global default writes from project-effective reads and key-specific INI/YAML destinations. Keep the current typed setting and routing rules. A per-key origin view needs attributable collector evidence; merged values alone cannot supply it.
@@ -93,6 +99,8 @@ The [lock-mode comparison](js-peers/LOCK-MODES.md) supports preserving pnpm's ex
 pnpm’s [single-publication path](js-peers/PUBLICATION.md) already has an internal published-summary error record, but drops it when rendering a later hook failure. Preserve that existing fact across the caller boundary rather than inventing another publication model. Ordinary registry conflicts, pnpr release confirmation, and availability polling have different evidence obligations.
 
 ### Yarn Berry
+
+The [update-selection band](js-updates/README.md) supports keeping classic `up` and recursive `up -R` distinct: they intentionally differ in declaration changes and the handling of exact pins. A wildcard can also request conversion of a local source into a registry dependency. The retained refusal is a collector scope mistake, not a product defect; preserve deliberate conversion capability. A candidate upgrade summary can show before/after source and range styles through the existing interaction and resolver paths. Keep refusal before selected project publication, without claiming no cache effects or rollback after arbitrary materialization failures.
 
 The [patch comparison](js-patches/README.md) preserves saved recipe versus installed content. Direct saved patches rewrite the workspace dependency in this profile, while transitive source handling can use resolutions; clarify that distinction and the required install step in help/reporting. Mandatory hunk failure preserved the previous patched runtime here. Keep that bounded observation separate from general rollback, PnP, nested patches, and optional-patch policy.
 
@@ -189,6 +197,8 @@ Configuration adds a separate provenance boundary: a saved lower-scope edit can 
 Trust predicates reinforce that support metadata is not full admission. Explicit user/product policy, version eligibility, extension location, and other enablement gates remain distinct. The selected source predicates are internally consistent; a provenance/disable-reason explanation is a candidate. No installed trust revocation, running-code retirement, or sandbox guarantee was exercised. [Trust scope and verification plan](vscode/TRUST.md).
 
 ### empack
+
+The [JavaScript update comparison](js-updates/README.md) reinforces a target-design obligation rather than selecting a new empack command: keep scope, exact-pin policy, candidate constraints, target source, declaration writes, observation availability, saved selections, and installed content separate. The comparator tools deliberately choose different rules. Preserve empack's own accepted author intent and distinguish a held pin from missing evidence or an older permitted target. A candidate that satisfies one runtime/range check does not establish complete pack compatibility. Deferred empack command/UX implementation remains a separate decision.
 
 The [removal/re-adoption band](empack/REMOVAL.md) compares actual current core plans across root demotion, exact removal, and identical-request merges. Unlike JavaScript root removal, empack does not infer orphan collection. Restoring a forgotten request can change author intent without changing any exact record, while the existing-installation gate still needs explicit policy. Preserve that distinction in reporting and reuse existing addition planning; observed-content adoption is not a substitute for root promotion. Native deletion/publication and actual CLI policy remain unqualified.
 

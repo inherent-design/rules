@@ -56,6 +56,8 @@ The [restic input-policy band](restic/INPUTS.md) compares explicit roots, ordere
 
 The [restic comparison/search band](restic/INSPECTION.md) distinguishes diff events, complete reference changes, query completion, and size-counting policies. Both models compare 32 native outcomes and five separate proposal cases. Listing/search field projections and restored byte-copy controls have independent checks; general query parsing, nested faults, and physical reclamation remain outside this band.
 
+The [JavaScript update-selection band](js-updates/README.md) compares range refreshes, deliberate declaration rewrites, retagged targets, and inspection scope across npm, pnpm, and Yarn. It keeps saved and installed selections distinct, retains npm's empty successful report after a selected 404, and separates prior catalog evidence from a successful new lookup. General resolver, cache, and graph guarantees remain open.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

@@ -1,0 +1,2853 @@
+{
+  "schema": 1,
+  "nativeProcesses": 41,
+  "modeledCommands": 23,
+  "bothModelsMatch": true,
+  "comparisons": [
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-advanced",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-advanced",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-advanced",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "current": "1.0.0",
+            "wanted": "1.1.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;rules-update-range=1.0.0,1.1.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-pin-unavailable",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "missing",
+            "lookupStatus": 404,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "rules-update-pin",
+        "--json"
+      ],
+      "catalogBasis": [],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-pin-restored",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "rules-update-pin",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-pin-restored",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "within-range",
+      "input": {
+        "profile": "npm",
+        "action": "refresh",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "update",
+        "--ignore-scripts"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "within-range",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "within-range",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-after-within",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-after-within",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-after-within",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "current": "1.1.0",
+            "wanted": "1.1.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.1.0,1.1.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;rules-update-range=1.1.0,1.1.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "rewrite-latest",
+      "input": {
+        "profile": "npm",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "install",
+        "rules-update-range@latest",
+        "rules-update-pin@latest",
+        "--ignore-scripts"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-latest",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-latest",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-after-latest",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-after-latest",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-after-latest",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "catalog-retagged",
+      "input": {
+        "profile": "npm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-retagged",
+          "response": "responses/870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-retagged",
+          "response": "responses/e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "2.0.0",
+            "wanted": "2.0.0",
+            "latest": "1.1.0"
+          },
+          {
+            "name": "rules-update-range",
+            "current": "2.0.0",
+            "wanted": "2.0.0",
+            "latest": "1.1.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/rules-update-pin=2.0.0,2.0.0,1.1.0;rules-update-range=2.0.0,2.0.0,1.1.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "npm",
+      "case": "rewrite-retagged",
+      "input": {
+        "profile": "npm",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "install",
+        "rules-update-range@latest",
+        "rules-update-pin@latest",
+        "--ignore-scripts"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^1.1.0,1.1.0,1.1.0;rules-update-range=^1.1.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-advanced",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-advanced",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-advanced",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;rules-update-range=1.0.0,1.0.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-pin-unavailable",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "prior",
+            "lookupStatus": 404,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "rules-update-pin",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-advanced",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-pin-restored",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "rules-update-pin",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-pin-restored",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.0.0,1.0.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "within-range",
+      "input": {
+        "profile": "pnpm",
+        "action": "refresh",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "prior",
+            "lookupStatus": 0,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "prior",
+            "lookupStatus": 0,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "update",
+        "--ignore-scripts"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-pin-restored",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-advanced",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.1.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-after-within",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-after-within",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-after-within",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": [
+          {
+            "name": "rules-update-pin",
+            "current": "1.0.0",
+            "wanted": "1.0.0",
+            "latest": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "current": "1.1.0",
+            "wanted": "1.1.0",
+            "latest": "2.0.0"
+          }
+        ]
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.1.0,1.1.0,1.1.0;/rules-update-pin=1.0.0,1.0.0,2.0.0;rules-update-range=1.1.0,1.1.0,2.0.0;"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "rewrite-latest",
+      "input": {
+        "profile": "pnpm",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "update",
+        "--latest",
+        "--ignore-scripts",
+        "rules-update-*"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-latest",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-latest",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-after-latest",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-after-latest",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-after-latest",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "catalog-retagged",
+      "input": {
+        "profile": "pnpm",
+        "action": "inspect",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "outdated",
+        "--json"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "catalog-retagged",
+          "response": "responses/870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "catalog-retagged",
+          "response": "responses/e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "pnpm",
+      "case": "rewrite-retagged",
+      "input": {
+        "profile": "pnpm",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "update",
+        "--latest",
+        "--ignore-scripts",
+        "rules-update-*"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "yarn",
+      "case": "within-range",
+      "input": {
+        "profile": "yarn",
+        "action": "refresh",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "prior",
+            "lookupStatus": 0,
+            "catalog": {
+              "stable": [
+                "1.0.0"
+              ],
+              "latest": "1.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "up",
+        "-R",
+        "rules-update-*"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "initial-install",
+          "response": "responses/aa5b7ffcbf9817fba5ed55fa7a044e3a4eb3bb6cee8a71350be99ec70457d2fe.json",
+          "excludedPrereleases": []
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "within-range",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045212755778Z",
+      "app": "yarn",
+      "case": "rewrite-latest",
+      "input": {
+        "profile": "yarn",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": true,
+            "evidence": "missing",
+            "lookupStatus": 404,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "up",
+        "rules-update-*"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-latest",
+          "response": "responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-latest",
+          "response": "responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 1,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "1/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045315086524Z",
+      "app": "yarn",
+      "case": "within-range",
+      "input": {
+        "profile": "yarn",
+        "action": "refresh",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "prior",
+            "lookupStatus": 0,
+            "catalog": {
+              "stable": [
+                "1.0.0"
+              ],
+              "latest": "1.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "up",
+        "-R",
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "initial-install",
+          "response": "responses/2a38a0afd5fb9e40a7bed12f4d113a4ab8cccb1e208fff98059a078815d0f3f9.json",
+          "excludedPrereleases": []
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "within-range",
+          "response": "responses/da28bc71f9c54526ab4cecc58cd342c53044b97bf0edf90ba4817fcb158e1df5.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=1.0.0,1.0.0,1.0.0;rules-update-range=^1.0.0,1.1.0,1.1.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045315086524Z",
+      "app": "yarn",
+      "case": "rewrite-latest",
+      "input": {
+        "profile": "yarn",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "1.0.0",
+            "saved": "1.0.0",
+            "installed": "1.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.0.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "2.0.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "up",
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-latest",
+          "response": "responses/ca135fb8d1ab55f873aad65754f7ea35365c216c56e9a9462cf8d514eb486619.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-latest",
+          "response": "responses/da28bc71f9c54526ab4cecc58cd342c53044b97bf0edf90ba4817fcb158e1df5.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^2.0.0,2.0.0,2.0.0;rules-update-range=^2.0.0,2.0.0,2.0.0;/"
+    },
+    {
+      "capture": "applications/evidence/js-updates-20261125T045315086524Z",
+      "app": "yarn",
+      "case": "rewrite-retagged",
+      "input": {
+        "profile": "yarn",
+        "action": "rewrite-latest",
+        "dependencies": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1",
+            "selected": false,
+            "evidence": "not-queried",
+            "lookupStatus": 0,
+            "catalog": null
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^2.0.0",
+            "saved": "2.0.0",
+            "installed": "2.0.0",
+            "selected": true,
+            "evidence": "online",
+            "lookupStatus": 200,
+            "catalog": {
+              "stable": [
+                "1.0.0",
+                "1.1.0",
+                "2.0.0"
+              ],
+              "latest": "1.1.0"
+            }
+          }
+        ]
+      },
+      "requestArguments": [
+        "up",
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "catalogBasis": [
+        {
+          "name": "rules-update-pin",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/bf9ce35237f4df37a38fc1e1b06f493c1390afe0cf3303e451ec53086aa58359.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        },
+        {
+          "name": "rules-update-range",
+          "basisCase": "rewrite-retagged",
+          "response": "responses/c1e00b034b855c87f41428657272787f6edb1e6fa3ac4ad6e36b703c4b08bd76.json",
+          "excludedPrereleases": [
+            "2.1.0-beta.1"
+          ]
+        }
+      ],
+      "expected": {
+        "exitCode": 0,
+        "states": [
+          {
+            "name": "rules-update-local",
+            "spec": "file:../local",
+            "saved": "local:1",
+            "installed": "local:1"
+          },
+          {
+            "name": "rules-update-pin",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          },
+          {
+            "name": "rules-update-range",
+            "spec": "^1.1.0",
+            "saved": "1.1.0",
+            "installed": "1.1.0"
+          }
+        ],
+        "rows": []
+      },
+      "model": "0/rules-update-local=file:../local,local:1,local:1;rules-update-pin=^1.1.0,1.1.0,1.1.0;rules-update-range=^1.1.0,1.1.0,1.1.0;/"
+    }
+  ],
+  "scopeWitnesses": [
+    {
+      "app": "npm",
+      "case": "catalog-advanced",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "catalog-pin-unavailable",
+      "patterns": [
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "catalog-pin-restored",
+      "patterns": [
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "within-range",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "catalog-after-within",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "rewrite-latest",
+      "patterns": [
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "catalog-after-latest",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "catalog-retagged",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "npm",
+      "case": "rewrite-retagged",
+      "patterns": [
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-advanced",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-pin-unavailable",
+      "patterns": [
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-pin-restored",
+      "patterns": [
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "within-range",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-after-within",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "rewrite-latest",
+      "patterns": [
+        "rules-update-*"
+      ],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-after-latest",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "catalog-retagged",
+      "patterns": [],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "pnpm",
+      "case": "rewrite-retagged",
+      "patterns": [
+        "rules-update-*"
+      ],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "yarn",
+      "case": "within-range",
+      "patterns": [
+        "rules-update-*"
+      ],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "yarn",
+      "case": "rewrite-latest",
+      "patterns": [
+        "rules-update-*"
+      ],
+      "selected": [
+        "rules-update-local",
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "yarn",
+      "case": "within-range",
+      "patterns": [
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "yarn",
+      "case": "rewrite-latest",
+      "patterns": [
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    },
+    {
+      "app": "yarn",
+      "case": "rewrite-retagged",
+      "patterns": [
+        "rules-update-range",
+        "rules-update-pin"
+      ],
+      "selected": [
+        "rules-update-pin",
+        "rules-update-range"
+      ]
+    }
+  ],
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "application",
+    "action",
+    "version",
+    "zero-major",
+    "noncanonical-version",
+    "source-kind",
+    "duplicate-name",
+    "tag-target",
+    "duplicate-version",
+    "lookup-evidence",
+    "network-class",
+    "name",
+    "boolean",
+    "missing-field",
+    "empty-catalog",
+    "row-bound",
+    "unqueried-response",
+    "yarn-inspector",
+    "ambiguous-tag-preference",
+    "unqualified-cold-pnpm"
+  ],
+  "normalizedPremiseControls": [
+    "tag-direction",
+    "declaration-style",
+    "saved-versus-installed",
+    "requested-scope"
+  ],
+  "observationControls": [
+    "pin-bypass",
+    "wanted-meaning",
+    "silent-omission",
+    "target-direction"
+  ],
+  "driverSha256": "93838b692e35558474a83f7fe264edd06674fdfa21c4294a98db41b6a62c5ea8",
+  "basisSha256": {
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-pin-1.0.0.tgz": "3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-pin-1.1.0.tgz": "d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-pin-2.0.0.tgz": "baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-pin-2.1.0-beta.1.tgz": "fff415da73984aa20564c42c9767b73e1698313715fc428435649e28fbd63f00",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-range-1.0.0.tgz": "005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-range-1.1.0.tgz": "c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-range-2.0.0.tgz": "593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009",
+    "applications/evidence/js-updates-20261125T045212755778Z/archives/rules-update-range-2.1.0-beta.1.tgz": "251618734498ec9934a2842caeba893d100da1a220a26369b640894f7bdf2c38",
+    "applications/evidence/js-updates-20261125T045212755778Z/closed.json": "ab463581418bf0b45005a37c821b7d8433e0018480daee3e63b239f95c5ce65c",
+    "applications/evidence/js-updates-20261125T045212755778Z/collector-stop.json": "3a85a30236a587d6c923a463da38c5b6ebeffbaa2ef6b08469349bba103291c0",
+    "applications/evidence/js-updates-20261125T045212755778Z/commands.json": "ee4457a3fe8961c60e500333f2bc6ffd95f30f2e17cf8cdeb86b5a1761505b79",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-advanced.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-advanced.stdout": "9dcfcd7cd88223dbf7dbb0fafdf622660bdc269da05d5a53be6b9eafe36f0d34",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-after-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-after-latest.stdout": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-after-within.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-after-within.stdout": "ce4525f96740b5be6ca8c80e4271c56e9db8621f44f79fe37652af1bb3c8f727",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-pin-restored.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-pin-restored.stdout": "dccefb221f7cb74087d411f609299e3ff00612bcae3577c2995c5af89a848ff5",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-pin-unavailable.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-pin-unavailable.stdout": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-retagged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-catalog-retagged.stdout": "e24df013755e44d5713e42520e4fadb2e432e67f7f20aa3361c7dcbebb8b7518",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-initial-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-initial-install.stdout": "a6118b8d9b04e8b88e89c21b3fe552e3a03a7a942e007c58cc020df563296849",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-initial-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-initial-runtime.stdout": "1a56467740c7a52a023162fa96333bcc54a80c19026f738824e68ae00fe80749",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-latest-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-latest-runtime.stdout": "494b057f135634c471a55cffc00e0faa0c309e799a7ed032a228fe47478a863e",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-retagged-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-retagged-runtime.stdout": "02799e0f54bc5dc3b8e8d590bc37d9d78aa839005cc39def131800b0b92c3106",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-rewrite-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-rewrite-latest.stdout": "c64fa00106af7b59f37e6e2d98dd82e255d50bab757dc07f495d8e1c6bedf771",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-rewrite-retagged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-rewrite-retagged.stdout": "a730cd9b26d85e7d5276b7db1a3985216b19da119e7aaf3097e561c1bc3c8541",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-within-range.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-within-range.stdout": "de09159cb59b1705965e67498799d85cb3f195449fe6630b506c40f91683b712",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-within-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/npm-within-runtime.stdout": "7a99f44d4920c7399e9985dcf01ae2bf77be5bd516f43c4463f0232e39ba460e",
+    "applications/evidence/js-updates-20261125T045212755778Z/owned-processes.json": "fbb6db9d08a2ccb688277e0afaf6636394b53fc120cbbcf330980f71d92e7f4a",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-advanced.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-advanced.stdout": "dd402cd4cbd8648cee059dcb1044f7eda10cb9cf9a9dc4b8699ac15c115b954c",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-after-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-after-latest.stdout": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-after-within.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-after-within.stdout": "e2efec2b612e6c5688c0933f2e55c3209c7743b868649bf4f9ed6a65bef3e14f",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-pin-restored.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-pin-restored.stdout": "756aa929f984b10ec0e395d18e4004ae421b77eb53c8625721896fb174bba002",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-pin-unavailable.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-pin-unavailable.stdout": "756aa929f984b10ec0e395d18e4004ae421b77eb53c8625721896fb174bba002",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-retagged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-catalog-retagged.stdout": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-initial-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-initial-install.stdout": "ed62260b8c3db7453b5ad428f5b537649cb8839fa3d9c25fc2d06a972e202383",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-initial-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-initial-runtime.stdout": "1a56467740c7a52a023162fa96333bcc54a80c19026f738824e68ae00fe80749",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-latest-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-latest-runtime.stdout": "494b057f135634c471a55cffc00e0faa0c309e799a7ed032a228fe47478a863e",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-retagged-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-retagged-runtime.stdout": "494b057f135634c471a55cffc00e0faa0c309e799a7ed032a228fe47478a863e",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-rewrite-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-rewrite-latest.stdout": "68d2b028f4b37f394ed9c0c337a2fde51723f15336e66e7798af83fd1675bc2d",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-rewrite-retagged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-rewrite-retagged.stdout": "48058b6f04f4e39021c32c7fda1dc91c21f743e1d10964825c80a378707f1a46",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-within-range.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-within-range.stdout": "ccf5f94051ae5d563b1147c4c7719c49606bd096dfb8710e133dab06d52d71f4",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-within-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/pnpm-within-runtime.stdout": "7a99f44d4920c7399e9985dcf01ae2bf77be5bd516f43c4463f0232e39ba460e",
+    "applications/evidence/js-updates-20261125T045212755778Z/probe.py": "1c49526b98d04c4ec780c01abfd0e6d3a8d8cb4746a13cb393e6d5a0bcd480aa",
+    "applications/evidence/js-updates-20261125T045212755778Z/requests.json": "016f7f624bb4525deb80394dd00ba737360ad948bf3a0fcbbf23bbbc3c304280",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9.tgz": "005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db.tgz": "3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009.tgz": "593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/753d45b50085f4142a21af30b379d6fb0eaa0389cb6784c380419d0a020cf4b9.json": "753d45b50085f4142a21af30b379d6fb0eaa0389cb6784c380419d0a020cf4b9",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a.json": "870eec55cad347117fdf856cd37fdcefb008c95d55b4effa12d9a318d1e4454a",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/8c3aa9fdea3867ff031db76526f45c293b445681daaff06443dac118c43fb84a.json": "8c3aa9fdea3867ff031db76526f45c293b445681daaff06443dac118c43fb84a",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0.json": "9d994c74e7b7abee07e6c8d1f83fdc0b7e7ee71a56deeb46cbb134a3eae101d0",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/aa5b7ffcbf9817fba5ed55fa7a044e3a4eb3bb6cee8a71350be99ec70457d2fe.json": "aa5b7ffcbf9817fba5ed55fa7a044e3a4eb3bb6cee8a71350be99ec70457d2fe",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce.tgz": "baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978.json": "c91bc4e07fae1f2b2881b33828a5343775056734156a3855ed30acae909e0978",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd.tgz": "c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543.tgz": "d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543",
+    "applications/evidence/js-updates-20261125T045212755778Z/responses/e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e.json": "e907898a6485a7f3da56beb6caffc18d65f5a170b1870c3b30074380c159f86e",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/0d622bb78140d4ee7a1131df78489d27e427b5427cf1dd82acaf583ecb76c58f.txt": "0d622bb78140d4ee7a1131df78489d27e427b5427cf1dd82acaf583ecb76c58f",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/140bc6945161ec0e029f9bc2424b44cc41810f012e92680c54e3df7fd35722d0.txt": "140bc6945161ec0e029f9bc2424b44cc41810f012e92680c54e3df7fd35722d0",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/20447e007f834b236af2d1041e624fe2718fb3e1b02b7fe5210b3a7ed88ee990.txt": "20447e007f834b236af2d1041e624fe2718fb3e1b02b7fe5210b3a7ed88ee990",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/2284311c70e928f34509d07daff3a238c882101b9e32d1f4f894ae50fb83d60f.txt": "2284311c70e928f34509d07daff3a238c882101b9e32d1f4f894ae50fb83d60f",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/2447faa52513073845998862ffa97fe4f7f51d9ba3f224ba60d0403b8649a9df.txt": "2447faa52513073845998862ffa97fe4f7f51d9ba3f224ba60d0403b8649a9df",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/2e07b6459dd4cecedb565ff6b305229532460df63a0ee9433ea081059ec6f0f1.txt": "2e07b6459dd4cecedb565ff6b305229532460df63a0ee9433ea081059ec6f0f1",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/6dfa4d6357a19b99211f4be22a4eedba6280fb2ad3b8aae260684a4cef3a0bcb.txt": "6dfa4d6357a19b99211f4be22a4eedba6280fb2ad3b8aae260684a4cef3a0bcb",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/7333123e9b3198a6475573e3ec1db7230b992bea698cefee034417c971874379.txt": "7333123e9b3198a6475573e3ec1db7230b992bea698cefee034417c971874379",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/8443f260c90f350632b88af20fc9c1e7ad7331c721d52d15ae9d1795f3b445a8.txt": "8443f260c90f350632b88af20fc9c1e7ad7331c721d52d15ae9d1795f3b445a8",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/907321f748b25aed66bc5ce04a2f7cb1f4bb31a63b44565f37ba4bd6bf3c2ece.txt": "907321f748b25aed66bc5ce04a2f7cb1f4bb31a63b44565f37ba4bd6bf3c2ece",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/9e76be94856259e0afeec0c67f4d2c966fd12099446697a366309a1a3dddf7d4.txt": "9e76be94856259e0afeec0c67f4d2c966fd12099446697a366309a1a3dddf7d4",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/b4b1b55be4adcb52f3622e1c18576d0a92c4d48b55eb844d90d640f9c7f10834.txt": "b4b1b55be4adcb52f3622e1c18576d0a92c4d48b55eb844d90d640f9c7f10834",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/b6b5a9c3634582ed8e873bd2740b655b4465772e39d52d53c83dce0725c6b5b7.txt": "b6b5a9c3634582ed8e873bd2740b655b4465772e39d52d53c83dce0725c6b5b7",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/d25a675de691892c779bd1818b3c053e9ef926f0e63913249c83129a878ccd1f.txt": "d25a675de691892c779bd1818b3c053e9ef926f0e63913249c83129a878ccd1f",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/d2e765a0f51f721e0be9d881e1c6c184970671b80551c12fe86fab3c1f74efe6.txt": "d2e765a0f51f721e0be9d881e1c6c184970671b80551c12fe86fab3c1f74efe6",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/dfb1eb8415a3872bfff2dff3bc817f0f68a3a4a2cdfa313964233b968e10c48d.txt": "dfb1eb8415a3872bfff2dff3bc817f0f68a3a4a2cdfa313964233b968e10c48d",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/e0e6d870fe349fe48a3a25b96131841f0f45a4419c840f52306ccd3d28df7600.txt": "e0e6d870fe349fe48a3a25b96131841f0f45a4419c840f52306ccd3d28df7600",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/states/fc831adbc770b2c41fc564dbe0fa57b8870c02a73b6eae97bda5c30a7c9469f6.txt": "fc831adbc770b2c41fc564dbe0fa57b8870c02a73b6eae97bda5c30a7c9469f6",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-initial-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-initial-install.stdout": "b771ce2a7161df86e7aa7e8c9d4e6202ef65b4f23a81ac00657b60b8f037a474",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-initial-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-initial-runtime.stdout": "1a56467740c7a52a023162fa96333bcc54a80c19026f738824e68ae00fe80749",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-rewrite-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-rewrite-latest.stdout": "242fed79cd86505587f1ac322e615cb086cbcc9888c4a098d89472871808d04c",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-within-range.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-within-range.stdout": "50ebc7f82630d634f4337ee0ae54f05d4fb1f9d877bb6d1171c5bfe640c601aa",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-within-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045212755778Z/yarn-within-runtime.stdout": "7a99f44d4920c7399e9985dcf01ae2bf77be5bd516f43c4463f0232e39ba460e",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-pin-1.0.0.tgz": "3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-pin-1.1.0.tgz": "d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-pin-2.0.0.tgz": "baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-pin-2.1.0-beta.1.tgz": "fff415da73984aa20564c42c9767b73e1698313715fc428435649e28fbd63f00",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-range-1.0.0.tgz": "005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-range-1.1.0.tgz": "c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-range-2.0.0.tgz": "593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009",
+    "applications/evidence/js-updates-20261125T045315086524Z/archives/rules-update-range-2.1.0-beta.1.tgz": "251618734498ec9934a2842caeba893d100da1a220a26369b640894f7bdf2c38",
+    "applications/evidence/js-updates-20261125T045315086524Z/closed.json": "ab463581418bf0b45005a37c821b7d8433e0018480daee3e63b239f95c5ce65c",
+    "applications/evidence/js-updates-20261125T045315086524Z/commands.json": "902da2ef3bb3db763771dfd727726cd7a5e4f9f501a268aecd37b72ae458ee23",
+    "applications/evidence/js-updates-20261125T045315086524Z/owned-processes.json": "32fd70f817b3db996127fc236b4f31e641db20cfb432b99c9e0c46e5234e226f",
+    "applications/evidence/js-updates-20261125T045315086524Z/probe.py": "82a73d16d812e7612dc6dd4016362280f8a0d2f96dcc77f89ee3b08d1936ef73",
+    "applications/evidence/js-updates-20261125T045315086524Z/receipt.json": "e18ee34589655a683f31c84c329519de154fbc4e8663a1c8664504a5b925e1c1",
+    "applications/evidence/js-updates-20261125T045315086524Z/requests.json": "bafeb6d38344d66d7b2b848fbcd4868c9ae5192af04766f035eb03a1b34ddaa8",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9.tgz": "005e78533ef948b85699f5148ef00d5fbee243f131acf5fc42f76f4b8289a5a9",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/2a38a0afd5fb9e40a7bed12f4d113a4ab8cccb1e208fff98059a078815d0f3f9.json": "2a38a0afd5fb9e40a7bed12f4d113a4ab8cccb1e208fff98059a078815d0f3f9",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db.tgz": "3484507de3d4f7726cd00e8b206f4b8a74006f7cdf9de952f3e36192370690db",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/55c003cd22c515195ecd28d2a230054c6a70517d032f5fe23533300bd57e7572.json": "55c003cd22c515195ecd28d2a230054c6a70517d032f5fe23533300bd57e7572",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009.tgz": "593f2b3a8c505d612278c5e586894ece87ca38db8b4ef8b46c5681695dd2b009",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce.tgz": "baca99eba9b3d9e9778eefda0fb69a73935651532c37c7ec3e5f82a05d11b9ce",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/bf9ce35237f4df37a38fc1e1b06f493c1390afe0cf3303e451ec53086aa58359.json": "bf9ce35237f4df37a38fc1e1b06f493c1390afe0cf3303e451ec53086aa58359",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/c1e00b034b855c87f41428657272787f6edb1e6fa3ac4ad6e36b703c4b08bd76.json": "c1e00b034b855c87f41428657272787f6edb1e6fa3ac4ad6e36b703c4b08bd76",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd.tgz": "c9bfd5385c6f6969dbb443782f681b735d329a03102e9da280934c5902dbd2bd",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/ca135fb8d1ab55f873aad65754f7ea35365c216c56e9a9462cf8d514eb486619.json": "ca135fb8d1ab55f873aad65754f7ea35365c216c56e9a9462cf8d514eb486619",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543.tgz": "d1dfac59e97d773674ac22273e6b18c609164f378438055d7d588328f9116543",
+    "applications/evidence/js-updates-20261125T045315086524Z/responses/da28bc71f9c54526ab4cecc58cd342c53044b97bf0edf90ba4817fcb158e1df5.json": "da28bc71f9c54526ab4cecc58cd342c53044b97bf0edf90ba4817fcb158e1df5",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/0de2668817780cdc31afd8f13565a785235fd5defb587630a0283f428bd42062.txt": "0de2668817780cdc31afd8f13565a785235fd5defb587630a0283f428bd42062",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/2447faa52513073845998862ffa97fe4f7f51d9ba3f224ba60d0403b8649a9df.txt": "2447faa52513073845998862ffa97fe4f7f51d9ba3f224ba60d0403b8649a9df",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/7333123e9b3198a6475573e3ec1db7230b992bea698cefee034417c971874379.txt": "7333123e9b3198a6475573e3ec1db7230b992bea698cefee034417c971874379",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/7ef2f77530c6ed34bb4d46f176b25e4a1575beac9d235177663bbf6b9dcef5c1.txt": "7ef2f77530c6ed34bb4d46f176b25e4a1575beac9d235177663bbf6b9dcef5c1",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/9e76be94856259e0afeec0c67f4d2c966fd12099446697a366309a1a3dddf7d4.txt": "9e76be94856259e0afeec0c67f4d2c966fd12099446697a366309a1a3dddf7d4",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/b4b1b55be4adcb52f3622e1c18576d0a92c4d48b55eb844d90d640f9c7f10834.txt": "b4b1b55be4adcb52f3622e1c18576d0a92c4d48b55eb844d90d640f9c7f10834",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/bb0f71fa983f4c5d5ddcffef4e2f1dcdc4026212eb4c418a971b2748df29db84.txt": "bb0f71fa983f4c5d5ddcffef4e2f1dcdc4026212eb4c418a971b2748df29db84",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/d2e765a0f51f721e0be9d881e1c6c184970671b80551c12fe86fab3c1f74efe6.txt": "d2e765a0f51f721e0be9d881e1c6c184970671b80551c12fe86fab3c1f74efe6",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/e915c1a783cf3b4233dd70065b338af32b2414aa9cc07ac4f2259d0a8207d889.txt": "e915c1a783cf3b4233dd70065b338af32b2414aa9cc07ac4f2259d0a8207d889",
+    "applications/evidence/js-updates-20261125T045315086524Z/states/fc831adbc770b2c41fc564dbe0fa57b8870c02a73b6eae97bda5c30a7c9469f6.txt": "fc831adbc770b2c41fc564dbe0fa57b8870c02a73b6eae97bda5c30a7c9469f6",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-initial-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-initial-install.stdout": "5d6c36446877e1bf39f395dc576c4ee0cbc3ccf7f3a3d1543ce9f93ee223f353",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-initial-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-initial-runtime.stdout": "1a56467740c7a52a023162fa96333bcc54a80c19026f738824e68ae00fe80749",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-latest-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-latest-runtime.stdout": "494b057f135634c471a55cffc00e0faa0c309e799a7ed032a228fe47478a863e",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-retagged-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-retagged-runtime.stdout": "02799e0f54bc5dc3b8e8d590bc37d9d78aa839005cc39def131800b0b92c3106",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-rewrite-latest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-rewrite-latest.stdout": "dc991c8bffcfe6de18b05231be8ab0ad43f0d0def7cf4cd4ab74927822e3ccef",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-rewrite-retagged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-rewrite-retagged.stdout": "3143dd75a9e1e873499ddaebd7da65e4ec682edb3e0be82395992833a4d39d92",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-within-range.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-within-range.stdout": "50ebc7f82630d634f4337ee0ae54f05d4fb1f9d877bb6d1171c5bfe640c601aa",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-within-runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-updates-20261125T045315086524Z/yarn-within-runtime.stdout": "7a99f44d4920c7399e9985dcf01ae2bf77be5bd516f43c4463f0232e39ba460e",
+    "applications/js-updates/Updates.bend": "4f72ddd6f6c912f071f2ae695613044daa5200f1fe2ddbec4165945fbe91f23a",
+    "applications/js-updates/Updates.lean": "46fc38622a04642eb9b37065350122c06c620cd0d20399e3b684de61ac0b216c",
+    "applications/js-updates/UpdatesCase.lean": "1ee684b4b0bf35b6a9b1c7f71c5b7b6d9fa44db14a35a68205d54d068cdb15b7",
+    "applications/js-updates/conformance.py": "790af40f4ef0e8621cd1878e36081d69cd58c10ce1874c1cc2c134eedefd68ca",
+    "applications/js-updates/observations.py": "b2e041ac2869fa1364cec5338779d1da57c3a22003afce68233882b4dbde7ce7",
+    "applications/js-updates/probe.py": "82a73d16d812e7612dc6dd4016362280f8a0d2f96dcc77f89ee3b08d1936ef73",
+    "applications/sources/js-updates-selections.json": "6d741f2dad640b4c62c76dd8b9596f66aac36cac88adc83faf948e3ccdcd304c"
+  },
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "Pure replay;no package-manager,Node runtime,registry or native fixture rerun.",
+    "Positive-major stable exact/caret profile after checked catalog admission;listed prereleases retained as excluded witnesses. No general semver,alias/workspace/peer graph,release-age or linker proof.",
+    "A satisfying tag must equal the greatest admitted version;different resolver preferences outside that premise are refused,not silently equated.",
+    "Prior catalog inputs are earlier observed fixture metadata;they do not instrument the precise native cache read. Missing lookup here is404,not every network error.",
+    "Selected project state and successful materialization are compared with locks and fresh runtime observations. Planning refusal is not general rollback or no-cache-effects proof.",
+    "Finite lock-field adapters parse only this one-importer/single-context fixture;not general JSON/YAML parser or schema validation proofs.",
+    "The original wildcard/local-source collector refusal remains distinct from the corrected Yarn-only fixture. No production changes or other-platform qualification."
+  ]
+}

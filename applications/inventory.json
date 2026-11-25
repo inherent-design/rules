@@ -4851,23 +4851,65 @@
             },
             {
               "id": "update",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-updates/Updates.lean and js-updates/Updates.bend",
+              "laws": [
+                "selected_refresh_preserves_pin_in_all_profiles",
+                "npm_refresh_keeps_declared_range"
+              ],
+              "nativeEvidence": [
+                "evidence/js-updates-20261125T045212755778Z/commands.json",
+                "evidence/js-updates-20261125T045315086524Z/commands.json",
+                "evidence/js-updates-20261125T045212755778Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-updates-selections.json"
+              ],
+              "negativeControls": [
+                "js-updates/conformance.py:researchRefusals",
+                "js-updates/conformance.py:normalizedPremiseControls",
+                "js-updates/conformance.py:observationControls"
+              ],
+              "uxAssessment": "js-updates/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Two registry dependencies (positive-major stable caret/exact) and one generated local source;loopback registry,private configuration/cache,disabled scripts and node-modules linking on pinned macOS tools.",
+                "Range refresh,explicit broader rewrites,retagged latest and selected404 queries are separate requests. npm current is installed;pnpm current/wanted uses saved selection. Candidate explanation records are proposed,not current native JSON.",
+                "Both models compare finite admitted-catalog policies,author/saved/installed states,and current query rows. Satisfying-tag preference must coincide with the highest admitted version;otherwise the research decoder refuses qualification.",
+                "Runtime/lock fields and raw native outputs are independently checked. Prior metadata input is an earlier observed catalog,not an instrumented cache-read proof. No general semver,graph solver,registry freshness,install atomicity or other-host proof."
+              ],
+              "verificationPlan": "Extend independent resolver/tag-preference cases,general range and prerelease/alias/protocol/workspace/peer behavior,save flags,deprecated releases,cold missing metadata and complete freshness attribution,concurrent catalogs,interrupted materialization and other hosts. Preserve per-tool command/write policies and stable report fields unless separately reviewed additions change them."
             },
             {
               "id": "outdated",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-updates/Updates.lean and js-updates/Updates.bend",
+              "laws": [
+                "wanted_labels_have_distinct_meanings",
+                "older_target_can_be_reported_as_outdated_by_npm",
+                "empty_success_can_hide_unavailable_metadata",
+                "inspection_preserves_selected_project_state"
+              ],
+              "nativeEvidence": [
+                "evidence/js-updates-20261125T045212755778Z/commands.json",
+                "evidence/js-updates-20261125T045315086524Z/commands.json",
+                "evidence/js-updates-20261125T045212755778Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-updates-selections.json"
+              ],
+              "negativeControls": [
+                "js-updates/conformance.py:researchRefusals",
+                "js-updates/conformance.py:normalizedPremiseControls",
+                "js-updates/conformance.py:observationControls"
+              ],
+              "uxAssessment": "js-updates/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Two registry dependencies (positive-major stable caret/exact) and one generated local source;loopback registry,private configuration/cache,disabled scripts and node-modules linking on pinned macOS tools.",
+                "Range refresh,explicit broader rewrites,retagged latest and selected404 queries are separate requests. npm current is installed;pnpm current/wanted uses saved selection. Candidate explanation records are proposed,not current native JSON.",
+                "Both models compare finite admitted-catalog policies,author/saved/installed states,and current query rows. Satisfying-tag preference must coincide with the highest admitted version;otherwise the research decoder refuses qualification.",
+                "Runtime/lock fields and raw native outputs are independently checked. Prior metadata input is an earlier observed catalog,not an instrumented cache-read proof. No general semver,graph solver,registry freshness,install atomicity or other-host proof."
+              ],
+              "verificationPlan": "Extend independent resolver/tag-preference cases,general range and prerelease/alias/protocol/workspace/peer behavior,save flags,deprecated releases,cold missing metadata and complete freshness attribution,concurrent catalogs,interrupted materialization and other hosts. Preserve per-tool command/write policies and stable report fields unless separately reviewed additions change them."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
@@ -6210,23 +6252,67 @@
             },
             {
               "id": "update",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-updates/Updates.lean and js-updates/Updates.bend",
+              "laws": [
+                "selected_refresh_preserves_pin_in_all_profiles",
+                "pnpm_refresh_advances_written_lower_bound",
+                "pnpm_latest_rewrite_preserves_range_style",
+                "pnpm_latest_keeps_higher_permitted_version"
+              ],
+              "nativeEvidence": [
+                "evidence/js-updates-20261125T045212755778Z/commands.json",
+                "evidence/js-updates-20261125T045315086524Z/commands.json",
+                "evidence/js-updates-20261125T045212755778Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-updates-selections.json"
+              ],
+              "negativeControls": [
+                "js-updates/conformance.py:researchRefusals",
+                "js-updates/conformance.py:normalizedPremiseControls",
+                "js-updates/conformance.py:observationControls"
+              ],
+              "uxAssessment": "js-updates/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Two registry dependencies (positive-major stable caret/exact) and one generated local source;loopback registry,private configuration/cache,disabled scripts and node-modules linking on pinned macOS tools.",
+                "Range refresh,explicit broader rewrites,retagged latest and selected404 queries are separate requests. npm current is installed;pnpm current/wanted uses saved selection. Candidate explanation records are proposed,not current native JSON.",
+                "Both models compare finite admitted-catalog policies,author/saved/installed states,and current query rows. Satisfying-tag preference must coincide with the highest admitted version;otherwise the research decoder refuses qualification.",
+                "Runtime/lock fields and raw native outputs are independently checked. Prior metadata input is an earlier observed catalog,not an instrumented cache-read proof. No general semver,graph solver,registry freshness,install atomicity or other-host proof."
+              ],
+              "verificationPlan": "Extend independent resolver/tag-preference cases,general range and prerelease/alias/protocol/workspace/peer behavior,save flags,deprecated releases,cold missing metadata and complete freshness attribution,concurrent catalogs,interrupted materialization and other hosts. Preserve per-tool command/write policies and stable report fields unless separately reviewed additions change them."
             },
             {
               "id": "outdated",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-updates/Updates.lean and js-updates/Updates.bend",
+              "laws": [
+                "wanted_labels_have_distinct_meanings",
+                "older_target_can_be_reported_as_outdated_by_npm",
+                "current_query_basis_can_differ",
+                "inspection_preserves_selected_project_state"
+              ],
+              "nativeEvidence": [
+                "evidence/js-updates-20261125T045212755778Z/commands.json",
+                "evidence/js-updates-20261125T045315086524Z/commands.json",
+                "evidence/js-updates-20261125T045212755778Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-updates-selections.json"
+              ],
+              "negativeControls": [
+                "js-updates/conformance.py:researchRefusals",
+                "js-updates/conformance.py:normalizedPremiseControls",
+                "js-updates/conformance.py:observationControls"
+              ],
+              "uxAssessment": "js-updates/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Two registry dependencies (positive-major stable caret/exact) and one generated local source;loopback registry,private configuration/cache,disabled scripts and node-modules linking on pinned macOS tools.",
+                "Range refresh,explicit broader rewrites,retagged latest and selected404 queries are separate requests. npm current is installed;pnpm current/wanted uses saved selection. Candidate explanation records are proposed,not current native JSON.",
+                "Both models compare finite admitted-catalog policies,author/saved/installed states,and current query rows. Satisfying-tag preference must coincide with the highest admitted version;otherwise the research decoder refuses qualification.",
+                "Runtime/lock fields and raw native outputs are independently checked. Prior metadata input is an earlier observed catalog,not an instrumented cache-read proof. No general semver,graph solver,registry freshness,install atomicity or other-host proof."
+              ],
+              "verificationPlan": "Extend independent resolver/tag-preference cases,general range and prerelease/alias/protocol/workspace/peer behavior,save flags,deprecated releases,cold missing metadata and complete freshness attribution,concurrent catalogs,interrupted materialization and other hosts. Preserve per-tool command/write policies and stable report fields unless separately reviewed additions change them."
             },
             {
               "id": "import",
@@ -8249,13 +8335,36 @@
             },
             {
               "id": "up",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-updates/Updates.lean and js-updates/Updates.bend",
+              "laws": [
+                "yarn_recursive_refresh_keeps_declared_range",
+                "explicit_tag_rewrite_can_downgrade",
+                "selected_yarn_local_conversion_demands_registry_evidence",
+                "planning_refusal_does_not_publish_an_earlier_change",
+                "unselected_local_does_not_block_registry_updates"
+              ],
+              "nativeEvidence": [
+                "evidence/js-updates-20261125T045212755778Z/commands.json",
+                "evidence/js-updates-20261125T045315086524Z/commands.json",
+                "evidence/js-updates-20261125T045212755778Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-updates-selections.json"
+              ],
+              "negativeControls": [
+                "js-updates/conformance.py:researchRefusals",
+                "js-updates/conformance.py:normalizedPremiseControls",
+                "js-updates/conformance.py:observationControls"
+              ],
+              "uxAssessment": "js-updates/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Two registry dependencies (positive-major stable caret/exact) and one generated local source;loopback registry,private configuration/cache,disabled scripts and node-modules linking on pinned macOS tools.",
+                "Range refresh,explicit broader rewrites,retagged latest and selected404 queries are separate requests. npm current is installed;pnpm current/wanted uses saved selection. Candidate explanation records are proposed,not current native JSON.",
+                "Both models compare finite admitted-catalog policies,author/saved/installed states,and current query rows. Satisfying-tag preference must coincide with the highest admitted version;otherwise the research decoder refuses qualification.",
+                "Runtime/lock fields and raw native outputs are independently checked. Prior metadata input is an earlier observed catalog,not an instrumented cache-read proof. No general semver,graph solver,registry freshness,install atomicity or other-host proof."
+              ],
+              "verificationPlan": "Extend independent resolver/tag-preference cases,general range and prerelease/alias/protocol/workspace/peer behavior,save flags,deprecated releases,cold missing metadata and complete freshness attribution,concurrent catalogs,interrupted materialization and other hosts. Preserve per-tool command/write policies and stable report fields unless separately reviewed additions change them."
             },
             {
               "id": "upgrade-interactive",
