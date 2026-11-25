@@ -1,0 +1,422 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "work": "/private/tmp/rules-empack-archives-8417jmk2",
+  "producerSha256": "662c3a4a10496b5028d3e1c5138d202fe443601c914103966d8f1811aa430956",
+  "source": {
+    "path": "crates/empack-lib/src/engine/artifacts.rs",
+    "sha256": "3127f276e571def680a0cd552f501591472f722e2e7686c7d1231c49a3146db1"
+  },
+  "fragments": [
+    {
+      "name": "limits-and-trait",
+      "path": "crates/empack-lib/src/engine/artifacts.rs",
+      "start": 566,
+      "end": 1133,
+      "sha256": "86bcdac815e9987deb2a2c71ffbf976cff29c9107f21aca5e0a3383481c085c5"
+    },
+    {
+      "name": "raw-preflight",
+      "path": "crates/empack-lib/src/engine/artifacts.rs",
+      "start": 12062,
+      "end": 17513,
+      "sha256": "8a2a0788f3428024e366de160b3b71dbf809bd8ed2b1051793765c649952a8a9"
+    }
+  ],
+  "compiler": {
+    "path": "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+    "sha256": "12cab30aa9890d54445e29149a1e82d18fbe457de12801bd11bbe7e5e7fe33a0",
+    "version": "rustc 1.92.0 (ded5c06cf 2025-12-08)\nbinary: rustc\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\ncommit-date: 2025-12-08\nhost: aarch64-apple-darwin\nrelease: 1.92.0\nLLVM version: 21.1.3\n"
+  },
+  "core": {
+    "receipt": "applications/evidence/empack-native-ownership-20261124T031930881554Z/core-receipt.json",
+    "receiptSha256": "7d37e51766e06e41ebe19060ed6185853ae2efeda8af66c7fc4112d912ab89e4",
+    "library": "/Users/zer0cell/production/rules/applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib",
+    "librarySha256": "2631cbfd994f5cb0971ca645313e0fdca67b777617ca8277bfeafd1518f0037f"
+  },
+  "commands": [
+    {
+      "label": "compile",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "-C",
+        "debuginfo=0",
+        "--extern",
+        "empack_core=/Users/zer0cell/production/rules/applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/driver.rs",
+        "-o",
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "0193a34652e94b7bc23d8f4d796c06d9a2c929d53fda56f0354f866775fa95f9"
+    },
+    {
+      "label": "paths",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "paths"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "0f6b98726dd5fb87a7d61e16b7cba2a6233716b1a73a2cb8db769847c17d14a5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "empty",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/empty.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "aaaa41a06cd963bb80535a6ae4ef8b0fa8e525d1deb61c440a0192ff64438533",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "one",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/one.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f55577a95bd5e1a7de482ed5f5844a80978c3d7e5631a05d8ffd7805132d9462",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "two",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/two.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "ff8dbafcd95d62081d40c872ef839878d938d83a62e41a6c4d6954b1d5ac822f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "case-aliases",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/case-aliases.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e22ebaccb05ebb1344f3accdd8604e7531a9259329fca031069d8477c9258ef0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "traversal-name",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/traversal-name.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "87bd6d5f2f102434626c4ebbd8556807a61e04a624e45d230026c454953fc8f6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "reserved-name",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/reserved-name.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "dc26cfcdf5d924e309fedb55e542270ae86b90bcace86c01cbd2781362483f2a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "nonportable-punctuation",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/nonportable-punctuation.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "b0314516cc18443d57da6c3f85436e8a3080b5d98fd412a02861153f770015c1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "unicode-aliases",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/unicode-aliases.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "4a4bbca61fed1e1c50d2675bebbfb1e4e5216308767f52dcfb60079f0eeef2fa",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "duplicate-raw-name",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/duplicate-raw-name.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "7b5fae2ebad62baa3601728c700f092d3a6a55628e5894f7796c4ff828e78d5d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "entry-limit",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/entry-limit.zip",
+        "1",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e446740e01e1c8e96d491177cf5abff906551905dfa6e671eec56aac0555430e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cancel-empty",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/cancel-empty.zip",
+        "20",
+        "0"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "aaaa41a06cd963bb80535a6ae4ef8b0fa8e525d1deb61c440a0192ff64438533",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cancel-first",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/cancel-first.zip",
+        "20",
+        "0"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "3a1447db86af5caae7ac299c13e6c27fc0001325be00cd0a390b7f0dd22bf785",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cancel-second",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/cancel-second.zip",
+        "20",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "3e92b1323157d17ae10742cf377b3ae4ffb41523ef0f00548c9071e1e31c1e62",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "missing-end",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/missing-end.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "43926ed5e6879788be34e3a2e41e0f3ed2a21360d44d7d897fcf7a6a776d8327",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "trailing-junk",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/trailing-junk.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "bd8281ab86756068774c75ccf34f15a66d15a0e83df6b78b68054fd488da85c3",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "multi-disk",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/multi-disk.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "c0c4106408d58097d27e8a961470aa5738a0575a29016b5b41f2ec77786490dd",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "metadata-cap-before-bounds",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/metadata-cap-before-bounds.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "caea30fe983ec41b55308c3d571e4f40fef912a9c4d1a52afd8c9354573b0722",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "directory-beyond-end",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/directory-beyond-end.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "0a32a906d98bc8e3b302204fc9891324b0703776e35811ffe7ee9e720e2f0398",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "directory-count-too-small",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/directory-count-too-small.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "10ff016c368372324d3ffdf18a4c9aefc340fed42cf9e01aff33f52f5ee3e075",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "directory-count-too-large",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/directory-count-too-large.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "aee2e0e45f7e0cf531bb6f662b0b530bf855acb76ffa5d714038caa4893643c6",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "wrong-central-signature",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/wrong-central-signature.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "dd88e03e0e7d819c2b4fe2afc2a7ca367c8fc0f99f221d61149bca400a54e110",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "invalid-declared-utf8",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/invalid-declared-utf8.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f204d88e08a6e4537e4a9b164ef50fef18369ac52cff07d3124df7067590c4ab",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "undeclared-high-byte",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/undeclared-high-byte.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "f55577a95bd5e1a7de482ed5f5844a80978c3d7e5631a05d8ffd7805132d9462",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "zip64-empty",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/zip64-empty.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "2733c9a2614aae26f2d7aafca736d2b8c5e19683b8555680ed9516e798f64a3c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "zip64-directory-overflow",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/zip64-directory-overflow.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "fe6bdfb762b811ec3b5d643e3bd817ce7509ea714687379c13e5e6c35d3e2dee",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "zip64-metadata-cap",
+      "argv": [
+        "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+        "preflight",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/inputs/zip64-metadata-cap.zip",
+        "20",
+        "-1"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "9e0b5e648c677cc00ee3d38467c755ac3ad21c4057a99aded8b77552aff4f6f2",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "adapters": [
+    "Standard-library error/context wrappers; not anyhow error-chain conformance.",
+    "Controlled cancellation callback; not native Cancellation or process retirement.",
+    "Traced std Cursor reads/seeks; actual unchanged raw preflight method.",
+    "Actual public core path APIs from the verified retained current-core library.",
+    "No ZIP payload decoder, extraction, engine or trust witness in this harness."
+  ],
+  "binary": {
+    "path": "/private/tmp/rules-empack-archives-8417jmk2/archive-driver",
+    "sha256": "97943f8d0e91ab26a367875410f6d39bb8da2d2e769dfaa9ea7c8ef9a5a91525",
+    "bytes": 737264
+  },
+  "observedSha256": "e1a19e3e0bd5e6262c6446dd08acd28f2bcbbfd0c2996bf9daba4cff994556d0",
+  "driverSha256": "e333fa2de08004ab174bed54b818b478c26dd8cf3c2954bbd20f91219e18f449",
+  "fragmentSha256": "35eb4e640ae0282eecd83abeb7ae265adb2feb1b8bd0b1c243602ab089e37084",
+  "paths": 34,
+  "preflightCases": 26,
+  "coreUnchanged": true
+}

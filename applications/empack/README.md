@@ -26,6 +26,8 @@ The [shared-document band](PORTABLE-DOCUMENTS.md) then runs the unchanged curren
 
 The [manual acquisition and saved-build band](PENDING.md) compares isolated installed-CLI inspection, partial retention, exact selection, damaged retained-byte refusal, and discovery through archive publication. Retained metadata is not byte verification, a saved recipe is not an execution grant, and recipe cleanup is not content collection. Whole pending/cache workflows remain unqualified.
 
+The [archive band](ARCHIVES.md) separates raw metadata, opaque names, portable destinations, and member evidence. Actual core APIs, an attributed raw-parser harness, and disposable native imports cover selected name/budget/encoding/collision/CRC boundaries. Decoder-wide, private-witness, allocation, extraction-race, and platform obligations remain explicit.
+
 The [bootstrap band](BOOTSTRAP.md) compares actual packaged invocation/local/cache gates and delegated cancellation, with controlled script peers and four separately limited real native checks. Selected code, capability, acquired bytes, process lifetime, and final outcomes remain distinct; official acquisition and real runtime supervision are not qualified.
 
 The [joined portable-authoring band](PORTABLE-JOINED.md) now exercises actual import, invalid/valid save and reopen, metadata/path edits, captured-image Prism export, and browser downloads with a shared Rust research engine. Native, Chromium, WebKit, and an isolated installed0.8.8 reference produce the same fixture archive. This advances the selected research join; production format, provider/recipe breadth, authority, crash/concurrency/quota, and consumer launch remain open. Earlier component reports retain their original evidence scope.

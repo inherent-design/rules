@@ -1,0 +1,236 @@
+[
+  {
+    "id": "empty",
+    "accepted": true,
+    "checks": 0,
+    "readBytes": 22,
+    "largestBuffer": 22,
+    "seeks": 3,
+    "error": ""
+  },
+  {
+    "id": "one",
+    "accepted": true,
+    "checks": 1,
+    "readBytes": 175,
+    "largestBuffer": 121,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "two",
+    "accepted": true,
+    "checks": 2,
+    "readBytes": 331,
+    "largestBuffer": 222,
+    "seeks": 7,
+    "error": ""
+  },
+  {
+    "id": "case-aliases",
+    "accepted": true,
+    "checks": 2,
+    "readBytes": 310,
+    "largestBuffer": 208,
+    "seeks": 7,
+    "error": ""
+  },
+  {
+    "id": "traversal-name",
+    "accepted": true,
+    "checks": 1,
+    "readBytes": 181,
+    "largestBuffer": 125,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "reserved-name",
+    "accepted": true,
+    "checks": 1,
+    "readBytes": 160,
+    "largestBuffer": 111,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "nonportable-punctuation",
+    "accepted": true,
+    "checks": 1,
+    "readBytes": 190,
+    "largestBuffer": 131,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "unicode-aliases",
+    "accepted": true,
+    "checks": 2,
+    "readBytes": 319,
+    "largestBuffer": 214,
+    "seeks": 7,
+    "error": ""
+  },
+  {
+    "id": "duplicate-raw-name",
+    "accepted": false,
+    "checks": 2,
+    "readBytes": 328,
+    "largestBuffer": 220,
+    "seeks": 4,
+    "error": "Duplicate ZIP central directory member"
+  },
+  {
+    "id": "entry-limit",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 222,
+    "largestBuffer": 222,
+    "seeks": 1,
+    "error": "Archive exceeds entry limit"
+  },
+  {
+    "id": "cancel-empty",
+    "accepted": true,
+    "checks": 0,
+    "readBytes": 22,
+    "largestBuffer": 22,
+    "seeks": 3,
+    "error": ""
+  },
+  {
+    "id": "cancel-first",
+    "accepted": false,
+    "checks": 1,
+    "readBytes": 121,
+    "largestBuffer": 121,
+    "seeks": 2,
+    "error": "fixture cancellation check refused"
+  },
+  {
+    "id": "cancel-second",
+    "accepted": false,
+    "checks": 2,
+    "readBytes": 276,
+    "largestBuffer": 222,
+    "seeks": 4,
+    "error": "fixture cancellation check refused"
+  },
+  {
+    "id": "missing-end",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 9,
+    "largestBuffer": 9,
+    "seeks": 1,
+    "error": "Missing ZIP end record"
+  },
+  {
+    "id": "trailing-junk",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 125,
+    "largestBuffer": 125,
+    "seeks": 1,
+    "error": "Missing ZIP end record"
+  },
+  {
+    "id": "multi-disk",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 121,
+    "largestBuffer": 121,
+    "seeks": 1,
+    "error": "Multi-disk ZIP is unsupported"
+  },
+  {
+    "id": "metadata-cap-before-bounds",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 121,
+    "largestBuffer": 121,
+    "seeks": 1,
+    "error": "ZIP metadata exceeds 16 MiB limit"
+  },
+  {
+    "id": "directory-beyond-end",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 121,
+    "largestBuffer": 121,
+    "seeks": 1,
+    "error": "ZIP directory extends beyond its end record"
+  },
+  {
+    "id": "directory-count-too-small",
+    "accepted": false,
+    "checks": 1,
+    "readBytes": 276,
+    "largestBuffer": 222,
+    "seeks": 5,
+    "error": "ZIP directory count differs from its records"
+  },
+  {
+    "id": "directory-count-too-large",
+    "accepted": false,
+    "checks": 2,
+    "readBytes": 197,
+    "largestBuffer": 121,
+    "seeks": 4,
+    "error": "failed to fill whole buffer"
+  },
+  {
+    "id": "wrong-central-signature",
+    "accepted": false,
+    "checks": 1,
+    "readBytes": 167,
+    "largestBuffer": 121,
+    "seeks": 2,
+    "error": "Invalid ZIP central directory member"
+  },
+  {
+    "id": "invalid-declared-utf8",
+    "accepted": false,
+    "checks": 1,
+    "readBytes": 175,
+    "largestBuffer": 121,
+    "seeks": 2,
+    "error": "ZIP member declares UTF-8 but has invalid name bytes: invalid utf-8 sequence of 1 bytes from index 0"
+  },
+  {
+    "id": "undeclared-high-byte",
+    "accepted": true,
+    "checks": 1,
+    "readBytes": 175,
+    "largestBuffer": 121,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "zip64-empty",
+    "accepted": true,
+    "checks": 0,
+    "readBytes": 174,
+    "largestBuffer": 98,
+    "seeks": 5,
+    "error": ""
+  },
+  {
+    "id": "zip64-directory-overflow",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 174,
+    "largestBuffer": 98,
+    "seeks": 3,
+    "error": "ZIP directory overflow"
+  },
+  {
+    "id": "zip64-metadata-cap",
+    "accepted": false,
+    "checks": 0,
+    "readBytes": 174,
+    "largestBuffer": 98,
+    "seeks": 3,
+    "error": "ZIP metadata exceeds 16 MiB limit"
+  }
+]

@@ -1,0 +1,20 @@
+warning: fields `compressed_bytes`, `file_bytes`, `total_bytes`, and `depth` are never read
+  --> /Users/zer0cell/production/rules/applications/evidence/empack-archives-20261125T135102774049Z/fragments.rs:6:9
+   |
+ 5 | pub struct ArchiveLimits {
+   |            ------------- fields in this struct
+ 6 |     pub compressed_bytes: u64,
+   |         ^^^^^^^^^^^^^^^^
+ 7 |     pub file_bytes: u64,
+   |         ^^^^^^^^^^
+ 8 |     pub total_bytes: u64,
+   |         ^^^^^^^^^^^
+ 9 |     pub entries: usize,
+10 |     pub depth: usize,
+   |         ^^^^^
+   |
+   = note: `ArchiveLimits` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: 1 warning emitted
+
