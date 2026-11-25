@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+  "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+  "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+  "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+  "producerSha256": "4acd4111ae961be76bb9757b59e09a82d0fc137b785b25ad0dce63b1e14af5d9",
+  "helperSha256": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+  "selectedClassSha256": {
+    "com/mojang/blaze3d/font/SpaceProvider.class": "88fd3f7e33c988b93fc2940949ce7b03f16caadb7ec3cdaa1b5fdfd301912651",
+    "com/mojang/blaze3d/font/SpaceProvider$Definition.class": "ab1ef1fd7efd3520480c56e0caf53d8b95e18f091773d405cffd27b7d4738c2e",
+    "net/minecraft/client/renderer/block/BuiltInBlockModels.class": "62be88a451d12fadfa3d5ceb41e41a142499715571fa1d4eb4a87756a8138701",
+    "net/minecraft/client/renderer/block/BuiltInBlockModels$Builder.class": "2716e75cf01279a1956c1044ad6843b08a84dbbab043c7f3c73d151164b4d21d",
+    "net/minecraft/client/renderer/block/BuiltInBlockModels$ModelFactory.class": "33fe071ed4ebfe6c359b60083017c7407231b08a8b2d0afeac9ac76b0097d0cc",
+    "net/minecraft/client/renderer/block/BuiltInBlockModels$SpecialModelFactory.class": "5d2c2754a427e997b7b8abf74f473217fcf12e2898c7b0d4e66521e26eb9738f"
+  },
+  "viewsSha256": {
+    "com/mojang/blaze3d/font/SpaceProvider.java": "3ca6ae45af00b3c585adc20c2c693cd3efd6fd29a0ba4fd7e96b229825cc90ae",
+    "net/minecraft/client/renderer/block/BuiltInBlockModels.java": "c883fc9d541e3ef44fd7fd7707fd1810ca24a506696921c2b376c25f0bf5c454"
+  },
+  "scope": "Private bytecode inspection/decompilation only;no original class linking,game or provider execution.",
+  "privateReceiptSha256": "cc3161b56e917074d05255df69b9a572e8d32853b58e08a099ae40e119d312cf",
+  "command": {
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "elapsedSeconds": 0.399018042255193,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "argvDisclosure": "Exact argv remains owner-local; authored inspect_consumer_gaps.py constructs it."
+  },
+  "findings": [
+    {
+      "id": "space-provider-advance-table",
+      "source": "com/mojang/blaze3d/font/SpaceProvider.java",
+      "members": [
+        "Definition.CODEC",
+        "Definition.unpack",
+        "SpaceProvider constructor",
+        "getGlyph",
+        "getSupportedGlyphs"
+      ],
+      "finding": "Required advances map;CODEPOINT-to-FLOAT codec;loader constructs EmptyGlyph metrics without resource-manager use in this selected path.",
+      "qualification": "Source interpretation only;codec/layout/fallback/font-stack/native lifetime remain pending."
+    },
+    {
+      "id": "built-in-block-presentation",
+      "source": "net/minecraft/client/renderer/block/BuiltInBlockModels.java",
+      "members": [
+        "createBlockModels",
+        "addDefaults",
+        "Builder.put",
+        "Builder.build",
+        "SpecialModelFactory.create",
+        "createXmasChest",
+        "createFlowerBedModel"
+      ],
+      "finding": "Enumerate selected blocks and possible states;build factories from state/colors;combine special and blockstate wrappers;include contextual conditions. No pack-graph decoder in selected factory.",
+      "qualification": "Source interpretation only;not whole-game registration,baking,rendering or version parity."
+    }
+  ],
+  "regression": {
+    "unchangedPriorSourceRecords": 78,
+    "newSourceRecords": 1,
+    "changedRegistryEntry": "fonts.definitions:minecraft:space",
+    "unresolvedSelectedViews": 0,
+    "registeredIDs": 71
+  },
+  "limits": [
+    "Six original class entries produced two private inspection views;no original class was defined or executed.",
+    "No proprietary class/view/artwork payload exported.",
+    "Decompiler output is not a proved compiler inverse.",
+    "No source-only fact advances native consumer or renderer qualification."
+  ]
+}

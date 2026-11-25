@@ -34,6 +34,8 @@ The official [Mojang sample repository](https://github.com/Mojang/bedrock-sample
 
 `treeResponseSha256` identifies the exact retained API response; `gitTree` identifies its Git tree object. Neither identifies an installed Bedrock client. Native client artifacts, renderer behavior, historical schema availability, and feature toggles remain unqualified. A missing sample folder does not prove that a runtime lacks the feature. Current documentation also cannot silently establish an older release's contract.
 
+The [Bedrock source map](bedrock/README.md) now derives structural facts from every client JSON-schema file and documentation module at those three pins, with one JSON example per resource-family anchor. It preserves source-tag, schema-label, documentation and sample identities separately. Source completeness within that acquisition predicate is narrower than the complete definition, consumer and asset coverage required by the intent.
+
 ## Host dependencies
 
 The [26.3 static API map](HOST-APIS.md) starts from actual client bytecode rather than a guessed desktop stack. The [Java 25 overlay](../java/README.md) independently qualifies selected arena scope operations. A new stable host API witness does not prove that Minecraft uses it. Runtime declarations, class-file requirements, API use, native library selection, operating-system support, backend selection, and rendered effects remain separate dimensions.

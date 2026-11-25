@@ -2,7 +2,7 @@
 
 This source band starts from the selected original Java 26.3 client and a private inspection slice of 431 class entries, producing 236 Java views. It adds source discovery to the earlier 1.21.1/1.21.5 parser observations. Its separate [later decoding band](LATER-DECODING.md) now executes selected original 26.3 methods and codecs. Renderer, loader and provider execution remain unqualified. Decompiled views are inspection aids, not verified inverses of compilation.
 
-[later-registry-catalog.json](later-registry-catalog.json) enumerates 71 literal registrations in eight selected categories, with 78 associated source identities. One associated font-provider view remains unavailable. Registration, bootstrap reachability, per-type schema, actual consumer behavior and rendered output are separate obligations.
+[later-registry-catalog.json](later-registry-catalog.json) enumerates 71 literal registrations in eight selected categories, with 79 associated source identities after the [consumer extension](CONSUMERS.md). The selected font-provider view gap is closed. Registration, bootstrap reachability, per-type schema, actual consumer behavior and rendered output are separate obligations.
 
 | Selected category | 26.3 registrations | Difference from the inspected 1.21.5 registry |
 | --- | --- | --- |
@@ -13,7 +13,7 @@ This source band starts from the selected original Java 26.3 client and a privat
 | Tints | 7 | `minecraft:map_color` is absent from this selected registry. |
 | Special renderers | 13 | `bed`, `hanging_sign` and `standing_sign` are absent; `bell`, `book`, `copper_golem_statue`, `end_cube` and `player_head` are added. |
 | Atlas sources | 5 | Same registered IDs; resource ownership and execution remain open. |
-| Font providers | 5 | Same IDs; the associated `SpaceProvider.Definition` view lies outside the acquired slice and remains pending. |
+| Font providers | 5 | Same IDs; `SpaceProvider.Definition` now has an attributed inspection view. Codec and live font consumers remain pending. |
 
 These are literal set differences, not unsupported-feature or asset-availability claims. For example, the original default red-bed item asset now uses two ordinary model nodes in a composite. Its second model has a translation. The selected oak-sign item assets reference ordinary cuboid item models. Those three original asset facts do not prove a conversion for every bed/sign variant or supply assets and gameplay context to an older runtime.
 
@@ -35,6 +35,6 @@ The inspection also found a useful limit on structural inference. `ModelManager.
 
 ## Next comparisons
 
-Extend the bounded original-method comparisons to actual provider hooks, full model/pack admission and the remaining grammars. Keep decoding distinct from baking, resource discovery, reload publication and retirement. Extend the selected source slice for the missing font provider and actual block-presentation factory. Then compare 1.21.11 through its own original artifact/mappings rather than treating 26.3 as its contract.
+Extend the bounded original-method comparisons to actual provider hooks, full model/pack admission and the remaining grammars. Keep decoding distinct from baking, resource discovery, reload publication and retirement. The selected font provider and block-presentation factory now have [source contracts](CONSUMERS.md); their live consumers remain unqualified. Compare 1.21.11 through its own original artifact/mappings rather than treating 26.3 as its contract.
 
 The native collectors must use explicit JDK selection, private inputs, small heaps, bounded concurrency and confirmed process-tree retirement. No Gradle daemon is needed for these inspection procedures. Ordinary CI continues to compile the formal models and replay retained facts; it does not acquire these private inputs or run applications.

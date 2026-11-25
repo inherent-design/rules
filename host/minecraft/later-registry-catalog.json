@@ -4,7 +4,7 @@
   "target": "java-26.3-vanilla",
   "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
   "privateViewReceiptSha256": "de00878bf0e3f1e9903f0ed6ab2a2aff6a8d77f87f2f2a11fc0ed0aab11bb274",
-  "generatorSha256": "7f7a9d358f4c380f0cee9be33b6b64d53ce012c3080783317272952ce089f84e",
+  "generatorSha256": "b6288474afa6bf8b810b33305bfec62841412d58e274e71dcf165f0f11267888",
   "sharedReaderSha256": "270c3db1e4aff17012f4f8772dc3b1b3451d1db45eb72bfa8dcce39fe8333e91",
   "categories": {
     "items.nodes": {
@@ -659,11 +659,12 @@
         },
         {
           "id": "minecraft:space",
-          "targetExpression": "Definition.CODEC",
-          "source": null,
-          "sourceFileFieldCandidates": [],
-          "semanticReview": "missing associated view;not an unsupported-feature finding",
-          "missingView": "Missing inspection view: java-26.3-vanilla:com.mojang.blaze3d.font.SpaceProvider.Definition"
+          "targetClass": "com.mojang.blaze3d.font.SpaceProvider.Definition",
+          "source": "java-26.3-vanilla:com.mojang.blaze3d.font.SpaceProvider",
+          "sourceFileFieldCandidates": [
+            "advances"
+          ],
+          "semanticReview": "pending;whole associated file candidates are not a per-type schema"
         },
         {
           "id": "minecraft:unihex",
@@ -1300,6 +1301,14 @@
       "originalClassMember": "net/minecraft/client/gui/font/providers/TrueTypeGlyphProviderDefinition.class",
       "originalClassSha256": "6ef6d32dc837341e1617b1992610d9a8ddc327cc1b917f82acb5994bac55f98a"
     },
+    "java-26.3-vanilla:com.mojang.blaze3d.font.SpaceProvider": {
+      "profileSource": "java-26.3-vanilla",
+      "className": "com.mojang.blaze3d.font.SpaceProvider",
+      "readableViewSha256": "3ca6ae45af00b3c585adc20c2c693cd3efd6fd29a0ba4fd7e96b229825cc90ae",
+      "evidence": "Private inspected/decompiled source view;not translation equivalence or native conformance.",
+      "originalClassMember": "com/mojang/blaze3d/font/SpaceProvider.class",
+      "originalClassSha256": "88fd3f7e33c988b93fc2940949ce7b03f16caadb7ec3cdaa1b5fdfd301912651"
+    },
     "java-26.3-vanilla:net.minecraft.client.gui.font.providers.UnihexProvider": {
       "profileSource": "java-26.3-vanilla",
       "className": "net.minecraft.client.gui.font.providers.UnihexProvider",
@@ -1317,14 +1326,7 @@
       "originalClassSha256": "85b55be4589588ad2ae1a24f09db71e850ccc5a2bae7366a519d6c18791199d1"
     }
   },
-  "missingViews": [
-    {
-      "category": "fonts.definitions",
-      "id": "minecraft:space",
-      "expression": "Definition.CODEC",
-      "missing": "Missing inspection view: java-26.3-vanilla:com.mojang.blaze3d.font.SpaceProvider.Definition"
-    }
-  ],
+  "missingViews": [],
   "limits": [
     "Literal registrations only;bootstrap reachability,active consumer behavior,decoding and rendering remain unqualified.",
     "Whole associated-file field candidates can include nested/helper records;not complete per-type schemas.",
@@ -1332,5 +1334,8 @@
     "Identifier and ResourceLocation syntax are different qualified API surfaces;recognizing literal registration spelling does not prove semantic equivalence.",
     "Private decompiled views are not matching upstream sources or a proved compiler inverse.",
     "Earlier profile/source/native records remain independent;no pin or runtime guarantee is advanced by this index."
+  ],
+  "privateExtensionReceiptSha256": [
+    "cc3161b56e917074d05255df69b9a572e8d32853b58e08a099ae40e119d312cf"
   ]
 }
