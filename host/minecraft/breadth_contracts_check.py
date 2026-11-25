@@ -32,6 +32,7 @@ def validate(data, sources):
     assert data["state"] == "partial-source-linework"
     assert sources["evidence"] == "private-source-inspection-only" and sources["limits"]
     assert data["sourceLedger"] == "host/minecraft/breadth-sources.json"
+    assert data["dependencyFollowup"] == "host/minecraft/resource-closure-sources.json"
     assert data["report"] == "host/minecraft/BREADTH-LINEWORK.md" and (HERE / "BREADTH-LINEWORK.md").is_file()
     targets = {t["release"]: t for t in json.loads((HERE / "targets.json").read_text())["javaReferences"]}
     profiles = {p["release"]: p for p in sources["profiles"]}
@@ -78,6 +79,15 @@ def validate(data, sources):
             expected = {n for n in profile["originalClassMembers"] if n == root or n.startswith(root + "$")}
             assert expected and set(view["originalClasses"]) == expected
             assert expected <= set(profile["categories"][item["family"]])
+    followup = json.loads((HERE / "resource-closure-sources.json").read_text())
+    assert followup["schema"] == 1 and followup["state"] == "source-inspection-only"
+    assert followup["target"] == profiles["26.3"]["target"] and followup["clientSha256"] == profiles["26.3"]["clientSha256"]
+    assert followup["surface"] == "resource-closure"
+    assert followup["command"] == {"exitCode": 0, "timedOut": False, "ownedGroupAbsent": True}
+    assert len(followup["selectedClassSha256"]) == 25 and len(followup["viewsSha256"]) == 12
+    assert set(followup["reviewedClauses"]) == set(followup["viewsSha256"]) and followup["remaining"]
+    for values in [followup["selectedClassSha256"], followup["viewsSha256"]]:
+        for name, value in values.items(): safe_member(name); checked_hash(value)
 
 
 def private_readback(sources, root):
@@ -114,6 +124,32 @@ def private_readback(sources, root):
     return totals
 
 
+def private_followup(sources, root):
+    followup = json.loads((HERE / "resource-closure-sources.json").read_text())
+    capture = root / followup["capture"]
+    assert digest(capture / "receipt.json") == followup["privateReceiptSha256"]
+    receipt = json.loads((capture / "receipt.json").read_text())
+    for key in ["target", "surface", "clientSha256", "toolSha256", "javaSha256", "jdkReleaseSha256", "producerSha256", "helperSha256", "selectedClassSha256", "viewsSha256"]:
+        assert followup[key] == receipt[key]
+    assert receipt["command"]["exitCode"] == 0 and receipt["command"]["ownedGroupAbsent"] and not receipt["command"]["timedOut"]
+    for channel in ["stdout", "stderr"]:
+        assert digest(capture / ("inspect." + channel)) == receipt["command"][channel + "Sha256"]
+    assert digest(capture / "inspect_consumer_gaps.py") == receipt["producerSha256"]
+    assert digest(capture / "arena_probe.py") == receipt["helperSha256"]
+    for name, value in receipt["viewsSha256"].items(): assert digest(capture / "source" / name) == value
+    parent = next(p for p in sources["profiles"] if p["release"] == "26.3")
+    inputs = json.loads((root / parent["capture"] / "inputs.json").read_text())["profiles"]["26.3"]
+    assert digest(Path(inputs["client"])) == receipt["clientSha256"]
+    assert digest(Path(inputs["decompiler"])) == receipt["toolSha256"]
+    assert digest(Path(inputs["jdk"]) / "bin/java") == receipt["javaSha256"]
+    assert digest(Path(inputs["jdk"]) / "release") == receipt["jdkReleaseSha256"]
+    with zipfile.ZipFile(inputs["client"]) as archive:
+        for member, value in receipt["selectedClassSha256"].items():
+            assert hashlib.sha256(archive.read(member)).hexdigest() == value
+            assert digest(capture / "classes" / member) == value
+    return dict(originalClasses=25, views=12)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--private", type=Path, help="Owner-local capture root; also reads original retained inputs, no launches.")
@@ -139,7 +175,9 @@ def main():
         else:
             raise AssertionError("Invalid source map admitted: " + name)
     readback = private_readback(sources, args.private) if args.private else "not requested; original inputs remain owner-local"
+    followup = private_followup(sources, args.private) if args.private else "not requested; source-only dependency record"
     print(json.dumps(dict(profiles=5, families=5, sourceSlices=25, rejectedMutations=rejected, privateReadback=readback,
+        dependencyReadback=followup,
         limits="Attribution and declared qualification only; no semantic equivalence, native behavior or proof claim.")))
 
 

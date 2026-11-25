@@ -29,7 +29,7 @@
           "net.minecraft.server.packs.repository.PackRepository"
         ]
       },
-      "review": "pending",
+      "review": "partial: original detector/validator on five Java clients with authored matcher/factories; pack opening, repository and platform closure pending",
       "rules": [],
       "proofs": [],
       "nativeComparisons": [],
@@ -41,6 +41,23 @@
           "sources": "host/minecraft/linkfs-sources.json",
           "conformance": "host/minecraft/evidence/linkfs-conformance.json",
           "limits": "115original API/control snapshots;105modeledresults;index parser/wholepack/ZIP/reload/provider coexistence/rendering unqualified."
+        },
+        {
+          "id": "vanilla-pack-detector",
+          "status": "bounded original detection API; no pack opened",
+          "report": "host/minecraft/PACK-DETECTION.md",
+          "sources": "host/minecraft/pack-detector-captures.json",
+          "map": "host/minecraft/pack-detector-cases.json",
+          "conformance": "host/minecraft/evidence/pack-detector-conformance.json",
+          "rules": [
+            "host/minecraft/PackDetection.lean",
+            "host/minecraft/PackDetection.bend"
+          ],
+          "proofs": [
+            "host/minecraft/PackDetection.lean",
+            "host/minecraft/PackDetection.bend"
+          ],
+          "limits": "80 original detector/validator calls on one macOS/APFS profile, authored all/none matcher and factories; not production allowlist, archive/metadata loading, repository/UI, race-safe path resolution or game behavior. Parent anchor is model-only."
         }
       ]
     },

@@ -26,7 +26,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     for name in ['client', 'java', 'decompiler', 'private']:
         p.add_argument('--' + name, type=Path, required=True)
-    p.add_argument('--surface', choices=['font-block', 'server-packs', 'sound-contracts', 'particle-contracts'], default='font-block')
+    p.add_argument('--surface', choices=['font-block', 'server-packs', 'sound-contracts', 'particle-contracts', 'resource-closure'], default='font-block')
     args = p.parse_args()
     target = next(t for t in json.loads((HERE / 'targets.json').read_text())['javaReferences'] if t['release'] == '26.3')
     assert sha(args.client) == target['source']['clientSha256']
@@ -51,6 +51,18 @@ def main():
                 'SoundEngine','SoundBufferLibrary','ChannelAccess','SoundEngineExecutor']]
             roots += ['net/minecraft/client/resources/sounds/' + n for n in ['Sound','SoundEventRegistration','SoundEventRegistrationSerializer']]
             roots += ['com/mojang/blaze3d/audio/' + n for n in ['Library','Channel','SoundBuffer']]
+            members = sorted(n.removesuffix('.class') for n in archive.namelist() if n.endswith('.class')
+                and any(n == root + '.class' or n.startswith(root + '$') for root in roots))
+        elif args.surface == 'resource-closure':
+            roots = ['net/minecraft/client/renderer/block/dispatch/BlockStateModelDispatcher',
+                'net/minecraft/client/renderer/block/dispatch/VariantSelector',
+                'net/minecraft/client/renderer/texture/ReloadableTexture',
+                'net/minecraft/world/level/validation/DirectoryValidator',
+                'net/minecraft/world/level/validation/ForbiddenSymlinkInfo',
+                'net/minecraft/util/PngInfo', 'net/minecraft/util/SpecialDates']
+            roots += [n.removesuffix('.class').split('$')[0] for n in archive.namelist()
+                if n.startswith('net/minecraft/client/renderer/block/dispatch/')
+                and any(part in n for part in ['condition/', 'Condition', 'Selector']) and n.endswith('.class')]
             members = sorted(n.removesuffix('.class') for n in archive.namelist() if n.endswith('.class')
                 and any(n == root + '.class' or n.startswith(root + '$') for root in roots))
         else:

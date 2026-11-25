@@ -50,6 +50,14 @@ The Java adapter withholds tree separation and mutation-boundary authority. A fa
 
 The separate [Minecraft linked-filesystem witness](../minecraft/LINKED-FILESYSTEM.md) now qualifies selected original provider operations on macOS/JDK 21 and 25. Distinct logical nodes backed by the same physical file compare as different; virtual existence can survive backing deletion. That witness supplies no physical tree-separation or mutation authority. Other custom providers and backing hosts remain open.
 
+## Relative targets and consuming context
+
+Path context is another independent input. The Java 17 contract for [`Files.readSymbolicLink`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Files.html#readSymbolicLink(java.nio.file.Path)) returns a target path without guaranteeing that target exists. [`Path.toAbsolutePath`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html#toAbsolutePath()) resolves relative paths according to the implementation's context, typically a filesystem default directory. Neither operation alone binds a relative link target to its link's parent or establishes object authority.
+
+The [original Minecraft detector comparison](../minecraft/PACK-DETECTION.md) supplies a concrete macOS/APFS witness on selected Java 21 and 25 installations. After a real validator accepts an authored relative link target, the original detector reads that raw target from its working-directory context. An existing parent-relative target can therefore accompany a missing lookup, or a successful factory callback can receive a different owned working-directory path. The fixture opens no archive and uses an authored all/none matcher; production allowlist policy and full application reachability remain separate. This is not native Java 17, Windows, Linux, recursive-link, reparse-point, race, or mutation qualification.
+
+An operation must retain the relevant raw path, intended anchor/provider, current binding evidence, validation policy, and consuming context as distinct facts. The consumer must use the context its validation actually covered. The detector models compare current behavior with a proposed parent anchor on quiescent fixtures; that proposal does not implement a general safe resolver or close a check/use race. String normalization, a callback's success, and a same-name or same-file Boolean cannot replace the missing context/boundary evidence. Existing protected-tree mutation rules still apply separately.
+
 ## CI and operational use
 
 After compiling tracked models, run:

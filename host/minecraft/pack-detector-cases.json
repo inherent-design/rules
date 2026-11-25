@@ -1,0 +1,294 @@
+{
+  "schema": 1,
+  "evidence": "Authored inputs derived from frozen fixture creation, not detector results. Case-local IDs:1entry,2parent-resolved link target,3cwd shadow. No native filesystem resolver or persistent object identity.",
+  "cases": [
+    {
+      "case": "regular-lowercase-zip",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "regular-jar",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": false,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "regular-uppercase-zip",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": false,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "regular-text",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": false,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "missing",
+      "entry": {
+        "kind": 0,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "directory-metadata",
+      "entry": {
+        "kind": 2,
+        "identity": 1,
+        "zipSuffix": null,
+        "metadataRegular": true,
+        "nestedLinks": 0
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "directory-no-metadata",
+      "entry": {
+        "kind": 2,
+        "identity": 1,
+        "zipSuffix": null,
+        "metadataRegular": false,
+        "nestedLinks": 0
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "directory-metadata-is-directory",
+      "entry": {
+        "kind": 2,
+        "identity": 1,
+        "zipSuffix": null,
+        "metadataRegular": false,
+        "nestedLinks": 0
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "absolute-link-allowed",
+      "entry": {
+        "kind": 3,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "parentTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "targetAbsolute": true,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "absolute-link-denied",
+      "entry": {
+        "kind": 3,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "parentTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "targetAbsolute": true,
+      "allowLinks": false,
+      "factoryMode": 0
+    },
+    {
+      "case": "relative-link-no-cwd-target",
+      "entry": {
+        "kind": 3,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": {
+        "kind": 0,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "parentTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "targetAbsolute": false,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "relative-link-cwd-shadow",
+      "entry": {
+        "kind": 3,
+        "identity": null,
+        "zipSuffix": null,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": {
+        "kind": 1,
+        "identity": 3,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "parentTarget": {
+        "kind": 1,
+        "identity": 2,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "targetAbsolute": false,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "directory-inner-link-denied",
+      "entry": {
+        "kind": 2,
+        "identity": 1,
+        "zipSuffix": null,
+        "metadataRegular": true,
+        "nestedLinks": 1
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": false,
+      "factoryMode": 0
+    },
+    {
+      "case": "directory-inner-link-allowed",
+      "entry": {
+        "kind": 2,
+        "identity": 1,
+        "zipSuffix": null,
+        "metadataRegular": true,
+        "nestedLinks": 1
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 0
+    },
+    {
+      "case": "factory-null",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 1
+    },
+    {
+      "case": "factory-throws",
+      "entry": {
+        "kind": 1,
+        "identity": 1,
+        "zipSuffix": true,
+        "metadataRegular": null,
+        "nestedLinks": null
+      },
+      "rawTarget": null,
+      "parentTarget": null,
+      "targetAbsolute": null,
+      "allowLinks": true,
+      "factoryMode": 2
+    }
+  ]
+}

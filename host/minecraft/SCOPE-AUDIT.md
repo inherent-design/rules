@@ -37,7 +37,9 @@ Pack discovery also retains a specific unresolved consumer boundary: filename/ho
 
 These families take priority over adding more detail to the already bounded cache fixture. Other material gaps remain: actual provider composition, complete vanilla property/tint semantics, Polytone manager payloads and consumers, shader/backend contracts, and operational UX. Closing a thin family does not automatically close those gaps.
 
-The subsequent [resource consumer linework](BREADTH-LINEWORK.md) now gives these five families partial source slices across all five selected Java releases. It identifies concrete version changes and pending consumers, including the uncaptured 26.3 blockstate dispatcher, generated span versus pixel geometry, CPU/device image ownership, and scheduled UI work. Those source records do not satisfy the missing native comparison or proof obligations, and no parent review state is advanced.
+The subsequent [resource consumer linework](BREADTH-LINEWORK.md) now gives these five families partial source slices across all five selected Java releases. It identifies concrete version changes and pending consumers, including the initially uncaptured 26.3 blockstate dispatcher, generated span versus pixel geometry, CPU/device image ownership, and scheduled UI work. Follow-up inspection now attributes that dispatcher and selected image/clock dependencies; delegated model/registry, native image, and UI obligations remain open. Those source records do not satisfy the missing native comparison or proof obligations.
+
+The separate [pack detector band](PACK-DETECTION.md) adds 80 original-method comparisons and bounded rules for detection and validator/factory boundaries. It advances `packs.discovery` to a scoped partial review, not saved repository/UI selection or complete pack loading. Other parent states remain unchanged. The relative-target witness also updates the broader filesystem contract without claiming Java 17 or other native host qualification.
 
 ## Evidence integration rules
 

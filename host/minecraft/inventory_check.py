@@ -40,6 +40,9 @@ def validate(data):
                 assert not component.get("proofs") and not component.get("rules")
                 assert component["sources"] == "host/minecraft/breadth-sources.json"
                 assert component["map"] == "host/minecraft/breadth-contracts.json"
+            if component["id"] == "vanilla-pack-detector":
+                assert family["id"] == "packs.discovery"
+                assert component["conformance"] == "host/minecraft/evidence/pack-detector-conformance.json"
             if component["id"] == "compat-host-free-value-cache":
                 assert family["id"] == "host.compat"
                 assert component["conformance"] == "host/minecraft/evidence/resource-cache-conformance.json"

@@ -1,0 +1,373 @@
+{
+  "schema": 1,
+  "cwd": "<capture>",
+  "os": "Mac OS X",
+  "osVersion": "26.7.1",
+  "architecture": "aarch64",
+  "javaVersion": "25.0.4.1",
+  "originalDetectorSigners": 4,
+  "originalValidatorSigners": 4,
+  "adapterSigners": 0,
+  "adapterHasSeparateLoader": true,
+  "filesystemType": "apfs",
+  "cases": [
+    {
+      "id": "regular-lowercase-zip",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      },
+      "status": "returned",
+      "result": "zip",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [
+        {
+          "kind": "zip",
+          "path": "<capture>/fixtures/regular/payload.zip",
+          "absoluteNormalizedPath": "<capture>/fixtures/regular/payload.zip"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      }
+    },
+    {
+      "id": "regular-jar",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829836)",
+        "size": 32
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829836)",
+        "size": 32
+      }
+    },
+    {
+      "id": "regular-uppercase-zip",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      }
+    },
+    {
+      "id": "regular-text",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829837)",
+        "size": 32
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829837)",
+        "size": 32
+      }
+    },
+    {
+      "id": "missing",
+      "inputAttributes": {
+        "errorClass": "java.nio.file.NoSuchFileException"
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "errorClass": "java.nio.file.NoSuchFileException"
+      }
+    },
+    {
+      "id": "directory-metadata",
+      "inputAttributes": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829838)",
+        "size": 96
+      },
+      "status": "returned",
+      "result": "directory",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [
+        {
+          "kind": "directory",
+          "path": "<capture>/fixtures/directory-meta",
+          "absoluteNormalizedPath": "<capture>/fixtures/directory-meta"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829838)",
+        "size": 96
+      }
+    },
+    {
+      "id": "directory-no-metadata",
+      "inputAttributes": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829840)",
+        "size": 64
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829840)",
+        "size": 64
+      }
+    },
+    {
+      "id": "directory-metadata-is-directory",
+      "inputAttributes": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829841)",
+        "size": 96
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829841)",
+        "size": 96
+      }
+    },
+    {
+      "id": "absolute-link-allowed",
+      "inputAttributes": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829843)",
+        "size": 120
+      },
+      "status": "returned",
+      "result": "zip",
+      "issues": 0,
+      "matcherEvents": [
+        {
+          "target": "<capture>/fixtures/regular/payload.zip",
+          "allowed": true
+        }
+      ],
+      "factoryEvents": [
+        {
+          "kind": "zip",
+          "path": "<capture>/fixtures/regular/payload.zip",
+          "absoluteNormalizedPath": "<capture>/fixtures/regular/payload.zip"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829843)",
+        "size": 120
+      }
+    },
+    {
+      "id": "absolute-link-denied",
+      "inputAttributes": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829843)",
+        "size": 120
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 1,
+      "matcherEvents": [
+        {
+          "target": "<capture>/fixtures/regular/payload.zip",
+          "allowed": false
+        }
+      ],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829843)",
+        "size": 120
+      }
+    },
+    {
+      "id": "relative-link-no-cwd-target",
+      "inputAttributes": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829846)",
+        "size": 11
+      },
+      "status": "threw",
+      "errorClass": "java.nio.file.NoSuchFileException",
+      "message": "payload.zip",
+      "issues": 0,
+      "matcherEvents": [
+        {
+          "target": "payload.zip",
+          "allowed": true
+        }
+      ],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829846)",
+        "size": 11
+      }
+    },
+    {
+      "id": "relative-link-cwd-shadow",
+      "inputAttributes": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829849)",
+        "size": 10
+      },
+      "status": "returned",
+      "result": "zip",
+      "issues": 0,
+      "matcherEvents": [
+        {
+          "target": "shadow.zip",
+          "allowed": true
+        }
+      ],
+      "factoryEvents": [
+        {
+          "kind": "zip",
+          "path": "shadow.zip",
+          "absoluteNormalizedPath": "<capture>/shadow.zip"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "symlink",
+        "fileKey": "(dev=1000010,ino=295829849)",
+        "size": 10
+      }
+    },
+    {
+      "id": "directory-inner-link-denied",
+      "inputAttributes": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829851)",
+        "size": 128
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 1,
+      "matcherEvents": [
+        {
+          "target": "<capture>/fixtures/regular/payload.zip",
+          "allowed": false
+        }
+      ],
+      "factoryEvents": [],
+      "inputAttributesAfter": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829851)",
+        "size": 128
+      }
+    },
+    {
+      "id": "directory-inner-link-allowed",
+      "inputAttributes": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829851)",
+        "size": 128
+      },
+      "status": "returned",
+      "result": "directory",
+      "issues": 0,
+      "matcherEvents": [
+        {
+          "target": "<capture>/fixtures/regular/payload.zip",
+          "allowed": true
+        }
+      ],
+      "factoryEvents": [
+        {
+          "kind": "directory",
+          "path": "<capture>/fixtures/directory-inner-link",
+          "absoluteNormalizedPath": "<capture>/fixtures/directory-inner-link"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "directory",
+        "fileKey": "(dev=1000010,ino=295829851)",
+        "size": 128
+      }
+    },
+    {
+      "id": "factory-null",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      },
+      "status": "returned",
+      "result": "null",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [
+        {
+          "kind": "zip",
+          "path": "<capture>/fixtures/regular/payload.zip",
+          "absoluteNormalizedPath": "<capture>/fixtures/regular/payload.zip"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      }
+    },
+    {
+      "id": "factory-throws",
+      "inputAttributes": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      },
+      "status": "threw",
+      "errorClass": "java.io.IOException",
+      "message": "authored-factory-failure:zip",
+      "issues": 0,
+      "matcherEvents": [],
+      "factoryEvents": [
+        {
+          "kind": "zip",
+          "path": "<capture>/fixtures/regular/payload.zip",
+          "absoluteNormalizedPath": "<capture>/fixtures/regular/payload.zip"
+        }
+      ],
+      "inputAttributesAfter": {
+        "kind": "regular",
+        "fileKey": "(dev=1000010,ino=295829835)",
+        "size": 32
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "fixtureRoot": "<capture>/fixtures",
+  "adapterDirectory": "<capture>/adapters",
+  "bindings": {
+    "detectorClass": "atz",
+    "validatorClass": "far",
+    "detectMethod": "a"
+  },
+  "cases": [
+    {
+      "id": "regular-lowercase-zip",
+      "path": "<capture>/fixtures/regular/payload.zip",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "regular-jar",
+      "path": "<capture>/fixtures/regular/payload.jar",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "regular-uppercase-zip",
+      "path": "<capture>/fixtures/regular/payload.ZIP",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "regular-text",
+      "path": "<capture>/fixtures/regular/payload.txt",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "missing",
+      "path": "<capture>/fixtures/absent.zip",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "directory-metadata",
+      "path": "<capture>/fixtures/directory-meta",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "directory-no-metadata",
+      "path": "<capture>/fixtures/directory-no-meta",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "directory-metadata-is-directory",
+      "path": "<capture>/fixtures/directory-meta-is-directory",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "absolute-link-allowed",
+      "path": "<capture>/fixtures/absolute-link.zip",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "absolute-link-denied",
+      "path": "<capture>/fixtures/absolute-link.zip",
+      "allowLinks": false,
+      "factoryMode": "return"
+    },
+    {
+      "id": "relative-link-no-cwd-target",
+      "path": "<capture>/fixtures/relative-missing/link.zip",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "relative-link-cwd-shadow",
+      "path": "<capture>/fixtures/relative-shadow/link.zip",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "directory-inner-link-denied",
+      "path": "<capture>/fixtures/directory-inner-link",
+      "allowLinks": false,
+      "factoryMode": "return"
+    },
+    {
+      "id": "directory-inner-link-allowed",
+      "path": "<capture>/fixtures/directory-inner-link",
+      "allowLinks": true,
+      "factoryMode": "return"
+    },
+    {
+      "id": "factory-null",
+      "path": "<capture>/fixtures/regular/payload.zip",
+      "allowLinks": true,
+      "factoryMode": "null"
+    },
+    {
+      "id": "factory-throws",
+      "path": "<capture>/fixtures/regular/payload.zip",
+      "allowLinks": true,
+      "factoryMode": "throw"
+    }
+  ]
+}

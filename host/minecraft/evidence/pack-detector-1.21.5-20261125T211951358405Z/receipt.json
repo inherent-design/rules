@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "target": "java-1.21.5-vanilla",
+  "release": "1.21.5",
+  "clientSha256": "522672ad20b460c02c2e39b6c5035ef6a849af28eb11ab2ac7eb293d395a8c11",
+  "metadataSha256": "005f44f207162d6a709453780ff1a6a84dee9bbd863506c68093716e9d378ca8",
+  "mappingSha256": "3907657ade3e61bc8cffb4ca0a1bcba15f57986be4e613900947119364a206e5",
+  "originalClassSha256": {
+    "auy.class": "e9825280275171126dbd6b90af1b69fd7d11561fa8e9b3b0f039565a781aa73f",
+    "ffs$1.class": "7ea8ca18766e7b350353fec1352c16c23cf4af6fb592b13c8117518f3ff0a1ba",
+    "ffs.class": "0acc4a7d356a433b44fd83eb8e63f909168f6028e5aa18287383eb41c04c70ef",
+    "fft.class": "3700ee6c8faa1f348dfbc3051e1c83fac430ce7329a7f625fe3b9de1a79ce0a4"
+  },
+  "gsonBasisReceiptSha256": "b47712d4fe065dece815b9c16374cc1c6249f1deedde3e061016b0c860f99e90",
+  "jdkReleaseSha256": "2f1cd602bf21d35e6e2976d6a351693ff609bfcb285762263a54bf20e8a40afd",
+  "producerSha256": {
+    "pack_detector_probe.py": "3f9e15ac409eb8b93cc94b26f21e026fd4d346e4028a384850413a400a660938",
+    "PackDetectorProbe.java": "8372904032e4b8e751043becf6dfc30e71df9a38b6eda7f7f4ef0ccf75c148dc",
+    "AuthoredDetector.java": "78dca19ad6f304f3dd91bc056c01f65452a87f47d4c565bbaaa4f9efb639c0c7",
+    "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "inputs.json": "e6e79e73c46391b0aa98656a7c7834288f4b75896aa5e6c03f3be56ba9083076"
+  },
+  "requestSha256": "dbfd5432c458313481107333d0e559330b405ff14fa6a29f2014c6efa38c7b18",
+  "fixturesBefore": {
+    "absolute-link.zip": {
+      "kind": "symlink",
+      "target": "<capture>/fixtures/regular/payload.zip"
+    },
+    "directory-inner-link": {
+      "kind": "directory"
+    },
+    "directory-meta": {
+      "kind": "directory"
+    },
+    "directory-meta-is-directory": {
+      "kind": "directory"
+    },
+    "directory-no-meta": {
+      "kind": "directory"
+    },
+    "regular": {
+      "kind": "directory"
+    },
+    "relative-missing": {
+      "kind": "directory"
+    },
+    "relative-shadow": {
+      "kind": "directory"
+    },
+    "relative-missing/link.zip": {
+      "kind": "symlink",
+      "target": "payload.zip"
+    },
+    "relative-missing/payload.zip": {
+      "kind": "file",
+      "sha256": "6b77e8c4791f5fae8da2a688200d11f0112bced7a1f1808e57733345311cb516",
+      "bytes": 11
+    },
+    "directory-meta/pack.mcmeta": {
+      "kind": "file",
+      "sha256": "2bb31762ffbf29faa74968e30ed17d0b013ab2943b5a87a31918a921658eaaf5",
+      "bytes": 25
+    },
+    "regular/payload.jar": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "regular/payload.txt": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "regular/payload.zip": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "directory-inner-link/inner-link": {
+      "kind": "symlink",
+      "target": "<capture>/fixtures/regular/payload.zip"
+    },
+    "directory-inner-link/pack.mcmeta": {
+      "kind": "file",
+      "sha256": "2bb31762ffbf29faa74968e30ed17d0b013ab2943b5a87a31918a921658eaaf5",
+      "bytes": 25
+    },
+    "directory-meta-is-directory/pack.mcmeta": {
+      "kind": "directory"
+    },
+    "relative-shadow/link.zip": {
+      "kind": "symlink",
+      "target": "shadow.zip"
+    },
+    "relative-shadow/shadow.zip": {
+      "kind": "file",
+      "sha256": "6b77e8c4791f5fae8da2a688200d11f0112bced7a1f1808e57733345311cb516",
+      "bytes": 11
+    }
+  },
+  "cwdShadowBefore": "0e280632fb5b4e3b40bc711e2b04b4f9f45a38389ac9507b7e43f9f6126e130f",
+  "limits": [
+    "Original detector and validator; authored all/none PathMatcher and pack factory callbacks, not real allowlist policy, ZIP opening, metadata, repository selection, game or renderer.",
+    "One macOS filesystem profile; source original names/signatures intact. Relative-link target and cwd shadow are deliberate private fixtures."
+  ],
+  "adapterClassSha256": "00c33c127d2b9a8483a0ea4ee4d66ac98af17433434a467060a1ad2dad4ce6d7",
+  "fixturesAfter": {
+    "absolute-link.zip": {
+      "kind": "symlink",
+      "target": "<capture>/fixtures/regular/payload.zip"
+    },
+    "directory-inner-link": {
+      "kind": "directory"
+    },
+    "directory-meta": {
+      "kind": "directory"
+    },
+    "directory-meta-is-directory": {
+      "kind": "directory"
+    },
+    "directory-no-meta": {
+      "kind": "directory"
+    },
+    "regular": {
+      "kind": "directory"
+    },
+    "relative-missing": {
+      "kind": "directory"
+    },
+    "relative-shadow": {
+      "kind": "directory"
+    },
+    "relative-missing/link.zip": {
+      "kind": "symlink",
+      "target": "payload.zip"
+    },
+    "relative-missing/payload.zip": {
+      "kind": "file",
+      "sha256": "6b77e8c4791f5fae8da2a688200d11f0112bced7a1f1808e57733345311cb516",
+      "bytes": 11
+    },
+    "directory-meta/pack.mcmeta": {
+      "kind": "file",
+      "sha256": "2bb31762ffbf29faa74968e30ed17d0b013ab2943b5a87a31918a921658eaaf5",
+      "bytes": 25
+    },
+    "regular/payload.jar": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "regular/payload.txt": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "regular/payload.zip": {
+      "kind": "file",
+      "sha256": "60f4b3c0a5fa5745f51367700eaa8d182d491e4fb89fa6de9a6876666557e1b0",
+      "bytes": 32
+    },
+    "directory-inner-link/inner-link": {
+      "kind": "symlink",
+      "target": "<capture>/fixtures/regular/payload.zip"
+    },
+    "directory-inner-link/pack.mcmeta": {
+      "kind": "file",
+      "sha256": "2bb31762ffbf29faa74968e30ed17d0b013ab2943b5a87a31918a921658eaaf5",
+      "bytes": 25
+    },
+    "directory-meta-is-directory/pack.mcmeta": {
+      "kind": "directory"
+    },
+    "relative-shadow/link.zip": {
+      "kind": "symlink",
+      "target": "shadow.zip"
+    },
+    "relative-shadow/shadow.zip": {
+      "kind": "file",
+      "sha256": "6b77e8c4791f5fae8da2a688200d11f0112bced7a1f1808e57733345311cb516",
+      "bytes": 11
+    }
+  },
+  "cwdShadowAfter": "0e280632fb5b4e3b40bc711e2b04b4f9f45a38389ac9507b7e43f9f6126e130f",
+  "observed.jsonSha256": "e145c62ffbcd3dd69604e6df76889c7f9580391f78547b4eeeb7eed9b64e26ef",
+  "class-load.logSha256": "8c2c1d8d393dcbc5e325229c648dcd5360b8ed8569ad64bc3bdcc5d859f414cc",
+  "observerClassSha256": {
+    "study/minecraft/PackDetectorProbe.class": "3a03ea47e4f7c08ea80e00a47481f6be236c2f0f610ba3c1bfce125925251bb9"
+  },
+  "privateReceiptSha256": "0815f337d73c95fbcb6daff79c2d723bd57675b8564b8795fd27dc9b847778f5",
+  "loadedOriginalClassSha256": {
+    "ffs.class": "0acc4a7d356a433b44fd83eb8e63f909168f6028e5aa18287383eb41c04c70ef",
+    "auy.class": "e9825280275171126dbd6b90af1b69fd7d11561fa8e9b3b0f039565a781aa73f",
+    "ffs$1.class": "7ea8ca18766e7b350353fec1352c16c23cf4af6fb592b13c8117518f3ff0a1ba",
+    "fft.class": "3700ee6c8faa1f348dfbc3051e1c83fac430ce7329a7f625fe3b9de1a79ce0a4"
+  },
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "ecf20ae96db9c6237e18c5c7684fbf70ebc19472b16248d1844868584e2c9783"
+    }
+  },
+  "gson": {
+    "name": "com.google.code.gson:gson:2.10.1",
+    "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593",
+    "sha1": "b3add478d4382b78ea20b1671390a858002feb6c"
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.475079792086035,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.2837437908165157,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "normalization": "Only this private capture's absolute path prefix is replaced with <capture>; original hashes/argv/class-load log remain owner-local. Public payload hashes bind normalized bytes."
+}

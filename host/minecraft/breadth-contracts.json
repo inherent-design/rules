@@ -64,7 +64,7 @@
         "later seeded part collection, tints and transforms"
       ],
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -272,7 +272,7 @@
       ],
       "versionBoundary": "Gson variants/multipart reader; merge constructor clears variants at multipart boundaries. Leading negation applies to the inspected whole key/value expression.",
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -502,7 +502,7 @@
       ],
       "versionBoundary": "Definition exposes state instantiation directly; overlap/error semantics not executed or qualified.",
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -763,7 +763,7 @@
       ],
       "versionBoundary": "Codec has optional nonempty variants/multipart and requires at least one. Inspected key/value grammar has per-term negation.",
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -1001,7 +1001,7 @@
       ],
       "versionBoundary": "BlockModelDefinition private view byte-identical to 1.21.5; original class identities remain separate.",
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -1248,9 +1248,9 @@
           ]
         }
       ],
-      "versionBoundary": "Loader delegates to BlockStateModelDispatcher.CODEC, which is not in this capture; registry lookup, per-resource catches and ordered map composition are inspected.",
+      "versionBoundary": "Initial loader inspection delegated to uncaptured BlockStateModelDispatcher.CODEC; subsequent resource-closure-sources.json attributes its root branches, conditions and typed selectors. Delegated model/material and runtime codec qualification remain open.",
       "openDependencies": [
-        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "26.3 delegated unbaked model/material codecs and concrete registry/state domains; dispatcher root source is now inspected",
         "full variant/multipart codec and state-domain comparisons",
         "overlap/error paths requiring bytecode disambiguation",
         "weighted selection, bake, custom renderer and loaded registry closure"
@@ -1399,5 +1399,6 @@
         "font/narration/UI completion and caller reload lifecycle"
       ]
     }
-  ]
+  ],
+  "dependencyFollowup": "host/minecraft/resource-closure-sources.json"
 }
