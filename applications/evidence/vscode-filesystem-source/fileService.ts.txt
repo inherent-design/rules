@@ -1,0 +1,60 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 52-87
+	registerProvider(scheme: string, provider: IFileSystemProvider): IDisposable {
+		if (this.provider.has(scheme)) {
+			throw new Error(`A filesystem provider for the scheme '${scheme}' is already registered.`);
+		}
+
+		mark(`code/registerFilesystem/${scheme}`);
+
+		const providerDisposables = new DisposableStore();
+
+		// Add provider with event
+		this.provider.set(scheme, provider);
+		this._onDidChangeFileSystemProviderRegistrations.fire({ added: true, scheme, provider });
+
+		// Forward events from provider
+		providerDisposables.add(provider.onDidChangeFile(changes => {
+			const event = new FileChangesEvent(changes, !this.isPathCaseSensitive(provider));
+
+			// Always emit any event internally
+			this.internalOnDidFilesChange.fire(event);
+
+			// Only emit uncorrelated events in the global `onDidFilesChange` event
+			if (!event.hasCorrelation()) {
+				this._onDidUncorrelatedFilesChange.fire(event);
+			}
+		}));
+		if (typeof provider.onDidWatchError === 'function') {
+			providerDisposables.add(provider.onDidWatchError(error => this._onDidWatchError.fire(new Error(error))));
+		}
+		providerDisposables.add(provider.onDidChangeCapabilities(() => this._onDidChangeFileSystemProviderCapabilities.fire({ provider, scheme })));
+
+		return toDisposable(() => {
+			this._onDidChangeFileSystemProviderRegistrations.fire({ added: false, scheme, provider });
+			this.provider.delete(scheme);
+
+			dispose(providerDisposables);
+		});
+
+// Original lines 1521-1537
+	protected throwIfFileSystemIsReadonly<T extends IFileSystemProvider>(provider: T, resource: URI): T {
+		if (provider.capabilities & FileSystemProviderCapabilities.Readonly) {
+			throw new FileOperationError(localize('err.readonly', "Unable to modify read-only file '{0}'", this.resourceForError(resource)), FileOperationResult.FILE_PERMISSION_DENIED);
+		}
+
+		return provider;
+	}
+
+	private throwIfFileIsReadonly(resource: URI, stat: IStat): void {
+		if ((stat.permissions ?? 0) & FilePermission.Readonly) {
+			throw new FileOperationError(localize('err.readonly', "Unable to modify read-only file '{0}'", this.resourceForError(resource)), FileOperationResult.FILE_PERMISSION_DENIED);
+		}
+	}
+
+	private resourceForError(resource: URI): string {
+		if (resource.scheme === Schemas.file) {
+			return resource.fsPath;

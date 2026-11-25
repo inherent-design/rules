@@ -1,0 +1,279 @@
+{
+  "schema": 1,
+  "version": "1.147.0",
+  "handled": 3,
+  "status": "ready",
+  "rows": [
+    {
+      "name": "write-refused-after-parent-creation",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [
+            "/failed-parent/child.txt"
+          ],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [
+            "/failed-parent/child.txt"
+          ],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 0,
+      "callEnd": 4,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "NoPermissions (FileSystemError)",
+        "code": "NoPermissions",
+        "message": "Fixture provider denies this file"
+      }
+    },
+    {
+      "name": "created-parent-after-refusal",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [
+            "/failed-parent/child.txt"
+          ],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [
+            "/failed-parent/child.txt"
+          ],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 4,
+      "callEnd": 5,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "entries": [],
+        "provider": {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [
+            "/failed-parent/child.txt"
+          ],
+          "activeWatches": 0
+        }
+      },
+      "error": null
+    },
+    {
+      "name": "copied-queue-before-release",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n",
+            "/queue.txt": "queue original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n",
+            "/queue.txt": "queue original\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 6,
+      "callEnd": 6,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "secondDone": false,
+        "writeEntries": 1
+      },
+      "error": null
+    },
+    {
+      "name": "copied-queue-result",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n",
+            "/queue.txt": "second queued\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n",
+            "/queue.txt": "second queued\n"
+          },
+          "directories": [
+            "/",
+            "/failed-parent"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 9,
+      "callEnd": 10,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "secondDone": true,
+        "text": "second queued\n"
+      },
+      "error": null
+    }
+  ],
+  "calls": [
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/failed-parent"
+    },
+    {
+      "provider": "writable",
+      "op": "createDirectory",
+      "path": "/failed-parent"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/failed-parent/child.txt",
+      "hex": "726566757365642066696c650a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-refused",
+      "path": "/failed-parent/child.txt",
+      "reason": "fixture-provider-readonly"
+    },
+    {
+      "provider": "writable",
+      "op": "readDirectory",
+      "path": "/failed-parent"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/queue.txt",
+      "hex": "6669727374207175657565640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/queue.txt",
+      "hex": "6669727374207175657565640a"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/queue.txt",
+      "hex": "7365636f6e64207175657565640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/queue.txt",
+      "hex": "7365636f6e64207175657565640a"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/queue.txt"
+    }
+  ],
+  "events": [],
+  "providers": [
+    {
+      "id": "writable",
+      "files": {
+        "/file.txt": "original\n",
+        "/queue.txt": "second queued\n"
+      },
+      "directories": [
+        "/",
+        "/failed-parent"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    }
+  ]
+}

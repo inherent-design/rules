@@ -1,0 +1,24 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 28-46
+		const infoProxy = extHostContext.getProxy(ExtHostContext.ExtHostFileSystemInfo);
+
+		for (const entry of _fileService.listCapabilities()) {
+			infoProxy.$acceptProviderInfos(URI.from({ scheme: entry.scheme, path: '/dummy' }), entry.capabilities);
+		}
+		this._disposables.add(_fileService.onDidChangeFileSystemProviderRegistrations(e => infoProxy.$acceptProviderInfos(URI.from({ scheme: e.scheme, path: '/dummy' }), e.provider?.capabilities ?? null)));
+		this._disposables.add(_fileService.onDidChangeFileSystemProviderCapabilities(e => infoProxy.$acceptProviderInfos(URI.from({ scheme: e.scheme, path: '/dummy' }), e.provider.capabilities)));
+	}
+
+	dispose(): void {
+		this._disposables.dispose();
+		this._fileProvider.dispose();
+	}
+
+	async $registerFileSystemProvider(handle: number, scheme: string, capabilities: FileSystemProviderCapabilities, readonlyMessage?: IMarkdownString): Promise<void> {
+		this._fileProvider.set(handle, new RemoteFileSystemProvider(this._fileService, scheme, capabilities, readonlyMessage, handle, this._proxy));
+	}
+
+	$unregisterProvider(handle: number): void {

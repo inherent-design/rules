@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "events": [
+    {
+      "id": "add-writable",
+      "added": true,
+      "providerPresent": true,
+      "readonly": false
+    },
+    {
+      "id": "remove-writable",
+      "added": false,
+      "providerPresent": true,
+      "readonly": false
+    },
+    {
+      "id": "add-readonly",
+      "added": true,
+      "providerPresent": true,
+      "readonly": true
+    },
+    {
+      "id": "other-scheme",
+      "added": true,
+      "providerPresent": true,
+      "readonly": false
+    },
+    {
+      "id": "remove-readonly",
+      "added": false,
+      "providerPresent": true,
+      "readonly": true
+    },
+    {
+      "id": "absent-provider-removal",
+      "added": false,
+      "providerPresent": false,
+      "readonly": false
+    }
+  ],
+  "writes": [
+    {
+      "id": "write-normal",
+      "schemeReadonly": false,
+      "backendDenied": false,
+      "parentMissing": false
+    },
+    {
+      "id": "write-creates-parent",
+      "schemeReadonly": false,
+      "backendDenied": false,
+      "parentMissing": true
+    },
+    {
+      "id": "readonly-scheme-write",
+      "schemeReadonly": true,
+      "backendDenied": false,
+      "parentMissing": false
+    },
+    {
+      "id": "readonly-file-permissive-provider",
+      "schemeReadonly": false,
+      "backendDenied": false,
+      "parentMissing": false
+    },
+    {
+      "id": "readonly-file-enforcing-provider",
+      "schemeReadonly": false,
+      "backendDenied": true,
+      "parentMissing": false
+    },
+    {
+      "id": "write-refused-after-parent-creation",
+      "schemeReadonly": false,
+      "backendDenied": true,
+      "parentMissing": true
+    }
+  ],
+  "queues": [
+    {
+      "id": "borrowed",
+      "copied": false,
+      "mutated": true
+    },
+    {
+      "id": "caller-copy",
+      "copied": true,
+      "mutated": true
+    }
+  ]
+}

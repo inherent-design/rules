@@ -1,0 +1,20 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 37-51
+	$acceptProviderInfos(uri: UriComponents, capabilities: number | null): void {
+		if (capabilities === null) {
+			this._providerInfo.delete(uri.scheme);
+		} else {
+			this._providerInfo.set(uri.scheme, capabilities);
+		}
+	}
+
+	isFreeScheme(scheme: string): boolean {
+		return !this._providerInfo.has(scheme) && !this._systemSchemes.has(scheme);
+	}
+
+	getCapabilities(scheme: string): number | undefined {
+		return this._providerInfo.get(scheme);
+	}

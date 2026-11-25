@@ -1,0 +1,42 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 599-635
+export const enum FileSystemProviderCapabilities {
+
+	/**
+	 * No capabilities.
+	 */
+	None = 0,
+
+	/**
+	 * Provider supports unbuffered read/write.
+	 */
+	FileReadWrite = 1 << 1,
+
+	/**
+	 * Provider supports open/read/write/close low level file operations.
+	 */
+	FileOpenReadWriteClose = 1 << 2,
+
+	/**
+	 * Provider supports stream based reading.
+	 */
+	FileReadStream = 1 << 4,
+
+	/**
+	 * Provider supports copy operation.
+	 */
+	FileFolderCopy = 1 << 3,
+
+	/**
+	 * Provider is path case sensitive.
+	 */
+	PathCaseSensitive = 1 << 10,
+
+	/**
+	 * All files of the provider are readonly.
+	 */
+	Readonly = 1 << 11,
+

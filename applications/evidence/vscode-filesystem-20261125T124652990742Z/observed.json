@@ -1,0 +1,1974 @@
+{
+  "schema": 1,
+  "version": "1.147.0",
+  "handled": 7,
+  "status": "ready",
+  "rows": [
+    {
+      "name": "unknown-scheme",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 0,
+      "callEnd": 0,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "writable": null,
+        "known": false
+      },
+      "error": null
+    },
+    {
+      "name": "unknown-read",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 0,
+      "callEnd": 0,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "Unavailable (FileSystemError)",
+        "code": "Unavailable",
+        "message": "ENOPRO: No file system provider found for resource 'rules-vfs-unknown:/file.txt'"
+      }
+    },
+    {
+      "name": "writable-stat",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 0,
+      "callEnd": 1,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "writable": true,
+        "stat": {
+          "type": 1,
+          "ctime": 1,
+          "mtime": 1000,
+          "size": 9
+        }
+      },
+      "error": null
+    },
+    {
+      "name": "read-copy",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 1,
+      "callEnd": 3,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "original": "original\n",
+        "mutated": "Xriginal\n",
+        "again": "original\n"
+      },
+      "error": null
+    },
+    {
+      "name": "missing-file",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 3,
+      "callEnd": 4,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "EntryNotFound (FileSystemError)",
+        "code": "FileNotFound",
+        "message": "rules-vfs-write:/missing.txt"
+      }
+    },
+    {
+      "name": "duplicate-registration",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 4,
+      "callEnd": 4,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "Error",
+        "code": null,
+        "message": "a provider for the scheme 'rules-vfs-write' is already registered"
+      }
+    },
+    {
+      "name": "write-normal",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 4,
+      "callEnd": 7,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "text": "first saved\n"
+      },
+      "error": null
+    },
+    {
+      "name": "write-creates-parent",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 7,
+      "callEnd": 13,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "stat": {
+          "type": 1,
+          "ctime": 1,
+          "mtime": 1003,
+          "size": 6
+        },
+        "text": "child\n"
+      },
+      "error": null
+    },
+    {
+      "name": "list-directory",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 13,
+      "callEnd": 14,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": [
+        [
+          "child.txt",
+          1
+        ]
+      ],
+      "error": null
+    },
+    {
+      "name": "readonly-scheme-stat",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 14,
+      "callEnd": 15,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "writable": false,
+        "stat": {
+          "type": 1,
+          "ctime": 1,
+          "mtime": 1003,
+          "size": 16
+        }
+      },
+      "error": null
+    },
+    {
+      "name": "readonly-scheme-write",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 15,
+      "callEnd": 15,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "NoPermissions (FileSystemError)",
+        "code": "NoPermissions",
+        "message": "Unable to modify read-only file 'rules-vfs-readonly:/file.txt'"
+      }
+    },
+    {
+      "name": "readonly-file-stat",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 15,
+      "callEnd": 16,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "writable": true,
+        "stat": {
+          "type": 1,
+          "ctime": 1,
+          "mtime": 1003,
+          "size": 12,
+          "permissions": 1
+        }
+      },
+      "error": null
+    },
+    {
+      "name": "readonly-file-permissive-provider",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "first saved\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 16,
+      "callEnd": 19,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "text": "provider permitted\n"
+      },
+      "error": null
+    },
+    {
+      "name": "readonly-file-enforcing-provider",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [
+            "/file.txt"
+          ],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 19,
+      "callEnd": 21,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": null,
+      "error": {
+        "name": "NoPermissions (FileSystemError)",
+        "code": "NoPermissions",
+        "message": "Fixture provider denies this file"
+      }
+    },
+    {
+      "name": "queue-before-release",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "queue original\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "queue original\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 22,
+      "callEnd": 22,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "secondDone": false,
+        "writeEntries": 1
+      },
+      "error": null
+    },
+    {
+      "name": "queue-mutated-input-result",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 25,
+      "callEnd": 26,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "secondDone": true,
+        "text": "Xecond queued\n"
+      },
+      "error": null
+    },
+    {
+      "name": "disposed-scheme-view",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 27,
+      "callEnd": 27,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "writable": true,
+        "known": true,
+        "oldDone": false
+      },
+      "error": null
+    },
+    {
+      "name": "rebound-before-old-completes",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 27,
+      "callEnd": 28,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "oldDone": false,
+        "current": "new backing\n"
+      },
+      "error": null
+    },
+    {
+      "name": "old-write-completed-after-rebind",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 29,
+      "callEnd": 30,
+      "eventStart": 0,
+      "eventEnd": 0,
+      "result": {
+        "oldDone": true,
+        "current": "new backing\n",
+        "old": {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        "fresh": {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      },
+      "error": null
+    },
+    {
+      "name": "watched-event-delivered",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 1
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 1
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 32,
+      "callEnd": 32,
+      "eventStart": 1,
+      "eventEnd": 1,
+      "result": {
+        "observed": [
+          "rules-vfs-write:/file.txt"
+        ],
+        "activeWatches": 1
+      },
+      "error": null
+    },
+    {
+      "name": "watch-disposed-quiet-window",
+      "before": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "after": [
+        {
+          "id": "writable",
+          "files": {
+            "/file.txt": "provider permitted\n",
+            "/new/child.txt": "child\n",
+            "/queue.txt": "Xecond queued\n"
+          },
+          "directories": [
+            "/",
+            "/new"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "rejected-duplicate",
+          "files": {},
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "scheme-readonly",
+          "files": {
+            "/file.txt": "scheme original\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "old-incarnation",
+          "files": {
+            "/file.txt": "old completed\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        },
+        {
+          "id": "new-incarnation",
+          "files": {
+            "/file.txt": "new backing\n"
+          },
+          "directories": [
+            "/"
+          ],
+          "readonly": [],
+          "activeWatches": 0
+        }
+      ],
+      "callStart": 33,
+      "callEnd": 33,
+      "eventStart": 1,
+      "eventEnd": 1,
+      "result": {
+        "before": 1,
+        "after": 1,
+        "waitMs": 250,
+        "activeWatches": 0
+      },
+      "error": null
+    }
+  ],
+  "calls": [
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/missing.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/file.txt",
+      "hex": "66697273742073617665640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/file.txt",
+      "hex": "66697273742073617665640a"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/new"
+    },
+    {
+      "provider": "writable",
+      "op": "createDirectory",
+      "path": "/new"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/new/child.txt",
+      "hex": "6368696c640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/new/child.txt",
+      "hex": "6368696c640a"
+    },
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/new/child.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/new/child.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "readDirectory",
+      "path": "/new"
+    },
+    {
+      "provider": "scheme-readonly",
+      "op": "stat",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/file.txt",
+      "hex": "70726f7669646572207065726d69747465640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/file.txt",
+      "hex": "70726f7669646572207065726d69747465640a"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/file.txt",
+      "hex": "70726f76696465722073686f756c64207265667573650a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-refused",
+      "path": "/file.txt",
+      "reason": "fixture-provider-readonly"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/queue.txt",
+      "hex": "6669727374207175657565640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/queue.txt",
+      "hex": "6669727374207175657565640a"
+    },
+    {
+      "provider": "writable",
+      "op": "write-enter",
+      "path": "/queue.txt",
+      "hex": "5865636f6e64207175657565640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "write-complete",
+      "path": "/queue.txt",
+      "hex": "5865636f6e64207175657565640a"
+    },
+    {
+      "provider": "writable",
+      "op": "readFile",
+      "path": "/queue.txt"
+    },
+    {
+      "provider": "old-incarnation",
+      "op": "write-enter",
+      "path": "/file.txt",
+      "hex": "6f6c6420636f6d706c657465640a",
+      "options": {
+        "create": true,
+        "overwrite": true
+      }
+    },
+    {
+      "provider": "new-incarnation",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "old-incarnation",
+      "op": "write-complete",
+      "path": "/file.txt",
+      "hex": "6f6c6420636f6d706c657465640a"
+    },
+    {
+      "provider": "new-incarnation",
+      "op": "readFile",
+      "path": "/file.txt"
+    },
+    {
+      "provider": "writable",
+      "op": "stat",
+      "path": "/"
+    },
+    {
+      "provider": "writable",
+      "op": "watch",
+      "path": "/",
+      "options": {
+        "recursive": true,
+        "excludes": [
+          ".git/objects/**",
+          ".git/subtree-cache/**",
+          ".hg/store/**",
+          "*/.git/objects/**",
+          "*/.git/subtree-cache/**",
+          "*/.hg/store/**"
+        ]
+      }
+    },
+    {
+      "provider": "writable",
+      "op": "watch-disposed",
+      "path": "/"
+    }
+  ],
+  "events": [
+    {
+      "kind": "watch-changed",
+      "uri": "rules-vfs-write:/file.txt"
+    },
+    {
+      "kind": "fixture-error",
+      "action": "detached",
+      "error": {
+        "name": "Error",
+        "code": null,
+        "message": "Fixture wait timed out"
+      }
+    }
+  ],
+  "providers": [
+    {
+      "id": "writable",
+      "files": {
+        "/file.txt": "provider permitted\n",
+        "/new/child.txt": "child\n",
+        "/queue.txt": "Xecond queued\n"
+      },
+      "directories": [
+        "/",
+        "/new"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    },
+    {
+      "id": "rejected-duplicate",
+      "files": {},
+      "directories": [
+        "/"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    },
+    {
+      "id": "scheme-readonly",
+      "files": {
+        "/file.txt": "scheme original\n"
+      },
+      "directories": [
+        "/"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    },
+    {
+      "id": "old-incarnation",
+      "files": {
+        "/file.txt": "old completed\n"
+      },
+      "directories": [
+        "/"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    },
+    {
+      "id": "new-incarnation",
+      "files": {
+        "/file.txt": "new backing\n"
+      },
+      "directories": [
+        "/"
+      ],
+      "readonly": [],
+      "activeWatches": 0
+    }
+  ]
+}

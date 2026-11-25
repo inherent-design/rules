@@ -2,6 +2,8 @@
 
 The studies support simplifying boundaries between values, state, and evidence. They do not support replacing these programs with one package, document, or task model. Preserve each program's purpose and established policies; share host mechanisms only where their premises match.
 
+The [VS Code filesystem band](vscode/FILESYSTEMS.md) adds a concrete distinction between historical event payload and current membership: removal retains a provider object, so forwarding that object's capabilities without the removal flag leaves stale knowledge. New reads correctly fail while a previously captured write can still complete against its old provider. Report membership, admitted work, and actual effects separately. Also retain caller-owned byte snapshots when later dispatch must use an exact image; the observed write shortcut borrows its array. These are application/source observations and a narrow invalidation candidate, not new shared host guarantees.
+
 This is a partial synthesis of the study through the evidence bands linked below; its initial synthesis used repository revision `f570f2ec68de818ee4c4e1fe700f0675e0d239e8`. The [inventory](inventory.json) remains the current coverage index, and [joined scenarios](scenarios.json) retain their larger obligations. Most operations remain pending, and no entire feature family is qualified. A proposed improvement below is not a production implementation decision.
 
 ## Evidence that supports this comparison

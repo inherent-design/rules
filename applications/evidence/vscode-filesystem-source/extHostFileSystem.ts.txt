@@ -1,0 +1,114 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 132-240
+	registerFileSystemProvider(extension: IExtensionDescription, scheme: string, provider: vscode.FileSystemProvider, options: { isCaseSensitive?: boolean; isReadonly?: boolean | vscode.MarkdownString } = {}) {
+
+		// validate the given provider is complete
+		ExtHostFileSystem._validateFileSystemProvider(provider);
+
+		if (this._registeredSchemes.has(scheme)) {
+			throw new Error(`a provider for the scheme '${scheme}' is already registered`);
+		}
+
+		//
+		if (!this._linkProviderRegistration) {
+			this._linkProviderRegistration = this._extHostLanguageFeatures.registerDocumentLinkProvider(extension, '*', this._linkProvider);
+		}
+
+		const handle = this._handlePool++;
+		this._linkProvider.add(scheme);
+		this._registeredSchemes.add(scheme);
+		this._fsProvider.set(handle, provider);
+
+		let capabilities = files.FileSystemProviderCapabilities.FileReadWrite;
+		if (options.isCaseSensitive) {
+			capabilities += files.FileSystemProviderCapabilities.PathCaseSensitive;
+		}
+		if (options.isReadonly) {
+			capabilities += files.FileSystemProviderCapabilities.Readonly;
+		}
+		if (typeof provider.copy === 'function') {
+			capabilities += files.FileSystemProviderCapabilities.FileFolderCopy;
+		}
+		if (typeof provider.open === 'function' && typeof provider.close === 'function'
+			&& typeof provider.read === 'function' && typeof provider.write === 'function'
+		) {
+			checkProposedApiEnabled(extension, 'fsChunks');
+			capabilities += files.FileSystemProviderCapabilities.FileOpenReadWriteClose;
+		}
+
+		let readOnlyMessage: IMarkdownString | undefined;
+		if (options.isReadonly && isMarkdownString(options.isReadonly) && options.isReadonly.value !== '') {
+			readOnlyMessage = {
+				value: options.isReadonly.value,
+				isTrusted: options.isReadonly.isTrusted,
+				supportThemeIcons: options.isReadonly.supportThemeIcons,
+				supportHtml: options.isReadonly.supportHtml,
+				baseUri: options.isReadonly.baseUri,
+				uris: options.isReadonly.uris
+			};
+		}
+
+		this._proxy.$registerFileSystemProvider(handle, scheme, capabilities, readOnlyMessage).catch(err => {
+			console.error(`FAILED to register filesystem provider of ${extension.identifier.value}-extension for the scheme ${scheme}`);
+			console.error(err);
+		});
+
+		const subscription = provider.onDidChangeFile(event => {
+			const mapped: IFileChangeDto[] = [];
+			for (const e of event) {
+				const { uri: resource, type } = e;
+				if (resource.scheme !== scheme) {
+					// dropping events for wrong scheme
+					continue;
+				}
+				let newType: files.FileChangeType | undefined;
+				switch (type) {
+					case FileChangeType.Changed:
+						newType = files.FileChangeType.UPDATED;
+						break;
+					case FileChangeType.Created:
+						newType = files.FileChangeType.ADDED;
+						break;
+					case FileChangeType.Deleted:
+						newType = files.FileChangeType.DELETED;
+						break;
+					default:
+						throw new Error('Unknown FileChangeType');
+				}
+				mapped.push({ resource, type: newType });
+			}
+			this._proxy.$onFileSystemChange(handle, mapped);
+		});
+
+		return toDisposable(() => {
+			subscription.dispose();
+			this._linkProvider.delete(scheme);
+			this._registeredSchemes.delete(scheme);
+			this._fsProvider.delete(handle);
+			this._proxy.$unregisterProvider(handle);
+		});
+	}
+
+	private static _validateFileSystemProvider(provider: vscode.FileSystemProvider) {
+		if (!provider) {
+			throw new Error('MISSING provider');
+		}
+		if (typeof provider.watch !== 'function') {
+			throw new Error('Provider does NOT implement watch');
+		}
+		if (typeof provider.stat !== 'function') {
+			throw new Error('Provider does NOT implement stat');
+		}
+		if (typeof provider.readDirectory !== 'function') {
+			throw new Error('Provider does NOT implement readDirectory');
+		}
+		if (typeof provider.createDirectory !== 'function') {
+			throw new Error('Provider does NOT implement createDirectory');
+		}
+		if (typeof provider.readFile !== 'function') {
+			throw new Error('Provider does NOT implement readFile');
+		}
+		if (typeof provider.writeFile !== 'function') {

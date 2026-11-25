@@ -1,0 +1,59 @@
+/* Selected Microsoft VS Code method bodies. Copyright (c) Microsoft Corporation.
+ * MIT license: ../../sources/licenses/vscode-MIT.txt.
+ * Study scaffolding and the explicitly labeled candidate are new. */
+
+// Original lines 90-123
+			},
+			async readFile(uri: vscode.Uri): Promise<Uint8Array> {
+				try {
+					const provider = that._fileSystemProvider.get(uri.scheme);
+					if (provider) {
+						// use shortcut
+						await that._proxy.$ensureActivation(uri.scheme);
+						return (await provider.impl.readFile(uri)).slice(); // safe-copy
+					} else {
+						const buff = await that._proxy.$readFile(uri);
+						return buff.buffer;
+					}
+				} catch (err) {
+					return ExtHostConsumerFileSystem._handleError(err);
+				}
+			},
+			async writeFile(uri: vscode.Uri, content: Uint8Array): Promise<void> {
+				try {
+					const provider = that._fileSystemProvider.get(uri.scheme);
+					if (provider && !provider.isReadonly) {
+						// use shortcut
+						await that._proxy.$ensureActivation(uri.scheme);
+						await that.mkdirp(provider.impl, provider.extUri, provider.extUri.dirname(uri));
+						return await that._writeQueue.queueFor(uri, () => Promise.resolve(provider.impl.writeFile(uri, content, { create: true, overwrite: true })));
+					} else {
+						return await that._proxy.$writeFile(uri, VSBuffer.wrap(content));
+					}
+				} catch (err) {
+					return ExtHostConsumerFileSystem._handleError(err);
+				}
+			},
+			async delete(uri: vscode.Uri, options?: { recursive?: boolean; useTrash?: boolean }): Promise<void> {
+				try {
+					const provider = that._fileSystemProvider.get(uri.scheme);
+
+// Original lines 151-159
+			isWritableFileSystem(scheme: string): boolean | undefined {
+				const capabilities = fileSystemInfo.getCapabilities(scheme);
+				if (typeof capabilities === 'number') {
+					return !(capabilities & files.FileSystemProviderCapabilities.Readonly);
+				}
+				return undefined;
+			}
+		});
+	}
+
+// Original lines 249-255
+	addFileSystemProvider(scheme: string, provider: vscode.FileSystemProvider, options?: { isCaseSensitive?: boolean; isReadonly?: boolean | IMarkdownString }): IDisposable {
+		this._fileSystemProvider.set(scheme, { impl: provider, extUri: options?.isCaseSensitive ? extUri : extUriIgnorePathCase, isReadonly: !!options?.isReadonly });
+		return toDisposable(() => this._fileSystemProvider.delete(scheme));
+	}
+
+	getFileSystemProviderExtUri(scheme: string) {
+		return this._fileSystemProvider.get(scheme)?.extUri ?? extUri;
