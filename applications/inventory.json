@@ -5100,23 +5100,79 @@
           "operations": [
             {
               "id": "exec",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-exec/Exec.lean and js-exec/Exec.bend",
+              "laws": [
+                "exec_names_have_distinct_meanings",
+                "npm_default_does_not_use_only_inherited_path",
+                "npm_call_can_use_that_same_path",
+                "pnpm_exec_uses_inherited_path",
+                "yarn_exec_uses_inherited_path",
+                "named_script_is_a_different_target",
+                "dependency_beats_inherited_path",
+                "success_keeps_requested_directory_and_arguments",
+                "missing_default_codes_agree_without_agreeing_on_phase",
+                "yarn_shell_lookup_failure_is_127",
+                "npm_call_missing_is_not_default_package_lookup",
+                "a_declared_script_does_not_supply_an_exec_binary"
+              ],
+              "nativeEvidence": [
+                "evidence/js-exec-20261125T011635281573Z/commands.json",
+                "evidence/js-exec-20261125T011635281573Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-exec-selections.json"
+              ],
+              "negativeControls": [
+                "js-exec/conformance.py:researchRefusals",
+                "js-exec/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "js-exec/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nine fresh offline projects,one literal binary name,known generated successful dependency/PATH/root-script programs;node-modules Yarn only",
+                "Explicit private npm cache/global prefix;no online/download/confirmation/global-bin qualification. Named scripts admitted at project root only",
+                "13 actual exact argv/cwd events;five failures bound to diagnostics,not inferred from status alone. Restricted Bend-driver line codec is not a user-argument limit",
+                "Frozen collector retains ignored pnpm manager-version setting;maintained collector corrected,no capture reattribution or rerun"
+              ],
+              "verificationPlan": "Qualify temporary/cache/global/self package execution,confirmation,script trust,collisions,permissions,failed children,interrupts,Windows,PnP,workspace scheduling and arbitrary shell parsing independently. Preserve package-command/program-vector/shell-snippet/named-script intent;no universal lookup or escaping guarantee."
             },
             {
               "id": "resolve-bin",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-exec/Exec.lean and js-exec/Exec.bend",
+              "laws": [
+                "exec_names_have_distinct_meanings",
+                "npm_default_does_not_use_only_inherited_path",
+                "npm_call_can_use_that_same_path",
+                "pnpm_exec_uses_inherited_path",
+                "yarn_exec_uses_inherited_path",
+                "named_script_is_a_different_target",
+                "dependency_beats_inherited_path",
+                "success_keeps_requested_directory_and_arguments",
+                "missing_default_codes_agree_without_agreeing_on_phase",
+                "yarn_shell_lookup_failure_is_127",
+                "npm_call_missing_is_not_default_package_lookup",
+                "a_declared_script_does_not_supply_an_exec_binary"
+              ],
+              "nativeEvidence": [
+                "evidence/js-exec-20261125T011635281573Z/commands.json",
+                "evidence/js-exec-20261125T011635281573Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-exec-selections.json"
+              ],
+              "negativeControls": [
+                "js-exec/conformance.py:researchRefusals",
+                "js-exec/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "js-exec/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nine fresh offline projects,one literal binary name,known generated successful dependency/PATH/root-script programs;node-modules Yarn only",
+                "Explicit private npm cache/global prefix;no online/download/confirmation/global-bin qualification. Named scripts admitted at project root only",
+                "13 actual exact argv/cwd events;five failures bound to diagnostics,not inferred from status alone. Restricted Bend-driver line codec is not a user-argument limit",
+                "Frozen collector retains ignored pnpm manager-version setting;maintained collector corrected,no capture reattribution or rerun"
+              ],
+              "verificationPlan": "Qualify temporary/cache/global/self package execution,confirmation,script trust,collisions,permissions,failed children,interrupts,Windows,PnP,workspace scheduling and arbitrary shell parsing independently. Preserve package-command/program-vector/shell-snippet/named-script intent;no universal lookup or escaping guarantee."
             },
             {
               "id": "cache-executable",
@@ -6548,13 +6604,41 @@
             },
             {
               "id": "exec",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-exec/Exec.lean and js-exec/Exec.bend",
+              "laws": [
+                "exec_names_have_distinct_meanings",
+                "npm_default_does_not_use_only_inherited_path",
+                "npm_call_can_use_that_same_path",
+                "pnpm_exec_uses_inherited_path",
+                "yarn_exec_uses_inherited_path",
+                "named_script_is_a_different_target",
+                "dependency_beats_inherited_path",
+                "success_keeps_requested_directory_and_arguments",
+                "missing_default_codes_agree_without_agreeing_on_phase",
+                "yarn_shell_lookup_failure_is_127",
+                "npm_call_missing_is_not_default_package_lookup",
+                "a_declared_script_does_not_supply_an_exec_binary"
+              ],
+              "nativeEvidence": [
+                "evidence/js-exec-20261125T011635281573Z/commands.json",
+                "evidence/js-exec-20261125T011635281573Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-exec-selections.json"
+              ],
+              "negativeControls": [
+                "js-exec/conformance.py:researchRefusals",
+                "js-exec/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "js-exec/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nine fresh offline projects,one literal binary name,known generated successful dependency/PATH/root-script programs;node-modules Yarn only",
+                "Explicit private npm cache/global prefix;no online/download/confirmation/global-bin qualification. Named scripts admitted at project root only",
+                "13 actual exact argv/cwd events;five failures bound to diagnostics,not inferred from status alone. Restricted Bend-driver line codec is not a user-argument limit",
+                "Frozen collector retains ignored pnpm manager-version setting;maintained collector corrected,no capture reattribution or rerun"
+              ],
+              "verificationPlan": "Qualify temporary/cache/global/self package execution,confirmation,script trust,collisions,permissions,failed children,interrupts,Windows,PnP,workspace scheduling and arbitrary shell parsing independently. Preserve package-command/program-vector/shell-snippet/named-script intent;no universal lookup or escaping guarantee."
             },
             {
               "id": "verify-deps-before-run",
@@ -8417,13 +8501,41 @@
             },
             {
               "id": "exec",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "js-exec/Exec.lean and js-exec/Exec.bend",
+              "laws": [
+                "exec_names_have_distinct_meanings",
+                "npm_default_does_not_use_only_inherited_path",
+                "npm_call_can_use_that_same_path",
+                "pnpm_exec_uses_inherited_path",
+                "yarn_exec_uses_inherited_path",
+                "named_script_is_a_different_target",
+                "dependency_beats_inherited_path",
+                "success_keeps_requested_directory_and_arguments",
+                "missing_default_codes_agree_without_agreeing_on_phase",
+                "yarn_shell_lookup_failure_is_127",
+                "npm_call_missing_is_not_default_package_lookup",
+                "a_declared_script_does_not_supply_an_exec_binary"
+              ],
+              "nativeEvidence": [
+                "evidence/js-exec-20261125T011635281573Z/commands.json",
+                "evidence/js-exec-20261125T011635281573Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/js-exec-selections.json"
+              ],
+              "negativeControls": [
+                "js-exec/conformance.py:researchRefusals",
+                "js-exec/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "js-exec/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Nine fresh offline projects,one literal binary name,known generated successful dependency/PATH/root-script programs;node-modules Yarn only",
+                "Explicit private npm cache/global prefix;no online/download/confirmation/global-bin qualification. Named scripts admitted at project root only",
+                "13 actual exact argv/cwd events;five failures bound to diagnostics,not inferred from status alone. Restricted Bend-driver line codec is not a user-argument limit",
+                "Frozen collector retains ignored pnpm manager-version setting;maintained collector corrected,no capture reattribution or rerun"
+              ],
+              "verificationPlan": "Qualify temporary/cache/global/self package execution,confirmation,script trust,collisions,permissions,failed children,interrupts,Windows,PnP,workspace scheduling and arbitrary shell parsing independently. Preserve package-command/program-vector/shell-snippet/named-script intent;no universal lookup or escaping guarantee."
             },
             {
               "id": "bin",

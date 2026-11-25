@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "attribution": "Readback after native collection;authored hashes match command before/after images. Archive retained at its recorded exact digest,not re-created or backdated.",
+  "projects": [
+    {
+      "app": "npm",
+      "profile": "dependency-and-path",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  },\n  \"dependencies\": {\n    \"fixture-executable\": \"file:/private/tmp/rules-js-exec-_ti5axul/fixture-executable-1.0.0.tgz\"\n  }\n}\n",
+          "sha256": "482cc632be426cdacb5a79b2a84b072462aad42b8ba7b34b0b04f08ba7442934"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "installedProgramSha256": "04eaff7be469e7bb5762c71934e08f95af4764063cdc3726f3ef3ad6b9d9d092",
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "npm",
+      "profile": "path-only",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "npm",
+      "profile": "missing",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      }
+    },
+    {
+      "app": "pnpm",
+      "profile": "dependency-and-path",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  },\n  \"dependencies\": {\n    \"fixture-executable\": \"file:/private/tmp/rules-js-exec-_ti5axul/fixture-executable-1.0.0.tgz\"\n  }\n}\n",
+          "sha256": "482cc632be426cdacb5a79b2a84b072462aad42b8ba7b34b0b04f08ba7442934"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "installedProgramSha256": "04eaff7be469e7bb5762c71934e08f95af4764063cdc3726f3ef3ad6b9d9d092",
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "pnpm",
+      "profile": "path-only",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "pnpm",
+      "profile": "missing",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      }
+    },
+    {
+      "app": "yarn",
+      "profile": "dependency-and-path",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  },\n  \"dependencies\": {\n    \"fixture-executable\": \"file:/private/tmp/rules-js-exec-_ti5axul/fixture-executable-1.0.0.tgz\"\n  }\n}\n",
+          "sha256": "482cc632be426cdacb5a79b2a84b072462aad42b8ba7b34b0b04f08ba7442934"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "installedProgramSha256": "04eaff7be469e7bb5762c71934e08f95af4764063cdc3726f3ef3ad6b9d9d092",
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "yarn",
+      "profile": "path-only",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      },
+      "inheritedProgramSha256": "9d79907e1191cf07e7e23559ec3f6ad9ddff3f03cdcf853631b056a8aaa92ea2"
+    },
+    {
+      "app": "yarn",
+      "profile": "missing",
+      "files": {
+        "package.json": {
+          "text": "{\n  \"name\": \"fixture-exec-project\",\n  \"private\": true,\n  \"scripts\": {\n    \"rules-exec-probe\": \"node script.cjs\"\n  }\n}\n",
+          "sha256": "b137be6e203f2f554d78455bc30876da0c30bb89e10669c6e38708325535c1a8"
+        },
+        "script.cjs": {
+          "text": "#!/usr/bin/env node\nconst fs=require('fs');const row={kind:\"root-script\",args:process.argv.slice(2),cwd:process.cwd()};fs.appendFileSync(process.env.FIXTURE_EFFECT_FILE,JSON.stringify(row)+'\\n');console.log(JSON.stringify(row));\n",
+          "sha256": "ebb38131b49873cf75cdda6ff5bdcb94d72da055163d97b399f12b43981e19a6"
+        },
+        "pnpm-workspace.yaml": {
+          "text": "enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n",
+          "sha256": "602a5f5ca0903dd17379643f7bc80d5e113cac14028e3f5756c8a3b5d8d84d79"
+        },
+        ".yarnrc.yml": {
+          "text": "nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n",
+          "sha256": "751a3ea6c58902bbe0bd8f951a7ea1dc5fb16d562eb2ef4aa260bd13fa269aaa"
+        }
+      }
+    }
+  ]
+}

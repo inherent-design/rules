@@ -40,7 +40,10 @@ def main():
                 (project/'package.json').write_text(json.dumps(manifest,indent=2)+'\n');(project/'script.cjs').write_text(program('root-script'))
                 if profile!='missing':
                     p=base/'path-bin'/NAME;p.write_text(program('inherited-path'));p.chmod(0o755)
-                (project/'pnpm-workspace.yaml').write_text('enableGlobalVirtualStore: false\nmanagePackageManagerVersions: false\n')
+                # This Rust pnpm does not recognize the older manager-version
+                # setting; direct pinned invocation and no packageManager field
+                # define this fixture. The frozen first capture retains its warning.
+                (project/'pnpm-workspace.yaml').write_text('enableGlobalVirtualStore: false\n')
                 (project/'.yarnrc.yml').write_text('nodeLinker: node-modules\nenableGlobalCache: false\nenableNetwork: false\nenableTelemetry: false\nenableScripts: false\n')
                 effect=base/'effects.jsonl'
                 env=dict(PATH=str(base/'path-bin')+':'+str(Path(pins['node']['path']).parent)+':/usr/bin:/bin',HOME=str(base/'home'),TMPDIR=str(base/'tmp'),

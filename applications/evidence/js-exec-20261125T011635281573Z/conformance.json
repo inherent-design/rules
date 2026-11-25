@@ -1,0 +1,772 @@
+{
+  "schema": 1,
+  "nativeCommands": 27,
+  "postInstallComparisons": 18,
+  "fixtureExecutionEvents": 13,
+  "ignoredSettingWarnings": [
+    "pnpm/dependency-and-path/install",
+    "pnpm/dependency-and-path/exec",
+    "pnpm/dependency-and-path/nested-exec",
+    "pnpm/dependency-and-path/run-script",
+    "pnpm/path-only/install",
+    "pnpm/path-only/exec",
+    "pnpm/missing/install",
+    "pnpm/missing/exec"
+  ],
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "app",
+    "mode",
+    "cwd",
+    "npm-call",
+    "nested-script",
+    "argument-count",
+    "argument-bound",
+    "line-codec",
+    "nul",
+    "boolean"
+  ],
+  "observationMutations": [
+    "selected",
+    "stage",
+    "exitCode",
+    "cwd",
+    "arguments"
+  ],
+  "comparisons": [
+    {
+      "case": "npm/dependency-and-path/exec",
+      "input": {
+        "app": 0,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "npm/dependency-and-path/nested-exec",
+      "input": {
+        "app": 0,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 2,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "npm/dependency-and-path/run-script",
+      "input": {
+        "app": 0,
+        "mode": 1,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 3,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 3,
+        "stage": 0
+      }
+    },
+    {
+      "case": "npm/dependency-and-path/explicit-shell-call",
+      "input": {
+        "app": 0,
+        "mode": 2,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "npm/path-only/exec",
+      "input": {
+        "app": 0,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 0,
+        "stage": 1,
+        "exitCode": 1,
+        "cwd": 0,
+        "arguments": []
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [],
+        "cwd": 0,
+        "exitCode": 1,
+        "selected": 0,
+        "stage": 1
+      }
+    },
+    {
+      "case": "npm/path-only/explicit-shell-call",
+      "input": {
+        "app": 0,
+        "mode": 2,
+        "dependencyBin": false,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 2,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 2,
+        "stage": 0
+      }
+    },
+    {
+      "case": "npm/missing/exec",
+      "input": {
+        "app": 0,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": false,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 0,
+        "stage": 1,
+        "exitCode": 1,
+        "cwd": 0,
+        "arguments": []
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [],
+        "cwd": 0,
+        "exitCode": 1,
+        "selected": 0,
+        "stage": 1
+      }
+    },
+    {
+      "case": "npm/missing/explicit-shell-call",
+      "input": {
+        "app": 0,
+        "mode": 2,
+        "dependencyBin": false,
+        "inheritedBin": false,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 0,
+        "stage": 3,
+        "exitCode": 127,
+        "cwd": 0,
+        "arguments": []
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [],
+        "cwd": 0,
+        "exitCode": 127,
+        "selected": 0,
+        "stage": 3
+      }
+    },
+    {
+      "case": "pnpm/dependency-and-path/exec",
+      "input": {
+        "app": 1,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "pnpm/dependency-and-path/nested-exec",
+      "input": {
+        "app": 1,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 2,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "pnpm/dependency-and-path/run-script",
+      "input": {
+        "app": 1,
+        "mode": 1,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 3,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 3,
+        "stage": 0
+      }
+    },
+    {
+      "case": "pnpm/path-only/exec",
+      "input": {
+        "app": 1,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 2,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 2,
+        "stage": 0
+      }
+    },
+    {
+      "case": "pnpm/missing/exec",
+      "input": {
+        "app": 1,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": false,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 0,
+        "stage": 2,
+        "exitCode": 1,
+        "cwd": 0,
+        "arguments": []
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [],
+        "cwd": 0,
+        "exitCode": 1,
+        "selected": 0,
+        "stage": 2
+      }
+    },
+    {
+      "case": "yarn/dependency-and-path/exec",
+      "input": {
+        "app": 2,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "yarn/dependency-and-path/nested-exec",
+      "input": {
+        "app": 2,
+        "mode": 0,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 1,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 2,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 2,
+        "exitCode": 0,
+        "selected": 1,
+        "stage": 0
+      }
+    },
+    {
+      "case": "yarn/dependency-and-path/run-script",
+      "input": {
+        "app": 2,
+        "mode": 1,
+        "dependencyBin": true,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 3,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 3,
+        "stage": 0
+      }
+    },
+    {
+      "case": "yarn/path-only/exec",
+      "input": {
+        "app": 2,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": true,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 2,
+        "stage": 0,
+        "exitCode": 0,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ],
+        "cwd": 1,
+        "exitCode": 0,
+        "selected": 2,
+        "stage": 0
+      }
+    },
+    {
+      "case": "yarn/missing/exec",
+      "input": {
+        "app": 2,
+        "mode": 0,
+        "dependencyBin": false,
+        "inheritedBin": false,
+        "cwd": 1,
+        "arguments": [
+          "alpha \u03b2",
+          "literal; echo NOT_A_COMMAND",
+          "--flag=value"
+        ]
+      },
+      "expected": {
+        "selected": 0,
+        "stage": 3,
+        "exitCode": 127,
+        "cwd": 0,
+        "arguments": []
+      },
+      "premise": "Literal known command;installed package,private empty acquisition cache/global prefix,and known benign programs. Failure phase interprets checked stderr. Cwd/arguments come from the independent fixture event,not a shell-parser simulation.",
+      "model": {
+        "arguments": [],
+        "cwd": 0,
+        "exitCode": 127,
+        "selected": 0,
+        "stage": 3
+      }
+    }
+  ],
+  "basisSha256": {
+    "applications/evidence/js-exec-20261125T011635281573Z/commands.json": "cea22f7f60a2f9a8bab876c34efe9e404726463255a0404bff79d13204334987",
+    "applications/evidence/js-exec-20261125T011635281573Z/fixture-executable-1.0.0.tgz": "43a33b703f366dd4cb8bd7221b611a34d538b714cc326399e1397a18c2cad077",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-exec.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-exec.stdout": "5527a755600178d41b75e8d245122316e6bdcf55bafefe06cee8d099827ff6c6",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-explicit-shell-call.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-explicit-shell-call.stdout": "5527a755600178d41b75e8d245122316e6bdcf55bafefe06cee8d099827ff6c6",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-install.stdout": "e01f78f355926522029407309c9d9e715a31f1756a60966fd51fd26e1bd3dc5e",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-nested-exec.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-nested-exec.stdout": "01daf47ec9c57b7033e92345d7bc6abf7970fd1f943e721e2ef8e0eb72573028",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-run-script.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-dependency-and-path-run-script.stdout": "7b74c8bf334e1f8d12b8d55b7a5ce459395eeea8f3c82e184cee1055ae652ffb",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-exec.stderr": "8b6862c73199cb559180e524856beab28e36688b5f7475ee185bb8a171a4d86d",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-exec.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-explicit-shell-call.stderr": "c9eb9b091879f15422280f05921af61e66cf7e1dbb18accd9ca2399ecb58f5f7",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-explicit-shell-call.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-missing-install.stdout": "abfe0afdcbc51fba2854e40ecb6d709f011731fb8d290c1ca3f6db4d49d81b83",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-exec.stderr": "f03bffe0383a27321568291fce29c390d1593ead9fa38cf54d0a7b09d4e64e70",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-exec.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-explicit-shell-call.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-explicit-shell-call.stdout": "327876e2a11894bcb41c5d22f3be3e10193c86e8a640a748a3e33e0ec2df3064",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/npm-path-only-install.stdout": "86298dfdf006d2a1590c6e4a89a6b33cb067654738737efc2dbf8ee8e1b2c432",
+    "applications/evidence/js-exec-20261125T011635281573Z/owned-processes.json": "e5e903328847f5bb65b357f8640e6b696ddf09c645bc18fbe3c3cde63cf43684",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-exec.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-exec.stdout": "30f1c8474bce3c2aaa19bd9d7a4a8ae63d71cbc3e6f6223bd2a8798f957e6e0b",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-install.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-install.stdout": "ed5e24be678d40ad90159bc3a055b3e283fafe9f2a9d45a569fb242bfc0ca56b",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-nested-exec.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-nested-exec.stdout": "8a831eef539ed0f4281e93577b18546e5f4425e11a8a2ffe5aafe3f4296ba610",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-run-script.stderr": "65c6479f2c2774e848995989251e2bbadee3c7c9de75a88c1ca89272519bb626",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-dependency-and-path-run-script.stdout": "b4c6a78722d699eeae69c0671b781fc78b7083f651a7ae8b524be04045a2a359",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-missing-exec.stderr": "d1062db4a46154acd0bfd948904b065a1341d85c0af1a5d115d28a7dab1c8758",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-missing-exec.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-missing-install.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-missing-install.stdout": "3fabd1a9ca4d97699d5ed9b8d3eb4b6a7834a7071e5e1ff13b6515d7233f1dff",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-path-only-exec.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-path-only-exec.stdout": "c0d9dc678c184c7578b2e73a1e380f554df09b2a8b40cf2c85253a251431c079",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-path-only-install.stderr": "d4726ca8a0548d39383ac2c478cefca34bc2c50bbdc6ed30794b65ada1179c43",
+    "applications/evidence/js-exec-20261125T011635281573Z/pnpm-path-only-install.stdout": "57d672e0b6a2da8678d056f5a85b6ca56a48e040ddf88c0a02cc84960076efd6",
+    "applications/evidence/js-exec-20261125T011635281573Z/probe.py": "7e6896dc1e5045e7fce24c00987e8d0dfe1d443c5f87e72f8f3595dcde910fb7",
+    "applications/evidence/js-exec-20261125T011635281573Z/project-inputs.json": "178dc7717474b180282cb61a1e3c5bd5d841b460123e83d4ca3fbd068cb86ddd",
+    "applications/evidence/js-exec-20261125T011635281573Z/receipt.json": "a15118c4ed851b8ac9eb146f07130129b17d291c639aa8b7dafc30728565bcb6",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-exec.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-exec.stdout": "d33a21189f77b2caab2b3a93e71b539ad4ed440f7b9044e294ac4fd146960404",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-install.stdout": "86db5f6504f66f7302b2205feb1b9679c21b85032f99c9bd9589c7a1eb51d941",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-nested-exec.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-nested-exec.stdout": "dac79dddf051205a226921aeb7c9fff482ec3e4b3cf1f0118d6bcbc0591d0637",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-run-script.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-dependency-and-path-run-script.stdout": "fc232fa10541c6a2a4a5fea1f406fae6cac69ef4602ece8afa3487e620ba7c21",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-missing-exec.stderr": "74d7807f93e05a8deef765427757c78772594972d23df0569148597562ff78a6",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-missing-exec.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-missing-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-missing-install.stdout": "b2ccd9f3674ad1b546c9a811009295017d78f2a0ee521e4bd0755b6bc4b379bf",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-path-only-exec.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-path-only-exec.stdout": "ec49d319764cdbb6269add5215c35e85c3094a064dc0dac9001bf406d3dd2699",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-path-only-install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/js-exec-20261125T011635281573Z/yarn-path-only-install.stdout": "7c764321ed07b0f06c90393a5c229e6154e7c514fff1f82d9c9f8437a0ef56f6",
+    "applications/js-exec/Exec.bend": "015a36e99de4cfafa97803845806935fbbce59d8df07f8b79acb3a5600751fcd",
+    "applications/js-exec/Exec.lean": "65b90e5c248eb68879ac94eb97ea67984bc6da9342f5b53485ab39c516597ac9",
+    "applications/js-exec/ExecCase.lean": "47ab871b856fdc8b65f13e5295566a90d4921e758960cf79c3376a14f8cc9db0",
+    "applications/js-exec/conformance.py": "b77673ee112ae4b97acdb06d27539f568c0bc045ee3192ebe1c84514bb591940",
+    "applications/js-exec/observations.py": "3b95114b606eab64410e17699962b51f4823bf2e3a6a7edf1927185b31111e95",
+    "applications/js-exec/probe.py": "fd7b2e5cd8ab95709aee29e7fdd4d4c3f6e7aff86b0c4bce0e507d6832efb4ae",
+    "applications/sources/js-exec-selections.json": "af8eeefb32efdbe7a0defda9a8781387ac9effc8d468e08ba49892617131d8c3"
+  },
+  "driverSha256": "f07d23014c5c275292245bad6ed9432d5f8d0d48d0690cb2ba7c1c2e569f093f",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No npm,pnpm,Yarn,Node,fixture or network execution in replay. Installs provide admitted contexts and are not predicted by the model.",
+    "Literal command,one admitted dependency binary/PATH program/named script,empty private npm acquisition cache/global prefix,all known programs successful. No arbitrary executable,package acquisition or child-failure qualification.",
+    "Exact argv/cwd events are native;model forwards an admitted vector without parsing shellcode. Restricted line codec only frames the Bend research driver and does not limit program/user arguments.",
+    "Npm ENOTCACHED,pnpm command-not-found and Yarn/shell127 diagnostics separately bind interpreted failure phase;status1 alone does not identify acquisition versus execution lookup.",
+    "Frozen first collector retains an ignored pnpm setting warning. Maintained collector removes it;no native capture is reattributed and no rerun is needed for that correction.",
+    "Yarn node-modules only;no Windows,PnP,recursive tasks,colliding package binaries,permission/race,global reuse,online registry or shell-injection proof. Source and binary correspondence are selected-version/module identities,not reproducible upstream builds."
+  ]
+}

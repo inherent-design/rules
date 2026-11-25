@@ -48,6 +48,8 @@ The [Cargo binary-install band](cargo-install/README.md) separates registered ow
 
 The [restic key-custody band](restic/KEYS.md) separates passwords, access wrappers, process-specific current keys, and repository data. Changing one wrapper's password leaves another wrapper with the old password usable. Native reads and models preserve that scope; cryptographic qualification, true master-key rotation, and interrupted mutation remain pending.
 
+The [package-execution band](js-exec/README.md) separates package-command acquisition, program/argument execution, shell snippets, and declared scripts across npm, pnpm, and Yarn. Eighteen operations compare selected binaries, exact argument/directory events, and different lookup failures. Offline refusal, inherited programs, and named scripts retain their distinct meanings; general acquisition and shell parsing remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
