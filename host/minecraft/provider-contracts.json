@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "status": "partial provider contracts; all 52 canonical families and eight variants remain incomplete",
+  "basis": "host/minecraft/provider-sources.json",
+  "canonicalFamilies": "host/minecraft/inventory.json",
+  "capabilities": [
+    {
+      "id": "modefite.item-programs",
+      "provider": "modefite-cy8BkRZc",
+      "families": [
+        "items.root",
+        "items.nodes",
+        "items.conditions",
+        "items.select",
+        "items.numeric",
+        "items.render_state",
+        "game.stack",
+        "game.context",
+        "game.actions",
+        "host.modefite"
+      ],
+      "privateViews": [
+        "timmychips/modefiteitemdefinitions/ModefiteClientCommon.java",
+        "timmychips/modefiteitemdefinitions/property/type/ItemModelTypes.java",
+        "timmychips/modefiteitemdefinitions/property/resolver/ItemModelResolver.java"
+      ],
+      "contract": "items/ and modefite_items_override/ resource discovery; six selected built-in model-node registrations and live stack/entity/display-context resolution.",
+      "evidenceKind": "static-inspection",
+      "limits": "Shared grammar spellings do not establish vanilla release parity, all extension registrations, current stack metadata, or missing newer gameplay data."
+    },
+    {
+      "id": "modefite.scalar-angle",
+      "provider": "modefite-cy8BkRZc",
+      "families": [
+        "models.geometry",
+        "host.modefite"
+      ],
+      "privateViews": [
+        "timmychips/modefiteitemdefinitions/mixin/client/UnlockedModelRotationDeserializerMixin.java"
+      ],
+      "contract": "Cancellable HEAD getAngle hook returns GsonHelper float; selected declaration has the same target as Polytone scalar-angle hook.",
+      "evidenceKind": "static-inspection",
+      "limits": "Actual transformed method, priority, registration, finite-value guarantees, baking and coexistence are unqualified."
+    },
+    {
+      "id": "compat.feature-selection",
+      "provider": "compat-4ae402eaa858eef4",
+      "families": [
+        "host.compat",
+        "host.modefite"
+      ],
+      "privateViews": [
+        "design/inherent/skyweavecompat/FeatureSelection.java",
+        "design/inherent/skyweavecompat/FeatureSettings.java",
+        "design/inherent/skyweavecompat/OptionalMixinPlugin.java"
+      ],
+      "contract": "Isolated MODEL_ROTATIONS and ITEM_DEFINITIONS require enabled setting, client side and exact Modefite version; getMixins selection is separate from shouldApplyMixin.",
+      "evidenceKind": "original-method-and-model",
+      "limits": "Other features are explicitly disabled in the fixture; supplied metadata is not ModList, complete startup, plugin execution or Mixin application."
+    },
+    {
+      "id": "compat.euler-composite",
+      "provider": "compat-4ae402eaa858eef4",
+      "families": [
+        "models.geometry",
+        "models.references",
+        "models.transforms",
+        "host.loader",
+        "host.compat"
+      ],
+      "privateViews": [
+        "design/inherent/skyweavecompat/client/model/MultiAxisModels.java",
+        "design/inherent/skyweavecompat/mixin/client/MultiAxisModelMixin.java"
+      ],
+      "contract": "Bounded Euler JSON conversion to neoforge:composite; parent/loader/transform gates, conditional element limit and structural refusals.",
+      "evidenceKind": "original-method-and-model",
+      "limits": "Direct helper bypasses startup selection; eight matrices have numerical point checks, not formal geometry, renderer, normal, culling or resource-lifetime equivalence."
+    },
+    {
+      "id": "compat.item-program-adaptation",
+      "provider": "compat-4ae402eaa858eef4",
+      "families": [
+        "items.root",
+        "items.nodes",
+        "items.conditions",
+        "items.select",
+        "items.numeric",
+        "items.tints",
+        "items.special",
+        "items.render_state",
+        "game.registry",
+        "game.stack",
+        "game.context",
+        "host.compat"
+      ],
+      "privateViews": [
+        "design/inherent/skyweavecompat/client/model/ItemDefinitions.java"
+      ],
+      "contract": "Separate loading, bakery, binding, registry, resolver and rendering candidate hooks refine the selected Modefite consumer.",
+      "evidenceKind": "static-inspection",
+      "limits": "Six candidate names in policy output are not six applied hooks or qualified semantics; complete codec, model context and actual render consumers remain open."
+    },
+    {
+      "id": "polytone.scalar-angle",
+      "provider": "polytone-Ty5Aowoi",
+      "families": [
+        "models.geometry",
+        "host.polytone"
+      ],
+      "privateViews": [
+        "net/mehvahdjukaar/polytone/mixins/BlockElementDeserializerMixin.java"
+      ],
+      "contract": "Cancellable HEAD getAngle hook reads the scalar float.",
+      "evidenceKind": "static-inspection",
+      "limits": "Overlapping declaration is neither a proven conflict nor a composition proof."
+    },
+    {
+      "id": "polytone.euler",
+      "provider": "polytone-Ty5Aowoi",
+      "families": [
+        "models.geometry",
+        "models.transforms",
+        "host.polytone"
+      ],
+      "privateViews": [
+        "net/mehvahdjukaar/polytone/mixins/BlockElementDeserializerMixin.java",
+        "net/mehvahdjukaar/polytone/mixins/BlockElementRotationMixin.java",
+        "net/mehvahdjukaar/polytone/mixins/FaceBakeryMixin.java",
+        "net/mehvahdjukaar/polytone/common/IExtendedBlockElementRotation.java"
+      ],
+      "contract": "Automatic x/y/z branch stores injected rotation and changes quaternion/winding consumers; no custom Polytone resource file is needed by these hook bodies.",
+      "evidenceKind": "static-inspection",
+      "limits": "Branch also sees hybrid axis/angle+Euler fields; rescale is constructed false. No original transformed receiver, full loader, game or renderer execution."
+    },
+    {
+      "id": "polytone.item-overrides",
+      "provider": "polytone-Ty5Aowoi",
+      "families": [
+        "models.legacy_overrides",
+        "items.root",
+        "items.conditions",
+        "items.render_state",
+        "game.registry",
+        "game.stack",
+        "game.context",
+        "host.polytone"
+      ],
+      "privateViews": [
+        "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+        "net/mehvahdjukaar/polytone/content/item/ItemModelOverride.java",
+        "net/mehvahdjukaar/polytone/content/item/StandaloneItemModelOverride.java"
+      ],
+      "contract": "polytone/custom_item_models early model discovery plus world/registry-aware matching and baked-model lookup; distinct grammar from modern item-node programs.",
+      "evidenceKind": "static-inspection",
+      "limits": "Not a Modefite replacement-equivalence claim; full source dependency closure, codecs, live context, ordering and consumers remain incomplete."
+    }
+  ],
+  "variants": [
+    {
+      "variant": "java-1.21.1-neoforge",
+      "metadataWitness": "java-1.21.1-neoforge",
+      "witnessKind": "authored-not-invoked",
+      "isolatedCompatResult": "not-invoked",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-modefite",
+      "metadataWitness": "java-1.21.1-neoforge-modefite",
+      "witnessKind": "authored-not-invoked",
+      "isolatedCompatResult": "not-invoked",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-polytone",
+      "metadataWitness": "java-1.21.1-neoforge-polytone",
+      "witnessKind": "authored-not-invoked",
+      "isolatedCompatResult": "not-invoked",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-compat",
+      "metadataWitness": "java-1.21.1-neoforge-compat",
+      "witnessKind": "actual-isolated-select",
+      "isolatedCompatResult": "missing-modefite-two-inactive",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-modefite-compat",
+      "metadataWitness": "java-1.21.1-neoforge-modefite-compat",
+      "witnessKind": "actual-isolated-select",
+      "isolatedCompatResult": "eligible-two-selected-features",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-modefite-polytone",
+      "metadataWitness": "java-1.21.1-neoforge-modefite-polytone",
+      "witnessKind": "authored-not-invoked",
+      "isolatedCompatResult": "not-invoked",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-polytone-compat",
+      "metadataWitness": "java-1.21.1-neoforge-polytone-compat",
+      "witnessKind": "actual-isolated-select",
+      "isolatedCompatResult": "missing-modefite-two-inactive",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    },
+    {
+      "variant": "java-1.21.1-neoforge-modefite-polytone-compat",
+      "metadataWitness": "java-1.21.1-neoforge-modefite-polytone-compat",
+      "witnessKind": "actual-isolated-select",
+      "isolatedCompatResult": "eligible-two-selected-features",
+      "appliedHooks": "unknown",
+      "effectiveLibraries": "unknown",
+      "consumerSemantics": "incomplete",
+      "rendering": "unqualified"
+    }
+  ],
+  "otherPolytoneDomains": {
+    "managers": "host/minecraft/polytone-managers.json",
+    "contracts": "host/minecraft/polytone-contracts.json",
+    "lifecycles": "host/minecraft/polytone-lifecycles.json",
+    "status": "Existing 28-manager breadth retained; no runtime promotion by this map."
+  },
+  "coexistence": [
+    {
+      "id": "scalar-angle-hook-overlap",
+      "participants": [
+        "modefite.scalar-angle",
+        "polytone.scalar-angle"
+      ],
+      "status": "declared-overlap; actual transformed chain unknown",
+      "required": "Effective configuration, applied transformations/order and exact consumer trace."
+    },
+    {
+      "id": "euler-dialect-and-stage-overlap",
+      "participants": [
+        "compat.euler-composite",
+        "polytone.euler"
+      ],
+      "status": "different recognition and output stages; equivalence unknown",
+      "required": "Parent/loader/hybrid/rescale/cull cases through actual transformed decode/bake pipeline, with resource and renderer provenance."
+    },
+    {
+      "id": "item-presentation-overlap",
+      "participants": [
+        "modefite.item-programs",
+        "compat.item-program-adaptation",
+        "polytone.item-overrides"
+      ],
+      "status": "different grammars and context consumers; ownership unknown",
+      "required": "One selected item stack/context through definition selection, legacy/modern overrides, special renderer, bake, reload and draw consumers."
+    }
+  ],
+  "proposalOptions": [
+    {
+      "id": "retain-current",
+      "status": "selectable; not a deployment instruction",
+      "effect": "Keep existing provider/asset choices; retain explicit unsupported/unknown diagnostics."
+    },
+    {
+      "id": "extend-one-provider",
+      "status": "unselected design",
+      "effect": "Add a named faithful capability with declared dependencies and original consumer comparisons; preserve existing grammar/context."
+    },
+    {
+      "id": "restricted-asset-conversion",
+      "status": "unselected design",
+      "effect": "Convert only a closed declared subset; retain original asset, provenance and rejected constructs. Require explicit semantic-loss accounting."
+    },
+    {
+      "id": "combined-provider",
+      "status": "unselected research destination",
+      "effect": "Own capability IDs, grammars, hooks, context, reload and retirement per feature. Do not claim blanket release or renderer parity."
+    }
+  ],
+  "prohibitedInferences": [
+    "Metadata eligibility implies applied hooks.",
+    "A helper noop means downstream acceptance.",
+    "Two similar hook bodies prove compatibility.",
+    "A resource definition creates absent older gameplay data.",
+    "Matrix point agreement proves normals, UVs, culling, lighting or pixels.",
+    "A copied schema name proves edition/release equivalence."
+  ]
+}

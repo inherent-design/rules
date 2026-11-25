@@ -1,5 +1,7 @@
 # Rules for composition
 
+The [provider comparison](../host/minecraft/PROVIDERS.md) separates declared dependency metadata, policy eligibility, selected hooks, actual transformations, definition admission, and consumer behavior. An eligible policy result is an input to later qualification. It does not witness those later stages. Preserve edition, release, provider/library bytes, configuration, context, and the tested boundary when joining such evidence. A helper returning its input unchanged is neither downstream validation nor a universal refusal. Similar hook declarations leave composition unresolved until their effective consumers and order are known.
+
 The [filesystem guard](FilesystemGuard.lean) and its [host witnesses](../host/filesystem/README.md) distinguish lexical policy, current object/ancestry evidence, complete protected scope, and the separate protocol binding an authorized mutation. An early known refusal needs no additional identity query; unknown separation remains unresolved. A preflight candidate alone grants no mutation authority.
 
 A useful atom has input identities, units, a decision and an observable result. Use a partial lookup for a single optional target. Use a relation for many possible endpoints, such as a part belonging to several assemblies. Existential composition keeps an intermediate witness and is associative. In a query that counts results, specify whether two witnesses denote two supports or one distinct endpoint. Relational composition alone does not define multiplicity or grant access.

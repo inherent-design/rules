@@ -29,6 +29,8 @@ The [registry discovery map](REGISTRIES.md) expands item nodes, properties, tint
 
 The [Polytone breadth map](POLYTONE.md) separately locates all 28 built-in content managers, their definition roots, shared policies, and static consumer references. It is source discovery; semantic laws, original-method comparisons, live consumers and provider coexistence remain incomplete.
 
+The [provider capability comparison](PROVIDERS.md) now joins selected Modefite, Polytone, and Compat source contracts with all eight provider-variant boundaries. It compares 55 original isolated policy calls and 27 original geometry-helper calls, retaining five Reader observations separately. Item-program and override grammars, metadata eligibility, applied hooks, helper conversion, actual consumers, and rendering remain distinct. Eight scoped capability records supplement the full inventory; they do not complete its 52 families or qualify provider coexistence.
+
 Its [codec and inheritance extension](POLYTONE-CONTRACTS.md) resolves effective reload hooks across all 28 managers, inspects three bundled libraries, and compares 30 original CodecUI API-call outcomes. Schema metadata, actual decoding, encoded field presence, and runtime dependency selection have separate contracts; the selected library fixture does not qualify manager or provider execution.
 
 The [manager lifecycle review](POLYTONE-LIFECYCLES.md) then maps each manager's state, effects and live consumer obligations. A separate Java 17/21/25 lookup comparison qualifies 57 authored calls and original bytecode confirms the relevant GUI-manager overload. Source phase names do not establish purity, atomicity, class-target safety, or completed GPU retirement.

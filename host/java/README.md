@@ -44,6 +44,8 @@ The separate [ordered array-search contract](ARRAY-SEARCH.md) is documented for 
 
 The [CodecUI comparison](../minecraft/POLYTONE-CONTRACTS.md) separates bundled-library declarations, actual selected class-path bytes, schema hints, decoder admission, and re-encoding. It observes authored callers on Java 21/macOS; it does not qualify a Java 17 runtime for those class files, native JarJar negotiation, or the library on every host. A version declaration or UI schema is not a substitute for the effective consumer contract.
 
+The [provider policy and geometry comparison](../minecraft/PROVIDERS.md) adds 87 selected original entrypoint calls on the pinned Java 21/macOS profile. Explicit dependency metadata and test libraries qualify the isolated calls only. They do not establish actual FML selection, transformed classes, configuration-file effects, whole startup, Java 17 availability, Java 25 behavior, or native Windows/Linux execution. Preserve no-op, refusal, missing, and eligible outcomes separately; emitted matrices do not qualify a graphics backend. The generic host baseline and other overlays remain unchanged.
+
 The [class-lookup contract](CLASS-INITIALIZATION.md) is shared across the 17 baseline and 21/25 overlays, with 57 authored native observations on the three pinned macOS JDK builds. A class descriptor, target initialization, loader effects, and application compatibility are different facts. Original Polytone bytecode confirms the consuming default lookup call; no provider class was executed. Native Windows/Linux lookup qualification remains pending.
 
 ## Managed scopes and library-owned native addresses
