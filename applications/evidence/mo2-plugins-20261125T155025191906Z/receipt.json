@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-mo2-plugins-84l0gr_d",
+  "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+  "source": {
+    "application": "mo2",
+    "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+    "path": "src/pluginlist.cpp",
+    "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/pluginlist.cpp",
+    "cache": "applications/tools/source-cache/mo2-plugins/src__pluginlist.cpp",
+    "sha256": "5510afa300411868d57986b2d65bfda069199850110fe5e39cc555ac99320e6f",
+    "gitBlob": "94aee98da86fb749190c782d8ad7116e766ec805",
+    "bytes": 54003,
+    "inspection": "Acquired only;contract selection pending."
+  },
+  "cuts": [
+    {
+      "signature": "void PluginList::enableESP(",
+      "textStart": 12197,
+      "textEnd": 12879,
+      "sha256": "f3e168b95d79b46f72190be4f784299dbdd52119f541d4a4b67504197ac2dde3"
+    },
+    {
+      "signature": "void PluginList::setEnabledAll(",
+      "textStart": 13745,
+      "textEnd": 14262,
+      "sha256": "56885c5fc61fc5566b467080a3e3176f927de5b6fe7b2c3b39148c58b7012c28"
+    },
+    {
+      "signature": "void PluginList::syncLoadOrder(",
+      "textStart": 23205,
+      "textEnd": 23491,
+      "sha256": "ca8d930d5a0f3efd937925a779c0b23d3bd6406e588fb6f3bba45deab1d1f491"
+    },
+    {
+      "signature": "IPluginList::PluginStates PluginList::state(",
+      "textStart": 25302,
+      "textEnd": 25645,
+      "sha256": "b89cf111e9810ec4896340bdd6c180594ce733514146aa6f3d7f95f60422fdae"
+    },
+    {
+      "signature": "void PluginList::setState(",
+      "textStart": 25646,
+      "textEnd": 26053,
+      "sha256": "edf9fff84f5612c142653c904dcdc51c25b3bb1c75808ac0e67ba32e506d6a20"
+    },
+    {
+      "signature": "void PluginList::setLoadOrder(",
+      "textStart": 26054,
+      "textEnd": 26547,
+      "sha256": "54f0092aba67752fc2ba7d88ef24fd7024c47f8ee207e11f6ea5c98bea7a2237"
+    },
+    {
+      "signature": "void PluginList::pluginStatesChanged(",
+      "textStart": 29595,
+      "textEnd": 29927,
+      "sha256": "b991c7ebb268e992b1d98da13129ba60af801c8550fdfe4a458a5bd760cef721"
+    },
+    {
+      "signature": "void PluginList::updateIndices(",
+      "textStart": 30220,
+      "textEnd": 30788,
+      "sha256": "80df6cc67c33c962cabe0216c803fba431a583bdb91344fddc5a76e99f1864fd"
+    },
+    {
+      "signature": "void PluginList::testMasters(",
+      "textStart": 32648,
+      "textEnd": 33120,
+      "sha256": "e2b65b90251b7a790ec428ffcf4a3fa8c9ca2ca6a380881d70f1ee32add19603"
+    }
+  ],
+  "producerSha256": "44f0e11ec683d725c36b9d36c9a6b1245a333027bf4c150ce8b41d0f5283db8d",
+  "driverSha256": "a1ffb843cb29f0ed4a8a0c4ce97fba874cbc4fa4382451014f9b38e6047364a4",
+  "inputSha256": "e12b65d45b98f32db876a1e52515ffd0b36786190f1c50e50ddcc596a50fbb4a",
+  "generatedSha256": "87b419d9b53ea396b94305f703f93424c290aa4ebb4dd600355c1bfdbfd10de4",
+  "compilerSha256": "5b1ddb7e9c11b87a034fc88b212e8ac243cfe2b4db696d767aa44c79595fc09a",
+  "qtVersion": "6.12.0",
+  "qtFrameworkSha256": "3e3d82dd216cc552a3835909baea61564c5be1211ce55ae313a3d4fe19fbee33",
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "en_US.UTF-8",
+    "TMPDIR": "/private/tmp/rules-mo2-plugins-84l0gr_d/tmp",
+    "XDG_CONFIG_HOME": "/private/tmp/rules-mo2-plugins-84l0gr_d/config",
+    "XDG_CACHE_HOME": "/private/tmp/rules-mo2-plugins-84l0gr_d/cache"
+  },
+  "commands": [
+    {
+      "label": "compiler",
+      "argv": [
+        "/usr/bin/clang++",
+        "--version"
+      ],
+      "pid": 39741,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "2f695e8ead1d2404c2829c51b53b3e7082de6995b84e1840f2449e4e63dcb286",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compile",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++20",
+        "-O0",
+        "-DQT_NO_DEBUG",
+        "/private/tmp/rules-mo2-plugins-84l0gr_d/main.cpp",
+        "-o",
+        "/private/tmp/rules-mo2-plugins-84l0gr_d/probe",
+        "-F/opt/homebrew/lib",
+        "-I/opt/homebrew/include/QtCore",
+        "-I/opt/homebrew/lib/QtCore.framework",
+        "-DQT_CORE_LIB",
+        "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+        "-F/opt/homebrew/lib",
+        "-framework",
+        "QtCore",
+        "-Wl,-rpath,/opt/homebrew/lib"
+      ],
+      "pid": 39742,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "observed",
+      "argv": [
+        "/private/tmp/rules-mo2-plugins-84l0gr_d/probe",
+        "/Users/zer0cell/production/rules/applications/evidence/mo2-plugins-20261125T155025191906Z/input.json"
+      ],
+      "pid": 40046,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "5fa97b9916fa4a3be7a79709d5f6fc4ce125ed5ea89ed756e3e57ddaf4b19af5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Nine unchanged selected methods,real QtCore QString/QStringList,and std containers;no full MO2 or Windows process.",
+    "Catalog/constructor/enum tags/comparator/logs/signals/game index generation are adapters;canonical exact ASCII names only.",
+    "Signal calls are recorded;no real Qt slot delivery,writer,game feature,profile file,LOOT,plugin parser,USVFS or GUI.",
+    "Duplicate order is constructed malformed input;full public API preconditions andcaller reachability remain separate."
+  ],
+  "binarySha256": "6a04cb0208d261ccfe91585e0449a231ea287d03dc8c8db6be116895cf2e4d5e",
+  "complete": true,
+  "cases": 28,
+  "privateKiB": 288
+}

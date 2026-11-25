@@ -4,6 +4,8 @@ This first band studies Mod Organizer 2 v2.5.2 at `9c130cbf2fc7225fb2916e46419af
 
 The later [profile activation band](PROFILES.md) examines scalar/bulk enabled-state changes and the boundary between notifications, effective-view refresh, and persistence. Its source-method cases retain their fixture-adapter scope.
 
+The [game-plugin band](PLUGINS.md) separately compares raw setters, notification helpers, priority/index rebuilding, load-order synchronization, and missing-master checks. Its source-method fixtures do not qualify Windows MO2, LOOT, saving, or game behavior.
+
 ## Domain and source
 
 An installed mod, an enabled profile entry, an origin contributing a file, and the winning file backing are different objects. Reordering a mod changes the profile's priority; it does not move every physical file into the game directory. The selected source stores a primary origin and alternatives for a file.
