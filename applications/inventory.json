@@ -10615,7 +10615,28 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#prism",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "library-identity-grouping-and-retry-prefix",
+              "status": "native-observed",
+              "scope": "23 current-source Qt scenarios and one private canonical-key candidate, with declared object/settings/watch/private-trash adapters. Selected label edits, identity lookup, grouping, metadata filtering, trash/delete prefixes, undo, discovery, and path-rename prefix.",
+              "remaining": "Normal callers, full creation/copy/move, actual settings/watchers/OS trash, GUI, all supported hosts, concurrency, and complete feature qualification remain pending.",
+              "evidence": [
+                "prism/LIBRARY.md",
+                "prism/Library.lean",
+                "prism/Library.bend",
+                "prism/library-verification.json",
+                "prism/library_observations.py",
+                "sources/prism-library-selections.json"
+              ],
+              "operationSlices": {
+                "rename": "Display label edit and immediate filesystem-rename prefix only; no full caller/reload flow.",
+                "group": "Selected canonical/UUID insertion, merge/removal, load/save/filtering, and collapsed-state methods.",
+                "delete": "Selected trash/delete and undo metadata/retry-reference prefixes under private FS adapters; not OS-trash integration."
+              }
+            }
+          ]
         },
         {
           "id": "prism.components",

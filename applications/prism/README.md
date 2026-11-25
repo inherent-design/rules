@@ -10,6 +10,8 @@ The [component-decision band](COMPONENTS.md) compares protected selections, exac
 
 The [Java/settings band](JAVA.md) separates inherited and explicit settings, write-through probe fields, cache admission, invalid probe output, and compatibility decisions. Its Qt source-method fixtures leave real Java discovery, complete settings UI/persistence, and game launch pending.
 
+The [account/session band](ACCOUNTS.md) retains selected account, session, refresh, claim, and profile-creation evidence. Live authentication and full GUI/launch behavior remain separate obligations.
+
 ## Current rule and counterexample
 
 [`ModrinthCreationTask::updateInstance`](https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/modplatform/modrinth/ModrinthInstanceCreationTask.cpp) parses incoming and saved mrpack indexes. It removes a new/old pair from its download/deletion candidates when their SHA-512 values match. That comparison does not require equal paths. The remaining old entries are scheduled for deletion, while the remaining new entries are downloaded during staging.
@@ -52,3 +54,5 @@ The keep-current alternative avoids changing update selection, but retains the d
 A native regression should install a disposable pack A, update it to B with a moved indexed file and a second changed entry, and inspect both target paths and hashes. Add swapped-content, unchanged, single-file, disabled, missing/modified-local, and cancellation cases. Test the actual instance publication path and preserve prior usable content on failure. A Qt probe is an intermediate check; it cannot substitute for these GUI/application observations.
 
 No production Prism or empack changes were made. The existing host contracts can carry destination/content identities, staged candidates, scoped effects, and publication evidence. The missing predicate is application-level placement compatibility, not a new host abstraction. Most of the Prism inventory and its full launch lifecycle remain open.
+
+The [instance-library band](LIBRARY.md) separates display, directory, and UUID identity, grouping persistence, trash/delete effects, and undo references through selected Qt methods and private files. Its caller, watcher, OS-trash, and full GUI obligations remain open.

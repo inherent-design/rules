@@ -174,6 +174,8 @@ Leave saved profile markers and priority interpretation intact. The keep-current
 
 ### Prism Launcher
 
+The [instance-library band](prism/LIBRARY.md) adds a canonical-key asymmetry and a retry-reference boundary: UUID resolution does not make the caller spelling a valid saved group key, and popping undo history before restoration can remove retry context while payload remains. Preserve directory/UUID/label roles, current effects, saved membership, and remaining restore items separately. The native method fixtures include a repaired canonical-key candidate, but complete GUI/watcher/OS-trash behavior remains unqualified.
+
 Preserve destination identity alongside content identity. The pinned mrpack filter drops equal-hash pairs without requiring equal paths; its empty-list reparse guard repairs some cases but not the moved/swapped-content cases with other pending work. The focused candidate is path-plus-hash reuse, with explicit verified copy/move if cross-path reuse is later wanted. It changes selection, not mrpack's format, and remains unimplemented. Verify the complete installed inventory and current upstream state before proposing a production patch.
 
 Separately preserve task outcome, launch phase, waiting reason, stop request, and concrete process ownership. A queued abort is accepted before task completion in the Qt fixture. An additive inspection result can expose pending admission and actual terminal result without turning failure into clean cancellation or weakening force-stop confirmation.

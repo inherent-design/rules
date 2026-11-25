@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "status": "read-only-correction-of-collector-projection",
+  "rawField": "restoredPath",
+  "cause": "Original collector tested directory presence before payload identity;directory-collision case called the occupied empty a directory restored even though the actual payload is a1/data.",
+  "rawUnchanged": true,
+  "excludedFromModel": [
+    "restoredPath"
+  ],
+  "postimages": {
+    "undo-success": {
+      "a": {
+        "exists": true,
+        "directory": true,
+        "payload": "a",
+        "occupiedBytes": null
+      },
+      "a1": {
+        "exists": false,
+        "directory": false,
+        "payload": null,
+        "occupiedBytes": null
+      }
+    },
+    "undo-directory-collision": {
+      "a": {
+        "exists": true,
+        "directory": true,
+        "payload": null,
+        "occupiedBytes": null
+      },
+      "a1": {
+        "exists": true,
+        "directory": true,
+        "payload": "a",
+        "occupiedBytes": null
+      }
+    },
+    "undo-file-collision": {
+      "a": {
+        "exists": true,
+        "directory": false,
+        "payload": null,
+        "occupiedBytes": "occupied"
+      },
+      "a1": {
+        "exists": false,
+        "directory": false,
+        "payload": null,
+        "occupiedBytes": null
+      }
+    },
+    "undo-shortcut-collision": {
+      "a": {
+        "exists": true,
+        "directory": true,
+        "payload": "a",
+        "occupiedBytes": null
+      },
+      "a1": {
+        "exists": false,
+        "directory": false,
+        "payload": null,
+        "occupiedBytes": null
+      }
+    }
+  },
+  "maintainedDriverSha256": "241dc0eb711b2e4f916dd6f0509931dfccc6a5e5e080e1473d08d3ad66661c24",
+  "originalDriverSha256": "53ea89925d65d1f581f1545d1a0f4a87ed46c4a4893a7b5fc3dcf8e97bdbcbfb",
+  "oldSource": "out[\"restoredPath\"]=QDir(dir+\"/a\").exists()?\"a\":QDir(dir+\"/a1\").exists()?\"a1\":\"\";",
+  "correctedSource": "auto restoredPayload=[&](QString p){return QFileInfo(p+\"/data\").isFile()&&FS::read(p+\"/data\")==QByteArray(\"a\");};out[\"restoredPath\"]=restoredPayload(dir+\"/a\")?\"a\":restoredPayload(dir+\"/a1\")?\"a1\":\"\";"
+}

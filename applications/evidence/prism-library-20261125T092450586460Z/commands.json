@@ -1,0 +1,37 @@
+[
+  {
+    "id": "compile",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "/private/tmp/rules-prism-library-5ku8lqht/main.cpp",
+      "-o",
+      "/private/tmp/rules-prism-library-5ku8lqht/library-driver",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtCore",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "pid": 90022,
+    "exitCode": 0,
+    "seconds": 2.2968621249310672,
+    "ownedGroupAbsent": true
+  },
+  {
+    "id": "observe",
+    "argv": [
+      "/private/tmp/rules-prism-library-5ku8lqht/library-driver",
+      "/private/tmp/rules-prism-library-5ku8lqht/cases"
+    ],
+    "pid": 90647,
+    "exitCode": 0,
+    "seconds": 0.33315879106521606,
+    "ownedGroupAbsent": true
+  }
+]
