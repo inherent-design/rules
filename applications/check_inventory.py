@@ -9,6 +9,13 @@ ROOT = Path(__file__).resolve().parent
 REQUIRED = {'empack', 'npm', 'pnpm', 'yarn', 'mo2', 'prism', 'cargo', 'restic', 'vscode'}
 
 
+def validate_components(owner):
+    for component in owner.get('componentEvidence', []):
+        assert component['status'] in {'native-observed', 'source-modeled', 'proposed'}, owner['id']
+        assert component['scope'] and component['remaining'], owner['id']
+        assert component['evidence'] and all((ROOT / path).is_file() for path in component['evidence']), (owner['id'], 'missing component evidence')
+
+
 def validate(catalog, scenarios):
     apps = catalog['applications']
     assert {a['id'] for a in apps} == REQUIRED and len(apps) == len(REQUIRED)
@@ -21,6 +28,7 @@ def validate(catalog, scenarios):
             ids.add(fid)
             for field in ('title', 'domainValuesAndRelations', 'invariantQuestions', 'hostWitnesses', 'operations', 'disposition'):
                 assert feature[field], (fid, field)
+            validate_components(feature)
             for op in feature['operations']:
                 oid = fid + '/' + op['id']
                 assert oid not in operations
@@ -36,10 +44,7 @@ def validate(catalog, scenarios):
         scenario_ids.add(scenario['id'])
         assert scenario['features'] and set(scenario['features']) <= ids, scenario['id']
         assert scenario['counterexamples'] and scenario['hostWitnesses'] and scenario['status']
-        for component in scenario.get('componentEvidence', []):
-            assert component['status'] in {'native-observed', 'source-modeled', 'proposed'}, scenario['id']
-            assert component['scope'] and component['remaining'], scenario['id']
-            assert component['evidence'] and all((ROOT / path).is_file() for path in component['evidence']), (scenario['id'], 'missing component evidence')
+        validate_components(scenario)
     return len(ids), len(operations)
 
 
@@ -55,8 +60,10 @@ def main():
     missing = copy.deepcopy(scenarios)
     missing['scenarios'][0]['componentEvidence'] = [{'status': 'proposed', 'scope': 'Unimplemented component',
         'remaining': 'Native implementation', 'evidence': ['evidence/no-such-component-record.json']}]
+    feature_missing = copy.deepcopy(catalog)
+    feature_missing['applications'][0]['features'][0]['componentEvidence'] = missing['scenarios'][0]['componentEvidence']
     for name, value, joined in [('dropped-application', narrowed, scenarios), ('unsupported-completion-claim', fake, scenarios),
-                               ('missing-component-evidence', catalog, missing)]:
+                               ('missing-component-evidence', catalog, missing), ('missing-feature-component-evidence', feature_missing, scenarios)]:
         try:
             validate(value, joined)
         except AssertionError:

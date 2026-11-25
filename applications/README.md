@@ -50,6 +50,8 @@ The [restic key-custody band](restic/KEYS.md) separates passwords, access wrappe
 
 The [package-execution band](js-exec/README.md) separates package-command acquisition, program/argument execution, shell snippets, and declared scripts across npm, pnpm, and Yarn. Eighteen operations compare selected binaries, exact argument/directory events, and different lookup failures. Offline refusal, inherited programs, and named scripts retain their distinct meanings; general acquisition and shell parsing remain pending.
 
+The [Prism accounts band](prism/ACCOUNTS.md) distinguishes actor identity, profile readiness, refresh deadlines, and captured sessions. Thirty synthetic source-method cases compare units and partial launch components; all five complete account operations remain pending. Name-based claims and accept-only profile setup have separate bounded counterexamples and candidate corrections.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

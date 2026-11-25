@@ -1,0 +1,16 @@
+/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work/main.cpp:19:42: warning: 'fromSecsSinceEpoch' is deprecated: Pass QTimeZone instead of time-spec, offset [-Wdeprecated-declarations]
+   19 | QDateTime fixtureNow(){return QDateTime::fromSecsSinceEpoch(1800000000,Qt::UTC);}
+      |                                          ^
+/opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h:521:5: note: 'fromSecsSinceEpoch' has been explicitly marked deprecated here
+  521 |     QT_DEPRECATED_VERSION_X_6_9("Pass QTimeZone instead of time-spec, offset")
+      |     ^
+/opt/homebrew/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:220:44: note: expanded from macro 'QT_DEPRECATED_VERSION_X_6_9'
+  220 | # define QT_DEPRECATED_VERSION_X_6_9(text) QT_DEPRECATED_X(text)
+      |                                            ^
+/opt/homebrew/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:32:33: note: expanded from macro 'QT_DEPRECATED_X'
+   32 | #  define QT_DEPRECATED_X(text) Q_DECL_DEPRECATED_X(text)
+      |                                 ^
+/opt/homebrew/lib/QtCore.framework/Headers/qcompilerdetection.h:1018:36: note: expanded from macro 'Q_DECL_DEPRECATED_X'
+ 1018 | #  define Q_DECL_DEPRECATED_X(x) [[deprecated(x)]]
+      |                                    ^
+1 warning generated.

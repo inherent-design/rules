@@ -1,0 +1,704 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "kind": "identity",
+      "id": "msa-normal",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "mutation": "none",
+      "fill": true
+    },
+    {
+      "kind": "identity",
+      "id": "offline-conversion",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 1,
+      "mutation": "offline",
+      "fill": true
+    },
+    {
+      "kind": "identity",
+      "id": "demo-reuse",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "mutation": "demo",
+      "fill": true
+    },
+    {
+      "kind": "identity",
+      "id": "demo-fresh",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "mutation": "demo",
+      "fill": false
+    },
+    {
+      "kind": "identity",
+      "id": "missing-profile",
+      "account": {
+        "id": "B",
+        "name": "",
+        "profileId": "",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "mutation": "none",
+      "fill": true
+    },
+    {
+      "kind": "identity",
+      "id": "offline-entitlement-flag",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 1,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 1,
+      "mutation": "none",
+      "fill": true
+    },
+    {
+      "kind": "identity",
+      "id": "no-token",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": false,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "mutation": "none",
+      "fill": true
+    },
+    {
+      "kind": "refresh",
+      "id": "none",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 0,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 86400
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "assumed",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 1,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 86400
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "fresh",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 86400
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "inside-12h",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 43199
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "exact-12h",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 43200
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "outside-12h",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 43201
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "expired",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": -1
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "fallback-exact",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 43200,
+        "hasExpiry": false,
+        "expiresIn": 0
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "fallback-inside",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 43201,
+        "hasExpiry": false,
+        "expiresIn": 0
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "missing-timestamps",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": false,
+        "issuedAgo": 0,
+        "hasExpiry": false,
+        "expiresIn": 0
+      },
+      "inUse": false
+    },
+    {
+      "kind": "refresh",
+      "id": "in-use-assumed",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 1,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": false,
+        "issuedAgo": 0,
+        "hasExpiry": false,
+        "expiresIn": 0
+      },
+      "inUse": true
+    },
+    {
+      "kind": "refresh",
+      "id": "in-use-certain",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 0
+      },
+      "inUse": true
+    },
+    {
+      "kind": "claim",
+      "id": "name-collision",
+      "accounts": [
+        {
+          "id": "A",
+          "name": "Alex",
+          "profileId": "11111111111111111111111111111111",
+          "type": 1,
+          "owns": false,
+          "validity": 0,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        },
+        {
+          "id": "B",
+          "name": "Alex",
+          "profileId": "22222222222222222222222222222222",
+          "type": 0,
+          "owns": true,
+          "validity": 2,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        }
+      ],
+      "selected": "B",
+      "mode": 0
+    },
+    {
+      "kind": "claim",
+      "id": "name-collision-reversed",
+      "accounts": [
+        {
+          "id": "B",
+          "name": "Alex",
+          "profileId": "22222222222222222222222222222222",
+          "type": 0,
+          "owns": true,
+          "validity": 2,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        },
+        {
+          "id": "A",
+          "name": "Alex",
+          "profileId": "11111111111111111111111111111111",
+          "type": 1,
+          "owns": false,
+          "validity": 0,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        }
+      ],
+      "selected": "B",
+      "mode": 0
+    },
+    {
+      "kind": "claim",
+      "id": "unique-names",
+      "accounts": [
+        {
+          "id": "A",
+          "name": "Other",
+          "profileId": "11111111111111111111111111111111",
+          "type": 1,
+          "owns": false,
+          "validity": 0,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        },
+        {
+          "id": "B",
+          "name": "Alex",
+          "profileId": "22222222222222222222222222222222",
+          "type": 0,
+          "owns": true,
+          "validity": 2,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        }
+      ],
+      "selected": "B",
+      "mode": 0
+    },
+    {
+      "kind": "claim",
+      "id": "offline-constructor-control",
+      "accounts": [
+        {
+          "id": "A",
+          "name": "Alex",
+          "profileId": "11111111111111111111111111111111",
+          "type": 1,
+          "owns": false,
+          "validity": 0,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        },
+        {
+          "id": "B",
+          "name": "Alex",
+          "profileId": "22222222222222222222222222222222",
+          "type": 0,
+          "owns": true,
+          "validity": 2,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        }
+      ],
+      "selected": "B",
+      "mode": 1
+    },
+    {
+      "kind": "claim",
+      "id": "demo-constructor-control",
+      "accounts": [
+        {
+          "id": "A",
+          "name": "Alex",
+          "profileId": "11111111111111111111111111111111",
+          "type": 1,
+          "owns": false,
+          "validity": 0,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        },
+        {
+          "id": "B",
+          "name": "Alex",
+          "profileId": "22222222222222222222222222222222",
+          "type": 0,
+          "owns": true,
+          "validity": 2,
+          "state": 3,
+          "tokenPresent": true,
+          "hasIssue": true,
+          "issuedAgo": 0,
+          "hasExpiry": true,
+          "expiresIn": 21600
+        }
+      ],
+      "selected": "B",
+      "mode": 2
+    },
+    {
+      "kind": "login",
+      "id": "new-profile-accepted",
+      "account": {
+        "id": "B",
+        "name": "",
+        "profileId": "",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "accept": true,
+      "profileResponse": {
+        "name": "Fresh_Player",
+        "id": "22222222222222222222222222222222"
+      }
+    },
+    {
+      "kind": "login",
+      "id": "new-profile-rejected",
+      "account": {
+        "id": "B",
+        "name": "",
+        "profileId": "",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "accept": false,
+      "profileResponse": {
+        "name": "Fresh_Player",
+        "id": "22222222222222222222222222222222"
+      }
+    },
+    {
+      "kind": "login",
+      "id": "invalid-success-body",
+      "account": {
+        "id": "B",
+        "name": "",
+        "profileId": "",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "accept": true,
+      "profileResponse": {
+        "name": "",
+        "id": ""
+      }
+    },
+    {
+      "kind": "login",
+      "id": "existing-profile",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 0,
+      "accept": true,
+      "profileResponse": {
+        "name": "Fresh_Player",
+        "id": "22222222222222222222222222222222"
+      }
+    },
+    {
+      "kind": "login",
+      "id": "offline-existing",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 1,
+      "accept": true,
+      "profileResponse": {
+        "name": "Fresh_Player",
+        "id": "22222222222222222222222222222222"
+      }
+    },
+    {
+      "kind": "login",
+      "id": "demo",
+      "account": {
+        "id": "B",
+        "name": "Alex",
+        "profileId": "22222222222222222222222222222222",
+        "type": 0,
+        "owns": true,
+        "validity": 2,
+        "state": 3,
+        "tokenPresent": true,
+        "hasIssue": true,
+        "issuedAgo": 0,
+        "hasExpiry": true,
+        "expiresIn": 21600
+      },
+      "mode": 2,
+      "accept": true,
+      "profileResponse": {
+        "name": "Fresh_Player",
+        "id": "22222222222222222222222222222222"
+      }
+    }
+  ]
+}

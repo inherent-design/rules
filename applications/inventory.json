@@ -10575,7 +10575,7 @@
         {
           "id": "prism.accounts",
           "title": "Accounts, entitlements, and offline identity",
-          "domainValuesAndRelations": "Microsoft principal, entitlement/session, selected instance identity",
+          "domainValuesAndRelations": "Account actor, type, profile ID/name, entitlement, token/task validity, captured session, launch mode, and runtime use claims have distinct roles.",
           "invariantQuestions": "A network session or offline username is not game entitlement; keep token custody private.",
           "hostWitnesses": [
             "authority",
@@ -10634,11 +10634,23 @@
               "status": "pending"
             }
           ],
-          "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "inventoryBasis": "Pinned Prism 11.1.1 account/auth/session/claim source; selected source-method/Qt components only, not complete account APIs.",
+          "disposition": "Selected identity/refresh units and claim/login-prefix components compared; all five complete operations remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#prism",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "30 synthetic Qt source-method cases: 7 identity/session units, 12 fixed-clock refresh units, 5 name-claim components, and 6 admitted login prefixes with current/refill-only/admitted-profile variants. Both models compare measured fields; no real accounts or auth IO.",
+              "remaining": "Complete account add/refresh/select/remove/offline APIs, real GUI/network/provider admission, persistence, smart-pointer lifetime/notifications, mode decisions, game launch, and supported-platform qualification. Parent operation statuses stay unchanged.",
+              "evidence": [
+                "prism/ACCOUNTS.md",
+                "evidence/prism-accounts-20261125T020020403602Z/receipt.json",
+                "evidence/prism-accounts-20261125T020020403602Z/conformance.json"
+              ]
+            }
+          ]
         },
         {
           "id": "prism.pack-import",

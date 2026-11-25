@@ -1,0 +1,53 @@
+[
+  {
+    "case": "compile",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "-DQT_NO_DEBUG",
+      "-I/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work/main.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work/AuthSession.cpp",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work/probe",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtNetwork",
+      "-I/opt/homebrew/lib/QtNetwork.framework",
+      "-DQT_NETWORK_LIB",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtNetwork",
+      "-framework",
+      "QtCore",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 2.382266375236213,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "1afad3c600ec2f313fa303e3fdd6c3380d0cf9c6b9b0b9563f4778a782975543"
+    }
+  },
+  {
+    "case": "observe",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/work/probe",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-accounts-20261125T020020403602Z/input.json"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.3628558339551091,
+    "streams": {
+      "stdout": "39c507d0783cfd9f676058b2a14b76b7d118140bd7de18375dfa4917363eadf0",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]
