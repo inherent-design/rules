@@ -1,0 +1,253 @@
+     Locking 1 package to highest Rust 1.100.0 compatible version
+    Updating empack-core v0.0.0-dev (/private/tmp/rules-portable-documents-3nedxpuu/core) -> v0.0.0
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+   Compiling cc v1.9.0
+   Compiling syn v2.0.119
+   Compiling psm v0.1.24
+   Compiling libc v0.2.191
+   Compiling stacker v0.1.25
+   Compiling strsim v0.11.1
+   Compiling ident_case v1.0.1
+   Compiling fnv v1.0.7
+   Compiling darling_core v0.20.11
+   Compiling cfg-if v1.0.5
+   Compiling ucd-trie v0.1.7
+   Compiling memchr v2.8.3
+   Compiling pest v2.9.4
+   Compiling darling_macro v0.20.11
+   Compiling darling v0.20.11
+   Compiling cfg_aliases v0.2.2
+   Compiling crc32fast v1.5.2
+   Compiling nix v0.32.0
+   Compiling derive_builder_core v0.20.2
+   Compiling pest_meta v2.9.4
+   Compiling constant_time_eq v0.6.1
+   Compiling log v0.4.34
+   Compiling getrandom v0.4.3
+   Compiling derive_builder_macro v0.20.2
+   Compiling pest_generator v2.9.4
+   Compiling zeroize_derive v1.5.0
+   Compiling simd-adler32 v0.3.10
+   Compiling zlib-rs v0.6.8
+   Compiling bitflags v2.13.2
+   Compiling hashbrown v0.17.1
+   Compiling tinyvec v1.13.3
+   Compiling num-modular v0.6.5
+   Compiling bumpalo v3.20.3
+   Compiling equivalent v1.0.3
+   Compiling indexmap v2.14.2
+   Compiling zopfli v0.8.4
+   Compiling num-order v1.2.0
+   Compiling serde_json v1.0.154
+   Compiling unicode-normalization v0.1.26
+   Compiling flate2 v1.1.11
+   Compiling zeroize v1.9.1
+   Compiling pest_derive v2.9.4
+   Compiling derive_builder v0.20.2
+   Compiling cpufeatures v0.3.1
+   Compiling typed-path v0.13.0
+   Compiling handlebars v6.4.4
+   Compiling zip v9.8.1
+   Compiling sha2 v0.11.1
+   Compiling caseless v0.2.2
+   Compiling semver v1.0.28
+   Compiling empack-core v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu/core)
+   Compiling rules-joined-study v0.0.0 (/private/tmp/rules-joined-vkp3oizr)
+error: couldn't read `src/instance.cfg.template`: No such file or directory (os error 2)
+  --> src/lib.rs:12:48
+   |
+12 |   let config=templates::render_default(project,include_str!("instance.cfg.template"),[("INSTANCE_WRAPPER_COMMAND".into(),String::new...
+   |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0433]: cannot find `diagnostics` in `super`
+   --> src/engine/prism.rs:157:41
+    |
+157 |             let mut diagnostic = super::diagnostics::Diagnostic::new(
+    |                                         ^^^^^^^^^^^ could not find `diagnostics` in `super`
+
+error[E0433]: cannot find `diagnostics` in `super`
+   --> src/engine/prism.rs:158:24
+    |
+158 |                 super::diagnostics::DiagnosticCode::StaleSnapshot,
+    |                        ^^^^^^^^^^^ could not find `diagnostics` in `super`
+
+error[E0433]: cannot find `diagnostics` in `super`
+   --> src/engine/prism.rs:159:24
+    |
+159 |                 super::diagnostics::DiagnosticPhase::Verification,
+    |                        ^^^^^^^^^^^ could not find `diagnostics` in `super`
+
+error[E0433]: cannot find `release` in `super`
+   --> src/engine/prism.rs:178:18
+    |
+178 |     old: &super::release::ReleaseRuntime,
+    |                  ^^^^^^^ could not find `release` in `super`
+
+error[E0433]: cannot find `release` in `super`
+   --> src/engine/prism.rs:179:18
+    |
+179 |     new: &super::release::ReleaseRuntime,
+    |                  ^^^^^^^ could not find `release` in `super`
+
+warning: unused import: `lock::file_evidence`
+  --> src/engine/documents.rs:19:16
+   |
+19 | pub(crate) use lock::file_evidence;
+   |                ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `ensure`
+ --> src/engine/templates.rs:1:21
+  |
+1 | use anyhow::{Result,ensure};
+  |                     ^^^^^^
+
+error[E0277]: the trait bound `std::string::String: Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not satisfied
+  --> src/lib.rs:84:145
+   |
+84 | ...ies.remove(&path),"Unplanned/duplicate ZIP directory");ensure!(f.unix_mode().is_some_and(|v|v&0o777==0o755),"ZIP directory mode d...
+   |        ------ ^^^^^ the trait `Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not implemented for `std::string::String`
+   |        |
+   |        required by a bound introduced by this call
+   |
+help: the trait `Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not implemented for `std::string::String`
+      but trait `Borrow<str>` is implemented for it
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/str.rs:231:0
+   = help: for that trait implementation, expected `str`, found `std::result::Result<Cow<'_, str>, ZipError>`
+note: required by a bound in `std::collections::BTreeSet::<T, A>::remove`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/collections/btree/set.rs:1052:4
+
+error[E0277]: the trait bound `ZipError: std::cmp::Ord` is not satisfied
+  --> src/lib.rs:84:145
+   |
+84 | ...s_dir(){ensure!(directories.remove(&path),"Unplanned/duplicate ZIP directory");ensure!(f.unix_mode().is_some_and(|v|v&0o777==0o75...
+   |                                ------ ^^^^^ the trait `std::cmp::Ord` is not implemented for `ZipError`
+   |                                |
+   |                                required by a bound introduced by this call
+   |
+help: the trait `std::cmp::Ord` is conditionally implemented for `std::result::Result<T, E>`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:554:42
+  ::: /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:558:19
+   |
+   = note: unsatisfied requirement introduced here: `ZipError: std::cmp::Ord`
+   = note: required for `std::result::Result<Cow<'_, str>, ZipError>` to implement `std::cmp::Ord`
+note: required by a bound in `std::collections::BTreeSet::<T, A>::remove`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/collections/btree/set.rs:1052:4
+
+error[E0277]: the trait bound `std::string::String: Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not satisfied
+  --> src/lib.rs:84:304
+   |
+84 | ...ted.remove(&path).context("Unplanned/duplicate ZIP file")?;ensure!(f.size()==o.bytes&&f.unix_mode().is_some_and(|v|v&0o777==o.mod...
+   |        ------ ^^^^^ the trait `Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not implemented for `std::string::String`
+   |        |
+   |        required by a bound introduced by this call
+   |
+help: the trait `Borrow<std::result::Result<Cow<'_, str>, ZipError>>` is not implemented for `std::string::String`
+      but trait `Borrow<str>` is implemented for it
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/str.rs:231:0
+   = help: for that trait implementation, expected `str`, found `std::result::Result<Cow<'_, str>, ZipError>`
+note: required by a bound in `std::collections::BTreeMap::<K, V, A>::remove`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/collections/btree/map.rs:1130:4
+
+error[E0277]: the trait bound `ZipError: std::cmp::Ord` is not satisfied
+  --> src/lib.rs:84:304
+   |
+84 | ...");continue;}let o=expected.remove(&path).context("Unplanned/duplicate ZIP file")?;ensure!(f.size()==o.bytes&&f.unix_mode().is_so...
+   |                                ------ ^^^^^ the trait `std::cmp::Ord` is not implemented for `ZipError`
+   |                                |
+   |                                required by a bound introduced by this call
+   |
+help: the trait `std::cmp::Ord` is conditionally implemented for `std::result::Result<T, E>`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:554:42
+  ::: /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:558:19
+   |
+   = note: unsatisfied requirement introduced here: `ZipError: std::cmp::Ord`
+   = note: required for `std::result::Result<Cow<'_, str>, ZipError>` to implement `std::cmp::Ord`
+note: required by a bound in `std::collections::BTreeMap::<K, V, A>::remove`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/alloc/src/collections/btree/map.rs:1130:4
+
+error[E0277]: `std::result::Result<Cow<'_, str>, ZipError>` doesn't implement `std::fmt::Display`
+  --> src/lib.rs:84:452
+   |
+84 | ...de differs for {path}");let mut h=Sha256::new();let mut total=0u64;let mut profile=Vec::new();loop{let mut b=[0u8;CHUNK];let n=f....
+   |                   ^^^^^^ `std::result::Result<Cow<'_, str>, ZipError>` cannot be formatted with the default formatter
+   |
+   = help: the trait `std::fmt::Display` is not implemented for `std::result::Result<Cow<'_, str>, ZipError>`
+   = note: in format strings you may be able to use `{:?}` (or `{:#?}` for pretty-print) instead
+   = note: this error originates in the macro `$crate::__private::format_args` which comes from the expansion of the macro `ensure` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0369]: binary operation `==` cannot be applied to type `std::result::Result<Cow<'_, str>, ZipError>`
+  --> src/lib.rs:84:685
+   |
+84 | ...coded byte bound");h.update(&b[..n]);if path=="mmc-pack.json"{profile.extend_from_slice(&b[..n]);}}let hash=hex(&h.finalize());en...
+   |                                            ----^^--------------- &str
+   |                                            |
+   |                                            std::result::Result<Cow<'_, str>, ZipError>
+   |
+note: `std::result::Result<Cow<'_, str>, ZipError>` does not implement `PartialEq<&str>`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:558:0
+   |
+   = note: `std::result::Result<Cow<'_, str>, ZipError>` is defined in another crate
+
+error[E0277]: `std::result::Result<Cow<'_, str>, ZipError>` doesn't implement `std::fmt::Display`
+  --> src/lib.rs:84:829
+   |
+84 | ...nt differs for {path}");if path=="mmc-pack.json"{engine::verify_profile(&profile,&a.runtime)?;}rows.push(json!({"path":path,"sha2...
+   |                   ^^^^^^ `std::result::Result<Cow<'_, str>, ZipError>` cannot be formatted with the default formatter
+   |
+   = help: the trait `std::fmt::Display` is not implemented for `std::result::Result<Cow<'_, str>, ZipError>`
+   = note: in format strings you may be able to use `{:?}` (or `{:#?}` for pretty-print) instead
+   = note: this error originates in the macro `$crate::__private::format_args` which comes from the expansion of the macro `ensure` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0369]: binary operation `==` cannot be applied to type `std::result::Result<Cow<'_, str>, ZipError>`
+  --> src/lib.rs:84:845
+   |
+84 | ...ha,"ZIP content differs for {path}");if path=="mmc-pack.json"{engine::verify_profile(&profile,&a.runtime)?;}rows.push(json!({"pat...
+   |                                            ----^^--------------- &str
+   |                                            |
+   |                                            std::result::Result<Cow<'_, str>, ZipError>
+   |
+note: `std::result::Result<Cow<'_, str>, ZipError>` does not implement `PartialEq<&str>`
+  --> /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/result.rs:558:0
+   |
+   = note: `std::result::Result<Cow<'_, str>, ZipError>` is defined in another crate
+
+error[E0277]: the trait bound `ZipError: serde::Serialize` is not satisfied
+   --> src/lib.rs:84:919
+    |
+ 84 | ...push(json!({"path":path,"sha256":hash,"bytes":total,"mode":o.mode}));}
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         |
+    |         the trait `Serialize` is not implemented for `ZipError`
+    |         required by a bound introduced by this call
+    |
+    = note: for local types consider adding `#[derive(serde::Serialize)]` to your `ZipError` type
+    = note: for types from other crates check whether the crate offers a `serde` feature flag
+    = help: the following other types implement trait `Serialize`:
+              &'a T
+              &'a mut T
+              ()
+              (T,)
+              (T0, T1)
+              (T0, T1, T2)
+              (T0, T1, T2, T3)
+              (T0, T1, T2, T3, T4)
+            and 157 others
+    = note: required for `std::result::Result<Cow<'_, str>, ZipError>` to implement `Serialize`
+    = note: 1 redundant requirement hidden
+    = note: required for `&std::result::Result<Cow<'_, str>, ZipError>` to implement `Serialize`
+note: required by a bound in `to_value`
+   --> /Users/zer0cell/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/src/value/mod.rs:997:8
+    |
+995 | pub fn to_value<T>(value: T) -> Result<Value, Error>
+996 | where
+997 |     T: Serialize,
+    |        ^^^^^^^^^ required by this bound in `to_value`
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `json` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+Some errors have detailed explanations: E0277, E0369, E0433.
+For more information about an error, try `rustc --explain E0277`.
+warning: `rules-joined-study` (lib) generated 2 warnings
+error: could not compile `rules-joined-study` (lib) due to 15 previous errors; 2 warnings emitted

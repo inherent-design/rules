@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Joined authoring study</title>
+<style>body{font:15px system-ui;max-width:960px;margin:30px auto;padding:0 20px;background:#f8fafc;color:#17212b}label{display:block;margin-top:16px}input,textarea,select,button{font:inherit;padding:8px}textarea{box-sizing:border-box;width:100%;height:180px}button{margin:8px 6px 8px 0}#status{padding:12px;background:#e6edf5;white-space:pre-wrap}pre{white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #c4ceda;padding:12px}small{display:block;color:#465366}</style>
+<h1>Joined authoring study</h1><p>A private research workspace. Interpretation and Prism output use the same Rust engine on native and browser hosts.</p><small>Imported sources stay in this browser profile. Export is limited to a standalone vanilla Prism snapshot; this is not empack's production project format.</small>
+<label>Import local files <input id="files" type="file" multiple></label>
+<label>Raw author document<textarea id="author" spellcheck="false"></textarea></label><button id="author-apply">Use author text</button>
+<label>Pack name <input id="name"></label><button id="rename">Apply name</button>
+<label>File to move <select id="entry"></select></label><label>Game path <input id="destination" size="50"></label><button id="place">Move file</button>
+<div><button id="save">Save draft</button><button id="reopen">Reopen saved draft</button><button id="export">Export Prism snapshot</button></div><small>Reopen replaces the current draft. Saving permits invalid author text and declared missing inputs. Export verifies the selected sources first.</small>
+<p id="status" role="status">Opening shared engine…</p><pre id="summary"></pre>
+<script type="module" src="/page.mjs"></script></html>

@@ -1,0 +1,13 @@
+import init from'/joined.js';import{transport}from'/transport.mjs';import*as store from'/store.mjs';
+const ready=fetch('/joined_bg.wasm').then(r=>{if(!r.ok)throw Error('Shared engine unavailable');return r.arrayBuffer();}).then(bytes=>init({module_or_path:bytes})).then(api=>{const core=transport(api);store.bind(core);return core;});
+const holds=new Map();
+self.onmessage=async({data})=>{const{id,kind,payload={}}=data;try{if(kind==='release'){const resolve=holds.get(payload.requestId);if(!resolve)throw Error('No matching test phase hold');holds.delete(payload.requestId);resolve();self.postMessage({id,kind:'result',ok:true,value:{released:true}});return;}const core=await ready;let value;
+ const phase=async(name,detail)=>{self.postMessage({id,kind:'phase',phase:name,detail});if(payload.hold===name)await new Promise(resolve=>holds.set(id,resolve));};
+ if(kind==='core')value=core.call(payload);
+ else if(kind==='import')value=await store.importFiles(payload.draft,payload.files);
+ else if(kind==='save')value=await store.save(payload.expected,payload.draft,payload.attempt,phase);
+ else if(kind==='reopen')value=await store.reopen();
+ else if(kind==='current')value=await store.current();
+ else if(kind==='export')value=await store.exportPrism(payload.draft,payload.basis,phase,payload.fault??null);
+ else throw Error('Unknown host operation');self.postMessage({id,kind:'result',ok:true,value});
+ }catch(error){self.postMessage({id,kind:'result',ok:false,error:{name:error.name,message:error.message}});}};

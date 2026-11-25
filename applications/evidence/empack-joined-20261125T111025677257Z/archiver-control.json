@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "sourceObject": {
+    "path": "/Users/zer0cell/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/psm-0.1.24/src/arch/wasm32.o",
+    "sha256": "d7279f419cb7e169cae2af2463507652e0393b801c2f4580244de70d3def58b6"
+  },
+  "originalArchive": {
+    "path": "/private/tmp/rules-joined-62hpbv5e/archiver-control/original.a",
+    "bytes": 96,
+    "sha256": "501b9353fc7a76733de69b25f5b13575a5bbd3647ff4ab1acd6320129ff6cce2"
+  },
+  "llvmArchive": {
+    "path": "/private/tmp/rules-joined-62hpbv5e/archiver-control/llvm.a",
+    "bytes": 628,
+    "sha256": "a73d9399a9306b8882d4a9404d7451d617765965b838c5ffe5f66708f98d9b45"
+  },
+  "tools": {
+    "llvm-ar": {
+      "path": "/opt/homebrew/opt/llvm/bin/llvm-ar",
+      "sha256": "83a718f63795c96c1017362738ee6c6201d1047b4b12e032b67a8162b28a7e37",
+      "version": "Homebrew LLVM version 23.1.6\n  Optimized build.\n"
+    },
+    "llvm-nm": {
+      "path": "/opt/homebrew/opt/llvm/bin/llvm-nm",
+      "sha256": "f5ee1103aaa808f0d47afbf54426820bfddc044eb85403aea3c6c3d9a9e066d5",
+      "version": "llvm-nm, compatible with GNU nm\nHomebrew LLVM version 23.1.6\n  Optimized build.\n"
+    }
+  },
+  "commands": [
+    {
+      "label": "old-symbols",
+      "argv": [
+        "/opt/homebrew/opt/llvm/bin/llvm-nm",
+        "--print-armap",
+        "/private/tmp/rules-joined-62hpbv5e/archiver-control/original.a"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "build-llvm",
+      "argv": [
+        "/opt/homebrew/opt/llvm/bin/llvm-ar",
+        "crs",
+        "/private/tmp/rules-joined-62hpbv5e/archiver-control/llvm.a",
+        "/Users/zer0cell/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/psm-0.1.24/src/arch/wasm32.o"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "llvm-symbols",
+      "argv": [
+        "/opt/homebrew/opt/llvm/bin/llvm-nm",
+        "--print-armap",
+        "/private/tmp/rules-joined-62hpbv5e/archiver-control/llvm.a"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "2a8735f16ddf1c65e64fbeefe417e71609bbe7c85bbceaeb53555cd86e9e8117",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "interpretation": "Current produced archive contains no object symbols;the same shipped WASM object yields expected symbols under LLVM ar. Next build will select target-specific LLVM archiver without changing dependency versions or parser stack checks.",
+  "webContext": [
+    "https://docs.rs/cc/latest/cc/#external-configuration-via-environment-variables",
+    "https://github.com/pest-parser/pest/releases"
+  ],
+  "limits": "Archive comparison is not yet a complete successful engine link or browser execution."
+}

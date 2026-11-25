@@ -1,0 +1,202 @@
+   Compiling syn v3.0.10
+   Compiling wasm-bindgen-shared v0.2.129
+   Compiling bumpalo v3.20.3
+   Compiling libc v0.2.191
+   Compiling psm v0.1.24
+   Compiling wasm-bindgen v0.2.129
+   Compiling memchr v2.8.3
+   Compiling unicode-ident v1.0.27
+   Compiling crc32fast v1.5.2
+   Compiling synstructure v0.14.0
+   Compiling wasm-bindgen-macro-support v0.2.129
+   Compiling zerofrom-derive v0.1.8
+   Compiling zerofrom v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling yoke v0.8.3
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling icu_locale_core v2.3.0
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling wasm-bindgen-macro v0.2.129
+   Compiling icu_provider v2.3.1
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling stacker v0.1.25
+   Compiling log v0.4.34
+   Compiling once_cell v1.21.4
+   Compiling getrandom v0.4.3
+   Compiling idna_adapter v1.2.2
+   Compiling constant_time_eq v0.6.1
+   Compiling pest_generator v2.9.4
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.21
+   Compiling ucd-trie v0.1.7
+   Compiling simd-adler32 v0.3.10
+   Compiling hashbrown v0.17.1
+   Compiling zlib-rs v0.6.8
+   Compiling num-modular v0.6.5
+   Compiling equivalent v1.0.3
+   Compiling tinyvec v1.13.3
+   Compiling unicode-normalization v0.1.26
+   Compiling flate2 v1.1.11
+   Compiling indexmap v2.14.2
+   Compiling zopfli v0.8.4
+   Compiling num-order v1.2.0
+   Compiling serde v1.0.229
+   Compiling pest v2.9.4
+   Compiling serde_json v1.0.154
+   Compiling zeroize v1.9.1
+   Compiling thiserror v2.0.21
+   Compiling derive_builder v0.20.2
+   Compiling pest_derive v2.9.4
+   Compiling idna v1.1.0
+   Compiling typed-path v0.13.0
+   Compiling url v2.5.8
+   Compiling zip v9.8.1
+   Compiling handlebars v6.4.4
+   Compiling caseless v0.2.2
+   Compiling empack-core v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu/core)
+   Compiling semver v1.0.28
+   Compiling rules-joined-study v0.0.0 (/private/tmp/rules-joined-62hpbv5e)
+warning: unused import: `lock::file_evidence`
+  --> src/engine/documents.rs:19:16
+   |
+19 | pub(crate) use lock::file_evidence;
+   |                ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `Value`
+ --> src/engine/prism.rs:4:18
+  |
+4 | use serde_json::{Value, json};
+  |                  ^^^^^
+
+warning: unused import: `ensure`
+ --> src/engine/templates.rs:1:21
+  |
+1 | use anyhow::{Result,ensure};
+  |                     ^^^^^^
+
+warning: method `documents` is never used
+   --> src/engine/documents.rs:180:19
+    |
+175 | impl PreparedDocument {
+    | --------------------- method in this implementation
+...
+180 |     pub(crate) fn documents(
+    |                   ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `encoding_memory` is never used
+   --> src/engine/documents.rs:295:19
+    |
+210 | impl DocumentCodec {
+    | ------------------ method in this implementation
+...
+295 |     pub(crate) fn encoding_memory(&self, project: &ResolvedProject) -> Result<u64> {
+    |                   ^^^^^^^^^^^^^^^
+
+warning: struct `Size` is never constructed
+ --> src/engine/documents/sizing.rs:5:8
+  |
+5 | struct Size(u64);
+  |        ^^^^
+
+warning: multiple methods are never used
+  --> src/engine/documents/sizing.rs:7:8
+   |
+ 6 | impl Size {
+   | --------- methods in this implementation
+ 7 |     fn add(&mut self, bytes: u64) -> Result<()> {
+   |        ^^^
+...
+14 |     fn nodes(&mut self, count: usize) -> Result<()> {
+   |        ^^^^^
+...
+21 |     fn text(&mut self, text: &str) -> Result<()> {
+   |        ^^^^
+...
+29 |     fn optional(&mut self, value: Option<&str>) -> Result<()> {
+   |        ^^^^^^^^
+...
+35 |     fn requirements(&mut self, value: &Requirements) -> Result<()> {
+   |        ^^^^^^^^^^^^
+...
+45 |     fn placements(&mut self, values: &[Placement]) -> Result<()> {
+   |        ^^^^^^^^^^
+...
+53 |     fn extension(&mut self, value: &ExtensionValue) -> Result<()> {
+   |        ^^^^^^^^^
+
+warning: function `encoding_memory` is never used
+  --> src/engine/documents/sizing.rs:78:15
+   |
+78 | pub(super) fn encoding_memory(project: &ResolvedProject) -> Result<u64> {
+   |               ^^^^^^^^^^^^^^^
+
+warning: associated items `exact_members`, `insert_directory`, and `insert_member` are never used
+   --> src/engine/layout.rs:129:19
+    |
+127 | impl CollisionIndex {
+    | ------------------- associated items in this implementation
+128 |     /// Opaque archive members are never projected onto a native filesystem.
+129 |     pub(super) fn exact_members() -> Self {
+    |                   ^^^^^^^^^^^^^
+...
+139 |     pub fn insert_directory(&mut self, path: &PortableRelPath) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^
+...
+142 |     pub(super) fn insert_member(
+    |                   ^^^^^^^^^^^^^
+
+warning: struct `ProfileChanged` is never constructed
+  --> src/engine/prism.rs:11:19
+   |
+11 | pub(crate) struct ProfileChanged;
+   |                   ^^^^^^^^^^^^^^
+
+warning: constant `LEGACY_FORGE_1710_SUFFIX_START` is never used
+ --> src/engine/runtime_versions.rs:5:7
+  |
+5 | const LEGACY_FORGE_1710_SUFFIX_START: &str = "10.13.2.1300";
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `parse_version` is never used
+  --> src/engine/runtime_versions.rs:11:15
+   |
+11 | pub(crate) fn parse_version(s: &str) -> Option<Version> {
+   |               ^^^^^^^^^^^^^
+
+warning: function `sort_versions_desc` is never used
+  --> src/engine/runtime_versions.rs:41:15
+   |
+41 | pub(crate) fn sort_versions_desc(versions: &mut [String]) {
+   |               ^^^^^^^^^^^^^^^^^^
+
+warning: function `uses_legacy_forge_coordinate` is never used
+  --> src/engine/runtime_versions.rs:69:15
+   |
+69 | pub(crate) fn uses_legacy_forge_coordinate(mc_version: &str, loader_version: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `filter_forge_versions_by_minecraft` is never used
+   --> src/engine/runtime_versions.rs:105:15
+    |
+105 | pub(crate) fn filter_forge_versions_by_minecraft(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: linking with `rust-lld` failed: exit status: 1
+  |
+  = note:  "rust-lld" "-flavor" "wasm" "--export" "output_len" "--export" "output_ptr" "--export" "prepare_input" "--export" "run_project" "--export" "__wbindgen_describe___wbg_getRandomValues_436a51d0629d84e1" "--export" "__abort_handler" "--export" "__externref_drop_slice" "--export" "__externref_table_alloc" "--export" "__externref_table_dealloc" "--export" "__instance_terminated" "--export" "__wbindgen_describe___wbg_BigInt_26047a9b1ef41b80" "--export" "__wbindgen_describe___wbg_Error_30c8987f7c2ed4e2" "--export" "__wbindgen_describe___wbg_Number_14af1003b8dd5ead" "--export" "__wbindgen_describe___wbg_Symbol_96614593275b9be2" "--export" "__wbindgen_describe___wbg___wbindgen_add_8b5757041eae20ca" "--export" "__wbindgen_describe___wbg___wbindgen_bigint_get_as_i64_a2383202b9353e4c" "--export" "__wbindgen_describe___wbg___wbindgen_bit_and_83fb09dca01dc876" "--export" "__wbindgen_describe___wbg___wbindgen_bit_not_0a95a815af2393b5" "--export" "__wbindgen_describe___wbg___wbindgen_bit_or_9da33cd998ca4821" "--export" "__wbindgen_describe___wbg___wbindgen_bit_xor_20da67c99a891cf5" "--export" "__wbindgen_describe___wbg___wbindgen_boolean_get_5b446f51afd21013" "--export" "__wbindgen_describe___wbg___wbindgen_checked_div_2fb608eb694d4481" "--export" "__wbindgen_describe___wbg___wbindgen_copy_to_typed_array_88899a52af046901" "--export" "__wbindgen_describe___wbg___wbindgen_debug_string_4687d8d8c2017d52" "--export" "__wbindgen_describe___wbg___wbindgen_div_24240b5f7fb04126" "--export" "__wbindgen_describe___wbg___wbindgen_exports_2a21194318bb0cb2" "--export" "__wbindgen_describe___wbg___wbindgen_function_table_639dd63419065a39" "--export" "__wbindgen_describe___wbg___wbindgen_ge_65c23805ee8c18cd" "--export" "__wbindgen_describe___wbg___wbindgen_gt_db24a70e03f0deaa" "--export" "__wbindgen_describe___wbg___wbindgen_in_92f62ee1427d9e49" "--export" "__wbindgen_describe___wbg___wbindgen_init_externref_table_7f9c90675ce1b4c8" "--export" "__wbindgen_describe___wbg___wbindgen_instance_c08c656d6a968927" "--export" "__wbindgen_describe___wbg___wbindgen_is_bigint_b123553bed3bb382" "--export" "__wbindgen_describe___wbg___wbindgen_is_falsy_16bd49b68658263e" "--export" "__wbindgen_describe___wbg___wbindgen_is_function_1f9d30630b8b1d3d" "--export" "__wbindgen_describe___wbg___wbindgen_is_null_e343b7d08827ba72" "--export" "__wbindgen_describe___wbg___wbindgen_is_null_or_undefined_f9435d56bdcc06df" "--export" "__wbindgen_describe___wbg___wbindgen_is_object_3c45d4f2dde4e749" "--export" "__wbindgen_describe___wbg___wbindgen_is_string_90b56bc79aad6f6c" "--export" "__wbindgen_describe___wbg___wbindgen_is_symbol_3acc5de2aaea59b9" "--export" "__wbindgen_describe___wbg___wbindgen_is_undefined_8865fb403f8fe9d8" "--export" "__wbindgen_describe___wbg___wbindgen_jsval_eq_02babf21faa37971" "--export" "__wbindgen_describe___wbg___wbindgen_jsval_loose_eq_677f21e468d6b461" "--export" "__wbindgen_describe___wbg___wbindgen_le_ef8b8d3db81812e9" "--export" "__wbindgen_describe___wbg___wbindgen_lt_3727a9c490487b37" "--export" "__wbindgen_describe___wbg___wbindgen_memory_caa4a6165639c8b5" "--export" "__wbindgen_describe___wbg___wbindgen_module_7115fb14045f9891" "--export" "__wbindgen_describe___wbg___wbindgen_mul_64c0aa6d285bfafb" "--export" "__wbindgen_describe___wbg___wbindgen_neg_ba10c06517a616e6" "--export" "__wbindgen_describe___wbg___wbindgen_number_get_2e0e7dee9f701a71" "--export" "__wbindgen_describe___wbg___wbindgen_pow_415dcbdfc86cf05f" "--export" "__wbindgen_describe___wbg___wbindgen_reinit_3f79fdb34dee3ea9" "--export" "__wbindgen_describe___wbg___wbindgen_rem_8c24c5591f515c54" "--export" "__wbindgen_describe___wbg___wbindgen_rethrow_cb2e88c6b2a16733" "--export" "__wbindgen_describe___wbg___wbindgen_shl_ef03795a74763ded" "--export" "__wbindgen_describe___wbg___wbindgen_shr_b069e3b8a1a68964" "--export" "__wbindgen_describe___wbg___wbindgen_string_get_0380ccaa2f57f0d9" "--export" "__wbindgen_describe___wbg___wbindgen_sub_2633543379a8fb0f" "--export" "__wbindgen_describe___wbg___wbindgen_throw_41e9ee4f547fc59a" "--export" "__wbindgen_describe___wbg___wbindgen_try_into_number_72700b92e849cfc6" "--export" "__wbindgen_describe___wbg___wbindgen_typeof_e777a26e115d416b" "--export" "__wbindgen_describe___wbg___wbindgen_unsigned_shr_893cbd2d6d6d7ab3" "--export" "__wbindgen_describe___wbg__wbg_cb_unref_dcc1a90847f04c41" "--export" "__wbindgen_describe___wbg_get_18356bb2020ce3b4" "--export" "__wbindgen_describe___wbg_isArray_2b41c29f43a3fb12" "--export" "__wbindgen_describe___wbg_parse_299cc3d837e5622d" "--export" "__wbindgen_describe___wbg_stringify_6aecbc971e8228c3" "--export" "__wbindgen_destroy_closure" "--export" "__wbindgen_exn_store" "--export" "__wbindgen_free" "--export" "__wbindgen_jspi_set_rejected" "--export" "__wbindgen_malloc" "--export" "__wbindgen_realloc" "--export" "__wbindgen_skip_interpret_calls" "-z" "stack-size=1048576" "--stack-first" "--no-demangle" "--no-entry" "<17 object files omitted>" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zip/23ac76c08f778e8f/out/libzip-23ac76c08f778e8f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/constant_time_eq/30b4517ccee9d1b0/out/libconstant_time_eq-30b4517ccee9d1b0.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zopfli/9394d845e6e32c75/out/libzopfli-9394d845e6e32c75.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/simd-adler32/34383803784dda9a/out/libsimd_adler32-34383803784dda9a.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/bumpalo/086300adc0a48889/out/libbumpalo-086300adc0a48889.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/getrandom/b8d900300c3e544e/out/libgetrandom-b8d900300c3e544e.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/wasm-bindgen/a4addc75d7a69368/out/libwasm_bindgen-a4addc75d7a69368.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/once_cell/8d52a8b3997a6f4d/out/libonce_cell-8d52a8b3997a6f4d.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/wasm-bindgen-shared/5949b0d0f9bb8641/out/libwasm_bindgen_shared-5949b0d0f9bb8641.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/unicode-ident/af1c7bfb9376d91f/out/libunicode_ident-af1c7bfb9376d91f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/flate2/0ee6cdca96478ee7/out/libflate2-0ee6cdca96478ee7.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zlib-rs/21efcfb094fa11b5/out/libzlib_rs-21efcfb094fa11b5.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zeroize/38e78235720504c2/out/libzeroize-38e78235720504c2.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/indexmap/a858e7925761babb/out/libindexmap-a858e7925761babb.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/equivalent/f7f5b0f13c64b59a/out/libequivalent-f7f5b0f13c64b59a.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/hashbrown/e95552de9eaf6f56/out/libhashbrown-e95552de9eaf6f56.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/typed-path/3474f5a916082766/out/libtyped_path-3474f5a916082766.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/crc32fast/98a88e12034f8632/out/libcrc32fast-98a88e12034f8632.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/url/91ea5f3b8b1cb47e/out/liburl-91ea5f3b8b1cb47e.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/idna/a4bf9c8e9863ffa9/out/libidna-a4bf9c8e9863ffa9.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/idna_adapter/624c57a86a9dc214/out/libidna_adapter-624c57a86a9dc214.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_properties/bfa8a034ce995732/out/libicu_properties-bfa8a034ce995732.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_properties_data/f6fe53ccecbf6257/out/libicu_properties_data-f6fe53ccecbf6257.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_normalizer/a3ed92c60410d2bc/out/libicu_normalizer-a3ed92c60410d2bc.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_normalizer_data/4373109f0374a3f0/out/libicu_normalizer_data-4373109f0374a3f0.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_collections/ea2c15b88dbc1821/out/libicu_collections-ea2c15b88dbc1821.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/utf8_iter/0f02b5b0afaffd8f/out/libutf8_iter-0f02b5b0afaffd8f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/potential_utf/71b9d82da4503807/out/libpotential_utf-71b9d82da4503807.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_provider/02475ce5600577ec/out/libicu_provider-02475ce5600577ec.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/icu_locale_core/ee4db99aaa6118bd/out/libicu_locale_core-ee4db99aaa6118bd.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/tinystr/51fa2e7c9890e792/out/libtinystr-51fa2e7c9890e792.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/litemap/b481119e64e27121/out/liblitemap-b481119e64e27121.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/writeable/13f1c885be5ffa20/out/libwriteable-13f1c885be5ffa20.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zerovec/310972abf7175a11/out/libzerovec-310972abf7175a11.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zerotrie/2ff8838eb45cd331/out/libzerotrie-2ff8838eb45cd331.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/yoke/90c340843e0a0c96/out/libyoke-90c340843e0a0c96.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/stable_deref_trait/e30c2a6807f0a77f/out/libstable_deref_trait-e30c2a6807f0a77f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zerofrom/bc2025fc75076918/out/libzerofrom-bc2025fc75076918.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/form_urlencoded/be44a6a20db8d1fa/out/libform_urlencoded-be44a6a20db8d1fa.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/percent-encoding/38692f4ab6b2907d/out/libpercent_encoding-38692f4ab6b2907d.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/handlebars/d361e107f79971f5/out/libhandlebars-d361e107f79971f5.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/derive_builder/2b8df1c97b7d0823/out/libderive_builder-2b8df1c97b7d0823.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/pest/33506cd89d67e3d6/out/libpest-33506cd89d67e3d6.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/ucd-trie/8be9c66449d5c235/out/libucd_trie-8be9c66449d5c235.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/stacker/23613c8cf41bbbb5/out/libstacker-23613c8cf41bbbb5.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/psm/009622766b15815f/out/libpsm-009622766b15815f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/libc/fc9e302618550184/out/liblibc-fc9e302618550184.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/num-order/4d09e86443896468/out/libnum_order-4d09e86443896468.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/num-modular/6bf6d507f2387bbf/out/libnum_modular-6bf6d507f2387bbf.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/log/d223d22ca7f743e2/out/liblog-d223d22ca7f743e2.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/thiserror/38f40d66135981da/out/libthiserror-38f40d66135981da.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/semver/89ad4e6a1c7d90f8/out/libsemver-89ad4e6a1c7d90f8.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/caseless/34da311f166e709f/out/libcaseless-34da311f166e709f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/unicode-normalization/4ba7656ba0ad6c9c/out/libunicode_normalization-4ba7656ba0ad6c9c.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/tinyvec/42286e72834f79a6/out/libtinyvec-42286e72834f79a6.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/serde-saphyr/0e99c87550874fc4/out/libserde_saphyr-0e99c87550874fc4.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/num-traits/4a1ff6fda94ba474/out/libnum_traits-4a1ff6fda94ba474.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/nohash-hasher/2804b5317d004885/out/libnohash_hasher-2804b5317d004885.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/base64/c7e0741248eb310a/out/libbase64-c7e0741248eb310a.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/annotate-snippets/583e1c6cff917df7/out/libannotate_snippets-583e1c6cff917df7.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/unicode-width/34f64e69535ca7d3/out/libunicode_width-34f64e69535ca7d3.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/anstyle/05db58c3149901bc/out/libanstyle-05db58c3149901bc.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/encoding_rs_io/448e988d0f1d00d7/out/libencoding_rs_io-448e988d0f1d00d7.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/encoding_rs/e269e4ae032f7e30/out/libencoding_rs-e269e4ae032f7e30.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/scopeguard/bbeb8393766aff2f/out/libscopeguard-bbeb8393766aff2f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/granit-parser/5df23ae40faf2a0e/out/libgranit_parser-5df23ae40faf2a0e.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/smallvec/fe0708f5e02c169d/out/libsmallvec-fe0708f5e02c169d.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/arraydeque/6cc5ce1e1077e999/out/libarraydeque-6cc5ce1e1077e999.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/empack-core/68395d7ff9252905/out/libempack_core-68395d7ff9252905.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/sha2/ef3f0590eb91a113/out/libsha2-ef3f0590eb91a113.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/cfg-if/5968d80835c9202c/out/libcfg_if-5968d80835c9202c.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/digest/1eaf67501988f2f9/out/libdigest-1eaf67501988f2f9.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/const-oid/be1ceb2e77a529a1/out/libconst_oid-be1ceb2e77a529a1.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/crypto-common/45826f6a26448826/out/libcrypto_common-45826f6a26448826.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/block-buffer/1c0f4dc0decad415/out/libblock_buffer-1c0f4dc0decad415.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/hybrid-array/6d7f6121b98ad4da/out/libhybrid_array-6d7f6121b98ad4da.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/typenum/08b738a6770a5ada/out/libtypenum-08b738a6770a5ada.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/serde_json/ad4a806714a7999f/out/libserde_json-ad4a806714a7999f.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/memchr/43e865895a460cec/out/libmemchr-43e865895a460cec.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/itoa/bd71390dfa587056/out/libitoa-bd71390dfa587056.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/zmij/3a716772d6572b8d/out/libzmij-3a716772d6572b8d.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/serde/c58fe33c6edfc80c/out/libserde-c58fe33c6edfc80c.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/serde_core/fa8101dae68c6fe2/out/libserde_core-fa8101dae68c6fe2.rlib" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/anyhow/553e27aceb217849/out/libanyhow-553e27aceb217849.rlib" "<sysroot>/lib/rustlib/wasm32-unknown-unknown/lib/{libstd-*,libpanic_abort-*,libdlmalloc-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-L" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/psm/d9617f5730df1608/out" "-L" "<sysroot>/lib/rustlib/wasm32-unknown-unknown/lib/self-contained" "-o" "/private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/rules-joined-study/686922799820cb71/out/rules_joined_study.wasm" "--gc-sections" "--no-entry" "-O0" "--strip-all"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: rust-lld: error: /private/tmp/rules-portable-documents-3nedxpuu/target/wasm32-unknown-unknown/debug/build/psm/009622766b15815f/out/libpsm-009622766b15815f.rlib(psm-009622766b15815f.psm.8c5a91164beb96ad-cgu.0.rcgu.o): undefined symbol: rust_psm_stack_pointer
+          
+
+warning: `rules-joined-study` (lib) generated 15 warnings
+error: could not compile `rules-joined-study` (lib) due to 1 previous error; 15 warnings emitted

@@ -1,0 +1,149 @@
+     Locking 1 package to highest Rust 1.100.0 compatible version
+    Updating empack-core v0.0.0-dev (/private/tmp/rules-portable-documents-3nedxpuu/core) -> v0.0.0
+   Compiling rules-joined-111512569488 v0.0.0 (/private/tmp/rules-joined-2xo_b1o8)
+warning: unused import: `lock::file_evidence`
+  --> src/engine/documents.rs:19:16
+   |
+19 | pub(crate) use lock::file_evidence;
+   |                ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `Value`
+ --> src/engine/prism.rs:4:18
+  |
+4 | use serde_json::{Value, json};
+  |                  ^^^^^
+
+warning: unused import: `ensure`
+ --> src/engine/templates.rs:1:21
+  |
+1 | use anyhow::{Result,ensure};
+  |                     ^^^^^^
+
+warning: method `documents` is never used
+   --> src/engine/documents.rs:180:19
+    |
+175 | impl PreparedDocument {
+    | --------------------- method in this implementation
+...
+180 |     pub(crate) fn documents(
+    |                   ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `encoding_memory` is never used
+   --> src/engine/documents.rs:295:19
+    |
+210 | impl DocumentCodec {
+    | ------------------ method in this implementation
+...
+295 |     pub(crate) fn encoding_memory(&self, project: &ResolvedProject) -> Result<u64> {
+    |                   ^^^^^^^^^^^^^^^
+
+warning: struct `Size` is never constructed
+ --> src/engine/documents/sizing.rs:5:8
+  |
+5 | struct Size(u64);
+  |        ^^^^
+
+warning: multiple methods are never used
+  --> src/engine/documents/sizing.rs:7:8
+   |
+ 6 | impl Size {
+   | --------- methods in this implementation
+ 7 |     fn add(&mut self, bytes: u64) -> Result<()> {
+   |        ^^^
+...
+14 |     fn nodes(&mut self, count: usize) -> Result<()> {
+   |        ^^^^^
+...
+21 |     fn text(&mut self, text: &str) -> Result<()> {
+   |        ^^^^
+...
+29 |     fn optional(&mut self, value: Option<&str>) -> Result<()> {
+   |        ^^^^^^^^
+...
+35 |     fn requirements(&mut self, value: &Requirements) -> Result<()> {
+   |        ^^^^^^^^^^^^
+...
+45 |     fn placements(&mut self, values: &[Placement]) -> Result<()> {
+   |        ^^^^^^^^^^
+...
+53 |     fn extension(&mut self, value: &ExtensionValue) -> Result<()> {
+   |        ^^^^^^^^^
+
+warning: function `encoding_memory` is never used
+  --> src/engine/documents/sizing.rs:78:15
+   |
+78 | pub(super) fn encoding_memory(project: &ResolvedProject) -> Result<u64> {
+   |               ^^^^^^^^^^^^^^^
+
+warning: associated items `exact_members`, `insert_directory`, and `insert_member` are never used
+   --> src/engine/layout.rs:129:19
+    |
+127 | impl CollisionIndex {
+    | ------------------- associated items in this implementation
+128 |     /// Opaque archive members are never projected onto a native filesystem.
+129 |     pub(super) fn exact_members() -> Self {
+    |                   ^^^^^^^^^^^^^
+...
+139 |     pub fn insert_directory(&mut self, path: &PortableRelPath) -> Result<()> {
+    |            ^^^^^^^^^^^^^^^^
+...
+142 |     pub(super) fn insert_member(
+    |                   ^^^^^^^^^^^^^
+
+warning: struct `ProfileChanged` is never constructed
+  --> src/engine/prism.rs:11:19
+   |
+11 | pub(crate) struct ProfileChanged;
+   |                   ^^^^^^^^^^^^^^
+
+warning: constant `LEGACY_FORGE_1710_SUFFIX_START` is never used
+ --> src/engine/runtime_versions.rs:5:7
+  |
+5 | const LEGACY_FORGE_1710_SUFFIX_START: &str = "10.13.2.1300";
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `parse_version` is never used
+  --> src/engine/runtime_versions.rs:11:15
+   |
+11 | pub(crate) fn parse_version(s: &str) -> Option<Version> {
+   |               ^^^^^^^^^^^^^
+
+warning: function `sort_versions_desc` is never used
+  --> src/engine/runtime_versions.rs:41:15
+   |
+41 | pub(crate) fn sort_versions_desc(versions: &mut [String]) {
+   |               ^^^^^^^^^^^^^^^^^^
+
+warning: function `uses_legacy_forge_coordinate` is never used
+  --> src/engine/runtime_versions.rs:69:15
+   |
+69 | pub(crate) fn uses_legacy_forge_coordinate(mc_version: &str, loader_version: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `filter_forge_versions_by_minecraft` is never used
+   --> src/engine/runtime_versions.rs:105:15
+    |
+105 | pub(crate) fn filter_forge_versions_by_minecraft(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: stripping debug info with `rust-objcopy` failed: signal: 6 (SIGABRT)
+  |
+  = note: dyld[74416]: Library not loaded: @rpath/libLLVM.dylib
+            Referenced from: <0CD2A5EB-71C0-36E9-A5D6-21645D10A1A1> /Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/rust-objcopy
+            Reason: tried: '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/lib/libLLVM.dylib' (no such file), '/usr/local/lib/libLLVM.dylib' (no such file), '/usr/lib/libLLVM.dylib' (no such file, not in dyld cache)
+          
+
+warning: `rules-joined-111512569488` (lib) generated 16 warnings (run `cargo fix --lib -p rules-joined-111512569488` to apply 3 suggestions)
+warning: stripping debug info with `rust-objcopy` failed: signal: 6 (SIGABRT)
+  |
+  = note: dyld[74426]: Library not loaded: @rpath/libLLVM.dylib
+            Referenced from: <0CD2A5EB-71C0-36E9-A5D6-21645D10A1A1> /Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/rust-objcopy
+            Reason: tried: '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/lib/libLLVM.dylib' (no such file), '/usr/local/lib/libLLVM.dylib' (no such file), '/usr/lib/libLLVM.dylib' (no such file, not in dyld cache)
+          
+
+warning: `rules-joined-111512569488` (bin "rules-joined-111512569488") generated 1 warning
+    Finished `dev` profile [unoptimized] target(s) in 1.75s

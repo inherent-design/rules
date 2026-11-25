@@ -77,3 +77,5 @@ The [coverage guide](COVERAGE.md) explains operation references, bounded compone
 The canonical active checkpoint is in the Moment incident for the application-models intent. It is the only current task checkpoint. Repository artifacts carry evidence and coverage, not a second running task ledger.
 
 The [Cargo freshness band](cargo/FRESHNESS.md) separates metadata replay from physical script execution, partial generated outputs from retained binaries, and invalidated work from successful reuse. It compares watched/omitted environment inputs and downstream missing-file failures in one offline unit context.
+
+The [joined empack authoring band](empack/PORTABLE-JOINED.md) connects the shared codec/core to actual native and browser storage, save/reopen, and verified Prism downloads. Independent backend/archive reads and an installed0.8.8 reference support the selected vanilla research flow. This does not qualify the production0.9 engine or promote the pending parent operations.

@@ -28,6 +28,8 @@ The [manual acquisition and saved-build band](PENDING.md) compares isolated inst
 
 The [bootstrap band](BOOTSTRAP.md) compares actual packaged invocation/local/cache gates and delegated cancellation, with controlled script peers and four separately limited real native checks. Selected code, capability, acquired bytes, process lifetime, and final outcomes remain distinct; official acquisition and real runtime supervision are not qualified.
 
+The [joined portable-authoring band](PORTABLE-JOINED.md) now exercises actual import, invalid/valid save and reopen, metadata/path edits, captured-image Prism export, and browser downloads with a shared Rust research engine. Native, Chromium, WebKit, and an isolated installed0.8.8 reference produce the same fixture archive. This advances the selected research join; production format, provider/recipe breadth, authority, crash/concurrency/quota, and consumer launch remain open. Earlier component reports retain their original evidence scope.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
