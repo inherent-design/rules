@@ -1,0 +1,514 @@
+{
+  "schema": 1,
+  "scope": "Selected referenced cache/CI profile,not a complete cache/index/installer implementation.",
+  "nativeNpmTransitions": 6,
+  "controlledInterventions": 2,
+  "nodeAvailabilityObservers": 7,
+  "transitionComparisons": 15,
+  "availabilityComparisons": 7,
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "operation",
+    "backing",
+    "installation",
+    "author",
+    "boolean"
+  ],
+  "observationMutations": [
+    "outcome-0",
+    "outcome-1",
+    "outcome-2",
+    "outcome-3",
+    "outcome-4",
+    "availability"
+  ],
+  "comparisons": [
+    {
+      "case": "runtime-initial",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "1/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "verify-valid",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 0,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Historical referenced-object premise from initial HTTP cache population and closed cooperating history;not a recovered index record for every earlier boundary.",
+      "model": {
+        "available": true,
+        "current": "1/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "owned-cache-corruption",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 2,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "2/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": null,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "2/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-after-cache-corruption",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 2,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "2/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "2/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "verify-corrupt",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 0,
+        "backing": 2,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "0/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Historical referenced-object premise from initial HTTP cache population and closed cooperating history;not a recovered index record for every earlier boundary.",
+      "model": {
+        "available": true,
+        "current": "0/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-after-verify",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 0,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "0/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "0/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "ci-offline-missing",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 1,
+        "backing": 0,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "0/0/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Matching request/index/SRI witness only for offline-valid CI;other CI payload absence is observed,or successful own-origin bytes are a controlled premise.",
+      "model": {
+        "available": true,
+        "current": "0/0/1/1/0",
+        "proposal": "0/1/1/1/0"
+      }
+    },
+    {
+      "case": "runtime-after-failed-ci",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 0,
+        "installed": 0,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "0/0/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": false,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": false,
+        "current": "0/0/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "ci-origin-recovery",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 1,
+        "backing": 0,
+        "installed": 0,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": true
+      },
+      "expected": "1/1/1/0/1",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Matching request/index/SRI witness only for offline-valid CI;other CI payload absence is observed,or successful own-origin bytes are a controlled premise.",
+      "model": {
+        "available": false,
+        "current": "1/1/1/0/1",
+        "proposal": "1/1/1/0/1"
+      }
+    },
+    {
+      "case": "runtime-after-recovery",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "1/1/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "owned-installed-edit",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/2/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": null,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "1/2/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "verify-with-installed-edit",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 0,
+        "backing": 1,
+        "installed": 2,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/2/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Historical referenced-object premise from initial HTTP cache population and closed cooperating history;not a recovered index record for every earlier boundary.",
+      "model": {
+        "available": true,
+        "current": "1/2/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-edited-installation",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 1,
+        "installed": 2,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/2/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "1/2/1/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "ci-offline-valid",
+      "sourceKind": "npm",
+      "input": {
+        "kind": 1,
+        "backing": 1,
+        "installed": 2,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": true,
+        "originReady": false
+      },
+      "expected": "1/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "availability": null,
+      "premise": "Matching request/index/SRI witness only for offline-valid CI;other CI payload absence is observed,or successful own-origin bytes are a controlled premise.",
+      "model": {
+        "available": true,
+        "current": "1/1/1/0/0",
+        "proposal": "1/1/1/0/0"
+      }
+    },
+    {
+      "case": "runtime-final",
+      "sourceKind": "observer",
+      "input": {
+        "kind": 4,
+        "backing": 1,
+        "installed": 1,
+        "author": 1,
+        "referenced": true,
+        "lockAdmitted": true,
+        "matchingIndex": false,
+        "originReady": false
+      },
+      "expected": "1/1/1/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2
+      ],
+      "availability": true,
+      "premise": "Owned intervention/availability-observer protocol,not a public npm operation.",
+      "model": {
+        "available": true,
+        "current": "1/1/1/0/0",
+        "proposal": null
+      }
+    }
+  ],
+  "basisSha256": {
+    "applications/evidence/npm-cache-20261124T235228248707Z/cache-corruption.json": "ad3761972adb82c9955ef8b6a309fa90f9231e617982eef5f6ab33562431ab22",
+    "applications/evidence/npm-cache-20261124T235228248707Z/cache-index-witness.json": "71c001d14a41ed95c72eb83d66acf10861a7c3f4c7472da5bfccb814b9577be4",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-offline-missing.stderr": "864adfa529e99db6e56c37c74f6988dee88a933eafcbbc16647c668946850c82",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-offline-missing.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-offline-valid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-offline-valid.stdout": "f80cb3ed6bf71ce54f9a3c95c34e2ff1fe74d28500207d03beea0c8ef03ce927",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-origin-recovery.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/ci-origin-recovery.stdout": "24603d8ffa4e9a3453c487a93ee79c232922189532a33a5133869f2bf6e85166",
+    "applications/evidence/npm-cache-20261124T235228248707Z/closed.json": "e08254027f1e8f0f5b190b5829502b980f30e4a0faef926bd00d1d37d98d890d",
+    "applications/evidence/npm-cache-20261124T235228248707Z/commands.json": "58dd292659eea8b1a87f75bd1bcc13062e25535113e5b30eecc67935d52b852e",
+    "applications/evidence/npm-cache-20261124T235228248707Z/fixture.tgz": "e366fe3f9669e870f96207d8f9a6cfb1c41385a37af59f0cd532428e69fed41b",
+    "applications/evidence/npm-cache-20261124T235228248707Z/index-witness-0.bin": "8a67048072b8b8db211ea59e79eb99d25023c8db3616cad6b5a3af3f844f7e56",
+    "applications/evidence/npm-cache-20261124T235228248707Z/index-witness-1.bin": "96cbd2ada0ecdf0c8fec9450b100218f33fb786b7f7de4f6710f3a1b5ba7e3fb",
+    "applications/evidence/npm-cache-20261124T235228248707Z/install.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/install.stdout": "a5ab8b5cf8a7b2b3ef3b93fa0513ff9180bca6e8ef3f2bfbcf7684f04b0c86a3",
+    "applications/evidence/npm-cache-20261124T235228248707Z/installed-edit.json": "020203c636f8612232dd3eb8a323577454660ff078935519270805e47cd0a47b",
+    "applications/evidence/npm-cache-20261124T235228248707Z/observations.json": "ba7264188bf88c88cd2c10b048514990aec7cf9fdb5cb9f02921aba6037a9551",
+    "applications/evidence/npm-cache-20261124T235228248707Z/owned-processes.json": "5faae138da9fd3795b3148165e160c1b0678f7d10df3f59a0a42a57cd2738585",
+    "applications/evidence/npm-cache-20261124T235228248707Z/probe.py": "18e9613bcd0a56f54f6176e50346d29e50b197db48ad530a9cbeb45a6c3de31a",
+    "applications/evidence/npm-cache-20261124T235228248707Z/receipt.json": "982c758dae7307ab87a6aa7f0e3ffd1cb741d59feb077954ffd982d05789d4fa",
+    "applications/evidence/npm-cache-20261124T235228248707Z/requests.json": "004d6905149eb5dcd02fc60a7ca06a04e51c9c63f56bdbf51d020aec6cc0ef63",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-cache-corruption.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-cache-corruption.stdout": "a096f38a74e8e108fa88beb2ad89da446898e361d0573205c993878b2d960cf7",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-failed-ci.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-failed-ci.stdout": "3e86457a326835245470770196a54bd5a9dffac06e90fae01e5b1c17d1aacd06",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-recovery.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-recovery.stdout": "a096f38a74e8e108fa88beb2ad89da446898e361d0573205c993878b2d960cf7",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-verify.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-after-verify.stdout": "a096f38a74e8e108fa88beb2ad89da446898e361d0573205c993878b2d960cf7",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-edited-installation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-edited-installation.stdout": "aefc43a0876832710b763b8cfac20705e88a0120971851412bae1eea2f62488e",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-final.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-final.stdout": "a096f38a74e8e108fa88beb2ad89da446898e361d0573205c993878b2d960cf7",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-initial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/runtime-initial.stdout": "a096f38a74e8e108fa88beb2ad89da446898e361d0573205c993878b2d960cf7",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-corrupt.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-corrupt.stdout": "a1628deb42e9e3fa8066bf68f65b5ce36e66307fd8fd28b4e862f9f87a98826d",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-valid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-valid.stdout": "e899994d21c5b94645338f646a9d64b4700587c91ee7c778a703b09f418a6a61",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-with-installed-edit.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/npm-cache-20261124T235228248707Z/verify-with-installed-edit.stdout": "e899994d21c5b94645338f646a9d64b4700587c91ee7c778a703b09f418a6a61",
+    "applications/npm-cache/Cache.bend": "31d2867b920a2eeb814ada1a00223efe069eba803e8d9a57753f13df0af3c2fa",
+    "applications/npm-cache/Cache.lean": "cf636329c2ea51d816ecdef96785d12d55dbaedc5963bc0d989acc68f9aae45a",
+    "applications/npm-cache/CacheCase.lean": "6c60daeddceef3ea0c5bf9201664b510995c0e2f490b3c5ac2db09d4bc4337ed",
+    "applications/npm-cache/conformance.py": "29126da7dfb23790c0c49a5f75235522af921d83d029088ea39a2766186d0efa",
+    "applications/npm-cache/observations.py": "c1e7c1147d3adfda590a5e18f96fce8a774c84eb06d0f216f4a5c98dcdfcdd69",
+    "applications/npm-cache/probe.py": "18e9613bcd0a56f54f6176e50346d29e50b197db48ad530a9cbeb45a6c3de31a",
+    "applications/sources/npm-cache-selections.json": "f96849eb091fd027fb3e2a8c4e65e73be208f2b1be97da2e5cb3391e71df0e2c"
+  },
+  "driverSha256": "12ff05e91b4c41fe3725d7c1ccd10d8412c848b7e85e8641841256913cc7fc1f",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No npm/Node/server execution. Initial install supplies the admitted baseline;it is not generated by this model. Intervention and observer rows compare state only,not invented npm process outcomes.",
+    "Referenced-object history for earlier verification is a source-informed premise,not a recovered historical index at every step. Offline-valid CI has a byte-identical matching request/index/SRI witness.",
+    "Typed backing is a closed-fixture hash classification;unknown bytes refuse interpretation rather than becoming absent. Global index,permissions,metadata freshness,races and leases remain separate.",
+    "Candidate preflight has cross-model agreement and conditional preservation laws only. Its acquisition/lookup evidence must survive clearing;global cache verification cannot supply that guarantee.",
+    "One package,known successful origin and scripts disabled. No general acquisition failure ordering,rollback,remote trust/durability or complete feature promotion."
+  ]
+}

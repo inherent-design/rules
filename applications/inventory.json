@@ -5370,13 +5370,27 @@
             },
             {
               "id": "cache-verify",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "npm-cache/Cache.lean;npm-cache/Cache.bend",
+              "laws": [
+                "Selected cache cleanup does not validate or rewrite installed files. A clean-install payload miss can follow installation clearing while authored inputs remain unchanged. Reusable request/index/content evidence is separate from file presence or global verification statistics."
+              ],
+              "nativeEvidence": [
+                "evidence/npm-cache-20261124T235228248707Z/receipt.json",
+                "evidence/npm-cache-20261124T235228248707Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/npm-cache-selections.json"
+              ],
+              "negativeControls": [
+                "Exact owned cache corruption is removed with status0;installed edit survives cache verification. Offline missing-payload ci1 clears installation;own-origin and valid-cache paths restore it. Eight research refusals and six observation mutations."
+              ],
+              "uxAssessment": "npm-cache/README.md",
+              "status": "native-observed",
+              "evidenceLimit": "One generated package/private project/cache and loopback origin;14commands,6post-baseline npm transitions,2controlled interventions,7Nodeavailability observations. Earlier verification reference history is a source premise;offline-success has byte-identical index/request/SRI witness. No general cache-index/permissions/races/retention/ci or remote qualification.",
+              "verificationPlan": "Qualify shared writers and GC,metadata expiry,missing/corrupt indexes,different/multiple sources,interrupted cleanup/reification,storage failures and scripts. Preflight alternatives need retained acquisition across clearing,not a prior global verify.",
+              "proofPremises": [
+                "The model uses selected backing/installed hash classes and source-admitted metadata/lock/history in a closed no-script profile. Unknown hashes refuse classification. Candidate preflight is pure and unimplemented;nonzero clean-install status does not undo saved effects."
+              ]
             },
             {
               "id": "cache-clean",
@@ -5390,17 +5404,31 @@
             },
             {
               "id": "offline",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "npm-cache/Cache.lean;npm-cache/Cache.bend",
+              "laws": [
+                "Selected cache cleanup does not validate or rewrite installed files. A clean-install payload miss can follow installation clearing while authored inputs remain unchanged. Reusable request/index/content evidence is separate from file presence or global verification statistics."
+              ],
+              "nativeEvidence": [
+                "evidence/npm-cache-20261124T235228248707Z/receipt.json",
+                "evidence/npm-cache-20261124T235228248707Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/npm-cache-selections.json"
+              ],
+              "negativeControls": [
+                "Exact owned cache corruption is removed with status0;installed edit survives cache verification. Offline missing-payload ci1 clears installation;own-origin and valid-cache paths restore it. Eight research refusals and six observation mutations."
+              ],
+              "uxAssessment": "npm-cache/README.md",
+              "status": "native-observed",
+              "evidenceLimit": "One generated package/private project/cache and loopback origin;14commands,6post-baseline npm transitions,2controlled interventions,7Nodeavailability observations. Earlier verification reference history is a source premise;offline-success has byte-identical index/request/SRI witness. No general cache-index/permissions/races/retention/ci or remote qualification.",
+              "verificationPlan": "Qualify shared writers and GC,metadata expiry,missing/corrupt indexes,different/multiple sources,interrupted cleanup/reification,storage failures and scripts. Preflight alternatives need retained acquisition across clearing,not a prior global verify.",
+              "proofPremises": [
+                "The model uses selected backing/installed hash classes and source-admitted metadata/lock/history in a closed no-script profile. Unknown hashes refuse classification. Candidate preflight is pure and unimplemented;nonzero clean-install status does not undo saved effects."
+              ]
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Partially native-observed/modelled for selected cache verification and offline clean rebuild;cache-add/clean,general index,concurrency and host obligations remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

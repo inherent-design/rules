@@ -42,6 +42,8 @@ The [restic copy band](restic/COPY.md) compares eight local copy requests and 13
 
 The [Yarn Modern constraints band](yarn-constraints/README.md) compares check/fix status, callback inputs, saved edits, conflicts, and capped convergence. It retains a success followed by a failed check, reference-versus-value ambiguity, and partial edits after later failure. Proposed final validation is separate from current native behavior.
 
+The [npm cache band](npm-cache/README.md) separates selected backing integrity, cleanup, installed content, and clean-rebuild acquisition. It observes a successful cache repair followed by an offline failure that cleared installation, with unchanged author/lock inputs and successful own-origin recovery. This does not make a cache a durable project asset store.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.

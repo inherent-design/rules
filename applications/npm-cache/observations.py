@@ -50,19 +50,31 @@ def inspect():
               'runtime-after-recovery':dict(available=True,value='original fixture'),'runtime-edited-installation':dict(available=True,value='edited installation'),'runtime-final':dict(available=True,value='original fixture')}
     for label,value in expected.items():assert json.loads((RUN/(label+'.stdout')).read_text())==value and by[label]['outcome']['exitCode']==0
     assert by['ci-offline-valid']['after']['installed']['fixture-cache/index.js']['sha256']==original_hash
+    witness=json.loads((RUN/'cache-index-witness.json').read_text());assert len(witness['records'])==2
+    for record in witness['records']:
+        raw=(RUN/record['file']).read_bytes();assert hashlib.sha256(raw).hexdigest()==record['sha256']
+        ci=by['ci-offline-valid'];assert ci['before']['cache'][record['indexPath']]['sha256']==record['sha256']==ci['after']['cache'][record['indexPath']]['sha256']
+        lines=[line for line in raw.splitlines()if line];assert len(lines)==1
+        checksum,payload=lines[0].split(b'\t',1);assert hashlib.sha1(payload).hexdigest().encode()==checksum
+        entry=json.loads(payload);assert all(entry[k]==record[k]for k in ['key','integrity','size'])
+        hashed=hashlib.sha256(entry['key'].encode()).hexdigest();assert record['indexPath']=='index-v5/'+hashed[:2]+'/'+hashed[2:4]+'/'+hashed[4:]
+        assert entry['metadata']['reqHeaders']in [{},{'accept':'application/json'}]
+    selected=next(r for r in witness['records']if r['key'].endswith('.tgz'))
+    lock=json.loads(by['ci-offline-valid']['before']['authored']['package-lock.json']['text'])['packages']['node_modules/fixture-cache']
+    assert selected['key']=='make-fetch-happen:request-cache:'+lock['resolved']and selected['integrity']==lock['integrity']==receipt['fixtureIntegrity']
     return receipt,commands,corrupt,edit
 
 
 def main():
     receipt,commands,corrupt,edit=inspect()
-    report=dict(schema=1,status='Intermediate source/native observations;formal models pending.',nativeCommands=14,npmCommands=7,nodeAvailabilityObservers=7,registryRequests=3,allocatedKiB=receipt['allocatedKiB'],
-        allOwnedGroupsAbsent=True,serverClosed=True,
+    report=dict(schema=1,status='Source/native observations;scoped formal replay retained separately in conformance.json.',nativeCommands=14,npmCommands=7,nodeAvailabilityObservers=7,registryRequests=3,allocatedKiB=receipt['allocatedKiB'],
+        allOwnedGroupsAbsent=True,serverClosed=True,selectedCacheIndexWitnesses=2,
         findings=['Cache verification successfully removes one corrupt cached tar and reports missing content;it does not validate or rewrite the installed module.',
             'An offline clean install fails after removing the old installed tree;manifest/lock/configuration remain unchanged. Status1 is not absence of installed-tree effects.',
             'Own-origin reacquisition restores the module;valid offline cache can later rebuild an edited installation. Cache verification alone preserves that installed edit.',
             'The Node observer returns0 for a well-formed availability report even when the module is missing;the report field,not process status alone,describes availability.'],
         limits=['One generated two-file package,one local project/private cache,one loopback registry. No global cache,real dependency graph,external service,shared writer,remote trust or durability qualification.',
-                'Captured cache snapshots are file/hash views,not a general semantic cache-index decoder. Availability beyond this closed fixture needs index/read/lease evidence.',
+                'Two retained post-run index records match hashes in the offline-valid-ci boundary and selected lock/SRI. This is a closed-format witness,not a general index decoder,live lookup or retained lease.',
                 'Source flatOptions/cacache verification and ci stage order are inspected;this fixture does not make every acquisition failure post-clear or claim a clean-install correctness defect.',
                 'No new npm/Node execution by this checker. Formal comparison and improvement proposals remain separate;no complete feature or production change.'])
     (RUN/'observations.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

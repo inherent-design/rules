@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "status": "Intermediate source/native observations;formal models pending.",
+  "status": "Source/native observations;scoped formal replay retained separately in conformance.json.",
   "nativeCommands": 14,
   "npmCommands": 7,
   "nodeAvailabilityObservers": 7,
@@ -8,6 +8,7 @@
   "allocatedKiB": 2708,
   "allOwnedGroupsAbsent": true,
   "serverClosed": true,
+  "selectedCacheIndexWitnesses": 2,
   "findings": [
     "Cache verification successfully removes one corrupt cached tar and reports missing content;it does not validate or rewrite the installed module.",
     "An offline clean install fails after removing the old installed tree;manifest/lock/configuration remain unchanged. Status1 is not absence of installed-tree effects.",
@@ -16,7 +17,7 @@
   ],
   "limits": [
     "One generated two-file package,one local project/private cache,one loopback registry. No global cache,real dependency graph,external service,shared writer,remote trust or durability qualification.",
-    "Captured cache snapshots are file/hash views,not a general semantic cache-index decoder. Availability beyond this closed fixture needs index/read/lease evidence.",
+    "Two retained post-run index records match hashes in the offline-valid-ci boundary and selected lock/SRI. This is a closed-format witness,not a general index decoder,live lookup or retained lease.",
     "Source flatOptions/cacache verification and ci stage order are inspected;this fixture does not make every acquisition failure post-clear or claim a clean-install correctness defect.",
     "No new npm/Node execution by this checker. Formal comparison and improvement proposals remain separate;no complete feature or production change."
   ]
