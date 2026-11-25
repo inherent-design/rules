@@ -1,0 +1,59 @@
+
+> rules-workspace-fixture-npm-private@1.1.0 prepublishOnly
+> node hook.cjs private prepublishOnly
+
+
+> rules-workspace-fixture-npm-private@1.1.0 prepack
+> node hook.cjs private prepack
+
+
+> rules-workspace-fixture-npm-private@1.1.0 postpack
+> node hook.cjs private postpack
+
+npm warn publish Skipping workspace rules-workspace-fixture-npm-private, marked as private
+
+> rules-workspace-fixture-npm-consumer@1.1.0 prepublishOnly
+> node hook.cjs consumer prepublishOnly
+
+
+> rules-workspace-fixture-npm-consumer@1.1.0 prepack
+> node hook.cjs consumer prepack
+
+
+> rules-workspace-fixture-npm-consumer@1.1.0 postpack
+> node hook.cjs consumer postpack
+
+npm notice Publishing to http://127.0.0.1:60323/ with tag latest and default access
+
+> rules-workspace-fixture-npm-consumer@1.1.0 publish
+> node hook.cjs consumer publish
+
+
+> rules-workspace-fixture-npm-consumer@1.1.0 postpublish
+> node hook.cjs consumer postpublish
+
+
+> rules-workspace-fixture-npm-producer@1.1.0 prepublishOnly
+> node hook.cjs producer prepublishOnly
+
+
+> rules-workspace-fixture-npm-producer@1.1.0 prepack
+> node hook.cjs producer prepack
+
+
+> rules-workspace-fixture-npm-producer@1.1.0 postpack
+> node hook.cjs producer postpack
+
+
+> rules-workspace-fixture-npm-producer@1.1.0 publish
+> node hook.cjs producer publish
+
+
+> rules-workspace-fixture-npm-producer@1.1.0 postpublish
+> node hook.cjs producer postpublish
+
+npm error code 7
+npm error path /private/tmp/rules-js-workspace-publish-628lv48n/npm/producer-late-failure/project/packages/z-producer
+npm error command failed
+npm error command sh -c node hook.cjs producer postpublish
+npm error A complete log of this run can be found in: /private/tmp/rules-js-workspace-publish-628lv48n/npm/producer-late-failure/cache/npm/_logs/2026-11-25T23_28_56_595Z-debug-0.log

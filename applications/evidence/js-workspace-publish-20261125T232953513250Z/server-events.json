@@ -1,0 +1,452 @@
+[
+  {
+    "case": "pnpm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "status": 404
+  },
+  {
+    "case": "pnpm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "status": 404
+  },
+  {
+    "case": "pnpm-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "name": "rules-workspace-fixture-pnpm-producer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "45a5026d68e2e26c24b6f30eafe6a8264f8568e28881eef393eb8be62cf8f383",
+    "archiveBytes": 352,
+    "files": {
+      "package/index.js": "81d6416549813aca8273a1fad7cbbc0f0e2023477ceaf897ea9068ec23259ce9",
+      "package/package.json": "485e30ef0fb15e14c6fa9c3f5878b8ecbf3f2e03321c8ae7d613c19edd256c89"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-pnpm-producer",
+      "version": "1.0.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish"
+      }
+    },
+    "requestSha256": "bc75ec137bd01f2f175dcfc09202d21e3d0bd3d8ac840e2cf941d9990f558561",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "name": "rules-workspace-fixture-pnpm-consumer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "e1c51aef3bee5d358e1b77c4323caaed893e2bac8e2b01888fee3b47e42cee83",
+    "archiveBytes": 382,
+    "files": {
+      "package/index.js": "55d3ec2d8b77de0c465e11b17808b9d7597f011af7ed8e6637c90f5290c1730d",
+      "package/package.json": "01d2ddcdc4086ca7cb1763720c983e49aa1ae6ddf07421d6ba3538d5e735ea7c"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-pnpm-consumer",
+      "version": "1.0.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-pnpm-producer": "1.0.0"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish"
+      }
+    },
+    "requestSha256": "140ca453d0db7f6b6da0bb71805cfa9ac062b4ca2575a465c12c8379c61e0ee2",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-consume",
+    "method": "GET",
+    "path": "/tarballs/45a5026d68e2e26c24b6f30eafe6a8264f8568e28881eef393eb8be62cf8f383.tgz",
+    "status": 200,
+    "artifact": "45a5026d68e2e26c24b6f30eafe6a8264f8568e28881eef393eb8be62cf8f383"
+  },
+  {
+    "case": "pnpm-consume",
+    "method": "GET",
+    "path": "/tarballs/e1c51aef3bee5d358e1b77c4323caaed893e2bac8e2b01888fee3b47e42cee83.tgz",
+    "status": 200,
+    "artifact": "e1c51aef3bee5d358e1b77c4323caaed893e2bac8e2b01888fee3b47e42cee83"
+  },
+  {
+    "case": "pnpm-producer-late-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-producer-late-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-producer-late-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "name": "rules-workspace-fixture-pnpm-producer",
+    "version": "1.1.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "042c6c1d25f67bfc28154909b745d3e017374a209ea3401bc3639c72c214abd8",
+    "archiveBytes": 353,
+    "files": {
+      "package/index.js": "f6f9c5b76bacd9c285d952685dffd9608e8aeb69f0285853ef8b807e6a0c85e4",
+      "package/package.json": "35bad7fdf2e09a5803e8093a94c968231128f69181634e87f9d62f08a4d6b837"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-pnpm-producer",
+      "version": "1.1.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish"
+      }
+    },
+    "requestSha256": "fbed6019f36e8ac44860ec5964a8cddc7b295273a62a78d17afbef67b55d1d1e",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-private-pre-hook-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-private-pre-hook-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "status": 200
+  },
+  {
+    "case": "pnpm-private-pre-hook-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-pnpm-producer",
+    "name": "rules-workspace-fixture-pnpm-producer",
+    "version": "1.2.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "52515d9620a5004caaff5f7f7586d6ca73655cf62c70492538aa1497cb5656ae",
+    "archiveBytes": 353,
+    "files": {
+      "package/index.js": "9cdc6e0ef9b4ed85ce614d9aa21c889b40530e9cde6e51a77d9d666adc1dff18",
+      "package/package.json": "5432b3f472e2259a58adb240bf242a64b609ad8983e8150a507dc5319f46d208"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-pnpm-producer",
+      "version": "1.2.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish"
+      }
+    },
+    "requestSha256": "616938397c2b505ba6314df4c231ae337fe21a874a2508a023b3cc602d12a5d7",
+    "authorizationPresent": true
+  },
+  {
+    "case": "pnpm-private-pre-hook-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-pnpm-consumer",
+    "name": "rules-workspace-fixture-pnpm-consumer",
+    "version": "1.2.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "408ff50cd5bcea590801c24cfc347938395a5b3c21e080a6269a2370bca9a17f",
+    "archiveBytes": 383,
+    "files": {
+      "package/index.js": "55d3ec2d8b77de0c465e11b17808b9d7597f011af7ed8e6637c90f5290c1730d",
+      "package/package.json": "4241888ae630bf4f8ee671d1fe9b48e60a795adbaf3b78e44b1015de56324cc5"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-pnpm-consumer",
+      "version": "1.2.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-pnpm-producer": "1.2.0"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish"
+      }
+    },
+    "requestSha256": "a547b8ed6b5b185a980253fafed9058022b3a1369aba09cbf185132a4a70a6b0",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-yarn-producer",
+    "name": "rules-workspace-fixture-yarn-producer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "71e2dd21b48d7ba890d5bd385a6545598c56a020e5a383d8879ba4ec29c2f1cc",
+    "archiveBytes": 390,
+    "files": {
+      "package/index.js": "81d6416549813aca8273a1fad7cbbc0f0e2023477ceaf897ea9068ec23259ce9",
+      "package/package.json": "6812d809f3ae4a72a7d90f3aa24a8f66de45febf542b26d5e52f51c18218d116"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-yarn-producer",
+      "version": "1.0.0",
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish",
+        "prepublishOnly": "node hook.cjs producer prepublishOnly",
+        "prepack": "node hook.cjs producer prepack",
+        "postpack": "node hook.cjs producer postpack",
+        "publish": "node hook.cjs producer publish",
+        "postpublish": "node hook.cjs producer postpublish"
+      }
+    },
+    "requestSha256": "f53a3698aef67c82dde02dd36437ce9414505fc1aff335a54d783e258123dbba",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-yarn-consumer",
+    "name": "rules-workspace-fixture-yarn-consumer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "32f0acc2e782d0aa9015ccb013b99f4d9a1d5910063bd9fc6f1f3d4f97f93561",
+    "archiveBytes": 417,
+    "files": {
+      "package/index.js": "b86c8fc3024b43298b6457f78d2a08c415a09aa00b782ad4a441ad31610b66ad",
+      "package/package.json": "57b6301599dee3b6aa3bde6fad3025524ca22c28851005337fe2f1917cd2b2a9"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-yarn-consumer",
+      "version": "1.0.0",
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish",
+        "prepublishOnly": "node hook.cjs consumer prepublishOnly",
+        "prepack": "node hook.cjs consumer prepack",
+        "postpack": "node hook.cjs consumer postpack",
+        "publish": "node hook.cjs consumer publish",
+        "postpublish": "node hook.cjs consumer postpublish"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-yarn-producer": "1.0.0"
+      }
+    },
+    "requestSha256": "c8a3f0cb9a2c97c29c72a9f06e6a18ba55dbf55a22f861dbd1b3bd7cb40608ba",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-yarn-consumer",
+    "status": 200
+  },
+  {
+    "case": "yarn-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-yarn-producer",
+    "status": 200
+  },
+  {
+    "case": "yarn-consume",
+    "method": "GET",
+    "path": "/tarballs/32f0acc2e782d0aa9015ccb013b99f4d9a1d5910063bd9fc6f1f3d4f97f93561.tgz",
+    "status": 200,
+    "artifact": "32f0acc2e782d0aa9015ccb013b99f4d9a1d5910063bd9fc6f1f3d4f97f93561"
+  },
+  {
+    "case": "yarn-consume",
+    "method": "GET",
+    "path": "/tarballs/71e2dd21b48d7ba890d5bd385a6545598c56a020e5a383d8879ba4ec29c2f1cc.tgz",
+    "status": 200,
+    "artifact": "71e2dd21b48d7ba890d5bd385a6545598c56a020e5a383d8879ba4ec29c2f1cc"
+  },
+  {
+    "case": "yarn-producer-late-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-yarn-producer",
+    "name": "rules-workspace-fixture-yarn-producer",
+    "version": "1.1.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "831a70dcc67ffabffe8bfdc5edfdbda542293277a9a441ef7d09ac2130baa054",
+    "archiveBytes": 391,
+    "files": {
+      "package/index.js": "f6f9c5b76bacd9c285d952685dffd9608e8aeb69f0285853ef8b807e6a0c85e4",
+      "package/package.json": "f7327b477ab30fa4f55c0d4e9d2f3745a8cdf21e9efe6dd24ba6d2e794aaaac6"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-yarn-producer",
+      "version": "1.1.0",
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish",
+        "prepublishOnly": "node hook.cjs producer prepublishOnly",
+        "prepack": "node hook.cjs producer prepack",
+        "postpack": "node hook.cjs producer postpack",
+        "publish": "node hook.cjs producer publish",
+        "postpublish": "node hook.cjs producer postpublish"
+      }
+    },
+    "requestSha256": "02f7b713ebc78b6910fd2bea3f5bdd9fd67ed04b1968375e8f5ec865f25ba137",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-private-pre-hook-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-yarn-producer",
+    "name": "rules-workspace-fixture-yarn-producer",
+    "version": "1.2.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "ea52069cbba969e3469491b0f854aac43ee9aa8ab100679d4778415bf4d0f834",
+    "archiveBytes": 392,
+    "files": {
+      "package/index.js": "9cdc6e0ef9b4ed85ce614d9aa21c889b40530e9cde6e51a77d9d666adc1dff18",
+      "package/package.json": "8cc6a105fb41fba581c578c21beb6d45e84052b699dccb06cfd20bf745b18036"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-yarn-producer",
+      "version": "1.2.0",
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish",
+        "prepublishOnly": "node hook.cjs producer prepublishOnly",
+        "prepack": "node hook.cjs producer prepack",
+        "postpack": "node hook.cjs producer postpack",
+        "publish": "node hook.cjs producer publish",
+        "postpublish": "node hook.cjs producer postpublish"
+      }
+    },
+    "requestSha256": "6e18385e584b0b3994a4ae99bb33286da491268c625c547faad687a464000a16",
+    "authorizationPresent": true
+  },
+  {
+    "case": "yarn-private-pre-hook-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-yarn-consumer",
+    "name": "rules-workspace-fixture-yarn-consumer",
+    "version": "1.2.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "fb763152a02570a923475c664af22ed1f07ebfbce011375d08b5e5c96fbecab2",
+    "archiveBytes": 421,
+    "files": {
+      "package/index.js": "b86c8fc3024b43298b6457f78d2a08c415a09aa00b782ad4a441ad31610b66ad",
+      "package/package.json": "0528feb9fa134bfa7a883b4eb5003bf0c266835f51213f504439bf3ce23bcd55"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-yarn-consumer",
+      "version": "1.2.0",
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60377/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish",
+        "prepublishOnly": "node hook.cjs consumer prepublishOnly",
+        "prepack": "node hook.cjs consumer prepack",
+        "postpack": "node hook.cjs consumer postpack",
+        "publish": "node hook.cjs consumer publish",
+        "postpublish": "node hook.cjs consumer postpublish"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-yarn-producer": "1.2.0"
+      }
+    },
+    "requestSha256": "2e118c9e871203c9a3bc3e6131c9f0633b6cecd4d69b1406545048f854fc8f24",
+    "authorizationPresent": true
+  }
+]

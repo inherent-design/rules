@@ -32,6 +32,8 @@ The [pnpm/Yarn patch band](js-patches/README.md) separates editable preparation,
 
 The [publication band](js-peers/PUBLICATION.md) separates generated archive identity, fixture registry acceptance, client acknowledgement, local hooks, and the command’s final status. Thirty outcomes across npm, pnpm, and Yarn demonstrate response loss before and after acceptance, plus acknowledged uploads followed by failed hooks. Real registry policy, authorization, durability, and larger publication workflows remain pending.
 
+The [workspace-publication join](js-workspace-publish/README.md) adds a fixed private/consumer/producer graph, explicit command ordering, accepted prefixes after later hook failure, and packed workspace ranges. Three successful artifact pairs install and run through separate npm/Node consumers. It preserves each manager's selection and private-hook policy; arbitrary workspace release and reconciliation remain pending.
+
 The [restore-policy band](restic/RESTORE.md) separates existing content, overwrite/mtime admission, verification of actually restored files, and selected-directory deletion. It preserves the upstream whole-directory policy alongside a separately modeled child-preserving alternative. Seventeen private target outcomes leave general metadata, traversal, concurrency, and recovery pending.
 
 The [empack native identity band](empack/IDENTITY.md) compares 58 source-function outcomes with Lean and Bend. It separates live identity, durable comparison, content fingerprints, absence, unavailable evidence, and strict inner binding shape. The following discovery band qualifies selected lookup methods; full root capture/revalidation, reboot behavior, and recovery execution remain pending.

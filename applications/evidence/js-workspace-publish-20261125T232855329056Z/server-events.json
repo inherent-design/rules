@@ -1,0 +1,208 @@
+[
+  {
+    "case": "npm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "status": 404
+  },
+  {
+    "case": "npm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "status": 404
+  },
+  {
+    "case": "npm-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "name": "rules-workspace-fixture-npm-consumer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "05c1561762b0340a5773158808a18b34bf777579fb0773b7af265599919f9372",
+    "archiveBytes": 425,
+    "files": {
+      "package/index.js": "a59e60e3d8115c42cd0ec5ef246ac903787625c9f23e43f7638a5487b09f8fab",
+      "package/package.json": "0da492a5e1cd97917d5c74584b45f4b7f21c55d097001b6780fde9ed0659b23d"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-npm-consumer",
+      "version": "1.0.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60323/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish",
+        "prepublishOnly": "node hook.cjs consumer prepublishOnly",
+        "prepack": "node hook.cjs consumer prepack",
+        "postpack": "node hook.cjs consumer postpack",
+        "publish": "node hook.cjs consumer publish",
+        "postpublish": "node hook.cjs consumer postpublish"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-npm-producer": "1.0.0"
+      }
+    },
+    "requestSha256": "ee4cb6eae11df786b76b27185f9c444e284c88b9527f958eb2776d8b2b36cd7c",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "status": 404
+  },
+  {
+    "case": "npm-success",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "status": 404
+  },
+  {
+    "case": "npm-success",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "name": "rules-workspace-fixture-npm-producer",
+    "version": "1.0.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "a6302b1a9986dc6648919520d533382fe4d24dc9884bcc59e862ddb86347fc22",
+    "archiveBytes": 396,
+    "files": {
+      "package/index.js": "81d6416549813aca8273a1fad7cbbc0f0e2023477ceaf897ea9068ec23259ce9",
+      "package/package.json": "c44db9e6b0cfcb756d219ab7c8dede4b2dabf4bb29321c408c90767f751a7141"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-npm-producer",
+      "version": "1.0.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60323/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish",
+        "prepublishOnly": "node hook.cjs producer prepublishOnly",
+        "prepack": "node hook.cjs producer prepack",
+        "postpack": "node hook.cjs producer postpack",
+        "publish": "node hook.cjs producer publish",
+        "postpublish": "node hook.cjs producer postpublish"
+      }
+    },
+    "requestSha256": "a62fcb9edbf87b57457b1b259991691590356d9f87166dc05d10ffcacee428ec",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "status": 200
+  },
+  {
+    "case": "npm-consume",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "status": 200
+  },
+  {
+    "case": "npm-producer-late-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "status": 200
+  },
+  {
+    "case": "npm-producer-late-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-npm-consumer",
+    "name": "rules-workspace-fixture-npm-consumer",
+    "version": "1.1.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "555bf751ddb05d1006057fadca36a8decf6730f3a40e6e7405896b64dc45265f",
+    "archiveBytes": 426,
+    "files": {
+      "package/index.js": "a59e60e3d8115c42cd0ec5ef246ac903787625c9f23e43f7638a5487b09f8fab",
+      "package/package.json": "4674c87a6e6f0c6c9d43880c0d9d29e2190b216be2c0375502487248d297defd"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-npm-consumer",
+      "version": "1.1.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60323/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs consumer prepublish",
+        "prepublishOnly": "node hook.cjs consumer prepublishOnly",
+        "prepack": "node hook.cjs consumer prepack",
+        "postpack": "node hook.cjs consumer postpack",
+        "publish": "node hook.cjs consumer publish",
+        "postpublish": "node hook.cjs consumer postpublish"
+      },
+      "dependencies": {
+        "rules-workspace-fixture-npm-producer": "1.1.0"
+      }
+    },
+    "requestSha256": "662e6a7e1b97e89e543a180cbba2e2c9c9a49f2fa35d06fbbd07eb8d2edfa086",
+    "authorizationPresent": true
+  },
+  {
+    "case": "npm-producer-late-failure",
+    "method": "GET",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "status": 200
+  },
+  {
+    "case": "npm-producer-late-failure",
+    "method": "PUT",
+    "path": "/rules-workspace-fixture-npm-producer",
+    "name": "rules-workspace-fixture-npm-producer",
+    "version": "1.1.0",
+    "accepted": true,
+    "status": 201,
+    "archiveSha256": "73d7ddde39b234ffe675a963425c6778cca0c93fa35e1d658ec8a071c1250bc6",
+    "archiveBytes": 396,
+    "files": {
+      "package/index.js": "f6f9c5b76bacd9c285d952685dffd9608e8aeb69f0285853ef8b807e6a0c85e4",
+      "package/package.json": "f0efcc86d417619d3155a13c23e1bfddf2470b1129da0f57a4316079ad6b2533"
+    },
+    "packagedManifest": {
+      "name": "rules-workspace-fixture-npm-producer",
+      "version": "1.1.0",
+      "private": false,
+      "main": "index.js",
+      "files": [
+        "index.js"
+      ],
+      "license": "UNLICENSED",
+      "publishConfig": {
+        "registry": "http://127.0.0.1:60323/"
+      },
+      "scripts": {
+        "prepublish": "node hook.cjs producer prepublish",
+        "prepublishOnly": "node hook.cjs producer prepublishOnly",
+        "prepack": "node hook.cjs producer prepack",
+        "postpack": "node hook.cjs producer postpack",
+        "publish": "node hook.cjs producer publish",
+        "postpublish": "node hook.cjs producer postpublish"
+      }
+    },
+    "requestSha256": "c79c61ceabeb70022aa79f5dc3135f03681d32b5180b8c63088ab9056255bda6",
+    "authorizationPresent": true
+  }
+]
