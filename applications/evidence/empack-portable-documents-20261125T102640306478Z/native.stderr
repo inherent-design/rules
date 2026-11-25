@@ -1,0 +1,155 @@
+     Locking 1 package to highest Rust 1.100.0 compatible version
+    Updating empack-core v0.0.0-dev (/private/tmp/rules-portable-documents-3nedxpuu/core) -> v0.0.0
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling stable_deref_trait v1.2.1
+   Compiling writeable v0.6.4
+   Compiling syn v3.0.10
+   Compiling litemap v0.8.3
+   Compiling rustversion v1.0.23
+   Compiling smallvec v1.16.3
+   Compiling icu_normalizer_data v2.3.0
+   Compiling utf8_iter v1.0.4
+   Compiling icu_properties_data v2.3.0
+   Compiling synstructure v0.14.0
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerofrom v0.1.8
+   Compiling zerovec-derive v0.11.6
+   Compiling yoke v0.8.3
+   Compiling displaydoc v0.2.7
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling icu_locale_core v2.3.0
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling icu_provider v2.3.1
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.229
+   Compiling hybrid-array v0.4.15
+   Compiling encoding_rs v0.8.42
+   Compiling zmij v1.0.23
+   Compiling libc v0.2.191
+   Compiling autocfg v1.5.1
+   Compiling cfg-if v1.0.5
+   Compiling num-traits v0.2.19
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling simdutf8 v0.1.5
+   Compiling scopeguard v1.2.0
+   Compiling multiversion_no_op v1.0.0
+   Compiling idna_adapter v1.2.2
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling const-oid v0.10.2
+   Compiling serde_json v1.0.154
+   Compiling arraydeque v0.5.1
+   Compiling serde v1.0.229
+   Compiling unicode-width v0.2.2
+   Compiling percent-encoding v2.3.2
+   Compiling anstyle v1.0.14
+   Compiling anyhow v1.0.104
+   Compiling thiserror v2.0.21
+   Compiling annotate-snippets v0.12.17
+   Compiling form_urlencoded v1.2.2
+   Compiling granit-parser v2.2.0
+   Compiling digest v0.11.3
+   Compiling cpufeatures v0.3.1
+   Compiling encoding_rs_io v0.1.8
+   Compiling idna v1.1.0
+   Compiling thiserror-impl v2.0.21
+   Compiling serde_derive v1.0.229
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling nohash-hasher v0.2.0
+   Compiling base64 v0.23.1
+   Compiling serde-saphyr v2.2.0
+   Compiling url v2.5.8
+   Compiling sha2 v0.11.1
+   Compiling empack-core v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu/core)
+   Compiling rules-document-study v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu)
+warning: unused import: `lock::file_evidence`
+  --> src/engine/documents.rs:19:16
+   |
+19 | pub(crate) use lock::file_evidence;
+   |                ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `documents` is never used
+   --> src/engine/documents.rs:180:19
+    |
+175 | impl PreparedDocument {
+    | --------------------- method in this implementation
+...
+180 |     pub(crate) fn documents(
+    |                   ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `encoding_memory` is never used
+   --> src/engine/documents.rs:295:19
+    |
+210 | impl DocumentCodec {
+    | ------------------ method in this implementation
+...
+295 |     pub(crate) fn encoding_memory(&self, project: &ResolvedProject) -> Result<u64> {
+    |                   ^^^^^^^^^^^^^^^
+
+warning: struct `Size` is never constructed
+ --> src/engine/documents/sizing.rs:5:8
+  |
+5 | struct Size(u64);
+  |        ^^^^
+
+warning: multiple methods are never used
+  --> src/engine/documents/sizing.rs:7:8
+   |
+ 6 | impl Size {
+   | --------- methods in this implementation
+ 7 |     fn add(&mut self, bytes: u64) -> Result<()> {
+   |        ^^^
+...
+14 |     fn nodes(&mut self, count: usize) -> Result<()> {
+   |        ^^^^^
+...
+21 |     fn text(&mut self, text: &str) -> Result<()> {
+   |        ^^^^
+...
+29 |     fn optional(&mut self, value: Option<&str>) -> Result<()> {
+   |        ^^^^^^^^
+...
+35 |     fn requirements(&mut self, value: &Requirements) -> Result<()> {
+   |        ^^^^^^^^^^^^
+...
+45 |     fn placements(&mut self, values: &[Placement]) -> Result<()> {
+   |        ^^^^^^^^^^
+...
+53 |     fn extension(&mut self, value: &ExtensionValue) -> Result<()> {
+   |        ^^^^^^^^^
+
+warning: function `encoding_memory` is never used
+  --> src/engine/documents/sizing.rs:78:15
+   |
+78 | pub(super) fn encoding_memory(project: &ResolvedProject) -> Result<u64> {
+   |               ^^^^^^^^^^^^^^^
+
+warning: stripping debug info with `rust-objcopy` failed: signal: 6 (SIGABRT)
+  |
+  = note: dyld[45301]: Library not loaded: @rpath/libLLVM.dylib
+            Referenced from: <0CD2A5EB-71C0-36E9-A5D6-21645D10A1A1> /Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/rust-objcopy
+            Reason: tried: '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/lib/libLLVM.dylib' (no such file), '/usr/local/lib/libLLVM.dylib' (no such file), '/usr/lib/libLLVM.dylib' (no such file, not in dyld cache)
+          
+
+warning: `rules-document-study` (lib) generated 7 warnings (run `cargo fix --lib -p rules-document-study` to apply 1 suggestion)
+warning: stripping debug info with `rust-objcopy` failed: signal: 6 (SIGABRT)
+  |
+  = note: dyld[45307]: Library not loaded: @rpath/libLLVM.dylib
+            Referenced from: <0CD2A5EB-71C0-36E9-A5D6-21645D10A1A1> /Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/rust-objcopy
+            Reason: tried: '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/bin/../lib/libLLVM.dylib' (no such file), '/Users/zer0cell/lib/libLLVM.dylib' (no such file), '/usr/local/lib/libLLVM.dylib' (no such file), '/usr/lib/libLLVM.dylib' (no such file, not in dyld cache)
+          
+
+warning: `rules-document-study` (bin "rules-document-study") generated 1 warning
+    Finished `dev` profile [unoptimized] target(s) in 12.69s

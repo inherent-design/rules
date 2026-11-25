@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "originalObserverFailure": "Expected .cargo-checksum.json was absent in this Cargo registry layout.",
+  "discriminatingObservation": "Registry sources and .cargo-ok exist;cached .crate archives are available and match locked checksums.",
+  "correction": "Read tar members without extraction;compare every regular member byte hash to its corresponding registry source after checking the archive against Cargo.lock. No source mutation or weaker admission."
+}

@@ -1,0 +1,121 @@
+   Compiling stable_deref_trait v1.2.1
+   Compiling zerofrom v0.1.8
+   Compiling writeable v0.6.4
+   Compiling yoke v0.8.3
+   Compiling zerovec v0.11.8
+   Compiling litemap v0.8.3
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_locale_core v2.3.0
+   Compiling smallvec v1.16.3
+   Compiling utf8_iter v1.0.4
+   Compiling icu_properties_data v2.3.0
+   Compiling icu_normalizer_data v2.3.0
+   Compiling icu_collections v2.3.0
+   Compiling icu_provider v2.3.1
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling zmij v1.0.23
+   Compiling icu_properties v2.3.0
+   Compiling hybrid-array v0.4.15
+   Compiling icu_normalizer v2.3.0
+   Compiling encoding_rs v0.8.42
+   Compiling scopeguard v1.2.0
+   Compiling idna_adapter v1.2.2
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling num-traits v0.2.19
+   Compiling unicode-width v0.2.2
+   Compiling anstyle v1.0.14
+   Compiling arraydeque v0.5.1
+   Compiling percent-encoding v2.3.2
+   Compiling const-oid v0.10.2
+   Compiling thiserror v2.0.21
+   Compiling anyhow v1.0.104
+   Compiling digest v0.11.3
+   Compiling form_urlencoded v1.2.2
+   Compiling granit-parser v2.2.0
+   Compiling serde v1.0.229
+   Compiling annotate-snippets v0.12.17
+   Compiling serde_json v1.0.154
+   Compiling idna v1.1.0
+   Compiling encoding_rs_io v0.1.8
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling base64 v0.23.1
+   Compiling nohash-hasher v0.2.0
+   Compiling serde-saphyr v2.2.0
+   Compiling url v2.5.8
+   Compiling sha2 v0.11.1
+   Compiling empack-core v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu/core)
+   Compiling rules-document-study v0.0.0 (/private/tmp/rules-portable-documents-3nedxpuu)
+warning: unused import: `lock::file_evidence`
+  --> src/engine/documents.rs:19:16
+   |
+19 | pub(crate) use lock::file_evidence;
+   |                ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `documents` is never used
+   --> src/engine/documents.rs:180:19
+    |
+175 | impl PreparedDocument {
+    | --------------------- method in this implementation
+...
+180 |     pub(crate) fn documents(
+    |                   ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `encoding_memory` is never used
+   --> src/engine/documents.rs:295:19
+    |
+210 | impl DocumentCodec {
+    | ------------------ method in this implementation
+...
+295 |     pub(crate) fn encoding_memory(&self, project: &ResolvedProject) -> Result<u64> {
+    |                   ^^^^^^^^^^^^^^^
+
+warning: struct `Size` is never constructed
+ --> src/engine/documents/sizing.rs:5:8
+  |
+5 | struct Size(u64);
+  |        ^^^^
+
+warning: multiple methods are never used
+  --> src/engine/documents/sizing.rs:7:8
+   |
+ 6 | impl Size {
+   | --------- methods in this implementation
+ 7 |     fn add(&mut self, bytes: u64) -> Result<()> {
+   |        ^^^
+...
+14 |     fn nodes(&mut self, count: usize) -> Result<()> {
+   |        ^^^^^
+...
+21 |     fn text(&mut self, text: &str) -> Result<()> {
+   |        ^^^^
+...
+29 |     fn optional(&mut self, value: Option<&str>) -> Result<()> {
+   |        ^^^^^^^^
+...
+35 |     fn requirements(&mut self, value: &Requirements) -> Result<()> {
+   |        ^^^^^^^^^^^^
+...
+45 |     fn placements(&mut self, values: &[Placement]) -> Result<()> {
+   |        ^^^^^^^^^^
+...
+53 |     fn extension(&mut self, value: &ExtensionValue) -> Result<()> {
+   |        ^^^^^^^^^
+
+warning: function `encoding_memory` is never used
+  --> src/engine/documents/sizing.rs:78:15
+   |
+78 | pub(super) fn encoding_memory(project: &ResolvedProject) -> Result<u64> {
+   |               ^^^^^^^^^^^^^^^
+
+warning: `rules-document-study` (lib) generated 6 warnings (run `cargo fix --lib -p rules-document-study` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized] target(s) in 6.22s
