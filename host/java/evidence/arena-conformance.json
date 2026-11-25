@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "nativeComparisons": 11,
+  "decoderRefusals": 6,
+  "adapterRefusals": 4,
+  "changedObservationControls": 4,
+  "profile": {
+    "JAVA_VERSION": "25.0.4.1",
+    "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "projectedInputSha256": "9da47730579927b66517d04ade0085426aa3fb2ad20c4e2673ea1bd4c324dbe6",
+  "basisSha256": {
+    "host/java/ArenaAccess.bend": "ce0d48f6bccd31b4226e709a6f864f93b6a550ac0aeeb9ae1166fca8bf9bf711",
+    "host/java/ArenaAccess.lean": "ba5a5b3631c48572a1a5c03d23b381fb1c39adb9314e52b4607dc2c2d8db2ed8",
+    "host/java/ArenaAccessCase.lean": "2ff3eb131ac80a9619386a7a5d6cf6c0bf1d2ba277d505cf980b28fc1906c2cf",
+    "host/java/arena_conformance.py": "9bc8e03dffb65b00045ec02569578719f28f1f603b6bc2e9484167f164f958e8",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/ArenaProbe.java": "c7560f9b5012791a8757c729a8732b74061e1052766140743caddbac0b410913",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/execute.stdout": "632bfe382be23c58fd1d96b2ff16669e90e62b836c2d805b16d8fa2467545f62",
+    "host/java/evidence/java25-arena-20261125T043213057721Z/receipt.json": "5ead17e927cc928ceb9f4dfac85fecbab0a693e39254f642386c05a27a30d569"
+  },
+  "limits": [
+    "Only confined/shared aligned long segments, sequential operations with joined workers;no simultaneous access/close race.",
+    "No raw address,FFI,JNI,GPU,game code,physical-memory measurement or application authority qualification.",
+    "Owner means creating Java thread,not human principal. Shared access is not synchronization.",
+    "FFM is stable since Java22;this witness selects Java25 without preview flags.",
+    "A valid aligned long and completed thread joins are premises. Historical value is not readable storage after closure.",
+    "The simultaneous closed/wrong-thread combination is a model-only reason set;exception precedence is not observed.",
+    "No native comparisons on Windows or GNU/Linux for this new API band."
+  ]
+}

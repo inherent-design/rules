@@ -1,0 +1,2688 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "summary": {
+    "kind": "summary",
+    "classes": 11383,
+    "methods": 98739,
+    "selectedInvokeInstructions": 12593,
+    "dynamicInvokeInstructions": 32235
+  },
+  "classVersions": [
+    {
+      "major": 69,
+      "minor": 0,
+      "count": 11383
+    }
+  ],
+  "nativeDeclarations": 0,
+  "families": {
+    "desktop": {
+      "instructions": 74,
+      "callerClasses": 6,
+      "targetMembers": 54,
+      "ownerCounts": {
+        "java/awt/BorderLayout": 3,
+        "java/awt/Color": 2,
+        "java/awt/Dimension": 5,
+        "java/awt/Font": 2,
+        "java/awt/Graphics": 6,
+        "java/awt/GraphicsEnvironment": 1,
+        "java/awt/event/FocusAdapter": 1,
+        "java/awt/event/WindowAdapter": 1,
+        "javax/swing/JComponent": 2,
+        "javax/swing/JFrame": 8,
+        "javax/swing/JList": 1,
+        "javax/swing/JPanel": 8,
+        "javax/swing/JScrollBar": 4,
+        "javax/swing/JScrollPane": 5,
+        "javax/swing/JTextArea": 5,
+        "javax/swing/JTextField": 4,
+        "javax/swing/JViewport": 1,
+        "javax/swing/SwingUtilities": 2,
+        "javax/swing/Timer": 3,
+        "javax/swing/UIManager": 2,
+        "javax/swing/border/EtchedBorder": 3,
+        "javax/swing/border/TitledBorder": 3,
+        "javax/swing/text/Document": 2
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "net/minecraft/server/Main",
+        "method": "lambda$main$3",
+        "descriptor": "(Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/dedicated/DedicatedServerSettings;Lnet/minecraft/server/Services;Lnet/minecraft/server/jsonrpc/ManagementServer;Lnet/minecraft/server/notifications/NotificationManager;Ljoptsimple/OptionSet;Ljoptsimple/OptionSpec;Ljoptsimple/OptionSpec;Ljoptsimple/OptionSpec;Ljoptsimple/OptionSpec;Ljoptsimple/OptionSpec;Ljava/lang/Thread;)Lnet/minecraft/server/dedicated/DedicatedServer;",
+        "elementOrdinal": 79,
+        "family": "desktop",
+        "opcode": "INVOKESTATIC",
+        "owner": "java/awt/GraphicsEnvironment",
+        "name": "isHeadless",
+        "type": "()Z"
+      }
+    },
+    "filesystem-stream": {
+      "instructions": 1705,
+      "callerClasses": 289,
+      "targetMembers": 276,
+      "ownerCounts": {
+        "java/io/BufferedInputStream": 7,
+        "java/io/BufferedOutputStream": 7,
+        "java/io/BufferedReader": 46,
+        "java/io/BufferedWriter": 19,
+        "java/io/ByteArrayInputStream": 2,
+        "java/io/ByteArrayOutputStream": 21,
+        "java/io/DataInput": 36,
+        "java/io/DataInputStream": 27,
+        "java/io/DataOutput": 35,
+        "java/io/DataOutputStream": 24,
+        "java/io/File": 144,
+        "java/io/FileInputStream": 4,
+        "java/io/FileNotFoundException": 2,
+        "java/io/FileOutputStream": 11,
+        "java/io/FilterInputStream": 3,
+        "java/io/IOException": 54,
+        "java/io/InputStream": 103,
+        "java/io/InputStreamReader": 17,
+        "java/io/OutputStream": 28,
+        "java/io/OutputStreamWriter": 11,
+        "java/io/PrintStream": 6,
+        "java/io/PrintWriter": 40,
+        "java/io/PushbackInputStream": 5,
+        "java/io/Reader": 41,
+        "java/io/StringReader": 6,
+        "java/io/StringWriter": 8,
+        "java/io/UncheckedIOException": 23,
+        "java/io/Writer": 75,
+        "java/nio/file/AccessDeniedException": 1,
+        "java/nio/file/AccessMode": 6,
+        "java/nio/file/AtomicMoveNotSupportedException": 1,
+        "java/nio/file/CopyOption": 2,
+        "java/nio/file/DirectoryIteratorException": 1,
+        "java/nio/file/DirectoryNotEmptyException": 1,
+        "java/nio/file/DirectoryStream": 12,
+        "java/nio/file/DirectoryStream$Filter": 2,
+        "java/nio/file/FileAlreadyExistsException": 2,
+        "java/nio/file/FileStore": 11,
+        "java/nio/file/FileSystem": 14,
+        "java/nio/file/FileSystemException": 1,
+        "java/nio/file/FileSystems": 4,
+        "java/nio/file/Files": 328,
+        "java/nio/file/NoSuchFileException": 5,
+        "java/nio/file/NotDirectoryException": 2,
+        "java/nio/file/Path": 431,
+        "java/nio/file/PathMatcher": 5,
+        "java/nio/file/Paths": 21,
+        "java/nio/file/ProviderMismatchException": 2,
+        "java/nio/file/ReadOnlyFileSystemException": 6,
+        "java/nio/file/SimpleFileVisitor": 9,
+        "java/nio/file/WatchEvent": 2,
+        "java/nio/file/WatchKey": 3,
+        "java/nio/file/WatchService": 3,
+        "java/nio/file/attribute/BasicFileAttributes": 15,
+        "java/nio/file/attribute/FileTime": 3,
+        "java/nio/file/spi/FileSystemProvider": 7
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/Blaze3D",
+        "method": "openPath",
+        "descriptor": "(Ljava/nio/file/Path;)V",
+        "elementOrdinal": 4,
+        "family": "filesystem-stream",
+        "opcode": "INVOKEINTERFACE",
+        "owner": "java/nio/file/Path",
+        "name": "normalize",
+        "type": "()Ljava/nio/file/Path;"
+      }
+    },
+    "lwjgl": {
+      "instructions": 2278,
+      "callerClasses": 109,
+      "targetMembers": 1137,
+      "ownerCounts": {
+        "org/lwjgl/BufferUtils": 3,
+        "org/lwjgl/PointerBuffer": 64,
+        "org/lwjgl/Version": 2,
+        "org/lwjgl/openal/AL": 1,
+        "org/lwjgl/openal/AL10": 30,
+        "org/lwjgl/openal/ALC": 2,
+        "org/lwjgl/openal/ALC10": 16,
+        "org/lwjgl/openal/ALC11": 1,
+        "org/lwjgl/openal/ALUtil": 1,
+        "org/lwjgl/openal/SOFTSystemEvents": 3,
+        "org/lwjgl/opengl/ARBBaseInstance": 2,
+        "org/lwjgl/opengl/ARBBufferStorage": 3,
+        "org/lwjgl/opengl/ARBClipControl": 1,
+        "org/lwjgl/opengl/ARBDebugOutput": 2,
+        "org/lwjgl/opengl/ARBDirectStateAccess": 14,
+        "org/lwjgl/opengl/ARBDrawIndirect": 2,
+        "org/lwjgl/opengl/ARBMultiDrawIndirect": 2,
+        "org/lwjgl/opengl/ARBVertexAttribBinding": 6,
+        "org/lwjgl/opengl/EXTDebugLabel": 4,
+        "org/lwjgl/opengl/GL": 5,
+        "org/lwjgl/opengl/GL33C": 148,
+        "org/lwjgl/opengl/GLDebugMessageARBCallback": 1,
+        "org/lwjgl/opengl/GLDebugMessageCallback": 2,
+        "org/lwjgl/opengl/KHRDebug": 8,
+        "org/lwjgl/sdl/SDL": 1,
+        "org/lwjgl/sdl/SDLClipboard": 2,
+        "org/lwjgl/sdl/SDLError": 31,
+        "org/lwjgl/sdl/SDLEvents": 4,
+        "org/lwjgl/sdl/SDLHints": 9,
+        "org/lwjgl/sdl/SDLInit": 10,
+        "org/lwjgl/sdl/SDLKeyboard": 10,
+        "org/lwjgl/sdl/SDLLog": 2,
+        "org/lwjgl/sdl/SDLMessageBox": 2,
+        "org/lwjgl/sdl/SDLMisc": 1,
+        "org/lwjgl/sdl/SDLMouse": 9,
+        "org/lwjgl/sdl/SDLPixels": 1,
+        "org/lwjgl/sdl/SDLPlatform": 1,
+        "org/lwjgl/sdl/SDLStdinc": 4,
+        "org/lwjgl/sdl/SDLSurface": 4,
+        "org/lwjgl/sdl/SDLTimer": 1,
+        "org/lwjgl/sdl/SDLVideo": 60,
+        "org/lwjgl/sdl/SDLVulkan": 7,
+        "org/lwjgl/sdl/SDL_DisplayEvent": 3,
+        "org/lwjgl/sdl/SDL_DisplayMode": 6,
+        "org/lwjgl/sdl/SDL_DropEvent": 1,
+        "org/lwjgl/sdl/SDL_Event": 23,
+        "org/lwjgl/sdl/SDL_KeyboardEvent": 4,
+        "org/lwjgl/sdl/SDL_LogOutputFunction": 1,
+        "org/lwjgl/sdl/SDL_MessageBoxButtonData": 5,
+        "org/lwjgl/sdl/SDL_MessageBoxButtonData$Buffer": 2,
+        "org/lwjgl/sdl/SDL_MessageBoxData": 5,
+        "org/lwjgl/sdl/SDL_MouseButtonEvent": 1,
+        "org/lwjgl/sdl/SDL_MouseMotionEvent": 4,
+        "org/lwjgl/sdl/SDL_MouseWheelEvent": 5,
+        "org/lwjgl/sdl/SDL_PixelFormatDetails": 3,
+        "org/lwjgl/sdl/SDL_Rect": 11,
+        "org/lwjgl/sdl/SDL_Rect$Buffer": 4,
+        "org/lwjgl/sdl/SDL_Surface": 2,
+        "org/lwjgl/sdl/SDL_TextEditingEvent": 3,
+        "org/lwjgl/sdl/SDL_TextInputEvent": 1,
+        "org/lwjgl/sdl/SDL_WindowEvent": 6,
+        "org/lwjgl/stb/STBIWriteCallback": 1,
+        "org/lwjgl/stb/STBImage": 5,
+        "org/lwjgl/stb/STBImageResize": 1,
+        "org/lwjgl/stb/STBImageWrite": 1,
+        "org/lwjgl/system/Configuration": 13,
+        "org/lwjgl/system/FunctionProvider": 2,
+        "org/lwjgl/system/Library": 1,
+        "org/lwjgl/system/MemoryStack": 422,
+        "org/lwjgl/system/MemoryUtil": 153,
+        "org/lwjgl/system/MemoryUtil$MemoryAllocator": 3,
+        "org/lwjgl/system/Platform": 4,
+        "org/lwjgl/system/Platform$Architecture": 2,
+        "org/lwjgl/system/SharedLibrary": 2,
+        "org/lwjgl/system/Struct": 2,
+        "org/lwjgl/system/macosx/ObjCRuntime": 2,
+        "org/lwjgl/util/freetype/FT_Bitmap": 10,
+        "org/lwjgl/util/freetype/FT_Face": 3,
+        "org/lwjgl/util/freetype/FT_GlyphSlot": 5,
+        "org/lwjgl/util/freetype/FT_Vector": 3,
+        "org/lwjgl/util/freetype/FreeType": 15,
+        "org/lwjgl/util/shaderc/Shaderc": 22,
+        "org/lwjgl/util/shaderc/ShadercIncludeResolve": 3,
+        "org/lwjgl/util/shaderc/ShadercIncludeResult": 8,
+        "org/lwjgl/util/shaderc/ShadercIncludeResultRelease": 2,
+        "org/lwjgl/util/spvc/Spvc": 53,
+        "org/lwjgl/util/spvc/SpvcReflectedResource": 27,
+        "org/lwjgl/util/spvc/SpvcReflectedResource$Buffer": 5,
+        "org/lwjgl/util/vma/Vma": 13,
+        "org/lwjgl/util/vma/VmaAllocationCreateInfo": 20,
+        "org/lwjgl/util/vma/VmaAllocationInfo": 2,
+        "org/lwjgl/util/vma/VmaAllocatorCreateInfo": 6,
+        "org/lwjgl/util/vma/VmaVulkanFunctions": 2,
+        "org/lwjgl/vulkan/AMDBufferMarker": 1,
+        "org/lwjgl/vulkan/EXTCalibratedTimestamps": 1,
+        "org/lwjgl/vulkan/EXTDebugUtils": 5,
+        "org/lwjgl/vulkan/EXTMultiDraw": 2,
+        "org/lwjgl/vulkan/KHRDynamicRendering": 2,
+        "org/lwjgl/vulkan/KHRPushDescriptor": 1,
+        "org/lwjgl/vulkan/KHRSurface": 6,
+        "org/lwjgl/vulkan/KHRSwapchain": 6,
+        "org/lwjgl/vulkan/KHRSynchronization2": 7,
+        "org/lwjgl/vulkan/NVDeviceDiagnosticCheckpoints": 3,
+        "org/lwjgl/vulkan/VK": 3,
+        "org/lwjgl/vulkan/VK12": 91,
+        "org/lwjgl/vulkan/VkApplicationInfo": 7,
+        "org/lwjgl/vulkan/VkBufferCopy": 4,
+        "org/lwjgl/vulkan/VkBufferCopy$Buffer": 12,
+        "org/lwjgl/vulkan/VkBufferCreateInfo": 12,
+        "org/lwjgl/vulkan/VkBufferImageCopy": 3,
+        "org/lwjgl/vulkan/VkBufferImageCopy$Buffer": 18,
+        "org/lwjgl/vulkan/VkBufferViewCreateInfo": 6,
+        "org/lwjgl/vulkan/VkCalibratedTimestampInfoEXT": 1,
+        "org/lwjgl/vulkan/VkCalibratedTimestampInfoEXT$Buffer": 3,
+        "org/lwjgl/vulkan/VkCalibratedTimestampInfoKHR": 4,
+        "org/lwjgl/vulkan/VkCheckpointData2NV": 4,
+        "org/lwjgl/vulkan/VkCheckpointData2NV$Buffer": 3,
+        "org/lwjgl/vulkan/VkClearAttachment": 1,
+        "org/lwjgl/vulkan/VkClearAttachment$Buffer": 6,
+        "org/lwjgl/vulkan/VkClearColorValue": 6,
+        "org/lwjgl/vulkan/VkClearDepthStencilValue": 5,
+        "org/lwjgl/vulkan/VkClearRect": 1,
+        "org/lwjgl/vulkan/VkClearRect$Buffer": 4,
+        "org/lwjgl/vulkan/VkClearValue": 8,
+        "org/lwjgl/vulkan/VkCommandBuffer": 1,
+        "org/lwjgl/vulkan/VkCommandBufferAllocateInfo": 5,
+        "org/lwjgl/vulkan/VkCommandBufferBeginInfo": 3,
+        "org/lwjgl/vulkan/VkCommandBufferSubmitInfo": 1,
+        "org/lwjgl/vulkan/VkCommandBufferSubmitInfo$Buffer": 3,
+        "org/lwjgl/vulkan/VkCommandPoolCreateInfo": 4,
+        "org/lwjgl/vulkan/VkDebugUtilsLabelEXT": 3,
+        "org/lwjgl/vulkan/VkDebugUtilsMessengerCallbackDataEXT": 2,
+        "org/lwjgl/vulkan/VkDebugUtilsMessengerCreateInfoEXT": 10,
+        "org/lwjgl/vulkan/VkDebugUtilsObjectNameInfoEXT": 5,
+        "org/lwjgl/vulkan/VkDependencyInfo": 10,
+        "org/lwjgl/vulkan/VkDescriptorBufferInfo": 1,
+        "org/lwjgl/vulkan/VkDescriptorBufferInfo$Buffer": 3,
+        "org/lwjgl/vulkan/VkDescriptorImageInfo": 1,
+        "org/lwjgl/vulkan/VkDescriptorImageInfo$Buffer": 3,
+        "org/lwjgl/vulkan/VkDescriptorSetLayoutBinding": 6,
+        "org/lwjgl/vulkan/VkDescriptorSetLayoutBinding$Buffer": 2,
+        "org/lwjgl/vulkan/VkDescriptorSetLayoutCreateInfo": 4,
+        "org/lwjgl/vulkan/VkDevice": 11,
+        "org/lwjgl/vulkan/VkDeviceCreateInfo": 6,
+        "org/lwjgl/vulkan/VkDeviceQueueCreateInfo": 1,
+        "org/lwjgl/vulkan/VkDeviceQueueCreateInfo$Buffer": 6,
+        "org/lwjgl/vulkan/VkExtensionProperties": 6,
+        "org/lwjgl/vulkan/VkExtensionProperties$Buffer": 10,
+        "org/lwjgl/vulkan/VkExtent2D": 13,
+        "org/lwjgl/vulkan/VkExtent3D": 5,
+        "org/lwjgl/vulkan/VkGraphicsPipelineCreateInfo": 1,
+        "org/lwjgl/vulkan/VkGraphicsPipelineCreateInfo$Buffer": 13,
+        "org/lwjgl/vulkan/VkImageBlit": 1,
+        "org/lwjgl/vulkan/VkImageBlit$Buffer": 4,
+        "org/lwjgl/vulkan/VkImageCopy": 1,
+        "org/lwjgl/vulkan/VkImageCopy$Buffer": 5,
+        "org/lwjgl/vulkan/VkImageCreateInfo": 13,
+        "org/lwjgl/vulkan/VkImageMemoryBarrier": 1,
+        "org/lwjgl/vulkan/VkImageMemoryBarrier$Buffer": 9,
+        "org/lwjgl/vulkan/VkImageMemoryBarrier2": 2,
+        "org/lwjgl/vulkan/VkImageMemoryBarrier2$Buffer": 22,
+        "org/lwjgl/vulkan/VkImageSubresourceLayers": 27,
+        "org/lwjgl/vulkan/VkImageSubresourceRange": 32,
+        "org/lwjgl/vulkan/VkImageViewCreateInfo": 6,
+        "org/lwjgl/vulkan/VkInstance": 1,
+        "org/lwjgl/vulkan/VkInstanceCreateInfo": 7,
+        "org/lwjgl/vulkan/VkLayerProperties": 2,
+        "org/lwjgl/vulkan/VkLayerProperties$Buffer": 1,
+        "org/lwjgl/vulkan/VkMemoryBarrier2": 2,
+        "org/lwjgl/vulkan/VkMemoryBarrier2$Buffer": 10,
+        "org/lwjgl/vulkan/VkMemoryHeap": 4,
+        "org/lwjgl/vulkan/VkMemoryType": 6,
+        "org/lwjgl/vulkan/VkOffset2D": 3,
+        "org/lwjgl/vulkan/VkOffset3D": 7,
+        "org/lwjgl/vulkan/VkOffset3D$Buffer": 16,
+        "org/lwjgl/vulkan/VkPhysicalDevice": 5,
+        "org/lwjgl/vulkan/VkPhysicalDeviceDriverProperties": 7,
+        "org/lwjgl/vulkan/VkPhysicalDeviceFeatures2": 13,
+        "org/lwjgl/vulkan/VkPhysicalDeviceLimits": 7,
+        "org/lwjgl/vulkan/VkPhysicalDeviceMemoryProperties": 8,
+        "org/lwjgl/vulkan/VkPhysicalDeviceMultiDrawPropertiesEXT": 5,
+        "org/lwjgl/vulkan/VkPhysicalDeviceProperties": 14,
+        "org/lwjgl/vulkan/VkPhysicalDeviceProperties2": 22,
+        "org/lwjgl/vulkan/VkPhysicalDeviceVulkan11Properties": 5,
+        "org/lwjgl/vulkan/VkPipelineColorBlendAttachmentState": 1,
+        "org/lwjgl/vulkan/VkPipelineColorBlendAttachmentState$Buffer": 11,
+        "org/lwjgl/vulkan/VkPipelineColorBlendStateCreateInfo": 3,
+        "org/lwjgl/vulkan/VkPipelineDepthStencilStateCreateInfo": 5,
+        "org/lwjgl/vulkan/VkPipelineDynamicStateCreateInfo": 3,
+        "org/lwjgl/vulkan/VkPipelineInputAssemblyStateCreateInfo": 3,
+        "org/lwjgl/vulkan/VkPipelineLayoutCreateInfo": 4,
+        "org/lwjgl/vulkan/VkPipelineMultisampleStateCreateInfo": 4,
+        "org/lwjgl/vulkan/VkPipelineRasterizationStateCreateInfo": 9,
+        "org/lwjgl/vulkan/VkPipelineRenderingCreateInfoKHR": 5,
+        "org/lwjgl/vulkan/VkPipelineShaderStageCreateInfo": 6,
+        "org/lwjgl/vulkan/VkPipelineShaderStageCreateInfo$Buffer": 2,
+        "org/lwjgl/vulkan/VkPipelineVertexInputDivisorStateCreateInfoEXT": 4,
+        "org/lwjgl/vulkan/VkPipelineVertexInputStateCreateInfo": 5,
+        "org/lwjgl/vulkan/VkPipelineViewportStateCreateInfo": 4,
+        "org/lwjgl/vulkan/VkPresentInfoKHR": 6,
+        "org/lwjgl/vulkan/VkPushConstantRange": 1,
+        "org/lwjgl/vulkan/VkPushConstantRange$Buffer": 3,
+        "org/lwjgl/vulkan/VkQueryPoolCreateInfo": 4,
+        "org/lwjgl/vulkan/VkQueue": 3,
+        "org/lwjgl/vulkan/VkQueueFamilyProperties": 10,
+        "org/lwjgl/vulkan/VkQueueFamilyProperties$Buffer": 2,
+        "org/lwjgl/vulkan/VkRect2D": 6,
+        "org/lwjgl/vulkan/VkRect2D$Buffer": 2,
+        "org/lwjgl/vulkan/VkRenderingAttachmentInfo": 9,
+        "org/lwjgl/vulkan/VkRenderingAttachmentInfo$Buffer": 13,
+        "org/lwjgl/vulkan/VkRenderingInfo": 7,
+        "org/lwjgl/vulkan/VkSamplerCreateInfo": 11,
+        "org/lwjgl/vulkan/VkSemaphoreCreateInfo": 7,
+        "org/lwjgl/vulkan/VkSemaphoreSubmitInfo": 2,
+        "org/lwjgl/vulkan/VkSemaphoreSubmitInfo$Buffer": 10,
+        "org/lwjgl/vulkan/VkSemaphoreTypeCreateInfo": 4,
+        "org/lwjgl/vulkan/VkSemaphoreWaitInfo": 5,
+        "org/lwjgl/vulkan/VkShaderModuleCreateInfo": 3,
+        "org/lwjgl/vulkan/VkSubmitInfo2": 1,
+        "org/lwjgl/vulkan/VkSubmitInfo2$Buffer": 6,
+        "org/lwjgl/vulkan/VkSurfaceCapabilitiesKHR": 5,
+        "org/lwjgl/vulkan/VkSurfaceFormatKHR": 5,
+        "org/lwjgl/vulkan/VkSurfaceFormatKHR$Buffer": 1,
+        "org/lwjgl/vulkan/VkSwapchainCreateInfoKHR": 14,
+        "org/lwjgl/vulkan/VkVertexInputAttributeDescription": 6,
+        "org/lwjgl/vulkan/VkVertexInputAttributeDescription$Buffer": 2,
+        "org/lwjgl/vulkan/VkVertexInputBindingDescription": 5,
+        "org/lwjgl/vulkan/VkVertexInputBindingDescription$Buffer": 2,
+        "org/lwjgl/vulkan/VkVertexInputBindingDivisorDescriptionEXT": 4,
+        "org/lwjgl/vulkan/VkVertexInputBindingDivisorDescriptionEXT$Buffer": 2,
+        "org/lwjgl/vulkan/VkViewport": 1,
+        "org/lwjgl/vulkan/VkViewport$Buffer": 6,
+        "org/lwjgl/vulkan/VkWriteDescriptorSet": 11,
+        "org/lwjgl/vulkan/VkWriteDescriptorSet$Buffer": 2
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/Blaze3D",
+        "method": "youJustLostTheGame",
+        "descriptor": "()V",
+        "elementOrdinal": 4,
+        "family": "lwjgl",
+        "opcode": "INVOKESTATIC",
+        "owner": "org/lwjgl/system/MemoryUtil",
+        "name": "memSet",
+        "type": "(JIJ)V"
+      }
+    },
+    "native-platform": {
+      "instructions": 63,
+      "callerClasses": 4,
+      "targetMembers": 46,
+      "ownerCounts": {
+        "com/sun/jna/Memory": 1,
+        "com/sun/jna/Native": 2,
+        "com/sun/jna/Platform": 2,
+        "com/sun/jna/Pointer": 2,
+        "com/sun/jna/platform/win32/Kernel32": 1,
+        "com/sun/jna/platform/win32/Kernel32Util": 1,
+        "com/sun/jna/platform/win32/Tlhelp32$MODULEENTRY32W": 2,
+        "com/sun/jna/platform/win32/Version": 3,
+        "com/sun/jna/platform/win32/Win32Exception": 2,
+        "com/sun/jna/ptr/IntByReference": 4,
+        "com/sun/jna/ptr/PointerByReference": 2,
+        "oshi/SystemInfo": 8,
+        "oshi/hardware/CentralProcessor": 11,
+        "oshi/hardware/CentralProcessor$ProcessorIdentifier": 2,
+        "oshi/hardware/GlobalMemory": 2,
+        "oshi/hardware/GraphicsCard": 1,
+        "oshi/hardware/HardwareAbstractionLayer": 5,
+        "oshi/hardware/PhysicalMemory": 2,
+        "oshi/hardware/VirtualMemory": 4,
+        "oshi/software/os/OSProcess": 5,
+        "oshi/software/os/OperatingSystem": 1
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "net/minecraft/SystemReport",
+        "method": "putHardware",
+        "descriptor": "(Loshi/SystemInfo;)V",
+        "elementOrdinal": 6,
+        "family": "native-platform",
+        "opcode": "INVOKEVIRTUAL",
+        "owner": "oshi/SystemInfo",
+        "name": "getHardware",
+        "type": "()Loshi/hardware/HardwareAbstractionLayer;"
+      }
+    },
+    "network": {
+      "instructions": 307,
+      "callerClasses": 60,
+      "targetMembers": 123,
+      "ownerCounts": {
+        "java/net/Authenticator": 2,
+        "java/net/DatagramPacket": 21,
+        "java/net/DatagramSocket": 8,
+        "java/net/HttpURLConnection": 69,
+        "java/net/IDN": 2,
+        "java/net/InetAddress": 13,
+        "java/net/InetSocketAddress": 20,
+        "java/net/MalformedURLException": 1,
+        "java/net/MulticastSocket": 6,
+        "java/net/PasswordAuthentication": 1,
+        "java/net/Proxy": 2,
+        "java/net/ServerSocket": 15,
+        "java/net/Socket": 12,
+        "java/net/URI": 73,
+        "java/net/URISyntaxException": 2,
+        "java/net/URL": 14,
+        "java/net/http/HttpClient": 11,
+        "java/net/http/HttpClient$Builder": 6,
+        "java/net/http/HttpHeaders": 4,
+        "java/net/http/HttpRequest": 2,
+        "java/net/http/HttpRequest$BodyPublishers": 2,
+        "java/net/http/HttpRequest$Builder": 10,
+        "java/net/http/HttpResponse": 8,
+        "java/net/http/HttpResponse$BodyHandlers": 3
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/Blaze3D",
+        "method": "lambda$openUri$0",
+        "descriptor": "(Ljava/net/URI;)V",
+        "elementOrdinal": 4,
+        "family": "network",
+        "opcode": "INVOKEVIRTUAL",
+        "owner": "java/net/URI",
+        "name": "toString",
+        "type": "()Ljava/lang/String;"
+      }
+    },
+    "network-netty": {
+      "instructions": 868,
+      "callerClasses": 91,
+      "targetMembers": 325,
+      "ownerCounts": {
+        "io/netty/bootstrap/Bootstrap": 15,
+        "io/netty/bootstrap/ServerBootstrap": 19,
+        "io/netty/buffer/ByteBuf": 412,
+        "io/netty/buffer/ByteBufAllocator": 8,
+        "io/netty/buffer/ByteBufInputStream": 1,
+        "io/netty/buffer/ByteBufOutputStream": 1,
+        "io/netty/buffer/ByteBufUtil": 6,
+        "io/netty/buffer/Unpooled": 6,
+        "io/netty/channel/Channel": 82,
+        "io/netty/channel/ChannelConfig": 7,
+        "io/netty/channel/ChannelDuplexHandler": 4,
+        "io/netty/channel/ChannelFuture": 32,
+        "io/netty/channel/ChannelHandlerContext": 63,
+        "io/netty/channel/ChannelInboundHandlerAdapter": 4,
+        "io/netty/channel/ChannelInitializer": 6,
+        "io/netty/channel/ChannelOutboundHandlerAdapter": 4,
+        "io/netty/channel/ChannelPipeline": 51,
+        "io/netty/channel/ChannelPromise": 2,
+        "io/netty/channel/EventLoop": 4,
+        "io/netty/channel/EventLoopGroup": 3,
+        "io/netty/channel/MultiThreadIoEventLoopGroup": 2,
+        "io/netty/channel/SimpleChannelInboundHandler": 8,
+        "io/netty/channel/embedded/EmbeddedChannel": 1,
+        "io/netty/channel/epoll/Epoll": 1,
+        "io/netty/channel/epoll/EpollIoHandler": 1,
+        "io/netty/channel/kqueue/KQueue": 1,
+        "io/netty/channel/kqueue/KQueueIoHandler": 1,
+        "io/netty/channel/local/LocalIoHandler": 1,
+        "io/netty/channel/nio/NioIoHandler": 2,
+        "io/netty/handler/codec/ByteToMessageDecoder": 3,
+        "io/netty/handler/codec/CorruptedFrameException": 2,
+        "io/netty/handler/codec/DecoderException": 30,
+        "io/netty/handler/codec/EncoderException": 22,
+        "io/netty/handler/codec/MessageToByteEncoder": 4,
+        "io/netty/handler/codec/MessageToMessageDecoder": 3,
+        "io/netty/handler/codec/MessageToMessageEncoder": 2,
+        "io/netty/handler/codec/http/DefaultFullHttpResponse": 4,
+        "io/netty/handler/codec/http/HttpHeaders": 7,
+        "io/netty/handler/codec/http/HttpObjectAggregator": 1,
+        "io/netty/handler/codec/http/HttpRequest": 3,
+        "io/netty/handler/codec/http/HttpResponse": 2,
+        "io/netty/handler/codec/http/HttpResponseStatus": 2,
+        "io/netty/handler/codec/http/HttpServerCodec": 1,
+        "io/netty/handler/codec/http/websocketx/TextWebSocketFrame": 2,
+        "io/netty/handler/codec/http/websocketx/WebSocketFrameAggregator": 1,
+        "io/netty/handler/codec/http/websocketx/WebSocketServerProtocolHandler": 1,
+        "io/netty/handler/flow/FlowControlHandler": 1,
+        "io/netty/handler/logging/LoggingHandler": 1,
+        "io/netty/handler/ssl/SslContext": 1,
+        "io/netty/handler/ssl/SslContextBuilder": 3,
+        "io/netty/handler/timeout/ReadTimeoutException": 1,
+        "io/netty/handler/timeout/ReadTimeoutHandler": 3,
+        "io/netty/util/Attribute": 6,
+        "io/netty/util/AttributeKey": 2,
+        "io/netty/util/HashedWheelTimer": 1,
+        "io/netty/util/ReferenceCountUtil": 6,
+        "io/netty/util/ResourceLeakDetector": 1,
+        "io/netty/util/Timer": 1,
+        "io/netty/util/concurrent/Future": 1,
+        "io/netty/util/internal/ThreadLocalRandom": 2
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "net/minecraft/SharedConstants",
+        "method": "<clinit>",
+        "descriptor": "()V",
+        "elementOrdinal": 402,
+        "family": "network-netty",
+        "opcode": "INVOKESTATIC",
+        "owner": "io/netty/util/ResourceLeakDetector",
+        "name": "setLevel",
+        "type": "(Lio/netty/util/ResourceLeakDetector$Level;)V"
+      }
+    },
+    "process-runtime": {
+      "instructions": 183,
+      "callerClasses": 73,
+      "targetMembers": 24,
+      "ownerCounts": {
+        "java/lang/ProcessHandle": 2,
+        "java/lang/Runtime": 54,
+        "java/lang/System": 127
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/platform/ClientShutdownWatchdog",
+        "method": "lambda$startShutdownWatchdog$0",
+        "descriptor": "(ILjava/lang/String;JLnet/minecraft/client/Minecraft;Lnet/minecraft/client/main/GameConfig;Z)V",
+        "elementOrdinal": 80,
+        "family": "process-runtime",
+        "opcode": "INVOKESTATIC",
+        "owner": "java/lang/System",
+        "name": "exit",
+        "type": "(I)V"
+      }
+    },
+    "reflection-loading": {
+      "instructions": 136,
+      "callerClasses": 87,
+      "targetMembers": 37,
+      "ownerCounts": {
+        "java/lang/Class": 116,
+        "java/lang/ClassLoader": 1,
+        "java/lang/invoke/MethodHandle": 1,
+        "java/lang/invoke/MethodHandles": 1,
+        "java/lang/invoke/MethodHandles$Lookup": 1,
+        "java/lang/reflect/Array": 1,
+        "java/lang/reflect/Constructor": 1,
+        "java/lang/reflect/Field": 9,
+        "java/lang/reflect/Method": 4,
+        "java/lang/reflect/Modifier": 1
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/platform/DebugMemoryUntracker",
+        "method": "untrack",
+        "descriptor": "(J)V",
+        "elementOrdinal": 13,
+        "family": "reflection-loading",
+        "opcode": "INVOKEVIRTUAL",
+        "owner": "java/lang/invoke/MethodHandle",
+        "name": "invoke",
+        "type": "(J)V"
+      }
+    },
+    "renderpearl": {
+      "instructions": 5537,
+      "callerClasses": 245,
+      "targetMembers": 1160,
+      "ownerCounts": {
+        "com/mojang/renderpearl/api/GpuFormat": 218,
+        "com/mojang/renderpearl/api/GpuFormat$ComponentType": 33,
+        "com/mojang/renderpearl/api/buffers/GpuBuffer": 138,
+        "com/mojang/renderpearl/api/buffers/GpuBufferSlice": 136,
+        "com/mojang/renderpearl/api/buffers/GpuBufferSlice$MappedView": 85,
+        "com/mojang/renderpearl/api/buffers/TransientMemory": 14,
+        "com/mojang/renderpearl/api/commands/CommandEncoder": 79,
+        "com/mojang/renderpearl/api/commands/GpuFence": 10,
+        "com/mojang/renderpearl/api/commands/GpuQueryPool": 9,
+        "com/mojang/renderpearl/api/commands/RenderPass": 231,
+        "com/mojang/renderpearl/api/commands/RenderPass$Draw": 21,
+        "com/mojang/renderpearl/api/commands/RenderPass$RenderArea": 36,
+        "com/mojang/renderpearl/api/commands/RenderPass$UniformUploader": 1,
+        "com/mojang/renderpearl/api/commands/RenderPassDescriptor": 33,
+        "com/mojang/renderpearl/api/commands/RenderPassDescriptor$Attachment": 28,
+        "com/mojang/renderpearl/api/commands/RenderPassDescriptor$Builder": 31,
+        "com/mojang/renderpearl/api/device/BackendCreationException": 27,
+        "com/mojang/renderpearl/api/device/BackendCreationException$Reason": 14,
+        "com/mojang/renderpearl/api/device/DeviceFeatures": 22,
+        "com/mojang/renderpearl/api/device/DeviceInfo": 60,
+        "com/mojang/renderpearl/api/device/DeviceLimits": 21,
+        "com/mojang/renderpearl/api/device/DeviceType": 14,
+        "com/mojang/renderpearl/api/device/GpuBackend": 7,
+        "com/mojang/renderpearl/api/device/GpuDebugOptions": 7,
+        "com/mojang/renderpearl/api/device/GpuDevice": 178,
+        "com/mojang/renderpearl/api/device/GpuDeviceLossException": 1,
+        "com/mojang/renderpearl/api/device/GpuOutOfMemoryException": 3,
+        "com/mojang/renderpearl/api/device/GpuSurface": 16,
+        "com/mojang/renderpearl/api/device/GpuSurface$Configuration": 20,
+        "com/mojang/renderpearl/api/device/GpuSurface$PresentMode": 12,
+        "com/mojang/renderpearl/api/device/HintsAndWorkarounds": 6,
+        "com/mojang/renderpearl/api/device/SurfaceException": 7,
+        "com/mojang/renderpearl/api/pipeline/BindGroupLayout": 32,
+        "com/mojang/renderpearl/api/pipeline/BindGroupLayout$Builder": 72,
+        "com/mojang/renderpearl/api/pipeline/BindGroupLayout$UniformDescription": 39,
+        "com/mojang/renderpearl/api/pipeline/BlendEquation": 16,
+        "com/mojang/renderpearl/api/pipeline/BlendFactor": 50,
+        "com/mojang/renderpearl/api/pipeline/BlendFunction": 29,
+        "com/mojang/renderpearl/api/pipeline/BlendOp": 20,
+        "com/mojang/renderpearl/api/pipeline/ColorTargetState": 71,
+        "com/mojang/renderpearl/api/pipeline/CompareOp": 29,
+        "com/mojang/renderpearl/api/pipeline/CompiledRenderPipeline": 1,
+        "com/mojang/renderpearl/api/pipeline/CompiledRenderPipeline$Pending": 1,
+        "com/mojang/renderpearl/api/pipeline/DepthStencilState": 38,
+        "com/mojang/renderpearl/api/pipeline/IndexType": 24,
+        "com/mojang/renderpearl/api/pipeline/PolygonMode": 10,
+        "com/mojang/renderpearl/api/pipeline/PrimitiveTopology": 35,
+        "com/mojang/renderpearl/api/pipeline/RenderPipeline": 232,
+        "com/mojang/renderpearl/api/pipeline/RenderPipeline$Builder": 885,
+        "com/mojang/renderpearl/api/pipeline/RenderPipeline$Snippet": 1,
+        "com/mojang/renderpearl/api/pipeline/ShaderSource": 3,
+        "com/mojang/renderpearl/api/pipeline/ShaderSource$CachedIncludeSource": 9,
+        "com/mojang/renderpearl/api/pipeline/ShaderType": 22,
+        "com/mojang/renderpearl/api/pipeline/UniformType": 24,
+        "com/mojang/renderpearl/api/textures/AddressMode": 16,
+        "com/mojang/renderpearl/api/textures/FilterMode": 17,
+        "com/mojang/renderpearl/api/textures/GpuSampler": 4,
+        "com/mojang/renderpearl/api/textures/GpuTexture": 170,
+        "com/mojang/renderpearl/api/textures/GpuTextureView": 84,
+        "com/mojang/renderpearl/api/vertex/VertexFormat": 42,
+        "com/mojang/renderpearl/api/vertex/VertexFormat$Builder": 81,
+        "com/mojang/renderpearl/api/vertex/VertexFormatElement": 12,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline": 2,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline$CreateInfo": 49,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline$CreateInfo$AttribBinding": 18,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline$CreateInfo$Shader": 14,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline$CreateInfo$VertexBuffer": 15,
+        "com/mojang/renderpearl/backend/api/BackendRenderPipeline$Pending": 1,
+        "com/mojang/renderpearl/backend/api/CommandEncoderBackend": 17,
+        "com/mojang/renderpearl/backend/api/GpuDeviceBackend": 20,
+        "com/mojang/renderpearl/backend/api/GpuSurfaceBackend": 7,
+        "com/mojang/renderpearl/backend/api/RenderPassBackend": 19,
+        "com/mojang/renderpearl/backend/api/SpvModule": 18,
+        "com/mojang/renderpearl/backend/api/SpvModule$Reflection": 5,
+        "com/mojang/renderpearl/backend/api/SpvModule$Reflection$Descriptor": 9,
+        "com/mojang/renderpearl/backend/api/SpvModule$Reflection$InterfaceVariable": 17,
+        "com/mojang/renderpearl/backend/api/SpvModule$Reflection$PushConstant": 1,
+        "com/mojang/renderpearl/backend/api/SpvModule$Reflection$Type": 12,
+        "com/mojang/renderpearl/backend/common/BaseGpuBuffer": 7,
+        "com/mojang/renderpearl/backend/common/BaseGpuTexture": 2,
+        "com/mojang/renderpearl/backend/common/BaseGpuTextureView": 4,
+        "com/mojang/renderpearl/backend/opengl/BufferStorage": 6,
+        "com/mojang/renderpearl/backend/opengl/BufferStorage$Immutable": 1,
+        "com/mojang/renderpearl/backend/opengl/BufferStorage$Mutable": 1,
+        "com/mojang/renderpearl/backend/opengl/DirectStateAccess": 30,
+        "com/mojang/renderpearl/backend/opengl/DirectStateAccess$Core": 1,
+        "com/mojang/renderpearl/backend/opengl/DirectStateAccess$Emulated": 1,
+        "com/mojang/renderpearl/backend/opengl/FrameBufferAttachment": 11,
+        "com/mojang/renderpearl/backend/opengl/FrameBufferCache": 8,
+        "com/mojang/renderpearl/backend/opengl/FrameBufferCache$CacheKey": 1,
+        "com/mojang/renderpearl/backend/opengl/GlBackend": 3,
+        "com/mojang/renderpearl/backend/opengl/GlBuffer": 29,
+        "com/mojang/renderpearl/backend/opengl/GlBuffer$Direct": 21,
+        "com/mojang/renderpearl/backend/opengl/GlBuffer$Direct$1": 1,
+        "com/mojang/renderpearl/backend/opengl/GlCommandEncoder": 22,
+        "com/mojang/renderpearl/backend/opengl/GlConst": 45,
+        "com/mojang/renderpearl/backend/opengl/GlDebug": 10,
+        "com/mojang/renderpearl/backend/opengl/GlDebug$LogEntry": 2,
+        "com/mojang/renderpearl/backend/opengl/GlDebugLabel": 15,
+        "com/mojang/renderpearl/backend/opengl/GlDebugLabel$Core": 1,
+        "com/mojang/renderpearl/backend/opengl/GlDebugLabel$Empty": 1,
+        "com/mojang/renderpearl/backend/opengl/GlDebugLabel$Ext": 1,
+        "com/mojang/renderpearl/backend/opengl/GlDevice": 34,
+        "com/mojang/renderpearl/backend/opengl/GlFence": 1,
+        "com/mojang/renderpearl/backend/opengl/GlHeuristics": 14,
+        "com/mojang/renderpearl/backend/opengl/GlPipelineRecompiler": 10,
+        "com/mojang/renderpearl/backend/opengl/GlProgram": 15,
+        "com/mojang/renderpearl/backend/opengl/GlQueryPool": 4,
+        "com/mojang/renderpearl/backend/opengl/GlRenderPass": 6,
+        "com/mojang/renderpearl/backend/opengl/GlRenderPipeline": 16,
+        "com/mojang/renderpearl/backend/opengl/GlSampler": 2,
+        "com/mojang/renderpearl/backend/opengl/GlShaderModule": 9,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager": 207,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$BlendState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$BooleanState": 17,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$ColorLogicState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$CullState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$DepthState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$PolygonOffsetState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$ScissorState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlStateManager$TextureState": 1,
+        "com/mojang/renderpearl/backend/opengl/GlSurface": 1,
+        "com/mojang/renderpearl/backend/opengl/GlTexture": 12,
+        "com/mojang/renderpearl/backend/opengl/GlTextureView": 9,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory": 5,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$Fallback": 8,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$Fallback$GlAllocation": 5,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$PersistentMapping": 13,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$PersistentMapping$GlAllocation": 1,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$PersistentMapping$Rotation": 3,
+        "com/mojang/renderpearl/backend/opengl/GlTransientMemory$TransientGpuBuffer": 7,
+        "com/mojang/renderpearl/backend/opengl/GlUtil": 10,
+        "com/mojang/renderpearl/backend/opengl/Uniform$Sampler": 2,
+        "com/mojang/renderpearl/backend/opengl/Uniform$Ubo": 4,
+        "com/mojang/renderpearl/backend/opengl/Uniform$Utb": 5,
+        "com/mojang/renderpearl/backend/opengl/VertexArray": 5,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator": 51,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator$Allocation": 66,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator$Allocator": 11,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator$Allocator$1": 1,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator$Allocator$Block": 1,
+        "com/mojang/renderpearl/backend/util/TransientBlockAllocator$Allocator$CpuBlock": 5,
+        "com/mojang/renderpearl/backend/vulkan/DestructionQueue": 6,
+        "com/mojang/renderpearl/backend/vulkan/DestructionQueue$Destroyer": 2,
+        "com/mojang/renderpearl/backend/vulkan/VulkanBackend": 16,
+        "com/mojang/renderpearl/backend/vulkan/VulkanCommandEncoder": 73,
+        "com/mojang/renderpearl/backend/vulkan/VulkanCommandEncoder$1": 1,
+        "com/mojang/renderpearl/backend/vulkan/VulkanCommandPool": 6,
+        "com/mojang/renderpearl/backend/vulkan/VulkanConst": 25,
+        "com/mojang/renderpearl/backend/vulkan/VulkanDebug": 17,
+        "com/mojang/renderpearl/backend/vulkan/VulkanDebug$Disabled": 1,
+        "com/mojang/renderpearl/backend/vulkan/VulkanDebug$Enabled": 2,
+        "com/mojang/renderpearl/backend/vulkan/VulkanDevice": 109,
+        "com/mojang/renderpearl/backend/vulkan/VulkanFeatureSets": 6,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuBuffer": 20,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuBuffer$Direct": 8,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuBuffer$Direct$1": 1,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuSampler": 2,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuSurface": 10,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuTexture": 20,
+        "com/mojang/renderpearl/backend/vulkan/VulkanGpuTextureView": 6,
+        "com/mojang/renderpearl/backend/vulkan/VulkanInstance": 26,
+        "com/mojang/renderpearl/backend/vulkan/VulkanPhysicalDevice": 41,
+        "com/mojang/renderpearl/backend/vulkan/VulkanQueryPool": 8,
+        "com/mojang/renderpearl/backend/vulkan/VulkanQueue": 13,
+        "com/mojang/renderpearl/backend/vulkan/VulkanQueue$Submission": 11,
+        "com/mojang/renderpearl/backend/vulkan/VulkanQueue$Submission$SemaphoreOp": 2,
+        "com/mojang/renderpearl/backend/vulkan/VulkanQueue$Submission$SubmitStage": 4,
+        "com/mojang/renderpearl/backend/vulkan/VulkanRenderPass": 29,
+        "com/mojang/renderpearl/backend/vulkan/VulkanRenderPipeline": 9,
+        "com/mojang/renderpearl/backend/vulkan/VulkanTransientMemory": 20,
+        "com/mojang/renderpearl/backend/vulkan/VulkanTransientMemory$TransferPair": 12,
+        "com/mojang/renderpearl/backend/vulkan/VulkanTransientMemory$TransientGpuBuffer": 3,
+        "com/mojang/renderpearl/backend/vulkan/VulkanTransientMemory$VulkanAllocation": 3,
+        "com/mojang/renderpearl/backend/vulkan/VulkanUtils": 71,
+        "com/mojang/renderpearl/backend/vulkan/VulkanUtils$DeviceUUID": 59,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/AbstractCheckpointStorage": 3,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/AbstractCheckpointStorage$Checkpoint": 6,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/AbstractCheckpointStorage$Frame": 1,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/AmdCheckpointExtension": 1,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/AmdCheckpointExtension$AmdCheckpointStorage": 4,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/CheckpointExtension": 5,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/CheckpointExtension$CheckpointStorage": 3,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/CheckpointExtension$CheckpointType": 3,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/CheckpointExtension$QueueCheckpoints": 4,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/CheckpointExtension$StageCheckpoint": 5,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/NoopCheckpointExtension": 1,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/NoopCheckpointExtension$NoopCheckpointStorage": 1,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/NvidiaCheckpointExtension": 1,
+        "com/mojang/renderpearl/backend/vulkan/checkpoints/NvidiaCheckpointExtension$NvidiaCheckpointStorage": 3,
+        "com/mojang/renderpearl/backend/vulkan/init/FeatureSet": 34,
+        "com/mojang/renderpearl/backend/vulkan/init/FeatureSet$Condition": 3,
+        "com/mojang/renderpearl/backend/vulkan/init/VulkanFeature": 25,
+        "com/mojang/renderpearl/backend/vulkan/init/VulkanPNextStruct": 26,
+        "com/mojang/renderpearl/frontend/FrontendCommandEncoder": 15,
+        "com/mojang/renderpearl/frontend/FrontendGpuDevice": 12,
+        "com/mojang/renderpearl/frontend/FrontendGpuSurface": 3,
+        "com/mojang/renderpearl/frontend/FrontendRenderPass": 16,
+        "com/mojang/renderpearl/frontend/FrontendRenderPipeline": 12,
+        "com/mojang/renderpearl/frontend/TracyGpuProfiler": 6,
+        "com/mojang/renderpearl/frontend/shaders/GlslCompiler": 9,
+        "com/mojang/renderpearl/frontend/shaders/PipelineBuilder": 7,
+        "com/mojang/renderpearl/frontend/shaders/PipelineBuilder$InterfaceVariableInfo": 13,
+        "com/mojang/renderpearl/frontend/shaders/SPIRVModule": 6,
+        "com/mojang/renderpearl/frontend/shaders/SPIRVModule$1": 1,
+        "com/mojang/renderpearl/frontend/shaders/SPIRVModule$2": 1,
+        "com/mojang/renderpearl/frontend/shaders/SPIRVModule$3": 1,
+        "com/mojang/renderpearl/frontend/shaders/SPIRVModule$TypeHandle": 4,
+        "com/mojang/renderpearl/frontend/shaders/SpvUtil": 21,
+        "com/mojang/renderpearl/util/ShaderCompileException": 29,
+        "com/mojang/renderpearl/util/TextureViewAndSampler": 7,
+        "com/mojang/renderpearl/util/UncheckedAutoCloseable": 1
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/TracyFrameCapture",
+        "method": "<init>",
+        "descriptor": "()V",
+        "elementOrdinal": 34,
+        "family": "renderpearl",
+        "opcode": "INVOKEINTERFACE",
+        "owner": "com/mojang/renderpearl/api/device/GpuDevice",
+        "name": "createTexture",
+        "type": "(Ljava/lang/String;ILcom/mojang/renderpearl/api/GpuFormat;IIII)Lcom/mojang/renderpearl/api/textures/GpuTexture;"
+      }
+    },
+    "security-crypto": {
+      "instructions": 54,
+      "callerClasses": 11,
+      "targetMembers": 44,
+      "ownerCounts": {
+        "java/security/Key": 2,
+        "java/security/KeyFactory": 4,
+        "java/security/KeyPair": 3,
+        "java/security/KeyPairGenerator": 3,
+        "java/security/KeyStore": 2,
+        "java/security/MessageDigest": 4,
+        "java/security/PrivateKey": 2,
+        "java/security/PublicKey": 6,
+        "java/security/SecureRandom": 4,
+        "java/security/Signature": 6,
+        "java/security/spec/PKCS8EncodedKeySpec": 1,
+        "java/security/spec/X509EncodedKeySpec": 1,
+        "javax/crypto/Cipher": 9,
+        "javax/crypto/KeyGenerator": 3,
+        "javax/crypto/SecretKey": 2,
+        "javax/crypto/spec/IvParameterSpec": 1,
+        "javax/crypto/spec/SecretKeySpec": 1
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "net/minecraft/network/CipherBase",
+        "method": "decipher",
+        "descriptor": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;)Lio/netty/buffer/ByteBuf;",
+        "elementOrdinal": 24,
+        "family": "security-crypto",
+        "opcode": "INVOKEVIRTUAL",
+        "owner": "javax/crypto/Cipher",
+        "name": "getOutputSize",
+        "type": "(I)I"
+      }
+    },
+    "work-scope": {
+      "instructions": 1388,
+      "callerClasses": 307,
+      "targetMembers": 185,
+      "ownerCounts": {
+        "java/lang/ScopedValue": 7,
+        "java/lang/ScopedValue$Carrier": 2,
+        "java/lang/Thread": 165,
+        "java/util/concurrent/ArrayBlockingQueue": 7,
+        "java/util/concurrent/BlockingQueue": 9,
+        "java/util/concurrent/Callable": 1,
+        "java/util/concurrent/CancellationException": 2,
+        "java/util/concurrent/CompletableFuture": 635,
+        "java/util/concurrent/CompletionException": 14,
+        "java/util/concurrent/ConcurrentHashMap": 20,
+        "java/util/concurrent/ConcurrentLinkedQueue": 3,
+        "java/util/concurrent/ConcurrentMap": 3,
+        "java/util/concurrent/CopyOnWriteArrayList": 6,
+        "java/util/concurrent/CopyOnWriteArraySet": 1,
+        "java/util/concurrent/Executor": 21,
+        "java/util/concurrent/ExecutorService": 7,
+        "java/util/concurrent/Executors": 5,
+        "java/util/concurrent/ForkJoinPool": 1,
+        "java/util/concurrent/ForkJoinWorkerThread": 4,
+        "java/util/concurrent/Future": 2,
+        "java/util/concurrent/LinkedBlockingQueue": 3,
+        "java/util/concurrent/RejectedExecutionException": 2,
+        "java/util/concurrent/ScheduledExecutorService": 5,
+        "java/util/concurrent/ScheduledFuture": 4,
+        "java/util/concurrent/ScheduledThreadPoolExecutor": 1,
+        "java/util/concurrent/Semaphore": 5,
+        "java/util/concurrent/ThreadFactory": 1,
+        "java/util/concurrent/ThreadPoolExecutor": 1,
+        "java/util/concurrent/TimeUnit": 21,
+        "java/util/concurrent/TimeoutException": 1,
+        "java/util/concurrent/atomic/AtomicBoolean": 72,
+        "java/util/concurrent/atomic/AtomicInteger": 110,
+        "java/util/concurrent/atomic/AtomicLong": 48,
+        "java/util/concurrent/atomic/AtomicReference": 64,
+        "java/util/concurrent/atomic/AtomicReferenceArray": 27,
+        "java/util/concurrent/locks/Lock": 7,
+        "java/util/concurrent/locks/LockSupport": 5,
+        "java/util/concurrent/locks/ReentrantLock": 52,
+        "java/util/concurrent/locks/ReentrantReadWriteLock": 23,
+        "java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock": 8,
+        "java/util/concurrent/locks/ReentrantReadWriteLock$WriteLock": 13
+      },
+      "sample": {
+        "kind": "invoke",
+        "caller": "com/mojang/blaze3d/audio/AbstractDeviceTracker",
+        "method": "<init>",
+        "descriptor": "(Lcom/mojang/blaze3d/audio/DeviceList;)V",
+        "elementOrdinal": 10,
+        "family": "work-scope",
+        "opcode": "INVOKESPECIAL",
+        "owner": "java/util/concurrent/atomic/AtomicBoolean",
+        "name": "<init>",
+        "type": "()V"
+      }
+    }
+  },
+  "nonObservedDirectCallFamilies": [
+    "foreign-memory",
+    "unsafe"
+  ],
+  "capture": "evidence/host-api-26.3-20261125T044400945429Z",
+  "libraries": [
+    {
+      "downloads": {
+        "artifact": {
+          "path": "at/yawk/lz4/lz4-java/1.10.1/lz4-java-1.10.1.jar",
+          "sha1": "f541d7f910fe3d76f38f799c507c48cc81b12ecb",
+          "size": 910232,
+          "url": "https://libraries.minecraft.net/at/yawk/lz4/lz4-java/1.10.1/lz4-java-1.10.1.jar"
+        }
+      },
+      "name": "at.yawk.lz4:lz4-java:1.10.1"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "ca/weblite/java-objc-bridge/1.1/java-objc-bridge-1.1.jar",
+          "sha1": "1227f9e0666314f9de41477e3ec277e542ed7f7b",
+          "size": 1330045,
+          "url": "https://libraries.minecraft.net/ca/weblite/java-objc-bridge/1.1/java-objc-bridge-1.1.jar"
+        }
+      },
+      "name": "ca.weblite:java-objc-bridge:1.1",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/azure/azure-json/1.4.0/azure-json-1.4.0.jar",
+          "sha1": "fcc1d354dbc3e0300e5276b1bf124d0247799cd8",
+          "size": 325945,
+          "url": "https://libraries.minecraft.net/com/azure/azure-json/1.4.0/azure-json-1.4.0.jar"
+        }
+      },
+      "name": "com.azure:azure-json:1.4.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/github/oshi/oshi-core/6.9.0/oshi-core-6.9.0.jar",
+          "sha1": "03224870731860cfcd7744581a05b559e94291e7",
+          "size": 1022125,
+          "url": "https://libraries.minecraft.net/com/github/oshi/oshi-core/6.9.0/oshi-core-6.9.0.jar"
+        }
+      },
+      "name": "com.github.oshi:oshi-core:6.9.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/google/code/gson/gson/2.14.0/gson-2.14.0.jar",
+          "sha1": "efc0e34ede4e3204eaefb84a00e55e8c86634382",
+          "size": 313604,
+          "url": "https://libraries.minecraft.net/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar"
+        }
+      },
+      "name": "com.google.code.gson:gson:2.14.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+          "sha1": "aeaffd00d57023a2c947393ed251f0354f0985fc",
+          "size": 10763,
+          "url": "https://libraries.minecraft.net/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar"
+        }
+      },
+      "name": "com.google.guava:failureaccess:1.0.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar",
+          "sha1": "c376b13067cc99a5774403530953f7b05a91e218",
+          "size": 3064793,
+          "url": "https://libraries.minecraft.net/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar"
+        }
+      },
+      "name": "com.google.guava:guava:33.6.0-jre"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/ibm/icu/icu4j/78.3/icu4j-78.3.jar",
+          "sha1": "6a851a53bb1f25689fc418dcc8935b0d93580adf",
+          "size": 15156073,
+          "url": "https://libraries.minecraft.net/com/ibm/icu/icu4j/78.3/icu4j-78.3.jar"
+        }
+      },
+      "name": "com.ibm.icu:icu4j:78.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/microsoft/azure/msal4j/1.24.1/msal4j-1.24.1.jar",
+          "sha1": "c233f2d047b9755f7041adf21a858c680e4c9242",
+          "size": 396486,
+          "url": "https://libraries.minecraft.net/com/microsoft/azure/msal4j/1.24.1/msal4j-1.24.1.jar"
+        }
+      },
+      "name": "com.microsoft.azure:msal4j:1.24.1"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/authlib/10.0.77/authlib-10.0.77.jar",
+          "sha1": "add8754cda96cf0cd840441632875648836f8a71",
+          "size": 152645,
+          "url": "https://libraries.minecraft.net/com/mojang/authlib/10.0.77/authlib-10.0.77.jar"
+        }
+      },
+      "name": "com.mojang:authlib:10.0.77"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar",
+          "sha1": "5c685c5ffa94c4cd39496c7184c1d122e515ecef",
+          "size": 964,
+          "url": "https://libraries.minecraft.net/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar"
+        }
+      },
+      "name": "com.mojang:blocklist:1.0.10"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/brigadier/1.3.11/brigadier-1.3.11.jar",
+          "sha1": "3373d1e7bf00c8b99bed1ea4efb8c47344e4a887",
+          "size": 80151,
+          "url": "https://libraries.minecraft.net/com/mojang/brigadier/1.3.11/brigadier-1.3.11.jar"
+        }
+      },
+      "name": "com.mojang:brigadier:1.3.11"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar",
+          "sha1": "b6b2ae770c02e0c1eb90f9985b151e9085a38d0b",
+          "size": 753612,
+          "url": "https://libraries.minecraft.net/com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar"
+        }
+      },
+      "name": "com.mojang:datafixerupper:10.0.21"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/jtracy/1.14.38/jtracy-1.14.38.jar",
+          "sha1": "cc2ad81342001b4281c305a298d7f50332354058",
+          "size": 14292,
+          "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.14.38/jtracy-1.14.38.jar"
+        }
+      },
+      "name": "com.mojang:jtracy:1.14.38"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-linux.jar",
+          "sha1": "d2433300f8a4e99595d513546d19ecddc3eaa15e",
+          "size": 256636,
+          "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-linux.jar"
+        }
+      },
+      "name": "com.mojang:jtracy:1.14.38:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-macos.jar",
+          "sha1": "5ef8d24352733e915e35e8c39efb099520bcabcf",
+          "size": 228428,
+          "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-macos.jar"
+        }
+      },
+      "name": "com.mojang:jtracy:1.14.38:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-macos-arm64.jar",
+          "sha1": "e5cad241e2c018c39d2b5e767e201ead40f93309",
+          "size": 230827,
+          "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-macos-arm64.jar"
+        }
+      },
+      "name": "com.mojang:jtracy:1.14.38:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-windows.jar",
+          "sha1": "3e26b44141ba853b45f734f643a6a8ac8b8fc259",
+          "size": 49885,
+          "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-windows.jar"
+        }
+      },
+      "name": "com.mojang:jtracy:1.14.38:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/logging/1.7.12/logging-1.7.12.jar",
+          "sha1": "351cea64a5233361327d8d54c44277041beed97f",
+          "size": 19540,
+          "url": "https://libraries.minecraft.net/com/mojang/logging/1.7.12/logging-1.7.12.jar"
+        }
+      },
+      "name": "com.mojang:logging:1.7.12"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/patchy/2.2.10/patchy-2.2.10.jar",
+          "sha1": "da05971b07cbb379d002cf7eaec6a2048211fefc",
+          "size": 4439,
+          "url": "https://libraries.minecraft.net/com/mojang/patchy/2.2.10/patchy-2.2.10.jar"
+        }
+      },
+      "name": "com.mojang:patchy:2.2.10"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "com/mojang/text2speech/1.19.12/text2speech-1.19.12.jar",
+          "sha1": "2e517a75c79d34d32de2b5d68422150836c2133e",
+          "size": 14009,
+          "url": "https://libraries.minecraft.net/com/mojang/text2speech/1.19.12/text2speech-1.19.12.jar"
+        }
+      },
+      "name": "com.mojang:text2speech:1.19.12"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "commons-codec/commons-codec/1.22.0/commons-codec-1.22.0.jar",
+          "sha1": "6b3eb4beb7058c2a638f5f17bcb388649fd339dd",
+          "size": 420480,
+          "url": "https://libraries.minecraft.net/commons-codec/commons-codec/1.22.0/commons-codec-1.22.0.jar"
+        }
+      },
+      "name": "commons-codec:commons-codec:1.22.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+          "sha1": "36f3474daec2849c149e877614e7f979b2082cd2",
+          "size": 563971,
+          "url": "https://libraries.minecraft.net/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar"
+        }
+      },
+      "name": "commons-io:commons-io:2.20.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar",
+          "sha1": "05397ef65dcb60670e0e0dba4854522873af3070",
+          "size": 378032,
+          "url": "https://libraries.minecraft.net/io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-buffer:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar",
+          "sha1": "01a01d45a9efc228c6d747525848b065e0656b5f",
+          "size": 155355,
+          "url": "https://libraries.minecraft.net/io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-codec-base:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar",
+          "sha1": "bdbbcfcdbe217b95c14a04df4fc5d31213d5c27c",
+          "size": 183349,
+          "url": "https://libraries.minecraft.net/io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-codec-compression:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar",
+          "sha1": "b5e0715df90047ee5a0138c8f704f43c751009e4",
+          "size": 678387,
+          "url": "https://libraries.minecraft.net/io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-codec-http:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar",
+          "sha1": "c2bc7fa5acfa2afc777e944d84f0aa65559cc81e",
+          "size": 819965,
+          "url": "https://libraries.minecraft.net/io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-common:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar",
+          "sha1": "cc82873ae4b6d14effe480740ad838de09add70d",
+          "size": 587814,
+          "url": "https://libraries.minecraft.net/io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-handler:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar",
+          "sha1": "fcea6d64273b59ab9127b68c16ae98af34642139",
+          "size": 32975,
+          "url": "https://libraries.minecraft.net/io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-resolver:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-classes-epoll/4.2.16.Final/netty-transport-classes-epoll-4.2.16.Final.jar",
+          "sha1": "cf90c7b892e284ba9f1545dce170168369b3b9d6",
+          "size": 159935,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-epoll/4.2.16.Final/netty-transport-classes-epoll-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-classes-epoll:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-classes-kqueue/4.2.16.Final/netty-transport-classes-kqueue-4.2.16.Final.jar",
+          "sha1": "0fa2bcf8c71626510f6fae173f78182117b70f7a",
+          "size": 116819,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-kqueue/4.2.16.Final/netty-transport-classes-kqueue-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-classes-kqueue:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-native-epoll/4.2.16.Final/netty-transport-native-epoll-4.2.16.Final-linux-aarch_64.jar",
+          "sha1": "eed34f3b37b4c46a0cbb49456ccc4e3bd7195e4c",
+          "size": 43899,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-epoll/4.2.16.Final/netty-transport-native-epoll-4.2.16.Final-linux-aarch_64.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-native-epoll:4.2.16.Final:linux-aarch_64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-native-epoll/4.2.16.Final/netty-transport-native-epoll-4.2.16.Final-linux-x86_64.jar",
+          "sha1": "439c24f5c27c220deb042b42e4048d606edeb78d",
+          "size": 42393,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-epoll/4.2.16.Final/netty-transport-native-epoll-4.2.16.Final-linux-x86_64.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-native-epoll:4.2.16.Final:linux-x86_64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-native-kqueue/4.2.16.Final/netty-transport-native-kqueue-4.2.16.Final-osx-aarch_64.jar",
+          "sha1": "ddb942cad6c0e978caa2215757512b36c5ffacec",
+          "size": 27482,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-kqueue/4.2.16.Final/netty-transport-native-kqueue-4.2.16.Final-osx-aarch_64.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-native-kqueue:4.2.16.Final:osx-aarch_64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-native-kqueue/4.2.16.Final/netty-transport-native-kqueue-4.2.16.Final-osx-x86_64.jar",
+          "sha1": "dd9d41b06355a6a1815d902ee087a693aab83755",
+          "size": 26737,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-kqueue/4.2.16.Final/netty-transport-native-kqueue-4.2.16.Final-osx-x86_64.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-native-kqueue:4.2.16.Final:osx-x86_64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar",
+          "sha1": "3cf32390f1b80af890ac44aa0698c2ff58c2a4d7",
+          "size": 46877,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-transport-native-unix-common:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar",
+          "sha1": "ae87a3bec51d503475a19fbd718bf777f2fc06c6",
+          "size": 549855,
+          "url": "https://libraries.minecraft.net/io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar"
+        }
+      },
+      "name": "io.netty:netty-transport:4.2.16.Final"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar",
+          "sha1": "a6cff377eecc19c2037bf31568a6d7106b50ba1f",
+          "size": 23965563,
+          "url": "https://libraries.minecraft.net/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar"
+        }
+      },
+      "name": "it.unimi.dsi:fastutil:8.5.18"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "net/java/dev/jna/jna-platform/5.17.0/jna-platform-5.17.0.jar",
+          "sha1": "a4934c44d25a9d8c2ddf4203affd20330cb3426f",
+          "size": 1378617,
+          "url": "https://libraries.minecraft.net/net/java/dev/jna/jna-platform/5.17.0/jna-platform-5.17.0.jar"
+        }
+      },
+      "name": "net.java.dev.jna:jna-platform:5.17.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar",
+          "sha1": "33d12735bef894440780fce64f9758d420c7bae2",
+          "size": 2002589,
+          "url": "https://libraries.minecraft.net/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar"
+        }
+      },
+      "name": "net.java.dev.jna:jna:5.17.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar",
+          "sha1": "4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c",
+          "size": 78146,
+          "url": "https://libraries.minecraft.net/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar"
+        }
+      },
+      "name": "net.sf.jopt-simple:jopt-simple:5.0.4"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+          "sha1": "e482f2c7a88dac3c497e96aa420b6a769f59c8d7",
+          "size": 1117221,
+          "url": "https://libraries.minecraft.net/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar"
+        }
+      },
+      "name": "org.apache.commons:commons-compress:1.28.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar",
+          "sha1": "65897b3e5731220962e659e001904af3c3cbeba9",
+          "size": 713862,
+          "url": "https://libraries.minecraft.net/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar"
+        }
+      },
+      "name": "org.apache.commons:commons-lang3:3.20.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar",
+          "sha1": "ad52af0ecf054a7e3f275a2e180ee06d9c490951",
+          "size": 351126,
+          "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar"
+        }
+      },
+      "name": "org.apache.logging.log4j:log4j-api:2.26.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar",
+          "sha1": "d267ca60b27ddb075e0b4e75e7875859717bf85f",
+          "size": 2015101,
+          "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar"
+        }
+      },
+      "name": "org.apache.logging.log4j:log4j-core:2.26.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar",
+          "sha1": "668c0f0e813d83f00a7182533aa658ec7e7a0a0d",
+          "size": 30211,
+          "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar"
+        }
+      },
+      "name": "org.apache.logging.log4j:log4j-slf4j2-impl:2.26.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar",
+          "sha1": "8872d22b293e8f5d7d56ff92be966e6dc28ebdc6",
+          "size": 99701,
+          "url": "https://libraries.minecraft.net/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar"
+        }
+      },
+      "name": "org.jcraft:jorbis:0.0.17"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/joml/joml/1.10.9/joml-1.10.9.jar",
+          "sha1": "438e036486bad66b189bff385dd07dea4f74a146",
+          "size": 814581,
+          "url": "https://libraries.minecraft.net/org/joml/joml/1.10.9/joml-1.10.9.jar"
+        }
+      },
+      "name": "org.joml:joml:1.10.9"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+          "sha1": "7425a601c1c7ec76645a78d22b8c6a627edee507",
+          "size": 3819,
+          "url": "https://libraries.minecraft.net/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar"
+        }
+      },
+      "name": "org.jspecify:jspecify:1.0.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0.jar",
+          "sha1": "134bc57b83e78a7f954a0f078093e319739d42ea",
+          "size": 469281,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-linux.jar",
+          "sha1": "f20ae220999240d484896d839694b02c2a655608",
+          "size": 1423204,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-macos.jar",
+          "sha1": "6a46815640d9ce43533200986a330642a96e9590",
+          "size": 1225020,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-macos-arm64.jar",
+          "sha1": "95ef1d3420179187f0b5e1ba947329b539e73412",
+          "size": 1125234,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-windows.jar",
+          "sha1": "f85d0f5acaa594f9e93d657f8feff85d6a427b6a",
+          "size": 1190826,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-windows-arm64.jar",
+          "sha1": "5f475c76490bb368f235017985d8d9dc6b5b5121",
+          "size": 1043884,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.3-mojang-2.15.0/lwjgl-freetype-3.4.3-mojang-2.15.0-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-freetype:3.4.3-mojang-2.15.0:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3.jar",
+          "sha1": "350f317eaf5295b1e53f6664ef5fdeeaaa7dcbf0",
+          "size": 48061,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-linux.jar",
+          "sha1": "ca21b4b4c6d223907de645a18436ef6f677a5d4f",
+          "size": 224040,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-macos.jar",
+          "sha1": "ea839adbed91b7423f7e0cbe7dfaabcb922f1a64",
+          "size": 146288,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-macos-arm64.jar",
+          "sha1": "e3b0e4bb74f9ff9c9165638cebe8efb49af3d599",
+          "size": 136030,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows.jar",
+          "sha1": "d329f1d23bdb18e504f2f5900a93d24b2454bd05",
+          "size": 184467,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows-arm64.jar",
+          "sha1": "7362dcccaf4ee997e9af3e267d5beacb4771e93e",
+          "size": 157515,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-jemalloc:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3.jar",
+          "sha1": "32b52cda5af6937a4e4bd321bdb83082025cb332",
+          "size": 154573,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-linux.jar",
+          "sha1": "7daa62f9f7b38b30e8a3d3bc7069e9b2e3cd52f0",
+          "size": 1159799,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-macos.jar",
+          "sha1": "7aaf1d333ee024867c7a55790d568f1435d9c3f2",
+          "size": 689297,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-macos-arm64.jar",
+          "sha1": "12ab2b7de803ea315a56f39aebfcf148823ffe01",
+          "size": 646627,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows.jar",
+          "sha1": "097c14cc0c264d64e4200fc319d86f559f8a6931",
+          "size": 992735,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows-arm64.jar",
+          "sha1": "6198ef79d4c7a220fb65689b584e8e3a148c81b7",
+          "size": 897409,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-openal:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3.jar",
+          "sha1": "b81769ee48050f8c71e70839505f350bf9219d90",
+          "size": 953649,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-linux.jar",
+          "sha1": "ec6fb42167943e94f7f0b14707c1737653c4044b",
+          "size": 82244,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-macos.jar",
+          "sha1": "fa2d57d9983c89503ee63d6d508f87c25e40a1cd",
+          "size": 54960,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-macos-arm64.jar",
+          "sha1": "102115f47189fbdaecce4f6e1bbff60f0435284b",
+          "size": 43491,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows.jar",
+          "sha1": "8f46f873190aa1d89f0f59818afcf125bd88adde",
+          "size": 98282,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows-arm64.jar",
+          "sha1": "f49d3b795fb4ea9b33c2b8403411eab8620879a1",
+          "size": 84838,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-opengl:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3.jar",
+          "sha1": "c02146735d6ff70d070c73532b435e5c893a346b",
+          "size": 989769,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-linux.jar",
+          "sha1": "6ed1b80b7c211a491612c70e43f27ba1f42cccd0",
+          "size": 1665811,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-macos.jar",
+          "sha1": "ac6ff9cd41e8c819f69ea7c9569e58cfae3a7c75",
+          "size": 1178217,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-macos-arm64.jar",
+          "sha1": "9165eaef243de41f544decabda5553181667a44d",
+          "size": 983982,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows.jar",
+          "sha1": "b91110fdb7a3c09feaac07ee06e0757a8ac33d03",
+          "size": 1241055,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows-arm64.jar",
+          "sha1": "7ab134eaab451560b2248b89d2836214f4ce4f6b",
+          "size": 1102920,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-sdl:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3.jar",
+          "sha1": "ba9fbc8fc4d50b3e4b436cc958ddb4abdb05867c",
+          "size": 153441,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-linux.jar",
+          "sha1": "037faa5824f75901f4961e56805aedf68e13cf8b",
+          "size": 3872753,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-macos.jar",
+          "sha1": "c3c180935dbc3fd2301c4195c1d0eb265537c836",
+          "size": 2547039,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-macos-arm64.jar",
+          "sha1": "89bf79fc7200f1fa73563c9ab25316723145b4ba",
+          "size": 2293240,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows.jar",
+          "sha1": "44266572b8b8b5bbb05e71f13471337ac0d62aba",
+          "size": 2541979,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows-arm64.jar",
+          "sha1": "bb28dabb8b7d8bea1a35de1a2be6aeade0e565d2",
+          "size": 2359649,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-shaderc:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3.jar",
+          "sha1": "98e5b5ef5159100b26a169a9aed6c24e820e3eaa",
+          "size": 150189,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-linux.jar",
+          "sha1": "709eb01deec4bdafb7634b125a63fd8de172fc50",
+          "size": 1265592,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-macos.jar",
+          "sha1": "82fd32526a143282a6fdc8d1f51cc95ea2e23f5a",
+          "size": 1035398,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-macos-arm64.jar",
+          "sha1": "4b8d46f798f3d5d5185450ce1125f99eb3bf62dd",
+          "size": 973350,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows.jar",
+          "sha1": "996d1baf778567a6d8d6970a9eda5c4c18957386",
+          "size": 966671,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows-arm64.jar",
+          "sha1": "220ef902b26215f0f4718e4cdf9aa49005e33f93",
+          "size": 950153,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-spvc:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3.jar",
+          "sha1": "cdce54785bd3758e44a81f345d6260774d921c78",
+          "size": 143041,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-linux.jar",
+          "sha1": "3878e44ce27c12791e570b5c8754ef3b68401dd3",
+          "size": 286507,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-macos.jar",
+          "sha1": "3b4a6438e19f79f4a065f231731fcd37263e7296",
+          "size": 221810,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-macos-arm64.jar",
+          "sha1": "fbbcc42d384898287f92689e65c35e8969d820c0",
+          "size": 191327,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows.jar",
+          "sha1": "0ada47b3ce6917bd113759f5caad20f2cca06d4c",
+          "size": 293076,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows-arm64.jar",
+          "sha1": "094ff1f4b128a8224fbef93d4b8b9b503c65b402",
+          "size": 241161,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-stb:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3.jar",
+          "sha1": "816a6ac87f1e447e5346ca0e7a1078353f51fbd6",
+          "size": 110265,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-linux.jar",
+          "sha1": "3a9a95d3e83f7fc49c6ed8d0e1c853b77662d90e",
+          "size": 64034,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-macos.jar",
+          "sha1": "cf46adfca6794642ed89658a28c13bdf58b87017",
+          "size": 74414,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-macos-arm64.jar",
+          "sha1": "cf3e7dec8869e955ba4d7cc47699823dd139a461",
+          "size": 65971,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows.jar",
+          "sha1": "ccdda5496cb9c1d77e7a7c94a3284ca44b5e3176",
+          "size": 129345,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows-arm64.jar",
+          "sha1": "f895ba1ad2811d1461e5b46e5057ddcbfd65841e",
+          "size": 111851,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vma:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3.jar",
+          "sha1": "ffdaf1898192059f059d66f9fa37e3debcac10e0",
+          "size": 8866042,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vulkan:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3-natives-macos.jar",
+          "sha1": "437e39098c91fe33d5e6683920fafe4a9fafd27a",
+          "size": 1483125,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vulkan:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3-natives-macos-arm64.jar",
+          "sha1": "5793efc9c640ee0a615f5e45d42eeec686e12704",
+          "size": 1381890,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl-vulkan:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3.jar",
+          "sha1": "7ab5265a73d8a959ed62332d546536ae6be2f0d5",
+          "size": 1255440,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3"
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-linux.jar",
+          "sha1": "2800e134537db1a175eba41c430b1018eddc48f0",
+          "size": 137717,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-linux.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3:natives-linux",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-macos.jar",
+          "sha1": "ca43c26e86ed9805f3b3e2ffdb9ccb965aabd083",
+          "size": 84421,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-macos.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3:natives-macos",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-macos-arm64.jar",
+          "sha1": "9e41227b9e0aca9510f3196d45b3c6dd4048bd78",
+          "size": 54330,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-macos-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3:natives-macos-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "osx"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows.jar",
+          "sha1": "27e3d2f08b2bcf4fb56a58b836d9437419b980d7",
+          "size": 178848,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3:natives-windows",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows-arm64.jar",
+          "sha1": "cedd8fc68a4955a26e9ffdf3dc7d4d31c35e5194",
+          "size": 152235,
+          "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows-arm64.jar"
+        }
+      },
+      "name": "org.lwjgl:lwjgl:3.4.3:natives-windows-arm64",
+      "rules": [
+        {
+          "action": "allow",
+          "os": {
+            "name": "windows"
+          }
+        }
+      ]
+    },
+    {
+      "downloads": {
+        "artifact": {
+          "path": "org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+          "sha1": "d9e58ac9c7779ba3bf8142aff6c830617a7fe60f",
+          "size": 69908,
+          "url": "https://libraries.minecraft.net/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar"
+        }
+      },
+      "name": "org.slf4j:slf4j-api:2.0.17"
+    }
+  ],
+  "libraryScope": "Exact launcher declarations,including their original rule predicates;not evaluated platform availability or downloaded/loaded native artifacts.",
+  "limits": [
+    "Static direct invoke instructions in the original client JAR only;not call-graph reachability or runtime execution.",
+    "Reflection,invokedynamic targets,dependencies external to this JAR,native libraries and driver calls are not resolved.",
+    "Counts include constructors,accessors and exception construction;they are not counts of side effects.",
+    "No observed direct FFM call in this client is not proof of no FFM use anywhere in its dependencies.",
+    "All native/backend/runtime/resource-lifecycle qualification remains independently pending."
+  ]
+}

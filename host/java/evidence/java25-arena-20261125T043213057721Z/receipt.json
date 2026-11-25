@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "scope": "Java25 Arena confined/shared segment access and sequential close;no game,GPU,FFI,raw-address or concurrent-close claim.",
+  "profile": {
+    "JAVA_VERSION": "25.0.4.1",
+    "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+  "sourceSha256": {
+    "ArenaProbe.java": "c7560f9b5012791a8757c729a8732b74061e1052766140743caddbac0b410913",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "host": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n",
+  "classSha256": "89c78d3d37158a9138761cd76344e23844a39e11a6f6f21827399568ba5223cc",
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "d4013ecb3b669979bba5359d0e62d974cfb735ab6356d54436da41c60c62f1a6"
+    }
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.35094791697338223,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact argv retained owner-locally; frozen collector constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.042982667218893766,
+      "stdoutSha256": "632bfe382be23c58fd1d96b2ff16669e90e62b836c2d805b16d8fa2467545f62",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact argv retained owner-locally; frozen collector constructs it."
+    }
+  ],
+  "privateReceiptSha256": "51dc6444865b9616616282cc5fa8536cf9d1e1b3342d8ba93085b69a18d944b2",
+  "limits": [
+    "Only confined/shared aligned long segments, sequential operations with joined workers;no simultaneous access/close race.",
+    "No raw address,FFI,JNI,GPU,game code,physical-memory measurement or application authority qualification.",
+    "Owner means creating Java thread,not human principal. Shared access is not synchronization.",
+    "FFM is stable since Java22;this witness selects Java25 without preview flags."
+  ]
+}
