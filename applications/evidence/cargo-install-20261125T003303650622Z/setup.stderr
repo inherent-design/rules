@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/zer0cell/production/rules/applications/cargo-install/probe.py", line 106, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/zer0cell/production/rules/applications/cargo-install/probe.py", line 19, in main
+    assert all(not(p/'.cargo'/f).exists()for p in project.parents for f in ['config','config.toml'])
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

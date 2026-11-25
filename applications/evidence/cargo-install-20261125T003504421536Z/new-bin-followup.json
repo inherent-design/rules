@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "scope": "Fresh owned mixed new/replacement root;reuses prior target,no source edits or new dependencies.",
+  "producerSha256": "70fa931d50656f26e74f4a8b459dfd1fbe470090ccc825f533376f2087636a54",
+  "root": "/Users/zer0cell/production/rules/applications/evidence/cargo-install-20261125T003504421536Z/work/mixed-new-root",
+  "commands": [
+    {
+      "case": "new-bin-replace-failure",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "install",
+        "--offline",
+        "--path",
+        "/private/tmp/rules-cargo-install-q61l0dfg",
+        "--root",
+        "/Users/zer0cell/production/rules/applications/evidence/cargo-install-20261125T003504421536Z/work/mixed-new-root",
+        "--target-dir",
+        "/Users/zer0cell/production/rules/applications/evidence/cargo-install-20261125T003504421536Z/work/target",
+        "--force"
+      ],
+      "before": {
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "after": {
+        ".crates.toml": {
+          "kind": "file",
+          "bytes": 115,
+          "sha256": "f56320c09f4b5824fb22d010dfe39b3c6c0720602b766fa7277c65c9ef2d7dd4",
+          "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n"
+        },
+        ".crates2.json": {
+          "kind": "file",
+          "bytes": 475,
+          "sha256": "67ef237d9b450fe4764976129933ce42ee47215fc40b6086de193302a3f1306f",
+          "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+        },
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "outcome": {
+        "exitCode": 101,
+        "ownedGroupAbsent": true
+      },
+      "seconds": 0.12594329100102186,
+      "streams": {
+        "stdout": {
+          "file": "new-bin-replace-failure.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "new-bin-replace-failure.stderr",
+          "sha256": "8ae18de2a323c381d4ae4c16b4d21d77adf96116c11d335f3d46c0484698b4da"
+        }
+      }
+    },
+    {
+      "case": "new-bin-catalog",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "install",
+        "--list",
+        "--root",
+        "/Users/zer0cell/production/rules/applications/evidence/cargo-install-20261125T003504421536Z/work/mixed-new-root"
+      ],
+      "before": {
+        ".crates.toml": {
+          "kind": "file",
+          "bytes": 115,
+          "sha256": "f56320c09f4b5824fb22d010dfe39b3c6c0720602b766fa7277c65c9ef2d7dd4",
+          "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n"
+        },
+        ".crates2.json": {
+          "kind": "file",
+          "bytes": 475,
+          "sha256": "67ef237d9b450fe4764976129933ce42ee47215fc40b6086de193302a3f1306f",
+          "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+        },
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "after": {
+        ".crates.toml": {
+          "kind": "file",
+          "bytes": 115,
+          "sha256": "f56320c09f4b5824fb22d010dfe39b3c6c0720602b766fa7277c65c9ef2d7dd4",
+          "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n"
+        },
+        ".crates2.json": {
+          "kind": "file",
+          "bytes": 475,
+          "sha256": "67ef237d9b450fe4764976129933ce42ee47215fc40b6086de193302a3f1306f",
+          "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+        },
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "outcome": {
+        "exitCode": 0,
+        "ownedGroupAbsent": true
+      },
+      "seconds": 0.01574224978685379,
+      "streams": {
+        "stdout": {
+          "file": "new-bin-catalog.stdout",
+          "sha256": "f5f9dde7ca77ecb65da96b848fbd2b2440c615512e2b07bab3398df40d90dba0"
+        },
+        "stderr": {
+          "file": "new-bin-catalog.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "case": "new-bin-uninstall",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "uninstall",
+        "--root",
+        "/Users/zer0cell/production/rules/applications/evidence/cargo-install-20261125T003504421536Z/work/mixed-new-root",
+        "--bin",
+        "rules-install-b",
+        "rules-install-ownership"
+      ],
+      "before": {
+        ".crates.toml": {
+          "kind": "file",
+          "bytes": 115,
+          "sha256": "f56320c09f4b5824fb22d010dfe39b3c6c0720602b766fa7277c65c9ef2d7dd4",
+          "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n"
+        },
+        ".crates2.json": {
+          "kind": "file",
+          "bytes": 475,
+          "sha256": "67ef237d9b450fe4764976129933ce42ee47215fc40b6086de193302a3f1306f",
+          "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+        },
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "after": {
+        ".crates.toml": {
+          "kind": "file",
+          "bytes": 115,
+          "sha256": "f56320c09f4b5824fb22d010dfe39b3c6c0720602b766fa7277c65c9ef2d7dd4",
+          "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n"
+        },
+        ".crates2.json": {
+          "kind": "file",
+          "bytes": 475,
+          "sha256": "67ef237d9b450fe4764976129933ce42ee47215fc40b6086de193302a3f1306f",
+          "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+        },
+        "bin": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a": {
+          "kind": "directory"
+        },
+        "bin/rules-install-a/owned-marker": {
+          "kind": "file",
+          "bytes": 25,
+          "sha256": "fad1e473fb7889214cefd1e2829cc326ca36ce573e41b083a14b53db49de671d",
+          "text": "Owned blocking directory\n"
+        }
+      },
+      "outcome": {
+        "exitCode": 101,
+        "ownedGroupAbsent": true
+      },
+      "seconds": 0.014888083096593618,
+      "streams": {
+        "stdout": {
+          "file": "new-bin-uninstall.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "file": "new-bin-uninstall.stderr",
+          "sha256": "07dd14cc0820907e20c7dc2c1ae3e5f6d249ee8eb267e2e9c1751dd3c2ef731a"
+        }
+      }
+    }
+  ]
+}

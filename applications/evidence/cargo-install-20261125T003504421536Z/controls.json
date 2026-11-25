@@ -1,0 +1,596 @@
+[
+  {
+    "case": "manual-a",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "08b2bef6bfcac34cf68ac8a5d4553b9f64e19a27bdde96881b476121798e60fd",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "d899f199ecb0b959db60c41e97c35619e5f46dd5cb397cf02ddf98124e79430f",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295302,
+        "sha256": "c905491ee6dc366b938aee9a6a84723c9c3075fe9b5696026bb874817c84128c"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295303,
+        "sha256": "a11b9f644a44a637c3299727965fac97b595c4421efab7dc0fc7b19e61fd4004"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "08b2bef6bfcac34cf68ac8a5d4553b9f64e19a27bdde96881b476121798e60fd",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "d899f199ecb0b959db60c41e97c35619e5f46dd5cb397cf02ddf98124e79430f",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 40,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295312,
+        "sha256": "f689733cab3aac9c401618cae42592316d59b38087d96ff0c9d5f9b6c401e69e"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295303,
+        "sha256": "a11b9f644a44a637c3299727965fac97b595c4421efab7dc0fc7b19e61fd4004"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Replace only the owned regular A path;retain original executable."
+  },
+  {
+    "case": "block-b-directory",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "08b2bef6bfcac34cf68ac8a5d4553b9f64e19a27bdde96881b476121798e60fd",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "d899f199ecb0b959db60c41e97c35619e5f46dd5cb397cf02ddf98124e79430f",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295327,
+        "sha256": "c905491ee6dc366b938aee9a6a84723c9c3075fe9b5696026bb874817c84128c"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295328,
+        "sha256": "a11b9f644a44a637c3299727965fac97b595c4421efab7dc0fc7b19e61fd4004"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "08b2bef6bfcac34cf68ac8a5d4553b9f64e19a27bdde96881b476121798e60fd",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "d899f199ecb0b959db60c41e97c35619e5f46dd5cb397cf02ddf98124e79430f",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295327,
+        "sha256": "c905491ee6dc366b938aee9a6a84723c9c3075fe9b5696026bb874817c84128c"
+      },
+      "bin/rules-install-b": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-b/owned-marker": {
+        "kind": "file",
+        "bytes": 26,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295352,
+        "sha256": "8c3ee1dc817aac1993ee3053de4d81ca0636476a7a264c662cddce8ccbc598f4",
+        "text": "Owned replacement blocker\n"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Preserve original B by rename;create owned nonempty directory at its old name."
+  },
+  {
+    "case": "restore-b-for-retry",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 225,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "689334824f915ff9e621b1ffdae1cd1d05c42f8458758819ca9ef8fd16635697",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-a\"]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 936,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "e4960cd3aaaaa6a3de22af3f5e701fdf7e8fe2dfc5370527d94a000a20cc4692",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"},\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295392,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/rules-install-b": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-b/owned-marker": {
+        "kind": "file",
+        "bytes": 26,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295352,
+        "sha256": "8c3ee1dc817aac1993ee3053de4d81ca0636476a7a264c662cddce8ccbc598f4",
+        "text": "Owned replacement blocker\n"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 225,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "689334824f915ff9e621b1ffdae1cd1d05c42f8458758819ca9ef8fd16635697",
+        "text": "[v1]\n\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-b\"]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\"rules-install-a\"]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 936,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "e4960cd3aaaaa6a3de22af3f5e701fdf7e8fe2dfc5370527d94a000a20cc4692",
+        "text": "{\"installs\":{\"rules-install-ownership 0.1.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"},\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295392,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295399,
+        "sha256": "a11b9f644a44a637c3299727965fac97b595c4421efab7dc0fc7b19e61fd4004"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Preserve blocker directory;restore prior regular B bytes before retry."
+  },
+  {
+    "case": "remove-b-for-preflight",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295405,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295406,
+        "sha256": "f1c80d885cbb5575e8d9873ae070ff4c40cb0e0c41fea053dd07ab54d5dcfcb3"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295405,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Retain B outside bin to inspect filtered-uninstall preflight."
+  },
+  {
+    "case": "restore-b-for-uninstall",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295405,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295405,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295406,
+        "sha256": "f1c80d885cbb5575e8d9873ae070ff4c40cb0e0c41fea053dd07ab54d5dcfcb3"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Restore retained B before actual uninstall."
+  },
+  {
+    "case": "manual-a-v2",
+    "before": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295405,
+        "sha256": "8e560db11c02310fb96bd65cc5bb231228d8e340520bf078ec5d9aa5b7d3d755"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295406,
+        "sha256": "f1c80d885cbb5575e8d9873ae070ff4c40cb0e0c41fea053dd07ab54d5dcfcb3"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "after": {
+      ".crates.toml": {
+        "kind": "file",
+        "bytes": 145,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295249,
+        "sha256": "61880506c776f5c33f187eef598ba998fab581401bc1d59c84c9b2e37468351f",
+        "text": "[v1]\n\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\" = [\n    \"rules-install-a\",\n    \"rules-install-b\",\n]\n"
+      },
+      ".crates2.json": {
+        "kind": "file",
+        "bytes": 493,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295250,
+        "sha256": "3c3a252f53e8a0d549082e42e2196f9cfdb4a8b9c537e101828d8c7cd089bcd8",
+        "text": "{\"installs\":{\"rules-install-ownership 0.2.0 (path+file:///private/tmp/rules-cargo-install-q61l0dfg)\":{\"version_req\":null,\"bins\":[\"rules-install-a\",\"rules-install-b\"],\"features\":[],\"all_features\":false,\"no_default_features\":false,\"profile\":\"release\",\"target\":\"aarch64-apple-darwin\",\"rustc\":\"rustc 1.92.0 (ded5c06cf 2025-12-08)\\nbinary: rustc\\ncommit-hash: ded5c06cf21d2b93bffd5d884aa6e96934ee4234\\ncommit-date: 2025-12-08\\nhost: aarch64-apple-darwin\\nrelease: 1.92.0\\nLLVM version: 21.1.3\\n\"}}}"
+      },
+      "bin": {
+        "kind": "directory",
+        "mode": 493
+      },
+      "bin/rules-install-a": {
+        "kind": "file",
+        "bytes": 40,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295418,
+        "sha256": "f689733cab3aac9c401618cae42592316d59b38087d96ff0c9d5f9b6c401e69e"
+      },
+      "bin/rules-install-b": {
+        "kind": "file",
+        "bytes": 336800,
+        "mode": 493,
+        "nlink": 1,
+        "inode": 293295406,
+        "sha256": "f1c80d885cbb5575e8d9873ae070ff4c40cb0e0c41fea053dd07ab54d5dcfcb3"
+      },
+      "bin/unrelated-study-file": {
+        "kind": "file",
+        "bytes": 23,
+        "mode": 420,
+        "nlink": 1,
+        "inode": 293295231,
+        "sha256": "8e5bdc73727565b091b1720b4b1e2bdcaafc3b6644a3bcafb80cefd4750c31e5"
+      }
+    },
+    "detail": "Replace only the owned regular A path;retain original executable."
+  }
+]

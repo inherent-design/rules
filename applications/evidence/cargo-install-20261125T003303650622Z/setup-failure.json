@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "scope": "Isolation setup refusal before any Cargo/rustc process;source retained after the refusal,before correction.",
+  "producerSha256": "84cf2c468ecb4fc350a89aad79081d07425cb70d0634c8fe5cd402ca7de6bd28",
+  "reason": "An unrelated .cargo/config.toml exists in the real home ancestor. Its contents were not read.",
+  "nativeCommands": 0,
+  "correction": "Move the generated source crate outside that ancestor hierarchy;keep private Cargo home/install/target and offline settings."
+}

@@ -12537,47 +12537,163 @@
           "operations": [
             {
               "id": "install",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo-install/Install.lean and cargo-install/Install.bend",
+              "laws": [
+                "catalog_is_not_content_verification",
+                "compile_refusal_preserves_bins",
+                "untracked_refusal_can_create_empty_metadata",
+                "force_replaces_the_owned_untracked_fixture",
+                "a_path_reinstall_replaces_manual_bytes",
+                "failed_existing_replacement_keeps_successful_prefix",
+                "current_new_bin_cleanup_can_outlive_tracking_save",
+                "catalog_keeps_the_dangling_registration",
+                "uninstall_refuses_that_dangling_registration",
+                "missing_unselected_bin_blocks_filtered_uninstall",
+                "registered_manual_bytes_are_removed",
+                "proposed_keep_committed_new_bin_does_not_claim_total_success"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-install-20261125T003504421536Z/commands.json",
+                "evidence/cargo-install-20261125T003504421536Z/new-bin-followup.json",
+                "evidence/cargo-install-20261125T003504421536Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-install-selections.json"
+              ],
+              "negativeControls": [
+                "cargo-install/conformance.py:researchRefusals",
+                "cargo-install/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "cargo-install/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated two-bin path crate, Cargo/rustc1.92 on macOS arm64, offline/private home/install/target, explicit owned script/blocker/missing-file interventions",
+                "Compilation/staging and tracking saves succeed except deliberate compiler refusal; only selected directory replacement failure, fixed ordered fixture binaries",
+                "Registration and actual payload/presence independently observed; catalog reads do not verify executable content",
+                "Mixed new/replacement missing-bin registration reproduced natively; keep-committed-new-file candidate is pure/proposed only"
+              ],
+              "verificationPlan": "Review current upstream and other unwind/metadata-save failures before a fix. Qualify registry/Git freshness, no-track, foreign ownership, selection ambiguity, orphan removal, interruption/concurrency, Windows and general removal; no whole-feature or transactional guarantee."
             },
             {
               "id": "uninstall",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo-install/Install.lean and cargo-install/Install.bend",
+              "laws": [
+                "catalog_is_not_content_verification",
+                "compile_refusal_preserves_bins",
+                "untracked_refusal_can_create_empty_metadata",
+                "force_replaces_the_owned_untracked_fixture",
+                "a_path_reinstall_replaces_manual_bytes",
+                "failed_existing_replacement_keeps_successful_prefix",
+                "current_new_bin_cleanup_can_outlive_tracking_save",
+                "catalog_keeps_the_dangling_registration",
+                "uninstall_refuses_that_dangling_registration",
+                "missing_unselected_bin_blocks_filtered_uninstall",
+                "registered_manual_bytes_are_removed",
+                "proposed_keep_committed_new_bin_does_not_claim_total_success"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-install-20261125T003504421536Z/commands.json",
+                "evidence/cargo-install-20261125T003504421536Z/new-bin-followup.json",
+                "evidence/cargo-install-20261125T003504421536Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-install-selections.json"
+              ],
+              "negativeControls": [
+                "cargo-install/conformance.py:researchRefusals",
+                "cargo-install/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "cargo-install/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated two-bin path crate, Cargo/rustc1.92 on macOS arm64, offline/private home/install/target, explicit owned script/blocker/missing-file interventions",
+                "Compilation/staging and tracking saves succeed except deliberate compiler refusal; only selected directory replacement failure, fixed ordered fixture binaries",
+                "Registration and actual payload/presence independently observed; catalog reads do not verify executable content",
+                "Mixed new/replacement missing-bin registration reproduced natively; keep-committed-new-file candidate is pure/proposed only"
+              ],
+              "verificationPlan": "Review current upstream and other unwind/metadata-save failures before a fix. Qualify registry/Git freshness, no-track, foreign ownership, selection ambiguity, orphan removal, interruption/concurrency, Windows and general removal; no whole-feature or transactional guarantee."
             },
             {
               "id": "list-installed",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo-install/Install.lean and cargo-install/Install.bend",
+              "laws": [
+                "catalog_is_not_content_verification",
+                "compile_refusal_preserves_bins",
+                "untracked_refusal_can_create_empty_metadata",
+                "force_replaces_the_owned_untracked_fixture",
+                "a_path_reinstall_replaces_manual_bytes",
+                "failed_existing_replacement_keeps_successful_prefix",
+                "current_new_bin_cleanup_can_outlive_tracking_save",
+                "catalog_keeps_the_dangling_registration",
+                "uninstall_refuses_that_dangling_registration",
+                "missing_unselected_bin_blocks_filtered_uninstall",
+                "registered_manual_bytes_are_removed",
+                "proposed_keep_committed_new_bin_does_not_claim_total_success"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-install-20261125T003504421536Z/commands.json",
+                "evidence/cargo-install-20261125T003504421536Z/new-bin-followup.json",
+                "evidence/cargo-install-20261125T003504421536Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-install-selections.json"
+              ],
+              "negativeControls": [
+                "cargo-install/conformance.py:researchRefusals",
+                "cargo-install/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "cargo-install/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated two-bin path crate, Cargo/rustc1.92 on macOS arm64, offline/private home/install/target, explicit owned script/blocker/missing-file interventions",
+                "Compilation/staging and tracking saves succeed except deliberate compiler refusal; only selected directory replacement failure, fixed ordered fixture binaries",
+                "Registration and actual payload/presence independently observed; catalog reads do not verify executable content",
+                "Mixed new/replacement missing-bin registration reproduced natively; keep-committed-new-file candidate is pure/proposed only"
+              ],
+              "verificationPlan": "Review current upstream and other unwind/metadata-save failures before a fix. Qualify registry/Git freshness, no-track, foreign ownership, selection ambiguity, orphan removal, interruption/concurrency, Windows and general removal; no whole-feature or transactional guarantee."
             },
             {
               "id": "replace-binary",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "cargo-install/Install.lean and cargo-install/Install.bend",
+              "laws": [
+                "catalog_is_not_content_verification",
+                "compile_refusal_preserves_bins",
+                "untracked_refusal_can_create_empty_metadata",
+                "force_replaces_the_owned_untracked_fixture",
+                "a_path_reinstall_replaces_manual_bytes",
+                "failed_existing_replacement_keeps_successful_prefix",
+                "current_new_bin_cleanup_can_outlive_tracking_save",
+                "catalog_keeps_the_dangling_registration",
+                "uninstall_refuses_that_dangling_registration",
+                "missing_unselected_bin_blocks_filtered_uninstall",
+                "registered_manual_bytes_are_removed",
+                "proposed_keep_committed_new_bin_does_not_claim_total_success"
+              ],
+              "nativeEvidence": [
+                "evidence/cargo-install-20261125T003504421536Z/commands.json",
+                "evidence/cargo-install-20261125T003504421536Z/new-bin-followup.json",
+                "evidence/cargo-install-20261125T003504421536Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/cargo-install-selections.json"
+              ],
+              "negativeControls": [
+                "cargo-install/conformance.py:researchRefusals",
+                "cargo-install/conformance.py:observationMutations"
+              ],
+              "uxAssessment": "cargo-install/README.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One generated two-bin path crate, Cargo/rustc1.92 on macOS arm64, offline/private home/install/target, explicit owned script/blocker/missing-file interventions",
+                "Compilation/staging and tracking saves succeed except deliberate compiler refusal; only selected directory replacement failure, fixed ordered fixture binaries",
+                "Registration and actual payload/presence independently observed; catalog reads do not verify executable content",
+                "Mixed new/replacement missing-bin registration reproduced natively; keep-committed-new-file candidate is pure/proposed only"
+              ],
+              "verificationPlan": "Review current upstream and other unwind/metadata-save failures before a fix. Qualify registry/Git freshness, no-track, foreign ownership, selection ambiguity, orphan removal, interruption/concurrency, Windows and general removal; no whole-feature or transactional guarantee."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "bounded native binary-install/ownership study; broader feature and production correction pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

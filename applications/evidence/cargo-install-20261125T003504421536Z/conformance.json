@@ -1,0 +1,1245 @@
+{
+  "schema": 1,
+  "scope": "Two-bin path install on selected Cargo1.92/macOS;successful compilation/staging/tracker saves except explicit compile/rename controls.",
+  "nativeCommands": 30,
+  "controlledInterventions": 6,
+  "transitionComparisons": 36,
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "operation",
+    "body",
+    "owner",
+    "version",
+    "action",
+    "boolean",
+    "directory-unlink",
+    "mixed-owner-removal",
+    "unregistered-removal",
+    "empty-removal"
+  ],
+  "observationMutations": [
+    "outcome-0",
+    "outcome-1",
+    "outcome-2",
+    "outcome-3",
+    "outcome-4",
+    "outcome-5"
+  ],
+  "proposalDifferences": [
+    "new-bin-replace-failure"
+  ],
+  "comparisons": [
+    {
+      "case": "cargo-version",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 4,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": false,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "4/0/0/0/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "4/0/0/0/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "rustc-version",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 4,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": false,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "4/0/0/0/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "4/0/0/0/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "lock",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 4,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": false,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "4/0/0/0/0/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "4/0/0/0/0/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "untracked-collision",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 4,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": false,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "4/0/0/0/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "4/0/0/0/1/101",
+        "proposal": "4/0/0/0/1/101"
+      }
+    },
+    {
+      "case": "force-initial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 4,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": true,
+        "force": true,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": "1/1/1/1/1/0"
+      }
+    },
+    {
+      "case": "runtime-a-initial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-b-initial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "catalog-initial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "catalog-manual",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 3,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "3/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "3/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-a-manual",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 3,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "3/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "3/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "path-refresh",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 3,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": "1/1/1/1/1/0"
+      }
+    },
+    {
+      "case": "runtime-a-refreshed",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "compile-refusal",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": false,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/101",
+        "proposal": "1/1/1/1/1/101"
+      }
+    },
+    {
+      "case": "runtime-a-after-compile-refusal",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-b-after-compile-refusal",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "1/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "1/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "partial-replacement",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 5,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 2,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/5/1/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/5/1/1/101",
+        "proposal": "2/2/5/1/1/101"
+      }
+    },
+    {
+      "case": "runtime-a-partial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 5,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/5/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/5/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "catalog-partial",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 5,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/5/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/5/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "complete-replacement",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 2,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/2/2/1/0",
+        "proposal": "2/2/2/2/1/0"
+      }
+    },
+    {
+      "case": "runtime-a-v2",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-b-v2",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "uninstall-a-with-missing-b",
+      "sourceKind": "command",
+      "input": {
+        "kind": 1,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 0,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": true,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "2/2/0/2/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "2/2/0/2/1/101",
+        "proposal": null
+      }
+    },
+    {
+      "case": "uninstall-manual-a",
+      "sourceKind": "command",
+      "input": {
+        "kind": 1,
+        "aBody": 3,
+        "aOwner": 2,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": true,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "0/0/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "0/0/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "runtime-b-after-subset-uninstall",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 0,
+        "aOwner": 0,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "0/0/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "0/0/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "catalog-subset",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 0,
+        "aOwner": 0,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "0/0/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "0/0/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "uninstall-rest",
+      "sourceKind": "command",
+      "input": {
+        "kind": 1,
+        "aBody": 0,
+        "aOwner": 0,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": true,
+        "action": 0
+      },
+      "expected": "0/0/0/0/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "0/0/0/0/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "catalog-final",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 0,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "0/0/0/0/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "0/0/0/0/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "new-bin-replace-failure",
+      "sourceKind": "command",
+      "input": {
+        "kind": 0,
+        "aBody": 5,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 0,
+        "metadata": false,
+        "force": true,
+        "compileOk": true,
+        "version": 2,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "5/0/0/2/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "5/0/0/2/1/101",
+        "proposal": "5/0/2/2/1/101"
+      }
+    },
+    {
+      "case": "new-bin-catalog",
+      "sourceKind": "command",
+      "input": {
+        "kind": 2,
+        "aBody": 5,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "5/0/0/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "5/0/0/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "new-bin-uninstall",
+      "sourceKind": "command",
+      "input": {
+        "kind": 1,
+        "aBody": 5,
+        "aOwner": 0,
+        "bBody": 0,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": true,
+        "action": 0
+      },
+      "expected": "5/0/0/2/1/101",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "model": {
+        "current": "5/0/0/2/1/101",
+        "proposal": null
+      }
+    },
+    {
+      "case": "manual-a",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 0
+      },
+      "expected": "3/1/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "3/1/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "block-b-directory",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 1,
+        "aOwner": 1,
+        "bBody": 1,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 1
+      },
+      "expected": "1/1/5/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "1/1/5/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "restore-b-for-retry",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 5,
+        "bOwner": 1,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 2
+      },
+      "expected": "2/2/1/1/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "2/2/1/1/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "remove-b-for-preflight",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 3
+      },
+      "expected": "2/2/0/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "2/2/0/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "restore-b-for-uninstall",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 0,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 4
+      },
+      "expected": "2/2/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "2/2/2/2/1/0",
+        "proposal": null
+      }
+    },
+    {
+      "case": "manual-a-v2",
+      "sourceKind": "intervention",
+      "input": {
+        "kind": 3,
+        "aBody": 2,
+        "aOwner": 2,
+        "bBody": 2,
+        "bOwner": 2,
+        "metadata": true,
+        "force": false,
+        "compileOk": true,
+        "version": 1,
+        "selectA": false,
+        "selectB": false,
+        "action": 5
+      },
+      "expected": "3/2/2/2/1/0",
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model": {
+        "current": "3/2/2/2/1/0",
+        "proposal": null
+      }
+    }
+  ],
+  "basisSha256": {
+    "applications/cargo-install/Install.bend": "04ad802b751cee7f05ff5ee5819486c937d26570f1c4bcf6b49cb8994ae954fc",
+    "applications/cargo-install/Install.lean": "8fbada48931b2020f3e89af16849528b54171f3163ee71e3835d98c75758cf11",
+    "applications/cargo-install/InstallCase.lean": "635dced21492b361bc1d09e7a636c95e48d6983deaae33601917e6e664628387",
+    "applications/cargo-install/conformance.py": "6b6d683414b33d4dc2ecc57379aea2c0b326d31a66808141c6fcc74754f80f4a",
+    "applications/cargo-install/observations.py": "e681d43043900985327f26f4d106640ed2ce50d44601d062ee7adcacb2af0c55",
+    "applications/cargo-install/probe.py": "e79acaca6077a91ca0c7fa0ba0e844e551e1b76b2571247dbb38d8d4907f9ed7",
+    "applications/evidence/cargo-install-20261125T003303650622Z/failed-probe.py": "84cf2c468ecb4fc350a89aad79081d07425cb70d0634c8fe5cd402ca7de6bd28",
+    "applications/evidence/cargo-install-20261125T003303650622Z/setup-failure.json": "58760fec0a0ae78bbb400e8162f1bc72d1760b8a1002da044c4efe0ffa75c93e",
+    "applications/evidence/cargo-install-20261125T003303650622Z/setup.stderr": "ded073320ba199c1336869f997bd963be9af848034f31b0ceb4823a2a9458297",
+    "applications/evidence/cargo-install-20261125T003504421536Z/cargo-version.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/cargo-version.stdout": "045c81a313cfc8e94aadafc48781c25ca27f2357f111615f7d922c0a8e4cae21",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-final.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-final.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-initial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-initial.stdout": "57b5f8301aa4138e05f274c671bc53cf884877ced6cd898bdd518f101baafcd7",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-manual.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-manual.stdout": "57b5f8301aa4138e05f274c671bc53cf884877ced6cd898bdd518f101baafcd7",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-partial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-partial.stdout": "934b1b15fde306f55c18539ecd6c0dd865636a0da94f6e6d5613ae933938e4ea",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-subset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/catalog-subset.stdout": "f5f9dde7ca77ecb65da96b848fbd2b2440c615512e2b07bab3398df40d90dba0",
+    "applications/evidence/cargo-install-20261125T003504421536Z/commands.json": "b30b5a09cd64b67fcf56046fa2dd7849407f4138fd13a42c93bd3af3d13e8e5d",
+    "applications/evidence/cargo-install-20261125T003504421536Z/compile-refusal.stderr": "ac4418429a6eee069229b4683fb0fb9cbbec031f716601f1e398ee9fa717e72e",
+    "applications/evidence/cargo-install-20261125T003504421536Z/compile-refusal.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/complete-replacement.stderr": "f9fe2c70cecea306ea2b665ccae69c5140be264d32e34e01d611510be27bdd08",
+    "applications/evidence/cargo-install-20261125T003504421536Z/complete-replacement.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/controls.json": "d89a942d431a52b3d63aeb7db7392bb17bfbe9d8408945f4db27982606fa5180",
+    "applications/evidence/cargo-install-20261125T003504421536Z/followup-active.json": "8aec22b57dc45e3250774ee69ca2e21b8777843684baffe5bd5e7f63e717de6b",
+    "applications/evidence/cargo-install-20261125T003504421536Z/force-initial.stderr": "8db5009a77c5c7ef70fe279716c595b77b473619bb70f8a9d05e58d74a3ce7b1",
+    "applications/evidence/cargo-install-20261125T003504421536Z/force-initial.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/locations.json": "2936ffbe21b1f6547492f1a7e9be982bd50cd4dcef1638d9bf58fcd65e49b08d",
+    "applications/evidence/cargo-install-20261125T003504421536Z/lock.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/lock.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-catalog.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-catalog.stdout": "f5f9dde7ca77ecb65da96b848fbd2b2440c615512e2b07bab3398df40d90dba0",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-followup.json": "165d83e798e3aa3cb575d456c2c67b03b35879f472137c14717a98622d8e679a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-followup.py": "70fa931d50656f26e74f4a8b459dfd1fbe470090ccc825f533376f2087636a54",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-replace-failure.stderr": "8ae18de2a323c381d4ae4c16b4d21d77adf96116c11d335f3d46c0484698b4da",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-replace-failure.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-uninstall.stderr": "07dd14cc0820907e20c7dc2c1ae3e5f6d249ee8eb267e2e9c1751dd3c2ef731a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/new-bin-uninstall.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/owned-processes.json": "1a8c9638475f3cf9a25e6b4b9b5e9ef69a22f239ff38f94d0194166775f88173",
+    "applications/evidence/cargo-install-20261125T003504421536Z/partial-replacement.stderr": "a7ae53c3a2c2b72d8a7709bef5ba1b54a51e100afa56a66369d0d399acae82d9",
+    "applications/evidence/cargo-install-20261125T003504421536Z/partial-replacement.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/path-refresh.stderr": "50f5db0e9f6aea7ad3e46e23fe59976e59c2375dc7e173c1b6a089003bd02b1c",
+    "applications/evidence/cargo-install-20261125T003504421536Z/path-refresh.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/probe.py": "e79acaca6077a91ca0c7fa0ba0e844e551e1b76b2571247dbb38d8d4907f9ed7",
+    "applications/evidence/cargo-install-20261125T003504421536Z/receipt.json": "6c10ba9041a104fca4d6da43ca95f6b3209345ec0c41a5d52ec2f8d52678b0e5",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-after-compile-refusal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-after-compile-refusal.stdout": "49c297ed3f1cb7e5b5398f62f4ffb00cd72ad8fe921c4bfc786659ecc44fc31a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-initial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-initial.stdout": "49c297ed3f1cb7e5b5398f62f4ffb00cd72ad8fe921c4bfc786659ecc44fc31a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-manual.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-manual.stdout": "8bfb2ad378a3e50cb04f147556db3edef25b31679644a3a648baa738c1671b44",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-partial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-partial.stdout": "ee4d8b11f1653bfeffa23125e0d80acdc89a01fcd46a22563339c77325f556f8",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-refreshed.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-refreshed.stdout": "49c297ed3f1cb7e5b5398f62f4ffb00cd72ad8fe921c4bfc786659ecc44fc31a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-v2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-a-v2.stdout": "ee4d8b11f1653bfeffa23125e0d80acdc89a01fcd46a22563339c77325f556f8",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-after-compile-refusal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-after-compile-refusal.stdout": "ab0635993760d07a6f234761672f27767635bae78d60e5b4c9b3e8b59c5c19ce",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-after-subset-uninstall.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-after-subset-uninstall.stdout": "3de6ab3ddb4013ab2cb1b2b0d9b1b36ed6e2e8b7dfc897546133180b4eaee786",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-initial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-initial.stdout": "ab0635993760d07a6f234761672f27767635bae78d60e5b4c9b3e8b59c5c19ce",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-v2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/runtime-b-v2.stdout": "3de6ab3ddb4013ab2cb1b2b0d9b1b36ed6e2e8b7dfc897546133180b4eaee786",
+    "applications/evidence/cargo-install-20261125T003504421536Z/rustc-version.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/rustc-version.stdout": "58c12481ab6ca64f223a3d873e8d32b30fdf2c200be485065372adcd9ddf23d8",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-a-with-missing-b.stderr": "a9bce3e1d927c410e033ca5e0a65c592ba374b3ceb7b3eb91c07fd159b7d3228",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-a-with-missing-b.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-manual-a.stderr": "a7fc8a20783822432fe2eb86468bd2a73d63decca05d6e58336fb3159f3d3d6a",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-manual-a.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-rest.stderr": "da4b9a6137b1cd12f9891e066a1eb0dd5be2f7c5c70283c1b4e7c9dfe45b6ec7",
+    "applications/evidence/cargo-install-20261125T003504421536Z/uninstall-rest.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/cargo-install-20261125T003504421536Z/untracked-collision.stderr": "f9c73eab7bb222df93b1c292336978ed1ffc0b7435657746dd54a61e14707bf1",
+    "applications/evidence/cargo-install-20261125T003504421536Z/untracked-collision.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/sources/cargo-install-selections.json": "0c393ca262afced8e2ce331ef417b29bc804da2da9cede1acfb7207b45688533"
+  },
+  "driverSha256": "2fff3450eadbed56f69a9cedf0033a35a7185473330a59e2155a691b20ca4c08",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No Cargo/rustc/runtime invocation in replay. Native version/lock/runtime commands compare root state as read-only;runtime stdout is independently checked,not predicted by a CPU model.",
+    "Exact fixture hashes classify bodies and exact package IDs classify registration;unknown bodies/owners refuse interpretation. No universal executable,manifest,tracking-file or path codec.",
+    "Only owned blocking directories fail renames;all new-file publications,other replacement actions and tracking writes are admitted successes. No crash,durability,orphan-removal,concurrency,Windows or registry/Git freshness proof.",
+    "The new-bin rollback inconsistency is observed in pinned Cargo1.92. No latest-upstream status,upstream issue or production patch is claimed.",
+    "Keeping confirmed new files after saved partial ownership is a pure candidate only. Metadata-write failure,earlier new-bin failure,orphan removal and other unwind paths require their own design/qualification.",
+    "Initial collector refused an ancestor-config guard before Cargo execution;failed source is preserved after refusal. Follow-up producer uses a fresh root and the existing compiled target."
+  ]
+}

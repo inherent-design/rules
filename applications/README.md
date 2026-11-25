@@ -44,6 +44,8 @@ The [Yarn Modern constraints band](yarn-constraints/README.md) compares check/fi
 
 The [npm cache band](npm-cache/README.md) separates selected backing integrity, cleanup, installed content, and clean-rebuild acquisition. It observes a successful cache repair followed by an offline failure that cleared installation, with unchanged author/lock inputs and successful own-origin recovery. This does not make a cache a durable project asset store.
 
+The [Cargo binary-install band](cargo-install/README.md) separates registered ownership, actual executable bytes, compilation, partial replacement, and cleanup. It retains a valid partial replacement of existing binaries and a distinct mixed new/replacement failure that registers a new binary before cleanup removes it. The counterexample is scoped to pinned Cargo 1.92 and an owned directory blocker; broader installation and recovery remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
