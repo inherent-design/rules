@@ -19,6 +19,8 @@ The selected deployment reference remains Java Edition 1.21.1 with NeoForge 21.1
 
 The Modefite source census includes all 86 outer class entries. The fresh Compat and Polytone inspections deliberately select policy, geometry, item, and model roots; they are not complete effect closures. The existing broader Polytone manager, library, and lifecycle maps remain in force. Source-view identities are attributable inspection aids, not a proof of decompilation or translation fidelity.
 
+The separate [item-program study](ITEM-PROGRAMS.md) now maps six node bodies and compares original generic Compat compilation/layer selection. Its authored property callbacks do not qualify actual game values, transformed hooks, or the complete Modefite/Compat pipeline. Keep that narrower evidence distinct from the policy and geometry counts below.
+
 ## Eligibility, selection, and use
 
 Keep these facts separate in a capability receipt:

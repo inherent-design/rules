@@ -1,0 +1,1629 @@
+{
+  "schema": 1,
+  "status": "partial selected field/consumer contracts; original generic Compat comparison and vanilla source inspection have separate evidence",
+  "nodes": [
+    {
+      "id": "modefite.node.model",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:model",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/ModelDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "content reference",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Model reference resolved through MODEL_PROVIDER; null provider result is an empty Optional, not a guaranteed native missing model.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "modefite.node.empty",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:empty",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/EmptyModelDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Creates an EmptyItemModel in the inspected resolver; actual renderer behavior unqualified.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "modefite.node.composite",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:composite",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/CompositeModelDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "models",
+          "valueType": "ordered recursive node list",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "ordered children",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Empty list invokes native missing-model fallback; nonempty list constructs a composite consumer.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "modefite.node.condition",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:condition",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/ConditionDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "predicate",
+          "valueType": "string",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "value",
+          "valueType": "JSON element",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "component",
+          "valueType": "string",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "ignore_default",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": false,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "keybind",
+          "valueType": "resolved KeyMapping",
+          "presence": "optional",
+          "missing": null,
+          "role": "key-binding registry reference",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "fluid",
+          "valueType": "resource-id",
+          "presence": "optional",
+          "missing": "minecraft:water",
+          "role": "registry reference",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "selected branch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "selected branch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Both branches decoded; selected property registry supplies a Boolean at evaluation.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "modefite.node.select",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:select",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/SelectDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "cases",
+          "valueType": "ordered list of {model,when}",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "dispatch alternatives",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": null,
+          "role": "fallback branch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "block_state_property",
+          "valueType": "string",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "ignore_default",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": false,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "ignore_unknown",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": false,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "component",
+          "valueType": "string",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Each when is string or string list converted to HashSet; selected valid ID-valued properties normalize IDs. Resolver uses first matching case in list order, then fallback/missing.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "modefite.node.range_dispatch",
+      "provider": "modefite-cy8BkRZc",
+      "type": "minecraft:range_dispatch",
+      "privateView": "timmychips/modefiteitemdefinitions/property/type/codec/RangeDispatchDefinition.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "entries",
+          "valueType": "list of {model,threshold:float32}",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "dispatch alternatives",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": null,
+          "role": "fallback branch",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "target",
+          "valueType": "CompassTarget codec",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "wobble",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": true,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "normalize",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": true,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "source",
+          "valueType": "ClockSource codec",
+          "presence": "optional",
+          "missing": null,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "period",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "remaining",
+          "valueType": "boolean",
+          "presence": "optional",
+          "missing": false,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "scale",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1,
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "unknownFields": "No explicit field allowlist in the selected record builder; effective DFU/outer decoder behavior still requires review.",
+      "consumer": "Resolver sorts descending with Float.compare and filters using >=; duplicate, signed-zero and nonfinite behavior must not be silently equated with a different search.",
+      "evidenceKind": "static-inspection",
+      "nativeConformance": "pending",
+      "limits": "Constructor defaults are not a complete null/malformed/registry-availability codec proof."
+    },
+    {
+      "id": "compat.node.model",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:model",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "content reference",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "tints",
+          "valueType": "array of delegated tint definitions",
+          "presence": "optional",
+          "missing": [],
+          "role": "per-layer tint functions",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Appends a model/tint layer; model lookup and tint execution are distinct consumers.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    },
+    {
+      "id": "compat.node.empty",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:empty",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Appends no layer.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    },
+    {
+      "id": "compat.node.composite",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:composite",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "models",
+          "valueType": "ordered recursive node array",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "ordered children",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Appends all child layers in list order; empty list emits none.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    },
+    {
+      "id": "compat.node.condition",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:condition",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "predicate",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: string).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "value",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: JSON element).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "component",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: string).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "ignore_default",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "keybind",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: resolved KeyMapping).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "key-binding registry reference",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "fluid",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: resource-id).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "registry reference",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "selected branch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "selected branch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Values.condition supplies a Predicate; exactly one compiled branch appends.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    },
+    {
+      "id": "compat.node.select",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:select",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "cases",
+          "valueType": "ordered list of {model,when}",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "dispatch alternatives",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "compiled builtin missing-model leaf",
+          "role": "fallback branch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "block_state_property",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: string).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "ignore_default",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "ignore_unknown",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "component",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: string).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Values.select owns decoded-key/current-value types; duplicate decoded keys refuse. Choice uses map lookup or compiled fallback.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    },
+    {
+      "id": "compat.node.range_dispatch",
+      "provider": "compat-4ae402eaa858eef4",
+      "type": "minecraft:range_dispatch",
+      "privateView": "design/inherent/skyweavecompat/client/model/ResourceDefinitions.java",
+      "fields": [
+        {
+          "name": "type",
+          "valueType": "selected normalized identifier",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "node dispatch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "property",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "context reader selection",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "entries",
+          "valueType": "list of {model,threshold:float32}",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "dispatch alternatives",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "compiled builtin missing-model leaf",
+          "role": "fallback branch",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "target",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: CompassTarget codec).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "wobble",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "normalize",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "source",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: ClockSource codec).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "period",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: float32).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "remaining",
+          "valueType": "Delegated JSON field; effective Values contract incomplete (Modefite candidate: boolean).",
+          "presence": "property-dependent",
+          "missing": "Delegated to selected Values implementation",
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        },
+        {
+          "name": "scale",
+          "valueType": "finite float32",
+          "presence": "optional",
+          "missing": 1,
+          "role": "value",
+          "nullPolicy": "Explicit null refuses for fields directly checked by the generic compiler; delegated fields require Values/NativeResourceValues review."
+        }
+      ],
+      "unknownFields": "Explicit per-node allowlist; other fields refuse before branch construction.",
+      "consumer": "Finite float thresholds, identical-body duplicate collapse/conflict refusal, sorted Float.compare dispatch, NaN fallback; Values.range supplies live numeric value.",
+      "evidenceKind": "static-inspection plus original generic calls with authored Values/context",
+      "nativeConformance": "36 original generic compiler calls,78 contexts,67 layers agree with selected Lean/Bend models; authored Values contract only",
+      "limits": "Authored Values callbacks do not qualify actual NativeResourceValues, game registries, model availability or rendering."
+    }
+  ],
+  "nestedForms": [
+    {
+      "id": "modefite.select.case",
+      "owner": "modefite.node.select",
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "case child",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "when",
+          "valueType": "string or string list",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "case keys",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "normalization": "HashSet conversion; selected ID-valued property normalization in constructor."
+    },
+    {
+      "id": "modefite.range.entry",
+      "owner": "modefite.node.range_dispatch",
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "threshold",
+          "valueType": "float32",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ]
+    },
+    {
+      "id": "compat.select.case",
+      "owner": "compat.node.select",
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "when",
+          "valueType": "nonempty single value or array delegated to Selector.decode",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "normalization": "Non-null decoded key; rejects every duplicate across admitted alternatives."
+    },
+    {
+      "id": "compat.range.entry",
+      "owner": "compat.node.range_dispatch",
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        },
+        {
+          "name": "threshold",
+          "valueType": "finite float32",
+          "presence": "required",
+          "missing": "no decoded value",
+          "role": "value",
+          "nullPolicy": "Requires effective decoder review; not inferred from optional label."
+        }
+      ],
+      "normalization": "Float-key duplicate body equality/collapse, conflict refusal, sorted dispatch."
+    }
+  ],
+  "separateLanes": [
+    "Four modern Java references have24 selected six-node body records and36 source views/83 original classes; full property/tint registries and vanilla raw/null/unknown/render behavior remain incomplete. Baseline1.21.1 modern-registry absence is separate.",
+    "Polytone custom-item-model override grammar and world-aware consumers remain separate.",
+    "Root grammar, raw JSON duplicate/encoding/byte limits, resource stack selection, publication and retirement remain separate contracts."
+  ],
+  "hostObligations": [
+    "Float comparison operators and total order distinguish signed zero and NaN; existing array-search subset excludes those cases.",
+    "A lexical resource identifier is not a host filesystem path grant.",
+    "A compiler refusal can follow authored callbacks; generic callbacks have no automatic rollback/purity guarantee.",
+    "Explicit model dependencies are not automatically complete renderer retaining roots."
+  ],
+  "vanillaProfiles": [
+    {
+      "profile": "java-1.21.4-vanilla",
+      "rootModel": "required ItemModels.CODEC dispatch",
+      "rootProperties": [
+        {
+          "name": "hand_animation_on_swap",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "sources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ClientItem",
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels"
+      ],
+      "context": "nullable LivingEntity",
+      "registryContext": "none in selected ClientItem",
+      "evidence": "static-inspection-only; no native vanilla parser/update invocation",
+      "rootNullUnknownPolicy": "DFU/outer decoder behavior unqualified; do not inherit Compat allowlist"
+    },
+    {
+      "profile": "java-1.21.5-vanilla",
+      "rootModel": "required ItemModels.CODEC dispatch",
+      "rootProperties": [
+        {
+          "name": "hand_animation_on_swap",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "sources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ClientItem",
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels"
+      ],
+      "context": "nullable LivingEntity",
+      "registryContext": "registry context swapper plus per-level property/value remapping",
+      "evidence": "static-inspection-only; no native vanilla parser/update invocation",
+      "rootNullUnknownPolicy": "DFU/outer decoder behavior unqualified; do not inherit Compat allowlist"
+    },
+    {
+      "profile": "java-1.21.11-vanilla",
+      "rootModel": "required ItemModels.CODEC dispatch",
+      "rootProperties": [
+        {
+          "name": "hand_animation_on_swap",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "oversized_in_gui",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "swap_animation_scale",
+          "type": "float32",
+          "default": 1
+        }
+      ],
+      "sources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ClientItem",
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels"
+      ],
+      "context": "nullable ItemOwner; condition/select/tints derive nullable LivingEntity",
+      "registryContext": "registry context swapper plus per-level property/value remapping",
+      "evidence": "static-inspection-only; no native vanilla parser/update invocation",
+      "rootNullUnknownPolicy": "DFU/outer decoder behavior unqualified; do not inherit Compat allowlist"
+    },
+    {
+      "profile": "java-26.3-vanilla",
+      "rootModel": "required ItemModels.CODEC dispatch",
+      "rootProperties": [
+        {
+          "name": "hand_animation_on_swap",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "oversized_in_gui",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "swap_animation_scale",
+          "type": "float32",
+          "default": 1
+        }
+      ],
+      "sources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.ClientItem",
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels"
+      ],
+      "context": "nullable ItemOwner; condition/select/tints derive nullable LivingEntity",
+      "registryContext": "registry context swapper plus per-level property/value remapping",
+      "evidence": "static-inspection-only; no native vanilla parser/update invocation",
+      "rootNullUnknownPolicy": "DFU/outer decoder behavior unqualified; do not inherit Compat allowlist"
+    }
+  ],
+  "vanillaNodes": [
+    {
+      "id": "java-1.21.4-vanilla.node.model",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:model",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.BlockModelWrapper"
+      ],
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "tints",
+          "valueType": "ordered registered tint list",
+          "presence": "optional",
+          "missing": []
+        }
+      ],
+      "consumer": "Registers model dependency; actual bake/tints/materials/atlas/render consumer remains separate.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.4-vanilla.node.empty",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:empty",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.EmptyModel"
+      ],
+      "fields": [],
+      "consumer": "No layer; 1.21.11/26.3 may still append model identity during update.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.4-vanilla.node.composite",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:composite",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.CompositeModel"
+      ],
+      "fields": [
+        {
+          "name": "models",
+          "valueType": "ordered recursive node list",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Ordered children; empty/one-child bake optimizations and identity effects are release-specific.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.4-vanilla.node.condition",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:condition",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ConditionalItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered Boolean property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Decode and bake both branches; evaluate property and update one selected branch.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.4-vanilla.node.select",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:select",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.SelectItemModel",
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered typed property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "cases",
+          "valueType": "nonempty typed case list with globally unique decoded keys",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Property codec validates nonempty case list and duplicate decoded values before map insertion. Each when uses a nonempty compact list. Missing fallback is supplied at bake.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.4-vanilla.node.range_dispatch",
+      "profile": "java-1.21.4-vanilla",
+      "type": "minecraft:range_dispatch",
+      "dispatchSource": "java-1.21.4-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.4-vanilla:net.minecraft.client.renderer.item.RangeSelectItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered numeric property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "scale",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1
+        },
+        {
+          "name": "entries",
+          "valueType": "ordered threshold/model entries; sorted at bake",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Sort by threshold comparator; less than16 uses primitive linear comparison,16+ uses Arrays.binarySearch; NaN result falls back. This is not Compat duplicate/refusal or universal last-equal policy.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "Codec.FLOAT declaration does not itself prove Compat finite-number guards",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.model",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:model",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.BlockModelWrapper"
+      ],
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "tints",
+          "valueType": "ordered registered tint list",
+          "presence": "optional",
+          "missing": []
+        }
+      ],
+      "consumer": "Registers model dependency; actual bake/tints/materials/atlas/render consumer remains separate.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.empty",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:empty",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.EmptyModel"
+      ],
+      "fields": [],
+      "consumer": "No layer; 1.21.11/26.3 may still append model identity during update.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.composite",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:composite",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.CompositeModel"
+      ],
+      "fields": [
+        {
+          "name": "models",
+          "valueType": "ordered recursive node list",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Ordered children; empty/one-child bake optimizations and identity effects are release-specific.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.condition",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:condition",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ConditionalItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered Boolean property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Decode and bake both branches; evaluate property and update one selected branch.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.select",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:select",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.SelectItemModel",
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered typed property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "cases",
+          "valueType": "nonempty typed case list with globally unique decoded keys",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Property codec validates nonempty case list and duplicate decoded values before map insertion. Each when uses a nonempty compact list. Missing fallback is supplied at bake.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.5-vanilla.node.range_dispatch",
+      "profile": "java-1.21.5-vanilla",
+      "type": "minecraft:range_dispatch",
+      "dispatchSource": "java-1.21.5-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.5-vanilla:net.minecraft.client.renderer.item.RangeSelectItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered numeric property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "scale",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1
+        },
+        {
+          "name": "entries",
+          "valueType": "ordered threshold/model entries; sorted at bake",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Sort by threshold comparator; less than16 uses primitive linear comparison,16+ uses Arrays.binarySearch; NaN result falls back. This is not Compat duplicate/refusal or universal last-equal policy.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "Codec.FLOAT declaration does not itself prove Compat finite-number guards",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.model",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:model",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.BlockModelWrapper"
+      ],
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "tints",
+          "valueType": "ordered registered tint list",
+          "presence": "optional",
+          "missing": []
+        }
+      ],
+      "consumer": "Registers model dependency; actual bake/tints/materials/atlas/render consumer remains separate.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.empty",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:empty",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.EmptyModel"
+      ],
+      "fields": [],
+      "consumer": "No layer; 1.21.11/26.3 may still append model identity during update.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.composite",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:composite",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.CompositeModel"
+      ],
+      "fields": [
+        {
+          "name": "models",
+          "valueType": "ordered recursive node list",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Ordered children; empty/one-child bake optimizations and identity effects are release-specific.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.condition",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:condition",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ConditionalItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered Boolean property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        }
+      ],
+      "consumer": "Decode and bake both branches; evaluate property and update one selected branch.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.select",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:select",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.SelectItemModel",
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered typed property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "cases",
+          "valueType": "nonempty typed case list with globally unique decoded keys",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Property codec validates nonempty case list and duplicate decoded values before map insertion. Each when uses a nonempty compact list. Missing fallback is supplied at bake.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-1.21.11-vanilla.node.range_dispatch",
+      "profile": "java-1.21.11-vanilla",
+      "type": "minecraft:range_dispatch",
+      "dispatchSource": "java-1.21.11-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-1.21.11-vanilla:net.minecraft.client.renderer.item.RangeSelectItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered numeric property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "scale",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1
+        },
+        {
+          "name": "entries",
+          "valueType": "ordered threshold/model entries; sorted at bake",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        }
+      ],
+      "consumer": "Sort by threshold comparator; less than16 uses primitive linear comparison,16+ uses Arrays.binarySearch; NaN result falls back. This is not Compat duplicate/refusal or universal last-equal policy.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "Codec.FLOAT declaration does not itself prove Compat finite-number guards",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.model",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:model",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.CuboidItemModelWrapper"
+      ],
+      "fields": [
+        {
+          "name": "model",
+          "valueType": "resource-id",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "tints",
+          "valueType": "ordered registered tint list",
+          "presence": "optional",
+          "missing": []
+        },
+        {
+          "name": "transformation",
+          "valueType": "Transformation.EXTENDED_CODEC",
+          "presence": "optional",
+          "missing": "identity contribution to composed parent transform"
+        }
+      ],
+      "consumer": "Registers model dependency; actual bake/tints/materials/atlas/render consumer remains separate.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.empty",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:empty",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.EmptyModel"
+      ],
+      "fields": [],
+      "consumer": "No layer; 1.21.11/26.3 may still append model identity during update.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.composite",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:composite",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.CompositeModel"
+      ],
+      "fields": [
+        {
+          "name": "models",
+          "valueType": "ordered recursive node list",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "transformation",
+          "valueType": "Transformation.EXTENDED_CODEC",
+          "presence": "optional",
+          "missing": "identity contribution to composed parent transform"
+        }
+      ],
+      "consumer": "Ordered children; empty/one-child bake optimizations and identity effects are release-specific.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.condition",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:condition",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.ConditionalItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered Boolean property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_true",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "on_false",
+          "valueType": "recursive node",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "transformation",
+          "valueType": "Transformation.EXTENDED_CODEC",
+          "presence": "optional",
+          "missing": "identity contribution to composed parent transform"
+        }
+      ],
+      "consumer": "Decode and bake both branches; evaluate property and update one selected branch.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.select",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:select",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.SelectItemModel",
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered typed property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "cases",
+          "valueType": "nonempty typed case list with globally unique decoded keys",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        },
+        {
+          "name": "transformation",
+          "valueType": "Transformation.EXTENDED_CODEC",
+          "presence": "optional",
+          "missing": "identity contribution to composed parent transform"
+        }
+      ],
+      "consumer": "Property codec validates nonempty case list and duplicate decoded values before map insertion. Each when uses a nonempty compact list. Missing fallback is supplied at bake.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "not applicable",
+      "nativeConformance": "unqualified"
+    },
+    {
+      "id": "java-26.3-vanilla.node.range_dispatch",
+      "profile": "java-26.3-vanilla",
+      "type": "minecraft:range_dispatch",
+      "dispatchSource": "java-26.3-vanilla:net.minecraft.client.renderer.item.ItemModels",
+      "bodySources": [
+        "java-26.3-vanilla:net.minecraft.client.renderer.item.RangeSelectItemModel"
+      ],
+      "fields": [
+        {
+          "name": "property",
+          "valueType": "registered numeric property dispatch",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "scale",
+          "valueType": "float32",
+          "presence": "optional",
+          "missing": 1
+        },
+        {
+          "name": "entries",
+          "valueType": "ordered threshold/model entries; sorted at bake",
+          "presence": "required",
+          "missing": "no decoded value"
+        },
+        {
+          "name": "fallback",
+          "valueType": "recursive node",
+          "presence": "optional",
+          "missing": "missing model at bake"
+        },
+        {
+          "name": "transformation",
+          "valueType": "Transformation.EXTENDED_CODEC",
+          "presence": "optional",
+          "missing": "identity contribution to composed parent transform"
+        }
+      ],
+      "consumer": "Sort by threshold comparator; less than16 uses primitive linear comparison,16+ uses Arrays.binarySearch; NaN result falls back. This is not Compat duplicate/refusal or universal last-equal policy.",
+      "nullUnknownPolicy": "effective DFU/property codec behavior unqualified",
+      "numericAdmission": "Codec.FLOAT declaration does not itself prove Compat finite-number guards",
+      "nativeConformance": "unqualified"
+    }
+  ],
+  "baselineBoundary": {
+    "profile": "java-1.21.1-vanilla",
+    "state": "modern ItemModels/ClientItem registry absent in prior complete mapping inspection; legacy model pipeline exists",
+    "evidence": "existing registry-catalog.json and target source/mapping pins; no baseline modern parser invocation"
+  },
+  "sourceLedgers": [
+    "host/minecraft/provider-sources.json",
+    "host/minecraft/item-program-sources.json"
+  ]
+}

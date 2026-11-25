@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "status": "passed-retained-original-generic-program",
+  "privateCapture": false,
+  "compilerRequests": 36,
+  "returnedRoots": 21,
+  "contexts": 78,
+  "layers": 67,
+  "programLeanLaws": 21,
+  "programBendLaws": 8,
+  "floatLeanLaws": 15,
+  "floatBendLaws": 8,
+  "decoderRefusals": 21,
+  "directCliRefusals": 1,
+  "unusedUnknownExamples": 3,
+  "changedPremiseControls": [
+    "range-signed-zero/threshold",
+    "select-duplicate-in-one-case/key",
+    "late-root-scale-overflow/root-scale",
+    "composite-children-4096/budget",
+    "range-scaled/flip",
+    "identifier-lexical-traversal/reference"
+  ],
+  "changedObservationControls": [
+    {
+      "case": "empty",
+      "kind": "preservation",
+      "rejection": "observation-shape/profile"
+    },
+    {
+      "case": "late-root-scale-overflow",
+      "kind": "known-reason",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "condition",
+      "kind": "dependencies",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "select-empty-cases",
+      "kind": "fallback",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "composite-order-and-duplicate",
+      "kind": "order",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "range-signed-zero",
+      "kind": "negative-zero",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "range-signed-zero",
+      "kind": "nan",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "late-root-scale-overflow",
+      "kind": "callback",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "model-with-tints",
+      "kind": "tint",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "empty",
+      "kind": "root-flag",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "empty",
+      "kind": "context-id",
+      "rejection": "observation-shape/profile"
+    },
+    {
+      "case": "late-root-scale-overflow",
+      "kind": "exception-class",
+      "rejection": "observation-shape/profile"
+    }
+  ],
+  "basisSha256": {
+    "host/minecraft/evidence/item-program-20261125T183811870111Z/receipt.json": "58c639dd684c8dbb3b57f13c6da7776bb1f90f21e39de35bda7ed8bfd799bfa3",
+    "host/minecraft/evidence/item-program-20261125T183811870111Z/request.json": "710fe582107cf36725911903d3455608122fa952a17be489095f3dfbe63a600b",
+    "host/minecraft/evidence/item-program-20261125T183811870111Z/observed.json": "dadf9ee5438cc2ce757a4aee4627792b03617d936f861a3ccc64546f8e17a418",
+    ".build/minecraft/item-program-replay/identity-frames.json": "eca2f5b4861b9c46405b23f7a03054d9c0cab4dac6c9c7cb462c8b17a7018b27",
+    "host/minecraft/ItemProgram.lean": "62ebf49803c23817aae265745d0c6080c66596a7ed44d93af922a8510f3927bd",
+    "host/minecraft/ItemProgramCase.lean": "912b58050a30328d346050a13c5f9b952b6f5f73a98c7424a9fc6df58bddad5c",
+    "host/minecraft/ItemProgram.bend": "a00f47e4025d7d02774e810cf8c073930893e73c992e3e97ca8954cb7abcf377",
+    "host/minecraft/item_program_conformance.py": "dd3814298337590f2625dade7cc4fd25ec28953bc65d4e2230778fe2bcc94bfb",
+    "host/java/FloatOrder.lean": "6b72f72097890d09fb1adf9b21d0d601b2bf97d710cc8efcff2fcab6855872d8",
+    "host/java/FloatOrder.bend": "5899da101e75525ee9cc65046a6a750bf2388cc4859535fbdc3e48c7c3b761e0"
+  },
+  "limits": [
+    "Original generic compiler/layer consumer with authored Values/context;not actual NativeResourceValues,game,loader,publication or renderer.",
+    "Postorder tree projection with role-specific opaque model/key/body IDs;shared projection and body-identity fidelity are premises,not a parser/translation proof.",
+    "Selected threshold-body equality admits numeric-free JSON only;numeric Gson equality is held,not guessed.",
+    "Generated raw requests are pinned;alternate numeric token spellings,duplicate JSON members and a general Gson parser correspondence remain outside this projection.",
+    "Verified homogeneous empty runs preserve the selected node-count/no-callback/no-layer contract;not a general compression or optimization proof.",
+    "Selected float atoms -10,-0,+0,+10,NaN and exact scales+1/-1;not full float arithmetic,NaN payload identity or arbitrary callbacks.",
+    "Research tree/step/marker bounds are separate from product limits;decoder refusal is not a native product failure.",
+    "Batched negative controls independently call the same research decoder;known native refusal payloads remain accepted research inputs.",
+    "Event lists are authored callback logs;error placeholders are not empty allocation/physical state or rollback evidence."
+  ]
+}

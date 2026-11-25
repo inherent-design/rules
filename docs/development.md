@@ -16,6 +16,8 @@ scripts/check-rules.py compiles tracked Lean files with warnings as errors and c
 
 The proof lane also runs the Minecraft codec, resource-selection, and artifact-version comparisons, the Java arena comparison, and the retained static host/API census check. These use pure models or retained facts; they do not execute Java or Minecraft. Owner-run collectors and private game inputs remain outside CI.
 
+The item-program comparison also uses retained observations only. It shares the selected float-order contract and a source/field bookkeeping check. `item_program_probe.py` is an owner-run JVM collector; neither it nor the private source/artifact checks run in ordinary CI.
+
 ## Local checks
 
 Install the development tools in mise.toml, then use:
