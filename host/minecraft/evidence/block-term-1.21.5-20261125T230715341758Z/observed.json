@@ -1,0 +1,374 @@
+{
+  "schema": 1,
+  "os": "Mac OS X",
+  "osVersion": "26.7.1",
+  "architecture": "aarch64",
+  "javaVersion": "21.0.13.1",
+  "originalClass": "gto$a",
+  "originalSigners": 4,
+  "cases": [
+    {
+      "id": "parse-0",
+      "inputUtf16Length": 0,
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "Empty term"
+    },
+    {
+      "id": "parse-1",
+      "inputUtf16Length": 1,
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "Empty term"
+    },
+    {
+      "id": "parse-2",
+      "inputUtf16Length": 5,
+      "status": "returned",
+      "term": {
+        "value": "north",
+        "negated": false,
+        "encoded": "north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north",
+        "negated": false,
+        "encoded": "north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-3",
+      "inputUtf16Length": 6,
+      "status": "returned",
+      "term": {
+        "value": "north",
+        "negated": true,
+        "encoded": "!north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north",
+        "negated": true,
+        "encoded": "!north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-4",
+      "inputUtf16Length": 7,
+      "status": "returned",
+      "term": {
+        "value": "!north",
+        "negated": true,
+        "encoded": "!!north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "!north",
+        "negated": true,
+        "encoded": "!!north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-5",
+      "inputUtf16Length": 2,
+      "status": "returned",
+      "term": {
+        "value": "!",
+        "negated": true,
+        "encoded": "!!"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "!",
+        "negated": true,
+        "encoded": "!!"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-6",
+      "inputUtf16Length": 11,
+      "status": "returned",
+      "term": {
+        "value": "north|south",
+        "negated": false,
+        "encoded": "north|south"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north|south",
+        "negated": false,
+        "encoded": "north|south"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-7",
+      "inputUtf16Length": 12,
+      "status": "returned",
+      "term": {
+        "value": "north|south",
+        "negated": true,
+        "encoded": "!north|south"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north|south",
+        "negated": true,
+        "encoded": "!north|south"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-8",
+      "inputUtf16Length": 12,
+      "status": "returned",
+      "term": {
+        "value": "north||south",
+        "negated": false,
+        "encoded": "north||south"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north||south",
+        "negated": false,
+        "encoded": "north||south"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-9",
+      "inputUtf16Length": 7,
+      "status": "returned",
+      "term": {
+        "value": " north ",
+        "negated": false,
+        "encoded": " north "
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": " north ",
+        "negated": false,
+        "encoded": " north "
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-10",
+      "inputUtf16Length": 7,
+      "status": "returned",
+      "term": {
+        "value": " !north",
+        "negated": false,
+        "encoded": " !north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": " !north",
+        "negated": false,
+        "encoded": " !north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-11",
+      "inputUtf16Length": 7,
+      "status": "returned",
+      "term": {
+        "value": " north",
+        "negated": true,
+        "encoded": "! north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": " north",
+        "negated": true,
+        "encoded": "! north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-12",
+      "inputUtf16Length": 2,
+      "status": "returned",
+      "term": {
+        "value": "\t",
+        "negated": true,
+        "encoded": "!\t"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "\t",
+        "negated": true,
+        "encoded": "!\t"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-13",
+      "inputUtf16Length": 6,
+      "status": "returned",
+      "term": {
+        "value": "！north",
+        "negated": false,
+        "encoded": "！north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "！north",
+        "negated": false,
+        "encoded": "！north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-14",
+      "inputUtf16Length": 2,
+      "status": "returned",
+      "term": {
+        "value": "🤖",
+        "negated": false,
+        "encoded": "🤖"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "🤖",
+        "negated": false,
+        "encoded": "🤖"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "parse-15",
+      "inputUtf16Length": 3,
+      "status": "returned",
+      "term": {
+        "value": "🤖",
+        "negated": true,
+        "encoded": "!🤖"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "🤖",
+        "negated": true,
+        "encoded": "!🤖"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "construct-0",
+      "inputUtf16Length": 0,
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "Empty term"
+    },
+    {
+      "id": "construct-1",
+      "inputUtf16Length": 0,
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "Empty term"
+    },
+    {
+      "id": "construct-2",
+      "inputUtf16Length": 5,
+      "status": "returned",
+      "term": {
+        "value": "north",
+        "negated": false,
+        "encoded": "north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north",
+        "negated": false,
+        "encoded": "north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "construct-3",
+      "inputUtf16Length": 5,
+      "status": "returned",
+      "term": {
+        "value": "north",
+        "negated": true,
+        "encoded": "!north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north",
+        "negated": true,
+        "encoded": "!north"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "construct-4",
+      "inputUtf16Length": 1,
+      "status": "returned",
+      "term": {
+        "value": "!",
+        "negated": false,
+        "encoded": "!"
+      },
+      "reparseStatus": "threw",
+      "reparseErrorClass": "java.lang.IllegalArgumentException"
+    },
+    {
+      "id": "construct-5",
+      "inputUtf16Length": 1,
+      "status": "returned",
+      "term": {
+        "value": "!",
+        "negated": true,
+        "encoded": "!!"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "!",
+        "negated": true,
+        "encoded": "!!"
+      },
+      "equalAfterReparse": true
+    },
+    {
+      "id": "construct-6",
+      "inputUtf16Length": 6,
+      "status": "returned",
+      "term": {
+        "value": "!north",
+        "negated": false,
+        "encoded": "!north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "north",
+        "negated": true,
+        "encoded": "!north"
+      },
+      "equalAfterReparse": false
+    },
+    {
+      "id": "construct-7",
+      "inputUtf16Length": 6,
+      "status": "returned",
+      "term": {
+        "value": "!north",
+        "negated": true,
+        "encoded": "!!north"
+      },
+      "reparseStatus": "returned",
+      "reparsed": {
+        "value": "!north",
+        "negated": true,
+        "encoded": "!!north"
+      },
+      "equalAfterReparse": true
+    }
+  ]
+}

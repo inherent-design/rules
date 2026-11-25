@@ -465,7 +465,7 @@
           "net.minecraft.world.entity.animal.horse.Variant"
         ]
       },
-      "review": "pending",
+      "review": "scoped partial",
       "rules": [],
       "proofs": [],
       "nativeComparisons": [],
@@ -478,6 +478,30 @@
           "sources": "host/minecraft/breadth-sources.json",
           "map": "host/minecraft/breadth-contracts.json",
           "limits": "Only named reviewed clauses, not complete family/dependency grammar or game/renderer execution. New original-method comparisons and proofs remain pending."
+        },
+        {
+          "id": "block-condition-source-boundaries",
+          "status": "partial source clauses across five clients;no native property/state/whole-condition promotion",
+          "evidenceKind": "source-inspection",
+          "report": "host/minecraft/BLOCK-CONDITIONS.md",
+          "sources": "host/minecraft/block-condition-sources.json",
+          "limits": "26classidentities/10disassemblyprofiles;olderwholecondition,modernTerms/outercodec,andbuilder validation source only.Notregex/JVMtranslation,actualproperty/state/domainclosure or rendering."
+        },
+        {
+          "id": "blockstate-literal-term",
+          "status": "bounded original record scenarios on three modern Java clients",
+          "report": "host/minecraft/BLOCK-CONDITIONS.md",
+          "sources": "host/minecraft/block-term-captures.json",
+          "conformance": "host/minecraft/evidence/block-term-conformance.json",
+          "rules": [
+            "host/minecraft/BlockTerm.lean",
+            "host/minecraft/BlockTerm.bend"
+          ],
+          "proofs": [
+            "host/minecraft/BlockTerm.lean",
+            "host/minecraft/BlockTerm.bend"
+          ],
+          "limits": "72literalrecordscenarios/60explicitreparseattempts;14Lean/11Bendlaws.OnlyselectedTermclassloads;notfullTerms/conditions,property/stateadmission,olderwholeconditionruntime,customprovider,game,renderer orJava17/otherhosts.Constructorcounterexamplesnotclaimedreachableproductbugs."
         }
       ]
     },

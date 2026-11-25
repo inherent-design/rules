@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "scenarioRows": 72,
+  "explicitReparseAttempts": 60,
+  "leanLaws": 14,
+  "bendLaws": 11,
+  "decoderRefusals": [
+    "schema",
+    "contract",
+    "old-client-as-term-record",
+    "operation",
+    "needed-flag",
+    "surrogate",
+    "outside-unicode",
+    "too-long",
+    "duplicate",
+    "too-many"
+  ],
+  "acceptedUnneededUnknown": "parse constructor flag",
+  "rejectedInterpretations": [
+    "bang-as-double-negation",
+    "space-as-trimmed",
+    "constructor-as-parser",
+    "literal-separator-as-split"
+  ],
+  "rawObservationControls": [
+    "lost-value",
+    "lost-flag",
+    "lost-encoding",
+    "false-record-equality",
+    "lost-reparse-refusal"
+  ],
+  "formalSha256": {
+    "BlockTerm.lean": "f512fa30c8ff93069c83ed3bd5301c1d8701e49ab18fb1ec0cf02ad0ee20470d",
+    "BlockTermCase.lean": "e0f75bd9b21745cfe76471ea9a2f627de38b95b865b31195bcbb9661f0e34827",
+    "BlockTerm.bend": "716250789461a7ad3b7083f738865d3387c71e9206b3ab1ad8e8321c7f7588a4"
+  },
+  "basisSha256": {
+    "block-term-captures.json": "458f75093e3ee30874fbe81ccd3424bfe7a4c99d0c8a3d3f0980cc43d0c03174",
+    "block_term_conformance.py": "4d21b0297909de0f82a316b40d94fd28124c793f5fc4d839f213757bd33626b4"
+  },
+  "limits": "Literal Term records only;no complete Terms codec,property/state admission,older whole-condition execution,custom provider,game or renderer qualification."
+}

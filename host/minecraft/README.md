@@ -12,6 +12,8 @@ The [pack detection band](PACK-DETECTION.md) compares 80 original detector/valid
 
 The [image-header band](IMAGE-HEADERS.md) compares 165 original tiny-buffer calls across all five Java clients, plus 12 arithmetic calibrations on Java 17/21/25. It preserves short-buffer errors, byte-order effects, and wrapped-versus-mathematical bounds. No image is decoded or allocated; full texture and device behavior remain open.
 
+The [blockstate condition band](BLOCK-CONDITIONS.md) follows literal atoms, record construction/encoding, separate condition parsing, and canonical property domains. It compares 72 original record scenarios across three modern clients while retaining distinct source-only older condition and five-client builder boundaries. Full codecs, property/state execution, and rendering remain open.
+
 The current [selected target graph](TARGETS.md) pins five Java releases, three separate Bedrock sample-source milestones, and eight provider variants. It preserves major/minor artifact format declarations and the Java 25 requirement for 26.3. The [static host API map](HOST-APIS.md) identifies actual 26.3 bytecode consumers without launching the game. Neither target selection nor a source census establishes runtime or rendering support.
 
 These are the initial comparison nodes, retained with their evidence; they are not the final target set:
