@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-template-encoding-18f11i0m",
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "producerSha256": "dd68d0d0c4f41ea2b5418a2948606181d1cdfdfbb914dd69bf2057a5d6b4ebb1",
+  "driverSha256": "17aa53dd7cc5e0c56c5294509aea9b6aedd7eb9a4df8226480f13f54300cebba",
+  "generatedSha256": "7bda645292932b3b3cc4288846553a6bd625b359434ee15904d18dc3b1ff1367",
+  "inputSha256": "d1030bebd59370a9ad74c26c94a2acc29db17f4f8d937bb5f7202983034e563d",
+  "inputTsvSha256": "d8fcbc24094d5d1121556a602a7bf3e42199870e73fe390ee9a36f824d6730cd",
+  "compiler": "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+  "compilerSha256": "12cab30aa9890d54445e29149a1e82d18fbe457de12801bd11bbe7e5e7fe33a0",
+  "library": "applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib",
+  "librarySha256": "2631cbfd994f5cb0971ca645313e0fdca67b777617ca8277bfeafd1518f0037f",
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "en_US.UTF-8",
+    "TMPDIR": "/private/tmp/rules-template-encoding-18f11i0m/tmp"
+  },
+  "sources": [
+    {
+      "path": "crates/empack-lib/src/engine/templates.rs",
+      "sha256": "567754fef605b704efe8d03979f70e33437411c7f02c8d983922d963954fa996"
+    },
+    {
+      "path": "crates/empack-lib/src/engine/templates/encoding.rs",
+      "sha256": "ec51272e63cb30c57907cb327d852131221d029750cfecde96576ade510d9c31"
+    }
+  ],
+  "addressTextRange": [
+    3305,
+    4009
+  ],
+  "commands": [
+    {
+      "label": "compiler-version",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--version",
+        "--verbose"
+      ],
+      "pid": 2112,
+      "exitCode": 0,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "58c12481ab6ca64f223a3d873e8d32b30fdf2c200be485065372adcd9ddf23d8",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compile",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "/private/tmp/rules-template-encoding-18f11i0m/driver.rs",
+        "--extern",
+        "empack_core=/Users/zer0cell/production/rules/applications/evidence/empack-native-ownership-20261124T031930881554Z/work/core/libempack_core.rlib",
+        "-o",
+        "/private/tmp/rules-template-encoding-18f11i0m/probe"
+      ],
+      "pid": 2345,
+      "exitCode": 0,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "observed",
+      "argv": [
+        "/private/tmp/rules-template-encoding-18f11i0m/probe",
+        "/private/tmp/rules-template-encoding-18f11i0m/input.tsv"
+      ],
+      "pid": 2374,
+      "exitCode": 0,
+      "timedOut": false,
+      "groupAbsent": true,
+      "stdoutSha256": "9ad7314bfd8190f7b868d035ee9ff075204a9bb803e2799ac302a4445e0e66a3",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Selected unchanged address body and full encoding module; only address visibility and error Result host alias differ.",
+    "Real retained core path types; this is not WorkspaceSnapshot, Handlebars registration/rendering or complete template preparation.",
+    "Scalar encoder outputs are bytes, not consumer interpretation or correct use in arbitrary template syntax.",
+    "Small curated UTF-8 inputs only; no malformed Rust string or source acquisition."
+  ],
+  "binarySha256": "9e270d58672990937d30b08061cb8bbda6271fd46c5dc2cbcaca587a573f2017",
+  "complete": true,
+  "privateKiB": 592
+}

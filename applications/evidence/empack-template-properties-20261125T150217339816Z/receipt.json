@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-template-properties-uyoo4dur",
+  "encodingCapture": "applications/evidence/empack-template-encoding-20261125T150106975825Z",
+  "encodingReceiptSha256": "ef08e208bb6a4bd1b323405cad44273a81a261808d4f90195888d2e07e6f2c06",
+  "inputSha256": "9ad7314bfd8190f7b868d035ee9ff075204a9bb803e2799ac302a4445e0e66a3",
+  "producerSha256": "59d8d32f795966e1f293823a45d35f4f0bff9a1208d8e35cc6bb6f22f09a8659",
+  "driverSha256": "6a521c0cac56a09edc2f64f44188f9001908b7a2ac26c74b9d5aaee0b173beec",
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "en_US.UTF-8",
+    "TMPDIR": "/private/tmp/rules-template-properties-uyoo4dur/tmp"
+  },
+  "commands": [
+    {
+      "label": "compiler-version",
+      "argv": [
+        "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/javac",
+        "-version"
+      ],
+      "pid": 22496,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "785311ab4e5a27bedf1ffec541d403f660832b61852266829b28ef8ef7427550",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compile",
+      "argv": [
+        "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/javac",
+        "--release",
+        "17",
+        "-d",
+        "/private/tmp/rules-template-properties-uyoo4dur",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-template-properties-20261125T150217339816Z/TemplatePropertiesProbe.java"
+      ],
+      "pid": 22497,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "java-17",
+      "argv": [
+        "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java",
+        "-cp",
+        "/private/tmp/rules-template-properties-uyoo4dur",
+        "TemplatePropertiesProbe",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-template-properties-20261125T150217339816Z/input.tsv"
+      ],
+      "pid": 22501,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "b19be2089c00b783effadccac3ff6139a7ad2325ced990aca6f9c77a70d56111",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "java-21",
+      "argv": [
+        "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+        "-cp",
+        "/private/tmp/rules-template-properties-uyoo4dur",
+        "TemplatePropertiesProbe",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-template-properties-20261125T150217339816Z/input.tsv"
+      ],
+      "pid": 22502,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "0971f6965ea451479125ccb13a054c0305be8171c08a39143bc195db786477d4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "java-25",
+      "argv": [
+        "/Library/Java/JavaVirtualMachines/25.0.4+101.0.LTS.jdk/Contents/Home/bin/java",
+        "-cp",
+        "/private/tmp/rules-template-properties-uyoo4dur",
+        "TemplatePropertiesProbe",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-template-properties-20261125T150217339816Z/input.tsv"
+      ],
+      "pid": 22503,
+      "exitCode": 0,
+      "groupAbsent": true,
+      "timedOut": false,
+      "stdoutSha256": "9440db9d2e27cb2092b1375f712202af0f2cee34e824ba4174c1afac06a1279d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tools": {
+    "javac": {
+      "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/javac",
+      "sha256": "8319678ce758ea01a7666dd1e7fa8f099ee96035d269c81dcee019333ab9695c"
+    },
+    "17": {
+      "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java",
+      "sha256": "5713ed335b3828ef9294ce4a091acad7ee24af1db2622587b6f5ff0a9bd98bb3",
+      "releaseSha256": "002e051a3dbb52e6e28ae3b59c781d78829e33a1598d620152563ddf5992aa8e"
+    },
+    "21": {
+      "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910",
+      "releaseSha256": "2f1cd602bf21d35e6e2976d6a351693ff609bfcb285762263a54bf20e8a40afd"
+    },
+    "25": {
+      "path": "/Library/Java/JavaVirtualMachines/25.0.4+101.0.LTS.jdk/Contents/Home/bin/java",
+      "sha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "releaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498"
+    }
+  },
+  "limits": [
+    "Properties.load(InputStream) and load(Reader) only; no Minecraft, launcher, VM registry edit, process daemon or game.",
+    "Read exact captured Rust properties encoder output, not files from a server build.",
+    "Not QSettings/Prism interpretation, cross-platform or Java8 coverage."
+  ],
+  "classSha256": "2a4f8475da79fc9036afe3dcc80f8d335aaca46e0410ae8187c23d6869077895",
+  "complete": true,
+  "privateKiB": 4
+}

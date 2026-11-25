@@ -1,0 +1,316 @@
+[
+  {
+    "id": "baseline",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "auto.txt": "5374756479202720cea9",
+      "nested/settings": "636c69656e74205374756479202720cea9",
+      "raw.bin": "00ff62696e617279",
+      "run.sh": "23212f62696e2f73680a7072696e74662025732027537475647920272227222720cea9270a"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/auto.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      },
+      {
+        "source": "client/nested/settings.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      },
+      {
+        "source": "common/raw.bin",
+        "facts": {
+          "mode": 2,
+          "utf8": false,
+          "known": true
+        },
+        "expectedCode": 0
+      },
+      {
+        "source": "common/run.sh.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "missing-value",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": false,
+      "game": true
+    },
+    "outputs": {
+      "value.txt": null
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/value.txt.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": false
+        },
+        "expectedCode": 3
+      }
+    ]
+  },
+  {
+    "id": "explicit-binary",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": false,
+      "game": true
+    },
+    "outputs": {
+      "raw.bin": null
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/raw.bin.template",
+        "facts": {
+          "mode": 1,
+          "utf8": false,
+          "known": true
+        },
+        "expectedCode": 2
+      }
+    ]
+  },
+  {
+    "id": "duplicate-output",
+    "facts": {
+      "addresses": true,
+      "sameLayer": false,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "same.txt": "6669727374"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/same.txt.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "file-ancestor",
+    "facts": {
+      "addresses": true,
+      "sameLayer": false,
+      "namespaceValid": false,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "item": "6669727374",
+      "item/nested.txt": "7365636f6e64"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/item.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      },
+      {
+        "source": "common/item/nested.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "shadowed-invalid-body",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "shared": "73656c6563746564"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "client/shared.template",
+        "facts": {
+          "mode": 1,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "opposite-side-invalid-body",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "value.txt": "76616c6964"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/value.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "unrecognized-layer",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "value.txt": "76616c6964"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/value.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "implicit-render",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": false,
+      "game": true
+    },
+    "outputs": {
+      "literal.txt": null
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/literal.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": false
+        },
+        "expectedCode": 3
+      }
+    ]
+  },
+  {
+    "id": "cross-layer-case-alias",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": false,
+      "bodies": true,
+      "game": true
+    },
+    "outputs": {
+      "Shared.txt": "636f6d6d6f6e",
+      "shared.txt": "636c69656e74"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/Shared.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      },
+      {
+        "source": "client/shared.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  },
+  {
+    "id": "selected-game-collision",
+    "facts": {
+      "addresses": true,
+      "sameLayer": true,
+      "namespaceValid": true,
+      "bodies": true,
+      "game": false
+    },
+    "outputs": {
+      ".minecraft/config/marker.txt": "74656d706c617465"
+    },
+    "selectedBodyFacts": [
+      {
+        "source": "common/.minecraft/config/marker.txt",
+        "facts": {
+          "mode": 2,
+          "utf8": true,
+          "known": true
+        },
+        "expectedCode": 1
+      }
+    ]
+  }
+]
