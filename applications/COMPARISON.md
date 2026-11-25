@@ -184,6 +184,8 @@ The [cleanup/record band](prism/CLEANUP.md) exposes a related destination bounda
 
 The [accounts band](prism/ACCOUNTS.md) adds an actor/session boundary. A display-name claim can retain a different actor from the selected session; an accepted profile dialog can leave the source account unchanged, so refilling alone cannot establish readiness. Capture the selected actor and admit same-actor profile data before session capture in the proposed alternatives. Preserve offline aliases, strict refresh cutoffs, unknown timestamps, and separate creation/observation outcomes. These source-method components do not qualify full OAuth, account persistence, real GUI admission, or game launch.
 
+The [Java/settings band](prism/JAVA.md) separates configured/effective paths, setting provenance, saved probe fields, current probe results, compatibility decisions, and actual invocation. Selected Qt methods retain historical fields after invalid output and can still pass the allowed-major predicate; instance probe fields can also write through globally. Preserve the permissive current policy while making evidence age and origin explicit. These observations support reporting and scoped-cache design alternatives, not a full-launcher failure claim or a new executable-integrity guarantee.
+
 ### VS Code desktop and vscode.dev
 
 Preserve resource/incarnation, event version, undo/save point, current buffer, backing observations, and provider capabilities. Native serial undo/source behavior is consistent with these distinctions. The earlier custom-provider false-save/clean-marker mismatch remains provider-scoped and unresolved; passing ordinary-file controls neither proves nor dismisses it. The browser untitled reload supplies no file-save or durable project receipt.

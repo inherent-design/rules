@@ -8,6 +8,8 @@ The first [inventory](inventory.json) maps 208 feature families and 971 semantic
 
 ## Evidence and ownership
 
+The [Prism Java/settings band](prism/JAVA.md) compares inherited/local setting transitions and selected launch checks with supported Qt. It keeps saved observations, fresh probe results, compatibility decisions, and actual invocation separate; full discovery, UI/persistence, and Java launch remain pending.
+
 The application owner writes only `applications/**`. The host owner writes shared lifecycle primitives, host/profile adapters, root navigation, and shared checks. `terminal/**` remains a preserved baseline. No production empack or comparator source changes are authorized by this analysis.
 
 Each feature must eventually link its domain values/relations, transition model, explicit invariants, Bend decision or trace, Lean laws, native/source comparison, counterexample, UX finding, compatibility obligations, and verification plan. Cross-feature scenarios must also exercise the shared state. A feature cannot become covered because a nearby feature passed or because one operation is modeled.

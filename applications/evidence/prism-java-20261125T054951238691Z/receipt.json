@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "producerSha256": "412e8b729c9308a19444285239b7a6b5150f895e904c6491bb4374fa413c3c94",
+  "generatedSourceSha256": "d46d2bd2a4eed064447ee1db028ebac7b8cfde77e46fc870b6256e1d2b69413f",
+  "storageAdapterSha256": "42a35860483a3520b97c42e80ad00aef8ce2b085afc695e7a6140ab7abedc6c9",
+  "executableWitnessSha256": "d3b5f42d8a63f02454ce59ec36d72b0cb90e0f02df8b3f1793c6a7d85102542e",
+  "binarySha256": "4bb711aa6f322eb6f464d0842f8f6f06a30229e9d0891df5ae0fb5c791a93b2f",
+  "copiedSources": {
+    "launcher/settings/Setting.h": "536ecd02c0113225357ab2663d06bbc3bfb26755fb620117f7932ebbed2f3591",
+    "launcher/settings/Setting.cpp": "5d71f70cb4f1c099af02acc898bfaffbe24d8683ebc22f97722665c4d482ea3a",
+    "launcher/settings/OverrideSetting.h": "ddccf84a1b95bee1ac186e1c4d93a5cff2d53aa25e6ea5840dfad23f5662ff5f",
+    "launcher/settings/OverrideSetting.cpp": "7c3cbbf34efe0f41007c20978d14c42b286871d3e2531fa5809668c15b494405",
+    "launcher/settings/PassthroughSetting.h": "56ef293c071ce84ed9f54a81586e700c7091296659c87141bfe2d64a42913fdc",
+    "launcher/settings/PassthroughSetting.cpp": "8cb1af92472964f7fa2833f22b71f15b2b9c50048685a5396011f02a4339d75e",
+    "launcher/java/JavaVersion.h": "18cc311fc822de5a848192783f4cddbe5c83ee6d74adbc6fe8a2f939fc1b794d"
+  },
+  "excerpts": [
+    {
+      "path": "launcher/java/JavaVersion.cpp",
+      "signature": "JavaVersion& JavaVersion::operator=(const QString& javaVersionString)",
+      "sha256": "11663dea49cf80de67899ff6610efc88b136d2c5ec577e42fa441b49c68ad4b5",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/java/JavaVersion.cpp",
+      "signature": "JavaVersion::JavaVersion(const QString& rhs)",
+      "sha256": "1d3830b7456c49d18519261512dec649bb67346c0445f7cfb9091992af31917f",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/java/JavaVersion.cpp",
+      "signature": "QString JavaVersion::toString() const",
+      "sha256": "4aeeac8375d3a3ccebc6568721a91807cf6bceb6edaac622ec894a3b8586a6f1",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/launch/steps/CheckJava.cpp",
+      "signature": "void CheckJava::executeTask()",
+      "sha256": "c906b3d4926ef2ec2790729193d68867e8c7103fa32f3c1edf421ecc47c7b6ff",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/launch/steps/CheckJava.cpp",
+      "signature": "void CheckJava::checkJavaFinished(const JavaChecker::Result& result)",
+      "sha256": "70e4bf26ef32778ade72366521f30d33d08624ea693429b8cc34bb298235ecca",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/launch/steps/CheckJava.cpp",
+      "signature": "void CheckJava::printJavaInfo(const QString& version, const QString& architecture, const QString& realArchitecture, const QString& vendor)",
+      "sha256": "6f8f5c13d18b6c17df13b9c00777fae640d8de0a43e088e4667d681480f628dc",
+      "transformation": "none"
+    },
+    {
+      "path": "launcher/minecraft/launch/VerifyJavaInstall.cpp",
+      "signature": "void VerifyJavaInstall::executeTask()",
+      "sha256": "67795b11fb76913458648e99cc03187751c99b64b331c8619ff778784e9dbe40",
+      "transformation": "none"
+    }
+  ],
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "qtVersion": "6.12.0",
+  "frameworkSha256": "3e3d82dd216cc552a3835909baea61564c5be1211ce55ae313a3d4fe19fbee33",
+  "moc": {
+    "path": "/opt/homebrew/share/qt/libexec/moc",
+    "sha256": "e3fb72bf885360f041b6ac92ec929d82d56648f514be0b54c776e1c4d71d7f9e"
+  },
+  "cases": 37,
+  "allOwnedGroupsAbsent": true,
+  "workAllocatedKiB": 492,
+  "limits": [
+    "No JVM, game, launcher GUI, account, network or live configuration execution.",
+    "Original Setting/OverrideSetting/PassthroughSetting classes with synchronous in-memory storage adapter.",
+    "Unchanged selected CheckJava/VerifyJavaInstall/JavaVersion method bodies; result delivery,parent/profile/context and path resolver adapters.",
+    "No real probe process, automatic selection/download, concurrent settings writer, disk publication or process retirement qualification.",
+    "Supported Qt version differs from installed Prism Qt; selected source execution is not full-launcher qualification."
+  ]
+}

@@ -8,6 +8,8 @@ A [cleanup and override-record band](CLEANUP.md) compares selected deletion and 
 
 The [component-decision band](COMPONENTS.md) compares protected selections, exact and suggested versions, activation flags, obsolete-dependency candidates, cached-state round trips, and removal failure through source functions and supported Qt. Its models match the selected retained comparisons; actual component loading, publication, and game launch remain separate obligations.
 
+The [Java/settings band](JAVA.md) separates inherited and explicit settings, write-through probe fields, cache admission, invalid probe output, and compatibility decisions. Its Qt source-method fixtures leave real Java discovery, complete settings UI/persistence, and game launch pending.
+
 ## Current rule and counterexample
 
 [`ModrinthCreationTask::updateInstance`](https://github.com/PrismLauncher/PrismLauncher/blob/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/modplatform/modrinth/ModrinthInstanceCreationTask.cpp) parses incoming and saved mrpack indexes. It removes a new/old pair from its download/deletion candidates when their SHA-512 values match. That comparison does not require equal paths. The remaining old entries are scheduled for deletion, while the remaining new entries are downloaded during staging.

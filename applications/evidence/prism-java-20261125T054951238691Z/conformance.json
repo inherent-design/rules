@@ -1,0 +1,1331 @@
+{
+  "schema": 1,
+  "cases": 37,
+  "settingsTraces": 10,
+  "runtimeComponents": 27,
+  "comparisons": [
+    {
+      "id": "settings-0-0-0",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": false,
+          "gate": false,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|global;global|written|global|global;next-global|written|next-global|next-global;next-global|written|written|next-global;next-global|next-global|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global",
+      "model": "global|-|global|global;global|written|global|global;next-global|written|next-global|next-global;next-global|written|written|next-global;next-global|next-global|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global"
+    },
+    {
+      "id": "settings-0-0-1",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": false,
+          "gate": false,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": "local",
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|local|global|global;global|written|global|global;next-global|written|next-global|next-global;next-global|written|written|next-global;next-global|next-global|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global",
+      "model": "global|local|global|global;global|written|global|global;next-global|written|next-global|next-global;next-global|written|written|next-global;next-global|next-global|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global"
+    },
+    {
+      "id": "settings-0-1-0",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": false,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": false
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|global;global|written|written|global;next-global|written|written|next-global;next-global|written|next-global|next-global;next-global|written|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global",
+      "model": "global|-|global|global;global|written|written|global;next-global|written|written|next-global;next-global|written|next-global|next-global;next-global|written|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global"
+    },
+    {
+      "id": "settings-0-1-1",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": false,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": "local",
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": false
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|local|local|global;global|written|written|global;next-global|written|written|next-global;next-global|written|next-global|next-global;next-global|written|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global",
+      "model": "global|local|local|global;global|written|written|global;next-global|written|written|next-global;next-global|written|next-global|next-global;next-global|written|next-global|next-global;next-global|-|next-global|next-global;next-global|-|next-global|next-global"
+    },
+    {
+      "id": "settings-1-0-0",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": true,
+          "gate": false,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|default;written|-|written|default;next-global|-|next-global|default;next-global|-|next-global|next-global;next-global|-|next-global|next-global;default|-|default|default;default|-|default|default",
+      "model": "global|-|global|default;written|-|written|default;next-global|-|next-global|default;next-global|-|next-global|next-global;next-global|-|next-global|next-global;default|-|default|default;default|-|default|default"
+    },
+    {
+      "id": "settings-1-0-1",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": true,
+          "gate": false,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": "local",
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|local|global|default;written|local|written|default;next-global|local|next-global|default;next-global|local|local|next-global;next-global|next-global|next-global|next-global;default|-|default|default;default|-|default|default",
+      "model": "global|local|global|default;written|local|written|default;next-global|local|next-global|default;next-global|local|local|next-global;next-global|next-global|next-global|next-global;default|-|default|default;default|-|default|default"
+    },
+    {
+      "id": "settings-1-1-0",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": true,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": false
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|global;written|written|written|written;next-global|written|written|next-global;next-global|written|next-global|default;next-global|written|next-global|default;default|written|default|default;default|written|written|default",
+      "model": "global|-|global|global;written|written|written|written;next-global|written|written|next-global;next-global|written|next-global|default;next-global|written|next-global|default;default|written|default|default;default|written|written|default"
+    },
+    {
+      "id": "settings-1-1-1",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": true,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": "local",
+          "actions": [
+            {
+              "op": "set",
+              "text": "written"
+            },
+            {
+              "op": "global",
+              "text": "next-global"
+            },
+            {
+              "op": "gate",
+              "flag": false
+            },
+            {
+              "op": "set",
+              "text": "next-global"
+            },
+            {
+              "op": "reset"
+            },
+            {
+              "op": "gate",
+              "flag": true
+            }
+          ]
+        }
+      },
+      "observed": "global|local|local|global;written|written|written|written;next-global|written|written|next-global;next-global|written|next-global|default;next-global|written|next-global|default;default|written|default|default;default|written|written|default",
+      "model": "global|local|local|global;written|written|written|written;next-global|written|written|next-global;next-global|written|next-global|default;next-global|written|next-global|default;default|written|default|default;default|written|written|default"
+    },
+    {
+      "id": "equal-write-0",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": false,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "global"
+            },
+            {
+              "op": "global",
+              "text": "changed"
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|global;global|-|global|global;changed|-|changed|changed",
+      "model": "global|-|global|global;global|-|global|global;changed|-|changed|changed"
+    },
+    {
+      "id": "equal-write-1",
+      "input": {
+        "kind": "setting",
+        "setting": {
+          "passthrough": true,
+          "gate": true,
+          "globalDefault": "default",
+          "globalValue": "global",
+          "localValue": null,
+          "actions": [
+            {
+              "op": "set",
+              "text": "global"
+            },
+            {
+              "op": "global",
+              "text": "changed"
+            }
+          ]
+        }
+      },
+      "observed": "global|-|global|global;global|-|global|global;changed|-|changed|changed",
+      "model": "global|-|global|global;global|-|global|global;changed|-|changed|changed"
+    },
+    {
+      "id": "cached-compatible",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "cached-incompatible",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|0|1|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|0|1|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "cached-ignore",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": true,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|1|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|1|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "cached-no-requirement",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "cached-32-memory",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "32",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|1|0|0|1|21|21.0.1|32|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|1|0|0|1|21|21.0.1|32|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "cached-32-2048",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 2048,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "32",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|32|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|0|0|1|21|21.0.1|32|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-global-executable",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": false,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-instance-executable",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": false,
+          "checkerAvailable": true,
+          "override": true,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-checker-cached",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": false,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|0|1|0|0|0|0|0|0|1|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-0-0",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 0,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|0|1|0|0|0|0|0|0|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|0|1|0|0|0|0|0|0|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-0-1",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 1,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|1|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|1|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-0-2",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|0|1|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|0|1|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-1-0",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": true,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 0,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|0|1|0|0|0|0|0|0|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|0|1|0|0|0|0|0|0|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-1-1",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": true,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 1,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|1|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|1|0|21|21.0.1|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "probe-1-2",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": true,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|0|1|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|25.0.1|-|-|fixture-vendor",
+      "model": "1|1|0|1|0|1|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|25.0.1|-|-|fixture-vendor"
+    },
+    {
+      "id": "missing-JavaVersion",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-JavaArchitecture",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-JavaRealArchitecture",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "missing-JavaVendor",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": ""
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "invalid-probe-empty-version",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 1,
+          "stored": {
+            "version": "",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|0|1|0|0|1|0|0||64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|1|0|1|0|1|0|0|1|0|0||64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "invalid-probe-empty-no-requirement",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [],
+          "probe": 1,
+          "stored": {
+            "version": "",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|1|0|0||64|aarch64|old-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|1|0|0||64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "valid-probe-compatible",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|0|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "valid-probe-ignore",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": true,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|0|1|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|0|1|0|1|25|25.0.1|64|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "valid-probe-32-warning",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": false,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            25
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "21.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "32",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "1|1|0|1|1|0|1|0|0|1|25|25.0.1|32|aarch64|fixture-vendor|-|-|-|-",
+      "model": "1|1|0|1|1|0|1|0|0|1|25|25.0.1|32|aarch64|fixture-vendor|-|-|-|-"
+    },
+    {
+      "id": "legacy-major-parser",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            8
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "1.8.0_452",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|0|0|1|8|1.8.0_452|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|0|0|1|8|1.8.0_452|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "unparseable-version",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [
+            21
+          ],
+          "probe": 2,
+          "stored": {
+            "version": "unknown",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|0|1|0|0|0|1|0|unknown|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|0|1|0|0|0|1|0|unknown|64|aarch64|old-vendor|-|-|-|-"
+    },
+    {
+      "id": "unparseable-no-requirement",
+      "input": {
+        "kind": "pipeline",
+        "pipeline": {
+          "executable": true,
+          "checkerAvailable": true,
+          "override": false,
+          "signatureMatches": true,
+          "memory": 4096,
+          "ignore": false,
+          "majors": [],
+          "probe": 2,
+          "stored": {
+            "version": "unknown",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "old-vendor"
+          },
+          "result": {
+            "version": "25.0.1",
+            "architecture": "64",
+            "realArchitecture": "aarch64",
+            "vendor": "fixture-vendor"
+          }
+        }
+      },
+      "observed": "0|1|0|1|1|0|0|0|0|1|0|unknown|64|aarch64|old-vendor|-|-|-|-",
+      "model": "0|1|0|1|1|0|0|0|0|1|0|unknown|64|aarch64|old-vendor|-|-|-|-"
+    }
+  ],
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "empty",
+    "count",
+    "kind",
+    "contradictory-kind",
+    "action",
+    "action-payload",
+    "line-codec",
+    "sentinel",
+    "action-bound",
+    "probe-result",
+    "version-profile",
+    "architecture",
+    "memory",
+    "major-zero",
+    "major-bound",
+    "boolean",
+    "missing-field"
+  ],
+  "changedPremiseControls": [
+    "gate-basis",
+    "passthrough-write",
+    "cache-basis",
+    "required-major"
+  ],
+  "changedObservationControls": [
+    "effective-setting",
+    "probe-status",
+    "memory-diagnostic",
+    "metadata-placement"
+  ],
+  "basisSha256": {
+    "applications/evidence/prism-java-20261125T054951238691Z/commands.json": "53acba0acb9bc8bba088348917d7d7a9b3b8c91fa661a297564ecf1393bb93d9",
+    "applications/evidence/prism-java-20261125T054951238691Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/input.json": "f2aefc695d221673d23af6a2fb28251cfe88827b811b4509f3cb9aee2b849ec0",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-OverrideSetting.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-OverrideSetting.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-PassthroughSetting.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-PassthroughSetting.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-Setting.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/moc-Setting.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/observe.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/prism-java-20261125T054951238691Z/observe.stdout": "2c7c131883da093b525374f8a257d0a7849b39c9cf5834bdf9c400114e335984",
+    "applications/evidence/prism-java-20261125T054951238691Z/owned-processes.json": "530f252c3ea2e585f11710625ec1594f633a1df8a1b7106d533e028f51ba2c50",
+    "applications/evidence/prism-java-20261125T054951238691Z/probe.py": "412e8b729c9308a19444285239b7a6b5150f895e904c6491bb4374fa413c3c94",
+    "applications/evidence/prism-java-20261125T054951238691Z/receipt.json": "64296a372ed3bfcbd03d8b888f134168b2810396603e5bd9c778e70db6105063",
+    "applications/evidence/prism-java-20261125T054951238691Z/toolchain-readback.json": "8de0d4ca92cf2176d358a345261b1d651a56118ac8ed9eea794c512a85653e49",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/JavaVersion.h": "18cc311fc822de5a848192783f4cddbe5c83ee6d74adbc6fe8a2f939fc1b794d",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/OverrideSetting.cpp": "7c3cbbf34efe0f41007c20978d14c42b286871d3e2531fa5809668c15b494405",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/OverrideSetting.h": "ddccf84a1b95bee1ac186e1c4d93a5cff2d53aa25e6ea5840dfad23f5662ff5f",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/PassthroughSetting.cpp": "8cb1af92472964f7fa2833f22b71f15b2b9c50048685a5396011f02a4339d75e",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/PassthroughSetting.h": "56ef293c071ce84ed9f54a81586e700c7091296659c87141bfe2d64a42913fdc",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/Setting.cpp": "5d71f70cb4f1c099af02acc898bfaffbe24d8683ebc22f97722665c4d482ea3a",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/Setting.h": "536ecd02c0113225357ab2663d06bbc3bfb26755fb620117f7932ebbed2f3591",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/java-fixture": "d3b5f42d8a63f02454ce59ec36d72b0cb90e0f02df8b3f1793c6a7d85102542e",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/main.cpp": "d46d2bd2a4eed064447ee1db028ebac7b8cfde77e46fc870b6256e1d2b69413f",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/moc_OverrideSetting.cpp": "3508147d0041b55f68dfa0aace463c4a8ab555eeef80cc059d38e0ecc26dbe8b",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/moc_PassthroughSetting.cpp": "0b4188b2889c7d7baae6b0d808919e65d038d21ee56fdbe49fe39d996ff248b5",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/moc_Setting.cpp": "49d9e7a6db1689af7dd6c932ce8ffe4da10df3a4e0bcce7f7661e0259d9a5c59",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/probe": "4bb711aa6f322eb6f464d0842f8f6f06a30229e9d0891df5ae0fb5c791a93b2f",
+    "applications/evidence/prism-java-20261125T054951238691Z/work/settings/SettingsObject.h": "42a35860483a3520b97c42e80ad00aef8ce2b085afc695e7a6140ab7abedc6c9",
+    "applications/prism/Java.bend": "e2be817a64db9670deb1ee528e725e8e9a7a937ab574ed817173129e255cb2a5",
+    "applications/prism/Java.lean": "8859e4dcd0f95b52393a4943ee3f593f6e1563fc48e0054c7cad466120779da1",
+    "applications/prism/JavaCase.lean": "8714dd60f797dc787dc4fef5db295f3d6e989411fec887f5842ab86c998d2979",
+    "applications/prism/java_conformance.py": "76fce1e746ac76343eb93cab0b26a1e8e058bb52dca791c5e1570e0d888e16f8",
+    "applications/prism/java_observations.py": "d8cdb446d7f0449d70444beed8d67283beeefd8184f1c80ad13890219491ad6e",
+    "applications/prism/java_probe.py": "412e8b729c9308a19444285239b7a6b5150f895e904c6491bb4374fa413c3c94",
+    "applications/sources/prism-java-selections.json": "c18a34c7e4826a30a5ec83428715bb588462a85ac87ba8f9c21b7925ca65876e"
+  },
+  "driverSha256": "b7995b17aa56e9bf6e7d53caafec65229d994867feb3e48596e05c25ff89d80a",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No JVM, game, launcher GUI, account, network or live configuration execution.",
+    "Original Setting/OverrideSetting/PassthroughSetting classes with synchronous in-memory storage adapter.",
+    "Unchanged selected CheckJava/VerifyJavaInstall/JavaVersion method bodies; result delivery,parent/profile/context and path resolver adapters.",
+    "No real probe process, automatic selection/download, concurrent settings writer, disk publication or process retirement qualification.",
+    "Supported Qt version differs from installed Prism Qt; selected source execution is not full-launcher qualification.",
+    "Pure replay only; no Qt/JVM/compiler/Prism executed.",
+    "Decoder admits a bounded string/probe fixture profile; it is not the real Prism input decoder.",
+    "mtime/path signature is an observed cache heuristic, not executable integrity or process identity.",
+    "Major parsing is compared for five fixture strings; general JavaVersion ordering/parsing is unqualified.",
+    "The proposed evidence classification is not a production policy or full automatic-selection model."
+  ]
+}

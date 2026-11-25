@@ -1,0 +1,903 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "settings-0-0-0",
+      "kind": "setting",
+      "passthrough": false,
+      "gate": false,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": true
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-0-0-1",
+      "kind": "setting",
+      "passthrough": false,
+      "gate": false,
+      "globalDefault": "default",
+      "local": "local",
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": true
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-0-1-0",
+      "kind": "setting",
+      "passthrough": false,
+      "gate": true,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": false
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-0-1-1",
+      "kind": "setting",
+      "passthrough": false,
+      "gate": true,
+      "globalDefault": "default",
+      "local": "local",
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": false
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-1-0-0",
+      "kind": "setting",
+      "passthrough": true,
+      "gate": false,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": true
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-1-0-1",
+      "kind": "setting",
+      "passthrough": true,
+      "gate": false,
+      "globalDefault": "default",
+      "local": "local",
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": true
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-1-1-0",
+      "kind": "setting",
+      "passthrough": true,
+      "gate": true,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": false
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "settings-1-1-1",
+      "kind": "setting",
+      "passthrough": true,
+      "gate": true,
+      "globalDefault": "default",
+      "local": "local",
+      "actions": [
+        {
+          "op": "set",
+          "value": "written"
+        },
+        {
+          "op": "global",
+          "value": "next-global"
+        },
+        {
+          "op": "gate",
+          "value": false
+        },
+        {
+          "op": "set",
+          "value": "next-global"
+        },
+        {
+          "op": "reset"
+        },
+        {
+          "op": "gate",
+          "value": true
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "equal-write-0",
+      "kind": "setting",
+      "passthrough": false,
+      "gate": true,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "global"
+        },
+        {
+          "op": "global",
+          "value": "changed"
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "id": "equal-write-1",
+      "kind": "setting",
+      "passthrough": true,
+      "gate": true,
+      "globalDefault": "default",
+      "local": null,
+      "actions": [
+        {
+          "op": "set",
+          "value": "global"
+        },
+        {
+          "op": "global",
+          "value": "changed"
+        }
+      ],
+      "global": "global"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-compatible"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-incompatible"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": true,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-ignore"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-no-requirement"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "32",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-32-memory"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 2048,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "32",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "cached-32-2048"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": false,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-global-executable"
+    },
+    {
+      "kind": "pipeline",
+      "override": true,
+      "executable": false,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-instance-executable"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": false,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-checker-cached"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 0,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-0-0"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 1,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-0-1"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-0-2"
+    },
+    {
+      "kind": "pipeline",
+      "override": true,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 0,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-1-0"
+    },
+    {
+      "kind": "pipeline",
+      "override": true,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 1,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-1-1"
+    },
+    {
+      "kind": "pipeline",
+      "override": true,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "probe-1-2"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-JavaVersion"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-JavaArchitecture"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-JavaRealArchitecture"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": ""
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "missing-JavaVendor"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 1,
+      "stored": {
+        "JavaVersion": "",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "invalid-probe-empty-version"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [],
+      "signatureMatches": false,
+      "probe": 1,
+      "stored": {
+        "JavaVersion": "",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "invalid-probe-empty-no-requirement"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": false,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "valid-probe-compatible"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": true,
+      "majors": [
+        21
+      ],
+      "signatureMatches": false,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "valid-probe-ignore"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        25
+      ],
+      "signatureMatches": false,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "21.0.1",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "32",
+      "id": "valid-probe-32-warning"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        8
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "1.8.0_452",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "legacy-major-parser"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [
+        21
+      ],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "unknown",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "unparseable-version"
+    },
+    {
+      "kind": "pipeline",
+      "override": false,
+      "executable": true,
+      "checkerAvailable": true,
+      "memory": 4096,
+      "ignore": false,
+      "majors": [],
+      "signatureMatches": true,
+      "probe": 2,
+      "stored": {
+        "JavaVersion": "unknown",
+        "JavaArchitecture": "64",
+        "JavaRealArchitecture": "aarch64",
+        "JavaVendor": "old-vendor"
+      },
+      "resultVersion": "25.0.1",
+      "resultArch": "64",
+      "id": "unparseable-no-requirement"
+    }
+  ]
+}

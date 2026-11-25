@@ -1,0 +1,104 @@
+[
+  {
+    "case": "moc-Setting",
+    "argv": [
+      "/opt/homebrew/share/qt/libexec/moc",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/Setting.h",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_Setting.cpp"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.0285587920807302,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case": "moc-OverrideSetting",
+    "argv": [
+      "/opt/homebrew/share/qt/libexec/moc",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/OverrideSetting.h",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_OverrideSetting.cpp"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.0089004160836339,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case": "moc-PassthroughSetting",
+    "argv": [
+      "/opt/homebrew/share/qt/libexec/moc",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/PassthroughSetting.h",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_PassthroughSetting.cpp"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.006374791730195284,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case": "compile",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "-I/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/main.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/Setting.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/OverrideSetting.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/PassthroughSetting.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_Setting.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_OverrideSetting.cpp",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/moc_PassthroughSetting.cpp",
+      "-o",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/probe",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtCore",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 6.082027624826878,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case": "observe",
+    "argv": [
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/probe",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/input.json",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-java-20261125T054951238691Z/work/java-fixture"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.2991011249832809,
+    "streams": {
+      "stdout": "2c7c131883da093b525374f8a257d0a7849b39c9cf5834bdf9c400114e335984",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]
