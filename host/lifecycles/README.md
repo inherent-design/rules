@@ -66,7 +66,7 @@ The retained record contains 101 rows from 13 runs. Ninety-eight match the propo
 
 ## Application handoffs
 
-The [host contract catalog](contracts.json) gives the 19 witness kinds requested by the initial application inventory an explicit obligation, rule, evidence, and remaining gap. [Feature assignments](features.json) link 208 feature families across nine applications to those contracts. Their source inventory and 971 semantic research operations are owned by the application study. Linking a feature does not promote its conformance status.
+The [host contract catalog](contracts.json) gives the 19 witness kinds requested by the initial application inventory an explicit obligation, rule, evidence, and remaining gap. [Feature assignments](features.json) link 208 feature families across nine applications to those contracts. Their source inventory and 972 semantic research operations are owned by the application study. Linking a feature does not promote its conformance status.
 
 The following proposals arise from the host evidence. Each application's owner still has to establish the domain-specific behavior and decide adoption.
 

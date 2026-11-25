@@ -106,7 +106,8 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": []
     },
     {
       "id": "packs.overlays",
@@ -131,7 +132,8 @@
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
-      ]
+      ],
+      "componentEvidence": []
     },
     {
       "id": "packs.filter",
@@ -163,7 +165,8 @@
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json",
         "host/minecraft/evidence/resources-1.21.1-20261125T030635868969Z/observed.json",
         "host/minecraft/evidence/resources-1.21.5-20261125T030701941976Z/observed.json"
-      ]
+      ],
+      "componentEvidence": []
     },
     {
       "id": "packs.identifiers",
@@ -252,7 +255,8 @@
       "nativeComparisons": [
         "host/minecraft/evidence/resources-1.21.1-20261125T030635868969Z/observed.json",
         "host/minecraft/evidence/resources-1.21.5-20261125T030701941976Z/observed.json"
-      ]
+      ],
+      "componentEvidence": []
     },
     {
       "id": "packs.server",
@@ -437,7 +441,8 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": []
     },
     {
       "id": "models.references",
@@ -473,6 +478,25 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "model-default-namespace",
+            "identifier-lexical-traversal",
+            "missing-model-reference"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Explicit generic model references, lexical IDs and dependency sets; no resource lookup or full retaining-root closure."
         }
       ]
     },
@@ -522,7 +546,8 @@
           "id": "java-1.21.11-element-consumer",
           "report": "host/minecraft/JAVA-1.21.11.md",
           "conformance": "host/minecraft/evidence/element12111-conformance.json",
-          "status": "40originaldeserializations+51controlledCPUconsumer outcomes;not wholefamily or rendering qualification"
+          "status": "40originaldeserializations+51controlledCPUconsumer outcomes;not wholefamily or rendering qualification",
+          "limits": "Selected original deserialization and controlled CPU-consumer outcomes only. Whole-family, modded provider, complete bake, and rendered equivalence remain unqualified."
         },
         {
           "id": "provider-capability-boundaries",
@@ -573,7 +598,8 @@
           "id": "java-1.21.11-element-consumer",
           "report": "host/minecraft/JAVA-1.21.11.md",
           "conformance": "host/minecraft/evidence/element12111-conformance.json",
-          "status": "40originaldeserializations+51controlledCPUconsumer outcomes;not wholefamily or rendering qualification"
+          "status": "40originaldeserializations+51controlledCPUconsumer outcomes;not wholefamily or rendering qualification",
+          "limits": "Selected original deserialization and controlled CPU-consumer outcomes only. Whole-family, modded provider, complete bake, and rendered equivalence remain unqualified."
         },
         {
           "id": "provider-capability-boundaries",
@@ -605,7 +631,8 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": []
     },
     {
       "id": "models.legacy_overrides",
@@ -666,6 +693,34 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "empty",
+            "unknown-root-field",
+            "root-booleans-and-scale",
+            "late-root-scale-overflow"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Generic root metadata/defaults/refusal after callbacks; no full resource loading or publication."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -705,6 +760,66 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "empty",
+            "model-default-namespace",
+            "model-with-tints",
+            "composite-order-and-duplicate",
+            "empty-composite",
+            "condition",
+            "select-list-and-missing",
+            "select-explicit-fallback",
+            "select-empty-cases",
+            "select-empty-when",
+            "select-duplicate-in-one-case",
+            "select-duplicate-across-cases",
+            "range-unsorted",
+            "range-fallback",
+            "range-scaled",
+            "range-signed-zero",
+            "range-identical-duplicate",
+            "range-conflicting-duplicate",
+            "range-float-overflow",
+            "range-empty-entries",
+            "missing-model-reference",
+            "unknown-node",
+            "unknown-model-field",
+            "unknown-root-field",
+            "null-fallback",
+            "root-booleans-and-scale",
+            "late-root-scale-overflow",
+            "identifier-lexical-traversal",
+            "tints-at-limit",
+            "tints-over-limit",
+            "node-depth-32",
+            "node-depth-33",
+            "select-cases-512",
+            "select-cases-513",
+            "composite-children-4095",
+            "composite-children-4096"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Six selected generic node types and bounds; special/bundle/custom renderers remain outside this model."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -732,6 +847,31 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "condition"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Authored Boolean predicate factory and selected branch; no actual game-property evaluation."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -761,6 +901,39 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "select-list-and-missing",
+            "select-explicit-fallback",
+            "select-empty-cases",
+            "select-empty-when",
+            "select-duplicate-in-one-case",
+            "select-duplicate-across-cases",
+            "null-fallback",
+            "select-cases-512",
+            "select-cases-513"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Authored selector keys, duplicate policy, fallback and bounds; no actual native registry/context reader."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -788,7 +961,8 @@
           "report": "host/minecraft/JAVA-1.21.4.md",
           "verification": "host/minecraft/evidence/java1214-checks.json",
           "status": "76 original private helper outcomes admitted;not full numeric-property/render qualification",
-          "scope": "Sorted integer-valued float profile;weak host binary-search contract and smaller-list caller policy remain distinct."
+          "scope": "Sorted integer-valued float profile;weak host binary-search contract and smaller-list caller policy remain distinct.",
+          "limits": "Sorted integer-valued float profile;weak host binary-search contract and smaller-list caller policy remain distinct. No full numeric-property or rendering qualification."
         },
         {
           "id": "provider-capability-boundaries",
@@ -797,6 +971,40 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "range-unsorted",
+            "range-fallback",
+            "range-scaled",
+            "range-signed-zero",
+            "range-identical-duplicate",
+            "range-conflicting-duplicate",
+            "range-float-overflow",
+            "range-empty-entries"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend",
+            "host/java/FloatOrder.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean",
+            "host/java/FloatOrder.lean"
+          ],
+          "limits": "Selected float atoms, range bounds/duplicates and authored numeric callback; no actual clock/compass/game values."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -832,6 +1040,34 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "model-with-tints",
+            "tints-at-limit",
+            "tints-over-limit",
+            "late-root-scale-overflow"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Tint callback construction/counts and authored markers; actual tint kinds and color/render semantics remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -897,6 +1133,27 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "composite-order-and-duplicate",
+            "empty-composite",
+            "condition",
+            "select-list-and-missing",
+            "range-signed-zero"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Generic ordered layer output only, not vanilla ItemStackRenderState, actual baking or renderer execution."
         }
       ]
     },
@@ -1003,7 +1260,8 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": []
     },
     {
       "id": "textures.metadata",
@@ -1032,7 +1290,8 @@
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
-      ]
+      ],
+      "componentEvidence": []
     },
     {
       "id": "textures.animation",
@@ -1065,7 +1324,8 @@
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
-      ]
+      ],
+      "componentEvidence": []
     },
     {
       "id": "textures.atlases",
@@ -1375,7 +1635,8 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": []
     },
     {
       "id": "sounds.definitions",
@@ -1681,6 +1942,14 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -1716,6 +1985,14 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -1751,6 +2028,14 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -1792,6 +2077,14 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -1847,6 +2140,14 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
         }
       ]
     },
@@ -1875,6 +2176,80 @@
           "sources": "host/minecraft/provider-sources.json",
           "conformance": "host/minecraft/evidence/provider-policy-conformance.json",
           "limits": "55 isolated original selection calls;27 geometry calls separately modeled;five Reader observations only. Full startup, applied hooks, provider coexistence and rendering remain unqualified."
+        },
+        {
+          "id": "compat-generic-item-program",
+          "status": "partial: original generic compiler/layer API with authored Values; not whole-family qualification",
+          "report": "host/minecraft/ITEM-PROGRAMS.md",
+          "sources": "host/minecraft/item-program-field-contracts.json",
+          "conformance": "host/minecraft/evidence/item-program-conformance.json",
+          "caseIds": [
+            "empty",
+            "model-default-namespace",
+            "model-with-tints",
+            "composite-order-and-duplicate",
+            "empty-composite",
+            "condition",
+            "select-list-and-missing",
+            "select-explicit-fallback",
+            "select-empty-cases",
+            "select-empty-when",
+            "select-duplicate-in-one-case",
+            "select-duplicate-across-cases",
+            "range-unsorted",
+            "range-fallback",
+            "range-scaled",
+            "range-signed-zero",
+            "range-identical-duplicate",
+            "range-conflicting-duplicate",
+            "range-float-overflow",
+            "range-empty-entries",
+            "missing-model-reference",
+            "unknown-node",
+            "unknown-model-field",
+            "unknown-root-field",
+            "null-fallback",
+            "root-booleans-and-scale",
+            "late-root-scale-overflow",
+            "identifier-lexical-traversal",
+            "tints-at-limit",
+            "tints-over-limit",
+            "node-depth-32",
+            "node-depth-33",
+            "select-cases-512",
+            "select-cases-513",
+            "composite-children-4095",
+            "composite-children-4096"
+          ],
+          "rules": [
+            "host/minecraft/ItemProgram.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ItemProgram.lean"
+          ],
+          "limits": "Original generic compiler and layer API on the selected standalone Java21/macOS profile, not full provider execution."
+        },
+        {
+          "id": "property-context-source-contracts",
+          "status": "partial: selected source readers and context/effect relationships; game execution unqualified",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "map": "host/minecraft/property-context-contracts.json",
+          "evidenceKind": "source-inspection",
+          "limits": "33 Modefite and 33 Compat source records with selected projection, predicate, and tint lanes. No native game-value, full metadata-codec, initialized-handler, transformed-hook, or renderer qualification."
+        },
+        {
+          "id": "compat-host-free-value-cache",
+          "status": "partial: original host-free cache with authored identities/callbacks; not native component or provider qualification",
+          "report": "host/minecraft/PROPERTY-CONTEXTS.md",
+          "sources": "host/minecraft/property-context-contracts.json",
+          "conformance": "host/minecraft/evidence/resource-cache-conformance.json",
+          "rules": [
+            "host/minecraft/ResourceCache.bend"
+          ],
+          "proofs": [
+            "host/minecraft/ResourceCache.lean"
+          ],
+          "limits": "13 isolated scenarios and 41 actions with non-reentrant authored callbacks and cache-owned entries only. No actual component registry, concurrency, or physical-reclamation qualification."
         }
       ]
     },

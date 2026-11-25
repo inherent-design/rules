@@ -4,6 +4,8 @@ This study maps Minecraft resource and graphics definitions, their actual consum
 
 The [expanded research contract](intent.md) owns target-selection and completion requirements. Java 1.21.1 remains the deployment baseline. Java 1.21.4, 1.21.5, 1.21.11, an exact selected 26.3 revision, applicable later changes, and separately selected Bedrock contracts are first-class comparison targets. Modefite, Polytone, and current Compat need independent capability, consumer, configuration, and coexistence contracts.
 
+The [scope audit](SCOPE-AUDIT.md) checks all ten expanded deliverables against current evidence and names the thinner families to address next. It keeps scoped model/native results separate from family completion and actual provider/runtime support.
+
 The current [selected target graph](TARGETS.md) pins five Java releases, three separate Bedrock sample-source milestones, and eight provider variants. It preserves major/minor artifact format declarations and the Java 25 requirement for 26.3. The [static host API map](HOST-APIS.md) identifies actual 26.3 bytecode consumers without launching the game. Neither target selection nor a source census establishes runtime or rendering support.
 
 These are the initial comparison nodes, retained with their evidence; they are not the final target set:

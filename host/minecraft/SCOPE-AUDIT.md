@@ -1,0 +1,46 @@
+# Expanded research scope audit
+
+The expanded research is incomplete. This audit uses `edb593fc0afc8ab9b055349cbdec2fa1a34103e1` as its starting revision and reconciles its scoped evidence into the [family inventory](inventory.json). It reviews the [expanded contract](intent.md) alongside the [host map](../README.md), [profile matrix](../../profiles/README.md), and [application-host lifecycle contract](../lifecycles/README.md). It does not replace those contracts or narrow their acceptance criteria.
+
+The last independently qualified publication is `2949c8e1f5b7f482c5e075f9cee9b6a60b969222`, with [CI run 45688402170](https://github.com/inherent-design/rules/actions/runs/45688402170). That run passed the proof lane and Windows Server, Linux, and macOS host lanes. Its 237 Lean modules and 110 Bend files are repository-wide totals, including other studies. They do not establish Minecraft breadth or whole-provider support. The later property/cache cohort and application work require their own publication boundary; that CI result does not cover them.
+
+## Requirement review
+
+| Expanded requirement | Evidence available | Material work remaining |
+| --- | --- | --- |
+| 1. Finite, attributable targets and independent axes | [Targets](TARGETS.md) pin five Java releases, three separate Bedrock sample-source milestones, four provider artifacts, and eight provider variants. Source/API and declared Java prerequisites are separate. | Effective loader/library/configuration/backend combinations remain unqualified. Preserve unavailable native platforms and distinguish selection metadata from an actually loaded composition. |
+| 2. Every relevant definition family and consumer closure | The inventory contains 52 families. [Registry maps](REGISTRIES.md), [later schemas](LATER-SCHEMAS.md), and [Polytone discovery](POLYTONE.md) supply broader source/asset locators. | A locator, registration, or source-file count is not a complete consumer closure. Five families below still lack linked semantic/model/native slices; other families retain incomplete concrete consumers. |
+| 3. Field, value, operation, dependency, effect, and lifetime semantics | Dedicated maps cover selected decoding, presentation, shader/text, sound, particle, item-program, property/context, and lifecycle contracts. | Effective delegated codecs, null/default/unknown-field behavior, live context requirements, merge/override rules, and actual retaining owners remain incomplete across material parts of the selection. |
+| 4. Checked executable rules and meaningful comparisons | Each completed bounded band retains its models, assumptions, original observations, projection limits, and negative controls. The [item-program](ITEM-PROGRAMS.md) and [cache](PROPERTY-CONTEXTS.md) bands have separate original-method comparisons. | Add meaningful bounded rules and consumer comparisons to the thinner families. A compiler verdict, constant example, or repeated helper cannot discharge another family's semantics. |
+| 5. Fidelity and cross-version/provider distinctions | [Geometry/provider](PROVIDERS.md), [1.21.4](JAVA-1.21.4.md), [1.21.11](JAVA-1.21.11.md), [26.3](LATER-SCHEMAS.md), and [Bedrock](bedrock/README.md) lanes preserve different source and runtime contracts. | Complete capability-level faithful/conversion/approximation/unsupported/unknown dispositions. Absent gameplay data and custom renderers remain explicit constraints, not fabricated defaults. |
+| 6. Coexistence, startup, publication, retirement, and UX | Isolated feature selection, original reload orchestration, server-pack custody, source manager lifecycles, and bounded native host rules qualify named slices. | Actual applied hook order and complete provider combinations remain open. Full publication/render/retirement, user diagnostics, partial failure, and safe recovery need their consuming contracts. |
+| 7. Independently selectable architecture proposals | The provider map retains four options: keep current providers, extend one, convert a restricted subset, or design a combined provider. | The options still need capability-specific dependency closure, preserved/lost semantics, compatibility breaks, qualification checks, and concrete UX. Implementation remains unstarted. |
+| 8. Broader host changes and downstream handoffs | Six host surfaces, named native/JVM profiles, browser/native lifecycle comparisons, and application witness assignments exist. Float ordering, filesystem identity, callback custody, and retained ownership have distinct contracts. | Reconcile actual new consumer requirements rather than assuming one runner qualifies every host. Windows 11 LTSC, missing device/backend runs, and unobserved browser/native claims retain explicit gaps. |
+| 9. Coherent public artifacts and adequate verification | Sources, original private inputs, normalized public observations, scoped proofs, negative cases, and rules-only CI have attributable boundaries. | Keep the inventory synchronized with completed scoped bands, preserve original evidence, and qualify each later exact publication. New local work does not inherit a previous CI result. |
+| 10. Final requirement-by-requirement audit | This interim review identifies current evidence and remaining work. | Material semantic, consumer, coexistence, and proposal gaps prevent completion. A final acceptance audit must verify the resulting artifacts against all ten requirements. |
+
+Unavailable hardware or a missing native platform can remain a qualified gap. That does not turn uninvestigated field semantics or an omitted consumer into supported or unsupported behavior. Native rendering claims need their own evidence; source inspection and a controlled CPU helper establish narrower facts.
+
+## Thinner linework to address next
+
+At the audit starting point, these five inventory families had no linked rule, proof, native comparison, or scoped component record. This identifies an integration/research priority, not proof that no relevant class or prior observation exists anywhere.
+
+| Family | Next bounded semantic/consumer slice |
+| --- | --- |
+| `packs.selection` | Saved selection versus available packs, ordering, required/fixed placement, refreshed repositories, and refusal/recovery. Relate discovery and metadata admission to the user's actual selected pack. |
+| `models.blockstates` | Variant/multipart grammar, typed state predicates, matching/merge behavior, missing references, random/weighted choices, and actual bake/update consumers across the selected versions. |
+| `models.generated` | Texture/layer references, sprite-derived geometry, alpha/edge behavior, transforms, caching, and CPU/native ownership. Keep generated geometry separate from rendered equivalence. |
+| `textures.images` | Decoder admission, actual dimensions and byte bounds, channel/alpha representation, image ownership, mipmaps, upload, and retirement. Logical close is separate from device completion. |
+| `text.builtin_lists` | Credits, splashes, and notification schemas; normalization, filtering, ordering/randomness, scheduling, localization, and actual UI consumers. Keep source assets private where required. |
+
+Pack discovery also retains a specific unresolved consumer boundary: filename/host detection, archive opening, metadata decoding, selected membership, and applied resources are different decisions. The application content-kind work exposed why type/layout admission alone cannot establish that another consumer will discover the supplied file. Existing static detector pointers are useful; a native detector comparison and the rest of pack selection remain separate obligations.
+
+These families take priority over adding more detail to the already bounded cache fixture. Other material gaps remain: actual provider composition, complete vanilla property/tint semantics, Polytone manager payloads and consumers, shader/backend contracts, and operational UX. Closing a thin family does not automatically close those gaps.
+
+## Evidence integration rules
+
+The inventory now links the generic item-program and property/cache bands to their relevant families with explicit limits and, where useful, retained case IDs. Every parent review state remains pending or partial. The generic compiler's authored callbacks do not qualify actual game values. The host-free cache comparison is linked to its provider implementation; it is not counted as native execution of all 33 property readers.
+
+Keep one canonical family inventory and the existing application-owned inventory. The host feature map names obligations for nine applications, 208 feature families, and 972 semantic research operations; it does not promote application conformance. Its saved whole-source hash is historical attribution, while the checker compares the actual feature/operation/witness projection. New assessment annotations alone do not require rewriting that attribution.
+
+Source pins, model proofs, supplied observations, original API results, prototypes, actual application/runtime behavior, and owner-selected changes retain separate evidence states. Do not replace missing observations with false/default facts or infer global rollback, purity, compatibility, or final reclamation from a local result.
