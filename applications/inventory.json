@@ -13640,47 +13640,129 @@
           "operations": [
             {
               "id": "diff",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Comparison.lean and restic/Comparison.bend",
+              "laws": [
+                "source_type_boundary_omits_a_new_data_reference",
+                "closure_correction_preserves_type_event",
+                "same_data_moved_to_a_different_path_is_not_new_data"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-comparison-20261125T031756971775Z/commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/completion-commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-comparison-selections.json"
+              ],
+              "negativeControls": [
+                "restic/comparison_conformance.py:researchRefusals",
+                "restic/comparison_conformance.py:normalizedPremiseMutations",
+                "restic/comparison_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/INSPECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Pinned restic 0.20.0 on macOS arm64; three generated snapshots, regular single-link files and directories; actual saved payloads, tree blobs, index weights, command streams, and two restored repository byte-copy images checked.",
+                "Two models compare selected counting, diff event/reference, and post-admission read-outcome projections. Listing/search DTO fields and fixed selection cases are independently checked by the Python observer; no general glob, time/codec, or filesystem parser proof.",
+                "Finite metadata-equality and content-ID witnesses are external premises. Bend path ordering is a checked adapter witness; Lean orders the paired saved paths. Native floating metrics receive separate numeric checks.",
+                "Current CLI behavior, five proposed-policy cases, and synthetic multi-chunk laws stay separate. Metadata success is not payload or integrity verification; missing weights are unknown, while a known empty difference requires no weights."
+              ],
+              "verificationPlan": "Extend nested and partially readable tree failures, multi-snapshot partial matches, ID and short-selector admission, metadata/ACL/hardlinks and other special files, shared multi-chunk order, remote backends, concurrent changes, and other hosts. Review explicit counting policy before choosing rename versus coexisting-location behavior. Do not change production or infer physically reclaimable pack bytes from logical/reference measures."
             },
             {
               "id": "find",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Comparison.lean and restic/Comparison.bend",
+              "laws": [
+                "successful_exit_does_not_establish_valid_search_json",
+                "proposed_search_retains_failure_and_protocol"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-comparison-20261125T031756971775Z/commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/completion-commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-comparison-selections.json"
+              ],
+              "negativeControls": [
+                "restic/comparison_conformance.py:researchRefusals",
+                "restic/comparison_conformance.py:normalizedPremiseMutations",
+                "restic/comparison_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/INSPECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Pinned restic 0.20.0 on macOS arm64; three generated snapshots, regular single-link files and directories; actual saved payloads, tree blobs, index weights, command streams, and two restored repository byte-copy images checked.",
+                "Two models compare selected counting, diff event/reference, and post-admission read-outcome projections. Listing/search DTO fields and fixed selection cases are independently checked by the Python observer; no general glob, time/codec, or filesystem parser proof.",
+                "Finite metadata-equality and content-ID witnesses are external premises. Bend path ordering is a checked adapter witness; Lean orders the paired saved paths. Native floating metrics receive separate numeric checks.",
+                "Current CLI behavior, five proposed-policy cases, and synthetic multi-chunk laws stay separate. Metadata success is not payload or integrity verification; missing weights are unknown, while a known empty difference requires no weights."
+              ],
+              "verificationPlan": "Extend nested and partially readable tree failures, multi-snapshot partial matches, ID and short-selector admission, metadata/ACL/hardlinks and other special files, shared multi-chunk order, remote backends, concurrent changes, and other hosts. Review explicit counting policy before choosing rename versus coexisting-location behavior. Do not change production or infer physically reclaimable pack bytes from logical/reference measures."
             },
             {
               "id": "ls",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Comparison.lean and restic/Comparison.bend",
+              "laws": [
+                "metadata_query_does_not_establish_payload_availability",
+                "listing_failure_can_retain_a_snapshot_header"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-comparison-20261125T031756971775Z/commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/completion-commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-comparison-selections.json"
+              ],
+              "negativeControls": [
+                "restic/comparison_conformance.py:researchRefusals",
+                "restic/comparison_conformance.py:normalizedPremiseMutations",
+                "restic/comparison_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/INSPECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Pinned restic 0.20.0 on macOS arm64; three generated snapshots, regular single-link files and directories; actual saved payloads, tree blobs, index weights, command streams, and two restored repository byte-copy images checked.",
+                "Two models compare selected counting, diff event/reference, and post-admission read-outcome projections. Listing/search DTO fields and fixed selection cases are independently checked by the Python observer; no general glob, time/codec, or filesystem parser proof.",
+                "Finite metadata-equality and content-ID witnesses are external premises. Bend path ordering is a checked adapter witness; Lean orders the paired saved paths. Native floating metrics receive separate numeric checks.",
+                "Current CLI behavior, five proposed-policy cases, and synthetic multi-chunk laws stay separate. Metadata success is not payload or integrity verification; missing weights are unknown, while a known empty difference requires no weights."
+              ],
+              "verificationPlan": "Extend nested and partially readable tree failures, multi-snapshot partial matches, ID and short-selector admission, metadata/ACL/hardlinks and other special files, shared multi-chunk order, remote backends, concurrent changes, and other hosts. Review explicit counting policy before choosing rename versus coexisting-location behavior. Do not change production or infer physically reclaimable pack bytes from logical/reference measures."
             },
             {
               "id": "stats",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Comparison.lean and restic/Comparison.bend",
+              "laws": [
+                "content_count_merges_equal_bytes_at_distinct_paths",
+                "source_reference_gate_can_depend_on_snapshot_order",
+                "repeated_tree_is_one_raw_reference_set_but_two_restore_images"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-comparison-20261125T031756971775Z/commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/completion-commands.json",
+                "evidence/restic-comparison-20261125T031756971775Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-comparison-selections.json"
+              ],
+              "negativeControls": [
+                "restic/comparison_conformance.py:researchRefusals",
+                "restic/comparison_conformance.py:normalizedPremiseMutations",
+                "restic/comparison_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/INSPECTION.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "Pinned restic 0.20.0 on macOS arm64; three generated snapshots, regular single-link files and directories; actual saved payloads, tree blobs, index weights, command streams, and two restored repository byte-copy images checked.",
+                "Two models compare selected counting, diff event/reference, and post-admission read-outcome projections. Listing/search DTO fields and fixed selection cases are independently checked by the Python observer; no general glob, time/codec, or filesystem parser proof.",
+                "Finite metadata-equality and content-ID witnesses are external premises. Bend path ordering is a checked adapter witness; Lean orders the paired saved paths. Native floating metrics receive separate numeric checks.",
+                "Current CLI behavior, five proposed-policy cases, and synthetic multi-chunk laws stay separate. Metadata success is not payload or integrity verification; missing weights are unknown, while a known empty difference requires no weights."
+              ],
+              "verificationPlan": "Extend nested and partially readable tree failures, multi-snapshot partial matches, ID and short-selector admission, metadata/ACL/hardlinks and other special files, shared multi-chunk order, remote backends, concurrent changes, and other hosts. Review explicit counting policy before choosing rename versus coexisting-location behavior. Do not change production or infer physically reclaimable pack bytes from logical/reference measures."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "bounded native comparisons and typed policy models; query and counting gaps documented, broader qualification pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

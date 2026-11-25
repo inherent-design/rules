@@ -1,0 +1,60 @@
+[
+  {
+    "case": "init",
+    "repository": "repository",
+    "args": [
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "seconds": 2.962098749820143,
+    "streams": {
+      "stdout": {
+        "rawSha256": "bfbecbaf5c23c2d88ad6f86ae101f693a9084051c09bf372160eeb81f22675c1",
+        "publicSha256": "e0136f94fe4c849a7607b3b1a4b28230c6c2c09ea7e7d086a8f40db88a63d3b5",
+        "rawPrivatePath": "work/private/init.stdout"
+      },
+      "stderr": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/init.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    }
+  },
+  {
+    "case": "backup-A",
+    "repository": "repository",
+    "args": [
+      "backup",
+      ".",
+      "--force",
+      "--host",
+      "comparison-fixture-host",
+      "--time",
+      "2025-01-01 00:00:00 +0000"
+    ],
+    "seconds": 0.013172208331525326,
+    "streams": {
+      "stdout": {
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "work/private/backup-A.stdout"
+      },
+      "stderr": {
+        "rawSha256": "dad75dfa5f3226d97e163ee89bbc3afceb88b633a85735246cd73d8d1e7a2c6a",
+        "publicSha256": "dad75dfa5f3226d97e163ee89bbc3afceb88b633a85735246cd73d8d1e7a2c6a",
+        "rawPrivatePath": "work/private/backup-A.stderr"
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    }
+  }
+]

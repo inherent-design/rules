@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "status": "Preserved invalid harness timestamp;not comparison-command failure",
+  "nativeOutcome": "init succeeds;backup refuses before snapshot creation with JSON exit_error code1 and extra timezone text diagnostic",
+  "source": "Frozen probe.py and backup-A.stderr;cmd_backup.go parses only global.TimeFormat in local timezone,unlike the more permissive find timestamp parser.",
+  "correction": "Use documented YYYY-MM-DD HH:MM:SS and child TZ=UTC. Fresh follow-up adds one deeper fixture path to distinguish recursive listing;initial failed inputs remain unchanged.",
+  "allOwnedGroupsRetired": true
+}

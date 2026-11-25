@@ -1,0 +1,2480 @@
+{
+  "schema": 1,
+  "nativeCommands": 85,
+  "modelRows": 37,
+  "currentNativeRows": 32,
+  "proposalRows": 5,
+  "comparisons": [
+    {
+      "case": "diff-default",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|T"
+        ],
+        "changedFiles": 1,
+        "added": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      },
+      "model": {
+        "added": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ],
+        "changedFiles": 1,
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|T"
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      }
+    },
+    {
+      "case": "diff-metadata",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": true,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/mode.txt|U",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|TU"
+        ],
+        "changedFiles": 1,
+        "added": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      },
+      "model": {
+        "added": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ],
+        "changedFiles": 1,
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/mode.txt|U",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|TU"
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      }
+    },
+    {
+      "case": "diff-reverse",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          2,
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [
+          "/added.txt|-",
+          "/changed.txt|M",
+          "/deleted.txt|+",
+          "/moved-new.txt|-",
+          "/moved-old.txt|+",
+          "/type-change|T"
+        ],
+        "changedFiles": 1,
+        "added": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ],
+        "removed": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ]
+      },
+      "model": {
+        "added": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ],
+        "changedFiles": 1,
+        "events": [
+          "/added.txt|-",
+          "/changed.txt|M",
+          "/deleted.txt|+",
+          "/moved-new.txt|-",
+          "/moved-old.txt|+",
+          "/type-change|T"
+        ],
+        "removed": [
+          2,
+          0,
+          2,
+          2,
+          4666
+        ]
+      }
+    },
+    {
+      "case": "diff-equal-tree",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          2,
+          3
+        ],
+        "metadata": true,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [],
+        "changedFiles": 0,
+        "added": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "removed": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "model": {
+        "added": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "changedFiles": 0,
+        "events": [],
+        "removed": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "case": "stats-A-restore-size",
+      "input": {
+        "kind": "stats",
+        "mode": "restore-size",
+        "selected": [
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        124,
+        13,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        124,
+        13,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-A-files-by-contents",
+      "input": {
+        "kind": "stats",
+        "mode": "files-by-contents",
+        "selected": [
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        106,
+        10,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        106,
+        10,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-A-blobs-per-file",
+      "input": {
+        "kind": "stats",
+        "mode": "blobs-per-file",
+        "selected": [
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        106,
+        9,
+        9,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        106,
+        9,
+        9,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-A-raw-data",
+      "input": {
+        "kind": "stats",
+        "mode": "raw-data",
+        "selected": [
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        2081,
+        0,
+        12,
+        1,
+        5982,
+        2081,
+        5982
+      ],
+      "model": [
+        2081,
+        0,
+        12,
+        1,
+        5982,
+        2081,
+        5982
+      ]
+    },
+    {
+      "case": "stats-B-restore-size",
+      "input": {
+        "kind": "stats",
+        "mode": "restore-size",
+        "selected": [
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        120,
+        14,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        120,
+        14,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-B-files-by-contents",
+      "input": {
+        "kind": "stats",
+        "mode": "files-by-contents",
+        "selected": [
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        102,
+        10,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        102,
+        10,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-B-blobs-per-file",
+      "input": {
+        "kind": "stats",
+        "mode": "blobs-per-file",
+        "selected": [
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        102,
+        9,
+        9,
+        1,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        102,
+        9,
+        9,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-B-raw-data",
+      "input": {
+        "kind": "stats",
+        "mode": "raw-data",
+        "selected": [
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        2444,
+        0,
+        13,
+        1,
+        6463,
+        2444,
+        6463
+      ],
+      "model": [
+        2444,
+        0,
+        13,
+        1,
+        6463,
+        2444,
+        6463
+      ]
+    },
+    {
+      "case": "stats-BC-restore-size",
+      "input": {
+        "kind": "stats",
+        "mode": "restore-size",
+        "selected": [
+          2,
+          3
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        240,
+        28,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        240,
+        28,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-BC-files-by-contents",
+      "input": {
+        "kind": "stats",
+        "mode": "files-by-contents",
+        "selected": [
+          2,
+          3
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        102,
+        10,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        102,
+        10,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-BC-blobs-per-file",
+      "input": {
+        "kind": "stats",
+        "mode": "blobs-per-file",
+        "selected": [
+          2,
+          3
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        102,
+        9,
+        9,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        102,
+        9,
+        9,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-BC-raw-data",
+      "input": {
+        "kind": "stats",
+        "mode": "raw-data",
+        "selected": [
+          2,
+          3
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        2444,
+        0,
+        13,
+        2,
+        6463,
+        2444,
+        6463
+      ],
+      "model": [
+        2444,
+        0,
+        13,
+        2,
+        6463,
+        2444,
+        6463
+      ]
+    },
+    {
+      "case": "stats-AB-restore-size",
+      "input": {
+        "kind": "stats",
+        "mode": "restore-size",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        244,
+        27,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        244,
+        27,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-AB-files-by-contents",
+      "input": {
+        "kind": "stats",
+        "mode": "files-by-contents",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        142,
+        13,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        142,
+        13,
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-AB-blobs-per-file",
+      "input": {
+        "kind": "stats",
+        "mode": "blobs-per-file",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        142,
+        11,
+        12,
+        2,
+        0,
+        0,
+        0
+      ],
+      "model": [
+        142,
+        11,
+        12,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-AB-raw-data",
+      "input": {
+        "kind": "stats",
+        "mode": "raw-data",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        3440,
+        0,
+        17,
+        2,
+        10818,
+        3440,
+        10818
+      ],
+      "model": [
+        3440,
+        0,
+        17,
+        2,
+        10818,
+        3440,
+        10818
+      ]
+    },
+    {
+      "case": "data-ls",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingData",
+        "query": "listing"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "data-find",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingData",
+        "query": "search"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "data-stats",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingData",
+        "query": "statistics"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "data-dump",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingData",
+        "query": "payload"
+      },
+      "expected": {
+        "exitCode": 1,
+        "protocolValid": true,
+        "complete": false,
+        "valueAvailable": false
+      },
+      "model": {
+        "complete": false,
+        "exitCode": 1,
+        "protocolValid": true,
+        "valueAvailable": false
+      }
+    },
+    {
+      "case": "data-restored-find",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": "search"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "data-restored-dump",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": "payload"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "tree-ls",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingRootTree",
+        "query": "listing"
+      },
+      "expected": {
+        "exitCode": 1,
+        "protocolValid": true,
+        "complete": false,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": false,
+        "exitCode": 1,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "tree-find",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingRootTree",
+        "query": "search"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": false,
+        "complete": false,
+        "valueAvailable": false
+      },
+      "model": {
+        "complete": false,
+        "exitCode": 0,
+        "protocolValid": false,
+        "valueAvailable": false
+      }
+    },
+    {
+      "case": "tree-stats",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingRootTree",
+        "query": "statistics"
+      },
+      "expected": {
+        "exitCode": 1,
+        "protocolValid": true,
+        "complete": false,
+        "valueAvailable": false
+      },
+      "model": {
+        "complete": false,
+        "exitCode": 1,
+        "protocolValid": true,
+        "valueAvailable": false
+      }
+    },
+    {
+      "case": "tree-dump",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "missingRootTree",
+        "query": "payload"
+      },
+      "expected": {
+        "exitCode": 1,
+        "protocolValid": true,
+        "complete": false,
+        "valueAvailable": false
+      },
+      "model": {
+        "complete": false,
+        "exitCode": 1,
+        "protocolValid": true,
+        "valueAvailable": false
+      }
+    },
+    {
+      "case": "tree-restored-find",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": "search"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "tree-restored-dump",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": "payload"
+      },
+      "expected": {
+        "exitCode": 0,
+        "protocolValid": true,
+        "complete": true,
+        "valueAvailable": true
+      },
+      "model": {
+        "complete": true,
+        "exitCode": 0,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    },
+    {
+      "case": "diff-default-closure-proposal",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          1,
+          2
+        ],
+        "metadata": false,
+        "fullClosure": true,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|T"
+        ],
+        "changedFiles": 1,
+        "added": [
+          2,
+          0,
+          3,
+          2,
+          4676
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      },
+      "basis": "Proposed complete-reference counters over independently read native trees; no patched CLI execution.",
+      "model": {
+        "added": [
+          2,
+          0,
+          3,
+          2,
+          4676
+        ],
+        "changedFiles": 1,
+        "events": [
+          "/added.txt|+",
+          "/changed.txt|M",
+          "/deleted.txt|-",
+          "/moved-new.txt|+",
+          "/moved-old.txt|-",
+          "/type-change/|T"
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ]
+      }
+    },
+    {
+      "case": "diff-reverse-closure-proposal",
+      "input": {
+        "kind": "diff",
+        "mode": "",
+        "selected": [
+          2,
+          1
+        ],
+        "metadata": false,
+        "fullClosure": true,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": {
+        "events": [
+          "/added.txt|-",
+          "/changed.txt|M",
+          "/deleted.txt|+",
+          "/moved-new.txt|-",
+          "/moved-old.txt|+",
+          "/type-change|T"
+        ],
+        "changedFiles": 1,
+        "added": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          2,
+          4676
+        ]
+      },
+      "basis": "Proposed complete-reference counters over independently read native trees; no patched CLI execution.",
+      "model": {
+        "added": [
+          2,
+          0,
+          3,
+          1,
+          4227
+        ],
+        "changedFiles": 1,
+        "events": [
+          "/added.txt|-",
+          "/changed.txt|M",
+          "/deleted.txt|+",
+          "/moved-new.txt|-",
+          "/moved-old.txt|+",
+          "/type-change|T"
+        ],
+        "removed": [
+          2,
+          0,
+          3,
+          2,
+          4676
+        ]
+      }
+    },
+    {
+      "case": "stats-A-path-reference-proposal",
+      "input": {
+        "kind": "stats",
+        "mode": "path-references-proposal",
+        "selected": [
+          1
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        124,
+        10,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "basis": "Proposed strict location/reference count, not a selected replacement for rename-resilient source policy.",
+      "model": [
+        124,
+        10,
+        10,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "stats-B-path-reference-proposal",
+      "input": {
+        "kind": "stats",
+        "mode": "path-references-proposal",
+        "selected": [
+          2
+        ],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": false,
+        "availability": "present",
+        "query": ""
+      },
+      "expected": [
+        120,
+        10,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "basis": "Proposed strict location/reference count, not a selected replacement for rename-resilient source policy.",
+      "model": [
+        120,
+        10,
+        10,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "tree-find-completion-proposal",
+      "input": {
+        "kind": "read",
+        "mode": "",
+        "selected": [],
+        "metadata": false,
+        "fullClosure": false,
+        "fixSearch": true,
+        "availability": "missingRootTree",
+        "query": "search"
+      },
+      "expected": {
+        "exitCode": 1,
+        "protocolValid": true,
+        "complete": false,
+        "valueAvailable": true
+      },
+      "basis": "Proposed failure with a valid partial result array; not patched native output.",
+      "model": {
+        "complete": false,
+        "exitCode": 1,
+        "protocolValid": true,
+        "valueAvailable": true
+      }
+    }
+  ],
+  "normalizedWitnesses": {
+    "opaqueIds": 17,
+    "metadataClasses": 19,
+    "metadataBasisSha256": "3fbf84dab11feef03ce8cfbdd6377936ccebd2f75111026a928fe4032d0e085e"
+  },
+  "normalizedBasis": {
+    "catalog": [
+      {
+        "handle": {
+          "kind": "data",
+          "id": 1
+        },
+        "plain": 10,
+        "cipher": 51,
+        "uncompressedCipher": 42,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 2
+        },
+        "plain": 12,
+        "cipher": 53,
+        "uncompressedCipher": 44,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 3
+        },
+        "plain": 10,
+        "cipher": 51,
+        "uncompressedCipher": 42,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 4
+        },
+        "plain": 14,
+        "cipher": 55,
+        "uncompressedCipher": 46,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 5
+        },
+        "plain": 5,
+        "cipher": 46,
+        "uncompressedCipher": 37,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 6
+        },
+        "plain": 12,
+        "cipher": 53,
+        "uncompressedCipher": 44,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 7
+        },
+        "plain": 12,
+        "cipher": 53,
+        "uncompressedCipher": 44,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 8
+        },
+        "plain": 12,
+        "cipher": 53,
+        "uncompressedCipher": 44,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 9
+        },
+        "plain": 7,
+        "cipher": 48,
+        "uncompressedCipher": 39,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 12
+        },
+        "plain": 14,
+        "cipher": 55,
+        "uncompressedCipher": 46,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 15
+        },
+        "plain": 16,
+        "cipher": 57,
+        "uncompressedCipher": 48,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "data",
+          "id": 16
+        },
+        "plain": 18,
+        "cipher": 59,
+        "uncompressedCipher": 50,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "tree",
+          "id": 10
+        },
+        "plain": 433,
+        "cipher": 336,
+        "uncompressedCipher": 465,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "tree",
+          "id": 11
+        },
+        "plain": 872,
+        "cipher": 437,
+        "uncompressedCipher": 904,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "tree",
+          "id": 13
+        },
+        "plain": 434,
+        "cipher": 336,
+        "uncompressedCipher": 466,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "tree",
+          "id": 14
+        },
+        "plain": 4206,
+        "cipher": 864,
+        "uncompressedCipher": 4238,
+        "compressed": true
+      },
+      {
+        "handle": {
+          "kind": "tree",
+          "id": 17
+        },
+        "plain": 4187,
+        "cipher": 833,
+        "uncompressedCipher": 4219,
+        "compressed": true
+      }
+    ],
+    "snapshots": [
+      {
+        "id": 1,
+        "root": 17,
+        "nodes": [
+          {
+            "path": [
+              "changed.txt"
+            ],
+            "location": [
+              "changed.txt",
+              "changed.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              8
+            ],
+            "metadataBasis": 1,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "copy-a.txt"
+            ],
+            "location": [
+              "copy-a.txt",
+              "copy-a.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 2,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "copy-b.txt"
+            ],
+            "location": [
+              "copy-b.txt",
+              "copy-b.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 3,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "deleted.txt"
+            ],
+            "location": [
+              "deleted.txt",
+              "deleted.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              15
+            ],
+            "metadataBasis": 4,
+            "subtree": null,
+            "size": 16
+          },
+          {
+            "path": [
+              "empty.txt"
+            ],
+            "location": [
+              "empty.txt",
+              "empty.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [],
+            "metadataBasis": 5,
+            "subtree": null,
+            "size": 0
+          },
+          {
+            "path": [
+              "group"
+            ],
+            "location": [
+              "group",
+              "group"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 6,
+            "subtree": 11,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "deeper"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 7,
+            "subtree": 10,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper",
+              "note.txt"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "note.txt",
+              "note.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              9
+            ],
+            "metadataBasis": 8,
+            "subtree": null,
+            "size": 7
+          },
+          {
+            "path": [
+              "group",
+              "leaf.txt"
+            ],
+            "location": [
+              "group",
+              "leaf.txt",
+              "leaf.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              5
+            ],
+            "metadataBasis": 9,
+            "subtree": null,
+            "size": 5
+          },
+          {
+            "path": [
+              "keep.txt"
+            ],
+            "location": [
+              "keep.txt",
+              "keep.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              3
+            ],
+            "metadataBasis": 10,
+            "subtree": null,
+            "size": 10
+          },
+          {
+            "path": [
+              "mode.txt"
+            ],
+            "location": [
+              "mode.txt",
+              "mode.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              6
+            ],
+            "metadataBasis": 11,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "moved-old.txt"
+            ],
+            "location": [
+              "moved-old.txt",
+              "moved-old.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              12
+            ],
+            "metadataBasis": 12,
+            "subtree": null,
+            "size": 14
+          },
+          {
+            "path": [
+              "type-change"
+            ],
+            "location": [
+              "type-change",
+              "type-change"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              7
+            ],
+            "metadataBasis": 13,
+            "subtree": null,
+            "size": 12
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "root": 14,
+        "nodes": [
+          {
+            "path": [
+              "added.txt"
+            ],
+            "location": [
+              "added.txt",
+              "added.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              4
+            ],
+            "metadataBasis": 14,
+            "subtree": null,
+            "size": 14
+          },
+          {
+            "path": [
+              "changed.txt"
+            ],
+            "location": [
+              "changed.txt",
+              "changed.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              2
+            ],
+            "metadataBasis": 15,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "copy-a.txt"
+            ],
+            "location": [
+              "copy-a.txt",
+              "copy-a.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 2,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "copy-b.txt"
+            ],
+            "location": [
+              "copy-b.txt",
+              "copy-b.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 3,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "empty.txt"
+            ],
+            "location": [
+              "empty.txt",
+              "empty.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [],
+            "metadataBasis": 5,
+            "subtree": null,
+            "size": 0
+          },
+          {
+            "path": [
+              "group"
+            ],
+            "location": [
+              "group",
+              "group"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 6,
+            "subtree": 11,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "deeper"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 7,
+            "subtree": 10,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper",
+              "note.txt"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "note.txt",
+              "note.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              9
+            ],
+            "metadataBasis": 8,
+            "subtree": null,
+            "size": 7
+          },
+          {
+            "path": [
+              "group",
+              "leaf.txt"
+            ],
+            "location": [
+              "group",
+              "leaf.txt",
+              "leaf.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              5
+            ],
+            "metadataBasis": 9,
+            "subtree": null,
+            "size": 5
+          },
+          {
+            "path": [
+              "keep.txt"
+            ],
+            "location": [
+              "keep.txt",
+              "keep.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              3
+            ],
+            "metadataBasis": 10,
+            "subtree": null,
+            "size": 10
+          },
+          {
+            "path": [
+              "mode.txt"
+            ],
+            "location": [
+              "mode.txt",
+              "mode.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              6
+            ],
+            "metadataBasis": 16,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "moved-new.txt"
+            ],
+            "location": [
+              "moved-new.txt",
+              "moved-new.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              12
+            ],
+            "metadataBasis": 17,
+            "subtree": null,
+            "size": 14
+          },
+          {
+            "path": [
+              "type-change"
+            ],
+            "location": [
+              "type-change",
+              "type-change"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 18,
+            "subtree": 13,
+            "size": 0
+          },
+          {
+            "path": [
+              "type-change",
+              "child.txt"
+            ],
+            "location": [
+              "type-change",
+              "child.txt",
+              "child.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              1
+            ],
+            "metadataBasis": 19,
+            "subtree": null,
+            "size": 10
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "root": 14,
+        "nodes": [
+          {
+            "path": [
+              "added.txt"
+            ],
+            "location": [
+              "added.txt",
+              "added.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              4
+            ],
+            "metadataBasis": 14,
+            "subtree": null,
+            "size": 14
+          },
+          {
+            "path": [
+              "changed.txt"
+            ],
+            "location": [
+              "changed.txt",
+              "changed.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              2
+            ],
+            "metadataBasis": 15,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "copy-a.txt"
+            ],
+            "location": [
+              "copy-a.txt",
+              "copy-a.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 2,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "copy-b.txt"
+            ],
+            "location": [
+              "copy-b.txt",
+              "copy-b.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              16
+            ],
+            "metadataBasis": 3,
+            "subtree": null,
+            "size": 18
+          },
+          {
+            "path": [
+              "empty.txt"
+            ],
+            "location": [
+              "empty.txt",
+              "empty.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [],
+            "metadataBasis": 5,
+            "subtree": null,
+            "size": 0
+          },
+          {
+            "path": [
+              "group"
+            ],
+            "location": [
+              "group",
+              "group"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 6,
+            "subtree": 11,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "deeper"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 7,
+            "subtree": 10,
+            "size": 0
+          },
+          {
+            "path": [
+              "group",
+              "deeper",
+              "note.txt"
+            ],
+            "location": [
+              "group",
+              "deeper",
+              "note.txt",
+              "note.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              9
+            ],
+            "metadataBasis": 8,
+            "subtree": null,
+            "size": 7
+          },
+          {
+            "path": [
+              "group",
+              "leaf.txt"
+            ],
+            "location": [
+              "group",
+              "leaf.txt",
+              "leaf.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              5
+            ],
+            "metadataBasis": 9,
+            "subtree": null,
+            "size": 5
+          },
+          {
+            "path": [
+              "keep.txt"
+            ],
+            "location": [
+              "keep.txt",
+              "keep.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              3
+            ],
+            "metadataBasis": 10,
+            "subtree": null,
+            "size": 10
+          },
+          {
+            "path": [
+              "mode.txt"
+            ],
+            "location": [
+              "mode.txt",
+              "mode.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              6
+            ],
+            "metadataBasis": 16,
+            "subtree": null,
+            "size": 12
+          },
+          {
+            "path": [
+              "moved-new.txt"
+            ],
+            "location": [
+              "moved-new.txt",
+              "moved-new.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              12
+            ],
+            "metadataBasis": 17,
+            "subtree": null,
+            "size": 14
+          },
+          {
+            "path": [
+              "type-change"
+            ],
+            "location": [
+              "type-change",
+              "type-change"
+            ],
+            "kind": "dir",
+            "contentPresent": false,
+            "content": [],
+            "metadataBasis": 18,
+            "subtree": 13,
+            "size": 0
+          },
+          {
+            "path": [
+              "type-change",
+              "child.txt"
+            ],
+            "location": [
+              "type-change",
+              "child.txt",
+              "child.txt"
+            ],
+            "kind": "file",
+            "contentPresent": true,
+            "content": [
+              1
+            ],
+            "metadataBasis": 19,
+            "subtree": null,
+            "size": 10
+          }
+        ]
+      }
+    ]
+  },
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "catalog-kind",
+    "duplicate-catalog",
+    "weight",
+    "node-kind",
+    "saved-path",
+    "location",
+    "content-presence",
+    "duplicate-snapshot",
+    "snapshot-selection",
+    "count-mode",
+    "read-scope",
+    "field-type",
+    "missing-field"
+  ],
+  "normalizedPremiseMutations": [
+    "weight-basis",
+    "snapshot-selection",
+    "counter-policy",
+    "read-availability"
+  ],
+  "observationMutations": [
+    "changed-counter",
+    "event-policy",
+    "count-basis",
+    "query-exit",
+    "query-protocol",
+    "query-coverage"
+  ],
+  "unavailableWeightsReturnUnknown": true,
+  "driverSha256": "042b221977730a862074b63b1769577864b52755db20c203ba7e18c833ae206d",
+  "basisSha256": {
+    "applications/evidence/restic-comparison-20261125T031620264871Z/backup-A.stderr": "dad75dfa5f3226d97e163ee89bbc3afceb88b633a85735246cd73d8d1e7a2c6a",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/backup-A.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/collector-failure.json": "3a57eb1c2f5b62bb1adae2efb28961c74228ed216fda03ea7b146cfeb0c87649",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/commands.json": "334c7384e9a2298ce785419a4899d7902bb299c97b40a65dd9201cf4c6933323",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/init.stdout": "e0136f94fe4c849a7607b3b1a4b28230c6c2c09ea7e7d086a8f40db88a63d3b5",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/owned-processes.json": "15a0c3fc780894aed7577216c7660db5b1524721eb798dcaaabaa649986107f6",
+    "applications/evidence/restic-comparison-20261125T031620264871Z/probe.py": "4bd9361c9e71df184190f3eb18a71bb6e83a3abdfddf00e27ff1adcf970c8b45",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-A.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-A.stdout": "b1c1789d0778afc0295578323a58bcf226c6adc490ec5e15c5db49f7f75fa65a",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-B.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-B.stdout": "79cb10f66b01ce8d6ee285c02336f9ff4eed7e5dfdb740c8164f7bf78ef0dfd8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-C.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/backup-C.stdout": "c3af83d0d2c0b08d08a52c35c6bc967a8993f38720550a94e4569450d80bc9f8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/collector-stop.json": "fe8bf2eba07ef944464b988963c0c537d2dc9ec07754f76714bf54fbade3f491",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/commands.json": "6db04b487a42292b88800a1e04720960a2f6971b783cb6117ec48691a08368a2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/completion-commands.json": "d6c47b70e7052d9fb25ad73f8c710ce40c804b4146585bc739e8d74724f477a7",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/completion-helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/completion-owned-processes.json": "78628f85a4b89d13ca5af89920de7f8fb44e3ccd1973064066d0a09367a3a546",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/completion-receipt.json": "b05548573712d798e6d1c4ed95e9c1564cc7976eaab642c7fed61dee5193a639",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/completion.py": "b5446edf4a66eec494202ae3a01984937bc10cdedac626fb02a30b840a85dd23",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-dump.stderr": "397bd6163bbd88a6465555a5ed14511ff026813d48e984f7e601504629bf48f3",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-dump.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-find.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-find.stdout": "3c153646e8bf3fafe86d780e01c30c875afd0b642249114ff4b7301e1e2442cc",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-ls.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-ls.stdout": "082ce263f82ee2fc5ed0d0bce217a4fdbd5e6745ad33fc510a1a8211e9a5bd75",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-restored-dump.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-restored-dump.stdout": "1c3ef9a7c817b4642bcb3cb1456fbce92a6f992df2e1d6ad9d8a2dfb4fdf42f6",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-restored-find.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-restored-find.stdout": "3c153646e8bf3fafe86d780e01c30c875afd0b642249114ff4b7301e1e2442cc",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-stats.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/data-stats.stdout": "ada09ba761b82474c6300ae627e2782e50884611bddebf2ef72c0e1e1fe4be82",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-default.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-default.stdout": "cea9bccb87a7a972d58e3ccba1454e83253f74c2c5b03fc3477349b1dee45f2b",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-equal-tree.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-equal-tree.stdout": "be02890b7a51bcc2a8a18566ccc31c77001c0202393d697dd785601033c96a87",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-metadata.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-metadata.stdout": "bfca9fb3710d62dc97d53e7abd822f01e77549593a8575389cb4c1babc4a9cd5",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-reverse.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/diff-reverse.stdout": "7966f60dcb90b691354b8543be373a8e5661e9d13193197cc2821a7719fe3427",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-case.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-case.stdout": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-data-id.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-data-id.stdout": "51cc7c0fa06c3e7bed1afcfa1f085207569b6b856490a22d04292e47af3f0d2b",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-insensitive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-insensitive.stdout": "a365f1736f0d587f344593a0ed328a881591435ca009a73f3de31153bc5028d4",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-keep.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-keep.stdout": "a365f1736f0d587f344593a0ed328a881591435ca009a73f3de31153bc5028d4",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-missing.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-missing.stdout": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-moved.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-moved.stdout": "aa0f00790135469f6e9806a4f7f07c071d3dd91d3dca4e7911cdc50004a36167",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-mtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-mtime.stdout": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-reverse.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-reverse.stdout": "7505dbfa0a72fb49fbf7e9ce149f7c38a61957ce86f68c27d0de239820990b5b",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-selected.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-selected.stdout": "e1d8d988a5e4ebfe6c5195c71473a5051e0c9145b1f0cb79b536246c3456351e",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-tree-id.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/find-tree-id.stdout": "c05cf8140a107268bf33f92f1246745a5b9b85f258c6b170f9b3597a054a447d",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/index-0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/index-0.stdout": "fa5cd60f2350b31ecec6ddc0bd2cb945092ecd175529cc973c5ed30c481d028d",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/index-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/index-1.stdout": "8c14755b2964a857ac3edb11d05da576859d4cfe796d4a76d70bdcd60f9a96a8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/init.stdout": "19ccee370fc9a39a233ce6b058ce6fa555c33d47037193bd697d54bca04644f1",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/interventions.json": "705c2b562a5d613a9bc329cfd96227a2f7f4cd5d92c7c2edf9490fd67223ca0a",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-A.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-A.stdout": "d6a9dd3f773e6866dd171f173db23acf4df8be0575cca5989b7ae584f43a3b2f",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-B.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-B.stdout": "082ce263f82ee2fc5ed0d0bce217a4fdbd5e6745ad33fc510a1a8211e9a5bd75",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-C.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-C.stdout": "90f4ee3d2adb2dc34a8a92bbac6c5b98b27c32aa13e25931e57f61df8693dce8",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-group.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-group.stdout": "745788b5f78ce073d5ccad0093c077500e67e2b4e845b83081e7a6c512a68e0f",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-missing.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-missing.stdout": "012b1952dd1d482f9994785a8f1893552e7566bd23e6abf9266569767c29bee2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-recursive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-recursive.stdout": "03ac8409b00022893f9d101938af9d35ab6b69f856f97e19335c91ddcbcb21aa",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-relative-filter.stderr": "42e6595b41d76f0fef3b09642f8265a107013e2ae4f9289c1644d0cc7a99929f",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-relative-filter.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-sorted.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/ls-sorted.stdout": "623a702d641fd795610bae546ee64fd12976e2a29b0745eb1f9080113e131c43",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/owned-processes.json": "5e83a047747041d6ee3c596a0ccac9746091d3668e57aca75ecf61c107c1f8d1",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-0.stdout": "40eda80edfc38b36bdcdc408aa6ff2cc40b708e46ece9dfd2b2801a05a18a5fc",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-1.stdout": "d8d396b8fc271f3e3be8e4671d13f3b30985e8abe5bde60962c66dafdee0c1a0",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-10.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-10.stdout": "33f5686456dbc4a0d243822acfd0fb79bda06e68dd03ef6f53ec295f4b6b4237",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-2.stdout": "d8d396b8fc271f3e3be8e4671d13f3b30985e8abe5bde60962c66dafdee0c1a0",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-3.stdout": "d1d43267242d928ee98c0406d0bb0c41b235b089837e2c41ebd868ddc3e21955",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-4.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-4.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-5.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-5.stdout": "483e70361967a64d9adc37249341a53f7a1bb88d24204e77bdf621b1927aa451",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-6.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-6.stdout": "26d0bac9f0c7a35b2f3322a0f4ad4517265f56b2c0f4b2ed7cb5cbd30c5868e2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-7.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-7.stdout": "1cd263f1102656dd6b6cf1d626d1a96f9eba0406af3cb2a52560d473d4801052",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-8.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-8.stdout": "32a7ba62d5a170c4159872c3a5e2445eb1dbe8f048a9ac4e9462ace3b4d5aa37",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-9.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-A-9.stdout": "81388aa978e1806e34b4ca3d96cd3f499253c1f11d034dc1d8fc21fa0f5df7ef",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-0.stdout": "22ccbc3d324e0f45cddbb0fba720745cfa1585c1f0c8b50af73947cbd8743ff1",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-1.stdout": "1c3ef9a7c817b4642bcb3cb1456fbce92a6f992df2e1d6ad9d8a2dfb4fdf42f6",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-10.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-10.stdout": "1c36491ee901de33662e643cd1a78eb8132dbef1b04ebd62658a8942f47f9d72",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-2.stdout": "d8d396b8fc271f3e3be8e4671d13f3b30985e8abe5bde60962c66dafdee0c1a0",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-3.stdout": "d8d396b8fc271f3e3be8e4671d13f3b30985e8abe5bde60962c66dafdee0c1a0",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-4.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-4.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-5.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-5.stdout": "483e70361967a64d9adc37249341a53f7a1bb88d24204e77bdf621b1927aa451",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-6.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-6.stdout": "26d0bac9f0c7a35b2f3322a0f4ad4517265f56b2c0f4b2ed7cb5cbd30c5868e2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-7.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-7.stdout": "1cd263f1102656dd6b6cf1d626d1a96f9eba0406af3cb2a52560d473d4801052",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-8.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-8.stdout": "32a7ba62d5a170c4159872c3a5e2445eb1dbe8f048a9ac4e9462ace3b4d5aa37",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-9.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/payload-B-9.stdout": "81388aa978e1806e34b4ca3d96cd3f499253c1f11d034dc1d8fc21fa0f5df7ef",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/probe.py": "187c93493245996c0f353a903ab854fb2dcc904a27c60f55a9459f4ac6bd3e6d",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/receipt-privacy-readback.json": "a97f021c2c26d4b91f499e2e6e4e4d8f7b0cc43018e0cd9401ffd8c68854ba11",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-blobs-per-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-blobs-per-file.stdout": "57cb150d813a7970059f8230653571f1d69e1352a65796122cc8ffab412ee7ee",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-files-by-contents.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-files-by-contents.stdout": "a99695bd91d82aba0d59c2ae5673b0d9e250a435222f6b5d3d5d85c3d26da021",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-raw-data.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-raw-data.stdout": "3b8e085210dfbf57525320d5f730f71906f9bac66cbbe8a35ef981e38c512d3e",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-restore-size.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-A-restore-size.stdout": "2d53420dbc936c61b505353d79451d935f4df47efd4f2c51796747b90bd2b626",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-blobs-per-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-blobs-per-file.stdout": "8c8650698a7d25313234b8a3dd9f18c86e05fabe18c64d31af537dc40880e0df",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-files-by-contents.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-files-by-contents.stdout": "5a92a80f8c6b0236b3b95a0b2c512133e16c2f2ae3c5ca19440bc87f92d6e055",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-raw-data.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-raw-data.stdout": "fe8a56d6c686376e581d2bb46b78de238bd89c293528a8262b2d4da1e0c17120",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-restore-size.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-AB-restore-size.stdout": "e2cf9d64aeca7f94907b8961e72283182db4824a3202eaa94fd64a0179a2fc74",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-blobs-per-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-blobs-per-file.stdout": "6152c2e2fb92ede223b828cbe1431bdb40f0946d38d7240c08823c6b918623cc",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-files-by-contents.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-files-by-contents.stdout": "87a7f4e41e7702677aad1ea559ed2cb63e7ac87f3cf9b63eab52c2be98876c5d",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-raw-data.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-raw-data.stdout": "ada09ba761b82474c6300ae627e2782e50884611bddebf2ef72c0e1e1fe4be82",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-restore-size.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-B-restore-size.stdout": "b47b281fd479a17938f8ff4915ef07a4b20fd0313342ddfa61bbf54d82ca4700",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-blobs-per-file.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-blobs-per-file.stdout": "af9e14309ed228a67a96e74f4bd5cdb7e901551e7851191e8a80d083a3e90e86",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-files-by-contents.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-files-by-contents.stdout": "01f11453348f523cc00f66e87cc3e24146efb3ccb8da0c3a27c57f76b6f9b555",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-raw-data.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-raw-data.stdout": "5e020f7c25a661896d2044efbe48e336fcba4693f4e4e3aa1bc969e6806bf27b",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-restore-size.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-BC-restore-size.stdout": "ed4ddef38c9a6e14ee4126597df096d75b5b71b86f4da83a20581d55ed106d13",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-bad-mode.stderr": "a953aca9e8de66be5d0654f743fb1d9e839959c625dc749da81cf8e2fc019f64",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/stats-bad-mode.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-0.stderr": "0afe40fb767d93cb7c8dcf83daa925b0692c204a9d74c3c6e025885dd4b22838",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-0.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-dump.stderr": "5ee9063a70c24b770afe515b12146ea71d05fdc96745de1284507fe3da731c23",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-dump.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-find.stderr": "f1ac900c6e1caebc5c0db17e9b8266f730c3f740b74a2b87fb1236d25f47aa94",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-find.stdout": "9b6fe44a4ef9df82f8ca68496a4dae1c867729980e9c12eb1d19bce704044455",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-ls.stderr": "b0e613e6567b76540a46df495ec60ff8c71a930cfec41a0df47f6152d8dc227d",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-ls.stdout": "012b1952dd1d482f9994785a8f1893552e7566bd23e6abf9266569767c29bee2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-restored-dump.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-restored-dump.stdout": "1c3ef9a7c817b4642bcb3cb1456fbce92a6f992df2e1d6ad9d8a2dfb4fdf42f6",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-restored-find.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-restored-find.stdout": "3c153646e8bf3fafe86d780e01c30c875afd0b642249114ff4b7301e1e2442cc",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-stats.stderr": "ffa88e86801f2f1af7259fd31313dc792b6a801471a8ad78bf9795163703f81c",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/tree-stats.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-0.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-0.stdout": "2131f1ae525f40c7a41e8d261e8bb3bfea78969c859ca79c91bd2235a0d01c33",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-1.stdout": "62394d362a998ed5d377821ac2be8295a5ee7130df57459c95b455bf556dc989",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-2.stdout": "bf481ea35ca5963c9f47f2489768ed2ad37625d8e76e8bcc40b42f93c0fc70c2",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-3.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-3.stdout": "005823169f3ca4af02e40bfc7a69d59d9327453a37cb0bfca3216d755d6511c1",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-4.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-comparison-20261125T031756971775Z/treeblob-4.stdout": "8fd89034ae70c751608ed6e9efaf4b862d6965cb08f332b59f603622e8ca27b7",
+    "applications/restic/Comparison.bend": "acb203b80ae4faf947fb1827a8957693f8793d1b5a1583fcba023892f68e3020",
+    "applications/restic/Comparison.lean": "6e609f583d4b3937c7eca5191b3a5305dbaa0c58f9533da5ab8de0eab9f1230a",
+    "applications/restic/ComparisonCase.lean": "e2ce30cfc3e583dcb3b5e66e6f84ce875d44a11f65c0fe25fc6723996ceec511",
+    "applications/restic/comparison_complete.py": "c9d2d915f6ae07e0f508620cebe5588e59dba5721c616ce15ddc53bd2c557c59",
+    "applications/restic/comparison_conformance.py": "7e2465c2e7389aef1d900ad3078deb6eba8fb30f961cc6be6d4fcb1e20b69e94",
+    "applications/restic/comparison_observations.py": "e5e3d60ce9aa98f29bcf417113f036d657c5cfaaaf1bea52b161f3715014a9f8",
+    "applications/restic/comparison_probe.py": "43a7a215e1d3ead0d295d4a231606830a59aa8142a678f7aed92ce57f8ac9c11",
+    "applications/sources/restic-comparison-selections.json": "ecd19c911a715bd7190a6b1a44cfeb03bd8c1a6deaf5da03336bf259bb334751"
+  },
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "Pure replay of retained source/native observations;no native collection,backup,restore,repair,or application rerun.",
+    "Two typed models compare four size modes,diff events/counters,and root-load read outcomes after argument admission.",
+    "Bend receives finite saved component labels and external path-order/metadata-equality witnesses;Lean orders the saved path union itself. General Go codecs,glob/case/time parsing and cryptography remain outside both.",
+    "Listing/search selection and all exported metadata fields are independently checked by the Python observer,not formally modeled selection policies in this band.",
+    "Native missing-tree find output is intentionally invalid;the observer does not strip diagnostics and certify the trailing array.",
+    "Full-closure and path-reference policies are proposed;current native behavior remains unchanged. Hardlinks,special files,nested faults,remote and other host profiles remain unqualified.",
+    "Integer compression weights are modeled;reported floating ratios/percentages use separate numeric comparisons."
+  ]
+}

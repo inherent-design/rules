@@ -54,6 +54,8 @@ The [Prism accounts band](prism/ACCOUNTS.md) distinguishes actor identity, profi
 
 The [restic input-policy band](restic/INPUTS.md) compares explicit roots, ordered exclusions, parent traversal, and normal/verbatim/raw file lists. Twenty local backup cases preserve the distinction between refusal, filtered content, and a partial snapshot saved with status 3. Formal projections use finite admission/match witnesses; general parsing and filesystem coverage remain open.
 
+The [restic comparison/search band](restic/INSPECTION.md) distinguishes diff events, complete reference changes, query completion, and size-counting policies. Both models compare 32 native outcomes and five separate proposal cases. Listing/search field projections and restored byte-copy controls have independent checks; general query parsing, nested faults, and physical reclamation remain outside this band.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
