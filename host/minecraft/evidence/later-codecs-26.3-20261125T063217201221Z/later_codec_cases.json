@@ -1,0 +1,659 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "scope": "Selected private decoder methods and format codecs;not full model/pack parsing or rendering.",
+  "cases": [
+    {
+      "id": "rotation-absent",
+      "action": "rotation",
+      "input": {}
+    },
+    {
+      "id": "euler-x",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "euler-xyz",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20,
+          "y": 30,
+          "z": 40
+        }
+      }
+    },
+    {
+      "id": "euler-zero",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 0
+        }
+      }
+    },
+    {
+      "id": "rotation-value-missing",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "id": "scalar-y-zero",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "angle": 0
+        }
+      }
+    },
+    {
+      "id": "scalar-y-123",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "angle": 123
+        }
+      }
+    },
+    {
+      "id": "mixed-scalar-xyz",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "angle": 0,
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "invalid-scalar-with-xyz",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "invalid",
+          "angle": 0,
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "scalar-angle-missing",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "scalar-axis-missing",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "angle": 0,
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "origin-missing",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "euler-rescale",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20,
+          "rescale": true
+        }
+      }
+    },
+    {
+      "id": "shade-absent",
+      "action": "shade",
+      "input": {}
+    },
+    {
+      "id": "legacy-shade-false",
+      "action": "shade",
+      "input": {
+        "shade": false
+      }
+    },
+    {
+      "id": "shade-up",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "up"
+      }
+    },
+    {
+      "id": "shade-uppercase",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "UP"
+      }
+    },
+    {
+      "id": "shade-invalid",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "diagonal"
+      }
+    },
+    {
+      "id": "endpoint-bottom",
+      "action": "format-bottom",
+      "input": [
+        97
+      ]
+    },
+    {
+      "id": "endpoint-top",
+      "action": "format-top",
+      "input": [
+        97
+      ]
+    },
+    {
+      "id": "format-scalar",
+      "action": "format-bottom",
+      "input": 97
+    },
+    {
+      "id": "format-pair",
+      "action": "format-bottom",
+      "input": [
+        97,
+        1
+      ]
+    },
+    {
+      "id": "extra-format-components",
+      "action": "format-bottom",
+      "input": [
+        97,
+        1,
+        7
+      ]
+    },
+    {
+      "id": "format-empty",
+      "action": "format-bottom",
+      "input": []
+    },
+    {
+      "id": "format-negative",
+      "action": "format-bottom",
+      "input": [
+        -1
+      ]
+    },
+    {
+      "id": "format-negative-minor",
+      "action": "format-bottom",
+      "input": [
+        97,
+        -1
+      ]
+    },
+    {
+      "id": "format-fractional",
+      "action": "format-bottom",
+      "input": [
+        97.5,
+        1.9
+      ]
+    },
+    {
+      "id": "format-list-limit",
+      "action": "format-bottom",
+      "input": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "resource-legacy64",
+      "action": "pack-resource",
+      "input": {
+        "pack_format": 64
+      }
+    },
+    {
+      "id": "resource-threshold",
+      "action": "pack-resource",
+      "input": {
+        "pack_format": 65
+      }
+    },
+    {
+      "id": "data-legacy81",
+      "action": "pack-data",
+      "input": {
+        "pack_format": 81
+      }
+    },
+    {
+      "id": "data-new82",
+      "action": "pack-data",
+      "input": {
+        "pack_format": 82
+      }
+    },
+    {
+      "id": "format-max-missing",
+      "action": "pack-resource",
+      "input": {
+        "min_format": 97
+      }
+    },
+    {
+      "id": "format-range-major",
+      "action": "pack-resource",
+      "input": {
+        "min_format": 97,
+        "max_format": 97
+      }
+    },
+    {
+      "id": "format-range-pair",
+      "action": "pack-resource",
+      "input": {
+        "min_format": [
+          97,
+          1
+        ],
+        "max_format": [
+          97,
+          1
+        ]
+      }
+    },
+    {
+      "id": "deprecated-supported-new",
+      "action": "pack-resource",
+      "input": {
+        "min_format": 97,
+        "max_format": 97,
+        "supported_formats": [
+          97,
+          97
+        ]
+      }
+    },
+    {
+      "id": "mixed-legacy-range",
+      "action": "pack-resource",
+      "input": {
+        "min_format": 64,
+        "max_format": 97,
+        "supported_formats": [
+          64,
+          64
+        ],
+        "pack_format": 64
+      }
+    },
+    {
+      "id": "mixed-legacy-mismatch",
+      "action": "pack-resource",
+      "input": {
+        "min_format": 64,
+        "max_format": 97,
+        "supported_formats": [
+          63,
+          64
+        ],
+        "pack_format": 64
+      }
+    },
+    {
+      "id": "minor-range-reversed",
+      "action": "pack-resource",
+      "input": {
+        "min_format": [
+          97,
+          2
+        ],
+        "max_format": [
+          97,
+          1
+        ]
+      }
+    },
+    {
+      "id": "format-info-missing",
+      "action": "pack-resource",
+      "input": {}
+    }
+  ]
+}

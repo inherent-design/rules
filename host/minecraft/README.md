@@ -25,7 +25,7 @@ The [registry discovery map](REGISTRIES.md) expands item nodes, properties, tint
 
 The [Polytone breadth map](POLYTONE.md) separately locates all 28 built-in content managers, their definition roots, shared policies, and static consumer references. It is source discovery; semantic laws, original-method comparisons, live consumers and provider coexistence remain incomplete.
 
-The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. Its planned comparisons are explicitly unexecuted; it does not extend earlier native qualification to 26.3 or 1.21.11.
+The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. The [later decoding band](LATER-DECODING.md) now compares 40 original 26.3 method/codec inputs with Lean and Bend. Actual provider hooks, full pack/model decoding, rendering and 1.21.11 remain independently unqualified.
 
 The study covers pack discovery, metadata and selection; identifiers, priority and resource stacks; decoding, references, validation and failure; models and item presentation; textures, atlases and animation; fonts and text; sounds and particles; equipment and entity presentation; GUI and accessibility resources; shader-facing resources; server-offered packs; reload preparation, publication and retirement; and the game state those definitions consume. Unrelated Minecraft systems remain explicit boundary nodes until a resource consumer needs their rules.
 

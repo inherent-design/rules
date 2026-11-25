@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "scope": "Selected private decoder methods and format codecs;not full model/pack parsing or rendering.",
+  "cases": [
+    {
+      "id": "scalar-y-123",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "angle": 123
+        }
+      }
+    },
+    {
+      "id": "euler-rescale",
+      "action": "rotation",
+      "input": {
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20,
+          "rescale": true
+        }
+      }
+    },
+    {
+      "id": "shade-up",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "up"
+      }
+    },
+    {
+      "id": "shade-uppercase",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "UP"
+      }
+    },
+    {
+      "id": "shade-invalid",
+      "action": "shade",
+      "input": {
+        "shade_direction_override": "diagonal"
+      }
+    }
+  ]
+}

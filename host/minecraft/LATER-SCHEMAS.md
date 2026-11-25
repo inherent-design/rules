@@ -1,6 +1,6 @@
 # Later Java definitions and consumers
 
-This band starts from the selected original Java 26.3 client and a private inspection slice of 431 class entries, producing 236 Java views. It adds source discovery to the earlier 1.21.1/1.21.5 parser observations. No new game method, renderer, loader or provider is executed by this band. Decompiled views are inspection aids, not verified inverses of compilation.
+This source band starts from the selected original Java 26.3 client and a private inspection slice of 431 class entries, producing 236 Java views. It adds source discovery to the earlier 1.21.1/1.21.5 parser observations. Its separate [later decoding band](LATER-DECODING.md) now executes selected original 26.3 methods and codecs. Renderer, loader and provider execution remain unqualified. Decompiled views are inspection aids, not verified inverses of compilation.
 
 [later-registry-catalog.json](later-registry-catalog.json) enumerates 71 literal registrations in eight selected categories, with 78 associated source identities. One associated font-provider view remains unavailable. Registration, bootstrap reachability, per-type schema, actual consumer behavior and rendered output are separate obligations.
 
@@ -21,7 +21,7 @@ The shared reader now recognizes both `ResourceLocation.withDefaultNamespace` an
 
 ## Grammar and execution are separate
 
-[later-source-findings.json](later-source-findings.json) binds six inspected contracts to original class-member and private-view digests. It also retains six explicitly **unexecuted** comparison predictions. They must not count as native observations or successful qualification.
+[later-source-findings.json](later-source-findings.json) binds six inspected contracts to original class-member and private-view digests. It retains the six original source predictions and adds separately attributed follow-up evidence. The vanilla half of those selected comparisons now has original-method observations; the Polytone/Compat hook comparisons remain unexecuted. The retained initial prediction status describes its original research phase, not current qualification.
 
 The cuboid rotation decoder chooses the scalar branch when either `axis` or `angle` is present, requiring both. Otherwise it requires at least one XYZ component and defaults missing components to zero. Polytone's selected injection chooses its XYZ branch whenever an XYZ member is present. A mixed scalar/XYZ input therefore distinguishes the two selected source paths. Native transformed-hook comparison remains necessary.
 
@@ -35,6 +35,6 @@ The inspection also found a useful limit on structural inference. `ModelManager.
 
 ## Next comparisons
 
-Run bounded original-method comparisons for mixed rotation representations, Euler rescale, shade handling and endpoint/legacy pack-format rules. Keep decoding distinct from baking, resource discovery, reload publication and retirement. Extend the selected source slice for the missing font provider and actual block-presentation factory. Then compare 1.21.11 through its own original artifact/mappings rather than treating 26.3 as its contract.
+Extend the bounded original-method comparisons to actual provider hooks, full model/pack admission and the remaining grammars. Keep decoding distinct from baking, resource discovery, reload publication and retirement. Extend the selected source slice for the missing font provider and actual block-presentation factory. Then compare 1.21.11 through its own original artifact/mappings rather than treating 26.3 as its contract.
 
 The native collectors must use explicit JDK selection, private inputs, small heaps, bounded concurrency and confirmed process-tree retirement. No Gradle daemon is needed for these inspection procedures. Ordinary CI continues to compile the formal models and replay retained facts; it does not acquire these private inputs or run applications.

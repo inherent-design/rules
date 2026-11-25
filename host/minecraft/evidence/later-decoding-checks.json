@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "testedSourceTree": "33de45b6bf0a646dd7f9da6dcd8f83cdd2b9bd91",
+  "snapshot": "Fresh Git archive of the exact staged tree, then exact tracked-path import;5541 tracked files,including deliberately tracked ignored fixture paths.",
+  "formal": {
+    "command": "LEAN=<pinned Lean4.34.0> BEND=<pinned Bend2.0.40> python3 scripts/check-rules.py",
+    "exitCode": 0,
+    "leanModules": 155,
+    "bendFiles": 68,
+    "stdoutSha256": "a9ce712a375e6b0260ccdf01901861d66b2455c056f252ff4092d44a923098c2",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "qualification": "Formal files were unchanged by the later pure replay/receipt update;all formal files belong to the tested source tree."
+  },
+  "retainedReplay": {
+    "command": "LEAN=<pinned Lean4.34.0> BEND=<pinned Bend2.0.40> python3 host/minecraft/later_codec_conformance.py",
+    "exitCode": 0,
+    "stdoutSha256": "b2a3ff5763c5967d44b4da7c052e3a156c7db5b032e09a9d27f9d76d07ad7eb2",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reportSha256": "a6af0a35c22921974ea7da13b44c75a4485870839cf6ef9e6465a1bf7df7f60e"
+  },
+  "otherChecks": [
+    "Python AST and JSON parsing for staged inputs",
+    "Authored Markdown local links",
+    "Exact staged blob/working-byte comparison:62files,361328logicalbytes before final source-pin adapter update",
+    "git diff --cached --check",
+    "python3 scripts/check-meta.py in fresh snapshot",
+    "mise exec -- actionlint in fresh snapshot",
+    "Gitleaks8.30.1 exact staged public bytes and two held commits:no findings,no new suppressions"
+  ],
+  "ownerLocalInputAudit": {
+    "status": "passed",
+    "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+    "originalClassMembers": 10,
+    "libraries": 25,
+    "libraryBytes": 36548643,
+    "tools": 2,
+    "frozenProducerFiles": 4,
+    "scope": "Read-only identity check;no native rerun or program startup"
+  },
+  "limits": [
+    "No native/application/JVM rerun for the formal comparison.",
+    "Owner-local original input audit does not make private client/library payloads public or establish other-host execution.",
+    "This receipt is added after the tested source tree;no formal source or observed bytes changed."
+  ]
+}

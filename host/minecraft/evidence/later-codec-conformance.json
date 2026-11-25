@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "canonicalCapture": "evidence/later-codecs-26.3-20261125T064027971144Z",
+  "canonicalInputs": 40,
+  "leanDecisions": 40,
+  "bendDecisions": 40,
+  "decoderRefusals": 9,
+  "adapterRefusals": 6,
+  "changedObservationControls": 9,
+  "projectedInputsSha256": "3975a74f79cf0ff6a918c6417a40d883c3438bfe60a72f7ac6beb10ad2c3ed76",
+  "retainedPrefixChecks": [
+    {
+      "capture": "evidence/later-codecs-26.3-20261125T063014804828Z",
+      "matchingNonHarnessRows": 9
+    },
+    {
+      "capture": "evidence/later-codecs-26.3-20261125T063217201221Z",
+      "matchingNonHarnessRows": 35
+    },
+    {
+      "capture": "evidence/later-codecs-26.3-20261125T063616185829Z",
+      "matchingNonHarnessRows": 5
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "rotation-absent",
+      "action": "rotation",
+      "result": "ok:0/0/0/0/0/0/0"
+    },
+    {
+      "case": "euler-x",
+      "action": "rotation",
+      "result": "ok:1/0/0/20/0/0/0"
+    },
+    {
+      "case": "euler-xyz",
+      "action": "rotation",
+      "result": "ok:1/0/0/20/30/40/0"
+    },
+    {
+      "case": "euler-zero",
+      "action": "rotation",
+      "result": "ok:1/0/0/0/0/0/0"
+    },
+    {
+      "case": "rotation-value-missing",
+      "action": "rotation",
+      "result": "refused"
+    },
+    {
+      "case": "scalar-y-zero",
+      "action": "rotation",
+      "result": "ok:2/2/0/0/0/0/0"
+    },
+    {
+      "case": "scalar-y-123",
+      "action": "rotation",
+      "result": "ok:2/2/123/0/0/0/0"
+    },
+    {
+      "case": "mixed-scalar-xyz",
+      "action": "rotation",
+      "result": "ok:2/2/0/0/0/0/0"
+    },
+    {
+      "case": "invalid-scalar-with-xyz",
+      "action": "rotation",
+      "result": "refused"
+    },
+    {
+      "case": "scalar-angle-missing",
+      "action": "rotation",
+      "result": "refused"
+    },
+    {
+      "case": "scalar-axis-missing",
+      "action": "rotation",
+      "result": "refused"
+    },
+    {
+      "case": "origin-missing",
+      "action": "rotation",
+      "result": "refused"
+    },
+    {
+      "case": "euler-rescale",
+      "action": "rotation",
+      "result": "ok:1/0/0/20/0/0/1"
+    },
+    {
+      "case": "shade-absent",
+      "action": "shade",
+      "result": "ok:shade/0"
+    },
+    {
+      "case": "legacy-shade-false",
+      "action": "shade",
+      "result": "ok:shade/0"
+    },
+    {
+      "case": "shade-up",
+      "action": "shade",
+      "result": "ok:shade/2"
+    },
+    {
+      "case": "shade-uppercase",
+      "action": "shade",
+      "result": "refused"
+    },
+    {
+      "case": "shade-invalid",
+      "action": "shade",
+      "result": "refused"
+    },
+    {
+      "case": "endpoint-bottom",
+      "action": "format-bottom",
+      "result": "ok:97.0"
+    },
+    {
+      "case": "endpoint-top",
+      "action": "format-top",
+      "result": "ok:97.2147483647"
+    },
+    {
+      "case": "format-scalar",
+      "action": "format-bottom",
+      "result": "ok:97.0"
+    },
+    {
+      "case": "format-pair",
+      "action": "format-bottom",
+      "result": "ok:97.1"
+    },
+    {
+      "case": "extra-format-components",
+      "action": "format-bottom",
+      "result": "ok:97.1"
+    },
+    {
+      "case": "format-empty",
+      "action": "format-bottom",
+      "result": "refused"
+    },
+    {
+      "case": "format-negative",
+      "action": "format-bottom",
+      "result": "refused"
+    },
+    {
+      "case": "format-negative-minor",
+      "action": "format-bottom",
+      "result": "refused"
+    },
+    {
+      "case": "format-fractional",
+      "action": "format-bottom",
+      "result": "ok:97.1"
+    },
+    {
+      "case": "format-list-limit",
+      "action": "format-bottom",
+      "result": "refused"
+    },
+    {
+      "case": "resource-legacy64",
+      "action": "pack-resource",
+      "result": "ok:64.0-64.0"
+    },
+    {
+      "case": "resource-threshold",
+      "action": "pack-resource",
+      "result": "refused"
+    },
+    {
+      "case": "data-legacy81",
+      "action": "pack-data",
+      "result": "ok:81.0-81.0"
+    },
+    {
+      "case": "data-new82",
+      "action": "pack-data",
+      "result": "refused"
+    },
+    {
+      "case": "format-max-missing",
+      "action": "pack-resource",
+      "result": "refused"
+    },
+    {
+      "case": "format-range-major",
+      "action": "pack-resource",
+      "result": "ok:97.0-97.2147483647"
+    },
+    {
+      "case": "format-range-pair",
+      "action": "pack-resource",
+      "result": "ok:97.1-97.1"
+    },
+    {
+      "case": "deprecated-supported-new",
+      "action": "pack-resource",
+      "result": "refused"
+    },
+    {
+      "case": "mixed-legacy-range",
+      "action": "pack-resource",
+      "result": "ok:64.0-97.2147483647"
+    },
+    {
+      "case": "mixed-legacy-mismatch",
+      "action": "pack-resource",
+      "result": "refused"
+    },
+    {
+      "case": "minor-range-reversed",
+      "action": "pack-resource",
+      "result": "refused"
+    },
+    {
+      "case": "format-info-missing",
+      "action": "pack-resource",
+      "result": "refused"
+    }
+  ],
+  "basisSha256": {
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/LaterCodecProbe.java": "49e3219846cfc516b2fb9285c14b3ac6b02d26398391f988a750b2c9182239f4",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/disposition.json": "09c12574a8173782371a1de46cf6c423841333d3824fe774d299212ecdb3cd73",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/execute.stdout": "f4496609cf1b51b5e02a73319894254e19306a08674f0aad87ce1d70823a8065",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/later_codec_cases.json": "df257fa73e54f48feabf0df242a3d4d4a2d13b4e529db9886ac204d250edb7ae",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/native_later_codecs.py": "1691cf36468a8a0e20a2b68a7d34965bff35be9890cde0d24385c57fa014a28a",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/observed.json": "8636e9d6603664f09772016718a564d02828d85d98b0cf2dd008443b7d2cfa2b",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063014804828Z/receipt.json": "5cebe363157038cac017b674f2e4fdb20c0c40ba44c7fad73a2714581956bcc7",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/LaterCodecProbe.java": "49e3219846cfc516b2fb9285c14b3ac6b02d26398391f988a750b2c9182239f4",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/disposition.json": "373fdbea331fb816d1d17a101a32807baad8af534d25d0831e0afc97b762eea7",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/execute.stdout": "a6198c4c37a9ff8862341d94a8dbd4789959f9bf8a5751f0749c99359e709b4f",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/later_codec_cases.json": "df257fa73e54f48feabf0df242a3d4d4a2d13b4e529db9886ac204d250edb7ae",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/native_later_codecs.py": "893da03dca15ce7a07ef94119bafb7c1f4688014d892c2e0cae1350690c75df1",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/observed.json": "58301613a70835dcf0a27300074789c96b94f6026fa5e1fe32c38656640af5de",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063217201221Z/receipt.json": "e1d8163ea58e7abca06e64abb2df79c5b38abf34080ea7060ca477cf7cf5fb15",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/LaterCodecProbe.java": "49e3219846cfc516b2fb9285c14b3ac6b02d26398391f988a750b2c9182239f4",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/execute.stdout": "22dbdc8ba9092a2111d2c295d937d36eb53da6723d0624d50ab2cc7b36ff2d88",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/later_codec_completion_cases.json": "95dcb0dfbaad1424ebf936addc12f89143c829876111b693611c0f8808dd801c",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/native_later_codecs.py": "939d13c793259b6a8b2707238cf036e06e07cf56e18846d5168f57ebe4d75894",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/observed.json": "2c52dde14c6514fb999b73045c1c4a0d7f457e459dffb2fc5f5da80c8ab9b34f",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T063616185829Z/receipt.json": "881cd605a36c65c47965dca82701bed9b7293649b6d0d71200fdc7f11fcc7dfc",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/LaterCodecProbe.java": "49e3219846cfc516b2fb9285c14b3ac6b02d26398391f988a750b2c9182239f4",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/comparison-to-retained-prefixes.json": "45ae802e220cc8c7b4942fa21d7a91bdd051f4fa0dc2fd8d227ecc67bd2e0f77",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/execute.stdout": "e72894595e5d00ad3f898618fd5d74077596dab3d7d455732e3aefe03519d9f0",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/later_codec_cases.json": "df257fa73e54f48feabf0df242a3d4d4a2d13b4e529db9886ac204d250edb7ae",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/native_later_codecs.py": "939d13c793259b6a8b2707238cf036e06e07cf56e18846d5168f57ebe4d75894",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/observed.json": "25dbfc1cd2622f3fab2aefb24bb055d32b15146a29ce90f1d870ba6e39a3671d",
+    "host/minecraft/evidence/later-codecs-26.3-20261125T064027971144Z/receipt.json": "330ae3df6dbc1e40477a714c4fcfc2721a325a1cc80b3bc7db01a47874c44c40",
+    "host/minecraft/LaterDecode.lean": "907f0baaab97ae3494ee4d3dd3255a5107505827ded5bba92ee80a8eb27fb153",
+    "host/minecraft/LaterDecode.bend": "2892f206437736b29ac09dbb6f52ee5b85756ccdb95c65aed822b9ff5398fa60",
+    "host/minecraft/LaterDecodeCase.lean": "dedb24f0f8bad29c52370109f6859255e9d96341d0bb730126e07017d1f805cf",
+    "host/minecraft/later_codec_conformance.py": "3a763293c11d9b243b17fcd34b7af7d037f7787f7e1d20d8c9aa77f0b2e991f3",
+    "host/minecraft/export_later_codecs.py": "b9abb8a04fcde5e19b9779d6a46e37935328a5e28b5b53870cd960b85f3624d5",
+    "host/minecraft/targets.json": "4815ff947edaa077db8dbdce16c9c59bcd756c649fdd5d6b504aa1e013bee5fc",
+    "host/minecraft/later-source-findings.json": "0e32b0f42aa1339d4d7dfaff1fc50055605a542b9840b496c6b1ed4beab091d0",
+    "host/minecraft/evidence/later-collector-dispositions.json": "9035d9ac5705956fbf4864d3b1f8131ac746af2421b9fd32a66628f914b66827"
+  },
+  "limits": [
+    "Selected original decoder methods/codecs under the recorded Java 25/macOS classpath, not full models, pack discovery, providers, rendering or other platforms.",
+    "Finite bounded numeric and JSON-shape profile; negative fractional syntax, overflow and general codec grammar remain unqualified.",
+    "Origin normalization is checked only for the selected [8,8,8] input. Matrices remain retained original values, not predicted geometry or rendered equivalence.",
+    "125 calls across four executions include dependency failures and completion; comparisons count 40 unique canonical inputs.",
+    "No actual Polytone/Modefite/Compat hook, transformed game or coexistence execution."
+  ]
+}

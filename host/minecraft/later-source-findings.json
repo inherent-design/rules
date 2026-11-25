@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "target": "java-26.3-vanilla",
-  "status": "source findings and planned comparisons;not native conformance",
+  "status": "source findings with separately attributed bounded original 26.3 method follow-up;provider comparisons remain pending",
   "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
   "privateViewReceiptSha256": "de00878bf0e3f1e9903f0ed6ab2a2aff6a8d77f87f2f2a11fc0ed0aab11bb274",
   "inspectionToolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
@@ -229,7 +229,15 @@
         "x": 20
       },
       "prediction": "26.3 selected path uses scalar zero;Polytone selected hook uses Euler x20.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected vanilla method/codec observed;provider-hook comparison unexecuted",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "mixed-scalar-xyz"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     },
     {
       "id": "invalid-scalar-with-xyz",
@@ -245,7 +253,15 @@
         "x": 20
       },
       "prediction": "26.3 selected path rejects invalid axis;Polytone hook bypasses scalar-axis read if reached.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected vanilla method/codec observed;provider-hook comparison unexecuted",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "invalid-scalar-with-xyz"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     },
     {
       "id": "euler-rescale",
@@ -260,7 +276,15 @@
         "rescale": true
       },
       "prediction": "26.3 retains/applies rescale;Polytone selected construction forces false;Compat path refuses.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected vanilla method/codec observed;provider-hook comparison unexecuted",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "euler-rescale"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     },
     {
       "id": "endpoint-minor",
@@ -269,7 +293,16 @@
         97
       ],
       "prediction": "Bottom and top codecs default omitted minor differently;do not normalize both endpoints to 97.0.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected original codec observed;broader grammar and consumers unqualified",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "endpoint-bottom",
+          "endpoint-top"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     },
     {
       "id": "resource-threshold",
@@ -278,7 +311,15 @@
         "pack_format": 65
       },
       "prediction": "With the selected resource-pack validator premises,the absent new min/max fields refuse.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected original codec observed;broader grammar and consumers unqualified",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "resource-threshold"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     },
     {
       "id": "extra-format-components",
@@ -289,12 +330,20 @@
         7
       ],
       "prediction": "fullCodec admits a bounded list then reads only first two components;verify through the actual codec before classifying intent.",
-      "status": "unexecuted source prediction"
+      "status": "unexecuted source prediction",
+      "followUp": {
+        "status": "selected original codec observed;broader grammar and consumers unqualified",
+        "observation": "evidence/later-codecs-26.3-20261125T064027971144Z/observed.json",
+        "cases": [
+          "extra-format-components"
+        ],
+        "conformance": "evidence/later-codec-conformance.json"
+      }
     }
   ],
   "limits": [
     "Original source/game/mapping/artwork payloads remain private.Only authored statements,identities and selected structural facts are public.",
-    "All six comparison predictions remain unexecuted;they must not be counted as observations.",
+    "The original six prediction statuses preserve the source-only phase. Separately attributed follow-up covers selected vanilla methods/codecs;actual provider hooks remain unexecuted.",
     "The earlier Java 17/21/25 host laws and original 1.21.1/1.21.5 observations retain their own scope.",
     "1.21.11/native overlay/renderer/provider composition and separate Bedrock schemas remain incomplete."
   ]
