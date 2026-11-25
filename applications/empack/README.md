@@ -85,6 +85,8 @@ Saving project data is not native valid-project initialization. A new native dra
 
 The [authoring lifecycle model](AUTHORING.md) separates edit ordering, saved images, receipt ordering, incomplete drafts, and retained plan inputs. An export deliberately captured at image A may finish while the editor moves to B, provided the operation owns every required immutable input and its other proofs remain valid. Its receipt names A. It cannot mark B exported or saved. This is an additional portable snapshot boundary; an ordinary native plan still revalidates its native root/read set and cannot bypass a changed file by calling it an old snapshot.
 
+The [current operation-runtime band](OPERATIONS.md) checks caller/observer drop, retained results, a blocked file owner, attempt acceptance, late progress, simultaneous faults, and concurrent shutdown. It preserves those source/native facts separately from the boundary sketches above; full Engine/CLI and portable integration remain unqualified.
+
 ## Feature coverage and extraction boundaries
 
 The [boundary map](boundaries.json) assigns all 52 inventoried empack feature families to the following owners. It is a target-design map, not implementation or test coverage.

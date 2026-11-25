@@ -1,0 +1,46 @@
+{
+  "application": "empack",
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sources": [
+    {
+      "path": "crates/empack-lib/src/engine/runtime.rs",
+      "sha256": "f36cfb01798572b280f47299d7507bbd888e4eff62b11a63331d0475b55a34ba",
+      "inspection": "Whole unchanged runtime module compiled and executed;selected start/observe/drop/wait/release/shutdown,work scope,progress and supervisor paths. Not full Engine/CLI or process supervision."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/resources.rs",
+      "sha256": "b657803340aa51782f6597d35d8f411d192f4d90616a8c1b49ba8f91af28d2e3",
+      "inspection": "Whole unchanged resource module compiled and executed;selected reservations/transfers/drop ownership. General waiting,all limit errors and product byte adapters remain unqualified."
+    },
+    {
+      "path": "crates/empack-lib/src/application/process_runtime.rs",
+      "sha256": "d0f3c42534586fdd7168f04ff55c5172cfbebe70519f1bf511627c27df3a51b9",
+      "inspection": "Unchanged Interrupted and Cancellation blocks only;parent/child semantics and timer-based cancellation. Process/terminal execution code not compiled."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/runtime/tests.rs",
+      "sha256": "d32743a5993faeeb7b6565dcaaf64b7a264ebd4fa20b972753031c7b60a46c72",
+      "inspection": "Source-only comparison of existing focused tests;these product unit tests were not run by this band."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api.rs",
+      "sha256": "f7e5eed9858ed0effa8f964e088b6767c76c91d461f886d3a71fc82f5e395760",
+      "inspection": "Source-only Engine delegation to OperationRuntime and typed plan/request/lifecycle contracts;no Engine call executed."
+    },
+    {
+      "path": "crates/empack-lib/src/application/engine_host.rs",
+      "sha256": "e1ff48e8b0e934b8cc928f8a6208f80a0c06ba221d66a3d3ff24b79a59455f83",
+      "inspection": "Source-only CLI approved-operation/scoped-service wait,cancellation,progress and retained-error branches;not compiled by this band."
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "6b837285c6a84e87e4e9a5e521ac06114fa74723b87cc396656e628c1bb37b5a",
+      "inspection": "Attribution for repository dependency declarations only;cached artifacts are hash-pinned but their reproducible build/source correspondence is not proved."
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6bd57e9e70263641868d930d575a9c2ed983be7edbdb2d4fd4abf2e830c0ee96",
+      "inspection": "Apache2.0 terms retained for quoted Cancellation source blocks in inputs.json."
+    }
+  ]
+}

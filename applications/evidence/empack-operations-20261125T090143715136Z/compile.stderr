@@ -1,0 +1,286 @@
+error[E0514]: found crate `tokio` compiled by an incompatible version of rustc
+ --> /private/tmp/rules-empack-operations-b3kcxnyt/resources.rs:4:5
+  |
+4 | use tokio::sync::Notify;
+  |     ^^^^^
+  |
+  = note: the following crate versions were found:
+          crate `tokio` compiled by rustc 1.99.1 (58cf8f9c3 2026-10-13): /Users/zer0cell/production/empack/target/debug/deps/libtokio-76ebd8297c7f8ad6.rlib
+  = help: please recompile that crate using this compiler (rustc 1.92.0 (ded5c06cf 2025-12-08)) (consider running `cargo clean` first)
+
+error[E0514]: found crate `anyhow` compiled by an incompatible version of rustc
+ --> /private/tmp/rules-empack-operations-b3kcxnyt/cancellation.rs:1:5
+  |
+1 | use anyhow::Result;use std::sync::{Arc,atomic::{AtomicBool,Ordering}};use std::time::Duration;
+  |     ^^^^^^
+  |
+  = note: the following crate versions were found:
+          crate `anyhow` compiled by rustc 1.99.1 (58cf8f9c3 2026-10-13): /Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib
+  = help: please recompile that crate using this compiler (rustc 1.92.0 (ded5c06cf 2025-12-08)) (consider running `cargo clean` first)
+
+error[E0514]: found crate `serde_json` compiled by an incompatible version of rustc
+ --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:9:5
+  |
+9 | use serde_json::{json,Value};
+  |     ^^^^^^^^^^
+  |
+  = note: the following crate versions were found:
+          crate `serde_json` compiled by rustc 1.99.1 (58cf8f9c3 2026-10-13): /Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib
+  = help: please recompile that crate using this compiler (rustc 1.92.0 (ded5c06cf 2025-12-08)) (consider running `cargo clean` first)
+
+error[E0514]: found crate `thiserror` compiled by an incompatible version of rustc
+ --> /private/tmp/rules-empack-operations-b3kcxnyt/cancellation.rs:2:17
+  |
+2 | #[derive(Debug, thiserror::Error)]
+  |                 ^^^^^^^^^
+  |
+  = note: the following crate versions were found:
+          crate `thiserror` compiled by rustc 1.99.1 (58cf8f9c3 2026-10-13): /Users/zer0cell/production/empack/target/debug/deps/libthiserror-2ff5673840ad1f11.rlib
+  = help: please recompile that crate using this compiler (rustc 1.92.0 (ded5c06cf 2025-12-08)) (consider running `cargo clean` first)
+
+error: cannot find attribute `error` in this scope
+ --> /private/tmp/rules-empack-operations-b3kcxnyt/cancellation.rs:3:3
+  |
+3 | #[error("Operation interrupted")]
+  |   ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:28:7
+   |
+28 |     #[error(transparent)]
+   |       ^^^^^
+
+error: cannot find attribute `from` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:29:17
+   |
+29 |     Admission(#[from] AdmissionError),
+   |                 ^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:30:7
+   |
+30 |     #[error("An operation needs an existing Tokio runtime")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:32:7
+   |
+32 |     #[error("Operation registry is full; release a completed result first")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:34:7
+   |
+34 |     #[error("Operation admission is closed")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:36:7
+   |
+36 |     #[error("Operation was cancelled before publication")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:38:7
+   |
+38 |     #[error("Worker result belongs to a closed or superseded preparation")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:40:7
+   |
+40 |     #[error("A driver or worker panicked")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:42:7
+   |
+42 |     #[error("Task reservations require a job and cannot retain job capacity")]
+   |       ^^^^^
+
+error: cannot find attribute `error` in this scope
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:44:7
+   |
+44 |     #[error("Operation identifier space is exhausted")]
+   |       ^^^^^
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:290:13
+    |
+290 |             handle.wait().await;
+    |             ^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:335:16
+    |
+335 |             if self.receiver.changed().await.is_err() {
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:607:9
+    |
+607 |         self.receiver.await.map_err(|_| RuntimeError::Panicked)?
+    |         ^^^^^^^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:23:98
+   |
+23 | ...h.subscribe();tokio::time::timeout(Duration::from_secs(3),receiver.wait_for(|s|s.phase==phase)).await.unwrap().unwrap();}
+   |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:45:75
+   |
+45 |                 f.write_all(b"data").unwrap();f.sync_all().unwrap();let _=started.send(cancel);
+   |                                                                           ^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:49:46
+   |
+49 |         }).unwrap();let id=h.id();let cancel=tokio::time::timeout(Duration::from_secs(3),ready).await.unwrap().unwrap();
+   |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:76:164
+   |
+76 | ...scope.report_progress(WorkProgress::SavingCachedContent);tx.send(scope.progress_reporter()).ok().unwrap();gate.await.unwrap();Ok(5)})....
+   |                                                             ^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:76:213
+   |
+76 | ...nt);tx.send(scope.progress_reporter()).ok().unwrap();gate.await.unwrap();Ok(5)}).unwrap();
+   |                                                         ^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:77:18
+   |
+77 |         let sink=rx.await.unwrap();emit("progress","coalesced",state(&h,&g));go.send(()).unwrap();let o=h.wait().await;
+   |                  ^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+  --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:77:78
+   |
+77 |         let sink=rx.await.unwrap();emit("progress","coalesced",state(&h,&g));go.send(()).unwrap();let o=h.wait().await;
+   |                                                                              ^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:104:92
+    |
+104 | ...   drop(scope.spawn(req(),ResourceRequest::default(),move|cancel|async move{let _=ready.send(cancel.clone());gate.await.unwrap();})?);
+    |                                                                                      ^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:104:119
+    |
+104 | ...e|cancel|async move{let _=ready.send(cancel.clone());gate.await.unwrap();})?);
+    |                                                         ^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:106:32
+    |
+106 | ...   }).unwrap();let cancel=started.await.unwrap();let a=rt.clone();let b=rt.clone();let sa=tokio::spawn(async move{a.shutdown().await})...
+    |                              ^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:107:9
+    |
+107 |         tokio::time::timeout(Duration::from_secs(3),cancel.cancelled()).await.unwrap();wait_phase(&h,OperationPhase::Retiring).await;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:109:9
+    |
+109 | ...   go.send(()).unwrap();sa.await.unwrap();sb.await.unwrap();let o=h.wait().await;emit("shutdown","retired",json!({"result":result(&o),...
+    |       ^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:109:30
+    |
+109 | ...   go.send(()).unwrap();sa.await.unwrap();sb.await.unwrap();let o=h.wait().await;emit("shutdown","retired",json!({"result":result(&o),...
+    |                            ^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/main.rs:109:48
+    |
+109 | ...   go.send(()).unwrap();sa.await.unwrap();sb.await.unwrap();let o=h.wait().await;emit("shutdown","retired",json!({"result":result(&o),...
+    |                                              ^^^^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:127:43
+    |
+127 |               registry: Arc::new(Mutex::new(Registry {
+    |  ___________________________________________^
+128 | |                 open: true,
+129 | |                 next: 0,
+130 | |                 entries: BTreeMap::new(),
+131 | |             })),
+    | |_____________^ cannot infer type of the type parameter `T` declared on the struct `Registry`
+    |
+help: consider specifying the generic argument
+    |
+127 |             registry: Arc::new(Mutex::new(Registry::<T> {
+    |                                                   +++++
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:188:28
+    |
+188 |         let final_status = status.clone();
+    |                            ^^^^^^ cannot infer type
+
+error[E0277]: `?` couldn't convert the error to `runtime::RuntimeError`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:420:50
+    |
+420 |         Ok(self.inner.governor.try_admit(request)?)
+    |                                ------------------^ the trait `From<AdmissionError>` is not implemented for `runtime::RuntimeError`
+    |                                |
+    |                                this can't be annotated with `?` because it has type `Result<_, AdmissionError>`
+    |
+note: `runtime::RuntimeError` needs to implement `From<AdmissionError>`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:27:1
+    |
+ 27 | pub enum RuntimeError {
+    | ^^^^^^^^^^^^^^^^^^^^^
+note: alternatively, `AdmissionError` needs to implement `Into<runtime::RuntimeError>`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/resources.rs:67:1
+    |
+ 67 | pub enum AdmissionError {
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+    = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+
+error[E0277]: `?` couldn't convert the error to `runtime::RuntimeError`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:536:60
+    |
+536 |         let permit = self.inner.governor.try_admit(request)?;
+    |                                          ------------------^ the trait `From<AdmissionError>` is not implemented for `runtime::RuntimeError`
+    |                                          |
+    |                                          this can't be annotated with `?` because it has type `Result<_, AdmissionError>`
+    |
+note: `runtime::RuntimeError` needs to implement `From<AdmissionError>`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:27:1
+    |
+ 27 | pub enum RuntimeError {
+    | ^^^^^^^^^^^^^^^^^^^^^
+note: alternatively, `AdmissionError` needs to implement `Into<runtime::RuntimeError>`
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/resources.rs:67:1
+    |
+ 67 | pub enum AdmissionError {
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+    = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:547:39
+    |
+547 |                 Ok(Err(error)) => Err(error.into()),
+    |                                       ^^^^^ cannot infer type
+
+error[E0282]: type annotations needed
+   --> /private/tmp/rules-empack-operations-b3kcxnyt/runtime.rs:551:21
+    |
+551 |             let _ = sender.send(result);
+    |                     ^^^^^^ cannot infer type
+
+error: aborting due to 38 previous errors
+
+Some errors have detailed explanations: E0277, E0282, E0514.
+For more information about an error, try `rustc --explain E0277`.

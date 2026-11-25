@@ -3533,7 +3533,27 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#empack",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "runtime-ownership-and-terminal-evidence",
+              "status": "native-observed",
+              "scope": "Selected unchanged runtime/resource modules: 24 snapshots, retained results, owner/observer drop, blocked file ownership, attempt acceptance, progress, simultaneous faults, and concurrent shutdown. Proposed carriers and source-only Engine/host calls are separate.",
+              "remaining": "Request decoding, grants, Engine/CLI integration, ephemeral operations, every admission dimension, actual publisher/process adapter, other platforms, and full feature/flow qualification remain pending.",
+              "evidence": [
+                "empack/OPERATIONS.md",
+                "empack/Operations.lean",
+                "empack/Operations.bend",
+                "empack/operation-verification.json",
+                "sources/empack-operation-selections.json"
+              ],
+              "operationSlices": {
+                "execute": "Only selected runtime registration and worker execution; not approved Engine operations.",
+                "subscribe": "Retained status/result observation and late progress; observed handles retain explicit cancellation control.",
+                "close": "Caller drop, selected monitor retirement, explicit result release, and two concurrent shutdown callers."
+              }
+            }
+          ]
         },
         {
           "id": "empack.configuration",
