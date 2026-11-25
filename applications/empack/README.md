@@ -32,6 +32,8 @@ The [bootstrap band](BOOTSTRAP.md) compares actual packaged invocation/local/cac
 
 The [joined portable-authoring band](PORTABLE-JOINED.md) now exercises actual import, invalid/valid save and reopen, metadata/path edits, captured-image Prism export, and browser downloads with a shared Rust research engine. Native, Chromium, WebKit, and an isolated installed0.8.8 reference produce the same fixture archive. This advances the selected research join; production format, provider/recipe breadth, authority, crash/concurrency/quota, and consumer launch remain open. Earlier component reports retain their original evidence scope.
 
+The [selection-policy source map](SELECTION.md) connects catalog scope and ordering, exact pins, required relationships, update preparation, synchronization, migration, and partial application. It identifies existing test boundaries without claiming a new test run or broader native conformance.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
