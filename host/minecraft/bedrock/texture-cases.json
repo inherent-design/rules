@@ -1,0 +1,679 @@
+{
+  "schema": 1,
+  "edition": "bedrock",
+  "documentationRevision": "80b7b1713df821debb4a8022e32e6b0ad840a273",
+  "status": "authored source-derived design cases; not client observations",
+  "cases": [
+    {
+      "id": "baseline",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": false,
+        "backing": 0,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "0",
+      "basis": "texture-layer-validity",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "missing-color",
+      "action": "issues",
+      "data": {
+        "color": false,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": false,
+        "backing": 0,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "1",
+      "basis": "texture-layer-validity",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "bump-conflict",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": true,
+        "height": true,
+        "mer": false,
+        "mers": false,
+        "backing": 0,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "2",
+      "basis": "texture-layer-validity",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "mer-mers-conflict",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": true,
+        "mers": true,
+        "backing": 0,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "4",
+      "basis": "texture-layer-validity",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "missing-backing",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": false,
+        "backing": 1,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "8",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "unmeasured-backing",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": false,
+        "backing": 2,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "16",
+      "basis": "research-evidence-policy",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "multiple-independent-issues",
+      "action": "issues",
+      "data": {
+        "color": false,
+        "normal": true,
+        "height": true,
+        "mer": false,
+        "mers": false,
+        "backing": 2,
+        "vibrant": false,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "19",
+      "basis": "research-evidence-policy",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "vibrant-texture-object-height",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": true,
+        "mer": false,
+        "mers": false,
+        "backing": 0,
+        "vibrant": true,
+        "textureObject": true,
+        "uniformMersVariation": false
+      },
+      "expected": "32",
+      "basis": "consumer-and-variation",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "vibrant-block-height",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": true,
+        "mer": false,
+        "mers": false,
+        "backing": 0,
+        "vibrant": true,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "0",
+      "basis": "consumer-and-variation",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "vibrant-uniform-mers-variation",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": true,
+        "backing": 0,
+        "vibrant": true,
+        "textureObject": false,
+        "uniformMersVariation": true
+      },
+      "expected": "64",
+      "basis": "consumer-and-variation",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "image-mers-variation",
+      "action": "issues",
+      "data": {
+        "color": true,
+        "normal": false,
+        "height": false,
+        "mer": false,
+        "mers": true,
+        "backing": 0,
+        "vibrant": true,
+        "textureObject": false,
+        "uniformMersVariation": false
+      },
+      "expected": "0",
+      "basis": "consumer-and-variation",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "rgb-color-image",
+      "action": "channels",
+      "data": {
+        "layer": 0,
+        "image": true,
+        "count": 3
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "rgba-color-image",
+      "action": "channels",
+      "data": {
+        "layer": 0,
+        "image": true,
+        "count": 4
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "rgb-uniform-color",
+      "action": "channels",
+      "data": {
+        "layer": 0,
+        "image": false,
+        "count": 3
+      },
+      "expected": "0",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "rgba-uniform-color",
+      "action": "channels",
+      "data": {
+        "layer": 0,
+        "image": false,
+        "count": 4
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "normal-rgba-image",
+      "action": "channels",
+      "data": {
+        "layer": 1,
+        "image": true,
+        "count": 4
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "normal-uniform-not-selected",
+      "action": "channels",
+      "data": {
+        "layer": 1,
+        "image": false,
+        "count": 3
+      },
+      "expected": "0",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "height-mono-image",
+      "action": "channels",
+      "data": {
+        "layer": 2,
+        "image": true,
+        "count": 1
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "height-rgba-image",
+      "action": "channels",
+      "data": {
+        "layer": 2,
+        "image": true,
+        "count": 4
+      },
+      "expected": "0",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "mer-rgba-image",
+      "action": "channels",
+      "data": {
+        "layer": 3,
+        "image": true,
+        "count": 4
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "mer-rgba-uniform",
+      "action": "channels",
+      "data": {
+        "layer": 3,
+        "image": false,
+        "count": 4
+      },
+      "expected": "0",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "mers-rgb-image",
+      "action": "channels",
+      "data": {
+        "layer": 4,
+        "image": true,
+        "count": 3
+      },
+      "expected": "0",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "mers-rgba-uniform",
+      "action": "channels",
+      "data": {
+        "layer": 4,
+        "image": false,
+        "count": 4
+      },
+      "expected": "1",
+      "basis": "channel-declarations",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "foreign-only",
+      "action": "resolve",
+      "data": {
+        "pack": 1,
+        "name": 9,
+        "images": [
+          {
+            "pack": 2,
+            "name": 9,
+            "extension": 0,
+            "contentToken": 22
+          }
+        ]
+      },
+      "expected": "none",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "local-png-foreign-tga",
+      "action": "resolve",
+      "data": {
+        "pack": 1,
+        "name": 9,
+        "images": [
+          {
+            "pack": 2,
+            "name": 9,
+            "extension": 0,
+            "contentToken": 22
+          },
+          {
+            "pack": 1,
+            "name": 9,
+            "extension": 1,
+            "contentToken": 11
+          }
+        ]
+      },
+      "expected": "11",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "local-extension-priority",
+      "action": "resolve",
+      "data": {
+        "pack": 1,
+        "name": 9,
+        "images": [
+          {
+            "pack": 1,
+            "name": 9,
+            "extension": 1,
+            "contentToken": 11
+          },
+          {
+            "pack": 1,
+            "name": 9,
+            "extension": 0,
+            "contentToken": 33
+          }
+        ]
+      },
+      "expected": "33",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "unrelated-name",
+      "action": "resolve",
+      "data": {
+        "pack": 1,
+        "name": 9,
+        "images": [
+          {
+            "pack": 1,
+            "name": 8,
+            "extension": 0,
+            "contentToken": 44
+          }
+        ]
+      },
+      "expected": "none",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "jpeg-fallback",
+      "action": "resolve",
+      "data": {
+        "pack": 1,
+        "name": 9,
+        "images": [
+          {
+            "pack": 1,
+            "name": 9,
+            "extension": 3,
+            "contentToken": 55
+          }
+        ]
+      },
+      "expected": "55",
+      "basis": "pack-local-reference",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "no-merge",
+      "action": "select",
+      "data": {
+        "name": 9,
+        "eligible": [
+          {
+            "name": 9,
+            "pack": 2,
+            "layers": 1
+          },
+          {
+            "name": 9,
+            "pack": 1,
+            "layers": 14
+          }
+        ]
+      },
+      "expected": "9/2/1",
+      "basis": "eligible-definition-replacement",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "empty",
+      "action": "select",
+      "data": {
+        "name": 9,
+        "eligible": []
+      },
+      "expected": "none",
+      "basis": "eligible-definition-replacement",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "skip-unrelated",
+      "action": "select",
+      "data": {
+        "name": 9,
+        "eligible": [
+          {
+            "name": 8,
+            "pack": 2,
+            "layers": 15
+          },
+          {
+            "name": 9,
+            "pack": 1,
+            "layers": 7
+          }
+        ]
+      },
+      "expected": "9/1/7",
+      "basis": "eligible-definition-replacement",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "below-floor",
+      "action": "declare",
+      "data": {
+        "pbr": true,
+        "raytraced": false,
+        "major": 1,
+        "minor": 21,
+        "patch": 119
+      },
+      "expected": "0/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "at-floor",
+      "action": "declare",
+      "data": {
+        "pbr": true,
+        "raytraced": false,
+        "major": 1,
+        "minor": 21,
+        "patch": 120
+      },
+      "expected": "1/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "raytraced-alternative",
+      "action": "declare",
+      "data": {
+        "pbr": false,
+        "raytraced": true,
+        "major": 1,
+        "minor": 21,
+        "patch": 120
+      },
+      "expected": "0/1",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "missing-capability",
+      "action": "declare",
+      "data": {
+        "pbr": false,
+        "raytraced": false,
+        "major": 1,
+        "minor": 26,
+        "patch": 30
+      },
+      "expected": "0/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "new-major",
+      "action": "declare",
+      "data": {
+        "pbr": true,
+        "raytraced": false,
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+      },
+      "expected": "1/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "earlier-minor",
+      "action": "declare",
+      "data": {
+        "pbr": true,
+        "raytraced": false,
+        "major": 1,
+        "minor": 20,
+        "patch": 999
+      },
+      "expected": "0/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "later-minor",
+      "action": "declare",
+      "data": {
+        "pbr": true,
+        "raytraced": false,
+        "major": 1,
+        "minor": 26,
+        "patch": 0
+      },
+      "expected": "1/0",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "metal-wins",
+      "action": "material",
+      "data": {
+        "metal": 255,
+        "subsurface": 64
+      },
+      "expected": "255/0",
+      "basis": "mers-component-choice",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "subsurface-wins",
+      "action": "material",
+      "data": {
+        "metal": 64,
+        "subsurface": 128
+      },
+      "expected": "0/128",
+      "basis": "mers-component-choice",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "tie",
+      "action": "material",
+      "data": {
+        "metal": 64,
+        "subsurface": 64
+      },
+      "expected": "0/64",
+      "basis": "mers-component-choice",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "both-zero",
+      "action": "material",
+      "data": {
+        "metal": 0,
+        "subsurface": 0
+      },
+      "expected": "0/0",
+      "basis": "mers-component-choice",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "only-metal",
+      "action": "material",
+      "data": {
+        "metal": 255,
+        "subsurface": 0
+      },
+      "expected": "255/0",
+      "basis": "mers-component-choice",
+      "evidence": "authored documentation interpretation; not native observation"
+    },
+    {
+      "id": "raytraced-independent-old-floor",
+      "action": "declare",
+      "data": {
+        "pbr": false,
+        "raytraced": true,
+        "major": 1,
+        "minor": 16,
+        "patch": 100
+      },
+      "expected": "0/1",
+      "basis": "vibrant-declaration-prerequisite",
+      "evidence": "authored documentation interpretation; not native observation"
+    }
+  ]
+}

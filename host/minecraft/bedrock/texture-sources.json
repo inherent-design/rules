@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "edition": "bedrock",
+  "documentationRevision": "80b7b1713df821debb4a8022e32e6b0ad840a273",
+  "acquisitionReceiptSha256": "9905e1301abdeb68cb16efe6ba06b0ea0cec8af74e9ad8b0b5c1125ce1989698",
+  "sources": [
+    {
+      "id": "texture-sets.md",
+      "file": "texture-sets.md",
+      "path": "creator/Reference/Content/TextureSetsReference/TextureSetsConcepts/TextureSetsIntroduction.md",
+      "url": "https://raw.githubusercontent.com/MicrosoftDocs/minecraft-creator/80b7b1713df821debb4a8022e32e6b0ad840a273/creator/Reference/Content/TextureSetsReference/TextureSetsConcepts/TextureSetsIntroduction.md",
+      "gitBlob": "9b2a49809f139ac6ed28bdee033a3e50ea087635",
+      "bytes": 8691,
+      "sha256": "0d1d874e74031e2c0c5494ddc9ac7ec56c460a285869a2bf1e3514d827803c30",
+      "repository": "MicrosoftDocs/minecraft-creator",
+      "commit": "80b7b1713df821debb4a8022e32e6b0ad840a273",
+      "kind": "documentation"
+    },
+    {
+      "id": "vibrant-packs.md",
+      "file": "vibrant-packs.md",
+      "path": "creator/Documents/VibrantVisuals/VVResourcePacks.md",
+      "url": "https://raw.githubusercontent.com/MicrosoftDocs/minecraft-creator/80b7b1713df821debb4a8022e32e6b0ad840a273/creator/Documents/VibrantVisuals/VVResourcePacks.md",
+      "gitBlob": "714534c3aca1b212204a43de2d0df16b0c58fab8",
+      "bytes": 3472,
+      "sha256": "bf5fca7055a0847e4f273d866e1f24372d76cab7d4aeb1963c6ccbfd587a099e",
+      "repository": "MicrosoftDocs/minecraft-creator",
+      "commit": "80b7b1713df821debb4a8022e32e6b0ad840a273",
+      "kind": "documentation"
+    },
+    {
+      "id": "bedrock-samples-1.21.90.3:metadata/doc_modules/texture-sets.json",
+      "target": "bedrock-samples-1.21.90.3",
+      "path": "metadata/doc_modules/texture-sets.json",
+      "gitBlob": "c89ce5580bb7258f5b75943e5964b1f298134fe2",
+      "bytes": 10386,
+      "url": "https://raw.githubusercontent.com/Mojang/bedrock-samples/d2c831e6028b60bb6bf19bc45de10b77df6eb8f0/metadata/doc_modules/texture-sets.json",
+      "sha256": "becc89171b8a2cd3acbd4ae6113dc1127f15fcfff772bd0a88bfbba908570fd4",
+      "kind": "selected-sample-doc-module"
+    },
+    {
+      "id": "bedrock-samples-1.21.120.4:metadata/doc_modules/texture-sets.json",
+      "target": "bedrock-samples-1.21.120.4",
+      "path": "metadata/doc_modules/texture-sets.json",
+      "gitBlob": "18b61cd7bf8afce5a6ae4b9132e2b562411bf541",
+      "bytes": 9201,
+      "url": "https://raw.githubusercontent.com/Mojang/bedrock-samples/091dbd3ff9cf3c4205eb3c53ba4a673374b08472/metadata/doc_modules/texture-sets.json",
+      "sha256": "960f2c211d3a2d10ea37204c711c4919e6b694a3e3782ffb6503e6384118b529",
+      "kind": "selected-sample-doc-module"
+    },
+    {
+      "id": "bedrock-samples-1.26.30.5:metadata/doc_modules/texture-sets.json",
+      "target": "bedrock-samples-1.26.30.5",
+      "path": "metadata/doc_modules/texture-sets.json",
+      "gitBlob": "18b61cd7bf8afce5a6ae4b9132e2b562411bf541",
+      "bytes": 9201,
+      "url": "https://raw.githubusercontent.com/Mojang/bedrock-samples/921fafb05c93abeae56c2f2868cd8f942bdbcc0f/metadata/doc_modules/texture-sets.json",
+      "sha256": "960f2c211d3a2d10ea37204c711c4919e6b694a3e3782ffb6503e6384118b529",
+      "kind": "selected-sample-doc-module"
+    }
+  ],
+  "claims": [
+    {
+      "id": "texture-layer-validity",
+      "source": "texture-sets.md",
+      "section": "## Invalid *.texture_set.json",
+      "interpretation": "Require color and keep the normal/height and MER/MERS alternatives exclusive.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "pack-local-reference",
+      "source": "texture-sets.md",
+      "section": "## Resource Stack Behavior",
+      "interpretation": "Image backing belongs to the defining pack, independently of other packs' image priority.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "extension-precedence",
+      "source": "texture-sets.md",
+      "section": "## Referencing Texture Resources",
+      "interpretation": "For duplicate eligible image names, prefer TGA, then PNG, JPG, and JPEG.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "eligible-definition-replacement",
+      "source": "texture-sets.md",
+      "section": "## Resource Stack Behavior",
+      "interpretation": "Selected definitions replace rather than merge. Invalid-candidate fallback remains unresolved.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "channel-declarations",
+      "source": "texture-sets.md",
+      "section": "## Invalid *.texture_set.json",
+      "interpretation": "Image and uniform layers have different declared channel counts.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "consumer-and-variation",
+      "source": "texture-sets.md",
+      "section": "### Heightmap",
+      "interpretation": "Vibrant texture objects restrict heightmaps; uniform MERS has a separate variation limit.",
+      "status": "source-interpreted; native comparison absent",
+      "additionalSection": "## Specifying uniform values"
+    },
+    {
+      "id": "mers-component-choice",
+      "source": "texture-sets.md",
+      "section": "### Metalness_emissive_roughness_subsurface",
+      "interpretation": "The larger metal/subsurface channel wins; ties favor subsurface.",
+      "status": "source-interpreted; native comparison absent"
+    },
+    {
+      "id": "vibrant-declaration-prerequisite",
+      "source": "vibrant-packs.md",
+      "section": "# Vibrant Visuals Resource Packs",
+      "interpretation": "PBR authoring-floor guidance and the raytraced alternative are independent evidence, preceding runtime/device qualification.",
+      "status": "source-interpreted; native comparison absent"
+    }
+  ],
+  "researchPolicy": {
+    "id": "research-evidence-policy",
+    "interpretation": "Missing and unmeasured backing are distinct; accumulate scoped issues without inventing an engine diagnostic order."
+  },
+  "limits": [
+    "The models interpret this documentation revision, not every selected sample tag or executable build.",
+    "Previous sample docs retain independent identities and the existing sketch/prose disagreement.",
+    "No source-text decoder, image parser, native client, renderer, or fallback chain was executed."
+  ]
+}

@@ -1551,7 +1551,20 @@
       "catalog": "host/minecraft/bedrock/catalog.json",
       "report": "host/minecraft/bedrock/README.md",
       "facts": "host/minecraft/bedrock/source-facts.json.gz",
-      "status": "source declaration/documentation candidates only;native operations zero;family/consumer/semantic coverage incomplete"
+      "status": "source declaration/documentation candidates only;native operations zero;family/consumer/semantic coverage incomplete",
+      "boundedModels": [
+        {
+          "id": "documented-texture-sets",
+          "report": "host/minecraft/bedrock/TEXTURE-SETS.md",
+          "source": "host/minecraft/bedrock/texture-sources.json",
+          "models": [
+            "host/minecraft/bedrock/TextureSets.lean",
+            "host/minecraft/bedrock/TextureSets.bend"
+          ],
+          "cases": "host/minecraft/bedrock/texture-cases.json",
+          "status": "source-interpreted design cases; zero native observations; no whole-family qualification"
+        }
+      ]
     }
   }
 }
