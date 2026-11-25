@@ -1,0 +1,387 @@
+{
+  "schema": 1,
+  "minecraft": "1.21.5",
+  "scope": "Original-client headless decoding with explicit vanilla registry bootstrap;not a client launch or consumer render.",
+  "clientSha256": "522672ad20b460c02c2e39b6c5035ef6a849af28eb11ab2ac7eb293d395a8c11",
+  "mappingSha256": "3907657ade3e61bc8cffb4ca0a1bcba15f57986be4e613900947119364a206e5",
+  "requestSha256": "884a3c721826198e77c1807a0f494e8804ce4d5f6570e89e4156e8a763837135",
+  "classEntrySha256": {
+    "net.minecraft.server.Bootstrap": "1fd439a7eaf68e8c8b9b2dabd5af28e7e7b17218211061ed3040369d5090d910",
+    "net.minecraft.client.renderer.item.ItemModels": "e736fbb203676a64f09f69f5887a7e75e5d957cf8981c6c5abf8382d5a066696",
+    "net.minecraft.SharedConstants": "e1dfb1cfa91efc011f9df4288f49dbb21c91bd6f3b4eaaa9444c4d909ea0d637",
+    "net.minecraft.server.packs.OverlayMetadataSection": "b3abc364856531733219360a23a9d2ed2254d360f580d7588e698fd77d8d934e",
+    "net.minecraft.client.renderer.special.SpecialModelRenderers": "8c7f66261d8fe198283be0c357dddebd49c506ca04732eb416e1d64e9608638e",
+    "net.minecraft.client.renderer.texture.atlas.SpriteSources": "77955773bddd0818df2c2f5b26adc237e2b84fa8dd19938a21fb32318f9a7a6b",
+    "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection": "7b16c26fa65db7fb86ec4628b50f838173bb369ddf4459270e60911d6f4d0121",
+    "net.minecraft.client.resources.sounds.SoundEventRegistration": "14f25452556adc117e2b4537672d539d117698451158c3e939d8c4c11e348a4b",
+    "net.minecraft.server.packs.metadata.pack.PackMetadataSection": "6f1e42a9ddc58da1e3a34cd0d6d40b131b108044fb197437f1d84f2b1a209ece",
+    "net.minecraft.client.resources.metadata.texture.TextureMetadataSection": "668872b0867fcc373e762e9452ef0d63dfbdeda27d31471a7c3b393a0f2231fc",
+    "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties": "f1a370af4433c0b0cb7df997104061e1b0ebeacb2df153e92d90b1a63b75b477",
+    "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer": "817f949a8dad2089df4b2d8af755c18abc162792eeb7f0bf55e7ae0b367c0aab",
+    "net.minecraft.client.resources.model.EquipmentClientInfo": "7a8f11ab5bf41ad6ee433df1df7ee99dc3ff809917c86b3a865288f92a967e90",
+    "net.minecraft.client.renderer.PostChainConfig": "00b52eb7ec7d98a51cf59329ed1cee53f3ac4bb83754708d040807d1d3e137ef",
+    "net.minecraft.client.renderer.block.model.BlockModel": "74ae13529b335edc7d9cb7c014683b1f3508497fae2ad6630892bebe9a6672f5",
+    "net.minecraft.resources.ResourceLocation": "837d50dcf7ef7bdb8552f073fdf5f0b6b39880172c3e993ca7563b8d9cc30d76",
+    "net.minecraft.server.packs.resources.ResourceFilterSection": "1ec3219150fe01377d848c168e8d657688158fede51c5013a7c0994e761456b6",
+    "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling": "05e2182189949a9cd6d24f99b6e19c35a9ebb1fc43e9990d1d43552ca9761ae6",
+    "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties": "345688970276abb1273dbf41d0f5845b2dca8ff95b7c8720102173d2e84780ea",
+    "net.minecraft.client.renderer.item.ClientItem": "dbe13b4c41c55ccccd049d8ac92435d8ee1b062cff1b32a07ff2739fb0d17976",
+    "net.minecraft.client.particle.ParticleDescription": "342f75cae63a100355e1ac3425c3cf614b0a239af50680859f850aa38cd18b5a",
+    "net.minecraft.client.gui.font.providers.GlyphProviderDefinition": "b226e87a29aeb4230b7e3fe09a80d6ac5a586480ea811bdc63b02489ad2fd8e7",
+    "net.minecraft.client.color.item.ItemTintSources": "e32915aa36eee1ac96a5deab8904ae042225486e8f1b3b996c038f1c255869e3",
+    "net.minecraft.client.renderer.item.properties.select.SelectItemModelProperties": "43156bd846eed07a7b31040cd64460e5e9ab5cb78070bc138aa0402dd4f4ccc4"
+  },
+  "sourceSha256": {
+    "CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "codec_cases.json": "eb128e075bc7455f8ca4eb3c44a614cd13246f774c169451f63850d0181ddcf8",
+    "native_codecs.py": "6714dfc434029849890e855a5096cdabdd530bc31063a46fb32965f33c2d57e8"
+  },
+  "omittedLinuxNativeTransportArtifacts": [
+    "io.netty:netty-transport-native-epoll:4.1.118.Final:linux-aarch_64",
+    "io.netty:netty-transport-native-epoll:4.1.118.Final:linux-x86_64"
+  ],
+  "limits": [
+    "JSON inputs exercise codecs/selected parsers only. Resource lookup,reference resolution,baking,rendering and arbitrary syntax are separate obligations.",
+    "Vanilla registry bootstrap and explicitly selected client codec registries supply context;no world or dynamic registry from a server is loaded.",
+    "Original-client signatures remain intact. Only the study observer is compiled. No renamed/decompiled client is executed.",
+    "The request includes private mapping locators;public retained evidence must omit wholesale mapping/client/library payloads."
+  ],
+  "observedSha256": "36301229161f2c8c1173f28fc940f7424e0ca9e62a8dc54240cbb13b4c7acbe5",
+  "cases": 93,
+  "observerErrors": 0,
+  "libraries": [
+    {
+      "file": "java-objc-bridge-1.1.jar",
+      "sha1": "1227f9e0666314f9de41477e3ec277e542ed7f7b",
+      "sha256": "77e34a13bccffc6c8b1a0e3ed46ddb0ea7dd56f2104ecdfacaaec9e4054ac332"
+    },
+    {
+      "file": "jackson-annotations-2.13.4.jar",
+      "sha1": "858c6cc78e1f08a885b1613e1d817c829df70a6e",
+      "sha256": "ac5b27a634942391ca113850ee7db01df1499a240174021263501c05fc653b44"
+    },
+    {
+      "file": "jackson-core-2.13.4.jar",
+      "sha1": "0cf934c681294b97ef6d80082faeefbe1edadf56",
+      "sha256": "4c2e043200edd9ee7ba6fc378bd5c17784a5bf2388e152d208068b51fd0839cf"
+    },
+    {
+      "file": "jackson-databind-2.13.4.2.jar",
+      "sha1": "325c06bdfeb628cfb80ebaaf1a26cc1eb558a585",
+      "sha256": "ba1a368137f9b92f48dd07f299ff7a782a69487b853ef5578215426fcde8f08b"
+    },
+    {
+      "file": "oshi-core-6.6.5.jar",
+      "sha1": "e1099981fd15dc4236c4499d82aba1276fb43a9a",
+      "sha256": "ec2afad57aca1d362c3b313c258aa9f66b517a28c60162a70d5fab3ae1659288"
+    },
+    {
+      "file": "jcip-annotations-1.0-1.jar",
+      "sha1": "ef31541dd28ae2cefdd17c7ebf352d93e9058c63",
+      "sha256": "4fccff8382aafc589962c4edb262f6aa595e34f1e11e61057d1c6a96e8fc7323"
+    },
+    {
+      "file": "gson-2.11.0.jar",
+      "sha1": "527175ca6d81050b53bdd4c457a6d6e017626b0e",
+      "sha256": "57928d6e5a6edeb2abd3770a8f95ba44dce45f3b23b7a9dc2b309c581552a78b"
+    },
+    {
+      "file": "failureaccess-1.0.2.jar",
+      "sha1": "c4a06a64e650562f30b7bf9aaec1bfed43aca12b",
+      "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+    },
+    {
+      "file": "guava-33.3.1-jre.jar",
+      "sha1": "852f8b363da0111e819460021ca693cacca3e8db",
+      "sha256": "4bf0e2c5af8e4525c96e8fde17a4f7307f97f8478f11c4c8e35a0e3298ae4e90"
+    },
+    {
+      "file": "icu4j-76.1.jar",
+      "sha1": "215f3a8e936d4069344bd75f2b1368fd58112894",
+      "sha256": "732cdf18121b1642899da1f5e37e52cc7f48e3ec07fa737105d4603976781b33"
+    },
+    {
+      "file": "msal4j-1.17.2.jar",
+      "sha1": "a6211e3d71d0388929babaa0ff0951b30d001852",
+      "sha256": "797530d79d750700da2ecb70a27718d747e59c44ed3829a6d18f06c915721e1b"
+    },
+    {
+      "file": "authlib-6.0.58.jar",
+      "sha1": "9261a6d53e629469fab20136b968bf5202d9c0f7",
+      "sha256": "7bea5444e83c8d343e11fb9e45939721f0db4321c5056ac846072e4a0bbe1321"
+    },
+    {
+      "file": "blocklist-1.0.10.jar",
+      "sha1": "5c685c5ffa94c4cd39496c7184c1d122e515ecef",
+      "sha256": "830bfd639c8db49236bbd8e45d3a2b8c96c56ff654a10118654958a6235d4c44"
+    },
+    {
+      "file": "brigadier-1.3.10.jar",
+      "sha1": "d15b53a14cf20fdcaa98f731af5dda654452c010",
+      "sha256": "c8ee4136e474ac7723ca2b432ec8d1a2bc88ef7d1ec57c314ba9e33cdc83dd75"
+    },
+    {
+      "file": "datafixerupper-8.0.16.jar",
+      "sha1": "67d4de6d7f95d89bcf5862995fb854ebaec02a34",
+      "sha256": "ffc138bc2596c291781b0d5e211ccac51f0f2345f27fc2742f335cedf7e2870d"
+    },
+    {
+      "file": "jtracy-1.0.29.jar",
+      "sha1": "6f07dcb6a2e595c7ee2ca43b67e5d1c018ca0770",
+      "sha256": "017dfd1aa6f536cfcb8f643830f6f9f17028e8277417a4741a92c46e47424dda"
+    },
+    {
+      "file": "logging-1.5.10.jar",
+      "sha1": "9ab1202793717af9df9c1704d0a02892067001eb",
+      "sha256": "de3031f2420d649b9a4152e4e160d50b87ce6e7b4d68163caf2b5ebbaf391f7e"
+    },
+    {
+      "file": "patchy-2.2.10.jar",
+      "sha1": "da05971b07cbb379d002cf7eaec6a2048211fefc",
+      "sha256": "16d70e7968b45caffc81576268eb000f473fb60bf257182d3447dea8ec919d5a"
+    },
+    {
+      "file": "text2speech-1.18.11.jar",
+      "sha1": "e853a12cdd6ba4f4836e8f4bf3b37844a13482b6",
+      "sha256": "587f08aa316ee4d6a9f39f77d3ba7d8a83425da53aa74938a1f034a4e3fc255f"
+    },
+    {
+      "file": "content-type-2.3.jar",
+      "sha1": "e3aa0be212d7a42839a8f3f506f5b990bcce0222",
+      "sha256": "60349793e006fba96b532cb0c21e10e969fe0db8d87f91c3b9eaf82ba2998895"
+    },
+    {
+      "file": "lang-tag-1.7.jar",
+      "sha1": "97c73ecd70bc7e8eefb26c5eea84f251a63f1031",
+      "sha256": "e8c1c594e2425bdbea2d860de55c69b69fc5d59454452449a0f0913c2a5b8a31"
+    },
+    {
+      "file": "nimbus-jose-jwt-9.40.jar",
+      "sha1": "42b1dfa0360e4062951b070bac52dd8d96fd7b38",
+      "sha256": "77128ed53756421bf59d2fc7f31554da29ea81cad8a5345977275adb7c5254c8"
+    },
+    {
+      "file": "oauth2-oidc-sdk-11.18.jar",
+      "sha1": "07c7ec4f4066625ff07a711ad856fa04da1ff9de",
+      "sha256": "e510e8c61c603584b7a541988bb7b2e3321c2d392e4943f5e77e396d994182bc"
+    },
+    {
+      "file": "commons-codec-1.17.1.jar",
+      "sha1": "973638b7149d333563584137ebf13a691bb60579",
+      "sha256": "f9f6cb103f2ddc3c99a9d80ada2ae7bf0685111fd6bffccb72033d1da4e6ff23"
+    },
+    {
+      "file": "commons-io-2.17.0.jar",
+      "sha1": "ddcc8433eb019fb48fe25207c0278143f3e1d7e2",
+      "sha256": "4aa4ca48f3dfd30b78220b7881d8cb93eac4093ec94361b6befa9487998a550b"
+    },
+    {
+      "file": "commons-logging-1.3.4.jar",
+      "sha1": "b9fc14968d63a8b8a8a2c1885fe3e90564239708",
+      "sha256": "bc2dfe32f1ef06509e6a065144c1adf7b420eabf11a87f30bd127f8faa332016"
+    },
+    {
+      "file": "netty-buffer-4.1.118.Final.jar",
+      "sha1": "7022990af1e0d449f9d5322035899745e19735c5",
+      "sha256": "0eea4e8666a9636a28722661d8ba5fa8564477e75fec6dd2ff3e324e361f8b3c"
+    },
+    {
+      "file": "netty-codec-4.1.118.Final.jar",
+      "sha1": "307f665c08ce57333121de4f460479fc0c3c94d4",
+      "sha256": "4abd215fd1ed7ce86509d169cc9cbede5042176c265a79b3b70602b017226c3f"
+    },
+    {
+      "file": "netty-common-4.1.118.Final.jar",
+      "sha1": "4bb0f9899146484fa89f7b9bc27389d5b8e2ecde",
+      "sha256": "65cce901ecf0f9d6591cc7750772614ab401a84415dc9aec9da4d046f0f9a77c"
+    },
+    {
+      "file": "netty-handler-4.1.118.Final.jar",
+      "sha1": "30ebb05b6b0fb071dbfcf713017c4a767a97bb9b",
+      "sha256": "26e3f8a5e859fd62cf3c13dc6d75e4e18879f000a5d0ad7f58f8679675d23dae"
+    },
+    {
+      "file": "netty-resolver-4.1.118.Final.jar",
+      "sha1": "28c378c19c1779eca1104b400452627f3ebc4aea",
+      "sha256": "3170c225972c18b6850d28add60db15bb28d83c4e3d5b686ca220e0bd7273c8a"
+    },
+    {
+      "file": "netty-transport-classes-epoll-4.1.118.Final.jar",
+      "sha1": "376ce95507066f0e755d97c1c8bcd6c33f657617",
+      "sha256": "bd86e6d41e1f6053f9577931655236259778ab045646e1e6ab04150f070864f3"
+    },
+    {
+      "file": "netty-transport-native-unix-common-4.1.118.Final.jar",
+      "sha1": "9da25a94e6a0edac90da0bc7894e5a54efcb866b",
+      "sha256": "69b16793d7b41ea76a762bd2bd144fc4f7c39c156a7a59ebf69baeb560fb10b7"
+    },
+    {
+      "file": "netty-transport-4.1.118.Final.jar",
+      "sha1": "5a27232e5d08218722d94ca14f0b1b4576e7711c",
+      "sha256": "ab3751e717daef9c8d91e4d74728a48730bd8530b72e2466b222b2ea3fb07db9"
+    },
+    {
+      "file": "fastutil-8.5.15.jar",
+      "sha1": "1e885b40c9563ab0d3899b871fd0b30e958705dc",
+      "sha256": "cffeb6673bdf1e6e4377d684df2f55ac359cf5cf6df613e05e62deeea500936a"
+    },
+    {
+      "file": "jna-platform-5.15.0.jar",
+      "sha1": "86b502cad57d45da172b5e3231c537b042e296ef",
+      "sha256": "18b7f6e7d34ce89309a6d9052ae1a987e8e64057e2f683e01e50f2f2b59cd153"
+    },
+    {
+      "file": "jna-5.15.0.jar",
+      "sha1": "01ee1d80ff44f08280188f7c0e740d57207841ac",
+      "sha256": "a564158d28ab5127fc6a958028ed54279fe0999662c46425b6a3b09a2a52094d"
+    },
+    {
+      "file": "accessors-smart-2.5.1.jar",
+      "sha1": "19b820261eb2e7de7d5bde11d1c06e4501dd7e5f",
+      "sha256": "2796ae857d0c7be4bc3580daa4d3828d555212355f4c83d38dd0af0742b3c812"
+    },
+    {
+      "file": "json-smart-2.5.1.jar",
+      "sha1": "4c11d2808d009132dfbbf947ebf37de6bf266c8e",
+      "sha256": "86c0c189581b79b57b0719f443a724e9f628ffbb9eef645cf79194f5973a1001"
+    },
+    {
+      "file": "jopt-simple-5.0.4.jar",
+      "sha1": "4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c",
+      "sha256": "df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28"
+    },
+    {
+      "file": "commons-compress-1.27.1.jar",
+      "sha1": "a19151084758e2fbb6b41eddaa88e7b8ff4e6599",
+      "sha256": "293d80f54b536b74095dcd7ea3cf0a29bbfc3402519281332495f4420d370d16"
+    },
+    {
+      "file": "commons-lang3-3.17.0.jar",
+      "sha1": "b17d2136f0460dcc0d2016ceefca8723bdf4ee70",
+      "sha256": "6ee731df5c8e5a2976a1ca023b6bb320ea8d3539fbe64c8a1d5cb765127c33b4"
+    },
+    {
+      "file": "httpclient-4.5.14.jar",
+      "sha1": "1194890e6f56ec29177673f2f12d0b8e627dec98",
+      "sha256": "c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+    },
+    {
+      "file": "httpcore-4.4.16.jar",
+      "sha1": "51cf043c87253c9f58b539c9f7e44c8894223850",
+      "sha256": "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+    },
+    {
+      "file": "log4j-api-2.24.1.jar",
+      "sha1": "7ebeb12c20606373005af4232cd0ecca72613dda",
+      "sha256": "6e77bb229fc8dcaf09038beeb5e9030b22e9e01b51b458b0183ce669ebcc92ef"
+    },
+    {
+      "file": "log4j-core-2.24.1.jar",
+      "sha1": "c85285146f28d8c8962384f786e2dff04172fb43",
+      "sha256": "00bcf388472ca80a687014181763b66d777177f22cbbf179fd60e1b1ac9bc9b0"
+    },
+    {
+      "file": "log4j-slf4j2-impl-2.24.1.jar",
+      "sha1": "8e3ddc96464ef7f768823e7e001a52b23de8cd0a",
+      "sha256": "644b6e3f0c40e5699ea0ca013844b138af440561d27226672e80b7aa1fdfc156"
+    },
+    {
+      "file": "jorbis-0.0.17.jar",
+      "sha1": "8872d22b293e8f5d7d56ff92be966e6dc28ebdc6",
+      "sha256": "e067f29a3701426b67ed973036949c6e58ca5bb53eef7240b2e71e286d252a9e"
+    },
+    {
+      "file": "joml-1.10.8.jar",
+      "sha1": "fc0a71dad90a2cf41d82a76156a0e700af8e4f8d",
+      "sha256": "bf19510145178df82cd3bd37edd514c13f411531ec5545299fd3abcbc98fe7c2"
+    },
+    {
+      "file": "lwjgl-freetype-3.3.3.jar",
+      "sha1": "a0db6c84a8becc8ca05f9dbfa985edc348a824c7",
+      "sha256": "e1a7ab07106349d9a8a68f6860b7b73b353c502b81e662aca77f931c6fdd3de8"
+    },
+    {
+      "file": "lwjgl-glfw-3.3.3.jar",
+      "sha1": "efa1eb78c5ccd840e9f329717109b5e892d72f8e",
+      "sha256": "bedc757fd2b1b255146db26b74b9cbd1fcf5644b89b47b104fa721c741604259"
+    },
+    {
+      "file": "lwjgl-jemalloc-3.3.3.jar",
+      "sha1": "b543467b7ff3c6920539a88ee602d34098628be5",
+      "sha256": "e99e31269e6678a4bfc62ef24c50a481c01cbdd004861ece9a59ba12768c6516"
+    },
+    {
+      "file": "lwjgl-openal-3.3.3.jar",
+      "sha1": "daada81ceb5fc0c291fbfdd4433cb8d9423577f2",
+      "sha256": "ae0e82767cacf08921f578fba9d84753ddeb00ceada0510a2b4a882be28fbf95"
+    },
+    {
+      "file": "lwjgl-opengl-3.3.3.jar",
+      "sha1": "02f6b0147078396a58979125a4c947664e98293a",
+      "sha256": "5062da750e5f7ec89e27e8b67b7d40fa8c4b16890159e35f828116ce6c8eca1e"
+    },
+    {
+      "file": "lwjgl-stb-3.3.3.jar",
+      "sha1": "25dd6161988d7e65f71d5065c99902402ee32746",
+      "sha256": "0cff7aa46ea9d70fcc20857015293ea80fbf21adcac34600c84da9b81a44ca93"
+    },
+    {
+      "file": "lwjgl-tinyfd-3.3.3.jar",
+      "sha1": "82d755ca94b102e9ca77283b9e2dc46d1b15fbe5",
+      "sha256": "ee0515054ee19a3f4088426fee9d879eb2ee657b07e5064e4e2c851f6adcf14b"
+    },
+    {
+      "file": "lwjgl-3.3.3.jar",
+      "sha1": "29589b5f87ed335a6c7e7ee6a5775f81f97ecb84",
+      "sha256": "dc9c7b2d48e8396d68895f8902ffa01e46253de44dfe927533ff09457ebfeec4"
+    },
+    {
+      "file": "lz4-java-1.8.0.jar",
+      "sha1": "4b986a99445e49ea5fbf5d149c4b63f6ed6c6780",
+      "sha256": "d74a3334fb35195009b338a951f918203d6bbca3d1d359033dc33edd1cadc9ef"
+    },
+    {
+      "file": "asm-9.6.jar",
+      "sha1": "aa205cf0a06dbd8e04ece91c0b37c3f5d567546a",
+      "sha256": "3c6fac2424db3d4a853b669f4e3d1d9c3c552235e19a319673f887083c2303a1"
+    },
+    {
+      "file": "slf4j-api-2.0.16.jar",
+      "sha1": "0172931663a09a1fa515567af5fbef00897d3c04",
+      "sha256": "a12578dde1ba00bd9b816d388a0b879928d00bab3c83c240f7013bf4196c579a"
+    }
+  ],
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "ecf20ae96db9c6237e18c5c7684fbf70ebc19472b16248d1844868584e2c9783"
+    }
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvSha256": "aa3a5247186e22957a697a8b31ee2b33305db53e798784d49550f722eb202aa8",
+      "argvDisclosure": "Exact owner-local argv retained privately; authored collector records argument construction."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvSha256": "e3e3e3a58f4c7f89706d8bcc16fed94a175beaf0463bf07ac609cffa64a44b50",
+      "argvDisclosure": "Exact owner-local argv retained privately; authored collector records argument construction."
+    }
+  ],
+  "publicCasesSha256": "bf6334508fe4d082495a6c4d69a5b6bf873372c83050438648c644b5e56d8c58",
+  "exportPolicy": "Generated JSON observations and authored fixtures/producers only; original clients, mappings, libraries, transformed/decompiled sources and user installations excluded."
+}

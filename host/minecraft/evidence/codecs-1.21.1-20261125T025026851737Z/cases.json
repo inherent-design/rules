@@ -1,0 +1,1475 @@
+[
+  {
+    "id": "packs.metadata/basic",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Owned fixture",
+      "pack_format": 34
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/missing-description",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "pack_format": 34
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/missing-format",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture"
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/fractional-format",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": 34.75
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/string-format",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": "34"
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/negative-format",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": -1
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/inclusive-range",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": 34,
+      "supported_formats": [
+        34,
+        55
+      ]
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/reversed-range",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": 34,
+      "supported_formats": [
+        55,
+        34
+      ]
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/malformed-range",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": 34,
+      "supported_formats": "bad"
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.metadata/unknown-field",
+    "family": "packs.metadata",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+    "input": {
+      "description": "Fixture",
+      "pack_format": 34,
+      "newer_capability": true
+    },
+    "member": "CODEC",
+    "fields": [
+      "packFormat",
+      "supportedFormats"
+    ]
+  },
+  {
+    "id": "packs.identifiers/valid",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "minecraft:fixture/path",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/default-namespace",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "fixture/path",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/uppercase",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "Minecraft:fixture",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/unicode",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "minecraft:日本",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/dot-components",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "minecraft:../fixture",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/empty-path",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "minecraft:",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.identifiers/namespace-slash",
+    "family": "packs.identifiers",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.resources.ResourceLocation",
+    "input": "mine/craft:fixture",
+    "member": "CODEC",
+    "fields": [
+      "namespace",
+      "path"
+    ]
+  },
+  {
+    "id": "packs.overlays/one",
+    "family": "packs.overlays",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.OverlayMetadataSection",
+    "input": {
+      "entries": [
+        {
+          "formats": [
+            34,
+            55
+          ],
+          "directory": "modern"
+        }
+      ]
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.overlays/empty",
+    "family": "packs.overlays",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.OverlayMetadataSection",
+    "input": {
+      "entries": []
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.overlays/missing",
+    "family": "packs.overlays",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.OverlayMetadataSection",
+    "input": {},
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.overlays/slash-directory",
+    "family": "packs.overlays",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.OverlayMetadataSection",
+    "input": {
+      "entries": [
+        {
+          "formats": 34,
+          "directory": "a/b"
+        }
+      ]
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.overlays/dot-directory",
+    "family": "packs.overlays",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.OverlayMetadataSection",
+    "input": {
+      "entries": [
+        {
+          "formats": 34,
+          "directory": ".."
+        }
+      ]
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.filter/empty",
+    "family": "packs.filter",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.resources.ResourceFilterSection",
+    "input": {
+      "block": []
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.filter/pattern",
+    "family": "packs.filter",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.resources.ResourceFilterSection",
+    "input": {
+      "block": [
+        {
+          "namespace": "minecraft",
+          "path": "models/.*"
+        }
+      ]
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.filter/bad-pattern",
+    "family": "packs.filter",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.resources.ResourceFilterSection",
+    "input": {
+      "block": [
+        {
+          "path": "["
+        }
+      ]
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "packs.filter/missing",
+    "family": "packs.filter",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.server.packs.resources.ResourceFilterSection",
+    "input": {},
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/stretch",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "stretch"
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/tile",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "tile",
+      "width": 16,
+      "height": 8
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/zero-tile",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "tile",
+      "width": 0,
+      "height": 8
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/nine-slice",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "nine_slice",
+      "width": 8,
+      "height": 8,
+      "border": 2
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/no-center",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "nine_slice",
+      "width": 8,
+      "height": 8,
+      "border": 4
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/zero-scalar-border",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "nine_slice",
+      "width": 8,
+      "height": 8,
+      "border": 0
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/zero-sided-border",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "nine_slice",
+      "width": 8,
+      "height": 8,
+      "border": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.gui/unknown",
+    "family": "textures.gui",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+    "input": {
+      "type": "unknown"
+    },
+    "member": "CODEC"
+  },
+  {
+    "id": "textures.atlases/single",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "single",
+          "resource": "minecraft:block/stone"
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/directory",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "directory",
+          "source": "block",
+          "prefix": "block/"
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/filter",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "filter",
+          "pattern": {
+            "namespace": "minecraft",
+            "path": ".*"
+          }
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/missing-source",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "directory",
+          "prefix": "x"
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/palettes",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "paletted_permutations",
+          "textures": [
+            "minecraft:block/stone"
+          ],
+          "palette_key": "minecraft:palette",
+          "permutations": {
+            "test": "minecraft:other"
+          }
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/unknown",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": [
+        {
+          "type": "newer_unknown"
+        }
+      ]
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "textures.atlases/empty",
+    "family": "textures.atlases",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+    "input": {
+      "sources": []
+    },
+    "member": "FILE_CODEC"
+  },
+  {
+    "id": "fonts.definitions/space",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "space",
+      "advances": {
+        " ": 4,
+        "A": 0
+      }
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/negative-space",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "space",
+      "advances": {
+        "A": -2
+      }
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/multi-character-key",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "space",
+      "advances": {
+        "AB": 4
+      }
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/bitmap",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "bitmap",
+      "file": "minecraft:font/fixture.png",
+      "ascent": 7,
+      "chars": [
+        "AB",
+        "CD"
+      ]
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/ragged-bitmap",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "bitmap",
+      "file": "minecraft:font/fixture.png",
+      "ascent": 7,
+      "chars": [
+        "AB",
+        "C"
+      ]
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/reference",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "reference",
+      "id": "minecraft:default"
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "fonts.definitions/unknown",
+    "family": "fonts.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "codec",
+    "class": "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+    "input": {
+      "type": "unknown"
+    },
+    "member": "MAP_CODEC"
+  },
+  {
+    "id": "textures.animation/default-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {},
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.animation/frames-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {
+      "frames": [
+        0,
+        {
+          "index": 1,
+          "time": 2
+        }
+      ],
+      "frametime": 1
+    },
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.animation/zero-time-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {
+      "frametime": 0
+    },
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.animation/negative-index-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {
+      "frames": [
+        -1
+      ]
+    },
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.animation/zero-width-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {
+      "width": 0
+    },
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.animation/empty-frames-legacy",
+    "family": "textures.animation",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+    "input": {
+      "frames": []
+    },
+    "holder": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+    "member": "SERIALIZER"
+  },
+  {
+    "id": "textures.metadata/default-legacy",
+    "family": "textures.metadata",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer",
+    "input": {},
+    "holder": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "member": "SERIALIZER",
+    "fields": [
+      "blur",
+      "clamp"
+    ]
+  },
+  {
+    "id": "textures.metadata/flags-legacy",
+    "family": "textures.metadata",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer",
+    "input": {
+      "blur": true,
+      "clamp": true
+    },
+    "holder": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "member": "SERIALIZER",
+    "fields": [
+      "blur",
+      "clamp"
+    ]
+  },
+  {
+    "id": "textures.metadata/numeric-blur-legacy",
+    "family": "textures.metadata",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer",
+    "input": {
+      "blur": 1
+    },
+    "holder": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "member": "SERIALIZER",
+    "fields": [
+      "blur",
+      "clamp"
+    ]
+  },
+  {
+    "id": "textures.metadata/string-blur-legacy",
+    "family": "textures.metadata",
+    "versions": [
+      "1.21.1"
+    ],
+    "action": "metadata_serializer",
+    "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer",
+    "input": {
+      "blur": "true"
+    },
+    "holder": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "observationClass": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+    "member": "SERIALIZER",
+    "fields": [
+      "blur",
+      "clamp"
+    ]
+  },
+  {
+    "id": "particles.definitions/sprites",
+    "family": "particles.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "particle",
+    "class": "net.minecraft.client.particle.ParticleDescription",
+    "input": {
+      "textures": [
+        "minecraft:fixture"
+      ]
+    }
+  },
+  {
+    "id": "particles.definitions/empty",
+    "family": "particles.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "particle",
+    "class": "net.minecraft.client.particle.ParticleDescription",
+    "input": {
+      "textures": []
+    }
+  },
+  {
+    "id": "particles.definitions/missing",
+    "family": "particles.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "particle",
+    "class": "net.minecraft.client.particle.ParticleDescription",
+    "input": {}
+  },
+  {
+    "id": "particles.definitions/bad-id",
+    "family": "particles.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "particle",
+    "class": "net.minecraft.client.particle.ParticleDescription",
+    "input": {
+      "textures": [
+        "Minecraft:fixture"
+      ]
+    }
+  },
+  {
+    "id": "sounds.definitions/file",
+    "family": "sounds.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "sound",
+    "class": "net.minecraft.client.resources.sounds.SoundEventRegistration",
+    "input": {
+      "sounds": [
+        "minecraft:fixture"
+      ]
+    },
+    "serializer": "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer"
+  },
+  {
+    "id": "sounds.definitions/event",
+    "family": "sounds.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "sound",
+    "class": "net.minecraft.client.resources.sounds.SoundEventRegistration",
+    "input": {
+      "replace": true,
+      "subtitle": "fixture.caption",
+      "sounds": [
+        {
+          "name": "minecraft:fixture",
+          "type": "event",
+          "weight": 2
+        }
+      ]
+    },
+    "serializer": "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer"
+  },
+  {
+    "id": "sounds.definitions/zero-weight",
+    "family": "sounds.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "sound",
+    "class": "net.minecraft.client.resources.sounds.SoundEventRegistration",
+    "input": {
+      "sounds": [
+        {
+          "name": "minecraft:fixture",
+          "weight": 0
+        }
+      ]
+    },
+    "serializer": "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer"
+  },
+  {
+    "id": "sounds.definitions/negative-volume",
+    "family": "sounds.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "sound",
+    "class": "net.minecraft.client.resources.sounds.SoundEventRegistration",
+    "input": {
+      "sounds": [
+        {
+          "name": "minecraft:fixture",
+          "volume": -1
+        }
+      ]
+    },
+    "serializer": "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer"
+  },
+  {
+    "id": "sounds.definitions/missing",
+    "family": "sounds.definitions",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "sound",
+    "class": "net.minecraft.client.resources.sounds.SoundEventRegistration",
+    "input": {},
+    "serializer": "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer"
+  },
+  {
+    "id": "models.geometry/empty",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {},
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/generated",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "parent": "minecraft:item/generated",
+      "textures": {
+        "layer0": "minecraft:item/stone"
+      }
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/element",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/legacy-rotation",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          },
+          "rotation": {
+            "origin": [
+              8,
+              8,
+              8
+            ],
+            "axis": "y",
+            "angle": 22.5
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/unrestricted-angle",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          },
+          "rotation": {
+            "origin": [
+              8,
+              8,
+              8
+            ],
+            "axis": "y",
+            "angle": 61
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/euler-notation",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          },
+          "rotation": {
+            "origin": [
+              8,
+              8,
+              8
+            ],
+            "x": 5,
+            "y": 10,
+            "z": 15
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/bad-axis",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          },
+          "rotation": {
+            "origin": [
+              8,
+              8,
+              8
+            ],
+            "axis": "bad",
+            "angle": 0
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/outside-position",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            -17,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          }
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  },
+  {
+    "id": "models.geometry/new-shade-field",
+    "family": "models.geometry",
+    "versions": [
+      "1.21.1",
+      "1.21.5"
+    ],
+    "action": "block_model",
+    "class": "net.minecraft.client.renderer.block.model.BlockModel",
+    "input": {
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "#fixture"
+            }
+          },
+          "shade_direction_override": "up"
+        }
+      ]
+    },
+    "fields": [
+      "elements"
+    ]
+  }
+]

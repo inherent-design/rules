@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "sourceIds": [
+    "mojang:1.21.1:client",
+    "mojang:1.21.1:client_mappings",
+    "mojang:1.21.5:client",
+    "mojang:1.21.5:client_mappings"
+  ],
+  "selections": [
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+      "classEntrySha256": "4412c383fa1701eef7ada84a7fb132753b7cd84da2130c67b9d3572ed0dd6ee4",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Required component description and numeric pack_format; lenient optional supported_formats.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "b034284e5dfa72b93e5f9b6a25d7180521a14d422b794a26e505ebe07eedf801"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.resources.ResourceLocation",
+      "classEntrySha256": "143a5767b02120e87c2aa8dd9b5f7452eaf2f9a97bd3a51c4aa5eb32569c4e74",
+      "members": [
+        "read",
+        "parse",
+        "validPathChar",
+        "validNamespaceChar"
+      ],
+      "scope": "Lexical identifier validation; separate from resource-pack filesystem path admission.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "ba8b4a66a7cb065cd2c4f3454a5e41b7f02caa6a5f544a1d164f7c036059f86d"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "classEntrySha256": "b9006f93f03804b0165cc066d3b57fee7547831ec00c135547df7d7c42281a86",
+      "members": [
+        "CODEC",
+        "NineSlice.validate",
+        "Border.CODEC"
+      ],
+      "scope": "Stretch/tile/nine-slice dispatch, positive dimensions and scalar border; nonnegative side borders; nonempty center.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "8b6f3afda14470b03025e4e1cbc4b50ec459a16ac74e9717298d532dc06ae44b"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+      "classEntrySha256": "08a685751732c61005b7b177534671ffaeeb92b6e7653c603bfc523ef170101b",
+      "members": [
+        "CODEC",
+        "calculateFrameSize"
+      ],
+      "scope": "Metadata fields and downstream image/frame size remain separate.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "9309be362890882687db100130b8b78067b5cfe3524aa34576d241d1e27cf6f0"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+      "classEntrySha256": "938d12e2273768fc9338afbb27756595f9d901e7548a79a54969d8695615a0a5",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Successor strict boolean codec; baseline delegates GsonHelper.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "ea0f82cfb61771140c111e6648f4fbabebf57e46d3de95d36d8ab2b223956c4e"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.renderer.block.model.BlockModel",
+      "classEntrySha256": "e773c015760009011ed2144d97bca68eb0a56476a966b6a18be4850eda55946a",
+      "members": [
+        "fromString",
+        "fromStream",
+        "Deserializer"
+      ],
+      "scope": "Definition grammar, including ignored unknown fields, differs from parent resolution and bake.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "451fe2efad1e02e02681b561e714ffcf7ae0386674133c58456b8b02649de318"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.renderer.block.model.BlockElement",
+      "classEntrySha256": "1e8950d0da1166f10c1302636432cb91b1f92322392e266f42f976070f4df6e2",
+      "members": [
+        "Deserializer.getAngle",
+        "Deserializer.getAxis",
+        "Deserializer.getFrom",
+        "Deserializer.getTo"
+      ],
+      "scope": "Scalar axis rotation with bounded angles and element coordinates; not XYZ Euler grammar.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "e97c899e05e06442a18e6ca15a8652b3dafd51e55d49fb50507497bfaf0a0741"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSectionSerializer",
+      "classEntrySha256": "a663414a309db455ddf5107337fcbf48d91c3a318b4c149d3a883f111c9d6fc6",
+      "members": [
+        "fromJson",
+        "getFrame"
+      ],
+      "scope": "Baseline primitive frame index lacks the object form nonnegative validation.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "c30d488e9bb8a8ea49c2644f2492ef44fe2c20d608297e9266873698f98ae050"
+    },
+    {
+      "minecraft": "1.21.1",
+      "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer",
+      "classEntrySha256": "ec4598522855267793c7feb7d197b8d8cfa654effc6a929330f70a08b3a6f1bf",
+      "members": [
+        "fromJson"
+      ],
+      "scope": "Baseline GsonHelper boolean coercion.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "63c7f1c94550df356d77bb490e5ba1119dec59e6bc91cc66e69f33be4672d26c"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+      "classEntrySha256": "6f1e42a9ddc58da1e3a34cd0d6d40b131b108044fb197437f1d84f2b1a209ece",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Required component description and numeric pack_format; lenient optional supported_formats.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "3960f614a466d68c82a919890c11aaf31ce60bd3a51fd36a2816a71fd48cca63"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.resources.ResourceLocation",
+      "classEntrySha256": "837d50dcf7ef7bdb8552f073fdf5f0b6b39880172c3e993ca7563b8d9cc30d76",
+      "members": [
+        "read",
+        "parse",
+        "validPathChar",
+        "validNamespaceChar"
+      ],
+      "scope": "Lexical identifier validation; separate from resource-pack filesystem path admission.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "1f0630b2d8025264eba8e0bbd7421c6e5e06bdac494ca6b62e0d6710c856df12"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "classEntrySha256": "05e2182189949a9cd6d24f99b6e19c35a9ebb1fc43e9990d1d43552ca9761ae6",
+      "members": [
+        "CODEC",
+        "NineSlice.validate",
+        "Border.CODEC"
+      ],
+      "scope": "Stretch/tile/nine-slice dispatch, positive dimensions and scalar border; nonnegative side borders; nonempty center.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "c9f9330867992876cc9418a55f06a8a245a8adf92711b0285335bd7b2b3f5d80"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection",
+      "classEntrySha256": "7b16c26fa65db7fb86ec4628b50f838173bb369ddf4459270e60911d6f4d0121",
+      "members": [
+        "CODEC",
+        "calculateFrameSize"
+      ],
+      "scope": "Metadata fields and downstream image/frame size remain separate.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "5d98ed66163d4a309f2656bdfc59e48049f73b5e7b2b0868fec67cd7922355d7"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+      "classEntrySha256": "668872b0867fcc373e762e9452ef0d63dfbdeda27d31471a7c3b393a0f2231fc",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Successor strict boolean codec; baseline delegates GsonHelper.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "7f493ffb24492e6c04368fc5b355434c455fa98d122f759f55f1c17a27df9734"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.renderer.block.model.BlockModel",
+      "classEntrySha256": "74ae13529b335edc7d9cb7c014683b1f3508497fae2ad6630892bebe9a6672f5",
+      "members": [
+        "fromString",
+        "fromStream",
+        "Deserializer"
+      ],
+      "scope": "Definition grammar, including ignored unknown fields, differs from parent resolution and bake.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "039ed35d35795ea824a224c5e4f4d558a42ce9e54d9c84db60073b414950e491"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.renderer.block.model.BlockElement",
+      "classEntrySha256": "d04ec5cf20a88093b0832f37d6c49925ff04a6916b18884fd7ca5366b7ed0ffd",
+      "members": [
+        "Deserializer.getAngle",
+        "Deserializer.getAxis",
+        "Deserializer.getFrom",
+        "Deserializer.getTo"
+      ],
+      "scope": "Scalar axis rotation with bounded angles and element coordinates; not XYZ Euler grammar.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "923fb5d626f83680a1c754a35e3eb4de822161eaee72cdc4aec9ce62d8600c8d"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.renderer.PostChainConfig",
+      "classEntrySha256": "00b52eb7ec7d98a51cf59329ed1cee53f3ac4bb83754708d040807d1d3e137ef",
+      "members": [
+        "CODEC",
+        "InternalTarget.CODEC",
+        "FixedSizedTarget.CODEC",
+        "FullScreenTarget.CODEC"
+      ],
+      "scope": "Fixed-sized target codec is followed by fullscreen unit fallback; parsing is not target allocation.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "bd339e08362b2b3ff581f860e66922a51c878a44883e15a921aa4b41bd6ff5e0"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.resources.model.EquipmentClientInfo",
+      "classEntrySha256": "7a8f11ab5bf41ad6ee433df1df7ee99dc3ff809917c86b3a865288f92a967e90",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Successor nonempty map of nonempty known layer lists.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "5c081187763f5d5295ce8f58130099667da794567ce7892642f78e30b114ee16"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.resources.metadata.animation.AnimationFrame",
+      "classEntrySha256": "b72f1260f97d379b68ca05d958c2a0ed27ee17b835c612555040e5f5531932d8",
+      "members": [
+        "CODEC",
+        "FULL_CODEC"
+      ],
+      "scope": "Successor primitive and object indices both nonnegative.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "69eb5ab004ecca6a7466920436f1c06fd4f163dd35322225a9c9d55068794461"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.renderer.PostChainConfig$FixedSizedTarget",
+      "classEntrySha256": "ac09e9f6e3ccdaecd2c7db2abc8eb3ea3392317fcc6a3aa3964b8364cf7b94f9",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Positive fixed target dimensions.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "bd339e08362b2b3ff581f860e66922a51c878a44883e15a921aa4b41bd6ff5e0"
+    },
+    {
+      "minecraft": "1.21.5",
+      "class": "net.minecraft.client.renderer.PostChainConfig$FullScreenTarget",
+      "classEntrySha256": "c5cfb309692669bce5290bfa961c9e04ad235ec2f3cb07a1cb710e3b9f144e3c",
+      "members": [
+        "CODEC"
+      ],
+      "scope": "Unit codec accepts fallback object.",
+      "evidence": "source-inspected + selected original method/codec calls; no source-to-bytecode equivalence proof",
+      "readableSelectionSha256": "bd339e08362b2b3ff581f860e66922a51c878a44883e15a921aa4b41bd6ff5e0"
+    }
+  ],
+  "selectedRuntimeTypeLocators": {
+    "net.minecraft.client.renderer.PostChainConfig$FixedSizedTarget": "grs$a",
+    "net.minecraft.client.renderer.PostChainConfig$FullScreenTarget": "grs$b"
+  },
+  "limits": "Private decompiler views locate semantics; original signed client methods are the native execution basis. No game source is redistributed."
+}

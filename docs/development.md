@@ -14,6 +14,8 @@ On macOS, use lean-4.34.0-darwin or lean-4.34.0-darwin_aarch64 in PATH according
 
 scripts/check-rules.py compiles tracked Lean files with warnings as errors and checks tracked Bend files through the independent kernel. It never calls a package manager, browser, GUI, or sibling application.
 
+The proof lane also runs `host/minecraft/codec_conformance.py`, comparing two pure domain models with retained generated parser observations. It does not execute Minecraft. Owner-run collection tools and private game inputs remain outside CI.
+
 ## Local checks
 
 Install the development tools in mise.toml, then use:

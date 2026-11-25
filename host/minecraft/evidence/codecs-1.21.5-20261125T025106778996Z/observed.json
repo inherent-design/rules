@@ -1,0 +1,648 @@
+[
+  {
+    "id": "packs.metadata/basic",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/missing-description",
+    "accepted": false,
+    "partial": false,
+    "message": "No key description in MapLike[{\"pack_format\":34}]"
+  },
+  {
+    "id": "packs.metadata/missing-format",
+    "accepted": false,
+    "partial": false,
+    "message": "No key pack_format in MapLike[{\"description\":\"Fixture\"}]"
+  },
+  {
+    "id": "packs.metadata/fractional-format",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/string-format",
+    "accepted": false,
+    "partial": false,
+    "message": "Not a number: \"34\""
+  },
+  {
+    "id": "packs.metadata/negative-format",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": -1,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/inclusive-range",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": true,
+        "value": {
+          "nativeClass": "azr"
+        }
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/reversed-range",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/malformed-range",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.metadata/unknown-field",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "packFormat": 34,
+      "supportedFormats": {
+        "present": false
+      }
+    }
+  },
+  {
+    "id": "packs.identifiers/valid",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "namespace": "minecraft",
+      "path": "fixture/path"
+    }
+  },
+  {
+    "id": "packs.identifiers/default-namespace",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "namespace": "minecraft",
+      "path": "fixture/path"
+    }
+  },
+  {
+    "id": "packs.identifiers/uppercase",
+    "accepted": false,
+    "partial": false,
+    "message": "Not a valid resource location: Minecraft:fixture Non [a-z0-9_.-] character in namespace of location: Minecraft:fixture"
+  },
+  {
+    "id": "packs.identifiers/unicode",
+    "accepted": false,
+    "partial": false,
+    "message": "Not a valid resource location: minecraft:日本 Non [a-z0-9/._-] character in path of location: minecraft:\\u65E5\\u672C"
+  },
+  {
+    "id": "packs.identifiers/dot-components",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "namespace": "minecraft",
+      "path": "../fixture"
+    }
+  },
+  {
+    "id": "packs.identifiers/empty-path",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "namespace": "minecraft",
+      "path": ""
+    }
+  },
+  {
+    "id": "packs.identifiers/namespace-slash",
+    "accepted": false,
+    "partial": false,
+    "message": "Not a valid resource location: mine/craft:fixture Non [a-z0-9_.-] character in namespace of location: mine/craft:fixture"
+  },
+  {
+    "id": "packs.overlays/one",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "packs.overlays/empty",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "packs.overlays/missing",
+    "accepted": false,
+    "partial": false,
+    "message": "No key entries in MapLike[{}]"
+  },
+  {
+    "id": "packs.overlays/slash-directory",
+    "accepted": false,
+    "partial": true,
+    "message": "a/b is not accepted directory name"
+  },
+  {
+    "id": "packs.overlays/dot-directory",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "packs.filter/empty",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "packs.filter/pattern",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "packs.filter/bad-pattern",
+    "accepted": false,
+    "partial": true,
+    "message": "Invalid regex pattern \u0027[\u0027: Unclosed character class near index 0\n[\n^"
+  },
+  {
+    "id": "packs.filter/missing",
+    "accepted": false,
+    "partial": false,
+    "message": "No key block in MapLike[{}]"
+  },
+  {
+    "id": "textures.gui/stretch",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.gui/tile",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.gui/zero-tile",
+    "accepted": false,
+    "partial": false,
+    "message": "Value must be positive: 0"
+  },
+  {
+    "id": "textures.gui/nine-slice",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.gui/no-center",
+    "accepted": false,
+    "partial": false,
+    "message": "Nine-sliced texture has no horizontal center slice: 4 + 4 \u003e\u003d 8"
+  },
+  {
+    "id": "textures.gui/zero-scalar-border",
+    "accepted": false,
+    "partial": false,
+    "message": "Failed to parse either. First: Value must be positive: 0; Second: Not a JSON object: 0"
+  },
+  {
+    "id": "textures.gui/zero-sided-border",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.gui/unknown",
+    "accepted": false,
+    "partial": false,
+    "message": "Unknown element name:unknown"
+  },
+  {
+    "id": "textures.atlases/single",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.atlases/directory",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.atlases/filter",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.atlases/missing-source",
+    "accepted": false,
+    "partial": true,
+    "message": "No key source in MapLike[{\"type\":\"directory\",\"prefix\":\"x\"}]"
+  },
+  {
+    "id": "textures.atlases/palettes",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.atlases/unknown",
+    "accepted": false,
+    "partial": true,
+    "message": "Unknown element id: minecraft:newer_unknown"
+  },
+  {
+    "id": "textures.atlases/empty",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "fonts.definitions/space",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "fonts.definitions/negative-space",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "fonts.definitions/multi-character-key",
+    "accepted": false,
+    "partial": true,
+    "message": "Expected one codepoint, got: AB missed input: {\"AB\":4}"
+  },
+  {
+    "id": "fonts.definitions/bitmap",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "fonts.definitions/ragged-bitmap",
+    "accepted": false,
+    "partial": false,
+    "message": "Lines in codepoint grid have to be the same length (found: 1 codepoints, expected: 2), pad with \\u0000"
+  },
+  {
+    "id": "fonts.definitions/reference",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "fonts.definitions/unknown",
+    "accepted": false,
+    "partial": false,
+    "message": "Unknown element name:unknown"
+  },
+  {
+    "id": "textures.animation/default",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.animation/frames",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.animation/zero-time",
+    "accepted": false,
+    "partial": true,
+    "message": "Value must be positive: 0"
+  },
+  {
+    "id": "textures.animation/negative-index",
+    "accepted": false,
+    "partial": true,
+    "message": "Failed to parse either. First: Value must be non-negative: -1; Second: Not a JSON object: -1"
+  },
+  {
+    "id": "textures.animation/zero-width",
+    "accepted": false,
+    "partial": true,
+    "message": "Value must be positive: 0"
+  },
+  {
+    "id": "textures.animation/empty-frames",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "textures.metadata/default",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "blur": false,
+      "clamp": false
+    }
+  },
+  {
+    "id": "textures.metadata/flags",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "blur": true,
+      "clamp": true
+    }
+  },
+  {
+    "id": "textures.metadata/numeric-blur",
+    "accepted": false,
+    "partial": true,
+    "message": "Not a boolean: 1"
+  },
+  {
+    "id": "textures.metadata/string-blur",
+    "accepted": false,
+    "partial": true,
+    "message": "Not a boolean: \"true\""
+  },
+  {
+    "id": "particles.definitions/sprites",
+    "accepted": true
+  },
+  {
+    "id": "particles.definitions/empty",
+    "accepted": true
+  },
+  {
+    "id": "particles.definitions/missing",
+    "accepted": true
+  },
+  {
+    "id": "particles.definitions/bad-id",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "ab",
+    "message": "Non [a-z0-9_.-] character in namespace of location: Minecraft:fixture"
+  },
+  {
+    "id": "sounds.definitions/file",
+    "accepted": true
+  },
+  {
+    "id": "sounds.definitions/event",
+    "accepted": true
+  },
+  {
+    "id": "sounds.definitions/zero-weight",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "java.lang.IllegalArgumentException",
+    "message": "Invalid weight"
+  },
+  {
+    "id": "sounds.definitions/negative-volume",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "java.lang.IllegalArgumentException",
+    "message": "Invalid volume"
+  },
+  {
+    "id": "sounds.definitions/missing",
+    "accepted": true
+  },
+  {
+    "id": "models.geometry/empty",
+    "accepted": true,
+    "fields": {}
+  },
+  {
+    "id": "models.geometry/generated",
+    "accepted": true,
+    "fields": {}
+  },
+  {
+    "id": "models.geometry/element",
+    "accepted": true,
+    "fields": {
+      "geometry": {
+        "nativeClass": "gtg"
+      }
+    }
+  },
+  {
+    "id": "models.geometry/legacy-rotation",
+    "accepted": true,
+    "fields": {
+      "geometry": {
+        "nativeClass": "gtg"
+      }
+    }
+  },
+  {
+    "id": "models.geometry/unrestricted-angle",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "com.google.gson.JsonParseException",
+    "message": "Invalid rotation 61.0 found, only -45/-22.5/0/22.5/45 allowed"
+  },
+  {
+    "id": "models.geometry/euler-notation",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "com.google.gson.JsonSyntaxException",
+    "message": "Missing axis, expected to find a string"
+  },
+  {
+    "id": "models.geometry/bad-axis",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "com.google.gson.JsonParseException",
+    "message": "Invalid rotation axis: bad"
+  },
+  {
+    "id": "models.geometry/outside-position",
+    "accepted": false,
+    "phase": "native_decode",
+    "observerError": false,
+    "exception": "com.google.gson.JsonParseException",
+    "message": "\u0027from\u0027 specifier exceeds the allowed boundaries: (-1.700E+1  0.000E+0  0.000E+0)"
+  },
+  {
+    "id": "models.geometry/new-shade-field",
+    "accepted": true,
+    "fields": {
+      "geometry": {
+        "nativeClass": "gtg"
+      }
+    }
+  },
+  {
+    "id": "items.nodes/empty",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/model",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/empty-composite",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/condition",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/select",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/range",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/special",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "items.nodes/missing",
+    "accepted": false,
+    "partial": false,
+    "message": "No key model in MapLike[{}]"
+  },
+  {
+    "id": "items.nodes/unknown",
+    "accepted": false,
+    "partial": false,
+    "message": "Unknown element id: minecraft:unknown"
+  },
+  {
+    "id": "equipment.definitions/humanoid",
+    "accepted": true,
+    "partial": false
+  },
+  {
+    "id": "equipment.definitions/empty-layers",
+    "accepted": false,
+    "partial": false,
+    "message": "Map must have contents"
+  },
+  {
+    "id": "equipment.definitions/empty-group",
+    "accepted": false,
+    "partial": false,
+    "message": "List must have contents missed input: {\"humanoid\":[]}; Map must have contents"
+  },
+  {
+    "id": "equipment.definitions/unknown-group",
+    "accepted": false,
+    "partial": false,
+    "message": "Unknown element name:unknown missed input: {\"unknown\":[{\"texture\":\"minecraft:iron\"}]}; Map must have contents"
+  },
+  {
+    "id": "shaders.post_effects/empty",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "internalTargets": {
+        "nativeClass": "java.util.ImmutableCollections$MapN",
+        "size": 0,
+        "values": []
+      },
+      "passes": {
+        "nativeClass": "java.util.ImmutableCollections$ListN",
+        "size": 0
+      }
+    }
+  },
+  {
+    "id": "shaders.post_effects/fullscreen-target",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "internalTargets": {
+        "nativeClass": "com.google.common.collect.SingletonImmutableBiMap",
+        "size": 1,
+        "values": [
+          {
+            "nativeClass": "grs$b"
+          }
+        ]
+      },
+      "passes": {
+        "nativeClass": "java.util.ImmutableCollections$ListN",
+        "size": 0
+      }
+    }
+  },
+  {
+    "id": "shaders.post_effects/fixed-target",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "internalTargets": {
+        "nativeClass": "com.google.common.collect.SingletonImmutableBiMap",
+        "size": 1,
+        "values": [
+          {
+            "nativeClass": "grs$a"
+          }
+        ]
+      },
+      "passes": {
+        "nativeClass": "java.util.ImmutableCollections$ListN",
+        "size": 0
+      }
+    }
+  },
+  {
+    "id": "shaders.post_effects/zero-target",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "internalTargets": {
+        "nativeClass": "com.google.common.collect.SingletonImmutableBiMap",
+        "size": 1,
+        "values": [
+          {
+            "nativeClass": "grs$b"
+          }
+        ]
+      },
+      "passes": {
+        "nativeClass": "java.util.ImmutableCollections$ListN",
+        "size": 0
+      }
+    }
+  }
+]
