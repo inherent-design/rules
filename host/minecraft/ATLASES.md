@@ -1,0 +1,46 @@
+# Atlas definitions, assembly, and supplier custody
+
+The selected original Java clients agree on 80 controlled source-list assembly cases: 16 each for 1.21.1, 1.21.4, 1.21.5, 1.21.11, and 26.3. The [comparison](evidence/atlas-conformance.json) checks returned supplier multiplicity, discard calls, source execution count, caught failures, and final error. Sources and suppliers are authored controls. No real sprite loader, image decoder, stitcher, upload, GPU, game entrypoint, or provider is executed.
+
+The [source map](atlas-sources.json) separately attributes 45 private inspection views and their original outer/nested class identities. Field candidates are locators for review, not a complete grammar or proof of parser admission. Transformed/decompiled views are not verified translations of the original classes used in the native fixture.
+
+## Definition and consumer map
+
+| Definition | Fields and selection in the inspected views | Consumer and remaining boundary |
+| --- | --- | --- |
+| Atlas source list | A sources list dispatched through the registered source types. The stack loader appends successfully decoded definitions from each selected resource-stack entry. | Per-entry parse failures log and skip that entry. Source execution follows later in list; its failure and cleanup are separate. Actual stack parsing is not executed in this band. |
+| single | resource identifier and optional sprite identifier; absent sprite uses the resource identifier. | Looks up textures/...png and registers deferred loading if present; otherwise warns. Actual lookup, bytes, logging, and decoding remain unqualified here. |
+| directory | source and prefix strings. | Converts matching texture resource paths into prefixed sprite identifiers. Resource precedence, enumeration, path/identifier admission, and missing inputs need their own consumer witnesses. |
+| filter | pattern, through the version's ResourceLocationPattern or IdentifierPattern codec. | Removes matching entries accumulated so far. It is not a permanent ban on a later source adding the same identifier. The native fixture uses an explicit authored prefix predicate, not this regex codec. |
+| unstitch | resource; nonempty regions; divisor_x/divisor_y defaults 1.0. Regions declare sprite, x, y, width, and height. | Shares a LazyLoadedImage across region loaders. Region evaluation reads pixels, scales/floors coordinates, allocates/copies a target, and releases in finally. discard also releases. Numeric/crop admission, fallback, pixels, allocation failure, and valid invocation count remain independent. |
+| paletted_permutations | textures, palette_key, and permutations. An optional separator defaulting to underscore appears in the selected 1.21.5, 1.21.11, and 26.3 views; it is absent from the selected 1.21.1/1.21.4 field declarations. | Defers palette/image work and shares counted base images across generated variants. Older inline mapping and later Palette/PaletteMapping consumers need separate fidelity analysis. No palette or image execution here. |
+| LazyLoadedImage | Resource identity, cached NativeImage reference, and initialized reference count. | get lazily loads an image; release decrements the count and closes an already cached image at count <= 0. Caller ownership, concurrency, duplicate release, later get, and physical allocation retirement are not proved by that source inspection. |
+
+These source families retain separate dispatch and runtime interfaces. The older three releases expose SpriteSupplier extending Function; 1.21.11 and 26.3 expose Loader.get and DiscardableLoader. A facade must preserve the actual version's evaluation/discard contract rather than equating matching method roles with binary or lifecycle compatibility.
+
+## Original assembly behavior
+
+SpriteSourceList.list runs the sources in sequence against an output backed by a HashMap. Adding an identifier installs the new supplier, then calls discard on the previous supplier. Removing a matching identifier calls discard before removing the map entry. Returned results prepend a missing-texture loader and then use the map's remaining values. This does not promise stable survivor or discard iteration order.
+
+The original-method fixture verifies replacement order through controlled consequences: when an old discard throws and the authored source catches it, a later removal discards the newly installed supplier. A throwing removal leaves the old entry available for a later replacement to discard again. Uncaught source failure stops later sources without the list method automatically discarding every previously registered candidate. These are scoped callback/control observations. They do not establish an application leak, actual supplier cleanup, or the behavior of a surrounding recovery owner.
+
+The alias controls deliberately reuse one supplier at the same key or across two keys. A supplier can receive discard and still be returned. This demonstrates that a discard callback alone is not an unreachability or resource-release witness. Real source implementations typically create their own supplier instances; actual provider reachability, legality of aliasing, and any required shared-image leases remain to be qualified. No production defect is alleged from these constructed controls.
+
+The [Lean model](Atlas.lean) has 16 laws, including general slot preservation by discard, ignored failed-state work, and concrete put-before-discard, failed-removal, alias, and failure-stop examples. The [Bend model](Atlas.bend) has eight independently checked laws. Both models predict the 14 observed final fields of every accepted case. Their deterministic key traversal is compared only through bags/counts. The [decoder](AtlasCase.lean) refuses throwing removals with multiple affected entries without an iteration-order witness; native adverse controls use one throwing target.
+
+## Evidence and failed fixture disposition
+
+The [plan](atlas_cases.json) uses two generated identifiers and three supplier identities, with explicit caught/uncaught callback failures. A null ResourceManager is passed only to authored sources that ignore it. The fixture never evaluates the default or surviving loaders. Its native check identifies one prepended non-authored loader; missing-texture behavior is attributed to source inspection, not exercised by that check. Owner-run [collection](native_atlas.py) uses original client bytes, exact mapped members, selected manifest libraries, bounded Java 21/25 processes, and actual class-load identities. Class loading is not initialization, method execution, or complete host-effect closure.
+
+Three initial runs had incomplete classpaths: the 1.21.4 and 1.21.11 identifier path needed the selected Brigadier 1.3.10, and 26.3 needed 1.3.11. The initial observer recorded method exceptions but incorrectly left observerErrors at zero. The independent comparison refused the NoClassDefFoundError outcomes. Their raw streams, receipts, and observations remain untouched in the [exclusion ledger](evidence/atlas-exclusions.json); they do not enter the 80 comparisons. Only those versions were repeated with the exact existing, manifest-verified Java library. The corrected observer also rejects a deliberate missing-library control with 15 unexpected outcomes and process status 2.
+
+The [pure replay](atlas_conformance.py) verifies frozen inputs and streams, both model outputs, 13 research decoder refusals, five changed native observations, exclusion of the failed captures, and the corrected linkage guard. It does not run Java, browsers, or studied programs. Native evidence is macOS arm64 under the named Java 21/25 builds. Original source-list work, authored callback effects, and incidental JVM/tool output are distinct from any global no-effects guarantee.
+
+## Independent design choices
+
+- Keep the existing assembly when unique supplier ownership and the actual recovery contract are appropriate. Do not add global rollback or ordering promises that the consumer does not provide.
+- A possible combined provider can use explicit per-entry leases or a checked uniqueness premise when sharing source images. A discard must release only that entry's use; final backing reclamation needs all owners and native uses to retire. This is a proposed ownership contract, not a verified replacement implementation.
+- A separate assembly proposal can retain candidates until validation and publish a completed result with explicit failure custody. It changes failure and cleanup behavior and needs tests with real source implementations, disposal failures, and outer reload owners. The controlled model does not implement it.
+- Report which source/entry failed, which changes occurred, and whether a prior atlas generation remains usable. Parser success, returned loader lists, completed pixel work, uploaded resources, and a rendered frame require different observations. Actual GUI diagnostics and safe recovery remain open.
+
+The atlas family stays partial. Real source parsing/execution, numeric geometry and palette fidelity, image lifetimes, stitching/mipmaps, texture animation, GPU publication/retirement, provider coexistence, rendered output, and the other host platforms remain unfinished. Bedrock is an independent lane.

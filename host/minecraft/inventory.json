@@ -892,12 +892,31 @@
           "net.minecraft.client.resources.model.AtlasSet"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
-      "rules": [],
-      "proofs": [],
+      "review": "partial:selected parser observations and five-version original source-list controls;real source/image/GPU/provider consumers pending",
+      "rules": [
+        "host/minecraft/Atlas.lean",
+        "host/minecraft/Atlas.bend"
+      ],
+      "proofs": [
+        "host/minecraft/evidence/atlas-conformance.json"
+      ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
-        "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+        "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json",
+        "host/minecraft/evidence/atlas-1.21.1-20261125T122132816667Z/observed.json",
+        "host/minecraft/evidence/atlas-1.21.4-20261125T122944379911Z/observed.json",
+        "host/minecraft/evidence/atlas-1.21.5-20261125T122218667952Z/observed.json",
+        "host/minecraft/evidence/atlas-1.21.11-20261125T122946006600Z/observed.json",
+        "host/minecraft/evidence/atlas-26.3-20261125T122947079846Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "java-five-version-atlas-output-controls",
+          "status": "partial:original output coordination with authored source/supplier adapters;not whole-family qualification",
+          "report": "host/minecraft/ATLASES.md",
+          "conformance": "host/minecraft/evidence/atlas-conformance.json",
+          "limits": "No actual source codec/run,image,GPU,provider reachability or stable map ordering. Three linkage captures excluded and negative observer guard retained."
+        }
       ]
     },
     {

@@ -31,6 +31,8 @@ The [manager lifecycle review](POLYTONE-LIFECYCLES.md) then maps each manager's 
 
 The [server-pack band](SERVER-PACKS.md) compares 385 original manager actions across all five selected Java releases. Consent, download results, activation, feedback, and callback custody have separate rules. The models compare selected branches; actual HTTP, prompt UI, full reload, provider coexistence, and renderer retirement remain open.
 
+The [atlas band](ATLASES.md) maps five source families and their consumers across all five Java releases, then compares 80 original source-list cases with authored suppliers. Replacement, filtering, callback failure, aliases, and discard custody are distinct from actual image loading or GPU retirement. Initial linkage failures remain explicitly excluded evidence.
+
 The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. The [later decoding band](LATER-DECODING.md) now compares 40 original 26.3 method/codec inputs with Lean and Bend. Actual provider hooks, full pack/model decoding, rendering and 1.21.11 remain independently unqualified.
 
 The [consumer extension](CONSUMERS.md) closes the selected space-font inspection gap and follows the built-in block-presentation factory into registry/state dependencies. The [Bedrock source map](bedrock/README.md) separately indexes client schema declarations, documentation sketches and example anchors at three exact source tags. Neither source lane counts as native client or rendered qualification.

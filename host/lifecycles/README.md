@@ -17,6 +17,8 @@ The six surfaces overlap. A background save connects storage, UI, concurrency, a
 
 The [Minecraft server-pack comparison](../minecraft/SERVER-PACKS.md) adds a concrete custody distinction: a record can leave the manager while its captured download callback remains held, and removal during activation can require a later unload acknowledgement. Keep the manager record, callback, backing file, and renderer use as separate owners. A local APPLIED report is also distinct from peer receipt and verified rendering. These controlled Java observations refine the application mapping; they do not extend native host or network guarantees.
 
+The [atlas controls](../minecraft/ATLASES.md) separately demonstrate that receiving discard does not prove a supplier is no longer retained: authored aliases can remain in another entry, and a throwing discard has already produced an observable effect. Bind release to the specific owned use and preserve uncertain/partial cleanup. Actual image, provider, and device custody still needs its own witness; the controlled source-list comparison does not prove it.
+
 ## Ownership and trace contract
 
 The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.

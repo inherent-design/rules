@@ -1,0 +1,320 @@
+{
+  "schema": 1,
+  "contract": "original-atlas-list-authored-source-control",
+  "cases": [
+    {
+      "id": "empty",
+      "sources": [],
+      "throwDiscard": []
+    },
+    {
+      "id": "single",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "replace",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "reverse",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "remove-after",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ],
+        [
+          {
+            "op": "remove",
+            "prefix": "fixture:"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "remove-before",
+      "sources": [
+        [
+          {
+            "op": "remove",
+            "prefix": "fixture:"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "no-match",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "remove",
+            "prefix": "other:"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "remove-prefix",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:b",
+            "supplier": "C"
+          },
+          {
+            "op": "remove",
+            "prefix": "fixture:a"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "source-failure",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "fail"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "discard-failure",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B"
+          }
+        ]
+      ],
+      "throwDiscard": [
+        "A"
+      ]
+    },
+    {
+      "id": "caught-replace-failure",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B",
+            "catch": true
+          },
+          {
+            "op": "remove",
+            "prefix": "fixture:"
+          }
+        ]
+      ],
+      "throwDiscard": [
+        "A"
+      ]
+    },
+    {
+      "id": "caught-remove-failure",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "remove",
+            "prefix": "fixture:",
+            "catch": true
+          },
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B",
+            "catch": true
+          }
+        ]
+      ],
+      "throwDiscard": [
+        "A"
+      ]
+    },
+    {
+      "id": "same-key-same-supplier",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "alias-across-keys",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:b",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "B"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "remove-multiple",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          },
+          {
+            "op": "add",
+            "id": "fixture:b",
+            "supplier": "C"
+          },
+          {
+            "op": "remove",
+            "prefix": "fixture:"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    },
+    {
+      "id": "independent",
+      "sources": [
+        [
+          {
+            "op": "add",
+            "id": "fixture:a",
+            "supplier": "A"
+          }
+        ],
+        [
+          {
+            "op": "add",
+            "id": "fixture:b",
+            "supplier": "C"
+          }
+        ]
+      ],
+      "throwDiscard": []
+    }
+  ]
+}

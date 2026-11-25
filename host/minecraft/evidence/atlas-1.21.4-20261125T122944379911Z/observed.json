@@ -1,0 +1,318 @@
+{
+  "schema": 1,
+  "observerErrors": 0,
+  "cases": [
+    {
+      "case": "empty",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 0,
+      "retained": [],
+      "discards": {},
+      "events": []
+    },
+    {
+      "case": "single",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "A"
+      ],
+      "discards": {
+        "A": 0
+      },
+      "events": [
+        "source:0",
+        "action:add"
+      ]
+    },
+    {
+      "case": "replace",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 2,
+      "retained": [
+        "B"
+      ],
+      "discards": {
+        "A": 1,
+        "B": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "source:1",
+        "action:add",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "reverse",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 2,
+      "retained": [
+        "A"
+      ],
+      "discards": {
+        "A": 0,
+        "B": 1
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "source:1",
+        "action:add",
+        "discard:B"
+      ]
+    },
+    {
+      "case": "remove-after",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 2,
+      "retained": [],
+      "discards": {
+        "A": 1
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "source:1",
+        "action:remove",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "remove-before",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 2,
+      "retained": [
+        "A"
+      ],
+      "discards": {
+        "A": 0
+      },
+      "events": [
+        "source:0",
+        "action:remove",
+        "source:1",
+        "action:add"
+      ]
+    },
+    {
+      "case": "no-match",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "A"
+      ],
+      "discards": {
+        "A": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:remove"
+      ]
+    },
+    {
+      "case": "remove-prefix",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "C"
+      ],
+      "discards": {
+        "A": 1,
+        "C": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:add",
+        "action:remove",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "source-failure",
+      "returned": false,
+      "defaultLoaders": 0,
+      "error": "java.lang.IllegalStateException: authored-source-failure",
+      "sourceRuns": 1,
+      "retained": [],
+      "discards": {
+        "A": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:fail",
+        "error:authored-source-failure"
+      ]
+    },
+    {
+      "case": "discard-failure",
+      "returned": false,
+      "defaultLoaders": 0,
+      "error": "java.lang.IllegalStateException: authored-discard:A",
+      "sourceRuns": 2,
+      "retained": [],
+      "discards": {
+        "A": 1,
+        "B": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "source:1",
+        "action:add",
+        "discard:A",
+        "error:authored-discard:A"
+      ]
+    },
+    {
+      "case": "caught-replace-failure",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [],
+      "discards": {
+        "A": 1,
+        "B": 1
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:add",
+        "discard:A",
+        "error:authored-discard:A",
+        "caught",
+        "action:remove",
+        "discard:B"
+      ]
+    },
+    {
+      "case": "caught-remove-failure",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "B"
+      ],
+      "discards": {
+        "A": 2,
+        "B": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:remove",
+        "discard:A",
+        "error:authored-discard:A",
+        "caught",
+        "action:add",
+        "discard:A",
+        "error:authored-discard:A",
+        "caught"
+      ]
+    },
+    {
+      "case": "same-key-same-supplier",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "A"
+      ],
+      "discards": {
+        "A": 1
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:add",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "alias-across-keys",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [
+        "A",
+        "B"
+      ],
+      "discards": {
+        "A": 1,
+        "B": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:add",
+        "action:add",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "remove-multiple",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 1,
+      "retained": [],
+      "discards": {
+        "A": 1,
+        "C": 1
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "action:add",
+        "action:remove",
+        "discard:C",
+        "discard:A"
+      ]
+    },
+    {
+      "case": "independent",
+      "returned": true,
+      "defaultLoaders": 1,
+      "error": "NONE",
+      "sourceRuns": 2,
+      "retained": [
+        "C",
+        "A"
+      ],
+      "discards": {
+        "A": 0,
+        "C": 0
+      },
+      "events": [
+        "source:0",
+        "action:add",
+        "source:1",
+        "action:add"
+      ]
+    }
+  ]
+}
