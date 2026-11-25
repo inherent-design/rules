@@ -32,7 +32,17 @@
       "review": "pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "java-linked-filesystem",
+          "status": "partial:selected original provider APIs and bounded source consumers;not whole-family qualification",
+          "report": "host/minecraft/LINKED-FILESYSTEM.md",
+          "sources": "host/minecraft/linkfs-sources.json",
+          "conformance": "host/minecraft/evidence/linkfs-conformance.json",
+          "limits": "115original API/control snapshots;105modeledresults;index parser/wholepack/ZIP/reload/provider coexistence/rendering unqualified."
+        }
+      ]
     },
     {
       "id": "packs.metadata",
@@ -180,17 +190,35 @@
         "host/minecraft/Decoding.lean",
         "host/minecraft/Decoding.bend",
         "host/minecraft/ResourceSelection.lean",
-        "host/minecraft/ResourceSelection.bend"
+        "host/minecraft/ResourceSelection.bend",
+        "host/minecraft/LinkedFilesystem.lean",
+        "host/minecraft/LinkedFilesystem.bend"
       ],
       "proofs": [
         "host/minecraft/evidence/codec-conformance.json",
-        "host/minecraft/evidence/resource-conformance.json"
+        "host/minecraft/evidence/resource-conformance.json",
+        "host/minecraft/evidence/linkfs-conformance.json"
       ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json",
         "host/minecraft/evidence/resources-1.21.1-20261125T030635868969Z/observed.json",
-        "host/minecraft/evidence/resources-1.21.5-20261125T030701941976Z/observed.json"
+        "host/minecraft/evidence/resources-1.21.5-20261125T030701941976Z/observed.json",
+        "host/minecraft/evidence/linkfs-native-1.21.1-20261125T163537038277Z/observed.json",
+        "host/minecraft/evidence/linkfs-native-1.21.4-20261125T163538338427Z/observed.json",
+        "host/minecraft/evidence/linkfs-native-1.21.5-20261125T163539600229Z/observed.json",
+        "host/minecraft/evidence/linkfs-native-1.21.11-20261125T163540951708Z/observed.json",
+        "host/minecraft/evidence/linkfs-native-26.3-20261125T163340102803Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "java-linked-filesystem",
+          "status": "partial:selected original provider APIs and bounded source consumers;not whole-family qualification",
+          "report": "host/minecraft/LINKED-FILESYSTEM.md",
+          "sources": "host/minecraft/linkfs-sources.json",
+          "conformance": "host/minecraft/evidence/linkfs-conformance.json",
+          "limits": "115original API/control snapshots;105modeledresults;index parser/wholepack/ZIP/reload/provider coexistence/rendering unqualified."
+        }
       ]
     },
     {

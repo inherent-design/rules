@@ -67,9 +67,11 @@ jobs:
           python3 host/minecraft/sprite_set_conformance.py
           python3 host/minecraft/font_filter_conformance.py
           python3 host/minecraft/gui_scaling_conformance.py
+          python3 host/minecraft/linkfs_conformance.py
           python3 host/filesystem/compare.py
           python3 host/filesystem/verify.py host/filesystem/evidence/native-macos-20261125T155103537084Z/observed.json --controls
           python3 host/filesystem/java_compare.py
+          python3 host/filesystem/verify.py host/filesystem/evidence/ci-45651889866/windows-2025.json host/filesystem/evidence/ci-45651889866/ubuntu-24.04.json host/filesystem/evidence/ci-45651889866/macos-15.json --controls
           scripts/ci-export
 
   hosts:

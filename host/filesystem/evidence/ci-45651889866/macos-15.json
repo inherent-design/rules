@@ -1,0 +1,491 @@
+{
+  "schema": 1,
+  "contract": "owned-path-observations-v1",
+  "profile": {
+    "system": "Darwin",
+    "release": "24.6.0",
+    "machine": "arm64",
+    "python": "3.13.17",
+    "pythonExecutableSha256": "acae9af690ff37590ab8fb5e1142f254f1eaa5c462be1a225954c1cd37f2cbaa",
+    "filesystemType": "not measured"
+  },
+  "capturedAt": "2026-11-25T16:21:25.922335+00:00",
+  "producerSha256": "4a58c1e5fd7d73ae2706669c09f05a10a8cff1070591b7c7eb572fad7dbd8734",
+  "cases": [
+    {
+      "case": "exact-object",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "protected"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "samefile": true,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": true,
+        "nfcSpellingEqual": true
+      }
+    },
+    {
+      "case": "case-alias-first-lookup",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "PROTECTED"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "samefile": true,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "separate-sibling",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "slot"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584749"
+        },
+        "samefile": false,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584749"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "target-contains-source",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "."
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584746"
+        },
+        "samefile": false,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "target-inside-source",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "protected/child"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584751"
+        },
+        "samefile": false,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584751"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "missing-target",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "absent"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": false,
+          "error": "FileNotFoundError",
+          "errno": 2,
+          "winerror": null
+        },
+        "samefile": null,
+        "samefileError": "FileNotFoundError",
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": false,
+          "entries": [],
+          "error": "FileNotFoundError"
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "unicode-normalization-first-lookup",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "caf\u00e9",
+        "target": "cafe\u0301"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584752"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584752"
+        },
+        "samefile": true,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584752"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584752"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": true
+      }
+    },
+    {
+      "case": "symlink-alias",
+      "kind": "pair",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "source-link"
+      },
+      "observed": {
+        "source": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "target": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "samefile": true,
+        "samefileError": null,
+        "sourceChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "targetChain": {
+          "complete": true,
+          "entries": [
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584747"
+            },
+            {
+              "available": true,
+              "device": "16777228",
+              "inode": "3584746"
+            }
+          ]
+        },
+        "exactSpellingEqual": false,
+        "nfcSpellingEqual": false
+      }
+    },
+    {
+      "case": "preflight-binding-replaced",
+      "kind": "rebound",
+      "request": {
+        "operation": "protected-tree-preflight",
+        "source": "protected",
+        "target": "slot"
+      },
+      "observed": {
+        "before": {
+          "source": {
+            "available": true,
+            "device": "16777228",
+            "inode": "3584747"
+          },
+          "target": {
+            "available": true,
+            "device": "16777228",
+            "inode": "3584749"
+          }
+        },
+        "nowTarget": {
+          "available": true,
+          "device": "16777228",
+          "inode": "3584747"
+        },
+        "oldSource": {
+          "available": false,
+          "error": "FileNotFoundError",
+          "errno": 2,
+          "winerror": null
+        },
+        "sourcePayloadPreserved": true,
+        "sourcePayloadSha256": "cf629c0a2cb59779051218de3657b1a220d3f852d209847e65f0ae6b6ca26a3e"
+      }
+    }
+  ],
+  "ownedSourcePreserved": true,
+  "ownedRebindRestored": true,
+  "limits": [
+    "Single-process quiescent scratch tree;stat/samefile/resolve and sequential rename only. No other application or personal tree.",
+    "No race-safe writer,live grant,mutation boundary,crash,durability,ID reuse or generic ancestry proof.",
+    "Case/normalization/symlink behavior belongs to this selected fixture and host;unavailable is retained.",
+    "TemporaryDirectory cleanup retires only this generated scratch tree after restoring both moved directories."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "revision": "4e22c664e23d4c18c8d688f9b076e87b00a6e212",
+  "run": 45651889866,
+  "url": "https://github.com/inherent-design/rules/actions/runs/45651889866",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "proofs",
+      "id": 139338292799,
+      "conclusion": "success"
+    },
+    {
+      "name": "hosts (windows-2025)",
+      "id": 139341685053,
+      "conclusion": "success"
+    },
+    {
+      "name": "hosts (ubuntu-24.04)",
+      "id": 139341685072,
+      "conclusion": "success"
+    },
+    {
+      "name": "hosts (macos-15)",
+      "id": 139341685932,
+      "conclusion": "success"
+    }
+  ],
+  "leanModules": 210,
+  "bendFiles": 96,
+  "finiteGuardCases": 192,
+  "javaRetainedCalls": 15,
+  "profiles": [
+    {
+      "runner": "windows-2025",
+      "profile": {
+        "system": "Windows",
+        "release": "2025Server",
+        "machine": "AMD64",
+        "python": "3.13.17",
+        "pythonExecutableSha256": "7c2fc2b303a4ee3cc14cc17b47bc6e8bca98c78792edd123b846a560da44b203",
+        "filesystemType": "not measured"
+      },
+      "rawSha256": "4e2254eb3aa87ff7e5a02ff58424f7cea07b50fe54af92e93d1b0acfe8125f91",
+      "rawFile": "host/filesystem/evidence/ci-45651889866/windows-2025.json",
+      "rawCases": 10,
+      "guardProjections": 11,
+      "changedControls": [
+        "same-object-denied",
+        "ancestry-unconfirmed",
+        "invalid-identity",
+        "stale-token-forged-current",
+        "source-preservation-lost",
+        "unsupported-schema"
+      ],
+      "caseAlias": true,
+      "unicodeAlias": null
+    },
+    {
+      "runner": "ubuntu-24.04",
+      "profile": {
+        "system": "Linux",
+        "release": "7.0.0-1020-azure",
+        "machine": "x86_64",
+        "python": "3.13.18",
+        "pythonExecutableSha256": "5d782b88e6d48cc376d3e4b890539876ccaf7235acb1a265b7880ba471432cba",
+        "filesystemType": "not measured"
+      },
+      "rawSha256": "27f58c33dba99bd43125fa71143c27d61206ad1ff9cfd8bb534f387e5df45a9d",
+      "rawFile": "host/filesystem/evidence/ci-45651889866/ubuntu-24.04.json",
+      "rawCases": 11,
+      "guardProjections": 12,
+      "changedControls": [
+        "same-object-denied",
+        "ancestry-unconfirmed",
+        "invalid-identity",
+        "stale-token-forged-current",
+        "source-preservation-lost",
+        "unsupported-schema"
+      ],
+      "caseAlias": null,
+      "unicodeAlias": null
+    },
+    {
+      "runner": "macos-15",
+      "profile": {
+        "system": "Darwin",
+        "release": "24.6.0",
+        "machine": "arm64",
+        "python": "3.13.17",
+        "pythonExecutableSha256": "acae9af690ff37590ab8fb5e1142f254f1eaa5c462be1a225954c1cd37f2cbaa",
+        "filesystemType": "not measured"
+      },
+      "rawSha256": "fd7b44a93008cf68c6cdc31a15932d8c3100574a453e67c908e93522a54679cd",
+      "rawFile": "host/filesystem/evidence/ci-45651889866/macos-15.json",
+      "rawCases": 9,
+      "guardProjections": 10,
+      "changedControls": [
+        "same-object-denied",
+        "ancestry-unconfirmed",
+        "invalid-identity",
+        "stale-token-forged-current",
+        "source-preservation-lost",
+        "unsupported-schema"
+      ],
+      "caseAlias": true,
+      "unicodeAlias": true
+    }
+  ],
+  "limits": [
+    "Pythonfixtureobservations onactualCIrunners,notallvolumes/ABI/IDreuse/race-safe mutation.",
+    "WindowsServer2025 isnotWindows11LTSC qualification.",
+    "Java17/21/25nativeobservations remainDarwin;CIonlyreplaysretainedJava.",
+    "Case/unicode null meansfirstlookupunavailable,notprovenphysicalseparation.",
+    "Retained original log record bytes;public qualification summary adds disclosure paths without rewriting observations.",
+    "Filesystem type unmeasured;null first lookup does not establish a different object."
+  ],
+  "privateQualificationSha256": "08aaaa923201069e7264fa04c5175a9c76c477ed60008df1f80670b1b26c8cdc",
+  "privateLogSha256": {
+    "ci-45651889866-macos-15.log": "efb81a7efa2d0ffdcf1cbbe7b450dd29c3568d81b7b8ec977d67941fbaf39847",
+    "ci-45651889866-proofs.log": "8cdaf25745856988ccee0ff32df217b1bdc4f1f06855173f80c95e766e0ba7c2",
+    "ci-45651889866-ubuntu-24.04.log": "e4a905f45f38383e996b8a79a3cfe29bd76c3c4aae21dc3453113449ce77e33e",
+    "ci-45651889866-watch.log": "7ad8d527c46a8d1acffa6053170e927d8a97bcee86c7a6db18dbfd06ffa59ae4",
+    "ci-45651889866-windows-2025.log": "9f1c50a2dab48201dfa84222b45f4549c63790c81e4084f6141cb1b2a2df8b80"
+  }
+}

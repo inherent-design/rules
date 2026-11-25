@@ -48,6 +48,8 @@ All three selected Darwin JDKs return true for two equal missing paths while att
 
 The Java adapter withholds tree separation and mutation-boundary authority. A false result on existing objects is insufficient to prove absence of ancestry. A true result on equal missing paths remains unknown object evidence. The receipt in [java-conformance.json](evidence/java-conformance.json) keeps these interpretations separate from raw API results. Custom providers, permissions, cross-provider calls, races, symlinks, Windows/Linux JDKs, and every Java file-identity API remain unqualified. Java 18 is not a reference target.
 
+The separate [Minecraft linked-filesystem witness](../minecraft/LINKED-FILESYSTEM.md) now qualifies selected original provider operations on macOS/JDK 21 and 25. Distinct logical nodes backed by the same physical file compare as different; virtual existence can survive backing deletion. That witness supplies no physical tree-separation or mutation authority. Other custom providers and backing hosts remain open.
+
 ## CI and operational use
 
 After compiling tracked models, run:
@@ -59,6 +61,16 @@ python3 host/filesystem/java_compare.py
 ```
 
 The proof lane uses only retained data and models. `python3 host/filesystem/run.py` is the bounded native host fixture for macOS, Linux, and Windows CI; it preserves the raw record in `.build/filesystem/current.json` and emits a `filesystem-native-v1=` log record after verification. It starts no studied application or JVM. Selected runner results do not qualify Windows 11 LTSC, every Linux/macOS filesystem, or native race-safe mutation. New CI results must be inspected before advancing those evidence cells.
+
+The completed [4e22c66 CI run](https://github.com/inherent-design/rules/actions/runs/45651889866) supplied three exact raw log records. [qualification.json](evidence/ci-45651889866/qualification.json) binds their hashes, actual profiles, job identities, and independent six-control replays. All four jobs passed; the proof job checked 210 Lean modules and 96 Bend files. No application or JVM was launched by these host fixtures.
+
+| Runner and actual recorded system | Raw cases / guard projections | First case-only lookup | First Unicode-normalization lookup |
+| --- | --- | --- | --- |
+| [Windows Server 2025, AMD64, Python 3.13.17](evidence/ci-45651889866/windows-2025.json) | 10 / 11 | Same object | Unavailable; subsequent owned distinct-name control recorded |
+| [Ubuntu runner, Linux 7.0.0-1020-azure, x86-64, Python 3.13.18](evidence/ci-45651889866/ubuntu-24.04.json) | 11 / 12 | Unavailable; subsequent owned distinct-name control recorded | Unavailable; subsequent owned distinct-name control recorded |
+| [macOS runner, Darwin 24.6.0, arm64, Python 3.13.17](evidence/ci-45651889866/macos-15.json) | 9 / 10 | Same object | Same object |
+
+The filesystem type was not measured in those records. An unavailable first lookup is not proof of physical separation, and a runner label does not qualify every volume or the selected Windows 11 LTSC baseline. These retained records are replayed without new filesystem collection in the proof lane; the three host lanes still perform their one bounded current fixture.
 
 Before a destructive preparation, distinguish policy refusal, unresolved identity, a current overlap, a candidate, and owner-bound admission. Report the target and retained state in the operation's actual terms. Preserve source and partial outputs, and reconcile uncertain writes before retrying. Globally lowercasing names, obtaining a canonical string, displaying a warning, or receiving exit zero does not implement the missing native protocol.
 
