@@ -1,0 +1,3236 @@
+{
+  "schema": 1,
+  "observerErrors": 0,
+  "rows": [
+    {
+      "case": "pending-remote",
+      "index": 0,
+      "action": "remote",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 1,
+      "action": "tick",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 2,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 3,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 4,
+      "action": "download-ok",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 5,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "download-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 6,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "download-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "pending-remote",
+      "index": 7,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "declined-before",
+      "index": 0,
+      "action": "reject",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "declined-before",
+      "index": 1,
+      "action": "remote",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED"
+        ]
+      }
+    },
+    {
+      "case": "declined-before",
+      "index": 2,
+      "action": "local",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED",
+          "DECLINED"
+        ]
+      }
+    },
+    {
+      "case": "declined-before",
+      "index": 3,
+      "action": "tick",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED",
+          "DECLINED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED",
+          "DECLINED"
+        ]
+      }
+    },
+    {
+      "case": "decline-pending",
+      "index": 0,
+      "action": "remote",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "decline-pending",
+      "index": 1,
+      "action": "reject",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "DECLINED",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "decline-pending",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "DECLINED",
+            "accepted": false,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "DECLINED"
+        ]
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 0,
+      "action": "local",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 1,
+      "action": "tick",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 2,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": false,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 3,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 4,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "local-ready",
+      "index": 5,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 1,
+      "action": "local",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 2,
+      "action": "reject",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 3,
+      "action": "tick",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 4,
+      "action": "success",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "reject-after-accepted",
+      "index": 5,
+      "action": "tick",
+      "before": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "DECLINED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 1,
+      "action": "remote",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 2,
+      "action": "reset",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 3,
+      "action": "tick",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 4,
+      "action": "download-ok",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 5,
+      "action": "tick",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "download-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      }
+    },
+    {
+      "case": "reset-after-accepted",
+      "index": 6,
+      "action": "success",
+      "before": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "download-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED"
+        ]
+      },
+      "after": {
+        "prompt": "PENDING",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "download-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOADED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "download-failure",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "download-failure",
+      "index": 1,
+      "action": "remote",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "download-failure",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "download-failure",
+      "index": 3,
+      "action": "download-fail",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "DOWNLOAD_FAILED",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "download-failure",
+      "index": 4,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "DOWNLOAD_FAILED",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "DOWNLOAD_FAILED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 1,
+      "action": "remote",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "REQUESTED",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 3,
+      "action": "pop",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 4,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "PENDING",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "NONE"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 5,
+      "action": "download-ok",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 3,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": true,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-download",
+      "index": 6,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 1,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 1,
+      "action": "local",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 3,
+      "action": "pop",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 4,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 5,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 6,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 7,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "remove-during-activation",
+      "index": 8,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 1,
+      "action": "local",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 3,
+      "action": "failure",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "ACTIVATION_FAILED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 4,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "ACTIVATION_FAILED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "ACTIVATION_FAILED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 5,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "ACTIVATION_FAILED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "ACTIVATION_FAILED"
+        ]
+      }
+    },
+    {
+      "case": "reload-failure",
+      "index": 6,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "ACTIVATION_FAILED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "ACTIVATION_FAILED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 1,
+      "action": "local",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 3,
+      "action": "recovery-failure",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 4,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 5,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "recovery-failure",
+      "index": 6,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 0,
+      "action": "allow",
+      "before": {
+        "prompt": "PENDING",
+        "records": [],
+        "schedules": 0,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 1,
+      "action": "local",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 1,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": []
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 2,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 0,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 3,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 2,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [
+          "owned-placeholder.zip"
+        ],
+        "feedback": [
+          "ACCEPTED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 4,
+      "action": "popAll",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "NONE",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 3,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 5,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "ACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 1,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 6,
+      "action": "success",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "PENDING",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 4,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": true,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    },
+    {
+      "case": "active-unload",
+      "index": 7,
+      "action": "tick",
+      "before": {
+        "prompt": "ALLOWED",
+        "records": [
+          {
+            "downloadStatus": "DONE",
+            "activationStatus": "INACTIVE",
+            "removalReason": "SERVER_REMOVED",
+            "accepted": true,
+            "path": "owned-placeholder.zip"
+          }
+        ],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      },
+      "after": {
+        "prompt": "ALLOWED",
+        "records": [],
+        "schedules": 5,
+        "downloads": 0,
+        "reloads": 2,
+        "downloadCallbackHeld": false,
+        "reloadCallbackHeld": false,
+        "toLoad": [],
+        "feedback": [
+          "ACCEPTED",
+          "APPLIED"
+        ]
+      }
+    }
+  ]
+}

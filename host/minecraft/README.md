@@ -29,6 +29,8 @@ Its [codec and inheritance extension](POLYTONE-CONTRACTS.md) resolves effective 
 
 The [manager lifecycle review](POLYTONE-LIFECYCLES.md) then maps each manager's state, effects and live consumer obligations. A separate Java 17/21/25 lookup comparison qualifies 57 authored calls and original bytecode confirms the relevant GUI-manager overload. Source phase names do not establish purity, atomicity, class-target safety, or completed GPU retirement.
 
+The [server-pack band](SERVER-PACKS.md) compares 385 original manager actions across all five selected Java releases. Consent, download results, activation, feedback, and callback custody have separate rules. The models compare selected branches; actual HTTP, prompt UI, full reload, provider coexistence, and renderer retirement remain open.
+
 The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. The [later decoding band](LATER-DECODING.md) now compares 40 original 26.3 method/codec inputs with Lean and Bend. Actual provider hooks, full pack/model decoding, rendering and 1.21.11 remain independently unqualified.
 
 The [consumer extension](CONSUMERS.md) closes the selected space-font inspection gap and follows the built-in block-presentation factory into registry/state dependencies. The [Bedrock source map](bedrock/README.md) separately indexes client schema declarations, documentation sketches and example anchors at three exact source tags. Neither source lane counts as native client or rendered qualification.

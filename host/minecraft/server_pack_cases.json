@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "contract": "java-server-pack-single-record-serial",
+  "cases": [
+    {
+      "id": "pending-remote",
+      "prompt": "PENDING",
+      "actions": [
+        "remote",
+        "tick",
+        "allow",
+        "tick",
+        "download-ok",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "declined-before",
+      "prompt": "PENDING",
+      "actions": [
+        "reject",
+        "remote",
+        "local",
+        "tick"
+      ]
+    },
+    {
+      "id": "decline-pending",
+      "prompt": "PENDING",
+      "actions": [
+        "remote",
+        "reject",
+        "tick"
+      ]
+    },
+    {
+      "id": "local-ready",
+      "prompt": "PENDING",
+      "actions": [
+        "local",
+        "tick",
+        "allow",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "reject-after-accepted",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "local",
+        "reject",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "reset-after-accepted",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "remote",
+        "reset",
+        "tick",
+        "download-ok",
+        "tick",
+        "success"
+      ]
+    },
+    {
+      "id": "download-failure",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "remote",
+        "tick",
+        "download-fail",
+        "tick"
+      ]
+    },
+    {
+      "id": "remove-during-download",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "remote",
+        "tick",
+        "pop",
+        "tick",
+        "download-ok",
+        "tick"
+      ]
+    },
+    {
+      "id": "remove-during-activation",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "local",
+        "tick",
+        "pop",
+        "tick",
+        "success",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "reload-failure",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "local",
+        "tick",
+        "failure",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "recovery-failure",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "local",
+        "tick",
+        "recovery-failure",
+        "tick",
+        "success",
+        "tick"
+      ]
+    },
+    {
+      "id": "active-unload",
+      "prompt": "PENDING",
+      "actions": [
+        "allow",
+        "local",
+        "tick",
+        "success",
+        "popAll",
+        "tick",
+        "success",
+        "tick"
+      ]
+    }
+  ]
+}

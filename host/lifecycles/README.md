@@ -15,6 +15,8 @@ The `Lifecycle.Editor` model covers forward edits and save receipts. It has no u
 
 The six surfaces overlap. A background save connects storage, UI, concurrency, and retention. Keeping a separate observation for each makes it possible to tell someone “revision 4 was saved; revision 5 is still unsaved” without discarding either result.
 
+The [Minecraft server-pack comparison](../minecraft/SERVER-PACKS.md) adds a concrete custody distinction: a record can leave the manager while its captured download callback remains held, and removal during activation can require a later unload acknowledgement. Keep the manager record, callback, backing file, and renderer use as separate owners. A local APPLIED report is also distinct from peer receipt and verified rendering. These controlled Java observations refine the application mapping; they do not extend native host or network guarantees.
+
 ## Ownership and trace contract
 
 The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.

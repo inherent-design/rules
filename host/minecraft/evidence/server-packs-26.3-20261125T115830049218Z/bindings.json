@@ -1,0 +1,88 @@
+{
+  "manager": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager",
+    "class": "net.minecraft.client.resources.server.ServerPackManager",
+    "fields": {
+      "packPromptStatus": "packPromptStatus",
+      "packs": "packs"
+    },
+    "methods": {
+      "pushPack(java.util.UUID,java.net.URL,com.google.common.hash.HashCode)": "pushPack",
+      "pushLocalPack(java.util.UUID,java.nio.file.Path)": "pushLocalPack",
+      "popPack(java.util.UUID)": "popPack",
+      "popAll()": "popAll",
+      "allowServerPacks()": "allowServerPacks",
+      "rejectServerPacks()": "rejectServerPacks",
+      "resetPromptStatus()": "resetPromptStatus",
+      "tick()": "tick"
+    }
+  },
+  "data": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager$ServerPackData",
+    "class": "net.minecraft.client.resources.server.ServerPackManager$ServerPackData",
+    "fields": {
+      "id": "id",
+      "path": "path",
+      "promptAccepted": "promptAccepted",
+      "downloadStatus": "downloadStatus",
+      "activationStatus": "activationStatus",
+      "removalReason": "removalReason"
+    },
+    "methods": {}
+  },
+  "prompt": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus",
+    "class": "net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus",
+    "fields": {
+      "PENDING": "PENDING",
+      "ALLOWED": "ALLOWED",
+      "DECLINED": "DECLINED"
+    },
+    "methods": {}
+  },
+  "downloader": {
+    "originalName": "net.minecraft.client.resources.server.PackDownloader",
+    "class": "net.minecraft.client.resources.server.PackDownloader",
+    "fields": {},
+    "methods": {
+      "download(java.util.Map,java.util.function.Consumer)": "download"
+    }
+  },
+  "feedback": {
+    "originalName": "net.minecraft.client.resources.server.PackLoadFeedback",
+    "class": "net.minecraft.client.resources.server.PackLoadFeedback",
+    "fields": {},
+    "methods": {}
+  },
+  "reload": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig",
+    "class": "net.minecraft.client.resources.server.PackReloadConfig",
+    "fields": {},
+    "methods": {}
+  },
+  "callbacks": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig$Callbacks",
+    "class": "net.minecraft.client.resources.server.PackReloadConfig$Callbacks",
+    "fields": {},
+    "methods": {
+      "onSuccess()": "onSuccess",
+      "onFailure(boolean)": "onFailure",
+      "packsToLoad()": "packsToLoad"
+    }
+  },
+  "pair": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig$IdAndPath",
+    "class": "net.minecraft.client.resources.server.PackReloadConfig$IdAndPath",
+    "fields": {
+      "id": "id",
+      "path": "path"
+    },
+    "methods": {}
+  },
+  "batch": {
+    "originalName": "net.minecraft.server.packs.DownloadQueue$BatchResult",
+    "class": "net.minecraft.server.packs.DownloadQueue$BatchResult",
+    "fields": {},
+    "methods": {}
+  }
+}

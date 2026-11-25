@@ -1,0 +1,88 @@
+{
+  "manager": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager",
+    "class": "gtg",
+    "fields": {
+      "packPromptStatus": "e",
+      "packs": "f"
+    },
+    "methods": {
+      "pushPack(java.util.UUID,java.net.URL,com.google.common.hash.HashCode)": "a",
+      "pushLocalPack(java.util.UUID,java.nio.file.Path)": "a",
+      "popPack(java.util.UUID)": "a",
+      "popAll()": "a",
+      "allowServerPacks()": "b",
+      "rejectServerPacks()": "c",
+      "resetPromptStatus()": "d",
+      "tick()": "e"
+    }
+  },
+  "data": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager$ServerPackData",
+    "class": "gtg$e",
+    "fields": {
+      "id": "a",
+      "path": "d",
+      "promptAccepted": "h",
+      "downloadStatus": "f",
+      "activationStatus": "g",
+      "removalReason": "e"
+    },
+    "methods": {}
+  },
+  "prompt": {
+    "originalName": "net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus",
+    "class": "gtg$c",
+    "fields": {
+      "PENDING": "a",
+      "ALLOWED": "b",
+      "DECLINED": "c"
+    },
+    "methods": {}
+  },
+  "downloader": {
+    "originalName": "net.minecraft.client.resources.server.PackDownloader",
+    "class": "gtd",
+    "fields": {},
+    "methods": {
+      "download(java.util.Map,java.util.function.Consumer)": "a"
+    }
+  },
+  "feedback": {
+    "originalName": "net.minecraft.client.resources.server.PackLoadFeedback",
+    "class": "gte",
+    "fields": {},
+    "methods": {}
+  },
+  "reload": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig",
+    "class": "gtf",
+    "fields": {},
+    "methods": {}
+  },
+  "callbacks": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig$Callbacks",
+    "class": "gtf$a",
+    "fields": {},
+    "methods": {
+      "onSuccess()": "a",
+      "onFailure(boolean)": "a",
+      "packsToLoad()": "b"
+    }
+  },
+  "pair": {
+    "originalName": "net.minecraft.client.resources.server.PackReloadConfig$IdAndPath",
+    "class": "gtf$b",
+    "fields": {
+      "id": "a",
+      "path": "b"
+    },
+    "methods": {}
+  },
+  "batch": {
+    "originalName": "net.minecraft.server.packs.DownloadQueue$BatchResult",
+    "class": "asl$b",
+    "fields": {},
+    "methods": {}
+  }
+}

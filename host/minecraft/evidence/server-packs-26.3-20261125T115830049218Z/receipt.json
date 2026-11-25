@@ -1,0 +1,327 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+  "metadataSha256": "f6805e95ade84803945082da53083bb7ae18cd0d0acb54e7dd58b964e0ffa518",
+  "mappingSha256": null,
+  "selectedClassSha256": {
+    "net/minecraft/client/resources/server/ServerPackManager.class": "6fe9cb397df95b81755b3ac3f9a6a0936418ec2cd11d80ece7e1a04fcdef830c",
+    "net/minecraft/client/resources/server/ServerPackManager$ServerPackData.class": "ee1dc6ff2544cea4fb5904c7784bed18051c47a455cec4863a3416ef5abd0757",
+    "net/minecraft/client/resources/server/ServerPackManager$PackPromptStatus.class": "74b03d370598b937bc84c824472cbc385cbb47e06a1ac93c48ac14133b80570c",
+    "net/minecraft/client/resources/server/PackDownloader.class": "305e312e2ec644981d8c5c3072b0ee19a1a9b1435d2e07b8b827650915f06525",
+    "net/minecraft/client/resources/server/PackLoadFeedback.class": "c63cb4377c3e1e6ead83ffaff137b5fed881d2161e8c0e554368630576f30016",
+    "net/minecraft/client/resources/server/PackReloadConfig.class": "08176ebb26fb010a66435abb0de60c4300a17a07e60bc759da4878eec609b210",
+    "net/minecraft/client/resources/server/PackReloadConfig$Callbacks.class": "ad619f89b88e7745e64e6adcaf51037bf7d5e4b785d9dab5329818d1e4b45bb2",
+    "net/minecraft/client/resources/server/PackReloadConfig$IdAndPath.class": "ecc3fbcf8967e879423d62facef47d4ad0e3799dd7c04f662afc2d93bf11d7cc",
+    "net/minecraft/server/packs/DownloadQueue$BatchResult.class": "771c4416309ac79dd7c80007acb885862f7dfee7a31f5789b46a9490270983b0"
+  },
+  "sourcesSha256": {
+    "native_server_packs.py": "d6745d5ee3ce7891410d2bcf3fde9bdae359cd6ecec12b8d894eb186eaa5a883",
+    "ServerPackProbe.java": "b74da51cb654fc30cb7fd97b5f43c6f9a94c3f854c93eca6945e990faa785dee",
+    "server_pack_cases.json": "63a708c44de9a264324f1678d844f8443fb967b501613d208cf7e53c8d04826f",
+    "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "bindingsSha256": "e2c0386058cbe337496df0113c813f3438087508d815cca85ed8d7cacf8fb1df",
+  "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+  "profile": {
+    "JAVA_VERSION": "25.0.4.1",
+    "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "scope": "Original ServerPackManager constructor/actions with serial controlled callback interfaces,opaque URL/path and reflective state observation;no HTTP,download queue,pack bytes,game,UI or installation.",
+  "observerClassesSha256": {
+    "study/minecraft/ServerPackProbe.class": "f0b4b7d6a6402794007b77a73a3be579002ea7dfce9aaad7502c43fe223be530",
+    "study/minecraft/ServerPackProbe$Context.class": "97cfd8e530fbdfb11ec6deb06d2c497f4b6f2aaaf30fc253ea5c69727fe96de7"
+  },
+  "observed.jsonSha256": "bb91571b03e226355b1a763f459816481ea1609624f92003df7acf4737499ded",
+  "class-load.logSha256": "2bf3b2c5d4f99d45fd26da109db6acb1503be8e206a463b3dba6e07b4fd7c15e",
+  "actions": 77,
+  "observerErrors": 0,
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.4339439580217004,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact local argv stays private; frozen producer constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.34434004221111536,
+      "stdoutSha256": "47b30d510c11a7994997315d6453772a95f48be8f68170f1b4ae1aa44dc76d8c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact local argv stays private; frozen producer constructs it."
+    }
+  ],
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "d4013ecb3b669979bba5359d0e62d974cfb735ab6356d54436da41c60c62f1a6"
+    }
+  },
+  "libraries": [
+    {
+      "name": "com.google.code.gson:gson:2.14.0",
+      "url": "https://libraries.minecraft.net/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar",
+      "sha1": "efc0e34ede4e3204eaefb84a00e55e8c86634382",
+      "sha256": "2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f",
+      "bytes": 313604,
+      "origin": "verified-existing-project-cache",
+      "file": "gson-2.14.0.jar"
+    },
+    {
+      "name": "com.google.guava:failureaccess:1.0.3",
+      "url": "https://libraries.minecraft.net/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+      "sha1": "aeaffd00d57023a2c947393ed251f0354f0985fc",
+      "sha256": "cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb",
+      "bytes": 10763,
+      "origin": "verified-existing-project-cache",
+      "file": "failureaccess-1.0.3.jar"
+    },
+    {
+      "name": "com.google.guava:guava:33.6.0-jre",
+      "url": "https://libraries.minecraft.net/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar",
+      "sha1": "c376b13067cc99a5774403530953f7b05a91e218",
+      "sha256": "dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3",
+      "bytes": 3064793,
+      "origin": "verified-existing-project-cache",
+      "file": "guava-33.6.0-jre.jar"
+    },
+    {
+      "name": "com.mojang:authlib:10.0.77",
+      "url": "https://libraries.minecraft.net/com/mojang/authlib/10.0.77/authlib-10.0.77.jar",
+      "sha1": "add8754cda96cf0cd840441632875648836f8a71",
+      "sha256": "521672866582633a412c82171d3cfa416ecaccdf05a43baf809c16f9aec07068",
+      "bytes": 152645,
+      "origin": "verified-existing-project-cache",
+      "file": "authlib-10.0.77.jar"
+    },
+    {
+      "name": "com.mojang:datafixerupper:10.0.21",
+      "url": "https://libraries.minecraft.net/com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar",
+      "sha1": "b6b2ae770c02e0c1eb90f9985b151e9085a38d0b",
+      "sha256": "3547cb1da8993fb7ebd42494d0e78997d2cfbe90c421f5efd022863e6909941e",
+      "bytes": 753612,
+      "origin": "verified-existing-project-cache",
+      "file": "datafixerupper-10.0.21.jar"
+    },
+    {
+      "name": "com.mojang:logging:1.7.12",
+      "url": "https://libraries.minecraft.net/com/mojang/logging/1.7.12/logging-1.7.12.jar",
+      "sha1": "351cea64a5233361327d8d54c44277041beed97f",
+      "sha256": "3c7ac9742fa98c773275379eb1046c048b5d2ee989152a8c69e7ba696c3f8538",
+      "bytes": 19540,
+      "origin": "verified-existing-project-cache",
+      "file": "logging-1.7.12.jar"
+    },
+    {
+      "name": "commons-io:commons-io:2.20.0",
+      "url": "https://libraries.minecraft.net/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+      "sha1": "36f3474daec2849c149e877614e7f979b2082cd2",
+      "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72",
+      "bytes": 563971,
+      "origin": "verified-existing-project-cache",
+      "file": "commons-io-2.20.0.jar"
+    },
+    {
+      "name": "io.netty:netty-buffer:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar",
+      "sha1": "05397ef65dcb60670e0e0dba4854522873af3070",
+      "sha256": "cc36ae9fbd0b03fe755eb4eb4424ca53b59cfd297d7fd47d49e5b1059beded6c",
+      "bytes": 378032,
+      "origin": "official-metadata-url",
+      "file": "netty-buffer-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-codec-base:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar",
+      "sha1": "01a01d45a9efc228c6d747525848b065e0656b5f",
+      "sha256": "feb410225938d9970de6b624a0c031d079804fa5cc5e1ec6e9298f16db5998a7",
+      "bytes": 155355,
+      "origin": "official-metadata-url",
+      "file": "netty-codec-base-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-codec-compression:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar",
+      "sha1": "bdbbcfcdbe217b95c14a04df4fc5d31213d5c27c",
+      "sha256": "13c8565414dd2115281303ef4ad1f7cc69bd7771d8d12c7d2fb31307dff26d11",
+      "bytes": 183349,
+      "origin": "official-metadata-url",
+      "file": "netty-codec-compression-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-codec-http:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar",
+      "sha1": "b5e0715df90047ee5a0138c8f704f43c751009e4",
+      "sha256": "0d16f981de8d0d304a2ab1a81f0a674892089fbaa8a583100aebb4a5b00456ec",
+      "bytes": 678387,
+      "origin": "official-metadata-url",
+      "file": "netty-codec-http-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-common:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar",
+      "sha1": "c2bc7fa5acfa2afc777e944d84f0aa65559cc81e",
+      "sha256": "9825ee68a0dc4cd2b53e2f532502401b2211bad9b77e8b04882d9e64487283ff",
+      "bytes": 819965,
+      "origin": "official-metadata-url",
+      "file": "netty-common-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-handler:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar",
+      "sha1": "cc82873ae4b6d14effe480740ad838de09add70d",
+      "sha256": "a259ca496da05ac1981f95cd856211f894a328056a6129e9cd70dbbd5df401f7",
+      "bytes": 587814,
+      "origin": "official-metadata-url",
+      "file": "netty-handler-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-resolver:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar",
+      "sha1": "fcea6d64273b59ab9127b68c16ae98af34642139",
+      "sha256": "c9eca6a99036485cf1d186b4a6a595b0a54c53808319ee03924270eae04c32bb",
+      "bytes": 32975,
+      "origin": "official-metadata-url",
+      "file": "netty-resolver-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-transport-classes-epoll:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-epoll/4.2.16.Final/netty-transport-classes-epoll-4.2.16.Final.jar",
+      "sha1": "cf90c7b892e284ba9f1545dce170168369b3b9d6",
+      "sha256": "9f2b53210db9c8d24e787ed43f3896aaf30d686ed270c7afbb29ab6330c6aa23",
+      "bytes": 159935,
+      "origin": "official-metadata-url",
+      "file": "netty-transport-classes-epoll-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-transport-classes-kqueue:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-kqueue/4.2.16.Final/netty-transport-classes-kqueue-4.2.16.Final.jar",
+      "sha1": "0fa2bcf8c71626510f6fae173f78182117b70f7a",
+      "sha256": "6599b495f69420cb240ab0a1aa60a19a2df3bc72791729170e0993727637a689",
+      "bytes": 116819,
+      "origin": "official-metadata-url",
+      "file": "netty-transport-classes-kqueue-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-transport-native-unix-common:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar",
+      "sha1": "3cf32390f1b80af890ac44aa0698c2ff58c2a4d7",
+      "sha256": "41ca8fe192083d17917be7ddcecded4da4fc1db1d1656d03d0bcb14e2f431155",
+      "bytes": 46877,
+      "origin": "official-metadata-url",
+      "file": "netty-transport-native-unix-common-4.2.16.Final.jar"
+    },
+    {
+      "name": "io.netty:netty-transport:4.2.16.Final",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar",
+      "sha1": "ae87a3bec51d503475a19fbd718bf777f2fc06c6",
+      "sha256": "cfa3f654caff906653385f4b7ddaa539d795b78f5711a622482b17d2b73484c0",
+      "bytes": 549855,
+      "origin": "official-metadata-url",
+      "file": "netty-transport-4.2.16.Final.jar"
+    },
+    {
+      "name": "it.unimi.dsi:fastutil:8.5.18",
+      "url": "https://libraries.minecraft.net/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar",
+      "sha1": "a6cff377eecc19c2037bf31568a6d7106b50ba1f",
+      "sha256": "9094ae67d01d0ad246f886f11ad557fc2e79c72cbf3feed83e1512a8ae90a74a",
+      "bytes": 23965563,
+      "origin": "verified-existing-project-cache",
+      "file": "fastutil-8.5.18.jar"
+    },
+    {
+      "name": "org.apache.commons:commons-lang3:3.20.0",
+      "url": "https://libraries.minecraft.net/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar",
+      "sha1": "65897b3e5731220962e659e001904af3c3cbeba9",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4",
+      "bytes": 713862,
+      "origin": "verified-existing-project-cache",
+      "file": "commons-lang3-3.20.0.jar"
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-api:2.26.0",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar",
+      "sha1": "ad52af0ecf054a7e3f275a2e180ee06d9c490951",
+      "sha256": "820de7bbaf430eaf2e3e5ccb92f23e2085797c5ac4d4f7fc6c8b660fbefa1dbc",
+      "bytes": 351126,
+      "origin": "verified-existing-project-cache",
+      "file": "log4j-api-2.26.0.jar"
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-core:2.26.0",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar",
+      "sha1": "d267ca60b27ddb075e0b4e75e7875859717bf85f",
+      "sha256": "406bb3132c47a5d322e5c571feb0787ca84496469f346eb51f1ef2ee45499902",
+      "bytes": 2015101,
+      "origin": "verified-existing-project-cache",
+      "file": "log4j-core-2.26.0.jar"
+    },
+    {
+      "name": "org.apache.logging.log4j:log4j-slf4j2-impl:2.26.0",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar",
+      "sha1": "668c0f0e813d83f00a7182533aa658ec7e7a0a0d",
+      "sha256": "cfc1bddbd39e684b698ae968291d8a3b3a55ee0ec2ef3d3ea5c2336a9e151598",
+      "bytes": 30211,
+      "origin": "verified-existing-project-cache",
+      "file": "log4j-slf4j2-impl-2.26.0.jar"
+    },
+    {
+      "name": "org.joml:joml:1.10.9",
+      "url": "https://libraries.minecraft.net/org/joml/joml/1.10.9/joml-1.10.9.jar",
+      "sha1": "438e036486bad66b189bff385dd07dea4f74a146",
+      "sha256": "feca4db853371704338621c120acc5cc32300d8af635fa42414b6213301e216b",
+      "bytes": 814581,
+      "origin": "verified-existing-project-cache",
+      "file": "joml-1.10.9.jar"
+    },
+    {
+      "name": "org.slf4j:slf4j-api:2.0.17",
+      "url": "https://libraries.minecraft.net/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+      "sha1": "d9e58ac9c7779ba3bf8142aff6c830617a7fe60f",
+      "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832",
+      "bytes": 69908,
+      "origin": "verified-existing-project-cache",
+      "file": "slf4j-api-2.0.17.jar"
+    }
+  ],
+  "privateReceiptSha256": "b069ec8767e93a20b4e4cc2920ada9bbabf97d4b188bed51bb3253487595d047",
+  "loadedOriginalClassSha256": {
+    "net/minecraft/client/resources/server/PackDownloader.class": "305e312e2ec644981d8c5c3072b0ee19a1a9b1435d2e07b8b827650915f06525",
+    "net/minecraft/client/resources/server/PackLoadFeedback.class": "c63cb4377c3e1e6ead83ffaff137b5fed881d2161e8c0e554368630576f30016",
+    "net/minecraft/client/resources/server/PackLoadFeedback$Update.class": "0e1d1eb4c6f8edc7e329c9a617e6b6bbbfcf1ef5fcfbe67bc3510b9125b0d939",
+    "net/minecraft/client/resources/server/PackLoadFeedback$FinalResult.class": "87a3f6a4cf0f999199dce4f187abdbabba871dd633a119ae85095dea024f2e20",
+    "net/minecraft/client/resources/server/PackReloadConfig.class": "08176ebb26fb010a66435abb0de60c4300a17a07e60bc759da4878eec609b210",
+    "net/minecraft/client/resources/server/PackReloadConfig$Callbacks.class": "ad619f89b88e7745e64e6adcaf51037bf7d5e4b785d9dab5329818d1e4b45bb2",
+    "net/minecraft/client/resources/server/ServerPackManager.class": "6fe9cb397df95b81755b3ac3f9a6a0936418ec2cd11d80ece7e1a04fcdef830c",
+    "net/minecraft/client/resources/server/ServerPackManager$PackPromptStatus.class": "74b03d370598b937bc84c824472cbc385cbb47e06a1ac93c48ac14133b80570c",
+    "net/minecraft/client/resources/server/ServerPackManager$ServerPackData.class": "ee1dc6ff2544cea4fb5904c7784bed18051c47a455cec4863a3416ef5abd0757",
+    "net/minecraft/server/packs/DownloadQueue$BatchResult.class": "771c4416309ac79dd7c80007acb885862f7dfee7a31f5789b46a9490270983b0",
+    "net/minecraft/client/resources/server/ServerPackManager$PackDownloadStatus.class": "fdbb4723b9d5faa229c6425979a543372390f6cf68f9ae395775b440b6e767f9",
+    "net/minecraft/client/resources/server/ServerPackManager$ActivationStatus.class": "5a06d126665824d4b524a057d858afa9316c751314fce2e24849239da8c015c8",
+    "net/minecraft/client/resources/server/ServerPackManager$RemovalReason.class": "ecbd1b2373a53928c0802967a1e27190db8112bb154fdebf17c9ff7bc2ebe121",
+    "net/minecraft/server/packs/DownloadQueue$DownloadRequest.class": "336d0f21422fad760bf7d7e028cd27af72b6b677856fd589db9129c52de68aaf",
+    "net/minecraft/client/resources/server/ServerPackManager$1.class": "dd9aecf51e775dca4b1d05d6b0e70919b09526bd2cd1c8fc41362d64744c9e4a",
+    "net/minecraft/client/resources/server/PackReloadConfig$IdAndPath.class": "ecc3fbcf8967e879423d62facef47d4ad0e3799dd7c04f662afc2d93bf11d7cc"
+  },
+  "limits": [
+    "Only one record per fresh manager and serial fixture callbacks;no competing IDs,reentrant callbacks,throwing adapters or arbitrary schedules.",
+    "Paths/URLs are opaque generated values. No pack file was created/read;manager record removal is not file deletion or download cancellation.",
+    "Updater records requests without automatically ticking;fixture explicitly chooses each tick/callback. Reload adapter does not load resources.",
+    "Fixture releases its callback handle after success/recovery-failure,matching the inspected wrapper;ordinary failure retains it.",
+    "Class-load identities are not initialization,executed-method or host-effect closure proofs. No full client or modded-provider qualification.",
+    "Measured macOS/JDK21 or25 only;CPU/heap caps and group retirement do not measure global memory reclamation."
+  ]
+}

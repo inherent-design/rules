@@ -249,10 +249,30 @@
           "net.minecraft.server.packs.DownloadQueue"
         ]
       },
-      "review": "pending",
-      "rules": [],
-      "proofs": [],
-      "nativeComparisons": []
+      "review": "partial:selected original serial manager branches across five Java releases;protocol/UI,HTTP,full reload and modded providers pending",
+      "rules": [
+        "host/minecraft/ServerPacks.lean",
+        "host/minecraft/ServerPacks.bend"
+      ],
+      "proofs": [
+        "host/minecraft/evidence/server-pack-conformance.json"
+      ],
+      "nativeComparisons": [
+        "host/minecraft/evidence/server-packs-1.21.1-20261125T115753954514Z/observed.json",
+        "host/minecraft/evidence/server-packs-1.21.11-20261125T115829152106Z/observed.json",
+        "host/minecraft/evidence/server-packs-1.21.4-20261125T115826313359Z/observed.json",
+        "host/minecraft/evidence/server-packs-1.21.5-20261125T115827718729Z/observed.json",
+        "host/minecraft/evidence/server-packs-26.3-20261125T115830049218Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "java-five-version-server-pack-manager",
+          "status": "partial:selected original single-record serial branches,not full-family qualification",
+          "report": "host/minecraft/SERVER-PACKS.md",
+          "conformance": "host/minecraft/evidence/server-pack-conformance.json",
+          "limits": "Controlled callbacks/opaque paths only;no HTTP,pack bytes,prompt UI,full reload,modded provider or renderer qualification."
+        }
+      ]
     },
     {
       "id": "reload.schedule",

@@ -1,0 +1,46 @@
+# Server-offered packs and manager lifetime
+
+The selected original Java 1.21.1, 1.21.4, 1.21.5, 1.21.11, and 26.3 managers produce identical retained traces for 77 serial actions each. The comparison separates prompt policy, per-record acceptance, download completion, activation, feedback, and callback custody. It does not start a client, contact a server, read a pack, or qualify a rendered reload. Bedrock and modded-provider behavior remain separate.
+
+The [source map](server-pack-sources.json) attributes 25 private inspection views to exact original classes and version mappings. The [native cases](server_pack_cases.json), [branch models](ServerPacks.lean), [Bend rules](ServerPacks.bend), and [comparison receipt](evidence/server-pack-conformance.json) establish different evidence layers. Private views are decompilations, including remapped inspection inputs for the older clients; native calls use the unmodified original clients. No translation proof is claimed.
+
+## Operations and consumers
+
+| Operation or boundary | Reviewed contract | Qualification |
+| --- | --- | --- |
+| Offer a remote pack | A declined global policy immediately reports DECLINED. Otherwise a record starts with REQUESTED download status; only an ALLOWED policy immediately accepts it. | Original manager constructor/actions in all five versions. The generated example.invalid URL is never opened. |
+| Offer a local path | DONE download status and a path do not grant prompt acceptance. PENDING consent can still prevent activation. | Original manager with a nonexistent opaque fixture path. No pack bytes or filesystem eligibility check. |
+| Allow, reject, or reset | Allow accepts remaining eligible records. Reject marks unaccepted records; it preserves prior acceptance. Reset changes the global policy without revoking prior acceptance. | Original manager actions. UI choices, connection policy, and surrounding disconnect behavior are not inferred from these methods alone. |
+| Request a download | A tick submits accepted, unremoved REQUESTED records, changes them to PENDING, and blocks reload while such downloads remain incomplete. | Real manager with a recording downloader and a captured result callback. No HTTP, cache, redirects, integrity, or progress notifier execution. |
+| Finish a download | The callback updates captured records. A removed record can already have left the manager list; the held callback can still finish and request another update without reporting DOWNLOADED. | Original callback after explicit removal and tick. Removal is not cancellation or file reclamation. |
+| Schedule activation | Accepted, DONE, unremoved records become candidates. An activation already PENDING blocks another reload. ACTIVE removed records require an unload transition. | Original manager plus recording reload adapter. The adapter only records requested paths. |
+| Acknowledge activation | Success marks the captured load list ACTIVE and reports APPLIED only for records without a removal reason. It makes captured unload records INACTIVE. | Original callback. This fixture supplies success; it does not prove resource application or successful network delivery. |
+| Handle failure | onFailure(false) marks pending activation failed, rebuilds the recovery load list from ACTIVE records, and requests an update. onFailure(true) makes pending records inactive without the same removal/update effect. | Both original callback branches are injected directly. The recovery-failure case is a conditional branch exercise, not a whole wrapper recovery journey. |
+| Remove and clean up | The first removal reason wins. Only INACTIVE removed records leave the manager list. Pending activation can retain the record through a later success and a separate unload acknowledgement. | Original state readback; no backing-file deletion, native renderer completion, or allocation reclamation inference. |
+| Report to a server | DownloadedPackSource maps ACCEPTED/DOWNLOADED and final results to outbound packet actions; APPLIED maps to SUCCESSFULLY_LOADED. | Source inspection only. Local reporting, send invocation, peer receipt, and peer processing are distinct observations. |
+| Disconnect or close | The wrapper pops records, substitutes logging feedback, and resets prompt policy on disconnect. close delegates to the download queue. | Source inspection only. No cancellation, queue retirement, cache deletion, or full disconnect qualification. |
+
+The manager bodies for 1.21.1, 1.21.4, and 1.21.5 have identical inspected text. The 1.21.11 view changes nullability annotations. The selected 26.3 view changes names, access, and presentation while retaining the reviewed branch structure. These observations and the finite native parity do not prove equivalence for all inputs or schedules.
+
+The wrapper changes matter independently. The 1.21.1 view uses Minecraft.tell for its main executor; later views use schedule. Later toast updates are dispatched through execute. The 1.21.11 and 26.3 metadata consumers use PackFormat and a PackType argument, rather than the earlier integer-only call. Those executor, metadata, and UI consumers were not executed here.
+
+All inspected wrappers construct username, profile UUID, version, version ID, pack-format, and User-Agent headers, use SHA1 cache hashing, and configure a 262,144,000-byte pack limit. No real user values are read by this fixture and no headers are sent. A supplied hash must match the wrapper's 40-hex syntax to become a HashCode; an invalid or absent string becomes null. This syntax rule does not establish actual integrity verification or trust in the content.
+
+## Rules and comparison limits
+
+ServerPacks.lean has 17 laws, including general first-reason preservation, unaccepted/incomplete exclusion, pending reload exclusion, and active/pending retention. Twelve Bend laws independently check selected branch consequences. Each of the 385 native actions yields four branch-specific observations predicted by both models from its independently captured prestate. This is a branch comparison, not a full transition refinement: paths, complete feedback streams, scheduling counts, and extra readback fields remain in the native trace even when that action's four-field projection does not check them.
+
+The fixture admits at most one record per fresh manager, serial explicit ticks, one controlled downloader, and a controlled reload callback. It records update requests without automatically ticking, retains the reload handle after ordinary failure, and releases its own handle after success or recovery failure, following the inspected wrapper's handle policy. A native manager record, a captured callback reference, a callback path, a file, and a renderer's use of that file are different owners. No theorem makes them one lifetime.
+
+The [pure comparison](server_pack_conformance.py) checks frozen producers, source mappings, raw stream identities, plan/readback continuity, five-version parity, selected branch outputs, decoder refusals, and changed observations. It starts Lean and Bend only. Negative controls are research-harness checks, not Minecraft's public input parser. Owner-local [collection](native_server_packs.py) and [export](export_server_packs.py) additionally verify original JARs, libraries, actual tools, compiled observers, class-load identities, and process-group retirement. Class loading does not prove initialization, execution, or complete effects.
+
+The five runs used bounded Java 21 or Java 25 processes on macOS arm64. All ten compiler/execution groups retired. No JVM or external application collection runs in ordinary CI. The broader host model still needs qualified Windows 11 and GNU/Linux observations where a consumer requires them; Windows Server CI does not supply Windows 11 native evidence.
+
+## Selectable designs and remaining work
+
+- A future UI can show consent, downloading, selected-for-reload, applied, failed, and removed states separately, with an operation/record identity. Keep-current is appropriate if the existing UI already meets that contract. Qualify the actual prompt and feedback consumers before proposing a product change.
+- A wrapper can expose “removal requested; callback still outstanding” when it has that custody information. It must not claim download cancellation or freed storage from an empty manager list. This is a proposed reporting contract, not an implemented Minecraft feature.
+- Stricter refusal of malformed offered hashes is an independent compatibility choice. The current null/optional behavior remains the baseline. Actual integrity, authenticity, redirects, header disclosure, and failure policy require separate source and native qualification.
+- A future combined provider must bind each offer, resource-generation change, callback, and completion to the intended incarnation. Multiple records, repeated IDs, stale callbacks, reentrancy, throwing feedback adapters, and real executor behavior remain open. This band does not select a replacement manager or alter vanilla consent.
+
+Protocol/UI prompt handling, cache retention and download limits, actual reload/recovery, full provider coexistence, GPU retirement, and rendered outcome remain unfinished. The inventory's packs.server family therefore remains partial.
