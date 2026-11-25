@@ -20,6 +20,8 @@ The [recovery band](RECOVERY.md) exercises installed CLI inspection, planning, c
 
 The [portable-storage feasibility band](PORTABLE-STORAGE.md) executes real browser input, OPFS/IndexedDB save/reopen, worker-loss boundaries, and project-backup downloads in Chromium and WebKit. Restored selected inputs produce identical native Prism inventories. This is a research host adapter, not browser distribution export or a production project format; its scoped models match captured save/reopen boundaries, while the full portable-engine join remains open.
 
+The [manual acquisition and saved-build band](PENDING.md) compares isolated installed-CLI inspection, partial retention, exact selection, damaged retained-byte refusal, and discovery through archive publication. Retained metadata is not byte verification, a saved recipe is not an execution grant, and recipe cleanup is not content collection. Whole pending/cache workflows remain unqualified.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.

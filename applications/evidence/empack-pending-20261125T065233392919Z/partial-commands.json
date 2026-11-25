@@ -1,0 +1,233 @@
+[
+  {
+    "case": "partial-list",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "list",
+      "--json"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.01020516688004136,
+    "streams": {
+      "stdout": "0479eb59174602bcb3781a56596f72141c3fa6dd4d4eab97dfc28166a50962a7",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-show",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "show",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.010133124887943268,
+    "streams": {
+      "stdout": "7175982044e27df4d413f8f17aa1d752446330f913ef61ff8ec034ad75649e6d",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-preview",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "--dry-run",
+      "pending",
+      "resume",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818",
+      "--downloads-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/never-created"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.018756290897727013,
+    "streams": {
+      "stdout": "3d1e2d9e5e85c2420965ae621cc0b32c94cbc9df1fb487f9006197e4fe0cdabe",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-wrong-bytes",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "resume",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818",
+      "--file",
+      "locked:first:primary=/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/downloads/first.zip"
+    ],
+    "exitCode": 1,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.03015958284959197,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "b391d04e9bccebc307eedab3e4631a7d386c755c3fcb476666e6630418d34c65"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-unknown-key",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "resume",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818",
+      "--file",
+      "unknown=/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/downloads/renamed-first.bin"
+    ],
+    "exitCode": 1,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.00959716597571969,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "67b6e8efc82f647e27630740e0a0730c772dc3498eb67ea6833756f870adce8d"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-duplicate-key",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "resume",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818",
+      "--file",
+      "locked:first:primary=/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/downloads/renamed-first.bin",
+      "--file",
+      "locked:first:primary=/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/downloads/renamed-first.bin"
+    ],
+    "exitCode": 1,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.009313791990280151,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "1ce06b1f9019feca6afc6cc693d382ac7ef8573f0e8c51befbb3926b8b11bf80"
+    },
+    "changedScopes": []
+  },
+  {
+    "case": "partial-first",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "resume",
+      "8e1fbff9714c75e5cbd946984592092283bbbb1efdedf684db0929b662e21818",
+      "--file",
+      "locked:first:primary=/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/downloads/renamed-first.bin"
+    ],
+    "exitCode": 1,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.050555082969367504,
+    "streams": {
+      "stdout": "a1b80ab90173fa3dba004e51ded01e02ca7c132a36d1baf6a9dd0eb2735ecdef",
+      "stderr": "0bda3c30b836d5ff96eb4641fa948cb0f27e546230b8a48181141e642b7a36b0"
+    },
+    "changedScopes": [
+      "state"
+    ]
+  },
+  {
+    "case": "partial-retained-list",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/state",
+      "--cache-dir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/cache",
+      "--workdir",
+      "/Users/zer0cell/production/rules/applications/evidence/empack-pending-20261125T065233392919Z/work/project",
+      "--yes",
+      "--color",
+      "never",
+      "pending",
+      "list",
+      "--json"
+    ],
+    "exitCode": 0,
+    "timedOut": false,
+    "ownedGroupAbsent": true,
+    "seconds": 0.009770250413566828,
+    "streams": {
+      "stdout": "d6f364ca7c61502c2aa260bc0152f12c57fb6322e1da8ec096d4a90ef255fbee",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "changedScopes": []
+  }
+]

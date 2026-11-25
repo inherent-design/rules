@@ -1,0 +1,165 @@
+{
+  "schema": 3,
+  "intent-revision": "9f44af7e44cf512bea3d4581ffbc082d8d9724e6fa693efb707e725f5856aec2",
+  "resolver": "rules-fictional-pending-fixture",
+  "java-policy": {
+    "historical-minimum": 21,
+    "id": "empack-java-1",
+    "metadata-revision": "b8e2a3e1ba241414f8b861f13c9a6fd6bc5d922d",
+    "recommended": 21,
+    "required-minimum": 21,
+    "supported": [
+      21
+    ]
+  },
+  "runtime": {
+    "minecraft": "1.21.1",
+    "loader": "vanilla",
+    "loader-version": null
+  },
+  "acceptable-versions": [],
+  "dependencies": {
+    "first": {
+      "incompatibilities": [],
+      "source-selector": null,
+      "title": "Fictional first",
+      "content": "resource-pack",
+      "identity": {
+        "kind": "provider",
+        "project": {
+          "provider": "curseforge",
+          "project": "123"
+        }
+      },
+      "selection": {
+        "project": {
+          "provider": "curseforge",
+          "project": "123"
+        },
+        "selection": {
+          "provider": "curseforge",
+          "id": "456"
+        }
+      },
+      "files": [
+        {
+          "slot": "primary",
+          "acquisition": {
+            "kind": "manual",
+            "pin": {
+              "project": {
+                "provider": "curseforge",
+                "project": "123"
+              },
+              "selection": {
+                "provider": "curseforge",
+                "id": "456"
+              }
+            },
+            "instructions": "Supply exact fictional fixture bytes"
+          },
+          "expected": {
+            "digests": {
+              "sha256": "fd7a1fdca8ed4cdb2ac8477a685862656092183c1265305ed6d83c94a868b36a"
+            },
+            "size": 13,
+            "accepted-observation": null
+          },
+          "provenance": {
+            "source": "rules fictional fixture",
+            "location": null,
+            "declared-digests": {
+              "sha256": "fd7a1fdca8ed4cdb2ac8477a685862656092183c1265305ed6d83c94a868b36a"
+            },
+            "conversions": []
+          },
+          "placements": [
+            {
+              "destination": "resourcepacks/first.zip",
+              "layer": "common",
+              "environment": {
+                "client": "required",
+                "server": "required"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "second": {
+      "incompatibilities": [],
+      "source-selector": null,
+      "title": "Fictional second",
+      "content": "resource-pack",
+      "identity": {
+        "kind": "provider",
+        "project": {
+          "provider": "curseforge",
+          "project": "124"
+        }
+      },
+      "selection": {
+        "project": {
+          "provider": "curseforge",
+          "project": "124"
+        },
+        "selection": {
+          "provider": "curseforge",
+          "id": "457"
+        }
+      },
+      "files": [
+        {
+          "slot": "primary",
+          "acquisition": {
+            "kind": "manual",
+            "pin": {
+              "project": {
+                "provider": "curseforge",
+                "project": "124"
+              },
+              "selection": {
+                "provider": "curseforge",
+                "id": "457"
+              }
+            },
+            "instructions": "Supply exact fictional fixture bytes"
+          },
+          "expected": {
+            "digests": {
+              "sha256": "9c3df37a823ce0afe43269c5f1764299f01272953c1a1945f2d6a5c649371d4f"
+            },
+            "size": 14,
+            "accepted-observation": null
+          },
+          "provenance": {
+            "source": "rules fictional fixture",
+            "location": null,
+            "declared-digests": {
+              "sha256": "9c3df37a823ce0afe43269c5f1764299f01272953c1a1945f2d6a5c649371d4f"
+            },
+            "conversions": []
+          },
+          "placements": [
+            {
+              "destination": "resourcepacks/second.zip",
+              "layer": "common",
+              "environment": {
+                "client": "required",
+                "server": "required"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "first": "complete",
+    "second": "complete"
+  },
+  "required-edges": {
+    "first": [],
+    "second": []
+  }
+}

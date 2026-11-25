@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "sources": [
+    {
+      "path": "docs/design/pending.md",
+      "sha256": "a664b5159044c99274fe18afb7d9bc66b4ff2782cf299be12531b85cc4c9f47b",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/docs/design/pending.md",
+      "inspection": "Current shared pending contract; selectors, unverified reports, bounded scanning and workflow-specific limits."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/pending.rs",
+      "sha256": "e805a4c89a972630027ef65019f0da44f3ab6c67f785027c7ba4fe2501ecdedf",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/pending.rs",
+      "inspection": "lines1-165: opaque IDs, unique selection, unverified retained reporting and exact keys."
+    },
+    {
+      "path": "crates/empack-lib/src/application/engine_host/pending.rs",
+      "sha256": "64e880d7f236641090bb162247b2a39052a5d03f868ba852bdd70b107445e2ee",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/application/engine_host/pending.rs",
+      "inspection": "Shared read/selection, association validation and workflow dispatch; no full import/sync/instance qualification."
+    },
+    {
+      "path": "crates/empack-lib/src/application/engine_host/build.rs",
+      "sha256": "de785645df3bd8913038611732e4b3b53902d824213e3e650840c3e1a337d443",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/application/engine_host/build.rs",
+      "inspection": "lines192-270: reconstruction before selected-ID check, explicit files before dry-run branch, discovery suppression and cleanup after publication."
+    },
+    {
+      "path": "crates/empack-lib/src/application/engine_host/build/assistance.rs",
+      "sha256": "eae0438457d7dc67f8edba9d03fc47466e3c5895c60a414fff393ccffe34215e",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/application/engine_host/build/assistance.rs",
+      "inspection": "lines25-155,170-225: finish/wait, repeated recipe checks, cumulative scanning and distinct content candidates. Wait and browser behavior source-only."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/local_inputs.rs",
+      "sha256": "ce415ab0090ce9551e46e9ddc79656515bc43a0d55853c4c294f5182a4688fe5",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/local_inputs.rs",
+      "inspection": "Local supply checks, distinct obligations and evidence before acquired-map replacement."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/execution.rs",
+      "sha256": "7c1c171d7046ce57d58fde051750c5873bfd0bfd8a3e156a8d9ff8ece4707492",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/execution.rs",
+      "inspection": "Execution returns NeedsInput before assembly/publication; cache and archive stages separate."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/suspension.rs",
+      "sha256": "8df400a94092622f2d8a297c205c13e2e33bb889cddc5862ce4272a4c996db59",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/suspension.rs",
+      "inspection": "Saved record owner/identity; reconstruct current obligations, verify retained bytes, store partial content and report metadata."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/suspension/store.rs",
+      "sha256": "30ddb05bf0c7b6cff21d6480915c490a88fe5bab45557993f17f9670a92f5905",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/suspension/store.rs",
+      "inspection": "lines85-249: bounded record read, document snapshot, exact old-byte condition and synchronized replacement."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/api/suspension/record.rs",
+      "sha256": "46f61f70c473b71ab1539a63465291bbc11634f5300067c9e6d88bcb50aa24e5",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/api/suspension/record.rs",
+      "inspection": "Deny-unknown record wire, recipe and content-addressed inputs rather than host paths or grants."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/content/store.rs",
+      "sha256": "23a3c181afdbe543ed50b9cc7a8bc900b087d5c479c9925f3878b7c3eebef474",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/content/store.rs",
+      "inspection": "lines65-125,300-398: existing lookup, private retained copy, publication integrity, expected assertions and content-address check."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/acquisition/local.rs",
+      "sha256": "86b718f06c30f35ce4db4b7ee49365e673da1ffc73e77400e3d236b257388107",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/acquisition/local.rs",
+      "inspection": "Native selected file identity, initial observation and reverified private copying."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/acquisition/discovery.rs",
+      "sha256": "9c46dd66437ca3d1b62ee5ca7578be1a81a7a8b868692f57516cf47b47015c3f",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/acquisition/discovery.rs",
+      "inspection": "Bounded direct-child scan, exact requirement assertions, candidate dedup by content ID and limit refusal; weak/ambiguous/limit cases not collected here."
+    },
+    {
+      "path": "crates/empack-lib/src/engine/build/acquisition.rs",
+      "sha256": "cc2dac9f068ede8149c4942617f2829df196557d97cbc055670f69416a73356a",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-lib/src/engine/build/acquisition.rs",
+      "inspection": "lines170-226: provider alternatives refresh only for provider sources, existing manual sources skipped."
+    },
+    {
+      "path": "crates/empack-tests/tests/journey_pending.rs",
+      "sha256": "4a094bd46b7b3a21f251cc977ea2baa27ac09c062000b844d9762af83af52ec3",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-tests/tests/journey_pending.rs",
+      "inspection": "lines1-215: existing regression expectations read, not executed by this cohort."
+    },
+    {
+      "path": "crates/empack-tests/src/fixtures/restricted.rs",
+      "sha256": "aae7354c4d9cbed66ccb9b416d7858548bdcb35d40c5ce9d7482c7f8ac152247",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-tests/src/fixtures/restricted.rs",
+      "inspection": "lines1-205: fictional exact restricted fixtures precedent; ours is independently authored and native-codec checked."
+    },
+    {
+      "path": "crates/empack-tests/src/harness/process.rs",
+      "sha256": "0b8f6bd3b51cc2804810376acc52ed5416cce5662384ffb7215a61a56a9b3ca0",
+      "url": "https://github.com/inherent-design/empack/blob/0b4462e3032b4f09230b15329722eabefb7f574c/crates/empack-tests/src/harness/process.rs",
+      "inspection": "lines390-430: proxy-based ordinary offline configuration, not OS network isolation."
+    }
+  ],
+  "scope": "Pinned current-source inspection separately attributed from installed0.8.8 CLI. No source/binary equivalence, full-flow, durability or cryptographic proof."
+}

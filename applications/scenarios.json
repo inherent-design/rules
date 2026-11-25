@@ -624,6 +624,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "empack-manual-pending-publication",
+      "features": [
+        "empack.manual-pending",
+        "empack.cache-leases",
+        "empack.consumer-builds"
+      ],
+      "flow": "Inspect a saved build, supply one exact input, cross process boundaries, refresh the selection, reverify retained backing and discover renamed content before publication.",
+      "counterexamples": [
+        "Treat filename or size as content proof.",
+        "Treat a retained label as verified current backing.",
+        "Reuse the old selector after replacing recipe bytes.",
+        "Treat recipe cleanup as cache eviction or partial saving as publication."
+      ],
+      "hostWitnesses": [
+        "revision-bound selection",
+        "retained byte custody",
+        "verification versus metadata",
+        "scoped effects and final publication"
+      ],
+      "status": "pending",
+      "evidence": [],
+      "componentEvidence": [
+        {
+          "status": "native-observed",
+          "scope": "One isolated fictional two-input native CLI flow;17 selected actions match both decision models, with20commands total.",
+          "remaining": "Real provider/game integration, all continuation kinds, limits/concurrency/crash/discard and cross-platform acceptance remain pending.",
+          "evidence": [
+            "empack/PENDING.md",
+            "evidence/empack-pending-conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }
