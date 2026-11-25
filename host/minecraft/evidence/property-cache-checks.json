@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "status": "bounded-owner-checks-passed; no publication or CI claimed",
+  "nativeCapture": "resource-cache-20261125T195402530738Z",
+  "sourceMap": {
+    "modefiteHandlers": 33,
+    "compatReaders": 33,
+    "viewIdentities": 51,
+    "nativeGamePropertyConformance": "unqualified"
+  },
+  "nativeCache": {
+    "scenarios": 13,
+    "actions": 41,
+    "classesLoaded": 2,
+    "compilerGroupsRetired": 1,
+    "jvmGroupsRetired": 1,
+    "profile": "Pinned Java 21/macOS arm64 with Gson; equal/distinct String identities and authored non-reentrant callbacks only"
+  },
+  "formal": {
+    "leanModules": 2,
+    "leanLaws": 17,
+    "bendFiles": 1,
+    "bendLaws": 10,
+    "gate": "scripts/check-rules.py in isolated clean public subset",
+    "comparison": "13 cases and 41 actions agree in both models; clean public receipt is identical"
+  },
+  "controls": {
+    "researchRefusals": 16,
+    "directCliRefusals": 1,
+    "unusedUnknownCases": 2,
+    "changedPremises": 4,
+    "changedObservationOutcomes": 8,
+    "changedObservationProfiles": 2,
+    "sourceMapMutations": 6
+  },
+  "basisSha256": {
+    "host/minecraft/ResourceCache.lean": "20911e489b5077b0d9da3b04c2d01c333bbdfd966c30c3f14cfc8cb9cdcbcfbc",
+    "host/minecraft/ResourceCacheCase.lean": "cf948e365a0f4950c902d5baac1f581f216551f49ec8712383b002f370c29acc",
+    "host/minecraft/ResourceCache.bend": "9257c03089726985199839058c68a7f6428b712550a2db7dfc7f2a5d84cf941b",
+    "host/minecraft/resource_cache_conformance.py": "e6b787d1abafb622b019520992cbfe79fbfe4611ff1fb6f04b5c173262e649fa",
+    "host/minecraft/resource_cache_observations.py": "bd5af0891026f708f4b270f84fcd3f322d1b4fed573b7478ea54b8e7dba7ce76",
+    "host/minecraft/property_contexts_check.py": "d9c5ff8f5ca1f0e735e3929c79aeeb7d616da8b34025f5ffa2ca7abaa90c94fd",
+    "host/minecraft/property-context-contracts.json": "bd4b647d60f11acc49131b87d0db8ce762a804f7ebb25181e0503bfcf362dea5",
+    "host/minecraft/evidence/resource-cache-conformance.json": "ed19ab353f4a925ceefb30ee74cf2e0e54e60d64346ef44ea778d4870a68f113",
+    "host/minecraft/evidence/resource-cache-identity-frames.json": "913a48a99fc6f3edde17cebe80685ce990b497ed8b378944d8617e47ece9b0ed"
+  },
+  "sourceDisambiguation": {
+    "privateCapture": "component-bytecode-20261125T194813125805Z",
+    "classSha256": "f66a4c6a5aec41dbd7ae1a47e9ec2aad9f5e4913d54224853396aa5d6aa8f7cb",
+    "finding": "Apparent decompiled absent-sentinel cast is not in original method bytecode; no product-defect claim.",
+    "targetMethodsInvoked": false
+  },
+  "checks": [
+    "Original artifact, tool, library, producer, class, and stream identities and case-local equal/distinct object facts checked.",
+    "The original 51 private source views match the canonical provider pins; six wrong-map mutations were rejected.",
+    "Normalized public export bytes match the original capture. No original classes, JARs, private arguments, or class-load log exported.",
+    "The clean public subset passed the gate for two Lean modules and one Bend model, with identical 13-scenario/41-action replay receipts.",
+    "AST, JSON, local navigation, repository metadata, actionlint, and whitespace checks passed."
+  ],
+  "corrections": [
+    "The reserved Lean name initialize became create; an unavailable Option helper became an explicit match.",
+    "The Bend constructor became CachedText to avoid a Base collision, and list sharing became explicit. These were research compiler corrections, not native product failures."
+  ],
+  "limits": [
+    "Actual native property, registry, input, world, provider transformations, and rendering remain unqualified.",
+    "Selected cache API observations do not directly expose full internal cells or callback closure state.",
+    "No arbitrary callback reentrancy/mutation, concurrent access, physical memory/GC, or other JDK/OS runtime qualification.",
+    "Cache entries are one retaining owner; clearing or eviction does not prove global reclamation.",
+    "Source-view/class identity does not prove decompiler correctness or general model/native equivalence.",
+    "Final public scan, index/history audit, and future CI are separate; the full research goal remains incomplete."
+  ]
+}

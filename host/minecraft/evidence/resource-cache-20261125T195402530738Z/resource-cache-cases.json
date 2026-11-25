@@ -1,0 +1,377 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "zero-capacity",
+      "capacity": 0,
+      "actions": []
+    },
+    {
+      "id": "negative-capacity",
+      "capacity": -1,
+      "actions": []
+    },
+    {
+      "id": "null-no-projection",
+      "capacity": 1,
+      "actions": [
+        {
+          "op": "project",
+          "token": "null",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "null",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v1",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "same-identity-hit",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "equal-value-distinct-identities",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "b",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "three",
+          "value": "v3",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "same-object-different-kinds",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "POTION",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "three",
+          "value": "v3",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "null-projection-memoized",
+      "capacity": 1,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": null,
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "fifo-hit-not-promoted",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "b",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "hit",
+          "value": "changed",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "c",
+          "kind": "ENCHANTMENTS",
+          "marker": "three",
+          "value": "v3",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "b",
+          "kind": "ENCHANTMENTS",
+          "marker": "hit-b",
+          "value": "changed",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "after-eviction",
+          "value": "v4",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "projection-throw-partial-entry",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": true
+        },
+        {
+          "op": "project",
+          "token": "b",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "retry",
+          "value": "v3",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "throw-entry-eviction",
+      "capacity": 1,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": true
+        },
+        {
+          "op": "project",
+          "token": "b",
+          "kind": "ENCHANTMENTS",
+          "marker": "two",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "retry",
+          "value": "v3",
+          "throw": false
+        }
+      ]
+    },
+    {
+      "id": "clear-keeps-registrations",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "onClear",
+          "marker": "first",
+          "failures": 0
+        },
+        {
+          "op": "onClear",
+          "marker": "second",
+          "failures": 0
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "clear"
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "again",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "clear"
+        }
+      ]
+    },
+    {
+      "id": "clear-callback-failure-partial",
+      "capacity": 2,
+      "actions": [
+        {
+          "op": "onClear",
+          "marker": "first",
+          "failures": 1
+        },
+        {
+          "op": "onClear",
+          "marker": "second",
+          "failures": 0
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "one",
+          "value": "v1",
+          "throw": false
+        },
+        {
+          "op": "clear"
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "again",
+          "value": "v2",
+          "throw": false
+        },
+        {
+          "op": "clear"
+        }
+      ]
+    },
+    {
+      "id": "all-five-kinds",
+      "capacity": 1,
+      "actions": [
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "ENCHANTMENTS",
+          "marker": "1",
+          "value": "1",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "STEW",
+          "marker": "2",
+          "value": "2",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "PAINTING",
+          "marker": "3",
+          "value": "3",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "AXOLOTL",
+          "marker": "4",
+          "value": "4",
+          "throw": false
+        },
+        {
+          "op": "project",
+          "token": "a",
+          "kind": "POTION",
+          "marker": "5",
+          "value": "5",
+          "throw": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "status": "passed-retained-original-host-free-cache",
+  "scenarios": 13,
+  "actions": 41,
+  "privateCapture": false,
+  "leanLaws": 17,
+  "bendLaws": 10,
+  "decoderRefusals": 16,
+  "directCliRefusals": 1,
+  "unusedUnknownCases": 2,
+  "changedPremiseControls": [
+    {
+      "case": "equal-value-distinct-identities",
+      "change": "identity"
+    },
+    {
+      "case": "fifo-hit-not-promoted",
+      "change": "capacity"
+    },
+    {
+      "case": "null-projection-memoized",
+      "change": "negative-result"
+    },
+    {
+      "case": "clear-callback-failure-partial",
+      "change": "callback-failure"
+    }
+  ],
+  "changedObservationControls": [
+    {
+      "case": "equal-value-distinct-identities",
+      "change": "identity-fact",
+      "rejection": "observation-shape/profile"
+    },
+    {
+      "case": "same-identity-hit",
+      "change": "cached-value",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "null-no-projection",
+      "change": "null-size",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "null-projection-memoized",
+      "change": "negative-hit",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "fifo-hit-not-promoted",
+      "change": "eviction-callback",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "projection-throw-partial-entry",
+      "change": "failure-size",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "clear-callback-failure-partial",
+      "change": "clear-size",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "clear-callback-failure-partial",
+      "change": "error-class",
+      "rejection": "observation-shape/profile"
+    },
+    {
+      "case": "clear-keeps-registrations",
+      "change": "callback-order",
+      "rejection": "model-outcome-difference"
+    },
+    {
+      "case": "same-object-different-kinds",
+      "change": "kind-value",
+      "rejection": "model-outcome-difference"
+    }
+  ],
+  "basisSha256": {
+    "host/minecraft/evidence/resource-cache-20261125T195402530738Z/receipt.json": "23101afe9f74f7de9d2e0ebcff866fce3496af959033495a147fa4e088e7612a",
+    "host/minecraft/evidence/resource-cache-20261125T195402530738Z/request.json": "cc991dfeb9c45e5724da58caa92544d7bbde0c33f4eecf5529de6ecd938600f5",
+    "host/minecraft/evidence/resource-cache-20261125T195402530738Z/observed.json": "b7ff94d1af91b2f6941f050bf65d64eca437a22c5037c1b9ba86988c53574d73",
+    "host/minecraft/ResourceCache.lean": "20911e489b5077b0d9da3b04c2d01c333bbdfd966c30c3f14cfc8cb9cdcbcfbc",
+    "host/minecraft/ResourceCacheCase.lean": "cf948e365a0f4950c902d5baac1f581f216551f49ec8712383b002f370c29acc",
+    "host/minecraft/ResourceCache.bend": "9257c03089726985199839058c68a7f6428b712550a2db7dfc7f2a5d84cf941b",
+    "host/minecraft/resource_cache_conformance.py": "e6b787d1abafb622b019520992cbfe79fbfe4611ff1fb6f04b5c173262e649fa"
+  },
+  "limits": [
+    "Original host-free cache with non-reentrant authored callbacks, not native components/game registries/rendering.",
+    "Only API results, size and callback traces are compared; full modeled entries are not raw native field observations.",
+    "Role-specific identity/value/event frames and nonpositive-capacity refusal projection are named premises; not JSON or translation proof.",
+    "No arbitrary callback mutation/reentrancy, concurrent access, lifetime reclamation or physical-memory proof."
+  ]
+}
