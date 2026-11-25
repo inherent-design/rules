@@ -1,0 +1,1352 @@
+{
+  "schema": 1,
+  "status": "breadth map;not capability qualification",
+  "profiles": [
+    "minecraft-1.21.1+1.21.5",
+    "minecraft-1.21.1+modefite+skyweave-compat",
+    "minecraft-1.21.1+modefite",
+    "minecraft-1.21.1"
+  ],
+  "families": [
+    {
+      "id": "packs.discovery",
+      "scope": "Repositories,folder and ZIP discovery",
+      "consumerNameHints": [
+        "PackRepository",
+        "FolderRepositorySource",
+        "FolderPackResources",
+        "FilePackResources"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.FilePackResources",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.FilePackResources",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.metadata",
+      "scope": "Description,format ranges and compatibility presentation",
+      "consumerNameHints": [
+        "PackMetadataSection",
+        "PackCompatibility"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+          "net.minecraft.server.packs.repository.PackCompatibility"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.metadata.pack.PackMetadataSection",
+          "net.minecraft.server.packs.repository.PackCompatibility"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.selection",
+      "scope": "Saved choices,ordering,required and fixed packs",
+      "consumerNameHints": [
+        "PackSelectionModel",
+        "Pack",
+        "Options"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.Options",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.repository.Pack"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.Options",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.repository.Pack"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.overlays",
+      "scope": "Format-gated overlay folders",
+      "consumerNameHints": [
+        "OverlayMetadataSection",
+        "CompositePackResources"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.CompositePackResources",
+          "net.minecraft.server.packs.OverlayMetadataSection"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.CompositePackResources",
+          "net.minecraft.server.packs.OverlayMetadataSection"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.filter",
+      "scope": "Namespace/path blocking",
+      "consumerNameHints": [
+        "ResourceFilterSection",
+        "ResourceLocationPattern"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.resources.ResourceFilterSection",
+          "net.minecraft.util.ResourceLocationPattern"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.resources.ResourceFilterSection",
+          "net.minecraft.util.ResourceLocationPattern"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.identifiers",
+      "scope": "Resource IDs versus admitted host paths",
+      "consumerNameHints": [
+        "ResourceLocation",
+        "FileUtil",
+        "FileToIdConverter"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.FileUtil",
+          "net.minecraft.resources.FileToIdConverter",
+          "net.minecraft.resources.ResourceLocation"
+        ],
+        "1.21.5": [
+          "net.minecraft.FileUtil",
+          "net.minecraft.resources.FileToIdConverter",
+          "net.minecraft.resources.ResourceLocation"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.priority",
+      "scope": "Single winners,resource stacks and metadata fallback",
+      "consumerNameHints": [
+        "FallbackResourceManager",
+        "MultiPackResourceManager",
+        "Resource"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.resources.FallbackResourceManager",
+          "net.minecraft.server.packs.resources.MultiPackResourceManager",
+          "net.minecraft.server.packs.resources.Resource"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.resources.FallbackResourceManager",
+          "net.minecraft.server.packs.resources.MultiPackResourceManager",
+          "net.minecraft.server.packs.resources.Resource"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "packs.server",
+      "scope": "Server offers,consent,download,feedback and cache",
+      "consumerNameHints": [
+        "ServerPackManager",
+        "DownloadedPackSource",
+        "DownloadQueue",
+        "ClientPacketListener"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.multiplayer.ClientPacketListener",
+          "net.minecraft.client.resources.server.DownloadedPackSource",
+          "net.minecraft.client.resources.server.ServerPackManager",
+          "net.minecraft.server.packs.DownloadQueue"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.multiplayer.ClientPacketListener",
+          "net.minecraft.client.resources.server.DownloadedPackSource",
+          "net.minecraft.client.resources.server.ServerPackManager",
+          "net.minecraft.server.packs.DownloadQueue"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "reload.schedule",
+      "scope": "Listener preparation,barriers and apply order",
+      "consumerNameHints": [
+        "SimpleReloadInstance",
+        "PreparableReloadListener",
+        "ReloadableResourceManager"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.server.packs.resources.PreparableReloadListener",
+          "net.minecraft.server.packs.resources.ReloadableResourceManager",
+          "net.minecraft.server.packs.resources.SimpleReloadInstance"
+        ],
+        "1.21.5": [
+          "net.minecraft.server.packs.resources.PreparableReloadListener",
+          "net.minecraft.server.packs.resources.ReloadableResourceManager",
+          "net.minecraft.server.packs.resources.SimpleReloadInstance"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "reload.failure",
+      "scope": "Partial application,fallback and user feedback",
+      "consumerNameHints": [
+        "ResourceLoadStateTracker",
+        "Minecraft",
+        "LoadingOverlay"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.Minecraft",
+          "net.minecraft.client.ResourceLoadStateTracker",
+          "net.minecraft.client.gui.screens.LoadingOverlay"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.Minecraft",
+          "net.minecraft.client.ResourceLoadStateTracker",
+          "net.minecraft.client.gui.screens.LoadingOverlay"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.blockstates",
+      "scope": "Variant/multipart selection and block-state context",
+      "consumerNameHints": [
+        "BlockModelDefinition",
+        "Variant",
+        "MultiPart",
+        "Selector"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.data.models.blockstates.Selector",
+          "net.minecraft.data.models.blockstates.Variant",
+          "net.minecraft.world.entity.animal.horse.Variant"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.world.entity.animal.horse.Variant"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.references",
+      "scope": "Parents,dependencies,missing models and cycles",
+      "consumerNameHints": [
+        "BlockModel",
+        "ModelBakery",
+        "ModelManager",
+        "ModelDiscovery"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.BlockModel",
+          "net.minecraft.client.resources.model.ModelBakery",
+          "net.minecraft.client.resources.model.ModelManager"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.block.model.BlockModel",
+          "net.minecraft.client.resources.model.ModelBakery",
+          "net.minecraft.client.resources.model.ModelDiscovery",
+          "net.minecraft.client.resources.model.ModelManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.geometry",
+      "scope": "Elements,faces,UV,shade,cull and rotation",
+      "consumerNameHints": [
+        "BlockElement",
+        "BlockElementFace",
+        "BlockFaceUV",
+        "FaceBakery"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.BlockElement",
+          "net.minecraft.client.renderer.block.model.BlockElementFace",
+          "net.minecraft.client.renderer.block.model.BlockFaceUV",
+          "net.minecraft.client.renderer.block.model.FaceBakery"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.block.model.BlockElement",
+          "net.minecraft.client.renderer.block.model.BlockElementFace",
+          "net.minecraft.client.renderer.block.model.FaceBakery"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.transforms",
+      "scope": "Display contexts,root transforms and render passes",
+      "consumerNameHints": [
+        "ItemTransforms",
+        "ItemTransform",
+        "ItemDisplayContext",
+        "ItemRenderer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.ItemTransform",
+          "net.minecraft.client.renderer.block.model.ItemTransforms",
+          "net.minecraft.client.renderer.entity.ItemRenderer",
+          "net.minecraft.world.item.ItemDisplayContext"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.block.model.ItemTransform",
+          "net.minecraft.client.renderer.block.model.ItemTransforms",
+          "net.minecraft.client.renderer.entity.ItemRenderer",
+          "net.minecraft.world.item.ItemDisplayContext"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.generated",
+      "scope": "Generated sprite geometry and layers",
+      "consumerNameHints": [
+        "ItemModelGenerator",
+        "BlockModel"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.BlockModel",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.block.model.BlockModel",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "models.legacy_overrides",
+      "scope": "Legacy item predicates and override order",
+      "consumerNameHints": [
+        "ItemOverride",
+        "ItemOverrides",
+        "ItemProperties"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.block.model.ItemOverride",
+          "net.minecraft.client.renderer.block.model.ItemOverrides",
+          "net.minecraft.client.renderer.item.ItemProperties"
+        ],
+        "1.21.5": []
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.root",
+      "scope": "Definition roots and component-selected model IDs",
+      "consumerNameHints": [
+        "ClientItem",
+        "ItemModelResolver",
+        "ClientItemInfoLoader"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.ClientItem",
+          "net.minecraft.client.renderer.item.ItemModelResolver",
+          "net.minecraft.client.resources.model.ClientItemInfoLoader"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.nodes",
+      "scope": "Model,composite,condition,select,range,empty,special and bundle nodes",
+      "consumerNameHints": [
+        "ItemModels",
+        "ItemModel",
+        "CompositeModel",
+        "ConditionalItemModel",
+        "SelectItemModel",
+        "RangeSelectItemModel"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.CompositeModel",
+          "net.minecraft.client.renderer.item.ConditionalItemModel",
+          "net.minecraft.client.renderer.item.ItemModel",
+          "net.minecraft.client.renderer.item.ItemModels",
+          "net.minecraft.client.renderer.item.RangeSelectItemModel",
+          "net.minecraft.client.renderer.item.SelectItemModel"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.conditions",
+      "scope": "Registered boolean properties and fields",
+      "consumerNameHints": [
+        "ConditionalItemModelProperties"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.select",
+      "scope": "Select properties,case codecs and equality",
+      "consumerNameHints": [
+        "SelectItemModelProperties",
+        "SelectItemModelProperty"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.properties.select.SelectItemModelProperties",
+          "net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.numeric",
+      "scope": "Numeric properties,scaling and thresholds",
+      "consumerNameHints": [
+        "RangeSelectItemModelProperties",
+        "RangeSelectItemModel"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.RangeSelectItemModel",
+          "net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.tints",
+      "scope": "Tint sources,leaf ownership and native colors",
+      "consumerNameHints": [
+        "ItemTintSources",
+        "ItemTintSource",
+        "ItemColors",
+        "BlockColors"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.color.block.BlockColors",
+          "net.minecraft.client.color.item.ItemColors"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.color.block.BlockColors",
+          "net.minecraft.client.color.item.ItemTintSource",
+          "net.minecraft.client.color.item.ItemTintSources"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.special",
+      "scope": "Special renderers and contextual state",
+      "consumerNameHints": [
+        "SpecialModelRenderers",
+        "SpecialModelRenderer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.special.SpecialModelRenderer",
+          "net.minecraft.client.renderer.special.SpecialModelRenderers"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "items.render_state",
+      "scope": "Selected layers,transforms,foil and dropped-item behavior",
+      "consumerNameHints": [
+        "ItemStackRenderState",
+        "ItemModelResolver",
+        "ItemRenderer",
+        "ItemEntityRenderer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+          "net.minecraft.client.renderer.entity.ItemRenderer"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.entity.ItemEntityRenderer",
+          "net.minecraft.client.renderer.entity.ItemRenderer",
+          "net.minecraft.client.renderer.item.ItemModelResolver",
+          "net.minecraft.client.renderer.item.ItemStackRenderState"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "equipment.definitions",
+      "scope": "Equipment layers,materials and component IDs",
+      "consumerNameHints": [
+        "EquipmentAssetManager",
+        "EquipmentClientInfo",
+        "EquipmentLayerRenderer",
+        "HumanoidArmorLayer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer",
+          "net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer",
+          "net.minecraft.client.resources.model.EquipmentAssetManager",
+          "net.minecraft.client.resources.model.EquipmentClientInfo"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "entities.presentation",
+      "scope": "Resource textures versus native geometry/actions",
+      "consumerNameHints": [
+        "EntityRenderDispatcher",
+        "EntityRenderer",
+        "LayerDefinitions",
+        "EntityModelSet"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.model.geom.EntityModelSet",
+          "net.minecraft.client.model.geom.LayerDefinitions",
+          "net.minecraft.client.renderer.entity.EntityRenderDispatcher",
+          "net.minecraft.client.renderer.entity.EntityRenderer"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.model.geom.EntityModelSet",
+          "net.minecraft.client.model.geom.LayerDefinitions",
+          "net.minecraft.client.renderer.entity.EntityRenderDispatcher",
+          "net.minecraft.client.renderer.entity.EntityRenderer"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.images",
+      "scope": "Decoding,dimensions,alpha,mipmap and upload",
+      "consumerNameHints": [
+        "NativeImage",
+        "TextureContents",
+        "AbstractTexture",
+        "TextureManager"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.TextureManager"
+        ],
+        "1.21.5": [
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.TextureContents",
+          "net.minecraft.client.renderer.texture.TextureManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.metadata",
+      "scope": "Blur,clamp and file metadata",
+      "consumerNameHints": [
+        "TextureMetadataSection",
+        "TextureMetadataSectionSerializer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.resources.metadata.texture.TextureMetadataSection",
+          "net.minecraft.client.resources.metadata.texture.TextureMetadataSectionSerializer"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.resources.metadata.texture.TextureMetadataSection"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.animation",
+      "scope": "Frame lists,timing,interpolation and ownership",
+      "consumerNameHints": [
+        "AnimationMetadataSection",
+        "SpriteContents",
+        "SpriteTicker"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.SpriteTicker",
+          "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.SpriteTicker",
+          "net.minecraft.client.resources.metadata.animation.AnimationMetadataSection"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.atlases",
+      "scope": "Atlas sources,filters,regions,palettes and dependencies",
+      "consumerNameHints": [
+        "SpriteSourceList",
+        "SpriteSources",
+        "TextureAtlas",
+        "AtlasSet"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.texture.TextureAtlas",
+          "net.minecraft.client.renderer.texture.atlas.SpriteSourceList",
+          "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+          "net.minecraft.client.resources.model.AtlasSet"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.texture.TextureAtlas",
+          "net.minecraft.client.renderer.texture.atlas.SpriteSourceList",
+          "net.minecraft.client.renderer.texture.atlas.SpriteSources",
+          "net.minecraft.client.resources.model.AtlasSet"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.gui",
+      "scope": "Sprite metadata,stretch,tile and nine-slicing",
+      "consumerNameHints": [
+        "GuiMetadataSection",
+        "GuiSpriteScaling",
+        "GuiGraphics",
+        "GuiSpriteManager"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.gui.GuiGraphics",
+          "net.minecraft.client.gui.GuiSpriteManager",
+          "net.minecraft.client.resources.metadata.gui.GuiMetadataSection",
+          "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.gui.GuiGraphics",
+          "net.minecraft.client.gui.GuiSpriteManager",
+          "net.minecraft.client.resources.metadata.gui.GuiMetadataSection",
+          "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "textures.colormaps",
+      "scope": "Grass,foliage and biome color consumers",
+      "consumerNameHints": [
+        "GrassColorReloadListener",
+        "FoliageColorReloadListener",
+        "BiomeColors"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.BiomeColors",
+          "net.minecraft.client.resources.FoliageColorReloadListener",
+          "net.minecraft.client.resources.GrassColorReloadListener"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.BiomeColors",
+          "net.minecraft.client.resources.FoliageColorReloadListener",
+          "net.minecraft.client.resources.GrassColorReloadListener"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "fonts.definitions",
+      "scope": "Provider types,filters,references and fallback",
+      "consumerNameHints": [
+        "FontManager",
+        "GlyphProviderDefinition",
+        "GlyphProviderType"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.gui.font.FontManager",
+          "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+          "net.minecraft.client.gui.font.providers.GlyphProviderType"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.gui.font.FontManager",
+          "net.minecraft.client.gui.font.providers.GlyphProviderDefinition",
+          "net.minecraft.client.gui.font.providers.GlyphProviderType"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "fonts.glyphs",
+      "scope": "Metrics,providers,baking and lifetime",
+      "consumerNameHints": [
+        "FontSet",
+        "FontTexture",
+        "BakedGlyph",
+        "Font"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.gui.Font",
+          "net.minecraft.client.gui.font.FontSet",
+          "net.minecraft.client.gui.font.FontTexture",
+          "net.minecraft.client.gui.font.glyphs.BakedGlyph"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.gui.Font",
+          "net.minecraft.client.gui.font.FontSet",
+          "net.minecraft.client.gui.font.FontTexture",
+          "net.minecraft.client.gui.font.glyphs.BakedGlyph"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "text.language",
+      "scope": "Language merging,RTL,formatting and fallback",
+      "consumerNameHints": [
+        "ClientLanguage",
+        "LanguageManager",
+        "LanguageInfo"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.resources.language.ClientLanguage",
+          "net.minecraft.client.resources.language.LanguageInfo",
+          "net.minecraft.client.resources.language.LanguageManager"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.resources.language.ClientLanguage",
+          "net.minecraft.client.resources.language.LanguageInfo",
+          "net.minecraft.client.resources.language.LanguageManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "text.components",
+      "scope": "Component/style data and selectors",
+      "consumerNameHints": [
+        "ComponentSerialization",
+        "Style",
+        "ComponentContents"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.network.chat.ComponentContents",
+          "net.minecraft.network.chat.ComponentSerialization",
+          "net.minecraft.network.chat.Style"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.properties.select.ComponentContents",
+          "net.minecraft.network.chat.ComponentContents",
+          "net.minecraft.network.chat.ComponentSerialization",
+          "net.minecraft.network.chat.Style"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "text.builtin_lists",
+      "scope": "Credits,splashes and regional-compliance resources",
+      "consumerNameHints": [
+        "SplashManager",
+        "WinScreen",
+        "PeriodicNotificationManager"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "sounds.definitions",
+      "scope": "Replacement/append,entries,weights and references",
+      "consumerNameHints": [
+        "SoundManager",
+        "SoundEventRegistration",
+        "SoundEventRegistrationSerializer"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.resources.sounds.SoundEventRegistration",
+          "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer",
+          "net.minecraft.client.sounds.SoundManager"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.resources.sounds.SoundEventRegistration",
+          "net.minecraft.client.resources.sounds.SoundEventRegistrationSerializer",
+          "net.minecraft.client.sounds.SoundManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "sounds.playback",
+      "scope": "Loading,streaming,subtitles and native lifetime",
+      "consumerNameHints": [
+        "SoundEngine",
+        "SoundBufferLibrary",
+        "Sound",
+        "SoundInstance"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.resources.sounds.Sound",
+          "net.minecraft.client.resources.sounds.SoundInstance",
+          "net.minecraft.client.sounds.SoundBufferLibrary",
+          "net.minecraft.client.sounds.SoundEngine"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.resources.sounds.Sound",
+          "net.minecraft.client.resources.sounds.SoundInstance",
+          "net.minecraft.client.sounds.SoundBufferLibrary",
+          "net.minecraft.client.sounds.SoundEngine"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "particles.definitions",
+      "scope": "Sprite sets versus native particle behavior",
+      "consumerNameHints": [
+        "ParticleDescription",
+        "ParticleEngine",
+        "ParticleProvider"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.particle.ParticleDescription",
+          "net.minecraft.client.particle.ParticleEngine",
+          "net.minecraft.client.particle.ParticleProvider"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.particle.ParticleDescription",
+          "net.minecraft.client.particle.ParticleEngine",
+          "net.minecraft.client.particle.ParticleProvider"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "shaders.programs",
+      "scope": "Core programs,stages,includes,uniforms and compile/link",
+      "consumerNameHints": [
+        "ShaderInstance",
+        "ShaderManager",
+        "CompiledShader",
+        "CompiledShaderProgram",
+        "GlslPreprocessor"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "com.mojang.blaze3d.preprocessor.GlslPreprocessor",
+          "net.minecraft.client.renderer.ShaderInstance"
+        ],
+        "1.21.5": [
+          "com.mojang.blaze3d.preprocessor.GlslPreprocessor",
+          "net.minecraft.client.renderer.ShaderManager"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "shaders.post_effects",
+      "scope": "Passes,targets,inputs and application",
+      "consumerNameHints": [
+        "PostChain",
+        "PostPass",
+        "PostEffectPipeline"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.PostChain",
+          "net.minecraft.client.renderer.PostPass"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.PostChain",
+          "net.minecraft.client.renderer.PostPass"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "render.pipeline",
+      "scope": "Render types,materials,lighting and GPU boundaries",
+      "consumerNameHints": [
+        "RenderType",
+        "RenderPipelines",
+        "RenderPipeline",
+        "GpuWarnlistManager",
+        "RenderSystem"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "com.mojang.blaze3d.pipeline.RenderPipeline",
+          "com.mojang.blaze3d.systems.RenderSystem",
+          "net.minecraft.client.renderer.GpuWarnlistManager",
+          "net.minecraft.client.renderer.RenderType"
+        ],
+        "1.21.5": [
+          "com.mojang.blaze3d.pipeline.RenderPipeline",
+          "com.mojang.blaze3d.systems.RenderSystem",
+          "net.minecraft.client.renderer.GpuWarnlistManager",
+          "net.minecraft.client.renderer.RenderPipelines",
+          "net.minecraft.client.renderer.RenderType"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "render.retirement",
+      "scope": "Reload/disconnect and texture/model/buffer ownership",
+      "consumerNameHints": [
+        "TextureManager",
+        "ModelManager",
+        "ShaderManager",
+        "GameRenderer",
+        "SoundEngine"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.renderer.GameRenderer",
+          "net.minecraft.client.renderer.texture.TextureManager",
+          "net.minecraft.client.resources.model.ModelManager",
+          "net.minecraft.client.sounds.SoundEngine"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.renderer.GameRenderer",
+          "net.minecraft.client.renderer.ShaderManager",
+          "net.minecraft.client.renderer.texture.TextureManager",
+          "net.minecraft.client.resources.model.ModelManager",
+          "net.minecraft.client.sounds.SoundEngine"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "game.registry",
+      "scope": "Registered IDs,component codecs and unavailable newer entries",
+      "consumerNameHints": [
+        "BuiltInRegistries",
+        "DataComponents",
+        "RegistryAccess"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.core.RegistryAccess",
+          "net.minecraft.core.component.DataComponents",
+          "net.minecraft.core.registries.BuiltInRegistries"
+        ],
+        "1.21.5": [
+          "net.minecraft.core.RegistryAccess",
+          "net.minecraft.core.component.DataComponents",
+          "net.minecraft.core.registries.BuiltInRegistries"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "game.stack",
+      "scope": "Components,damage,count,custom data and item identity",
+      "consumerNameHints": [
+        "ItemStack",
+        "DataComponentType",
+        "PatchedDataComponentMap"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.core.component.DataComponentType",
+          "net.minecraft.core.component.PatchedDataComponentMap",
+          "net.minecraft.world.item.ItemStack"
+        ],
+        "1.21.5": [
+          "net.minecraft.core.component.DataComponentType",
+          "net.minecraft.core.component.PatchedDataComponentMap",
+          "net.minecraft.world.item.ItemStack"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "game.context",
+      "scope": "World/dimension,biome,time,entity and seed inputs",
+      "consumerNameHints": [
+        "ClientLevel",
+        "LivingEntity",
+        "ItemDisplayContext"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.client.multiplayer.ClientLevel",
+          "net.minecraft.world.entity.LivingEntity",
+          "net.minecraft.world.item.ItemDisplayContext"
+        ],
+        "1.21.5": [
+          "net.minecraft.client.multiplayer.ClientLevel",
+          "net.minecraft.world.entity.LivingEntity",
+          "net.minecraft.world.item.ItemDisplayContext"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "game.actions",
+      "scope": "Use,charge,cooldown,bundle and presentation versus action",
+      "consumerNameHints": [
+        "ItemStack",
+        "LivingEntity",
+        "BundleItem",
+        "CrossbowItem",
+        "FishingRodItem"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [
+          "net.minecraft.world.entity.LivingEntity",
+          "net.minecraft.world.item.BundleItem",
+          "net.minecraft.world.item.CrossbowItem",
+          "net.minecraft.world.item.FishingRodItem",
+          "net.minecraft.world.item.ItemStack"
+        ],
+        "1.21.5": [
+          "net.minecraft.world.entity.LivingEntity",
+          "net.minecraft.world.item.BundleItem",
+          "net.minecraft.world.item.CrossbowItem",
+          "net.minecraft.world.item.FishingRodItem",
+          "net.minecraft.world.item.ItemStack"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "host.loader",
+      "scope": "NeoForge model-loader,bake and render extensions",
+      "consumerNameHints": [
+        "ExtendedBlockModelDeserializer",
+        "CompositeModel"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": [
+          "net.minecraft.client.renderer.item.CompositeModel"
+        ]
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "host.modefite",
+      "scope": "Modefite codecs,registries,loading and scalar rotations",
+      "consumerNameHints": [
+        "ModefiteClientCommon",
+        "ItemModelTypes",
+        "UnlockedModelRotationDeserializerMixin"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": []
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    },
+    {
+      "id": "host.compat",
+      "scope": "Compat decoding,evaluation,bake,epochs and gates",
+      "consumerNameHints": [
+        "ResourceDefinitions",
+        "ItemDefinitions",
+        "MultiAxisModels",
+        "DefinitionBake"
+      ],
+      "vanillaConsumerLocators": {
+        "1.21.1": [],
+        "1.21.5": []
+      },
+      "review": "pending",
+      "rules": [],
+      "proofs": [],
+      "nativeComparisons": []
+    }
+  ],
+  "vanillaAssetCensus": {
+    "1.21.1": {
+      "resourcePackFormat": 34,
+      "dataPackFormat": 48,
+      "clientAssetFamilies": {
+        "atlases": 14,
+        "blockstates": 1062,
+        "font": 7,
+        "gpu_warnlist.json": 1,
+        "lang": 1,
+        "models": 3891,
+        "particles": 99,
+        "regional_compliancies.json": 1,
+        "shaders": 200,
+        "texts": 4,
+        "textures": 3167
+      },
+      "clientRootMarkers": [
+        "assets/.mcassetsroot"
+      ],
+      "externalAssetFamilies": {
+        "<root>": 1,
+        "font": 3,
+        "icon_128x128.png": 1,
+        "icon_16x16.png": 1,
+        "icon_256x256.png": 1,
+        "icon_32x32.png": 1,
+        "icon_48x48.png": 1,
+        "lang": 145,
+        "minecraft.icns": 1,
+        "resourcepacks": 2,
+        "snapshot": 6,
+        "sounds": 3727,
+        "sounds.json": 1,
+        "textures": 22
+      },
+      "externalObjects": 3913
+    },
+    "1.21.5": {
+      "resourcePackFormat": 55,
+      "dataPackFormat": 71,
+      "clientAssetFamilies": {
+        "atlases": 14,
+        "blockstates": 1106,
+        "equipment": 27,
+        "font": 7,
+        "gpu_warnlist.json": 1,
+        "items": 1396,
+        "lang": 2,
+        "models": 3402,
+        "particles": 103,
+        "post_effect": 6,
+        "regional_compliancies.json": 1,
+        "shaders": 86,
+        "texts": 4,
+        "textures": 3425
+      },
+      "clientRootMarkers": [
+        "assets/.mcassetsroot"
+      ],
+      "externalAssetFamilies": {
+        "<root>": 1,
+        "font": 3,
+        "icon_128x128.png": 1,
+        "icon_16x16.png": 1,
+        "icon_256x256.png": 1,
+        "icon_32x32.png": 1,
+        "icon_48x48.png": 1,
+        "lang": 145,
+        "minecraft.icns": 1,
+        "resourcepacks": 2,
+        "snapshot": 6,
+        "sounds": 4013,
+        "sounds.json": 1,
+        "texts": 1,
+        "textures": 22
+      },
+      "externalObjects": 4200
+    }
+  },
+  "limits": [
+    "Family/name matches are source locators;missing matches require inspection,not inferred refusal.",
+    "Client JARs and external official asset indexes both contribute;asset counts are not schema/gameplay proof.",
+    "All families remain pending semantic/consumer review. No model is complete."
+  ]
+}
