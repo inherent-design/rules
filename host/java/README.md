@@ -28,6 +28,10 @@ python3 host/java/arena_probe.py --jdk /path/to/jdk25 --private .build/java25
 
 The collector freezes its sources, records the JDK release and executable hashes, compiles with `--release 25`, and retains raw channels and child-group retirement. `export_arena.py` exports authored sources and observation bytes, while retaining exact local command paths privately. No Minecraft or other application is started.
 
+## Filesystem identity
+
+The [filesystem comparison](../filesystem/README.md) separately observes 15 standard-library calls on Java 17, 21, and 25. Equal missing Paths can produce a true `Files.isSameFile` result while attribute reads report absence. Preserve API/provider provenance and object-existence evidence; this library Boolean is not a universal native identity witness or mutation grant. The fixture does not start an application or daemon and remains outside ordinary CI.
+
 ## Signed arithmetic
 
 The [32-bit word contract](WORD32.md) compares 30 authored runtime operations across Java 17, 21, and 25. It distinguishes positive operands from a positive wrapped aggregate and is consumed by the selected Minecraft sound controls. Numeric decoding, random algorithms, JVM correctness, and native Windows/Linux execution are separate qualifications.

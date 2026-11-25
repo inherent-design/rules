@@ -11,6 +11,8 @@
 
 ## Reading the results
 
+The [filesystem identity band](filesystem/README.md) adds a separate scoped guard rather than changing the older file-generation decision. Native owned fixtures distinguish case/normalization aliases, ancestry, missing identity, and rebinding after preflight. Java 17/21/25 same-file results have different preconditions from Python's object witness. Neither normalization nor a successful preflight supplies the actual mutation protocol.
+
 The [profile matrix](../profiles/README.md) identifies the actual host, runtime layer, and untested cases. [Host.bend](../common/Host.bend) is the executable decision model. [Host.lean](../common/Host.lean) checks the invariants and supplies an independent finite model. Together they describe what can be reported from particular observations. Production integration remains a consumer decision. The probes execute real effects in private fixtures. This repository uses the emitted core during verification.
 
 | Decision | Contract, assumptions, and observed failure case |

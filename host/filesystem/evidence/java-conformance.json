@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "status": "passed-retained-java-samefile",
+  "calls": 15,
+  "guardProjections": 15,
+  "changedObservationControls": [
+    "17:missing-equal-claims-object",
+    "17:changed-api-result",
+    "21:missing-equal-claims-object",
+    "21:changed-api-result",
+    "25:missing-equal-claims-object",
+    "25:changed-api-result"
+  ],
+  "profiles": [
+    {
+      "feature": 17,
+      "profile": {
+        "JAVA_VERSION": "17.0.21.1",
+        "JAVA_RUNTIME_VERSION": "17.0.21.1+2",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "calls": 5,
+      "guardProjections": [
+        {
+          "case": "existing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "existing-different",
+          "libraryResult": "false",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "case-spelling",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "missing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "missing-different",
+          "libraryResult": "NoSuchFileException",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        }
+      ]
+    },
+    {
+      "feature": 21,
+      "profile": {
+        "JAVA_VERSION": "21.0.13.1",
+        "JAVA_RUNTIME_VERSION": "21.0.13.1+2-LTS",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "calls": 5,
+      "guardProjections": [
+        {
+          "case": "existing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "existing-different",
+          "libraryResult": "false",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "case-spelling",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "missing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "missing-different",
+          "libraryResult": "NoSuchFileException",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        }
+      ]
+    },
+    {
+      "feature": 25,
+      "profile": {
+        "JAVA_VERSION": "25.0.4.1",
+        "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+        "IMPLEMENTOR": "Eclipse Adoptium",
+        "OS_NAME": "Darwin",
+        "OS_ARCH": "aarch64"
+      },
+      "calls": 5,
+      "guardProjections": [
+        {
+          "case": "existing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "existing-different",
+          "libraryResult": "false",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "case-spelling",
+          "libraryResult": "true",
+          "attributes": [
+            "directory",
+            "directory"
+          ],
+          "preflight": 2
+        },
+        {
+          "case": "missing-equal",
+          "libraryResult": "true",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        },
+        {
+          "case": "missing-different",
+          "libraryResult": "NoSuchFileException",
+          "attributes": [
+            "NoSuchFileException",
+            "NoSuchFileException"
+          ],
+          "preflight": 1
+        }
+      ]
+    }
+  ],
+  "basisSha256": {
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/SameFileProbe.java": "3030ff32572bee826716a1f2b4778c9a8318568bdc126a7fd6e7302089ad47cf",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/execute.stdout": "00f6d1d2a2b32e33de4a0f9ce658005f5c74e473136cd4bec790ad6790f36070",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/java_probe.py": "19049da6041a6dc8416415f57efeab9ad7504c86266f7531972da5e922865651",
+    "host/filesystem/evidence/java-same-file-17-20261125T155733434126Z/receipt.json": "4fdf3f46caebc8001a95fee22950c0039c46d98009ed249e5289905c6978f75d",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/SameFileProbe.java": "3030ff32572bee826716a1f2b4778c9a8318568bdc126a7fd6e7302089ad47cf",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/execute.stdout": "00f6d1d2a2b32e33de4a0f9ce658005f5c74e473136cd4bec790ad6790f36070",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/java_probe.py": "19049da6041a6dc8416415f57efeab9ad7504c86266f7531972da5e922865651",
+    "host/filesystem/evidence/java-same-file-21-20261125T155733742817Z/receipt.json": "327e10236b54c4d45c5ccb23102b5c3428e8a004b6b439d5bafbc80df1ae7cad",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/SameFileProbe.java": "3030ff32572bee826716a1f2b4778c9a8318568bdc126a7fd6e7302089ad47cf",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/execute.stdout": "00f6d1d2a2b32e33de4a0f9ce658005f5c74e473136cd4bec790ad6790f36070",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/java_probe.py": "19049da6041a6dc8416415f57efeab9ad7504c86266f7531972da5e922865651",
+    "host/filesystem/evidence/java-same-file-25-20261125T155734068359Z/receipt.json": "4ba45f5abb03bb679254ce928f1378b1cbb5c4c741ba413762fbebbd36da6834",
+    "host/filesystem/java_compare.py": "c29def0ce574003a836baedb26b9ffa5e2d442579e477e52a0a157ffb58fcbac",
+    "host/filesystem/protocol.py": "35d3e20e411fbf6ea41199d3b41f2169a2dae1fa6e1bfc4dcbe050884f0f8c41",
+    "host/filesystem/vectors.json": "5cbba7fdc8af7fb3c07269d0b597e33783ac213a5b0c47da4bc7f44570adeb06",
+    "host/filesystem/verify.py": "10d6e0861c44616f42a63e46a11d714ca70fa04c29c1e12032620a1f0b371c36"
+  },
+  "limits": [
+    "Selected default-provider calls on three Darwin JDKs;not all providers,permissions,hosts or races.",
+    "Equal missing paths returning true is library behavior,not an existence witness or a demonstrated product bug.",
+    "Guard projections use explicit attributes and withhold complete separation/boundary authority;shared Python adapter not formally proven.",
+    "Private class/tool/execution artifact verification occurred at export;ordinary replay never starts Java or re-proves a JVM."
+  ]
+}

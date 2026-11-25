@@ -1,5 +1,7 @@
 # Rules for composition
 
+The [filesystem guard](FilesystemGuard.lean) and its [host witnesses](../host/filesystem/README.md) distinguish lexical policy, current object/ancestry evidence, complete protected scope, and the separate protocol binding an authorized mutation. An early known refusal needs no additional identity query; unknown separation remains unresolved. A preflight candidate alone grants no mutation authority.
+
 A useful atom has input identities, units, a decision and an observable result. Use a partial lookup for a single optional target. Use a relation for many possible endpoints, such as a part belonging to several assemblies. Existential composition keeps an intermediate witness and is associative. In a query that counts results, specify whether two witnesses denote two supports or one distinct endpoint. Relational composition alone does not define multiplicity or grant access.
 
 | Question | Formal obligation in [Core.lean](Core.lean) | Application |

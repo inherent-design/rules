@@ -67,6 +67,9 @@ jobs:
           python3 host/minecraft/sprite_set_conformance.py
           python3 host/minecraft/font_filter_conformance.py
           python3 host/minecraft/gui_scaling_conformance.py
+          python3 host/filesystem/compare.py
+          python3 host/filesystem/verify.py host/filesystem/evidence/native-macos-20261125T155103537084Z/observed.json --controls
+          python3 host/filesystem/java_compare.py
           scripts/ci-export
 
   hosts:
@@ -97,6 +100,8 @@ jobs:
           node host/lifecycles/verify-record.mjs
           node host/lifecycles/retention-probe.mjs > .build/lifecycles/retention.jsonl
           node host/lifecycles/check.mjs .build/lifecycles/retention.jsonl
+      - name: Exercise bounded filesystem identity fixtures
+        run: python host/filesystem/run.py
       - name: Exercise bounded POSIX host fixtures
         if: runner.os != 'Windows'
         shell: bash

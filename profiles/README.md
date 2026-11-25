@@ -4,6 +4,8 @@ A profile identifies whose guarantee the caller receives. The same Java class fi
 
 ## Native systems
 
+The [filesystem identity witness](../host/filesystem/README.md) records actual case/normalization and ancestry behavior per owned fixture, with Python/runtime and host provenance. Its local Darwin observation does not inherit every earlier APFS claim or qualify Linux, Windows 11, or another volume. The bounded cross-platform CI procedure records its actual runners; retained Java identity calls are separate macOS 17/21/25 evidence. Production race-safe mutation remains unqualified.
+
 | Profile | Selected environment and maintenance basis | Evidence boundary |
 | --- | --- | --- |
 | macOS Tahoe, arm64 | Tested 26.7.1 build 25G241, Darwin 25.6.0, Apple M4 Pro, APFS. Apple released this build on September 28, 2026, and listed further Tahoe security releases through November, including 26.7.3. Apple’s release list supplies an observed servicing interval without promising a fixed LTS end date. [Tested build](https://support.apple.com/en-us/149228) · [Release history](https://support.apple.com/en-us/100100) | Local user process, private PTYs, loopback TCP, SQLite, and offscreen Metal. Later Tahoe patches, GUI focus, power loss, and physical device removal remain untested. |
