@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Acquire exact selected Java-only 26.3 codec dependencies, never native payloads."""
+"""Acquire exact selected Java-only codec dependencies, never native payloads."""
 import argparse
 from datetime import datetime,timezone
 import hashlib
@@ -17,10 +17,11 @@ WANTED.update({'org.apache.commons:commons-lang3','commons-io:commons-io','com.m
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--metadata',type=Path,required=True);p.add_argument('--private',type=Path,required=True);p.add_argument('--include-netty-java',action='store_true');args=p.parse_args()
-    target=next(t for t in json.loads((HERE/'targets.json').read_text())['javaReferences'] if t['release']=='26.3')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--metadata',type=Path,required=True);p.add_argument('--private',type=Path,required=True);p.add_argument('--include-netty-java',action='store_true');p.add_argument('--release',choices=['1.21.11','26.3'],default='26.3');p.add_argument('--reuse',type=Path);args=p.parse_args()
+    target=next(t for t in json.loads((HERE/'targets.json').read_text())['javaReferences'] if t['release']==args.release)
     assert sha(args.metadata)==target['source']['metadataSha256'];meta=json.loads(args.metadata.read_text())
     private=args.private.resolve();private.mkdir(parents=True,exist_ok=True);rows=[]
+    producer=private/('acquire-producer-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'.py');producer.write_bytes(Path(__file__).read_bytes());producer_digest=sha(producer)
     wanted=set(WANTED)
     if args.include_netty_java:wanted.update(':'.join(l['name'].split(':')[:2]) for l in meta['libraries'] if l['name'].startswith('io.netty:') and len(l['name'].split(':'))==3)
     selected=[l for l in meta['libraries'] if ':'.join(l['name'].split(':')[:2]) in wanted and len(l['name'].split(':'))==3];assert {':'.join(l['name'].split(':')[:2]) for l in selected}==wanted and len(selected)==len(wanted)
@@ -28,8 +29,13 @@ def main():
         assert len(library['name'].split(':'))==3 and not library.get('rules'),'No native/classified/conditional artifact selected'
         a=library['downloads']['artifact'];destination=(private/a['path']).resolve();assert destination.is_relative_to(private)
         assert a['url'].startswith('https://libraries.minecraft.net/')
-        destination.parent.mkdir(parents=True,exist_ok=True);origin='verified-existing-project-cache'
+        origin='verified-existing-project-cache'
+        if not destination.exists() and args.reuse:
+            candidate=(args.reuse.resolve()/a['path']).resolve();assert candidate.is_relative_to(args.reuse.resolve())
+            if candidate.is_file() and candidate.stat().st_size==a['size'] and sha(candidate,'sha1')==a['sha1']:
+                destination=candidate;origin='verified-reused-read-only-study-input'
         if not destination.exists():
+            destination.parent.mkdir(parents=True,exist_ok=True)
             temporary=destination.with_name(destination.name+'.part-'+uuid.uuid4().hex)
             with urllib.request.urlopen(a['url'],timeout=30) as response,temporary.open('xb') as out:
                 while chunk:=response.read(65536):out.write(chunk)
@@ -42,7 +48,8 @@ def main():
         assert destination.stat().st_size==a['size'] and sha(destination,'sha1')==a['sha1']
         with zipfile.ZipFile(destination) as archive:assert not any(n.lower().endswith(('.so','.dll','.dylib','.jnilib','.a')) for n in archive.namelist()),'Native payload in selected Java artifact'
         rows.append(dict(name=library['name'],path=str(destination),url=a['url'],sha1=a['sha1'],sha256=sha(destination),bytes=a['size'],origin=origin))
-    receipt=dict(schema=1,capturedAt=datetime.now(timezone.utc).isoformat(),target=target['id'],metadataSha256=sha(args.metadata),producerSha256=sha(Path(__file__)),libraries=rows,scope='Exact selected Java-only codec/math/logging dependencies;not full launcher classpath or loaded native/backend qualification.')
+    assert sha(Path(__file__))==producer_digest
+    receipt=dict(schema=1,capturedAt=datetime.now(timezone.utc).isoformat(),target=target['id'],metadataSha256=sha(args.metadata),producerSha256=producer_digest,producerFile=producer.name,libraries=rows,scope='Exact selected Java-only codec/math/logging dependencies;not full launcher classpath or loaded native/backend qualification.')
     (private/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(dict(private=str(private),libraries=len(rows),bytes=sum(r['bytes'] for r in rows))))
 
 

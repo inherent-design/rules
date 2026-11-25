@@ -1,0 +1,852 @@
+{
+  "schema": 1,
+  "target": "java-1.21.11-vanilla",
+  "cases": [
+    {
+      "id": "base",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "from-minus16",
+      "input": {
+        "from": [
+          -16,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "from-too-low",
+      "input": {
+        "from": [
+          -16.5,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "to32",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          32,
+          32,
+          32
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "to-too-high",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          32.5,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "reversed-extents",
+      "input": {
+        "from": [
+          16,
+          16,
+          16
+        ],
+        "to": [
+          0,
+          0,
+          0
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "missing-from",
+      "input": {
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "short-vector",
+      "input": {
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "numeric-string-vector",
+      "input": {
+        "from": [
+          "0",
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "empty-faces",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {}
+      }
+    },
+    {
+      "id": "missing-faces",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "id": "null-face",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": null
+        }
+      }
+    },
+    {
+      "id": "unknown-face",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "diagonal": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "unknown-cull",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "cullface": "diagonal"
+          }
+        }
+      }
+    },
+    {
+      "id": "uppercase-cull",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "cullface": "NORTH"
+          }
+        }
+      }
+    },
+    {
+      "id": "known-cull",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "cullface": "north"
+          }
+        }
+      }
+    },
+    {
+      "id": "missing-texture",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {}
+        }
+      }
+    },
+    {
+      "id": "empty-texture",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "negative-tint",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "tintindex": -7
+          }
+        }
+      }
+    },
+    {
+      "id": "face-angle45",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "rotation": 45
+          }
+        }
+      }
+    },
+    {
+      "id": "face-angle90",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "rotation": 90
+          }
+        }
+      }
+    },
+    {
+      "id": "short-uv",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "uv": [
+              0,
+              0,
+              16
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "extended-uv",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a",
+            "uv": [
+              -16,
+              -16,
+              32,
+              32
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "shade-false",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "shade": false
+      }
+    },
+    {
+      "id": "shade-string",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "shade": "false"
+      }
+    },
+    {
+      "id": "light15",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": 15
+      }
+    },
+    {
+      "id": "light16",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": 16
+      }
+    },
+    {
+      "id": "light-string",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": "5"
+      }
+    },
+    {
+      "id": "light-fractional",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": 1.9
+      }
+    },
+    {
+      "id": "light-negative-fractional",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": -0.5
+      }
+    },
+    {
+      "id": "light-negative",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "light_emission": -1
+      }
+    },
+    {
+      "id": "euler-x",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "mixed-scalar-xyz",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "y",
+          "angle": 0,
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "invalid-axis-xyz",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "axis": "invalid",
+          "angle": 0,
+          "x": 20
+        }
+      }
+    },
+    {
+      "id": "euler-rescale",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "rotation": {
+          "origin": [
+            8,
+            8,
+            8
+          ],
+          "x": 20,
+          "rescale": true
+        }
+      }
+    },
+    {
+      "id": "later-shade-override",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "shade_direction_override": "up"
+      }
+    },
+    {
+      "id": "override-and-legacy-shade",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "shade_direction_override": "up",
+        "shade": false
+      }
+    },
+    {
+      "id": "unknown-root-field",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": {
+            "texture": "#a"
+          }
+        },
+        "unselected_later_field": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "null-and-real-faces",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": {
+          "north": null,
+          "south": {
+            "texture": "#a"
+          }
+        }
+      }
+    },
+    {
+      "id": "faces-null",
+      "input": {
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          16,
+          16,
+          16
+        ],
+        "faces": null
+      }
+    }
+  ]
+}
