@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "revision": "0b4462e3032b4f09230b15329722eabefb7f574c",
+  "run": "applications/evidence/empack-portable-core-20261125T095419598124Z",
+  "work": "/private/tmp/rules-portable-core-gk38iwlt",
+  "sourcePins": [
+    {
+      "path": "crates/empack-core/src/addition.rs",
+      "sha256": "ee3e2c984ffa7a29f0b1f810daa81f41d5730f7f5e96b80da0fe53bab7133971"
+    },
+    {
+      "path": "crates/empack-core/src/addition/batch.rs",
+      "sha256": "8471ccb4f8eb836841f76f40bb8173351ac21a7567868605746f4e17a2b9c1ca"
+    },
+    {
+      "path": "crates/empack-core/src/digest.rs",
+      "sha256": "05976df69ee16a943deb84fc888bc0f1ce7552d5f696e7a0dc3fabb52d41872d"
+    },
+    {
+      "path": "crates/empack-core/src/distribution.rs",
+      "sha256": "a18a7cb29e5ceab393d518c2f9d257f58dfac3cbe46fa606617eb3b385d8b9ad"
+    },
+    {
+      "path": "crates/empack-core/src/files.rs",
+      "sha256": "55f5853b9ff06d6d53c6a1c971ac4ee212edfbb231fda66e781e9a40aecf1646"
+    },
+    {
+      "path": "crates/empack-core/src/identity.rs",
+      "sha256": "6e77d7bdfe2323f99d30c602a84bcbf78a0c303c802d43a8e85f07d6d4debf1f"
+    },
+    {
+      "path": "crates/empack-core/src/instance.rs",
+      "sha256": "4f1021c54c63e64436da2fbab30849f23efb43b01c9106bc0a78f876a36ed878"
+    },
+    {
+      "path": "crates/empack-core/src/instance/tests.rs",
+      "sha256": "bc9b6a7d3983f995f7cd1029fd6154d920bebb602c689f19594c94650697b822"
+    },
+    {
+      "path": "crates/empack-core/src/inventory.rs",
+      "sha256": "b9bbae9fb4b56b97abda92b7e5d800c37406dda108d1a782d82d15dcdfab2ace"
+    },
+    {
+      "path": "crates/empack-core/src/java.rs",
+      "sha256": "91771182225eed4692c81d32d015a8aecceed0a03ac848012bf3406f8b19c67f"
+    },
+    {
+      "path": "crates/empack-core/src/java_profiles.csv",
+      "sha256": "d99f8241974cac19d7265bf6b77006f277efa2321a76d8c0805773b47283df66"
+    },
+    {
+      "path": "crates/empack-core/src/lib.rs",
+      "sha256": "bc1729fc0c2e60477b4614847d8f26de0d01e70a766b8c28223f213b41551652"
+    },
+    {
+      "path": "crates/empack-core/src/model.rs",
+      "sha256": "7d5d2a637f2abaf5db51f6e048e119d3e57f4be648171d093750077f950163d7"
+    },
+    {
+      "path": "crates/empack-core/src/model/archive.rs",
+      "sha256": "6662ec83b90f2eea10e69b22d74d110a496f01a963ed282136417a58217e9e99"
+    },
+    {
+      "path": "crates/empack-core/src/path.rs",
+      "sha256": "c1e02ce59209ad1d8d2de811d032ca081f065d5172faf3219ecdcfd6b8b8ac2b"
+    },
+    {
+      "path": "crates/empack-core/src/removal.rs",
+      "sha256": "0d692eb2330ce5e450df2855d622130c753006b07e38652b0b2c95eea2ca6d1b"
+    },
+    {
+      "path": "crates/empack-core/src/requirements.rs",
+      "sha256": "3698745052f78c85493ac17ce2fc13290344d4d1484a708fefb757b741c3d665"
+    },
+    {
+      "path": "crates/empack-core/src/synchronization.rs",
+      "sha256": "20e2adbac7b533549275decae57702ce35a9ed1ff6b54b4b934ce812e6dc38eb"
+    }
+  ],
+  "producerSha256": "7f02e00d8e15ce270cefa92c729c7e3816cf283e4284f93382e071d42ad2efd8",
+  "adapterSha256": "143c7d8711535bf134d30ec2da82367300a722dfd3e0d6a60ce8836b9195b51b",
+  "tool": {
+    "path": "/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/bin/rustc",
+    "sha256": "574f8ce13814c332aa5e63445f68ce7fee7c506f802d6135194731d2ae8370ad",
+    "version": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: aarch64-apple-darwin\nrelease: 1.100.0\nLLVM version: 23.1.5\n"
+  },
+  "commands": [
+    {
+      "label": "native-core",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "--crate-name",
+        "empack_core",
+        "--crate-type",
+        "rlib",
+        "/private/tmp/rules-portable-core-gk38iwlt/core/lib.rs",
+        "-C",
+        "opt-level=1",
+        "-o",
+        "/private/tmp/rules-portable-core-gk38iwlt/libempack_core_native.rlib"
+      ],
+      "exitCode": 0,
+      "seconds": 2.6423909165896475
+    },
+    {
+      "label": "native-adapter",
+      "argv": [
+        "/Users/zer0cell/.rustup/toolchains/1.100.0-aarch64-apple-darwin/bin/rustc",
+        "--edition=2024",
+        "--crate-name",
+        "portable_core_study",
+        "/Users/zer0cell/production/rules/applications/evidence/empack-portable-core-20261125T095419598124Z/engine.rs",
+        "--extern",
+        "empack_core=/private/tmp/rules-portable-core-gk38iwlt/libempack_core_native.rlib",
+        "-C",
+        "opt-level=1",
+        "-C",
+        "panic=abort",
+        "-C",
+        "strip=symbols",
+        "-o",
+        "/private/tmp/rules-portable-core-gk38iwlt/core-native"
+      ],
+      "exitCode": 1,
+      "seconds": 0.024972999934107065
+    }
+  ],
+  "limits": [
+    "Unchanged pure core and common research wire adapter,not portable empack engine/project codec/consumer exporter.",
+    "WASM ABI is single-host serialized and bounded;raw pointers exist only in WASM memory,not native entry points.",
+    "Digest/length fields are host observations;this adapter does not verify source bytes or grant native authority."
+  ]
+}

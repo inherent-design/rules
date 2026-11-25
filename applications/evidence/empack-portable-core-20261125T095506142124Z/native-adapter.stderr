@@ -1,0 +1,14 @@
+error[E0609]: no field `key` on type `&ChoiceDecision`
+  --> /Users/zer0cell/production/rules/applications/evidence/empack-portable-core-20261125T095506142124Z/engine.rs:39:61
+   |
+39 |  for choice in inventory.choices(){textout(&mut out,&choice.key);out.push(u8::from(choice.enabled));out.push(u8::from(choice.used_de...
+   |                                                             ^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+39 |  for choice in inventory.choices(){textout(&mut out,&choice.choice.key);out.push(u8::from(choice.enabled));out.push(u8::from(choice.used_default));}
+   |                                                             +++++++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0609`.

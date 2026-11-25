@@ -242,6 +242,8 @@ The actual core projection band supports retaining the current layer/choice algo
 
 The [browser storage feasibility band](empack/PORTABLE-STORAGE.md) now supplies executed OPFS/IndexedDB draft-save, lost-acknowledgement, reopen, and study-backup evidence. Restored selected sources reach a separate native Prism exporter. It still supplies no shared portable engine or browser consumer codec. Keep its byte-retention and commit/ack distinctions without promoting the required joined portable-authoring scenario. The npm cache comparison reinforces that authoritative saved local inputs need stronger retention than replaceable cached downloads.
 
+The [shared-core comparison](empack/PORTABLE-CORE.md) shows that the existing Rust projection can run unchanged across native and browser WASM hosts without duplicating its decisions in JavaScript. Exact agreement still accepts caller-supplied false digest observations and paths needing the separate engine collision gate. Share those interpretation/verification boundaries before composing project storage and browser consumer export; transport parity does not establish complete export readiness.
+
 ## Compatibility and implementation order
 
 Start by mapping existing state owners, APIs, and reports to these distinctions. Preserve opaque IDs and established saved meaning. A clarification or additive result is preferable when it supplies the facts without a new subsystem. Public receipts still need versioning, unknown/partial outcomes, and exact basis; they must not become a second resolver, save model, or authorization path.

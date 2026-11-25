@@ -1,0 +1,809 @@
+[
+  {
+    "id": "local-jar-config",
+    "records": [
+      {
+        "path": "mods/Sample Ω 日本.jar",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 318,
+        "sha256": "eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "52504931000202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "450902fce83de21c35ee6abff420d48d235eb0fa01387f23d006b11cc372665c"
+  },
+  {
+    "id": "server-view",
+    "records": [
+      {
+        "path": "mods/Sample Ω 日本.jar",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 318,
+        "sha256": "eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 1,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "52504931010202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "2a0a7457f078778a2966823db0e0005f49cb223d808d97adc661e5ef6b5c751c"
+  },
+  {
+    "id": "native-layers",
+    "records": [
+      {
+        "path": "mods/Sample Ω 日本.jar",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 318,
+        "sha256": "eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 2,
+    "policy": 0,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "52504931020002000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "6cb9041fca784c82070c2b36eb5d23969da2b9709b29df16142fff83e1f2fc95"
+  },
+  {
+    "id": "client-precedence",
+    "records": [
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 4,
+        "sha256": "cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a2"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 1,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 8,
+        "sha256": "ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 2,
+        "client": 1,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 3,
+        "client": 0,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493100020400000011000000636f6e6669672f72756c65732e6a736f6e00010100000400000000000000cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a211000000636f6e6669672f72756c65732e6a736f6e01010100000800000000000000ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba11000000636f6e6669672f72756c65732e6a736f6e02010000000600000000000000948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d11000000636f6e6669672f72756c65732e6a736f6e03000100000600000000000000b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
+    "packetSha256": "a541813fe85c869218230b1da9dfffbe150041d2f77d2cb40c2e5467331361a5"
+  },
+  {
+    "id": "server-precedence",
+    "records": [
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 4,
+        "sha256": "cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a2"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 1,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 8,
+        "sha256": "ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 2,
+        "client": 1,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 3,
+        "client": 0,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06"
+      }
+    ],
+    "recipe": 1,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493101020400000011000000636f6e6669672f72756c65732e6a736f6e00010100000400000000000000cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a211000000636f6e6669672f72756c65732e6a736f6e01010100000800000000000000ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba11000000636f6e6669672f72756c65732e6a736f6e02010000000600000000000000948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d11000000636f6e6669672f72756c65732e6a736f6e03000100000600000000000000b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
+    "packetSha256": "1333ee2df04d8dde5b5f1ddd27b1339224f92c9a6f6f4ce51a7ccf1a28651b68"
+  },
+  {
+    "id": "preserved-layers",
+    "records": [
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 4,
+        "sha256": "cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a2"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 1,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 8,
+        "sha256": "ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 2,
+        "client": 1,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 3,
+        "client": 0,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 6,
+        "sha256": "b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06"
+      }
+    ],
+    "recipe": 2,
+    "policy": 0,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493102000400000011000000636f6e6669672f72756c65732e6a736f6e00010100000400000000000000cae662172fd450bb0cd710a769079c05bfc5d8e35efa6576edc7d0377afdd4a211000000636f6e6669672f72756c65732e6a736f6e01010100000800000000000000ce603774135699e9abdfd65eb1f2733774da58af91782528e82ef5f9efdb8fba11000000636f6e6669672f72756c65732e6a736f6e02010000000600000000000000948fe603f61dc036b5c596dc09fe3ce3f3d30dc90f024c85f3c82db2ccab679d11000000636f6e6669672f72756c65732e6a736f6e03000100000600000000000000b3eacd33433b31b5252351032c9b3e7a2e7aa7738d5decdf0dd6c62680853c06",
+    "packetSha256": "1fba522780532bb889cd31b6d2b6ae2aca57240922696277de3028620a2f12b1"
+  },
+  {
+    "id": "duplicate-layer",
+    "records": [
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "DuplicateDestination",
+    "note": "",
+    "packetHex": "5250493100020200000011000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "68706b73cc72843b15928cb385072bafdba7f59cef8b450c28779cf64a21bf36"
+  },
+  {
+    "id": "invalid-client-environment",
+    "records": [
+      {
+        "path": "config/x",
+        "layer": 2,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "InvalidEnvironment",
+    "note": "",
+    "packetHex": "5250493100020100000008000000636f6e6669672f7802010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "1c258a85b3623736d9cbdf2e5d7c6ffd1b6000d772a78a3cdd4c36a661c9e080"
+  },
+  {
+    "id": "missing-known-size",
+    "records": [
+      {
+        "path": "mods/missing.jar",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 1,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "MaterializationRequired",
+    "note": "Explicit known expected length,not an unknown size encoded as zero.",
+    "packetHex": "52504931000201000000100000006d6f64732f6d697373696e672e6a617200010101001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "17fd8f6aea1866444b3e1ba916edf1bfa5fdcdfc543f1418ac182a68206f1bff"
+  },
+  {
+    "id": "optional-default-false",
+    "records": [
+      {
+        "path": "mods/extra.jar",
+        "layer": 0,
+        "client": 2,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 1,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "525049310001010000000e0000006d6f64732f65787472612e6a617200020000001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "def6cf9c5a8aa686bdf0dbb51e411f26c35eccf24ef09c4b0aece2120e3169ef"
+  },
+  {
+    "id": "optional-default-true",
+    "records": [
+      {
+        "path": "mods/extra.jar",
+        "layer": 0,
+        "client": 3,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 1,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "525049310001010000000e0000006d6f64732f65787472612e6a617200030000001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "18df1448d6438ac743783f42f0c57d83a9797d5fb10c4eb907698b7c4034a161"
+  },
+  {
+    "id": "optional-needs-choice",
+    "records": [
+      {
+        "path": "mods/extra.jar",
+        "layer": 0,
+        "client": 2,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ChoiceRequired",
+    "note": "",
+    "packetHex": "525049310002010000000e0000006d6f64732f65787472612e6a617200020000001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "c51a54b82ac945daf623556d1e95b44835be3a4b20199e5fbb906e2db6b44f24"
+  },
+  {
+    "id": "side-disabled-fallback",
+    "records": [
+      {
+        "path": "config/fallback.cfg",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "config/fallback.cfg",
+        "layer": 2,
+        "client": 2,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 1,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493100010200000013000000636f6e6669672f66616c6c6261636b2e63666700010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf13000000636f6e6669672f66616c6c6261636b2e63666702020000001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "b5640458df7daad6c859dfc5b37836714e86f2f985f829e9a6935f8c68fbbd93"
+  },
+  {
+    "id": "hidden-missing-fallback",
+    "records": [
+      {
+        "path": "config/fallback.cfg",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 1,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "config/fallback.cfg",
+        "layer": 2,
+        "client": 1,
+        "server": 0,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493100020200000013000000636f6e6669672f66616c6c6261636b2e63666700010101001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf13000000636f6e6669672f66616c6c6261636b2e63666702010000001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "1b6fdf0c7738376e7b19bea42ba7b7a8d1fa612835909ae2bb2669254d189a0c"
+  },
+  {
+    "id": "permissions",
+    "records": [
+      {
+        "path": "config/read-only.cfg",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 1,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "tools/runner",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 2,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "5250493100020200000014000000636f6e6669672f726561642d6f6e6c792e63666700010100011e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf0c000000746f6f6c732f72756e6e657200010100021e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "db845cb47745bea8833e2261cdc0ec8e93f92199e8e2e29c1682f6aaf75549bd"
+  },
+  {
+    "id": "empty-file",
+    "records": [
+      {
+        "path": "config/empty",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "",
+    "packetHex": "525049310002010000000c000000636f6e6669672f656d70747900010100000000000000000000e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packetSha256": "1f719d3ca29bb2e91a2087ca6aebae5ee88863a95ca2610dcd651a2726347082"
+  },
+  {
+    "id": "case-alias-core-only",
+    "records": [
+      {
+        "path": "config/Rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "Core succeeds;native layout has an additional portable collision gate. Not export authority.",
+    "packetHex": "5250493100020200000011000000636f6e6669672f52756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "bf02b077c51afba88720f8576e83048fcb0032691255fc06a1212253d592aed4"
+  },
+  {
+    "id": "unicode-alias-core-only",
+    "records": [
+      {
+        "path": "config/é.cfg",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      },
+      {
+        "path": "config/é.cfg",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "Core succeeds;native collision_key canonical Unicode caseless comparison is a separate engine obligation.",
+    "packetHex": "525049310002020000000d000000636f6e6669672fc3a92e63666700010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf0e000000636f6e6669672f65cc812e63666700010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "b864ac4f7b6aa273104299c75b650c957ed8c49aa2e9dd9ef407872219718bab"
+  },
+  {
+    "id": "forged-observation-core-only",
+    "records": [
+      {
+        "path": "mods/Sample Ω 日本.jar",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 318,
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "path": "config/rules.json",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "ok",
+    "note": "Core accepts caller observations;not verification of actual source bytes.",
+    "packetHex": "52504931000202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000000000000000000000000000000000000000000000000000000000000000000011000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "41712c57f013d46b3a9145bee838746ef1651c64db6c2a4fdd685b412bd59d48"
+  },
+  {
+    "id": "bad-path-0",
+    "records": [
+      {
+        "path": "../escape",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "52504931000201000000090000002e2e2f65736361706500010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "e6af8a67b7222d941b79fa07a9350861818f5669951ff213f840dfb0d0565668"
+  },
+  {
+    "id": "bad-path-1",
+    "records": [
+      {
+        "path": "/absolute",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "52504931000201000000090000002f6162736f6c75746500010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "f7fbd75583fa8f847780072a73320dd4130bf985a75c2832495b27daf06ae11d"
+  },
+  {
+    "id": "bad-path-2",
+    "records": [
+      {
+        "path": "C:/drive",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "5250493100020100000008000000433a2f647269766500010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "df8cdf5806052e4d4227715dbcdd4547674848e7ac14265b2eda33927ab20eaa"
+  },
+  {
+    "id": "bad-path-3",
+    "records": [
+      {
+        "path": "config/NUL.txt",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "525049310002010000000e000000636f6e6669672f4e554c2e74787400010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "de4fc77e1dac6635c01cf6cbd49549be32d0ad2298809d6be87245e14d7bcd04"
+  },
+  {
+    "id": "bad-path-4",
+    "records": [
+      {
+        "path": "config/x.",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "5250493100020100000009000000636f6e6669672f782e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "02de7b4e2f0c840b55dd0cec4a97d8938e7a7113328458b383bce825e8daa580"
+  },
+  {
+    "id": "bad-path-5",
+    "records": [
+      {
+        "path": "config//x",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "5250493100020100000009000000636f6e6669672f2f7800010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "02eebab9ef6e4474f2d44905b69e04f414ed1cd5648506ddcebeaeadb4bf4829"
+  },
+  {
+    "id": "bad-path-6",
+    "records": [
+      {
+        "path": "config/bad\u0000name",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "525049310002010000000f000000636f6e6669672f626164006e616d6500010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "1a989779a8adcf937b79721247d0d4810a84787dccd0ab38180ad010e97da597"
+  },
+  {
+    "id": "bad-path-7",
+    "records": [
+      {
+        "path": "config/back\\slash",
+        "layer": 0,
+        "client": 1,
+        "server": 1,
+        "representation": 0,
+        "permissions": 0,
+        "bytes": 30,
+        "sha256": "72ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf"
+      }
+    ],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "path:",
+    "note": "",
+    "packetHex": "5250493100020100000011000000636f6e6669672f6261636b5c736c61736800010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "c610587ec71b04bd43ad40ce6439a38466fb7fcdb7f9e2c0f72a201f6dc1830e"
+  },
+  {
+    "id": "bad-version",
+    "records": [],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "wire:",
+    "note": "Malformed research wire;not an empack schema/API input.",
+    "packetHex": "52504932000202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "ebe1fec0917de7200ef7c2071be1fc010ba2d9053019bc5682e362c46619a63e"
+  },
+  {
+    "id": "truncated",
+    "records": [],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "wire:",
+    "note": "Malformed research wire;not an empack schema/API input.",
+    "packetHex": "52504931000202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1eff",
+    "packetSha256": "3b99ad3359de0c01934af07db0640eb9cb97d1d3c8912feff686827df96d3f12"
+  },
+  {
+    "id": "trailing",
+    "records": [],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "wire:",
+    "note": "Malformed research wire;not an empack schema/API input.",
+    "packetHex": "52504931000202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf78",
+    "packetSha256": "58e3f99fe1d9ecccfed66fb7ce353b71468d09c280e91d3afb519c020fbc33d3"
+  },
+  {
+    "id": "bad-recipe",
+    "records": [],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "wire:",
+    "note": "Malformed research wire;not an empack schema/API input.",
+    "packetHex": "52504931090202000000190000006d6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "4a9befd2703e348d002f9673414094989aeb936cc49aaab7d3977a441bc7f40b"
+  },
+  {
+    "id": "bad-utf8",
+    "records": [],
+    "recipe": 0,
+    "policy": 2,
+    "expected": "wire:",
+    "note": "Malformed research wire;not an empack schema/API input.",
+    "packetHex": "5250493100020200000019000000ff6f64732f53616d706c6520cea920e697a5e69cac2e6a617200010100003e01000000000000eeb909eafbb14121f6876f32f6369b4f3d58e2e5ec44d218243be8f0f89b74df11000000636f6e6669672f72756c65732e6a736f6e00010100001e0000000000000072ec25d931a1b70c553c6bc0e43f799877cd7402dd2eb7b39ed08d7e5b1effaf",
+    "packetSha256": "2726b2fc1a6968e94c211c99ae4bfea52d2de556e747191d41ae7e0851d0dc61"
+  }
+]

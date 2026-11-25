@@ -1,0 +1,14 @@
+error: suffixes on string literals are invalid
+  --> /Users/zer0cell/production/rules/applications/evidence/empack-portable-core-20261125T095419598124Z/engine.rs:48:33
+   |
+48 |  #[unsafe(no_mangle)]pub extern "C"fn prepare_input(n:u32)->u32{if n as usize>super::MAX{return 0}let mut v=INPUT.lock().unwrap();v....
+   |                                 ^^^^^ invalid suffix `r#fn`
+
+error: expected `{`, found `prepare_input`
+  --> /Users/zer0cell/production/rules/applications/evidence/empack-portable-core-20261125T095419598124Z/engine.rs:48:39
+   |
+48 |  #[unsafe(no_mangle)]pub extern "C"fn prepare_input(n:u32)->u32{if n as usize>super::MAX{return 0}let mut v=INPUT.lock().unwrap();v....
+   |                                       ^^^^^^^^^^^^^ expected `{`
+
+error: aborting due to 2 previous errors
+

@@ -20,6 +20,8 @@ The [recovery band](RECOVERY.md) exercises installed CLI inspection, planning, c
 
 The [portable-storage feasibility band](PORTABLE-STORAGE.md) executes real browser input, OPFS/IndexedDB save/reopen, worker-loss boundaries, and project-backup downloads in Chromium and WebKit. Restored selected inputs produce identical native Prism inventories. This is a research host adapter, not browser distribution export or a production project format; its scoped models match captured save/reopen boundaries, while the full portable-engine join remains open.
 
+The [shared-core band](PORTABLE-CORE.md) runs the same unchanged Rust inventory core and research adapter natively and in actual Chromium/WebKit WASM workers. All 32 packet results agree; the existing projection models cover the semantic subset. Full document interpretation, layout/byte verification, consumer assembly, and the required save/reopen/export join remain separate extraction obligations.
+
 The [manual acquisition and saved-build band](PENDING.md) compares isolated installed-CLI inspection, partial retention, exact selection, damaged retained-byte refusal, and discovery through archive publication. Retained metadata is not byte verification, a saved recipe is not an execution grant, and recipe cleanup is not content collection. Whole pending/cache workflows remain unqualified.
 
 The [bootstrap band](BOOTSTRAP.md) compares actual packaged invocation/local/cache gates and delegated cancellation, with controlled script peers and four separately limited real native checks. Selected code, capability, acquired bytes, process lifetime, and final outcomes remain distinct; official acquisition and real runtime supervision are not qualified.

@@ -64,6 +64,6 @@ A pure decoder control also found that Python equality admitted boolean and floa
 
 ## Remaining qualification
 
-The required browser local-JAR/configuration-to-Prism scenario remains open because there is no shared portable engine or browser consumer codec. Do not fill that gap with an independent JavaScript interpretation of Prism or a local companion and call it browser parity. The next implementation decision must preserve shared interpretation and verification while supplying real host capabilities.
+The required browser local-JAR/configuration-to-Prism scenario remains open because there is no shared portable engine or browser consumer codec. The subsequent [shared-core band](PORTABLE-CORE.md) supplies actual native/WASM metadata-projection parity, with explicit remaining extraction boundaries. Do not fill those gaps with an independent JavaScript interpretation of Prism or a local companion and call it browser parity. The next implementation decision must preserve shared interpretation and verification while supplying real host capabilities.
 
 Further obligations include complete draft serialization, authority and incarnation checks, undo/plan/pending retention, safe collection, wrong input association, bounded streaming/backpressure, concurrent publication, quota/private-mode/permission failures, crash and ambiguous finalization recovery, and other platforms. The study's small whole-file buffers, limited path checks, and fixed project namespace are not proposed production APIs. No product implementation is selected here.
