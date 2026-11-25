@@ -1,0 +1,301 @@
+{
+  "schema": 1,
+  "target": "java-26.3-vanilla",
+  "status": "source findings and planned comparisons;not native conformance",
+  "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+  "privateViewReceiptSha256": "de00878bf0e3f1e9903f0ed6ab2a2aff6a8d77f87f2f2a11fc0ed0aab11bb274",
+  "inspectionToolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+  "findings": [
+    {
+      "id": "rotation-dialect",
+      "families": [
+        "models.geometry"
+      ],
+      "source": {
+        "className": "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
+        "viewSha256": "6ced87c6fb49d144d120fcefc94399cdd27fdfbcc5e093315eab9eb772b36372",
+        "originalClassMembersSha256": {
+          "net/minecraft/client/resources/model/cuboid/CuboidModelElement$Deserializer.class": "2b304adeafe888f9add1f458e5ded9d68b68c9364c3cdbdccc152fafab12c30e",
+          "net/minecraft/client/resources/model/cuboid/CuboidModelElement.class": "fc99a9e58da44d0747aac208ea117f2677408c0dd141d0aee4db3f518f604dbc"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "Deserializer.getRotation"
+        ]
+      },
+      "finding": "If axis OR angle is present,select the scalar branch and require both. Otherwise require at least one XYZ field and default missing components to zero. Origin is required before either branch.",
+      "comparison": "Selected Polytone hook takes its XYZ path when any XYZ field is present,even if scalar fields also exist.",
+      "qualification": "source-path divergence;transformed hook reachability and native comparison pending"
+    },
+    {
+      "id": "rotation-rescale",
+      "families": [
+        "models.geometry",
+        "models.transforms"
+      ],
+      "source": {
+        "className": "net.minecraft.client.resources.model.cuboid.CuboidRotation",
+        "viewSha256": "72ebc859a12048b646304efc5f7141e60bcf50036d748d667545408147270e4c",
+        "originalClassMembersSha256": {
+          "net/minecraft/client/resources/model/cuboid/CuboidRotation$EulerXYZRotation.class": "2273bd3d7c95380e7fb5dc9b9572cbaaa251ed9ba29effe1eb026c888a526900",
+          "net/minecraft/client/resources/model/cuboid/CuboidRotation$RotationValue.class": "f4a6bf43ee18aa53dc34fe99c58f7345719fc999f5e3f71720a37148fac9a120",
+          "net/minecraft/client/resources/model/cuboid/CuboidRotation$SingleAxisRotation.class": "e3388383f5793031d352a23b07b00f3bce2ee66aa315f225016dfca1825d19ed",
+          "net/minecraft/client/resources/model/cuboid/CuboidRotation.class": "3a440967a239a99f6b8a84bb3e901557b42f3e61570d541b95ff866c0601ae6b"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "computeTransform",
+          "computeRescale",
+          "EulerXYZRotation.transformation"
+        ]
+      },
+      "finding": "Euler uses rotationZYX. A true rescale flag conditionally applies independently computed per-axis factors from rotated unit-vector maxima.",
+      "comparison": "Selected Polytone XYZ construction passes rescale=false;Compat whole-model path has a rescale refusal.",
+      "qualification": "source comparison only;float/geometry/cull/parent/render equivalence unproved"
+    },
+    {
+      "id": "shade-direction",
+      "families": [
+        "models.geometry",
+        "render.pipeline"
+      ],
+      "source": {
+        "className": "net.minecraft.client.resources.model.cuboid.CuboidModelElement",
+        "viewSha256": "6ced87c6fb49d144d120fcefc94399cdd27fdfbcc5e093315eab9eb772b36372",
+        "originalClassMembersSha256": {
+          "net/minecraft/client/resources/model/cuboid/CuboidModelElement$Deserializer.class": "2b304adeafe888f9add1f458e5ded9d68b68c9364c3cdbdccc152fafab12c30e",
+          "net/minecraft/client/resources/model/cuboid/CuboidModelElement.class": "fc99a9e58da44d0747aac208ea117f2677408c0dd141d0aee4db3f518f604dbc"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "Deserializer.deserialize",
+          "Deserializer.getShadeDirectionOverride"
+        ]
+      },
+      "finding": "Optional shade_direction_override resolves through Direction.byName and rejects an unknown result. This selected decoder does not read the old shade member.",
+      "qualification": "decoder source path only;no rendered/lightmap/custom-shader equivalence claim"
+    },
+    {
+      "id": "pack-format-dialect",
+      "families": [
+        "packs.metadata",
+        "packs.overlays"
+      ],
+      "source": {
+        "className": "net.minecraft.server.packs.metadata.pack.PackFormat",
+        "viewSha256": "af2fee8170f6da78f1a889a855e68d6fb5ac8ca4794fdcaef09d9003ab10f6b5",
+        "originalClassMembersSha256": {
+          "net/minecraft/server/packs/metadata/pack/PackFormat$1.class": "41f6b1db06a31d8e877da58ffa8b801d8828e32c81b315711b8ef2236262c05d",
+          "net/minecraft/server/packs/metadata/pack/PackFormat$IntermediaryFormat.class": "4acdf5de98ed4ce5e726bba7419d500852f9190f4b770380686c7123023ea276",
+          "net/minecraft/server/packs/metadata/pack/PackFormat$IntermediaryFormatHolder.class": "2511f413993a36dd4be790d7d961a2b86b207240a63ac2cbb1ed540d542dd794",
+          "net/minecraft/server/packs/metadata/pack/PackFormat.class": "8cd4892e5e1824ee023d1b487efa9508c6fa3e983888dbc08b9983f93f383111"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "fullCodec",
+          "lastPreMinorVersion",
+          "packCodec",
+          "IntermediaryFormat.validate",
+          "IntermediaryFormat.validateNewFormat",
+          "IntermediaryFormat.validateOldFormat",
+          "validateHolderList"
+        ]
+      },
+      "finding": "Format bounds distinguish omitted minor at the lower and upper endpoints. Legacy transition thresholds are 64 for resources and 81 for data. Pack and overlay validation have different field/compatibility premises;overlay entries can depend on the list-wide minimum.",
+      "qualification": "inspected source constraints;no arbitrary JSON codec or actual repository/overlay qualification"
+    },
+    {
+      "id": "model-wrapper-transformation",
+      "families": [
+        "items.nodes",
+        "models.transforms"
+      ],
+      "source": {
+        "className": "net.minecraft.client.renderer.item.CuboidItemModelWrapper",
+        "viewSha256": "db71b6dc3b41154c887abf8b2015d9b43621f7592ac8db94aa01cd57954d25d8",
+        "originalClassMembersSha256": {
+          "net/minecraft/client/renderer/item/CuboidItemModelWrapper$Unbaked.class": "4c0ab723dadc38e5ce926ff6f514bda08e0ae39e7143488eb40264c53a28ac9c",
+          "net/minecraft/client/renderer/item/CuboidItemModelWrapper.class": "1a809ae45caed57b989d546781d5560a08cadc54589b46e49c5cbf0b40f9e835"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "Unbaked.MAP_CODEC",
+          "Unbaked.bake"
+        ]
+      },
+      "finding": "The model node has an optional transformation as well as model and tints. The selected 1.21.5 associated codec exposes model/tints without this member.",
+      "qualification": "source field difference;unknown-field admission and preserved geometry/layout require native comparisons"
+    },
+    {
+      "id": "block-presentation-consumer",
+      "families": [
+        "models.blockstates",
+        "render.pipeline",
+        "reload.schedule"
+      ],
+      "source": {
+        "className": "net.minecraft.client.resources.model.ModelManager",
+        "viewSha256": "3991a85abea91c27175dbb2fde838a0ece3446dc7ff794b5945a74a57376a04a",
+        "originalClassMembersSha256": {
+          "net/minecraft/client/resources/model/ModelManager$ReloadState.class": "6cea16bc910a74a85ced5ccaffd0ef9b805edd10239dff0e8929e56234718ae9",
+          "net/minecraft/client/resources/model/ModelManager$ResolvedModels.class": "d6f06a32623afc2ad609d88a822e7fabb577945fe1d3dc96a777980dcea573ee",
+          "net/minecraft/client/resources/model/ModelManager.class": "a624dbc1010c290c8053206d9fa6a32573ead289297a56ccb592ea48209e81c7"
+        },
+        "evidence": "private decompiled inspection view;not native behavior or a proved bytecode translation",
+        "reviewedMembers": [
+          "reload",
+          "loadBlockModels"
+        ]
+      },
+      "finding": "This reload path loads resource-defined cuboid models,blockstate models and client item info separately. It obtains BlockModel.Unbaked contents through BuiltInBlockModels.createBlockModels.",
+      "qualification": "do not infer a user resource-pack block-model graph grammar merely from BlockModel/CompositeBlockModel classes;factory body and other consumers remain pending"
+    }
+  ],
+  "defaultAssetFacts": [
+    {
+      "member": "assets/minecraft/items/red_bed.json",
+      "sha256": "4cab24abce93cf9152fe0ec56c3b6a200110e6888781ad6065d7cf1e5b166cc9",
+      "rootType": "minecraft:composite",
+      "referencedModels": [
+        "minecraft:block/red_bed_head",
+        "minecraft:block/red_bed_foot"
+      ],
+      "transformations": [
+        null,
+        {
+          "left_rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "right_rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "qualification": "one original default asset;not all variants,consumer execution or asset conversion proof"
+    },
+    {
+      "member": "assets/minecraft/items/oak_sign.json",
+      "sha256": "9f28f5566ea6b0c9aed51dd99e027ec8a63cf701c939ac9832b083b9b8b33df8",
+      "rootType": "minecraft:model",
+      "referencedModels": [
+        "minecraft:item/oak_sign"
+      ],
+      "transformations": [
+        null
+      ],
+      "qualification": "one original default asset;not all variants,consumer execution or asset conversion proof"
+    },
+    {
+      "member": "assets/minecraft/items/oak_hanging_sign.json",
+      "sha256": "5a7b6d9afceea851367c101e796b54707c41b3fefb24ae586ee8af0a9c8bdcce",
+      "rootType": "minecraft:model",
+      "referencedModels": [
+        "minecraft:item/oak_hanging_sign"
+      ],
+      "transformations": [
+        null
+      ],
+      "qualification": "one original default asset;not all variants,consumer execution or asset conversion proof"
+    }
+  ],
+  "plannedComparisons": [
+    {
+      "id": "mixed-scalar-xyz",
+      "sourceFinding": "rotation-dialect",
+      "input": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 0,
+        "x": 20
+      },
+      "prediction": "26.3 selected path uses scalar zero;Polytone selected hook uses Euler x20.",
+      "status": "unexecuted source prediction"
+    },
+    {
+      "id": "invalid-scalar-with-xyz",
+      "sourceFinding": "rotation-dialect",
+      "input": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "invalid",
+        "angle": 0,
+        "x": 20
+      },
+      "prediction": "26.3 selected path rejects invalid axis;Polytone hook bypasses scalar-axis read if reached.",
+      "status": "unexecuted source prediction"
+    },
+    {
+      "id": "euler-rescale",
+      "sourceFinding": "rotation-rescale",
+      "input": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "x": 20,
+        "rescale": true
+      },
+      "prediction": "26.3 retains/applies rescale;Polytone selected construction forces false;Compat path refuses.",
+      "status": "unexecuted source prediction"
+    },
+    {
+      "id": "endpoint-minor",
+      "sourceFinding": "pack-format-dialect",
+      "input": [
+        97
+      ],
+      "prediction": "Bottom and top codecs default omitted minor differently;do not normalize both endpoints to 97.0.",
+      "status": "unexecuted source prediction"
+    },
+    {
+      "id": "resource-threshold",
+      "sourceFinding": "pack-format-dialect",
+      "input": {
+        "pack_format": 65
+      },
+      "prediction": "With the selected resource-pack validator premises,the absent new min/max fields refuse.",
+      "status": "unexecuted source prediction"
+    },
+    {
+      "id": "extra-format-components",
+      "sourceFinding": "pack-format-dialect",
+      "input": [
+        97,
+        1,
+        7
+      ],
+      "prediction": "fullCodec admits a bounded list then reads only first two components;verify through the actual codec before classifying intent.",
+      "status": "unexecuted source prediction"
+    }
+  ],
+  "limits": [
+    "Original source/game/mapping/artwork payloads remain private.Only authored statements,identities and selected structural facts are public.",
+    "All six comparison predictions remain unexecuted;they must not be counted as observations.",
+    "The earlier Java 17/21/25 host laws and original 1.21.1/1.21.5 observations retain their own scope.",
+    "1.21.11/native overlay/renderer/provider composition and separate Bedrock schemas remain incomplete."
+  ]
+}

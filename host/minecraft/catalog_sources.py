@@ -36,8 +36,9 @@ class Views:
                 if package:self.paths.setdefault(package[1]+'.'+p.stem,p)
 
     def locate(self,name):
+        requested=name
         while name not in self.paths and '.' in name:name=name.rsplit('.',1)[0]
-        if name not in self.paths:raise ValueError('Missing inspection view: '+self.label+':'+name)
+        if name not in self.paths:raise ValueError('Missing inspection view: '+self.label+':'+requested)
         return self.paths[name]
 
     def remember(self,p):
@@ -68,7 +69,7 @@ def vanilla(views,version):
             result[category]=dict(status='No corresponding modern registry in this baseline;legacy item predicates are separate.',entries=[])
             continue
         p=views.locate(name);text=p.read_text();source=views.remember(p)
-        raw=re.findall(r'ID_MAPPER\.put\(ResourceLocation\.withDefaultNamespace\("([^"]+)"\),\s*([\w.$]+(?:\(\))?)\)',text)
+        raw=re.findall(r'ID_MAPPER\.put\((?:ResourceLocation|Identifier)\.withDefaultNamespace\("([^"]+)"\),\s*([\w.$]+(?:\(\))?)\)',text)
         if category=='textures.atlases' and version=='1.21.1':raw=re.findall(r'= register\("([^"]+)",\s*([\w.$]+)\)',text)
         if category=='fonts.definitions':raw=re.findall(r'\b[A-Z_]+\("([^"]+)",\s*([\w.$]+)\)',text)
         assert raw,(version,category,'No discovered registry entries')
