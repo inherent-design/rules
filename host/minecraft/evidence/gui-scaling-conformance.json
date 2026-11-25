@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "status": "passed-original-gui-scaling-selected-integers",
+  "profiles": [
+    {
+      "target": "java-1.21.1-vanilla",
+      "codecOutcomes": 14,
+      "dimensionPairs": 8
+    },
+    {
+      "target": "java-1.21.4-vanilla",
+      "codecOutcomes": 14,
+      "dimensionPairs": 8
+    },
+    {
+      "target": "java-1.21.5-vanilla",
+      "codecOutcomes": 14,
+      "dimensionPairs": 8
+    },
+    {
+      "target": "java-1.21.11-vanilla",
+      "codecOutcomes": 14,
+      "dimensionPairs": 8
+    },
+    {
+      "target": "java-26.3-vanilla",
+      "codecOutcomes": 14,
+      "dimensionPairs": 8
+    }
+  ],
+  "codecComparisons": 70,
+  "dimensionPairs": 40,
+  "leanLaws": 15,
+  "bendLaws": 8,
+  "decoderRefusals": 10,
+  "changedObservationControls": [
+    "0:9:accepted",
+    "4:13:stretchInner",
+    "0:1:width",
+    "0:7:id",
+    "0:6:partial"
+  ],
+  "naturalAdditionCounterexamples": [
+    {
+      "target": "java-1.21.1-vanilla",
+      "case": "nine-horizontal-overflow"
+    },
+    {
+      "target": "java-1.21.1-vanilla",
+      "case": "nine-both-overflow"
+    },
+    {
+      "target": "java-1.21.1-vanilla",
+      "case": "nine-large-scalar"
+    },
+    {
+      "target": "java-1.21.4-vanilla",
+      "case": "nine-horizontal-overflow"
+    },
+    {
+      "target": "java-1.21.4-vanilla",
+      "case": "nine-both-overflow"
+    },
+    {
+      "target": "java-1.21.4-vanilla",
+      "case": "nine-large-scalar"
+    },
+    {
+      "target": "java-1.21.5-vanilla",
+      "case": "nine-horizontal-overflow"
+    },
+    {
+      "target": "java-1.21.5-vanilla",
+      "case": "nine-both-overflow"
+    },
+    {
+      "target": "java-1.21.5-vanilla",
+      "case": "nine-large-scalar"
+    },
+    {
+      "target": "java-1.21.11-vanilla",
+      "case": "nine-horizontal-overflow"
+    },
+    {
+      "target": "java-1.21.11-vanilla",
+      "case": "nine-both-overflow"
+    },
+    {
+      "target": "java-1.21.11-vanilla",
+      "case": "nine-large-scalar"
+    },
+    {
+      "target": "java-26.3-vanilla",
+      "case": "nine-horizontal-overflow"
+    },
+    {
+      "target": "java-26.3-vanilla",
+      "case": "nine-both-overflow"
+    },
+    {
+      "target": "java-26.3-vanilla",
+      "case": "nine-large-scalar"
+    }
+  ],
+  "basisSha256": {
+    "host/java/Word32.bend": "8795f0f497105c70aafe1f5cceb88db073346fc7572b47721ee16ff16f573615",
+    "host/java/Word32.lean": "7fab2cd6d86f72aa6e1bcc5d5c04cb88e8bd04de784c7474d139f2a7a55cc34d",
+    "host/minecraft/GuiScaling.bend": "953e618150563847923e1deea09344830403b0f2540db9f889a6103b2864f25d",
+    "host/minecraft/GuiScaling.lean": "e68e6edaa678245a85c16ead3c3bed31db043208394ab75d9622d9e8dcb79832",
+    "host/minecraft/GuiScalingCase.lean": "c1cbc90854fc4a6bfa30e3616e6000a78243957b06fec037b291206b0a4b4d77",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/cases.json": "1c54482530b46b1d0afc5245a6d52c159bc2f7fad80d5d00a074e4cb7de7d43f",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/execute.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/native_gui_scaling.py": "b44e642c69dfbd8ef279b8ee8df5b5c0beb04e95f7bd9d948a317730bf022da1",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/observed.json": "ae59fe851c8c5dc58151f12931e951beb0d3b60d66323b3c1ca144045b8daa51",
+    "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/receipt.json": "633a6c88b956cfcf99b8132142cb24d5f6788eb101f79c5d9d8a436af81df22c",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/cases.json": "c3de79f785c92567baad2b640d699001a47ff60e6bab5df60539d63b9d7834fd",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/execute.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/native_gui_scaling.py": "b44e642c69dfbd8ef279b8ee8df5b5c0beb04e95f7bd9d948a317730bf022da1",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/observed.json": "194474fdc08b4ccf67992b7e0f53917150d923bcaa43bf79bf90a2cf96e80259",
+    "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/receipt.json": "c52dc359e534d469a852c4626dc763f71007e24a08de3dc101b78903f25c6471",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/cases.json": "89549b80cf7869766d93003b9e58c7086ee177b6929a5150f477afe640af575b",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/execute.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/native_gui_scaling.py": "b44e642c69dfbd8ef279b8ee8df5b5c0beb04e95f7bd9d948a317730bf022da1",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/observed.json": "194474fdc08b4ccf67992b7e0f53917150d923bcaa43bf79bf90a2cf96e80259",
+    "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/receipt.json": "97f7728df2a11de21e4ca2cdf79d4ed1f83eb3391415c307d4a5d988518958cd",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/cases.json": "33c858eca2ce38e1a677a73abd924808ee16c8512d487044952d08051a174d99",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/execute.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/native_gui_scaling.py": "b44e642c69dfbd8ef279b8ee8df5b5c0beb04e95f7bd9d948a317730bf022da1",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/observed.json": "194474fdc08b4ccf67992b7e0f53917150d923bcaa43bf79bf90a2cf96e80259",
+    "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/receipt.json": "f1930a01368b794d85e9ce835a3f4674afb5000cac5655fbc58b1c5147faee69",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/CodecProbe.java": "ff4466dc7e35e83e002a3f56aa60a342b9bcc41abdb2106b51a01abf47b6aec2",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/cases.json": "79543e3596d09156eaafe7c07240ef271eb312879ad06c46eb5a9954e1957603",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/execute.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/native_gui_scaling.py": "b44e642c69dfbd8ef279b8ee8df5b5c0beb04e95f7bd9d948a317730bf022da1",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/observed.json": "194474fdc08b4ccf67992b7e0f53917150d923bcaa43bf79bf90a2cf96e80259",
+    "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/receipt.json": "99b3fc70ba9a8afccd0f224d2487e0cca9316a8eebdb22df6cbabaf3f19887b9",
+    "host/minecraft/gui_scaling_conformance.py": "f68736f3bcadc7b9ad61e65a0b37a5f406e91e2e9b982edfc49b118dcc94e9f2"
+  },
+  "limits": [
+    "Original codec corpus only;no actual GUI/texture/provider/renderer or full JSON/numeric codec proof.",
+    "Old natural-dimension model remains scoped to its non-overflow fixtures;this model adds signedJava32 guard arithmetic.",
+    "Border clamping,UV selection,destination and submission/lifetime are source-only;accepted overflow is not proof of a rendered defect.",
+    "Dimension-pair identities are independent retained checks;model codes predict variant/admission/observed stretch flag only.",
+    "Native macOS/JDK21/25 only;unbounded constructors,malformed full grammar,all hosts and provider coexistence remain open."
+  ]
+}

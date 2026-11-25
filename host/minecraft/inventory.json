@@ -740,7 +740,7 @@
           "net.minecraft.client.resources.model.EquipmentClientInfo"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
+      "review": "partial: five-version source field/consumer slice; actual rendering,all concrete consumers and provider coexistence remain pending",
       "rules": [
         "host/minecraft/Decoding.lean",
         "host/minecraft/Decoding.bend"
@@ -750,6 +750,15 @@
       ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "presentation-selected-source-equipment-definitions",
+          "status": "source field/consumer map only",
+          "report": "host/minecraft/PRESENTATION.md",
+          "sourceMap": "host/minecraft/presentation-sources.json",
+          "limits": "Bounded selected entry points,not full grammar,all entities,registries,providers or actual rendering."
+        }
       ]
     },
     {
@@ -775,10 +784,19 @@
           "net.minecraft.client.renderer.entity.EntityRenderer"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version source field/consumer slice; actual rendering,all concrete consumers and provider coexistence remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "presentation-selected-source-entities-presentation",
+          "status": "source field/consumer map only",
+          "report": "host/minecraft/PRESENTATION.md",
+          "sourceMap": "host/minecraft/presentation-sources.json",
+          "limits": "Bounded selected entry points,not full grammar,all entities,registries,providers or actual rendering."
+        }
+      ]
     },
     {
       "id": "textures.images",
@@ -942,17 +960,34 @@
           "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
+      "review": "partial: five-version source field/consumer slice; actual rendering,all concrete consumers and provider coexistence remain pending",
       "rules": [
         "host/minecraft/Decoding.lean",
-        "host/minecraft/Decoding.bend"
+        "host/minecraft/Decoding.bend",
+        "host/minecraft/GuiScaling.bend"
       ],
       "proofs": [
-        "host/minecraft/evidence/codec-conformance.json"
+        "host/minecraft/evidence/codec-conformance.json",
+        "host/minecraft/GuiScaling.lean"
       ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
-        "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+        "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json",
+        "host/minecraft/evidence/gui-scaling-1.21.1-20261125T152702235201Z/observed.json",
+        "host/minecraft/evidence/gui-scaling-1.21.11-20261125T152728176661Z/observed.json",
+        "host/minecraft/evidence/gui-scaling-1.21.4-20261125T152725323923Z/observed.json",
+        "host/minecraft/evidence/gui-scaling-1.21.5-20261125T152726713563Z/observed.json",
+        "host/minecraft/evidence/gui-scaling-26.3-20261125T152729064759Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "presentation-selected-source-textures-gui",
+          "status": "source consumer map plus bounded original scaling-codec comparison",
+          "report": "host/minecraft/PRESENTATION.md",
+          "sourceMap": "host/minecraft/presentation-sources.json",
+          "limits": "70original codec outcomes and40dimension pairs;actual GUI/drawing/texture/submission remains source-only.",
+          "conformance": "host/minecraft/evidence/gui-scaling-conformance.json"
+        }
       ]
     },
     {
@@ -975,10 +1010,19 @@
           "net.minecraft.client.resources.GrassColorReloadListener"
         ]
       },
-      "review": "pending",
+      "review": "partial: five-version source field/consumer slice; actual rendering,all concrete consumers and provider coexistence remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "presentation-selected-source-textures-colormaps",
+          "status": "source field/consumer map only",
+          "report": "host/minecraft/PRESENTATION.md",
+          "sourceMap": "host/minecraft/presentation-sources.json",
+          "limits": "Bounded selected entry points,not full grammar,all entities,registries,providers or actual rendering."
+        }
+      ]
     },
     {
       "id": "fonts.definitions",

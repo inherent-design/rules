@@ -1,0 +1,117 @@
+[
+  {
+    "id": "stretch-extra-dimensions",
+    "accepted": true,
+    "partial": false,
+    "fields": {}
+  },
+  {
+    "id": "tile-valid",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8
+    }
+  },
+  {
+    "id": "tile-zero-width",
+    "accepted": false,
+    "partial": false,
+    "message": "Value must be positive: 0"
+  },
+  {
+    "id": "tile-zero-height",
+    "accepted": false,
+    "partial": false,
+    "message": "Value must be positive: 0"
+  },
+  {
+    "id": "nine-valid",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-zero-scalar",
+    "accepted": false,
+    "partial": false,
+    "message": "Failed to parse either. First: Value must be positive: 0; Second: Not a JSON object: 0"
+  },
+  {
+    "id": "nine-no-center",
+    "accepted": false,
+    "partial": false,
+    "message": "Nine-sliced texture has no horizontal center slice: 4 + 4 \u003e\u003d 8"
+  },
+  {
+    "id": "nine-zero-record",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-negative-side",
+    "accepted": false,
+    "partial": false,
+    "message": "Failed to parse either. First: Not a number: {\"left\":-1,\"top\":0,\"right\":0,\"bottom\":0}; Second: Value must be non-negative: -1"
+  },
+  {
+    "id": "nine-horizontal-overflow",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-both-overflow",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-large-scalar",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 2147483647,
+      "height": 2147483647,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-stretch-false",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": false
+    }
+  },
+  {
+    "id": "nine-stretch-true",
+    "accepted": true,
+    "partial": false,
+    "fields": {
+      "width": 8,
+      "height": 8,
+      "stretchInner": true
+    }
+  }
+]

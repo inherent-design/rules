@@ -27,6 +27,8 @@ The application owner’s [world-group comparison](../../applications/empack/WOR
 
 The [font and shader source chains](../minecraft/FONTS-TEXT.md) add effect/admission boundaries: an inactive font filter is not a promise that its provider was never loaded, and shader source preparation can allocate native buffers and start compilation before a publication barrier. A per-include release callback can deliberately leave a cached allocation owned elsewhere. Track each source, pending compilation, cache generation, compiled object, and submitted use through its actual owner protocol. Those source facts do not establish physical reclamation or all-platform execution.
 
+The [presentation map](../minecraft/PRESENTATION.md) separates decoded GUI metadata, equipment definitions, model roots, mutable color arrays, extracted state, and submitted texture/model uses. Replacing a renderer map or publishing a new static array does not itself revoke earlier consumers or prove all dependent generations were published atomically. The selected source sequence is not a demonstrated race; actual synchronization, retained inputs, and retirement remain required evidence.
+
 ## Ownership and trace contract
 
 The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.

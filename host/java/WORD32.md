@@ -8,6 +8,8 @@ The Java language contract specifies integer overflow without an overflow indica
 
 This host rule is consumed by the [Minecraft sound study](../minecraft/SOUNDS.md). Individually positive weights can produce a negative, zero, or positive wrapped aggregate. A caller that needs a bounded positive total must establish that property over the aggregate, rather than infer it from the entries. A checked/wider accumulator would be a separate application policy with compatibility and failure behavior to specify.
 
+The [GUI scaling comparison](../minecraft/PRESENTATION.md) independently exercises original codecs in five Java targets. Nonnegative border fields can wrap during a center-size guard and be accepted where unbounded natural addition would refuse. The actual drawing path then applies different destination clamping. Preserve the arithmetic, admission, layout, and rendering contracts separately; this codec observation does not establish a rendered defect or qualify a new host platform.
+
 The model excludes arbitrary JSON conversion, multiplication, floating-point arithmetic, checked arithmetic, random-number algorithms, concurrency, and native allocation. The processes perform incidental JVM, stream, and native work; the observations do not assert a process-wide absence of JNI or other effects. No Minecraft client or audio device is started by this primitive fixture.
 
 After compiling the models with `scripts/check-rules.py`, run `python3 host/java/word32_conformance.py`. This replays retained evidence and executable models; it does not launch Java. Owner-run collection is `word32_probe.py --help` and requires an explicitly selected existing JDK.

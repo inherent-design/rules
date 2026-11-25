@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "target": "java-1.21.1-vanilla",
+  "cases": [
+    {
+      "id": "stretch-extra-dimensions",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "stretch",
+        "width": 0,
+        "height": -1
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$Stretch",
+      "fields": []
+    },
+    {
+      "id": "tile-valid",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "tile",
+        "width": 8,
+        "height": 8
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$Tile",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "tile-zero-width",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "tile",
+        "width": 0,
+        "height": 8
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$Tile",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "tile-zero-height",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "tile",
+        "width": 8,
+        "height": 0
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$Tile",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-valid",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": 1
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-zero-scalar",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": 0
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-no-center",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": 4
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-zero-record",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-negative-side",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": {
+          "left": -1,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-horizontal-overflow",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": {
+          "left": 2147483647,
+          "top": 0,
+          "right": 1,
+          "bottom": 0
+        }
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-both-overflow",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": {
+          "left": 2147483647,
+          "top": 2147483647,
+          "right": 2147483647,
+          "bottom": 2147483647
+        }
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-large-scalar",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 2147483647,
+        "height": 2147483647,
+        "border": 2147483647
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-stretch-false",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": 1,
+        "stretch_inner": false
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    },
+    {
+      "id": "nine-stretch-true",
+      "action": "codec",
+      "class": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling",
+      "member": "CODEC",
+      "input": {
+        "type": "nine_slice",
+        "width": 8,
+        "height": 8,
+        "border": 1,
+        "stretch_inner": true
+      },
+      "observationClass": "net.minecraft.client.resources.metadata.gui.GuiSpriteScaling$NineSlice",
+      "fields": [
+        "width",
+        "height"
+      ]
+    }
+  ]
+}
