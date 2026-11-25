@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "rules-background",
+      "type": "process",
+      "command": "/Users/zer0cell/.local/share/mise/installs/python/latest/bin/python3",
+      "args": [
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/task_worker.py",
+        "--log",
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/child-events.jsonl",
+        "--name",
+        "rules-background",
+        "--mode",
+        "background",
+        "--gate",
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/ready-gate"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": {
+        "owner": "rules-study",
+        "pattern": {
+          "regexp": "^(ERROR) (.*)$",
+          "file": 1,
+          "message": 2
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^BEGIN$",
+          "endsPattern": "^READY$"
+        }
+      },
+      "isBackground": true
+    },
+    {
+      "label": "rules-dependent",
+      "type": "process",
+      "command": "/Users/zer0cell/.local/share/mise/installs/python/latest/bin/python3",
+      "args": [
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/task_worker.py",
+        "--log",
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/child-events.jsonl",
+        "--name",
+        "rules-dependent",
+        "--mode",
+        "exit",
+        "--gate",
+        "/private/tmp/rules-vsc-tasks-ty_94ir9/ready-gate"
+      ],
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": [],
+      "dependsOn": "rules-background",
+      "dependsOrder": "sequence"
+    }
+  ]
+}

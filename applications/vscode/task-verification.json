@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "nativeTraceSnapshots": 58,
+  "nativeTraceComparisons": 2,
+  "nativeDiscoveryComparisons": 3,
+  "sourceAdmissionComparisons": 16,
+  "sourceDependencyComparisons": 16,
+  "proposedSignalGuardComparisons": 6,
+  "totalComparisons": 43,
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "empty",
+    "event",
+    "task-id",
+    "missing-task",
+    "execution",
+    "provider-bound",
+    "pid-witness"
+  ],
+  "changedPremises": [
+    "early-handle-removal",
+    "missing-task-removal",
+    "disabled-provider",
+    "worker-vs-node",
+    "background-not-ready",
+    "unbound-positive-pid"
+  ],
+  "changedObservations": [
+    "virtual-pid",
+    "provider-disposal",
+    "invented-stop-status",
+    "premature-provider-cleanup",
+    "literal-argument",
+    "child-exit-code"
+  ],
+  "leanLaws": 15,
+  "bendLaws": 11,
+  "limits": [
+    "Source/proposed rows are not native executions.",
+    "Active task list is not process liveness.",
+    "Background matcher state is source-inferred,not a direct API callback."
+  ]
+}

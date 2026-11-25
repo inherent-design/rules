@@ -1,0 +1,71 @@
+{
+  "application": "vscode",
+  "version": "1.147.0",
+  "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+  "sources": [
+    {
+      "path": "src/vscode-dts/vscode.d.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vscode-dts/vscode.d.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vscode-dts__vscode.d.ts",
+      "sha256": "1100202846278445e33f466d04d98378408da78cb9a4ec0c941ccecba75b769a",
+      "inspection": "ProcessExecution/CustomExecution,TaskExecution.terminate and task/process event declarations; virtual process event native discrepancy is scoped below."
+    },
+    {
+      "path": "src/vs/workbench/api/common/extHostTask.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/api/common/extHostTask.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__api__common__extHostTask.ts",
+      "sha256": "5e3ffd92e8a52cd484690e88379db0808b9159e32c33721ffe65b1fecd830717",
+      "inspection": "TaskExecutionImpl.terminate,execution map start/end forwarding;WorkerExtHostTask custom-only admission. No RPC/DTO/process or browser native qualification."
+    },
+    {
+      "path": "src/vs/workbench/api/node/extHostTask.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/api/node/extHostTask.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__api__node__extHostTask.ts",
+      "sha256": "143544335414dd3ba13e92d5dabcf122a758f834efa9cc97629b3ffe1106ece4",
+      "inspection": "executeTask preserves handle resolution versus new execution admission;returns execution before run RPC settles. Full DTO/workspace resolution remains unqualified."
+    },
+    {
+      "path": "src/vs/workbench/api/browser/mainThreadTask.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/api/browser/mainThreadTask.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__api__browser__mainThreadTask.ts",
+      "sha256": "0a97024f2c157ff825e8aaae8e98854e5f50fcbe20d45d3834199d48d7553885",
+      "inspection": "$executeTask and TaskEventKind.ProcessStarted/ProcessEnded forwarding. No independent descendant liveness proof."
+    },
+    {
+      "path": "src/vs/workbench/api/common/extHostTerminalService.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/api/common/extHostTerminalService.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__api__common__extHostTerminalService.ts",
+      "sha256": "b15ddbb8bcc1d4352784a86457935f0e500d5da78af72eead27eb4f9e1df0e52",
+      "inspection": "ExtensionTerminalProcess.startSendingEvents calls PTY open then emits process ready with PID -1;onDidClose forwards result."
+    },
+    {
+      "path": "src/vs/workbench/contrib/tasks/browser/abstractTaskService.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/contrib/tasks/browser/abstractTaskService.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__contrib__tasks__browser__abstractTaskService.ts",
+      "sha256": "79957be31e8cfb3fcf1ba30a44cc538f7f5881934bb7d634f63d0a0eab89d1cd",
+      "inspection": "_isProvideTasksEnabled requires autoDetect on;_getGroupedTasks filters provider definition/type and times out provider calls. General discovery and timeout races unqualified."
+    },
+    {
+      "path": "src/vs/workbench/contrib/tasks/browser/terminalTaskSystem.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/contrib/tasks/browser/terminalTaskSystem.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__contrib__tasks__browser__terminalTaskSystem.ts",
+      "sha256": "0723fe52a5670ff3feb6b0fec20fcc89846c508b67a21ce2c9282ddbd4c1adb1",
+      "inspection": "_createInactiveDependencyPromise/_getDependencyPromise/_executeDependencyTask;watcher Active/Inactive and process-end/task-end event order. No general scheduler/matcher/retirement proof."
+    },
+    {
+      "path": "src/vs/workbench/contrib/tasks/common/tasks.ts",
+      "commit": "8a14f0cc1b08d531eb83255ea3764ae22aa932b5",
+      "url": "https://raw.githubusercontent.com/microsoft/vscode/8a14f0cc1b08d531eb83255ea3764ae22aa932b5/src/vs/workbench/contrib/tasks/common/tasks.ts",
+      "cache": "applications/tools/source-cache/vscode/src__vs__workbench__contrib__tasks__common__tasks.ts",
+      "sha256": "33536e3363f367fe5459153ff880c1296bee2c91884cf7d4a485d0ff67a4a682",
+      "inspection": "TaskSettingId.AutoDetect maps task.autoDetect;event constructors carry process IDs and exit codes."
+    }
+  ]
+}

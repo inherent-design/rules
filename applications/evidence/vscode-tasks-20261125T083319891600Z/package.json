@@ -1,0 +1,27 @@
+{
+  "name": "rules-task-fixture",
+  "publisher": "rules-study",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.147.0"
+  },
+  "main": "./extension.cjs",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "taskDefinitions": [
+      {
+        "type": "rules-task-study",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    ]
+  }
+}

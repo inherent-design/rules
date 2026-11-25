@@ -71,3 +71,5 @@ A later [configuration band](CONFIGURATION.md) observes explicit settings target
 The [trust band](TRUST.md) models selected support-policy and trust-disable predicates from source with admitted adapters. It leaves installed trust enforcement, extension execution, and grant/revoke persistence unqualified.
 
 The [workspace/search band](WORKSPACE-SEARCH.md) executes selected multi-root, file/text search, and workspace-edit APIs in an isolated desktop profile. It separates provisional membership, buffer masking, exclusion defaults, caller/submission versions, and retained effects after refusal; Search UI and complete operation qualification remain pending.
+
+The [task band](TASKS.md) separates provider discovery, execution handles, virtual process events, stop requests, and background readiness in two retained desktop collections. It leaves complete task/terminal UI, browser/remote execution, and descendant retirement unqualified.

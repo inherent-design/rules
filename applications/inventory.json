@@ -16295,7 +16295,29 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "task-api-readiness-slice",
+              "status": "native-observed",
+              "scope": "Two local desktop API collections: 58 task-list snapshots, three provider-discovery outcomes, literal process arguments, a virtual PTY result, asynchronous stopping, and a configured readiness dependency. Source-only worker admission and the proposed PID guard are separate.",
+              "remaining": "The resolveTask callback, arbitrary configurations, shells, inputs, matchers, UI, worker/browser/remote execution, concurrency, full child retirement, and failure paths remain unqualified.",
+              "evidence": [
+                "vscode/TASKS.md",
+                "vscode/Tasks.lean",
+                "vscode/Tasks.bend",
+                "vscode/task-verification.json",
+                "vscode/task_observations.py",
+                "sources/vscode-task-selections.json"
+              ],
+              "operationSlices": {
+                "configure-task": "Selected generated process/dependency/watching-matcher definitions only.",
+                "run": "Registered custom task and literal ProcessExecution on local desktop;source-only host admission separate.",
+                "background-ready": "One gate-controlled watcher/dependent with producer still active;matcher inactivity source-inferred.",
+                "stop-task": "Three task stop requests;two owned process journals and independently absent PIDs;no universal retirement guarantee."
+              }
+            }
+          ]
         },
         {
           "id": "vscode.terminal",
