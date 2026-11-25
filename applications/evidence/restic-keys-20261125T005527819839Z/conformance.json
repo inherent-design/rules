@@ -1,0 +1,619 @@
+{
+  "schema": 1,
+  "nativeCommands": 21,
+  "postBackupComparisons": 17,
+  "currentKeyComparisons": 5,
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "count",
+    "operation",
+    "password",
+    "hint",
+    "backing",
+    "target",
+    "boolean",
+    "ambiguous-scan",
+    "duplicate-id"
+  ],
+  "observationMutations": [
+    "outcome-0",
+    "outcome-1",
+    "outcome-2",
+    "outcome-3",
+    "outcome-4",
+    "outcome-5"
+  ],
+  "comparisons": [
+    {
+      "case": "list-initial",
+      "input": {
+        "a": true,
+        "b": false,
+        "c": false,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 0,
+        "target": 0
+      },
+      "expected": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "1/0/0/1/0/1"
+    },
+    {
+      "case": "add-same-password",
+      "input": {
+        "a": true,
+        "b": false,
+        "c": false,
+        "backing": 1,
+        "kind": 1,
+        "password": 1,
+        "hint": 1,
+        "target": 0
+      },
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "1/1/0/1/0/2"
+    },
+    {
+      "case": "list-duplicate",
+      "input": {
+        "a": true,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 1,
+        "target": 0
+      },
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "1/1/0/1/0/1"
+    },
+    {
+      "case": "remove-current-with-other",
+      "input": {
+        "a": true,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 3,
+        "password": 1,
+        "hint": 1,
+        "target": 1
+      },
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "1/1/0/1/1/1"
+    },
+    {
+      "case": "change-one-password",
+      "input": {
+        "a": true,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 2,
+        "password": 1,
+        "hint": 1,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/0/3"
+    },
+    {
+      "case": "list-new-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 0,
+        "password": 2,
+        "hint": 3,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        3
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/0/3"
+    },
+    {
+      "case": "list-old-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 2,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/0/2"
+    },
+    {
+      "case": "dump-old-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 2,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/0/2"
+    },
+    {
+      "case": "dump-new-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 0,
+        "password": 2,
+        "hint": 3,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/0/3"
+    },
+    {
+      "case": "add-wrong-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 1,
+        "password": 3,
+        "hint": 0,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        12,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/12/0"
+    },
+    {
+      "case": "add-empty-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 4,
+        "password": 2,
+        "hint": 3,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/1/1/1/3"
+    },
+    {
+      "case": "remove-other-wrapper",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": true,
+        "backing": 1,
+        "kind": 3,
+        "password": 1,
+        "hint": 2,
+        "target": 3
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/0/2"
+    },
+    {
+      "case": "removed-password",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 0,
+        "password": 2,
+        "hint": 3,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        12,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/12/0"
+    },
+    {
+      "case": "list-remaining",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 2,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/0/2"
+    },
+    {
+      "case": "remove-only-current",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 3,
+        "password": 1,
+        "hint": 2,
+        "target": 2
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/1/2"
+    },
+    {
+      "case": "remove-unknown",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 3,
+        "password": 1,
+        "hint": 2,
+        "target": 4
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/1/2"
+    },
+    {
+      "case": "dump-final",
+      "input": {
+        "a": false,
+        "b": true,
+        "c": false,
+        "backing": 1,
+        "kind": 0,
+        "password": 1,
+        "hint": 2,
+        "target": 0
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        null
+      ],
+      "measuredFields": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "premise": "Password labels follow the controlled add/change inputs and independent opens;no password derivation or decryption simulated. Current-key token measured only in list output. Non-key repository bytes separately checked unchanged.",
+      "model": "0/1/0/1/0/2"
+    }
+  ],
+  "basisSha256": {
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-empty-password.stderr": "fa5acdabe06dc405ceef5a05aa80d9c4ea9128321c67f8e011ba235668a135a7",
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-empty-password.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-same-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-same-password.stdout": "6ad68beb34749877fff60fc6b2472c2568b2ca01356a897bf22584a28e233475",
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-wrong-password.stderr": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+    "applications/evidence/restic-keys-20261125T005527819839Z/add-wrong-password.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/backup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/backup.stdout": "5b0e019101d2a8ba395ed06ab335a2d913141fe95c9c3e84570e0496dfa3c73c",
+    "applications/evidence/restic-keys-20261125T005527819839Z/change-one-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/change-one-password.stdout": "e0cc0c0171dfd5151515c6a31a09b489705275a2529788868cc5a36c107f58d4",
+    "applications/evidence/restic-keys-20261125T005527819839Z/commands.json": "b9d449699eac6c23d95695a5c54a49ed183a0cd42d62509192aadde2ede4668e",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-final.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-final.stdout": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-new-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-new-password.stdout": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-old-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/dump-old-password.stdout": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+    "applications/evidence/restic-keys-20261125T005527819839Z/help-passwd.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/help-passwd.stdout": "02d1bfb77b2e2710ff6231f4a3d8f8cd96f5a6e056d6e56b428f557fa7abfdc4",
+    "applications/evidence/restic-keys-20261125T005527819839Z/helper.py": "49b0dec655962745e2d1e8ba8ff9ced538733846efb42312978e8211089f4fc8",
+    "applications/evidence/restic-keys-20261125T005527819839Z/init.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/init.stdout": "34c063798f4fc111fac24bf9107742b0e99040d3f50887a26d63232ff3b4e06f",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-duplicate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-duplicate.stdout": "24f4e9cfa1c379e4a1316208d6c0d384ec1b1f83d49910d1dc541b05c20e1c46",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-initial.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-initial.stdout": "3d569ec15f981aaead92d2111fd997ccda8420f18f52ea2253193c1248c202dd",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-new-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-new-password.stdout": "c95c94c3f3c5823da9d6778b57bb8c4e5ed29176a78a100f0a16ea30d4eb64c6",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-old-password.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-old-password.stdout": "d3f39a2f0bcaa9383e65491c4765ae7b4b5c38330e6e4f8276b0231ca360416d",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-remaining.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/list-remaining.stdout": "8b89c27d33d8df7615c4eca67c36292e16f234b33e1f30383edab28f51629c5b",
+    "applications/evidence/restic-keys-20261125T005527819839Z/owned-processes.json": "65bd402ee559299e6cd258bda735e7afb5cebc5a4903e81c6cb3286229b180b7",
+    "applications/evidence/restic-keys-20261125T005527819839Z/probe.py": "2e7b12457884025df09c15d22796cc0b5bdab9bd7c39818f9f01e4a5e698e000",
+    "applications/evidence/restic-keys-20261125T005527819839Z/receipt.json": "d80ef193828a205f60a3fce658e48368d23c7fc17a2690c4b7c614bec343df76",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-current-with-other.stderr": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-current-with-other.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-only-current.stderr": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-only-current.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-other-wrapper.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-other-wrapper.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-unknown.stderr": "6b005176e391352da3b8ff39eab12abdfe50de271821ca473ea589e6b3b3f6be",
+    "applications/evidence/restic-keys-20261125T005527819839Z/remove-unknown.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/removed-password.stderr": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+    "applications/evidence/restic-keys-20261125T005527819839Z/removed-password.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/version.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "applications/evidence/restic-keys-20261125T005527819839Z/version.stdout": "22e81f872b5ba9a10703925fbfb5c8419ba0191e1ce5e83c0c947ef87a729743",
+    "applications/restic/Keys.bend": "df125da05b47690afa062627fdd597bd6b2e641192214d6991f98b3737bc1fbc",
+    "applications/restic/Keys.lean": "974629925b9fb6923e465a579af5201b2f484a89640e07bcaa21fd54c3032287",
+    "applications/restic/KeysCase.lean": "2d38c3b80304b1b58820b269b9e5b884b311c8c5268654c43360d0ebb78bb513",
+    "applications/restic/keys_conformance.py": "50341563b7762057c55da51266e0d46dae07e912d988e0c51527ef45ad75ba4e",
+    "applications/restic/keys_observations.py": "f9a1006fcd1dec0dc2e78e56052ba03db52e0fc8c36764db47fea11beac2e8a1",
+    "applications/restic/keys_probe.py": "2e7b12457884025df09c15d22796cc0b5bdab9bd7c39818f9f01e4a5e698e000",
+    "applications/sources/restic-keys-selections.json": "6377bce99411fb77044b9daa2c1c7aa8d2f6b3c8e0c6d91303689db63169cb31"
+  },
+  "driverSha256": "ebd37cc9fe2eae7b7385b40830b5097ff777436f1b1ff5a5beeb2ee279abb3fb",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "No restic,crypto,backend or password-file mutation in replay. Credential labels are controlled witness relations,not cryptographic proofs. IDs are exact native wrappers mapped to three research tokens.",
+    "Non-key backing token comes from independently equal repository file/hash images;not a master-key export. Three successful payload dumps independently verify readable fixture content.",
+    "List current-key fields are native;other returned current tokens are model/source-only. No persistent active key setting is inferred.",
+    "Only selected successful key writes/verifications/removals and explicit admission/current-key refusals;IO failure,crash,concurrency,scan limit and ambiguous unhinted ordering remain open.",
+    "Password change replaces one wrapper and does not rotate the master or revoke another wrapper sharing its old password. Copied-key revocation is not tested.",
+    "Password-change output describes a Key object while help promises its ID;reporting proposal remains separate from current behavior."
+  ]
+}

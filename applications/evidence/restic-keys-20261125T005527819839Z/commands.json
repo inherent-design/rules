@@ -1,0 +1,1766 @@
+[
+  {
+    "case": "version",
+    "passwordLabel": "a",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "version"
+    ],
+    "before": {},
+    "after": {},
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/version.stdout",
+        "rawSha256": "22e81f872b5ba9a10703925fbfb5c8419ba0191e1ce5e83c0c947ef87a729743",
+        "publicSha256": "22e81f872b5ba9a10703925fbfb5c8419ba0191e1ce5e83c0c947ef87a729743"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/version.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.021871375385671854
+  },
+  {
+    "case": "help-passwd",
+    "passwordLabel": "a",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "key",
+      "passwd",
+      "--help"
+    ],
+    "before": {},
+    "after": {},
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/help-passwd.stdout",
+        "rawSha256": "02d1bfb77b2e2710ff6231f4a3d8f8cd96f5a6e056d6e56b428f557fa7abfdc4",
+        "publicSha256": "02d1bfb77b2e2710ff6231f4a3d8f8cd96f5a6e056d6e56b428f557fa7abfdc4"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/help-passwd.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.012584167066961527
+  },
+  {
+    "case": "init",
+    "passwordLabel": "a",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "before": {},
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/init.stdout",
+        "rawSha256": "948811e41c4957b44aa952d29855368bf112675caded78b3298f572d27911117",
+        "publicSha256": "34c063798f4fc111fac24bf9107742b0e99040d3f50887a26d63232ff3b4e06f"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/init.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 3.0675008753314614
+  },
+  {
+    "case": "backup",
+    "passwordLabel": "a",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "backup",
+      ".",
+      "--host",
+      "key-fixture-host"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/backup.stdout",
+        "rawSha256": "5b0e019101d2a8ba395ed06ab335a2d913141fe95c9c3e84570e0496dfa3c73c",
+        "publicSha256": "5b0e019101d2a8ba395ed06ab335a2d913141fe95c9c3e84570e0496dfa3c73c"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/backup.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7531960420310497
+  },
+  {
+    "case": "list-initial",
+    "passwordLabel": "a",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/list-initial.stdout",
+        "rawSha256": "0b0223b677bb2ac9ce3c4da47c7074bc4dcd5e41bb896454f7bc8ca5ea4bcb69",
+        "publicSha256": "3d569ec15f981aaead92d2111fd997ccda8420f18f52ea2253193c1248c202dd"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/list-initial.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7206771248020232
+  },
+  {
+    "case": "add-same-password",
+    "passwordLabel": "a",
+    "keyHint": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+      "key",
+      "add",
+      "--new-password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--user",
+      "fixture-user",
+      "--host",
+      "fixture-host"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/add-same-password.stdout",
+        "rawSha256": "6ad68beb34749877fff60fc6b2472c2568b2ca01356a897bf22584a28e233475",
+        "publicSha256": "6ad68beb34749877fff60fc6b2472c2568b2ca01356a897bf22584a28e233475"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/add-same-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 4.187875499948859
+  },
+  {
+    "case": "list-duplicate",
+    "passwordLabel": "a",
+    "keyHint": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/list-duplicate.stdout",
+        "rawSha256": "8a3b7810d42d9600441043b73de6657d63361617a1f4808f0326d3502b5ecc10",
+        "publicSha256": "24f4e9cfa1c379e4a1316208d6c0d384ec1b1f83d49910d1dc541b05c20e1c46"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/list-duplicate.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7299025836400688
+  },
+  {
+    "case": "remove-current-with-other",
+    "passwordLabel": "a",
+    "keyHint": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+      "key",
+      "remove",
+      "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/remove-current-with-other.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/remove-current-with-other.stderr",
+        "rawSha256": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879",
+        "publicSha256": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879"
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7118959161452949
+  },
+  {
+    "case": "change-one-password",
+    "passwordLabel": "a",
+    "keyHint": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095",
+      "key",
+      "passwd",
+      "--new-password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b",
+      "--user",
+      "fixture-user",
+      "--host",
+      "fixture-host"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095": {
+        "bytes": 460,
+        "sha256": "71a7f19f0cd9716e25208800e6edc4fbcc7619ef545e7420f4a2e33afc741095"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/change-one-password.stdout",
+        "rawSha256": "e0cc0c0171dfd5151515c6a31a09b489705275a2529788868cc5a36c107f58d4",
+        "publicSha256": "e0cc0c0171dfd5151515c6a31a09b489705275a2529788868cc5a36c107f58d4"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/change-one-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 4.203890666831285
+  },
+  {
+    "case": "list-new-password",
+    "passwordLabel": "b",
+    "keyHint": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b",
+      "--json",
+      "--key-hint",
+      "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/list-new-password.stdout",
+        "rawSha256": "c95c94c3f3c5823da9d6778b57bb8c4e5ed29176a78a100f0a16ea30d4eb64c6",
+        "publicSha256": "c95c94c3f3c5823da9d6778b57bb8c4e5ed29176a78a100f0a16ea30d4eb64c6"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/list-new-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7151659997180104
+  },
+  {
+    "case": "list-old-password",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/list-old-password.stdout",
+        "rawSha256": "d3f39a2f0bcaa9383e65491c4765ae7b4b5c38330e6e4f8276b0231ca360416d",
+        "publicSha256": "d3f39a2f0bcaa9383e65491c4765ae7b4b5c38330e6e4f8276b0231ca360416d"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/list-old-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7184592499397695
+  },
+  {
+    "case": "dump-old-password",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "dump",
+      "latest",
+      "/payload.txt"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/dump-old-password.stdout",
+        "rawSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+        "publicSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/dump-old-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7220110828056931
+  },
+  {
+    "case": "dump-new-password",
+    "passwordLabel": "b",
+    "keyHint": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b",
+      "--json",
+      "--key-hint",
+      "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+      "dump",
+      "latest",
+      "/payload.txt"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/dump-new-password.stdout",
+        "rawSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+        "publicSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/dump-new-password.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.723081958014518
+  },
+  {
+    "case": "add-wrong-password",
+    "passwordLabel": "wrong",
+    "keyHint": null,
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-wrong",
+      "--json",
+      "key",
+      "add",
+      "--new-password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/add-wrong-password.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/add-wrong-password.stderr",
+        "rawSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+        "publicSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4"
+      }
+    },
+    "outcome": {
+      "exitCode": 12,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.9792357501573861
+  },
+  {
+    "case": "add-empty-password",
+    "passwordLabel": "b",
+    "keyHint": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b",
+      "--json",
+      "--key-hint",
+      "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+      "key",
+      "add",
+      "--new-password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-empty"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/add-empty-password.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/add-empty-password.stderr",
+        "rawSha256": "fa5acdabe06dc405ceef5a05aa80d9c4ea9128321c67f8e011ba235668a135a7",
+        "publicSha256": "fa5acdabe06dc405ceef5a05aa80d9c4ea9128321c67f8e011ba235668a135a7"
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7131035421043634
+  },
+  {
+    "case": "remove-other-wrapper",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "key",
+      "remove",
+      "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "keys/6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241": {
+        "bytes": 460,
+        "sha256": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/remove-other-wrapper.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/remove-other-wrapper.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7191732916980982
+  },
+  {
+    "case": "removed-password",
+    "passwordLabel": "b",
+    "keyHint": "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-b",
+      "--json",
+      "--key-hint",
+      "6b10504ec4debdfc2861f91c73c7c7c39cfa27691073318e000717430f917241",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/removed-password.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/removed-password.stderr",
+        "rawSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+        "publicSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4"
+      }
+    },
+    "outcome": {
+      "exitCode": 12,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.5039244592189789
+  },
+  {
+    "case": "list-remaining",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "key",
+      "list"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/list-remaining.stdout",
+        "rawSha256": "8b89c27d33d8df7615c4eca67c36292e16f234b33e1f30383edab28f51629c5b",
+        "publicSha256": "8b89c27d33d8df7615c4eca67c36292e16f234b33e1f30383edab28f51629c5b"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/list-remaining.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7097302093170583
+  },
+  {
+    "case": "remove-only-current",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "key",
+      "remove",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/remove-only-current.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/remove-only-current.stderr",
+        "rawSha256": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879",
+        "publicSha256": "edf30de5fbcf6ca7d61f6f4ecdad74191c45d7139ad052a4931577fd0e2e0879"
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7200356661342084
+  },
+  {
+    "case": "remove-unknown",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "key",
+      "remove",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/remove-unknown.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/remove-unknown.stderr",
+        "rawSha256": "6b005176e391352da3b8ff39eab12abdfe50de271821ca473ea589e6b3b3f6be",
+        "publicSha256": "6b005176e391352da3b8ff39eab12abdfe50de271821ca473ea589e6b3b3f6be"
+      }
+    },
+    "outcome": {
+      "exitCode": 1,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7153843343257904
+  },
+  {
+    "case": "dump-final",
+    "passwordLabel": "a",
+    "keyHint": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/repository",
+      "--password-file",
+      "/Users/[fixture-user]/production/rules/applications/evidence/restic-keys-20261125T005527819839Z/work/password-a",
+      "--json",
+      "--key-hint",
+      "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36",
+      "dump",
+      "latest",
+      "/payload.txt"
+    ],
+    "before": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "after": {
+      "config": {
+        "bytes": 155,
+        "sha256": "376dedb4f43cba93c23a0edc49e4da908516ad5c8dd70ed3a6cf01a52cc2ca67"
+      },
+      "data/27/271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233": {
+        "bytes": 146,
+        "sha256": "271381fa831725a05185e73691175b9f056978eec0c4aae6971db1c35a7e8233"
+      },
+      "data/52/52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68": {
+        "bytes": 408,
+        "sha256": "52fb927201cd9a491b95db4e68cef72195fbf182541389db7ea94a1368d4dd68"
+      },
+      "index/92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc": {
+        "bytes": 308,
+        "sha256": "92d034c6880ef57f9c7fb2f46515801de5832114fdcdd4a5b95ce4f06d31dfbc"
+      },
+      "keys/3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36": {
+        "bytes": 460,
+        "sha256": "3786f3ab4b69a0135f2a2615127f8d9f6ddf89923f03337b3fbc26dbc1a11d36"
+      },
+      "snapshots/a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8": {
+        "bytes": 432,
+        "sha256": "a22aa0f00b9d92851a83e62e2e408cdfae336b7b7d71cec4dcac95d6901b44d8"
+      }
+    },
+    "streams": {
+      "stdout": {
+        "rawPrivatePath": "work/private/dump-final.stdout",
+        "rawSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02",
+        "publicSha256": "3b5e2727cb97ebd180c6a9f5072d5e626544d2a451436a201f9e42dbafaf7d02"
+      },
+      "stderr": {
+        "rawPrivatePath": "work/private/dump-final.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outcome": {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true
+    },
+    "seconds": 0.7207835842855275
+  }
+]

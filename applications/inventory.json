@@ -13095,37 +13095,118 @@
             },
             {
               "id": "add-key",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Keys.lean and restic/Keys.bend",
+              "laws": [
+                "access_is_not_a_persistent_current_setting",
+                "add_same_password_keeps_both_wrappers",
+                "another_wrapper_does_not_allow_removing_current",
+                "password_change_replaces_only_the_used_wrapper",
+                "old_password_still_opens_its_other_wrapper",
+                "new_password_opens_the_new_wrapper",
+                "wrong_password_cannot_add",
+                "empty_new_password_does_not_add",
+                "removal_can_revoke_another_wrappers_local_access",
+                "remaining_current_wrapper_cannot_be_removed",
+                "unknown_wrapper_removal_is_a_refusal",
+                "backing_image_is_preserved"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-keys-20261125T005527819839Z/commands.json",
+                "evidence/restic-keys-20261125T005527819839Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-keys-selections.json"
+              ],
+              "negativeControls": [
+                "restic/keys_conformance.py:researchRefusals",
+                "restic/keys_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/KEYS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One new tiny local repo,three exact wrapper IDs and controlled private password relations;existing restic0.20,Mac arm64,explicit key hints",
+                "Successful key writes/verification/removal except admission/current-key refusals;non-key repository images equal and three actual marker dumps verified",
+                "Credential relations are witness labels,not KDF/encryption proofs;current key is per-process;only list current fields directly observed"
+              ],
+              "verificationPlan": "Qualify crypto/KDF and arbitrary key formats separately. Preserve damage/search-limit,interactive entry,backend permissions,failed verification/save/removal,concurrency/interruption and copied-key compromise gaps. No atomic/global password revocation guarantee or production change."
             },
             {
               "id": "change-password",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Keys.lean and restic/Keys.bend",
+              "laws": [
+                "access_is_not_a_persistent_current_setting",
+                "add_same_password_keeps_both_wrappers",
+                "another_wrapper_does_not_allow_removing_current",
+                "password_change_replaces_only_the_used_wrapper",
+                "old_password_still_opens_its_other_wrapper",
+                "new_password_opens_the_new_wrapper",
+                "wrong_password_cannot_add",
+                "empty_new_password_does_not_add",
+                "removal_can_revoke_another_wrappers_local_access",
+                "remaining_current_wrapper_cannot_be_removed",
+                "unknown_wrapper_removal_is_a_refusal",
+                "backing_image_is_preserved"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-keys-20261125T005527819839Z/commands.json",
+                "evidence/restic-keys-20261125T005527819839Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-keys-selections.json"
+              ],
+              "negativeControls": [
+                "restic/keys_conformance.py:researchRefusals",
+                "restic/keys_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/KEYS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One new tiny local repo,three exact wrapper IDs and controlled private password relations;existing restic0.20,Mac arm64,explicit key hints",
+                "Successful key writes/verification/removal except admission/current-key refusals;non-key repository images equal and three actual marker dumps verified",
+                "Credential relations are witness labels,not KDF/encryption proofs;current key is per-process;only list current fields directly observed"
+              ],
+              "verificationPlan": "Qualify crypto/KDF and arbitrary key formats separately. Preserve damage/search-limit,interactive entry,backend permissions,failed verification/save/removal,concurrency/interruption and copied-key compromise gaps. No atomic/global password revocation guarantee or production change."
             },
             {
               "id": "remove-key",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "restic/Keys.lean and restic/Keys.bend",
+              "laws": [
+                "access_is_not_a_persistent_current_setting",
+                "add_same_password_keeps_both_wrappers",
+                "another_wrapper_does_not_allow_removing_current",
+                "password_change_replaces_only_the_used_wrapper",
+                "old_password_still_opens_its_other_wrapper",
+                "new_password_opens_the_new_wrapper",
+                "wrong_password_cannot_add",
+                "empty_new_password_does_not_add",
+                "removal_can_revoke_another_wrappers_local_access",
+                "remaining_current_wrapper_cannot_be_removed",
+                "unknown_wrapper_removal_is_a_refusal",
+                "backing_image_is_preserved"
+              ],
+              "nativeEvidence": [
+                "evidence/restic-keys-20261125T005527819839Z/commands.json",
+                "evidence/restic-keys-20261125T005527819839Z/conformance.json"
+              ],
+              "sourceComparison": [
+                "sources/restic-keys-selections.json"
+              ],
+              "negativeControls": [
+                "restic/keys_conformance.py:researchRefusals",
+                "restic/keys_conformance.py:observationMutations"
+              ],
+              "uxAssessment": "restic/KEYS.md",
+              "status": "native-observed",
+              "proofPremises": [
+                "One new tiny local repo,three exact wrapper IDs and controlled private password relations;existing restic0.20,Mac arm64,explicit key hints",
+                "Successful key writes/verification/removal except admission/current-key refusals;non-key repository images equal and three actual marker dumps verified",
+                "Credential relations are witness labels,not KDF/encryption proofs;current key is per-process;only list current fields directly observed"
+              ],
+              "verificationPlan": "Qualify crypto/KDF and arbitrary key formats separately. Preserve damage/search-limit,interactive entry,backend permissions,failed verification/save/removal,concurrency/interruption and copied-key compromise gaps. No atomic/global password revocation guarantee or production change."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "bounded native access-wrapper add/change/remove study; key derivation and broader custody remain pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."

@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "cmd/restic/cmd_key.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_key.go",
+      "cache": "applications/tools/source-cache/restic-keys/cmd__restic__cmd_key.go",
+      "sha256": "7f625e20f590535f397be3be4962e7eae49e534d0204ffe5708ba2c943b7782b",
+      "bytes": 589,
+      "inspected": "15-29: key subcommand grouping; not a lifecycle implementation."
+    },
+    {
+      "path": "internal/repository/key.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/key.go",
+      "cache": "applications/tools/source-cache/restic-keys/internal__repository__key.go",
+      "sha256": "2af7919cabd71ebe7a576f26fd2c0afecf97d939c48919456628fd4222f4fe35",
+      "bytes": 7828,
+      "inspected": "25-62,76-203,212-316: encrypted master-key wrapper and KDF parameters; key search/hint fallback, random salt and wrapping existing master, saved ID, current-key removal refusal. Source attribution only, not a cryptographic proof."
+    },
+    {
+      "path": "doc/070_encryption.rst",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/doc/070_encryption.rst",
+      "cache": "applications/tools/source-cache/restic-keys/doc__070_encryption.rst",
+      "sha256": "664ae7d914d28574b2a51d7b25c8a3fd1c657c08fb09e14a9be4c7e8b7135532",
+      "bytes": 1940,
+      "inspected": "Managing repository keys section: multiple access keys/passwords and add/list/remove/passwd command examples; current key marker. Does not supply a copied-master revocation claim."
+    },
+    {
+      "path": "cmd/restic/cmd_key_add.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_key_add.go",
+      "cache": "applications/tools/source-cache/restic-keys/cmd__restic__cmd_key_add.go",
+      "sha256": "ca0daeb176ef43e5bd89c2c96ba2072717832a1afeebda2332a0f5e4fae084e9",
+      "bytes": 4525,
+      "inspected": "49-93,97-161: append-lock, password admission, add wrapper, hinted verification/cleanup and current-key switch; no native failure of key verification claimed."
+    },
+    {
+      "path": "cmd/restic/cmd_key_list.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_key_list.go",
+      "cache": "applications/tools/source-cache/restic-keys/cmd__restic__cmd_key_list.go",
+      "sha256": "2ca446a508ecf3b414ab7f0c740276a4d0ca0087f246c4bc0336f0685e323a3c",
+      "bytes": 3048,
+      "inspected": "47-118: read-lock and per-wrapper metadata/current identity list; LoadKey error may be reported and skipped. General damaged-key behavior not yet tested."
+    },
+    {
+      "path": "cmd/restic/cmd_key_passwd.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_key_passwd.go",
+      "cache": "applications/tools/source-cache/restic-keys/cmd__restic__cmd_key_passwd.go",
+      "sha256": "c11322e1054cf33c1a04e659efc5e5a203e27cafe3b20855afab1d5184925430",
+      "bytes": 2604,
+      "inspected": "50-97: exclusive-lock, create new wrapper, verify/switch, remove formerly current wrapper, then report. Not an atomic all-password revocation."
+    },
+    {
+      "path": "cmd/restic/cmd_key_remove.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_key_remove.go",
+      "cache": "applications/tools/source-cache/restic-keys/cmd__restic__cmd_key_remove.go",
+      "sha256": "d8253fc511738ae77f330a33db45271d74a8e9c60e28a495f893ef01632882be",
+      "bytes": 2016,
+      "inspected": "43-79: exclusive-lock, prefix resolution, refusal for key used to open this process, remove selected other wrapper."
+    }
+  ]
+}

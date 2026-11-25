@@ -46,6 +46,8 @@ The [npm cache band](npm-cache/README.md) separates selected backing integrity, 
 
 The [Cargo binary-install band](cargo-install/README.md) separates registered ownership, actual executable bytes, compilation, partial replacement, and cleanup. It retains a valid partial replacement of existing binaries and a distinct mixed new/replacement failure that registers a new binary before cleanup removes it. The counterexample is scoped to pinned Cargo 1.92 and an owned directory blocker; broader installation and recovery remain pending.
 
+The [restic key-custody band](restic/KEYS.md) separates passwords, access wrappers, process-specific current keys, and repository data. Changing one wrapper's password leaves another wrapper with the old password usable. Native reads and models preserve that scope; cryptographic qualification, true master-key rotation, and interrupted mutation remain pending.
+
 ## Working order
 
 1. Reconcile the broad inventory against help, schemas, source modules, owning contracts, plugins, and actual supported interfaces. Keep every feature's evidence status explicit.
