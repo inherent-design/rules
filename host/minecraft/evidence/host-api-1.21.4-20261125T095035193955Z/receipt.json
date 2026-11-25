@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "target": "java-1.21.4-vanilla",
+  "targetDeclaredLauncherJavaMajor": 21,
+  "scope": "Static direct invoke instructions/native declarations only;no target class loading/linking/execution. Inspection uses Java25 independently of the target launcher runtime.",
+  "clientSha256": "c17c450c6e72cc51297daa57ce38f800aa01cf022b743daa21a0512d326d894e",
+  "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+  "profile": {
+    "JAVA_VERSION": "25.0.4.1",
+    "JAVA_RUNTIME_VERSION": "25.0.4.1+1-LTS",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "sourcesSha256": {
+    "HostApiScan.java": "61f0bad497e5b8f3ae1d04768a28b3f3b42b685729c91b60c13f9bfe59a7aeec",
+    "host_api_scan.py": "494ab60ba657bb6e25da42231d9fe16c3c7d7bad0a3c850933e72727eb8ae745",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "classSha256": "8f4534164911b342fb36466518d9a2f86051ce94879cdbf96dcc71260e4da6d7",
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "d4013ecb3b669979bba5359d0e62d974cfb735ab6356d54436da41c60c62f1a6"
+    }
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.5172223327681422,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact local argv retained privately; frozen collector constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.6222091247327626,
+      "stdoutSha256": "201468adc5a3cae3a39a05793688cb375261628d9aacd0737f91e9ebf693e357",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact local argv retained privately; frozen collector constructs it."
+    }
+  ],
+  "privateReceiptSha256": "0b9fbfb1d11575166ae01173d1f8c96dd942d17b289256937d1fa90695f933e1",
+  "compressedFactsSha256": "d545547b4ccd83dcb03d7816d59795c83ecdf7b9b6960d1330b28090d8f8bf20",
+  "limits": [
+    "Static direct invoke instructions in the original client JAR only;not call-graph reachability or runtime execution.",
+    "Reflection,invokedynamic targets,dependencies external to this JAR,native libraries and driver calls are not resolved.",
+    "Counts include constructors,accessors and exception construction;they are not counts of side effects.",
+    "No observed direct FFM call in this client is not proof of no FFM use anywhere in its dependencies.",
+    "All native/backend/runtime/resource-lifecycle qualification remains independently pending."
+  ]
+}

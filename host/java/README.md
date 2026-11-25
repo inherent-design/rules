@@ -31,3 +31,5 @@ The collector freezes its sources, records the JDK release and executable hashes
 ## Runtime declarations and actual consumers
 
 The [Minecraft target graph](../minecraft/TARGETS.md) separately records Java 21 requirements through 1.21.11 and Java 25 for 26.3. Its artifact-version model checks the declared major prerequisite only. The arena witness expands the host API overlay; it is not evidence that Minecraft calls `Arena`. Static direct calls, library dependencies, runtime execution, and native/backend qualification have separate evidence states.
+
+The separate [ordered array-search contract](ARRAY-SEARCH.md) is documented for Java 17, 21, and 25 and consumed by the original Minecraft 1.21.4 range helper. Its duplicate-choice permissions are weaker than a stable-index prediction. It does not extend FFM or other native qualification.

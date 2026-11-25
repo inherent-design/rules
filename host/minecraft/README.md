@@ -38,3 +38,5 @@ Original assets, Minecraft binaries, decompiled sources, downloaded tools, user 
 Optimized Bushy Leaves triggered this work but does not define its scope. Later definition/graphics milestones belong in the main versioned comparison map with exact provenance. Evidence from one milestone does not silently qualify another profile or supply an implemented backport.
 
 No production modification, pack installation, gameplay change, or backport is selected by this addendum.
+
+The independent [Java 1.21.4 lane](JAVA-1.21.4.md) maps its own registrations and item consumers, compares an original range-index helper with a weak Java API contract, and retains a separate static host census. Matching IDs or observed duplicate indices do not establish cross-version semantics or a stable library tie policy.

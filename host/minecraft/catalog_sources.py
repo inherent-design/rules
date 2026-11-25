@@ -70,7 +70,7 @@ def vanilla(views,version):
             continue
         p=views.locate(name);text=p.read_text();source=views.remember(p)
         raw=re.findall(r'ID_MAPPER\.put\((?:ResourceLocation|Identifier)\.withDefaultNamespace\("([^"]+)"\),\s*([\w.$]+(?:\(\))?)\)',text)
-        if category=='textures.atlases' and version=='1.21.1':raw=re.findall(r'= register\("([^"]+)",\s*([\w.$]+)\)',text)
+        if category=='textures.atlases' and version in ['1.21.1','1.21.4']:raw=re.findall(r'= register\("([^"]+)",\s*([\w.$]+)\)',text)
         if category=='fonts.definitions':raw=re.findall(r'\b[A-Z_]+\("([^"]+)",\s*([\w.$]+)\)',text)
         assert raw,(version,category,'No discovered registry entries')
         entries=[dict(id='minecraft:'+key,**views.target(p,target)) for key,target in raw]

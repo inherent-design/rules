@@ -17,7 +17,7 @@ WANTED.update({'org.apache.commons:commons-lang3','commons-io:commons-io','com.m
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--metadata',type=Path,required=True);p.add_argument('--private',type=Path,required=True);p.add_argument('--include-netty-java',action='store_true');p.add_argument('--release',choices=['1.21.11','26.3'],default='26.3');p.add_argument('--reuse',type=Path);args=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--metadata',type=Path,required=True);p.add_argument('--private',type=Path,required=True);p.add_argument('--include-netty-java',action='store_true');p.add_argument('--release',choices=['1.21.4','1.21.11','26.3'],default='26.3');p.add_argument('--reuse',type=Path);args=p.parse_args()
     target=next(t for t in json.loads((HERE/'targets.json').read_text())['javaReferences'] if t['release']==args.release)
     assert sha(args.metadata)==target['source']['metadataSha256'];meta=json.loads(args.metadata.read_text())
     private=args.private.resolve();private.mkdir(parents=True,exist_ok=True);rows=[]

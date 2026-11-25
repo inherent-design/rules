@@ -22,14 +22,14 @@ def check(release):
     for n,d in receipt['sourcesSha256'].items():assert sha(capture/n)==d
     assert all(c['exitCode']==0 and c['ownedGroupAbsent'] and not c['timedOut'] for c in receipt['commands'])
     targets=json.loads((HERE/'targets.json').read_text());target=next(t for t in targets['javaReferences'] if t['id']==facts['target']);assert target['source']['clientSha256']==receipt['clientSha256']
-    assert facts['classVersions']==[dict(major=69 if release=='26.3' else 65,minor=0,count=11383 if release=='26.3' else 10291)]
+    assert facts['classVersions']==[dict(major=69 if release=='26.3' else 65,minor=0,count={'1.21.4':8857,'1.21.11':10291,'26.3':11383}[release])]
     assert len(facts['libraries'])==len({l['name'] for l in facts['libraries']})
     # These are identity/census checks. This replay does not infer method behavior.
     print(json.dumps(dict(status='passed',release=release,classes=len(classes),selectedInvokeInstructions=computed['summary']['selectedInvokeInstructions'],families=len(computed['families']),libraryDeclarations=len(facts['libraries']),nativeExecution=False)))
 
 
 def main():
-    for release in ['1.21.11','26.3']:check(release)
+    for release in ['1.21.4','1.21.11','26.3']:check(release)
 
 
 if __name__=='__main__':main()

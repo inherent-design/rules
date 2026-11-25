@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "target": "java-1.21.4-vanilla",
+  "clientSha256": "c17c450c6e72cc51297daa57ce38f800aa01cf022b743daa21a0512d326d894e",
+  "mappingSha256": "48b502ccc5e855b49da8aa9c0c0d7c565bec54c9f5da3a3664528aff7b9fdf23",
+  "generatorSha256": "ae0798612290dced79ad012560160b6d6cd7e8adfa3626103bd841cab17c6aa1",
+  "inspectedSources": {
+    "net.minecraft.client.renderer.item.ClientItem": {
+      "original": {
+        "member": "hbi.class",
+        "sha256": "3f968216eebbe8f286fe078b1add949467744b7bea4d124afc4c85b6c7313887"
+      },
+      "privateViewSha256": "98a0c3c5cb6fb0538003f85bd13e37e573c76eb79b0597a7eeff9857ec5e3661",
+      "fields": {
+        "model": "required item graph",
+        "hand_animation_on_swap": "optional flattened Boolean, source default true"
+      },
+      "consumer": "ClientItemInfoLoader parses the outer descriptor; record Properties does not imply a nested JSON properties object.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.ItemModels": {
+      "original": {
+        "member": "hbo.class",
+        "sha256": "c58a576496747191ee3be83befc8b88bba7c7443255ae5848b589ed46a6905c9"
+      },
+      "privateViewSha256": "7f2e6bc57ffa5a199743deb353335145418c54b898a0e429aa32a679c0bda5ad",
+      "fields": {
+        "type": "registered graph discriminator"
+      },
+      "consumer": "bootstrap installs eight literal mappings; actual startup/provider hook ordering remains pending.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.EmptyModel": {
+      "original": {
+        "member": "hbl.class",
+        "sha256": "3cf33df790095dc74fd6d86c409d0ebf1d6a1826937459f2271839f3a1a1f6ef"
+      },
+      "privateViewSha256": "9ac9f385d7317d9e38e5e577fdc4f3c1a3a18703260073f12553dbe5f54c55dc",
+      "fields": {},
+      "consumer": "Unit Unbaked codec; bake returns the empty model. Current fixture does not execute update/bake.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.BlockModelWrapper": {
+      "original": {
+        "member": "hbg.class",
+        "sha256": "7562a76e41c7aae93ae00dac326c8518342a83ef2d8704bf02eb6394a5d3a722"
+      },
+      "privateViewSha256": "024764bad11a07ee719db747bb73465b2b6e1fa847328a1b18c10005362cf6de",
+      "fields": {
+        "model": "required resource identifier",
+        "tints": "optional tint list, source default empty"
+      },
+      "consumer": "Dependency resolver visits model; bake requests it; later update evaluates tints and sets the render layer.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.CompositeModel": {
+      "original": {
+        "member": "hbj.class",
+        "sha256": "41dcb092e958a56c6b39ce913b833369fa3d9ad1e4992a47124c40e6134144f7"
+      },
+      "privateViewSha256": "9437d5daa06ec8066550d05a6b4f20bd2676e8c1b5c68984cb86afafe69c8313",
+      "fields": {
+        "models": "required child graph list"
+      },
+      "consumer": "Dependency resolution and bake visit children; source listOf has no explicit nonempty wrapper here.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.ConditionalItemModel": {
+      "original": {
+        "member": "hbk.class",
+        "sha256": "998693104f95fb5d6b29ee9314a2df1375ef95328c58f1855c5bf4072180fbe2"
+      },
+      "privateViewSha256": "2018dd71b2358d2d0c643757e203d53fdd05fb95b3a16e8aaf20526e5579dda1",
+      "fields": {
+        "property": "conditional-property dispatch",
+        "on_true": "required graph",
+        "on_false": "required graph"
+      },
+      "consumer": "Both child graphs resolve/bake; later update evaluates the property with item/level/entity/seed context.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.SelectItemModel": {
+      "original": {
+        "member": "hbs.class",
+        "sha256": "5e8f85965b4750c39ccb78fcc805cafa05ae08abd341afe3c7d06188ca774ab2"
+      },
+      "privateViewSha256": "8a4bb153c0a3e7b39e357af4064146af6ce1cfafcc2074f6ab59b2f820f03980",
+      "fields": {
+        "property": "select-property dispatch",
+        "cases": "required case list",
+        "fallback": "optional graph",
+        "cases[].when": "nonempty compact scalar/list values",
+        "cases[].model": "required graph"
+      },
+      "consumer": "Case value codec depends on property; bake puts values into a map and uses missing-model fallback when absent. No runtime selection observed.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.RangeSelectItemModel": {
+      "original": {
+        "member": "hbr.class",
+        "sha256": "8c0915f8c5a068312ed820e8546cde3d83348e1f1a4c188aa47fba20176a1958"
+      },
+      "privateViewSha256": "3070682830b5d6f3358ce95bd4f30b5218018b22d48dd369f38affa44703abe0",
+      "fields": {
+        "property": "numeric-property dispatch",
+        "scale": "optional float, source default1",
+        "entries": "required threshold/model list",
+        "fallback": "optional graph"
+      },
+      "consumer": "Bake sorts a copy by threshold; update evaluates property*scale, handles NaN, then selects a model. Only private sorted-array index helper is native-observed.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.SpecialModelWrapper": {
+      "original": {
+        "member": "hbt.class",
+        "sha256": "864e2c6915462211290408cbc6cdf5d6e0edfaa11a2ddc89495c48264317f878"
+      },
+      "privateViewSha256": "1efcc80457e7e1cae71d8a4251f3556420ab6a4877f1414c952b2f79e4259cc4",
+      "fields": {
+        "base": "required resource identifier",
+        "model": "required special-renderer specification"
+      },
+      "consumer": "Base dependency and entity-model-set consumer are separate; a null renderer bake takes missing-model fallback in the inspected source.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.BundleSelectedItemSpecialRenderer": {
+      "original": {
+        "member": "hbh.class",
+        "sha256": "08a7719a7dc6ef4c7ef14e1cf1b97759076c2093196df949e57fb370ff1729a8"
+      },
+      "privateViewSha256": "97e2c035ee943affa11ce6819d6596ca4c08b446a358067a6e73fe9bd14ee96a",
+      "fields": {},
+      "consumer": "Unit Unbaked codec; later rendering needs selected bundle contents and item resolver context.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.renderer.item.ItemModel": {
+      "original": {
+        "member": "hbm.class",
+        "sha256": "ce32b6f81b494d72caf7b0e05c2db9ce695e1cbc61d1b7c07fc8e96876838faf"
+      },
+      "privateViewSha256": "a32ef9953301a8c6e9e9f231de9f79b118f6e281b242019c670a56a6f73b057b",
+      "fields": {},
+      "consumer": "Unbaked dependency resolution, bake context, and update context are separate interfaces/phases.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    },
+    "net.minecraft.client.resources.model.ClientItemInfoLoader": {
+      "original": {
+        "member": "hgw.class",
+        "sha256": "e4ad4bb2f7f3d3252eef752039fd3180a5c68e18e9c646a907812ab9e5eac7d1"
+      },
+      "privateViewSha256": "cff3e89165db2c2021742e63156da028764dd6825e3c9b027ac5de31837b832c",
+      "fields": {
+        "directory": "items",
+        "suffix": ".json"
+      },
+      "consumer": "List resources asynchronously, schedule per-resource reads, close each reader, log parse/open failures inside the try, omit null results after sequence. Discovery, task rejection, pre-try conversion, errors and final publication remain separate.",
+      "qualification": "Source interpretation; not translation equivalence or whole consumer execution."
+    }
+  },
+  "registrationComparisons": [
+    {
+      "category": "items.nodes",
+      "counts": {
+        "1.21.4": 8,
+        "1.21.5": 8
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    },
+    {
+      "category": "items.conditions",
+      "counts": {
+        "1.21.4": 12,
+        "1.21.5": 13
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": [
+        "minecraft:component"
+      ]
+    },
+    {
+      "category": "items.select",
+      "counts": {
+        "1.21.4": 9,
+        "1.21.5": 10
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": [
+        "minecraft:component"
+      ]
+    },
+    {
+      "category": "items.numeric",
+      "counts": {
+        "1.21.4": 10,
+        "1.21.5": 10
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    },
+    {
+      "category": "items.tints",
+      "counts": {
+        "1.21.4": 8,
+        "1.21.5": 8
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    },
+    {
+      "category": "items.special",
+      "counts": {
+        "1.21.4": 11,
+        "1.21.5": 11
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    },
+    {
+      "category": "textures.atlases",
+      "counts": {
+        "1.21.4": 5,
+        "1.21.5": 5
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    },
+    {
+      "category": "fonts.definitions",
+      "counts": {
+        "1.21.4": 5,
+        "1.21.5": 5
+      },
+      "onlySelected1214": [],
+      "onlySelected1215": []
+    }
+  ],
+  "limits": [
+    "Field map covers the eight graph-node family and outer descriptor/loader/interface; per-property/tint/renderer grammars remain incomplete.",
+    "The same model field has different graph/resource/special-renderer meanings in different objects.",
+    "Reader handles and selected resource descriptors are not proof of immutable backing bytes.",
+    "Per-resource errors inside the loader try do not establish that every scheduling/discovery/conversion failure is skipped.",
+    "No item graph decoding, actual resource manager load, property evaluation, bake, render or modded provider qualification."
+  ]
+}

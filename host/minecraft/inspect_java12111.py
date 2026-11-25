@@ -28,10 +28,11 @@ PREFIXES = ['net.minecraft.server.packs.', 'net.minecraft.client.resources.',
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--release', choices=['1.21.4', '1.21.11'], default='1.21.11')
     for key in ['client', 'mappings', 'metadata', 'jdk', 'art', 'decompiler', 'private']:
         p.add_argument('--' + key, type=Path, required=True)
     args = p.parse_args()
-    target = next(t for t in json.loads((HERE / 'targets.json').read_text())['javaReferences'] if t['release'] == '1.21.11')
+    target = next(t for t in json.loads((HERE / 'targets.json').read_text())['javaReferences'] if t['release'] == args.release)
     assert sha(args.client) == target['source']['clientSha256'] and sha(args.metadata) == target['source']['metadataSha256']
     metadata = json.loads(args.metadata.read_text())
     expected = metadata['downloads']['client_mappings']
@@ -44,7 +45,8 @@ def main():
     mappings = read_mappings(args.mappings)
     selected = {n: m for n, m in mappings.items() if any(n.startswith(prefix) for prefix in PREFIXES)}
     assert 300 <= len(selected) <= 1200
-    capture = args.private.resolve() / ('java12111-views-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
+    label = 'java' + args.release.replace('.', '')
+    capture = args.private.resolve() / (label + '-views-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     capture.mkdir(parents=True)
     for name in ['classes', 'source', 'tmp', 'home']:
         (capture / name).mkdir()
@@ -52,7 +54,7 @@ def main():
         shutil.copyfile(source, capture / source.name)
     with zipfile.ZipFile(args.client) as archive:
         original = {name: dict(member=m['name'].replace('.', '/') + '.class', sha256=hashlib.sha256(archive.read(m['name'].replace('.', '/') + '.class')).hexdigest()) for name, m in selected.items()}
-    record = dict(schema=1, target=target['id'], clientSha256=sha(args.client), metadataSha256=sha(args.metadata),
+    record = dict(schema=1, target=target['id'], selectedRelease=args.release, clientSha256=sha(args.client), metadataSha256=sha(args.metadata),
         mappingSha256=sha(args.mappings), mappingSha1=expected['sha1'], prefixes=PREFIXES,
         profile={k: fields[k] for k in ['JAVA_VERSION', 'JAVA_RUNTIME_VERSION', 'IMPLEMENTOR', 'OS_NAME', 'OS_ARCH']},
         jdkReleaseSha256=sha(jdk / 'release'), javaSha256=sha(jdk / 'bin/java'), artSha256=sha(args.art), decompilerSha256=sha(args.decompiler),
@@ -61,7 +63,7 @@ def main():
     def save():
         (capture / 'receipt.json').write_text(json.dumps(record, indent=2) + '\n')
     save()
-    env = dict(os.environ, HOME=str(capture / 'home'), TMPDIR=str(capture / 'tmp'))
+    env = dict(os.environ, TMPDIR=str(capture / 'tmp'))
     common = [str(jdk / 'bin/java'), '-XX:ActiveProcessorCount=2', '-Xmx512m', '-Djava.awt.headless=true',
               '-Duser.home=' + str(capture / 'home'), '-Djava.io.tmpdir=' + str(capture / 'tmp')]
     mapped = capture / 'mapped.jar'
@@ -95,7 +97,7 @@ def main():
     assert r['exitCode'] == 0 and r['ownedGroupAbsent'] and not r['timedOut'], capture
     assert sha(args.client) == record['clientSha256'] and sha(args.mappings) == record['mappingSha256']
     assert all(sha(capture / n) == d for n, d in record['producersSha256'].items())
-    (args.private / 'latest-java12111-views.json').write_text(json.dumps(dict(capture=str(capture)), indent=2) + '\n')
+    (args.private / ('latest-' + label + '-views.json')).write_text(json.dumps(dict(capture=str(capture)), indent=2) + '\n')
     print(json.dumps(dict(capture=str(capture), selectedClasses=len(selected), views=len(record['viewsSha256']), ownedGroupsAbsent=all(c['ownedGroupAbsent'] for c in record['commands']))))
 
 

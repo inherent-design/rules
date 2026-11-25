@@ -1,0 +1,365 @@
+{
+  "schema": 1,
+  "kind": "authored API/source contract cases, not JVM observations",
+  "profile": "Ordered integer-valued floats normalized by adding1;no fractional/NaN/infinity/signed-zero claims",
+  "references": [
+    {
+      "javaMajor": 17,
+      "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html#binarySearch(float%5B%5D,float)"
+    },
+    {
+      "javaMajor": 21,
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html#binarySearch(float%5B%5D,float)"
+    },
+    {
+      "javaMajor": 25,
+      "url": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Arrays.html#binarySearch(float%5B%5D,float)"
+    }
+  ],
+  "cases": [
+    {
+      "id": "empty-insertion",
+      "kind": "api-result",
+      "values": [],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "empty-found",
+      "kind": "api-result",
+      "values": [],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": true,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "duplicate-first",
+      "kind": "api-result",
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": true,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "duplicate-middle",
+      "kind": "api-result",
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 1,
+      "found": true,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "duplicate-last",
+      "kind": "api-result",
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 2,
+      "found": true,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "out-of-range",
+      "kind": "api-result",
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 3,
+      "found": true,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "missing-not-found",
+      "kind": "api-result",
+      "values": [
+        1,
+        3
+      ],
+      "query": 2,
+      "present": true,
+      "index": 1,
+      "found": true,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "between-insertion",
+      "kind": "api-result",
+      "values": [
+        1,
+        3
+      ],
+      "query": 2,
+      "present": true,
+      "index": 1,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "wrong-insertion",
+      "kind": "api-result",
+      "values": [
+        1,
+        3
+      ],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": false,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "matching-key-not-missing",
+      "kind": "api-result",
+      "values": [
+        1,
+        2,
+        3
+      ],
+      "query": 2,
+      "present": true,
+      "index": 1,
+      "found": false,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-earlier-duplicate",
+      "kind": "api-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-last-duplicate",
+      "kind": "api-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 15,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-out-of-range",
+      "kind": "api-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 16,
+      "found": false,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-before",
+      "kind": "api-floor",
+      "values": [
+        2,
+        3
+      ],
+      "query": 1,
+      "present": false,
+      "index": 0,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-after",
+      "kind": "api-floor",
+      "values": [
+        2,
+        3
+      ],
+      "query": 4,
+      "present": true,
+      "index": 1,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "binary-empty",
+      "kind": "api-floor",
+      "values": [],
+      "query": 2,
+      "present": false,
+      "index": 0,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "game-small-earlier-refuses",
+      "kind": "game-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 7,
+      "found": false,
+      "expected": false,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "game-small-last",
+      "kind": "game-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 14,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    },
+    {
+      "id": "game-large-first-allowed",
+      "kind": "game-floor",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "query": 2,
+      "present": true,
+      "index": 0,
+      "found": false,
+      "expected": true,
+      "evidence": "authored API/source-contract case; not a JVM observation"
+    }
+  ]
+}
