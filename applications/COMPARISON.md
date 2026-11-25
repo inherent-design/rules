@@ -74,6 +74,8 @@ The owning reports link exact versions, raw observations, source selections, mod
 
 **Remote acceptance and command success are different facts.** The [publication fixture](js-peers/PUBLICATION.md) produces the same transport failure with or without a server-side version, and later hook failures after acknowledged acceptance in all three JavaScript tools. Keep target identity, request outcome, acknowledgement, and later work separate. Dry-run scopes also differ from global nonmutation: selected hooks run, and npm makes registry reads.
 
+The [empack local signed-input join](empack/subscribed-flow/README.md) adds a distinct native example: an authenticated offer remains saved after failed local acquisition, and rollback changes installed content without lowering that offer's replay floor. The current `ensure` also retains the completed release when an old consumer supplies an older snapshot. Preserve those product policies and expose each stage's actual effects; do not generalize registry retry, backup retention, and installed-release rollback into one universal transaction. The missing explicit-file diagnostic can reuse empack's existing typed acquisition context rather than create a second reporting system.
+
 ## Application-specific decisions
 
 ### npm

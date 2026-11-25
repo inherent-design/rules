@@ -2028,7 +2028,29 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#empack",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "local-signed-offer-install-rollback",
+              "status": "native-observed",
+              "scope": "One local signed-input workflow on macOS: native key setup and staging, 15 recipient commands, and one player edit. The 128 trace values compose existing channel admission with installation, refusal, ensure, and rollback. Channel files are OpenSSL-authored test inputs; release channel create was not run.",
+              "remaining": "No hosted channel, fetch, deployment, key rotation, inconsistent saved observation, stale approval, failed publication, crash recovery, runtime/game, or platform parity is qualified. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "empack/subscribed-flow/README.md",
+                "empack/subscribed-flow/SubscribedFlow.lean",
+                "empack/subscribed-flow/SubscribedFlow.bend",
+                "sources/empack-subscribed-flow-selections.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/receipt.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/conformance.json"
+              ],
+              "operationSlices": {
+                "initialize-publisher": "Own native random key outside project/export;public identity agrees with OpenSSL conversion;no key material captured.",
+                "sign-release": "Native staging signs two exact historical native exports and selected local assets.",
+                "verify-offer": "Enrolled actual native reader accepts two valid local offers and refuses a stale/forged one;no HTTP channel creation.",
+                "retain-sequence": "Saved floor advances1\u21922 independently of install;failed input/rollback preserve sequence 2."
+              }
+            }
+          ]
         },
         {
           "id": "empack.automation",
@@ -2218,6 +2240,23 @@
                 "prepare-install": "First snapshot release with exact reviewed digest, client/Prism layout and no existing release.",
                 "install": "First native ensure then no-op repeat; instance check verifies one managed file and preserves an own unowned options file. Not game/runtime readiness."
               }
+            },
+            {
+              "id": "local-signed-offer-install-rollback",
+              "status": "native-observed",
+              "scope": "One local signed-input workflow on macOS: native key setup and staging, 15 recipient commands, and one player edit. The 128 trace values compose existing channel admission with installation, refusal, ensure, and rollback. Channel files are OpenSSL-authored test inputs; release channel create was not run.",
+              "remaining": "No hosted channel, fetch, deployment, key rotation, inconsistent saved observation, stale approval, failed publication, crash recovery, runtime/game, or platform parity is qualified. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "empack/subscribed-flow/README.md",
+                "empack/subscribed-flow/SubscribedFlow.lean",
+                "empack/subscribed-flow/SubscribedFlow.bend",
+                "sources/empack-subscribed-flow-selections.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/receipt.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/conformance.json"
+              ],
+              "operationSlices": {
+                "install": "First native subscribed local-envelope installation with exact staged assets;no runtime."
+              }
             }
           ]
         },
@@ -2324,7 +2363,29 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#empack",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "local-signed-offer-install-rollback",
+              "status": "native-observed",
+              "scope": "One local signed-input workflow on macOS: native key setup and staging, 15 recipient commands, and one player edit. The 128 trace values compose existing channel admission with installation, refusal, ensure, and rollback. Channel files are OpenSSL-authored test inputs; release channel create was not run.",
+              "remaining": "No hosted channel, fetch, deployment, key rotation, inconsistent saved observation, stale approval, failed publication, crash recovery, runtime/game, or platform parity is qualified. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "empack/subscribed-flow/README.md",
+                "empack/subscribed-flow/SubscribedFlow.lean",
+                "empack/subscribed-flow/SubscribedFlow.bend",
+                "sources/empack-subscribed-flow-selections.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/receipt.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/conformance.json"
+              ],
+              "operationSlices": {
+                "observe-offer": "Offer preview differs from explicit durable observation;only subscription file changes when accepted.",
+                "authenticate-select": "Local signed envelope agrees with enrolled saved offer before preparation;stale/forged offer controls refuse.",
+                "plan-update": "After saved B,a full local install preview preserves the captured recipient image.",
+                "apply-update": "Explicit missing local file refuses before publication while saved floor B and installed release A remain;validB installs;old-consumer ensure keepsB;rollback to A retains floor B."
+              }
+            }
+          ]
         },
         {
           "id": "empack.file-ownership",
@@ -2450,7 +2511,27 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#empack",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "local-signed-offer-install-rollback",
+              "status": "native-observed",
+              "scope": "One local signed-input workflow on macOS: native key setup and staging, 15 recipient commands, and one player edit. The 128 trace values compose existing channel admission with installation, refusal, ensure, and rollback. Channel files are OpenSSL-authored test inputs; release channel create was not run.",
+              "remaining": "No hosted channel, fetch, deployment, key rotation, inconsistent saved observation, stale approval, failed publication, crash recovery, runtime/game, or platform parity is qualified. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "empack/subscribed-flow/README.md",
+                "empack/subscribed-flow/SubscribedFlow.lean",
+                "empack/subscribed-flow/SubscribedFlow.bend",
+                "sources/empack-subscribed-flow-selections.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/receipt.json",
+                "evidence/empack-subscribed-flow-20261125T222928929810Z/conformance.json"
+              ],
+              "operationSlices": {
+                "compare-managed": "One unchanged managed baseline advances A\u2192B and explicitrollback to A;no general conflict matrix.",
+                "preserve-seed": "Own edited seed and unowned note keep exact bytes/mode/mtime acrossB/ensure/rollback;checks count one recorded seed."
+              }
+            }
+          ]
         },
         {
           "id": "empack.world-state",

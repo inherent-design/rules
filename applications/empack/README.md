@@ -36,6 +36,8 @@ The [selection-policy source map](SELECTION.md) connects catalog scope and order
 
 The [author-to-recipient band](update-flow/README.md) joins one released-CLI provider update, delayed materialization, bundled/reference Prism snapshots, and first native recipient preparation. It compares saved selections with actual payloads and scoped checks. No bootstrap, Prism, or game launch ran; an existing recipient's later update and subscribed delivery remain pending.
 
+The later [local signed-input join](subscribed-flow/README.md) reuses earlier native exports through key setup/staging, explicit enrollment, saved offers, first installation, failed local acquisition, later installation, old-consumer ensure, and rollback. It qualifies those selected game-layout transitions without hosted transport or launch. The earlier Prism join remains a separate profile.
+
 ## Keep the current guarantees
 
 The current `DocumentCodec` composes author and binding documents, validates intent, and retains raw bytes and semantic revisions separately. The [document/approval band](DOCUMENTS.md) shows why: comment-only or absent-to-empty binding changes can preserve semantic lock currency while invalidating an old raw-bound write. `DecodedIntent` keeps those values private; `ProjectIntent` remains a programmatically editable value that must be validated at its boundaries. Do not replace strict decoding with a parser that drops invalid sections to manufacture a usable project.
@@ -90,6 +92,8 @@ DraftSession.observe(save_receipt) -> UpdatedSavedBasis | HistoricalReceipt | Fo
 ```
 
 An asynchronous worker takes a captured image rather than holding a mutable editor borrow across its work. Background interpretation may be retained historically, but only a matching session/epoch/image basis may replace the current interpretation. An edit proposal requires explicit acceptance against its basis. Diagnostics and a proposal are not write authorization.
+
+Publisher observation and instance application need separate result stages in the target API. The signed-input join confirms that an accepted floor can outlive an unsuccessful installation, and rollback need not lower that floor. Derive each stage's result from its actual receipt/current record; do not collapse it into one update-success Boolean or add another persistent status file. Native enrollment, key custody, root-bound selection, and write authority remain host capabilities rather than properties granted by an imported project image. A future portable signing host needs its own custody/admission profile before it can supply those proofs.
 
 The [Prism task study](../prism/LAUNCH.md) also separates a stop request, its acknowledgement, terminal outcome, finalization, and physical process retirement. Preserve empack's separate runtime-ownership and cleanup obligations through extraction. A portable event can report a pending stop request without marking its effects retired; synchronous completion may also precede the request method's return. Human and SDK results must retain the actual outcome and cleanup evidence in either order.
 
