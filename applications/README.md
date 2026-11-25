@@ -38,6 +38,8 @@ The [empack native identity band](empack/IDENTITY.md) compares 58 source-functio
 
 The [empack discovery band](empack/ROOT-STATE.md) compares 35 actual source-method cases, including complete 4,096/4,097-entry views. It preserves state absence, unresolved history, physical association, and derived keys separately. The [initializer band](empack/INITIALIZATION.md) then executes the selected writer chain, controlled termination, mixed protocols, and temporary allocation. Its models retain a metadata-lock candidate that improves one window but fails at the next. Full Engine callers, revised directory publication, and recovery qualification remain pending.
 
+The [empack bootstrap band](empack/BOOTSTRAP.md) compares packaged input admission, exact engine selection, cache effects, and delegated lifetime across 29 JAR cases. Controlled peers expose cancellation and parent-loss outcomes; four read-only real-engine checks remain distinct from runtime/game supervision.
+
 The [empack manual acquisition/pending band](empack/PENDING.md) follows an isolated two-input CLI build across partial retention, a changed selector, deliberate backing damage, and verified archive publication. It keeps read-only inspection, input verification, saved work, and published output separate. Other continuation kinds and general cache/lifecycle guarantees remain pending.
 
 The [empack recovery band](empack/RECOVERY.md) compares 45 installed CLI commands on authored one-file journals. It connects inspection, preparation, actual confirmation, stale observations, saved restoration direction, and distinct project/private-state effects. Real producer interruption, multi-file recovery, root races, and general approval ownership remain pending.

@@ -658,6 +658,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "empack-bootstrap-selection-lifetime",
+      "features": [
+        "empack.bootstrap",
+        "empack.process-console"
+      ],
+      "flow": "Capture distribution inputs,select exact native executable and capability,delegate literal argv,then separate stop request,parent loss,child outcome and retirement observations.",
+      "counterexamples": [
+        "Fall back after explicit executable refusal.",
+        "Treat offline/cache refusal as no scoped effects.",
+        "Replace returned child status with cancellation status.",
+        "Infer child retirement or Java finalization from parent death."
+      ],
+      "hostWitnesses": [
+        "capability admission",
+        "owned subprocess retirement",
+        "scoped effects",
+        "outcome versus notification/lifetime"
+      ],
+      "evidence": [],
+      "status": "pending",
+      "componentEvidence": [
+        {
+          "status": "native-observed",
+          "scope": "29packaged-JARcases match both models;controlled peers plus4read-only real-engine checks;2display probes separate.",
+          "remaining": "Generated consumers,real native runtime descendants,network acquisition/recovery,limits/races and cross-platform composition remain pending.",
+          "evidence": [
+            "empack/BOOTSTRAP.md",
+            "evidence/empack-bootstrap-conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }

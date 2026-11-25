@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "scope": "recorded",
+  "pack": "Rules pending fixture",
+  "author_schema": 6,
+  "authoring": {
+    "schema": 1,
+    "author_schema": 6,
+    "pack": "Rules pending fixture",
+    "lock_status": "current",
+    "lock_reason": null,
+    "runtime_satisfied": true,
+    "dependencies": [
+      {
+        "key": "first",
+        "explicit": true,
+        "effective": {
+          "content": "resource-pack",
+          "environment": {
+            "client": "required",
+            "server": "required"
+          },
+          "placement": [
+            {
+              "destination": "resourcepacks/first.zip",
+              "environment": {
+                "client": "required",
+                "server": "required"
+              },
+              "layer": "common"
+            }
+          ],
+          "releases": null,
+          "selection": {
+            "mode": "provider-pin",
+            "pin": {
+              "id": "456",
+              "provider": "curseforge"
+            }
+          },
+          "source": {
+            "identity": {
+              "project": "123",
+              "provider": "curseforge"
+            },
+            "kind": "provider"
+          }
+        },
+        "canonical_project": {
+          "project": "123",
+          "provider": "curseforge"
+        },
+        "source_binding_current": null,
+        "locked_selection": {
+          "id": "456",
+          "provider": "curseforge"
+        },
+        "evidence_policy": null,
+        "release_policy": null,
+        "policy_origin": null,
+        "selection_satisfied": true,
+        "reason": null
+      },
+      {
+        "key": "second",
+        "explicit": true,
+        "effective": {
+          "content": "resource-pack",
+          "environment": {
+            "client": "required",
+            "server": "required"
+          },
+          "placement": [
+            {
+              "destination": "resourcepacks/second.zip",
+              "environment": {
+                "client": "required",
+                "server": "required"
+              },
+              "layer": "common"
+            }
+          ],
+          "releases": null,
+          "selection": {
+            "mode": "provider-pin",
+            "pin": {
+              "id": "457",
+              "provider": "curseforge"
+            }
+          },
+          "source": {
+            "identity": {
+              "project": "124",
+              "provider": "curseforge"
+            },
+            "kind": "provider"
+          }
+        },
+        "canonical_project": {
+          "project": "124",
+          "provider": "curseforge"
+        },
+        "source_binding_current": null,
+        "locked_selection": {
+          "id": "457",
+          "provider": "curseforge"
+        },
+        "evidence_policy": null,
+        "release_policy": null,
+        "policy_origin": null,
+        "selection_satisfied": true,
+        "reason": null
+      }
+    ],
+    "editing_limitations": [
+      {
+        "document": "empack.yml",
+        "path": [],
+        "reason": "Cannot safely edit flow, anchored or tagged YAML; expand the changed value first"
+      }
+    ]
+  },
+  "lock": "current",
+  "verified_files": 0,
+  "references": 2,
+  "findings": [
+    {
+      "subject": "Authoring",
+      "state": "passed",
+      "required": true,
+      "message": "Author files are valid",
+      "diagnostic": null
+    },
+    {
+      "subject": "Lock",
+      "state": "passed",
+      "required": true,
+      "message": "Author files and lock agree",
+      "diagnostic": null
+    },
+    {
+      "subject": "Recorded relationships",
+      "state": "passed",
+      "required": true,
+      "message": "Recorded runtime, required relationships, placements and incompatibilities are consistent",
+      "diagnostic": null
+    },
+    {
+      "subject": "pack/resourcepacks/first.zip",
+      "state": "reference",
+      "required": false,
+      "message": "Referenced bytes are not materialized locally",
+      "diagnostic": null
+    },
+    {
+      "subject": "pack/resourcepacks/second.zip",
+      "state": "reference",
+      "required": false,
+      "message": "Referenced bytes are not materialized locally",
+      "diagnostic": null
+    }
+  ],
+  "complete": true
+}
