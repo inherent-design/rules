@@ -48,6 +48,8 @@ Keep inspection cheap and explicit about unknowns. `requirements_complete: false
 
 ## Remaining qualification
 
+The [discovery follow-up](DISCOVERY.md) separately exercises weak-digest ambiguity, identical copies, stronger-assertion narrowing, the installed entry limit, and explicit association afterward. Those bounded results supplement this component; they do not qualify every scanner limit or continuation kind.
+
 The parent manual-pending, cache/lease, and consumer-build operations remain pending in the inventory. This component does not qualify browser opening, bounded wait/interrupt, scan limits, weak-assertion ambiguity, symlink races, missing retained backing, concurrent writers, stale author documents, discard, failed publication/cleanup, cache eviction, or power loss. Import, synchronization, and instance continuations have their own schemas and boundaries; they were not executed here. Windows/Linux parity and real restricted provider/game integration remain open.
 
 Replay the retained comparison without running empack:

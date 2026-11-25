@@ -1,0 +1,39 @@
+{
+  "schema": 6,
+  "pack": {
+    "id": "rules.pending.fixture",
+    "name": "Rules pending fixture",
+    "version": "one",
+    "authors": []
+  },
+  "runtime": {
+    "minecraft": "1.21.1",
+    "loader": "vanilla",
+    "java": {
+      "preferred": 21
+    }
+  },
+  "dependencies": {
+    "first": {
+      "source": {
+        "kind": "provider",
+        "identity": {
+          "provider": "curseforge",
+          "project": "123"
+        }
+      },
+      "pin": "456",
+      "type": "resource-pack",
+      "placement": [
+        {
+          "destination": "resourcepacks/first.zip",
+          "layer": "common",
+          "environment": {
+            "client": "required",
+            "server": "required"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": 3,
+  "intent-revision": "28b0f1ae513c0a6db4314cf6b07f5d0ce8d0792b2d3661f82793422a3fb25235",
+  "resolver": "rules-fictional-pending-fixture",
+  "java-policy": {
+    "historical-minimum": 21,
+    "id": "empack-java-1",
+    "metadata-revision": "b8e2a3e1ba241414f8b861f13c9a6fd6bc5d922d",
+    "recommended": 21,
+    "required-minimum": 21,
+    "supported": [
+      21
+    ]
+  },
+  "runtime": {
+    "minecraft": "1.21.1",
+    "loader": "vanilla",
+    "loader-version": null
+  },
+  "acceptable-versions": [],
+  "dependencies": {
+    "first": {
+      "incompatibilities": [],
+      "source-selector": null,
+      "title": "Fictional first",
+      "content": "resource-pack",
+      "identity": {
+        "kind": "provider",
+        "project": {
+          "provider": "curseforge",
+          "project": "123"
+        }
+      },
+      "selection": {
+        "project": {
+          "provider": "curseforge",
+          "project": "123"
+        },
+        "selection": {
+          "provider": "curseforge",
+          "id": "456"
+        }
+      },
+      "files": [
+        {
+          "slot": "primary",
+          "acquisition": {
+            "kind": "manual",
+            "pin": {
+              "project": {
+                "provider": "curseforge",
+                "project": "123"
+              },
+              "selection": {
+                "provider": "curseforge",
+                "id": "456"
+              }
+            },
+            "instructions": "Supply exact fictional fixture bytes"
+          },
+          "expected": {
+            "digests": {
+              "md5": "79054025255fb1a26e4bc422aef54eb4"
+            },
+            "size": 128,
+            "accepted-observation": null
+          },
+          "provenance": {
+            "source": "rules fictional fixture",
+            "location": null,
+            "declared-digests": {
+              "md5": "79054025255fb1a26e4bc422aef54eb4"
+            },
+            "conversions": []
+          },
+          "placements": [
+            {
+              "destination": "resourcepacks/first.zip",
+              "layer": "common",
+              "environment": {
+                "client": "required",
+                "server": "required"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "first": "complete"
+  },
+  "required-edges": {
+    "first": []
+  }
+}

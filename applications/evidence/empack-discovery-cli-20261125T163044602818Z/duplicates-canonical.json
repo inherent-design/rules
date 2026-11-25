@@ -1,0 +1,66 @@
+{
+  "schema": 6,
+  "dependency-policy": "prefer-stable",
+  "pack": {
+    "id": "rules.pending.fixture",
+    "name": "Rules pending fixture",
+    "version": "one",
+    "authors": [],
+    "description": null
+  },
+  "runtime": {
+    "minecraft": "1.21.1",
+    "acceptable-versions": [],
+    "loader": {
+      "kind": "vanilla",
+      "version": null
+    },
+    "java": {
+      "preferred": 21
+    }
+  },
+  "dependencies": {
+    "first": {
+      "releases": null,
+      "source": {
+        "kind": "provider",
+        "identity": {
+          "provider": "curseforge",
+          "project": "123"
+        }
+      },
+      "content": "resource-pack",
+      "selection": {
+        "mode": "provider-pin",
+        "pin": {
+          "provider": "curseforge",
+          "id": "456"
+        }
+      },
+      "placement": [
+        {
+          "destination": "resourcepacks/first.zip",
+          "layer": "common",
+          "environment": {
+            "client": "required",
+            "server": "required"
+          }
+        }
+      ],
+      "environment": {
+        "client": "required",
+        "server": "required"
+      }
+    }
+  },
+  "sources": {
+    "exclude": []
+  },
+  "layout": {},
+  "installation-policies": {},
+  "distribution": {
+    "profiles": {},
+    "defaults": []
+  },
+  "extensions": {}
+}
