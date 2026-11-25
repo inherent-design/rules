@@ -1,0 +1,544 @@
+{
+  "schema": 1,
+  "contract": "original-weighted-sound-authored-controls",
+  "cases": [
+    {
+      "id": "static-0",
+      "operation": "select",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "static-1",
+      "operation": "select",
+      "seed": 1,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "static-2",
+      "operation": "select",
+      "seed": 2,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "static-3",
+      "operation": "select",
+      "seed": 3,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "static-7",
+      "operation": "select",
+      "seed": 7,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "static-42",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "empty",
+      "operation": "select",
+      "seed": 42,
+      "entries": []
+    },
+    {
+      "id": "zero",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            0
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            0
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "negative",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            -1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "overflow-negative",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "overflow-minus-two",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "overflow-zero",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "overflow-positive",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            4
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "live-shrink",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            3,
+            0
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2,
+            0
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "live-grow",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            0,
+            5
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2,
+            2
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "zero-first",
+      "operation": "select",
+      "seed": 42,
+      "entries": [
+        {
+          "weights": [
+            0
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "sum-small",
+      "operation": "weight",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "sum-negative-wrap",
+      "operation": "weight",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "sum-zero-wrap",
+      "operation": "weight",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            1073741824
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "sum-minus-two",
+      "operation": "weight",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2147483647
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "preload-all",
+      "operation": "preload",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            0
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        }
+      ]
+    },
+    {
+      "id": "preload-stop",
+      "operation": "preload",
+      "seed": 0,
+      "entries": [
+        {
+          "weights": [
+            1
+          ],
+          "preloadFails": false
+        },
+        {
+          "weights": [
+            2
+          ],
+          "preloadFails": true
+        },
+        {
+          "weights": [
+            3
+          ],
+          "preloadFails": false
+        }
+      ]
+    }
+  ],
+  "decoderCases": [
+    {
+      "id": "decoded-positive-overflow",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 2147483647
+          },
+          {
+            "name": "fixture:entry1",
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "decoded-positive-zero",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry1",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry2",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry3",
+            "weight": 1073741824
+          }
+        ]
+      }
+    },
+    {
+      "id": "decoded-zero-refused",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 0
+          }
+        ]
+      }
+    }
+  ]
+}

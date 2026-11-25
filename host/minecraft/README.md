@@ -31,6 +31,8 @@ The [manager lifecycle review](POLYTONE-LIFECYCLES.md) then maps each manager's 
 
 The [server-pack band](SERVER-PACKS.md) compares 385 original manager actions across all five selected Java releases. Consent, download results, activation, feedback, and callback custody have separate rules. The models compare selected branches; actual HTTP, prompt UI, full reload, provider coexistence, and renderer retirement remain open.
 
+The [sound band](SOUNDS.md) attributes definition and audio-consumer boundaries, compares 110 original weighted controls across five Java releases, and retains 55 independent weight-decoder calibrations. Shared Java 17/21/25 arithmetic is checked separately. Sound registration, preload scheduling, actual decode, device availability, and playback remain distinct; provider execution and complete audio retirement are open.
+
 The [atlas band](ATLASES.md) maps five source families and their consumers across all five Java releases, then compares 80 original source-list cases with authored suppliers. Replacement, filtering, callback failure, aliases, and discard custody are distinct from actual image loading or GPU retirement. Initial linkage failures remain explicitly excluded evidence.
 
 The [later Java schema map](LATER-SCHEMAS.md) adds 71 selected 26.3 registrations and six source contracts, including rotation dialects, pack-format endpoints and actual block-presentation consumers. The [later decoding band](LATER-DECODING.md) now compares 40 original 26.3 method/codec inputs with Lean and Bend. Actual provider hooks, full pack/model decoding, rendering and 1.21.11 remain independently unqualified.

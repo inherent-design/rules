@@ -19,6 +19,8 @@ The [Minecraft server-pack comparison](../minecraft/SERVER-PACKS.md) adds a conc
 
 The [atlas controls](../minecraft/ATLASES.md) separately demonstrate that receiving discard does not prove a supplier is no longer retained: authored aliases can remain in another entry, and a throwing discard has already produced an observable effect. Bind release to the specific owned use and preserve uncertain/partial cleanup. Actual image, provider, and device custody still needs its own witness; the controlled source-list comparison does not prove it.
 
+The [sound study](../minecraft/SOUNDS.md) adds separate preparation-registry, public-map, buffer-future, and channel ownership boundaries. Captured event callbacks can retain a preparation generation; a public map replacement does not identify all consumers. Source cache clear attaches disposal continuations before clearing references, and engine startup schedules preload before reporting loaded. These are scoped source obligations, not actual audio completion or reclamation evidence. Capability knowledge also remains separate from live provider incarnation, as the application owner’s [VS Code filesystem study](../../applications/vscode/FILESYSTEMS.md) demonstrates. No shared predicate is strengthened solely from those source or application observations.
+
 ## Ownership and trace contract
 
 The host study owns common/Lifecycle.bend and common/Lifecycle.lean, this directory, profiles/lifecycles.md, scripts/check-lifecycles, and root navigation. The application owner writes applications/ and keeps the completed terminal study attributable. They map their own schemas into the shared predicates. Domain enums, policies, and unsupported features stay visible.

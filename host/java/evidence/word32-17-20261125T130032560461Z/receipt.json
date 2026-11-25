@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "sourcesSha256": {
+    "word32_probe.py": "4afec60fc7f0ee3224f8c11e2bccecfccf4d09083a1b99e5241a164890b823e6",
+    "Word32Probe.java": "de7dac3d21a2c5c7b197f9f8d4c1f93c8017fba5615e6c68fce8c625d8b00161",
+    "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+  },
+  "feature": 17,
+  "profile": {
+    "JAVA_VERSION": "17.0.21.1",
+    "JAVA_RUNTIME_VERSION": "17.0.21.1+2",
+    "IMPLEMENTOR": "Eclipse Adoptium",
+    "OS_NAME": "Darwin",
+    "OS_ARCH": "aarch64"
+  },
+  "jdkReleaseSha256": "002e051a3dbb52e6e28ae3b59c781d78829e33a1598d620152563ddf5992aa8e",
+  "classSha256": "af6df02fafd049a67839978c1f55895707aceca57b0b5ff01275142a81655a82",
+  "observedSha256": "9a377642be6b5ae3bb92f8503e943a61a5be913fd9b915ada6fc09705175648c",
+  "cases": 10,
+  "scope": "Authored int operations only;incidental JVM/stream/native work is not an analyzed effect closure.",
+  "originalScope": "Authored runtime int add/subtract and signed/unsigned views;no game,application,random generator or native/JNI calls.",
+  "privateReceiptSha256": "24cbc3d85c31f8c5926cb9b83ed360ef54685b9093c144d5dfcb41565d22b747",
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.3171358327381313,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv private;frozen collector constructs it."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "elapsedSeconds": 0.024966958910226822,
+      "stdoutSha256": "9a377642be6b5ae3bb92f8503e943a61a5be913fd9b915ada6fc09705175648c",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv private;frozen collector constructs it."
+    }
+  ],
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "5713ed335b3828ef9294ce4a091acad7ee24af1db2622587b6f5ff0a9bd98bb3"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "8319678ce758ea01a7666dd1e7fa8f099ee96035d269c81dcee019333ab9695c"
+    }
+  }
+}

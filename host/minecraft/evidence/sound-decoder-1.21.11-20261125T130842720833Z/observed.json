@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "observerErrors": 0,
+  "bootstrapContext": true,
+  "decoderCases": [
+    {
+      "case": "decoded-positive-overflow",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        2147483647,
+        1
+      ]
+    },
+    {
+      "case": "decoded-positive-zero",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        1073741824,
+        1073741824,
+        1073741824,
+        1073741824
+      ]
+    },
+    {
+      "case": "decoded-zero-refused",
+      "decoded": false,
+      "error": "java.lang.IllegalArgumentException",
+      "message": "Invalid weight",
+      "weights": []
+    },
+    {
+      "case": "fractional-positive",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        1
+      ]
+    },
+    {
+      "case": "large-wrap-positive",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        1
+      ]
+    },
+    {
+      "case": "large-wrap-negative",
+      "decoded": false,
+      "error": "java.lang.IllegalArgumentException",
+      "message": "Invalid weight",
+      "weights": []
+    },
+    {
+      "case": "negative-wrap-positive",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        1
+      ]
+    },
+    {
+      "case": "integer-string",
+      "decoded": false,
+      "error": "com.google.gson.JsonSyntaxException",
+      "message": "Expected weight to be a Int, was \"2\"",
+      "weights": []
+    },
+    {
+      "case": "fractional-under-one",
+      "decoded": false,
+      "error": "java.lang.IllegalArgumentException",
+      "message": "Invalid weight",
+      "weights": []
+    },
+    {
+      "case": "null-weight",
+      "decoded": false,
+      "error": "com.google.gson.JsonSyntaxException",
+      "message": "Expected weight to be a Int, was null (json)",
+      "weights": []
+    },
+    {
+      "case": "missing-weight",
+      "decoded": true,
+      "error": "NONE",
+      "weights": [
+        1
+      ]
+    }
+  ],
+  "cases": []
+}

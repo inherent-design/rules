@@ -1132,12 +1132,26 @@
           "net.minecraft.client.sounds.SoundManager"
         ]
       },
-      "review": "partial: selected vanilla parser observations; consumer and modded refinements pending",
-      "rules": [],
-      "proofs": [],
+      "review": "partial: bounded original weight decoding/selection across five Java releases; full registration, reference graph, providers and playback remain pending",
+      "rules": [
+        "host/minecraft/Sounds.bend"
+      ],
+      "proofs": [
+        "host/minecraft/Sounds.lean"
+      ],
       "nativeComparisons": [
         "host/minecraft/evidence/codecs-1.21.1-20261125T025026851737Z/observed.json",
         "host/minecraft/evidence/codecs-1.21.5-20261125T025106778996Z/observed.json"
+      ],
+      "componentEvidence": [
+        {
+          "id": "java-five-version-sound-weight-controls",
+          "status": "partial original-method observations and independent numeric decoder calibration",
+          "report": "host/minecraft/SOUNDS.md",
+          "conformance": "host/minecraft/evidence/sound-conformance.json",
+          "sourceMap": "host/minecraft/sound-sources.json",
+          "limits": "110 authored callback controls plus55 extended weight calibrations; no complete registration, audio or provider execution."
+        }
       ]
     },
     {
@@ -1163,10 +1177,19 @@
           "net.minecraft.client.sounds.SoundEngine"
         ]
       },
-      "review": "pending",
+      "review": "partial source custody map; actual audio decoding/device/channel/playback and retirement remain pending",
       "rules": [],
       "proofs": [],
-      "nativeComparisons": []
+      "nativeComparisons": [],
+      "componentEvidence": [
+        {
+          "id": "sound-buffer-channel-custody-source",
+          "status": "source inspection only",
+          "report": "host/minecraft/SOUNDS.md",
+          "sourceMap": "host/minecraft/sound-sources.json",
+          "limits": "No actual audio engine/library instance or backend operation; no completion or no-leak guarantee."
+        }
+      ]
     },
     {
       "id": "particles.definitions",

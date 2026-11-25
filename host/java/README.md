@@ -28,6 +28,10 @@ python3 host/java/arena_probe.py --jdk /path/to/jdk25 --private .build/java25
 
 The collector freezes its sources, records the JDK release and executable hashes, compiles with `--release 25`, and retains raw channels and child-group retirement. `export_arena.py` exports authored sources and observation bytes, while retaining exact local command paths privately. No Minecraft or other application is started.
 
+## Signed arithmetic
+
+The [32-bit word contract](WORD32.md) compares 30 authored runtime operations across Java 17, 21, and 25. It distinguishes positive operands from a positive wrapped aggregate and is consumed by the selected Minecraft sound controls. Numeric decoding, random algorithms, JVM correctness, and native Windows/Linux execution are separate qualifications.
+
 ## Runtime declarations and actual consumers
 
 The [Minecraft target graph](../minecraft/TARGETS.md) separately records Java 21 requirements through 1.21.11 and Java 25 for 26.3. Its artifact-version model checks the declared major prerequisite only. The arena witness expands the host API overlay; it is not evidence that Minecraft calls `Arena`. Static direct calls, library dependencies, runtime execution, and native/backend qualification have separate evidence states.

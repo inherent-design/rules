@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "contract": "original-weighted-sound-authored-controls",
+  "cases": [],
+  "decoderCases": [
+    {
+      "id": "decoded-positive-overflow",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 2147483647
+          },
+          {
+            "name": "fixture:entry1",
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "decoded-positive-zero",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry1",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry2",
+            "weight": 1073741824
+          },
+          {
+            "name": "fixture:entry3",
+            "weight": 1073741824
+          }
+        ]
+      }
+    },
+    {
+      "id": "decoded-zero-refused",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry0",
+            "weight": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "fractional-positive",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": 1.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "large-wrap-positive",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": 4294967297
+          }
+        ]
+      }
+    },
+    {
+      "id": "large-wrap-negative",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": 2147483648
+          }
+        ]
+      }
+    },
+    {
+      "id": "negative-wrap-positive",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": -4294967295
+          }
+        ]
+      }
+    },
+    {
+      "id": "integer-string",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fractional-under-one",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "null-weight",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry",
+            "weight": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing-weight",
+      "input": {
+        "sounds": [
+          {
+            "name": "fixture:entry"
+          }
+        ]
+      }
+    }
+  ]
+}
