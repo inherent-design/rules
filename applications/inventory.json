@@ -4792,7 +4792,32 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "manifest-query-edit-boundaries",
+              "status": "native-observed",
+              "scope": "npm11.20 typed getter/edit/refusal/no-op and sequential workspace partial save with explicit owner repair/retry; targeted isolated npm12.2.3 getter mode/shape and paired full-document reads. No whole-feature or npm12 write qualification.",
+              "operationSlices": {
+                "pkg-get": "Selected falsy/missing/null-traversal/array paths, JSON/text modes and full-document reads in named npm11/npm12 profiles.",
+                "pkg-set": "Literal single-document semantic edits/refusals/no-op; sequential two-workspace save/append and explicit repair/retry in npm11 only.",
+                "pkg-delete": "One selected contributors array-index deletion in npm11, preserving remaining order.",
+                "validate": "Selected semantic preparation checks versus incomplete package identity validation; not complete schema validation."
+              },
+              "evidence": [
+                "npm-manifest/README.md",
+                "npm-manifest/Manifest.lean",
+                "npm-manifest/Manifest.bend",
+                "sources/npm-manifest-selections.json",
+                "sources/npm-manifest-output-selections.json",
+                "sources/npm-manifest-test-context.json",
+                "sources/npm-manifest-upstream-selections.json",
+                "sources/npm-manifest-npm12-tool.json",
+                "evidence/npm-manifest-20261125T183326087674Z/conformance.json"
+              ],
+              "remaining": "init/fix, complete manifest/path/schema semantics, npm12 writes/retry, I/O/crash/concurrent writers, redaction/caller review, other platforms and install/publish joins remain unqualified. Current parent statuses unchanged."
+            }
+          ]
         },
         {
           "id": "npm.resolution-lock",

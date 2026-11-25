@@ -83,3 +83,5 @@ The [joined empack authoring band](empack/PORTABLE-JOINED.md) connects the share
 The [deduplication band](js-dedupe/README.md) separates author constraints, saved selections, physical copies, and preview/application effects across npm, pnpm, and Yarn. It also corrects the omitted Yarn `dedupe` operation; the inventory now has 972 operations, with existing parent statuses preserved.
 
 The [package-contents band](js-package-contents/README.md) compares authored rules, required entry points, regular bytes, and typed links across local npm/pnpm/Yarn archives. It leaves consumer extraction, publication, and general matching behavior pending.
+
+The [npm manifest band](npm-manifest/README.md) separates field presence, output shape, typed edits, and per-workspace saved effects. It compares npm 11 with targeted npm 12 getters and retains an explicit partial-save/repair/retry case; complete validation and crash safety remain pending.
