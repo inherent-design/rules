@@ -15058,7 +15058,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "Three serial native add/duplicate/remove requests in an existing isolated multi-root workspace; source/model distinction between provisional API view and confirmation event.",
+              "remaining": "First-root/restart transitions, arbitrary normalized identity/names, concurrent writers, remote workspaces, complete open/add/remove APIs, and durability. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "vscode/WORKSPACE-SEARCH.md",
+                "evidence/vscode-search-20261125T061429674973Z/exit.json",
+                "evidence/vscode-search-20261125T061429674973Z/conformance.json"
+              ]
+            }
+          ]
         },
         {
           "id": "vscode.documents",
@@ -15230,7 +15242,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "Four workspace-edit actions: stale caller range, missing text target, grouped create refusal, and interleaved partial effects. Dirty buffers and disk changes recorded separately from cleanup save.",
+              "remaining": "General WorkspaceEdit API, real version races, document incarnation, all provider/undo/rollback/error cases, save-as, persistence and UI confirmation. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "vscode/WORKSPACE-SEARCH.md",
+                "evidence/vscode-search-20261125T061429674973Z/exit.json",
+                "evidence/vscode-search-20261125T061429674973Z/conformance.json"
+              ]
+            }
+          ]
         },
         {
           "id": "vscode.undo-history",
@@ -15555,7 +15579,19 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "Five file searches, one pre-canceled request, and five explicitly enabled proposed text searches; native snapshots and independent final artifact reads.",
+              "remaining": "Search UI, regex/glob/encoding engines, ignore policy, RelativePattern text scope, all providers, general result limits and live cancellation/retirement. Parent operation statuses remain unchanged.",
+              "evidence": [
+                "vscode/WORKSPACE-SEARCH.md",
+                "evidence/vscode-search-20261125T061429674973Z/exit.json",
+                "evidence/vscode-search-20261125T061429674973Z/conformance.json"
+              ]
+            }
+          ]
         },
         {
           "id": "vscode.language-services",
@@ -17086,6 +17122,11 @@
           "id": "extension-support-and-admission-provenance",
           "status": "proposed;bounded source policy is consistent,no production defect established",
           "document": "vscode/TRUST.md"
+        },
+        {
+          "id": "explicit-search-scope-and-plan-basis",
+          "status": "Proposed documentation/effective-scope and versioned-edit receipt alternatives; bounded native observations, no product adoption.",
+          "document": "vscode/WORKSPACE-SEARCH.md"
         }
       ],
       "preservationDecisions": [],

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "observation": "Independent post-exit Python filesystem and OS process inspection;not a second native execution.",
+  "files": {
+    "a/visible.txt": {
+      "present": true,
+      "text": "before-failed-create fixed needle base\n",
+      "sha256": "cb07ebdc2bd3eaa38d0298b5a1c8ad582cc0ab0857906c4dc45085868cc10bda"
+    },
+    "a/hidden.txt": {
+      "present": true,
+      "text": "needle hidden-a\n",
+      "sha256": "65775e6580c9b19b37e3879ba4b81147cefb727ca6e9b9938d4fa091e09ea28f"
+    },
+    "a/search-hidden.txt": {
+      "present": true,
+      "text": "needle search-hidden-a\n",
+      "sha256": "66b8df5e985ebd00e915bb7e809dab5936d63013620f10bf9f2fbaa7f27dc60d"
+    },
+    "b/visible.txt": {
+      "present": true,
+      "text": "needle disk-b\n",
+      "sha256": "dac76efa2775c137d5aa08792003a13737cbbb877528b8eeda3da3aef9343791"
+    },
+    "c/visible.txt": {
+      "present": true,
+      "text": "needle disk-c\n",
+      "sha256": "1b94926b75c00f2edba81fc235f94949a7e3f97d44a7305f6c5ec95b2dbbb48e"
+    },
+    "outside.txt": {
+      "present": true,
+      "text": "needle outside\n",
+      "sha256": "11ce8ce745e7afee123fa5540e47cc4c3fdb347ef46479bb08c6a27756d1384c"
+    },
+    "a/created.txt": {
+      "present": false
+    },
+    "a/interleaved.txt": {
+      "present": true,
+      "text": "",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "a/missing.txt": {
+      "present": false
+    }
+  },
+  "workspaceSha256": "8aaeaf13ced1e206aeeb99c4e4251755a6b48f202618453df7cfddb1bba721a7",
+  "originalProcessGroupAbsent": true,
+  "matchingProcessIds": [],
+  "workAllocatedKiB": 20180
+}

@@ -198,6 +198,8 @@ Configuration adds a separate provenance boundary: a saved lower-scope edit can 
 
 Trust predicates reinforce that support metadata is not full admission. Explicit user/product policy, version eligibility, extension location, and other enablement gates remain distinct. The selected source predicates are internally consistent; a provenance/disable-reason explanation is a candidate. No installed trust revocation, running-code retirement, or sandbox guarantee was exercised. [Trust scope and verification plan](vscode/TRUST.md).
 
+The [VS Code workspace/search band](vscode/WORKSPACE-SEARCH.md) supplies another cross-feature boundary: a successful edit can use submission-time state even when its caller's ranges came from an older plan. Search also combines provider scope with open-editor observations, and a recorded no-match must suppress older disk results. Preserve plan basis, effective scope, current observations, applied effects, and saved state separately. Mixed-resource failure can retain earlier groups; it does not imply rollback or publication.
+
 ### empack
 
 The [JavaScript update comparison](js-updates/README.md) reinforces a target-design obligation rather than selecting a new empack command: keep scope, exact-pin policy, candidate constraints, target source, declaration writes, observation availability, saved selections, and installed content separate. The comparator tools deliberately choose different rules. Preserve empack's own accepted author intent and distinguish a held pin from missing evidence or an older permitted target. A candidate that satisfies one runtime/range check does not establish complete pack compatibility. Deferred empack command/UX implementation remains a separate decision.

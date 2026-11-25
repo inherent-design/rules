@@ -1,0 +1,1776 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "rows": [
+    {
+      "id": "initial",
+      "kind": "snapshot",
+      "result": {
+        "findTextInFilesAvailable": true
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-default",
+      "kind": "file-search",
+      "result": {
+        "include": "**/*.txt",
+        "exclude": "default",
+        "paths": [
+          "a/search-hidden.txt",
+          "a/visible.txt",
+          "b/visible.txt"
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-no-excludes",
+      "kind": "file-search",
+      "result": {
+        "include": "**/*.txt",
+        "exclude": "none",
+        "paths": [
+          "a/hidden.txt",
+          "a/search-hidden.txt",
+          "a/visible.txt",
+          "b/visible.txt"
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-relative-a",
+      "kind": "file-search",
+      "result": {
+        "include": {
+          "base": "a",
+          "pattern": "**/*.txt"
+        },
+        "exclude": "default",
+        "paths": [
+          "a/search-hidden.txt",
+          "a/visible.txt"
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-pre-cancelled",
+      "kind": "cancel-search",
+      "result": {
+        "paths": [],
+        "error": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "text-default",
+      "kind": "text-search",
+      "result": {
+        "query": "needle",
+        "options": {
+          "include": "**/*.txt",
+          "useIgnoreFiles": false
+        },
+        "matches": [
+          {
+            "path": "a/hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle hidden-a\n"
+          },
+          {
+            "path": "a/search-hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle search-hidden-a\n"
+          },
+          {
+            "path": "a/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-a\n"
+          },
+          {
+            "path": "b/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-b\n"
+          }
+        ],
+        "complete": {
+          "limitHit": false,
+          "message": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "text-file-excludes",
+      "kind": "text-search",
+      "result": {
+        "query": "needle",
+        "options": {
+          "include": "**/*.txt",
+          "useIgnoreFiles": false,
+          "useDefaultExcludes": true
+        },
+        "matches": [
+          {
+            "path": "a/search-hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle search-hidden-a\n"
+          },
+          {
+            "path": "a/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-a\n"
+          },
+          {
+            "path": "b/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-b\n"
+          }
+        ],
+        "complete": {
+          "limitHit": false,
+          "message": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "dirty-a",
+      "kind": "snapshot",
+      "result": {},
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "text-disk-after-dirty",
+      "kind": "text-search",
+      "result": {
+        "query": "needle",
+        "options": {
+          "include": "**/*.txt",
+          "useIgnoreFiles": false
+        },
+        "matches": [
+          {
+            "path": "a/hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle hidden-a\n"
+          },
+          {
+            "path": "a/search-hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle search-hidden-a\n"
+          },
+          {
+            "path": "b/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-b\n"
+          }
+        ],
+        "complete": {
+          "limitHit": false,
+          "message": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "text-buffer-after-dirty",
+      "kind": "text-search",
+      "result": {
+        "query": "buffer-only",
+        "options": {
+          "include": "**/*.txt",
+          "useIgnoreFiles": false
+        },
+        "matches": [
+          {
+            "path": "a/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                11
+              ]
+            ],
+            "preview": "buffer-only draft-a\n"
+          }
+        ],
+        "complete": {
+          "limitHit": false,
+          "message": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "text-open-outside",
+      "kind": "text-search",
+      "result": {
+        "query": "needle",
+        "options": {
+          "include": "**/*.txt",
+          "useIgnoreFiles": false
+        },
+        "matches": [
+          {
+            "path": "a/hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle hidden-a\n"
+          },
+          {
+            "path": "a/search-hidden.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle search-hidden-a\n"
+          },
+          {
+            "path": "b/visible.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle disk-b\n"
+          },
+          {
+            "path": "outside.txt",
+            "ranges": [
+              [
+                0,
+                0,
+                0,
+                6
+              ]
+            ],
+            "preview": "needle outside\n"
+          }
+        ],
+        "complete": {
+          "limitHit": false,
+          "message": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "add-c",
+      "kind": "workspace-change",
+      "result": {
+        "before": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "b",
+            "name": "B",
+            "index": 1
+          }
+        ],
+        "accepted": true,
+        "immediate": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "b",
+            "name": "B",
+            "index": 1
+          },
+          {
+            "path": "c",
+            "name": "C",
+            "index": 2
+          }
+        ],
+        "observedEvent": {
+          "added": [
+            "c"
+          ],
+          "removed": []
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 2
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "duplicate-c",
+      "kind": "workspace-change",
+      "result": {
+        "before": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "b",
+            "name": "B",
+            "index": 1
+          },
+          {
+            "path": "c",
+            "name": "C",
+            "index": 2
+          }
+        ],
+        "accepted": false,
+        "immediate": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "b",
+            "name": "B",
+            "index": 1
+          },
+          {
+            "path": "c",
+            "name": "C",
+            "index": 2
+          }
+        ],
+        "observedEvent": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 2
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-after-add",
+      "kind": "file-search",
+      "result": {
+        "include": "**/*.txt",
+        "exclude": "none",
+        "paths": [
+          "a/hidden.txt",
+          "a/search-hidden.txt",
+          "a/visible.txt",
+          "b/visible.txt",
+          "c/visible.txt"
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "b",
+          "name": "B",
+          "index": 1
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 2
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "remove-b",
+      "kind": "workspace-change",
+      "result": {
+        "before": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "b",
+            "name": "B",
+            "index": 1
+          },
+          {
+            "path": "c",
+            "name": "C",
+            "index": 2
+          }
+        ],
+        "accepted": true,
+        "immediate": [
+          {
+            "path": "a",
+            "name": "A",
+            "index": 0
+          },
+          {
+            "path": "c",
+            "name": "C",
+            "index": 1
+          }
+        ],
+        "observedEvent": {
+          "added": [],
+          "removed": [
+            "b"
+          ]
+        }
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "files-after-remove",
+      "kind": "file-search",
+      "result": {
+        "include": "**/*.txt",
+        "exclude": "none",
+        "paths": [
+          "a/hidden.txt",
+          "a/search-hidden.txt",
+          "a/visible.txt",
+          "c/visible.txt"
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 2,
+          "dirty": true,
+          "closed": false,
+          "text": "buffer-only draft-a\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle disk-a\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "apply-stale-range",
+      "kind": "text-edit",
+      "result": {
+        "basis": {
+          "version": 3,
+          "text": "needle base\n",
+          "range": [
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "beforeApply": {
+          "version": 4,
+          "text": "prefix needle base\n"
+        },
+        "accepted": true,
+        "error": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 5,
+          "dirty": true,
+          "closed": false,
+          "text": "fixed needle base\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle base\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "apply-missing-text-target",
+      "kind": "text-edit",
+      "result": {
+        "accepted": false,
+        "error": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 5,
+          "dirty": true,
+          "closed": false,
+          "text": "fixed needle base\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle base\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "apply-mixed-existing-target",
+      "kind": "resource-edit",
+      "result": {
+        "accepted": false,
+        "error": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 5,
+          "dirty": true,
+          "closed": false,
+          "text": "fixed needle base\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle base\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "apply-interleaved-existing-target",
+      "kind": "resource-edit",
+      "result": {
+        "accepted": false,
+        "error": null
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 6,
+          "dirty": true,
+          "closed": false,
+          "text": "before-failed-create fixed needle base\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "needle base\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": true,
+          "text": ""
+        }
+      }
+    },
+    {
+      "id": "cleanup-save",
+      "kind": "cleanup",
+      "result": {
+        "documents": [
+          {
+            "path": "a/visible.txt",
+            "saved": true
+          }
+        ]
+      },
+      "folders": [
+        {
+          "path": "a",
+          "name": "A",
+          "index": 0
+        },
+        {
+          "path": "c",
+          "name": "C",
+          "index": 1
+        }
+      ],
+      "buffers": [
+        {
+          "path": "a/visible.txt",
+          "version": 6,
+          "dirty": false,
+          "closed": false,
+          "text": "before-failed-create fixed needle base\n"
+        },
+        {
+          "path": "outside.txt",
+          "version": 1,
+          "dirty": false,
+          "closed": false,
+          "text": "needle outside\n"
+        }
+      ],
+      "files": {
+        "a/visible.txt": {
+          "present": true,
+          "text": "before-failed-create fixed needle base\n"
+        },
+        "a/hidden.txt": {
+          "present": true,
+          "text": "needle hidden-a\n"
+        },
+        "a/search-hidden.txt": {
+          "present": true,
+          "text": "needle search-hidden-a\n"
+        },
+        "b/visible.txt": {
+          "present": true,
+          "text": "needle disk-b\n"
+        },
+        "c/visible.txt": {
+          "present": true,
+          "text": "needle disk-c\n"
+        },
+        "outside.txt": {
+          "present": true,
+          "text": "needle outside\n"
+        },
+        "a/created.txt": {
+          "present": false
+        },
+        "a/interleaved.txt": {
+          "present": true,
+          "text": ""
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "kind": "workspace",
+      "added": [
+        "c"
+      ],
+      "removed": []
+    },
+    {
+      "kind": "workspace",
+      "added": [],
+      "removed": [
+        "b"
+      ]
+    }
+  ],
+  "error": null,
+  "folders": [
+    {
+      "path": "a",
+      "name": "A",
+      "index": 0
+    },
+    {
+      "path": "c",
+      "name": "C",
+      "index": 1
+    }
+  ],
+  "files": {
+    "a/visible.txt": {
+      "present": true,
+      "text": "before-failed-create fixed needle base\n"
+    },
+    "a/hidden.txt": {
+      "present": true,
+      "text": "needle hidden-a\n"
+    },
+    "a/search-hidden.txt": {
+      "present": true,
+      "text": "needle search-hidden-a\n"
+    },
+    "b/visible.txt": {
+      "present": true,
+      "text": "needle disk-b\n"
+    },
+    "c/visible.txt": {
+      "present": true,
+      "text": "needle disk-c\n"
+    },
+    "outside.txt": {
+      "present": true,
+      "text": "needle outside\n"
+    },
+    "a/created.txt": {
+      "present": false
+    },
+    "a/interleaved.txt": {
+      "present": true,
+      "text": ""
+    }
+  },
+  "buffers": [
+    {
+      "path": "a/visible.txt",
+      "version": 6,
+      "dirty": false,
+      "closed": false,
+      "text": "before-failed-create fixed needle base\n"
+    },
+    {
+      "path": "outside.txt",
+      "version": 1,
+      "dirty": false,
+      "closed": false,
+      "text": "needle outside\n"
+    }
+  ]
+}

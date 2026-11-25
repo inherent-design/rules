@@ -1,0 +1,1120 @@
+{
+  "schema": 1,
+  "nativeRows": 21,
+  "modeledActions": 18,
+  "contextRows": 3,
+  "comparisons": [
+    {
+      "id": "files-default",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": true,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|a/search-hidden.txt,a/visible.txt,b/visible.txt",
+      "model": "F|a/search-hidden.txt,a/visible.txt,b/visible.txt"
+    },
+    {
+      "id": "files-no-excludes",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt",
+      "model": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt"
+    },
+    {
+      "id": "files-relative-a",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a"
+        ],
+        "respect": true,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|a/search-hidden.txt,a/visible.txt",
+      "model": "F|a/search-hidden.txt,a/visible.txt"
+    },
+    {
+      "id": "files-pre-cancelled",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": true,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|",
+      "model": "F|"
+    },
+    {
+      "id": "text-default",
+      "input": {
+        "kind": "text",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "T|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt",
+      "model": "T|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt"
+    },
+    {
+      "id": "text-file-excludes",
+      "input": {
+        "kind": "text",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": true,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "T|a/search-hidden.txt,a/visible.txt,b/visible.txt",
+      "model": "T|a/search-hidden.txt,a/visible.txt,b/visible.txt"
+    },
+    {
+      "id": "text-disk-after-dirty",
+      "input": {
+        "kind": "text",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "T|a/hidden.txt,a/search-hidden.txt,b/visible.txt",
+      "model": "T|a/hidden.txt,a/search-hidden.txt,b/visible.txt"
+    },
+    {
+      "id": "text-buffer-after-dirty",
+      "input": {
+        "kind": "text",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": false,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": false,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": false,
+            "openEligible": true,
+            "openMatch": true
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": false,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": false,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": false,
+            "openEligible": false,
+            "openMatch": false
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "T|a/visible.txt",
+      "model": "T|a/visible.txt"
+    },
+    {
+      "id": "text-open-outside",
+      "input": {
+        "kind": "text",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": true
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "T|a/hidden.txt,a/search-hidden.txt,b/visible.txt,outside.txt",
+      "model": "T|a/hidden.txt,a/search-hidden.txt,b/visible.txt,outside.txt"
+    },
+    {
+      "id": "add-c",
+      "input": {
+        "kind": "workspace",
+        "roots": [
+          "a",
+          "b"
+        ],
+        "start": 2,
+        "count": 0,
+        "adds": [
+          "c"
+        ],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "W|1|a,b,c|a,b,c",
+      "model": "W|1|a,b,c|a,b,c"
+    },
+    {
+      "id": "duplicate-c",
+      "input": {
+        "kind": "workspace",
+        "roots": [
+          "a",
+          "b",
+          "c"
+        ],
+        "start": 3,
+        "count": 0,
+        "adds": [
+          "c"
+        ],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "W|0|a,b,c|a,b,c",
+      "model": "W|0|a,b,c|a,b,c"
+    },
+    {
+      "id": "files-after-add",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a",
+          "b",
+          "c"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": true
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt,c/visible.txt",
+      "model": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,b/visible.txt,c/visible.txt"
+    },
+    {
+      "id": "remove-b",
+      "input": {
+        "kind": "workspace",
+        "roots": [
+          "a",
+          "b",
+          "c"
+        ],
+        "start": 1,
+        "count": 1,
+        "adds": [],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "W|1|a,c|a,c",
+      "model": "W|1|a,c|a,c"
+    },
+    {
+      "id": "files-after-remove",
+      "input": {
+        "kind": "file",
+        "roots": [
+          "a",
+          "c"
+        ],
+        "respect": false,
+        "resources": [
+          {
+            "identity": "a/hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": true,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/search-hidden.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "a/visible.txt",
+            "root": "a",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": false
+          },
+          {
+            "identity": "b/visible.txt",
+            "root": "b",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "c/visible.txt",
+            "root": "c",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": false,
+            "openMatch": false
+          },
+          {
+            "identity": "outside.txt",
+            "root": "",
+            "present": true,
+            "excluded": false,
+            "providerMatch": true,
+            "openEligible": true,
+            "openMatch": true
+          }
+        ],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0,
+        "groups": []
+      },
+      "observed": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,c/visible.txt",
+      "model": "F|a/hidden.txt,a/search-hidden.txt,a/visible.txt,c/visible.txt"
+    },
+    {
+      "id": "apply-stale-range",
+      "input": {
+        "kind": "version",
+        "planned": 3,
+        "submitted": 4,
+        "actual": 4,
+        "roots": [],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "groups": []
+      },
+      "observed": "E|1",
+      "model": "E|1"
+    },
+    {
+      "id": "apply-missing-text-target",
+      "input": {
+        "kind": "groups",
+        "groups": [
+          {
+            "admitted": false,
+            "effects": []
+          }
+        ],
+        "roots": [],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0
+      },
+      "observed": "G|0|",
+      "model": "G|0|"
+    },
+    {
+      "id": "apply-mixed-existing-target",
+      "input": {
+        "kind": "groups",
+        "groups": [
+          {
+            "admitted": false,
+            "effects": []
+          },
+          {
+            "admitted": true,
+            "effects": [
+              "later"
+            ]
+          }
+        ],
+        "roots": [],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0
+      },
+      "observed": "G|0|",
+      "model": "G|0|"
+    },
+    {
+      "id": "apply-interleaved-existing-target",
+      "input": {
+        "kind": "groups",
+        "groups": [
+          {
+            "admitted": true,
+            "effects": [
+              "created:a/interleaved.txt"
+            ]
+          },
+          {
+            "admitted": true,
+            "effects": [
+              "buffer-prefix"
+            ]
+          },
+          {
+            "admitted": false,
+            "effects": []
+          },
+          {
+            "admitted": true,
+            "effects": [
+              "later"
+            ]
+          }
+        ],
+        "roots": [],
+        "respect": false,
+        "resources": [],
+        "cancelled": false,
+        "start": 0,
+        "count": 0,
+        "adds": [],
+        "planned": 0,
+        "submitted": 0,
+        "actual": 0
+      },
+      "observed": "G|0|created:a/interleaved.txt,buffer-prefix",
+      "model": "G|0|created:a/interleaved.txt,buffer-prefix"
+    }
+  ],
+  "researchRefusals": [
+    "schema",
+    "profile",
+    "empty",
+    "count",
+    "kind",
+    "root-identity",
+    "duplicate-root",
+    "resource-identity",
+    "wrong-owner",
+    "unobserved-open-editor",
+    "duplicate-resource",
+    "text-cancellation",
+    "workspace-range",
+    "duplicate-addition",
+    "unknown-version",
+    "effects-bound",
+    "boolean"
+  ],
+  "changedPremiseControls": [
+    "file-exclusion",
+    "open-no-match",
+    "outside-open-scope",
+    "submission-version",
+    "earlier-group-effects"
+  ],
+  "changedObservationControls": [
+    "file-result",
+    "buffer-result",
+    "workspace-membership",
+    "range-outcome",
+    "partial-effects"
+  ],
+  "basisSha256": {
+    "applications/evidence/vscode-search-20261125T061429674973Z/diagnostic-excerpts.json": "81a7b17c79f05b2a8e62ea5f48b09ac8426584fc8dd335f9924fa87522b9e799",
+    "applications/evidence/vscode-search-20261125T061429674973Z/exit.json": "63729e3466165afb5b52bedfa90828848b67b79bf067a2dedd31f4efb8a04a83",
+    "applications/evidence/vscode-search-20261125T061429674973Z/extension-package.json": "24d8f420d7ac6696b50e8fd573a26d5ed1d7f1eb5f1342ae48eb27c32884d368",
+    "applications/evidence/vscode-search-20261125T061429674973Z/extension.cjs": "ee5046c42b517b280bbf364e77dc2ca5bec1cdb9c7ffe891d6413404cc4aa5c1",
+    "applications/evidence/vscode-search-20261125T061429674973Z/final-workspace.json": "8aaeaf13ced1e206aeeb99c4e4251755a6b48f202618453df7cfddb1bba721a7",
+    "applications/evidence/vscode-search-20261125T061429674973Z/host-observed.json": "41556e59158361a02870bcce4357060b5ed00d8cf1af8a3eba7f9e2e80da936c",
+    "applications/evidence/vscode-search-20261125T061429674973Z/initial-files.json": "ef54bdca1ce786fa447be221171619ba7fdabc3d962751e9d1965685eb84e145",
+    "applications/evidence/vscode-search-20261125T061429674973Z/initial-settings.json": "81ba9bd267f1e5e72c78f18167bb263ebbc50956901936442507e76778ab7648",
+    "applications/evidence/vscode-search-20261125T061429674973Z/initial-workspace.json": "d698336ba3c1df0aa9e935550b539fef2401701e00fcaf13474f15ed2be08411",
+    "applications/evidence/vscode-search-20261125T061429674973Z/meta.json": "be83d82048fbc48709bbde2fab04f210bb80340e5ef434d7169e4b8660a276b3",
+    "applications/evidence/vscode-search-20261125T061429674973Z/observed.json": "a0f70563c8a8f075502b831117c34f9cee955cf9074d18d38b5c1a7b7fc9e2a0",
+    "applications/evidence/vscode-search-20261125T061429674973Z/probe.py": "4a8fc4b4658b01ed998556aaa7f7af2a685323570ead15f6373da720d872b86b",
+    "applications/evidence/vscode-search-20261125T061429674973Z/process.json": "35dd4685bed9e2435643b22575a242edc3e4aab98f9d15c7906021400bb97d29",
+    "applications/evidence/vscode-search-20261125T061429674973Z/toolchain-readback.json": "b1db83d307a400b44dc262d45d57a26f4819177a857541388eda1411a3a3d776",
+    "applications/sources/vscode-search-selections.json": "682a2029f2ea63afd75f85b6dde214f4d439ac4abcf33e353e157d0f3c418ff9",
+    "applications/vscode/WorkspaceSearch.bend": "2719afd8531ffcf212f4094df49c19b8779b0ac768caefaa8c28bc95790905b7",
+    "applications/vscode/WorkspaceSearch.lean": "e56dba7806aee9fbea9fdd11614b129041573079456362fe1d82678f9bc4544c",
+    "applications/vscode/WorkspaceSearchCase.lean": "4afe0f8f886aee65f257d8ca1a51e27483266eb3f7610fa0a5c372cce9ef2535",
+    "applications/vscode/search-extension.cjs": "ee5046c42b517b280bbf364e77dc2ca5bec1cdb9c7ffe891d6413404cc4aa5c1",
+    "applications/vscode/search_conformance.py": "e4397e742b913e9ba891637799feb20ea8a3bf1474df55eb837d856f1995ffc1",
+    "applications/vscode/search_observations.py": "c78b96bb928a4a396ccc5109ad0dd33b9a0e580b3febd3ac551fa9a572158543",
+    "applications/vscode/search_probe.py": "4a8fc4b4658b01ed998556aaa7f7af2a685323570ead15f6373da720d872b86b"
+  },
+  "driverSha256": "ae0507f760bcd15e26f123b05cb14ed5b73f22295cedad715344a1a4d3771e38",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "limits": [
+    "Pure retained-data replay; no VS Code, browser, desktop or native source acquisition.",
+    "Whole installed native APIs in an isolated multi-root profile; proposed findTextInFiles explicitly enabled. No Search UI, remote provider or supported-platform qualification.",
+    "Match/glob/URI admission and prepared-group facts are bounded adapters. No generic search/regex or file-group validator implemented.",
+    "Submission version is inferred from inspected source and immediate native API version, not a captured internal RPC.",
+    "Caller-range freshness is a separately proposed guard. Existing WorkspaceEdit does not promise to rebase ranges prepared earlier.",
+    "Three context rows include explicit cleanup-save; applyEdit success is not save/publication/durability.",
+    "Ordinary HOME with isolated profiles/in-memory secrets leaves OS-shared startup effects unmeasured.",
+    "All parent operation statuses remain pending; partial source/native coverage is recorded separately."
+  ]
+}

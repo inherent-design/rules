@@ -589,6 +589,41 @@
       ],
       "evidence": [],
       "status": "pending"
+    },
+    {
+      "id": "vscode-workspace-search-edit",
+      "features": [
+        "vscode.workspaces",
+        "vscode.search",
+        "vscode.documents"
+      ],
+      "flow": "In an existing multi-root workspace, compare file/text scope and dirty buffers, add/remove roots with confirmation, apply ranges prepared before a later edit, retain partial resource-group effects, and save explicitly.",
+      "counterexamples": [
+        "Treat provisional membership as a confirmed save.",
+        "Fall back to older disk matches after an open editor reports no match.",
+        "Infer caller-plan freshness from submission-time version capture.",
+        "Treat failed mixed-resource application as rollback or a saved result."
+      ],
+      "hostWitnesses": [
+        "observed versus confirmed revision",
+        "effective-view provenance",
+        "scoped effects after refusal",
+        "explicit save/publication"
+      ],
+      "evidence": [],
+      "status": "pending",
+      "componentEvidence": [
+        {
+          "status": "native-observed",
+          "scope": "One isolated native desktop API flow: 21 rows, 18 selected actions, and three context/cleanup states. Stable workspace/file/applyEdit APIs plus explicitly enabled proposed findTextInFiles. Selected decision models compare 18 actions.",
+          "remaining": "General Search UI, first-root/restart transitions, RelativePattern text scope, remote/custom providers, concurrent edits, real cancellation, recovery, and cross-platform/browser qualification remain pending.",
+          "evidence": [
+            "vscode/WORKSPACE-SEARCH.md",
+            "evidence/vscode-search-20261125T061429674973Z/observed.json",
+            "evidence/vscode-search-20261125T061429674973Z/conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }
