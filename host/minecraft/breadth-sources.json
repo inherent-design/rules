@@ -1,0 +1,1707 @@
+{
+  "schema": 1,
+  "evidence": "private-source-inspection-only",
+  "limits": [
+    "Acquired views are not all semantically reviewed; reviewed clauses are named separately in breadth-contracts.json.",
+    "Original class bytes, remapped class bytes, and decompiler translations are distinct identities.",
+    "No original game class linking, provider composition, native image decoding, renderer execution, or semantic equivalence proof."
+  ],
+  "profiles": [
+    {
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "capture": "breadth-views-1.21.1-20261125T205441595397Z",
+      "receiptSha256": "819b4dab7f1cac39551cf709defc3860fd674ed606051528a1bde52a8e157b20",
+      "clientSha256": "499f6897d1837516680f3114072d8106e11c9adcd933fe5cf051b551089b0c99",
+      "metadataSha256": "46bd44d2732fd1cd187724de9b5cab9fc98678d8de46509410659b5c6f103ff8",
+      "mappingSha256": "140c47931cccc8fc9e4c22d7603e2d714d1a953a146f51ea7397d95c955536ec",
+      "namedJarSha256": "c1a8878a9f309383bbdfebc74fe1e2557422848c03eb7c9905db9b7916105248",
+      "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+      "producersSha256": {
+        "inspect_breadth_sources.py": "e42408eb6f989c2ccb3d2909e516f9c4ef8c8ea1ee6bc587be63db47ec78930a",
+        "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+        "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+      },
+      "originalClassMembers": {
+        "com.mojang.blaze3d.platform.NativeImage$Format": {
+          "member": "faj$a.class",
+          "sha256": "db5bab7e6c1b0745a830c0879cc6a89076d899a1b8a23b28c23db398c4a24876"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat": {
+          "member": "faj$b.class",
+          "sha256": "0388c9e2852bb744ccce39ba98ca0b495283c7034dedde5f78887f5d281614b4"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$WriteCallback": {
+          "member": "faj$c.class",
+          "sha256": "899437dd3e19458598050f4884d808408c56d17e88e0d58917ce162408aabc23"
+        },
+        "com.mojang.blaze3d.platform.NativeImage": {
+          "member": "faj.class",
+          "sha256": "1fe68fcc45474482e6f30550df180653a790f4eae4b474a9ef72cd51088be5d8"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$Notification": {
+          "member": "fgu$a.class",
+          "sha256": "456e35b298d9adf5ece2f93b47e1b83eb689aeb7eea664d089b0966263718b6a"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+          "member": "fgu$b.class",
+          "sha256": "8357779a710ce2fc0f7a27172d1c12e99b136099cf5a6cea238d486ed0c92f88"
+        },
+        "net.minecraft.client.PeriodicNotificationManager": {
+          "member": "fgu.class",
+          "sha256": "e3a5dd765ea05da327ecbc9592d7ef3d1560092e38ed45268036bbf39b59784f"
+        },
+        "net.minecraft.client.gui.screens.WinScreen$CreditsReader": {
+          "member": "fog$a.class",
+          "sha256": "b34e7b253b2a8686b059706faa357d3b60bd638a1152b878d2952e311b1f42de"
+        },
+        "net.minecraft.client.gui.screens.WinScreen": {
+          "member": "fog.class",
+          "sha256": "3983270bfc917191790a179b1bd7c87420f0c5eb8266372fff080c36171f0285"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry": {
+          "member": "frs$a.class",
+          "sha256": "0c4b05407e34667e99269f833535db2835984d02ca8779bf4a1026c9a3602f49"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase": {
+          "member": "frs$b.class",
+          "sha256": "27130910cd3aabe481945910791e05a1510000abd89dabef93e256a8580dbda6"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry": {
+          "member": "frs$c.class",
+          "sha256": "50acfbbb70c1f69d302f9914c2f0f9f3db0097acc667495f53581e01e764e4a7"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry": {
+          "member": "frs$d.class",
+          "sha256": "c43e5e8493bc60a3aa775e0577f3fc149a250c23ba12b2bd298cb3bd489cb6f9"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel": {
+          "member": "frs.class",
+          "sha256": "44328a9c6f90668d068a8688327d59fd87dbaa34e5f72c0ecd7ca620453adcd4"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$Context": {
+          "member": "ggc$a.class",
+          "sha256": "2085c2f58d77e7ee468fcfb2794bb85195dea64b619970324bb8054db0febb80"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer": {
+          "member": "ggc$b.class",
+          "sha256": "416df35e8174ece362c2a688f91fab90f074982fabe2c98053a7f1b7140f7f9b"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException": {
+          "member": "ggc$c.class",
+          "sha256": "cae9fac37d0bfd28c418614efe9de92c9bd8da5aa8f6c65e116aa63f1268d983"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition": {
+          "member": "ggc.class",
+          "sha256": "f3896078de8c4cf8eed8e2ef3aa278ef7f0749fc9e5dbdc30c8bc5772d18437c"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span": {
+          "member": "gge$a.class",
+          "sha256": "aa67a91ad122e06d1bada0bef5a98a366d233eb862cd58d0dec55e7d1f43f23f"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing": {
+          "member": "gge$b.class",
+          "sha256": "afd0a074cd0cca5047ab73d9324b1aa0a5c5da7640e569d3f720b27c3add2b33"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator": {
+          "member": "gge.class",
+          "sha256": "dbbc5b6e33408366696ec014ba3ac727cd015180ed2e68079ca548e6b796bdef"
+        },
+        "net.minecraft.client.renderer.block.model.MultiVariant$Deserializer": {
+          "member": "ggj$a.class",
+          "sha256": "8a5a3e0c932fe820680b8a80772eaac18189deedd113d4103ffc2643abf47349"
+        },
+        "net.minecraft.client.renderer.block.model.MultiVariant": {
+          "member": "ggj.class",
+          "sha256": "c45216f605d2fd77fefaa4fcc795a154735b28bc745cfc1ab0adbecd22b699cd"
+        },
+        "net.minecraft.client.renderer.block.model.Variant$Deserializer": {
+          "member": "ggk$a.class",
+          "sha256": "d6eac32140e125a1700509065a1981df4692791657be1e3fdaa1d973ba87f667"
+        },
+        "net.minecraft.client.renderer.block.model.Variant": {
+          "member": "ggk.class",
+          "sha256": "1311fa349080067f338e7446eb11d532080642ba09cd85b248aa0b20af91acb1"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Condition": {
+          "member": "ggm.class",
+          "sha256": "1afca24983beaab0a7a65086def4f626f111c086f0485d9ec79414bc85a916b2"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition": {
+          "member": "ggn.class",
+          "sha256": "a76c222ffe6993a6e6c1c991afe75b9c6d7f830e3f57e74f2171c5441480634d"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart$Deserializer": {
+          "member": "ggo$a.class",
+          "sha256": "188a19d5fd7405bdfe5bd7718dad3f11061426db0414505cf171f919e791a651"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart": {
+          "member": "ggo.class",
+          "sha256": "6223c30e6d82fd20c1d53fb6200ed710e03d5b5101819b67d8043503273c1811"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector$Deserializer": {
+          "member": "ggq$a.class",
+          "sha256": "ba39596c5d8fa03862dbc26ebd3ef08904e1a89c97f3edd180fbab265512bfca"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector": {
+          "member": "ggq.class",
+          "sha256": "fa935320ba30af5c9aad88006001b1aa4281e41f9b4199a09ce3ba213d48534c"
+        },
+        "net.minecraft.client.renderer.texture.AbstractTexture": {
+          "member": "gpw.class",
+          "sha256": "6e406ab8769042956d6941d41c3fb38586adec8185edc55e257ad1a67e6599b4"
+        },
+        "net.minecraft.client.renderer.texture.MipmapGenerator": {
+          "member": "gqa.class",
+          "sha256": "9911a812d14e5e1af2124999a85815f0b4df8f64ed0f5c2b3877d308970beb93"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture$TextureImage": {
+          "member": "gqe$a.class",
+          "sha256": "6ba8729cc92f59206c2de6a511abb6279f50fc1c0a429d68554f392ddaa75929"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture": {
+          "member": "gqe.class",
+          "sha256": "9ea2f66991597d4cb5765cd77cff4d76c4799b3e7b3f445809e3c184096fa806"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture": {
+          "member": "gqf$a.class",
+          "sha256": "822a16ccb9e419db5ebd7bfa332a96f33ec61b4a4ba9f975724c8ca24971157e"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo": {
+          "member": "gqf$b.class",
+          "sha256": "71f3b09927c34cf662dd864e227e9d324b91e3ee87a6cda968d813ab05a19745"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData": {
+          "member": "gqf$c.class",
+          "sha256": "78ac8baf245de69c1c2cd5ccbb94da78dce688d4a7ee1ce3425f0f7fa4779c14"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$Ticker": {
+          "member": "gqf$d.class",
+          "sha256": "6451f806486f46d55bfb94dda1da2e89f5de68b65abd6e2662fc9ceaafe7cbcc"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents": {
+          "member": "gqf.class",
+          "sha256": "240e930e7c35f165ec3755002f62e4974622affed1dcf66374ad4bc6f4ffec40"
+        },
+        "net.minecraft.client.resources.SplashManager": {
+          "member": "grn.class",
+          "sha256": "7912422a0ad9b2ba3a46153fef4681f143f32eba1f5004a01c68aff059380a50"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$BlockStateDefinitionException": {
+          "member": "gso$a.class",
+          "sha256": "cc65fd7fccd017246a8a2ce8ac7d9ed4ad04355c281367609efc6b7d4927d469"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedJson": {
+          "member": "gso$b.class",
+          "sha256": "04ac4fa7748970993a66ab900b046aee4518e502a41484c0918e0e0d194783eb"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModel": {
+          "member": "gso$c.class",
+          "sha256": "c00f48cbf4b74a1a70a4acdb463eec0a959f8ff370ca689aa163652cbb58e594"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$ModelGroupKey": {
+          "member": "gso$d.class",
+          "sha256": "8259ec17cb3f6002f83765a82215fb2139c1ca47a2e9316228171b69da69c86d"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader": {
+          "member": "gso.class",
+          "sha256": "e07a372c235c0d702cb126046ec84676daecc9d7910fe49c28fc1ae3e6e709af"
+        },
+        "net.minecraft.server.packs.PackSelectionConfig": {
+          "member": "asr.class",
+          "sha256": "d049f1e3082a7f1a16c24479a39be76a0a750fa06c7a470ebb16119e37acfe78"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector": {
+          "member": "atk$a.class",
+          "sha256": "cfe8d5df3dbecdc982f5302dea2c5b2fd95e517eb9eca52eda5bd6edd5e811ca"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource": {
+          "member": "atk.class",
+          "sha256": "540b9d0e4423e4c8bb9bae9adee6bdcf5650eb045dd2887fff662c94abc3874d"
+        },
+        "net.minecraft.server.packs.repository.Pack$Metadata": {
+          "member": "atm$a.class",
+          "sha256": "0e3fe8f011344e8b41e841a8f1101a43a9539bf71330707d05e8ff90bc5c1604"
+        },
+        "net.minecraft.server.packs.repository.Pack$Position": {
+          "member": "atm$b.class",
+          "sha256": "5ebabcd7180d1a26d14bb7c7a56699076c6fd7b470d3b04dc3dd7829892135d1"
+        },
+        "net.minecraft.server.packs.repository.Pack$ResourcesSupplier": {
+          "member": "atm$c.class",
+          "sha256": "a2333cd6575c31028b43fa9f3d8d527046071b7e3d431d4866f3a98e2f1097db"
+        },
+        "net.minecraft.server.packs.repository.Pack": {
+          "member": "atm.class",
+          "sha256": "e61d19fd23c381cdd57ab90c7578f02a5e06fb737d7c60f4b6b4d2ff96c44662"
+        },
+        "net.minecraft.server.packs.repository.PackDetector": {
+          "member": "ato.class",
+          "sha256": "0201ffb963be592f126f527bfb6d724b519ab02c92b2491b4e2e6b18acbdc801"
+        },
+        "net.minecraft.server.packs.repository.PackRepository": {
+          "member": "atp.class",
+          "sha256": "dba916e8ff416314ffcf9801137f0167cad7aab8bf555d4e36c7ab4363681bc9"
+        }
+      },
+      "viewsSha256": {
+        "com/mojang/blaze3d/platform/NativeImage.java": "ab17aa3df51cb75d0ab68b1930f21c3e6ac510e6ec31336b3e5b3a4fde564e39",
+        "net/minecraft/client/PeriodicNotificationManager.java": "980505d6dfd46dcf2e4c8ce5b13657bdce412e401dca254a905ad9b8ee4abf61",
+        "net/minecraft/client/resources/SplashManager.java": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+        "net/minecraft/client/gui/screens/WinScreen.java": "5d4e0f0f44f2902499e3ec06821362cbd7f5344c7b2d3d0dccae5ffac6c905a4",
+        "net/minecraft/client/gui/screens/packs/PackSelectionModel.java": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+        "net/minecraft/client/resources/model/BlockStateModelLoader.java": "187de261e11fbb487385a72c738a913dc716eaaa2fb8120e4e0868ada836ce55",
+        "net/minecraft/client/renderer/texture/AbstractTexture.java": "77f9716b02e356005314301f69c3ca688db743bf2e6695dc3bca0d4852ed8fc1",
+        "net/minecraft/client/renderer/texture/MipmapGenerator.java": "f1c51dbabc839f00892df1dbda2c58a08b9942e226c44e6c81e48156cdd63096",
+        "net/minecraft/client/renderer/texture/SimpleTexture.java": "f310f01ac97c86d4f8b81d3a4b2c548205941ffb362e78f3018aebb20f90c015",
+        "net/minecraft/client/renderer/texture/SpriteContents.java": "d73d81d3bbe88f79f579ef6988b4d8a10501b79019783fb680560fdd75f64740",
+        "net/minecraft/client/renderer/block/model/ItemModelGenerator.java": "e33f6cee08cca00cf2c4612754ba3110e851310f4ed8d2c0f4a083f0b11d3da5",
+        "net/minecraft/client/renderer/block/model/Variant.java": "95b33a19259ac52b64299c21a2fb920331c2467d403d5bb42ae1820c72bc3902",
+        "net/minecraft/client/renderer/block/model/MultiVariant.java": "eedc6824d86fb854a2e57ec439f8df5996e269524771d9c5a6734513091d2abb",
+        "net/minecraft/client/renderer/block/model/BlockModelDefinition.java": "5d20b4bdee7a4be5aed5b448ee5219d8567f6b59fea0fa18f86104cc2e9f594e",
+        "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java": "07dd7566cf383ee2f3ddba2605ef3100de6250bf90c5b1c5f8ca2db40bc5508f",
+        "net/minecraft/client/renderer/block/model/multipart/Condition.java": "7b044c731660532957eb6f42c8746738aeedf6c743124a02a36d29ac6bc096b5",
+        "net/minecraft/client/renderer/block/model/multipart/Selector.java": "b84f7c1fbb30f9af7f436964edad76b645ff4dbb4c4a13d4f989d2c51bdb2b5e",
+        "net/minecraft/client/renderer/block/model/multipart/MultiPart.java": "f8a3d6098cb890a8b634b1c6c7ffc3afa6a753459a076f485748e333b3d6f294",
+        "net/minecraft/server/packs/PackSelectionConfig.java": "df23232e4975c5a04bf54d53de951d1ea1a0115f433536c67c0de02359400a91",
+        "net/minecraft/server/packs/repository/FolderRepositorySource.java": "912770f7119ee2eeb17dcf154776a3b2888a23ee1f9ddf0854f76e71e0c89ae6",
+        "net/minecraft/server/packs/repository/PackRepository.java": "68d4162c40b1ae1c8407cda6db5e53fbe177a245d3df0d5d7b76b1d6d81ab1df",
+        "net/minecraft/server/packs/repository/PackDetector.java": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+        "net/minecraft/server/packs/repository/Pack.java": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b"
+      },
+      "categories": {
+        "packs.selection": [
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.PackSelectionConfig",
+          "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.Pack$Metadata",
+          "net.minecraft.server.packs.repository.Pack$Position",
+          "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+          "net.minecraft.server.packs.repository.Pack",
+          "net.minecraft.server.packs.repository.PackDetector",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "models.blockstates": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$Context",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.MultiVariant$Deserializer",
+          "net.minecraft.client.renderer.block.model.MultiVariant",
+          "net.minecraft.client.renderer.block.model.Variant$Deserializer",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.multipart.Condition",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart$Deserializer",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart",
+          "net.minecraft.client.renderer.block.model.multipart.Selector$Deserializer",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$BlockStateDefinitionException",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedJson",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModel",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$ModelGroupKey",
+          "net.minecraft.client.resources.model.BlockStateModelLoader"
+        ],
+        "models.generated": [
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ],
+        "textures.images": [
+          "com.mojang.blaze3d.platform.NativeImage$Format",
+          "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat",
+          "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.MipmapGenerator",
+          "net.minecraft.client.renderer.texture.SimpleTexture$TextureImage",
+          "net.minecraft.client.renderer.texture.SimpleTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo",
+          "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData",
+          "net.minecraft.client.renderer.texture.SpriteContents$Ticker",
+          "net.minecraft.client.renderer.texture.SpriteContents"
+        ],
+        "text.builtin_lists": [
+          "net.minecraft.client.PeriodicNotificationManager$Notification",
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "command": {
+        "exitCode": 0,
+        "timedOut": false,
+        "ownedGroupAbsent": true
+      }
+    },
+    {
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "capture": "breadth-views-1.21.4-20261125T205443132209Z",
+      "receiptSha256": "1a9bd2119e4b3d955009df8ea23647ff528f7dcaf24b8ca3e9f1b7bf16541e73",
+      "clientSha256": "c17c450c6e72cc51297daa57ce38f800aa01cf022b743daa21a0512d326d894e",
+      "metadataSha256": "5b945d948a9112d3eb99b52ff61387db65bbf6be443124e54af93112bab8ff6e",
+      "mappingSha256": "48b502ccc5e855b49da8aa9c0c0d7c565bec54c9f5da3a3664528aff7b9fdf23",
+      "namedJarSha256": "a5885704463fceb356090d0dd794b29b8402399fe35f5e18af5da14f7927f57f",
+      "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+      "producersSha256": {
+        "inspect_breadth_sources.py": "e42408eb6f989c2ccb3d2909e516f9c4ef8c8ea1ee6bc587be63db47ec78930a",
+        "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+        "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+      },
+      "originalClassMembers": {
+        "com.mojang.blaze3d.platform.NativeImage$Format": {
+          "member": "fev$a.class",
+          "sha256": "3a3f0be8a368a312bca078968c0a16024dc8a3520edd3a71ac7aee386acebef0"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat": {
+          "member": "fev$b.class",
+          "sha256": "82860b1f64d2e70b7d7ee6327add9f1e717de9990d95daa354fffddc53134874"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$WriteCallback": {
+          "member": "fev$c.class",
+          "sha256": "be7b89f76803321ab88f96de52b05eec059c668af4612a5e104dfdee6901a9b3"
+        },
+        "com.mojang.blaze3d.platform.NativeImage": {
+          "member": "fev.class",
+          "sha256": "eb62e0674ebf777ac0f1941191612a0303fa95dc51b55c6e143638a20b3dbf6b"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$Notification": {
+          "member": "flp$a.class",
+          "sha256": "e4b200e67b64f3f4af7f294d192acde2847cceab1fdecafb8f5dadae64395fd6"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+          "member": "flp$b.class",
+          "sha256": "a2c3aef70bb0b9aeb890b11fc7dcb477b2b82bb90520e2952aa23448bed42429"
+        },
+        "net.minecraft.client.PeriodicNotificationManager": {
+          "member": "flp.class",
+          "sha256": "a6434e739e6566e5bc29a85799f7e397ba8c1ab71940785b15048f0e6ccd678d"
+        },
+        "net.minecraft.client.gui.screens.WinScreen$CreditsReader": {
+          "member": "fup$a.class",
+          "sha256": "1294aae6a28f33b8c4e7a9a4a191430611fa3a63c1f167b88fe5a325b49fa890"
+        },
+        "net.minecraft.client.gui.screens.WinScreen": {
+          "member": "fup.class",
+          "sha256": "6df52658e20176444ee87ec7582e12492d302b497972b319d6fc6aa33d501594"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry": {
+          "member": "fyb$a.class",
+          "sha256": "ee3ceb62fb812e6000c9bb2e61c3d1d8aaabc2506832bdc6d55584526151671a"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase": {
+          "member": "fyb$b.class",
+          "sha256": "b7fd16b90742fe9bb8bf7510e2465ba76ad9430e62c88766d4a65f4a1a975e1d"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry": {
+          "member": "fyb$c.class",
+          "sha256": "885725cc5e644b9c999740df8fdb6814e9ddbcacaaccb359c057defd742fc6a2"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry": {
+          "member": "fyb$d.class",
+          "sha256": "f8041e681f995f4557bfb82f0a18c4a0c1889a3f5c17103300a17c925b3f0896"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel": {
+          "member": "fyb.class",
+          "sha256": "e265bd6c0400c78cb10a8e834225c201838b8525b0e6b5914ce92987dd363632"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer": {
+          "member": "gnm$a.class",
+          "sha256": "6215ea6ccda28d26ef64874a61c5619118c72871cbe8a19867dfd47345ed789f"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException": {
+          "member": "gnm$b.class",
+          "sha256": "c963541d0107becf95af5e282d086e13e68efd63d0ba874fc9ff2d2e0a2cec7a"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition": {
+          "member": "gnm.class",
+          "sha256": "291aab1c106dd937e7d5cc2d78c5c50a26b1faa18dec973d4e84cab6fac1e753"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span": {
+          "member": "gno$a.class",
+          "sha256": "8ce04b5506eb984c76b00146d916ad0fa4be0ef112036b5569fb594dad199c5c"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing": {
+          "member": "gno$b.class",
+          "sha256": "861d7474c9227101dc954a105e1b67301b79796e9a09155aa165c3466f36e97e"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator": {
+          "member": "gno.class",
+          "sha256": "f252bc43474243a5c30b1d8e9ffcee817b4584baa2f7e3120ec3dc1557903d03"
+        },
+        "net.minecraft.client.renderer.block.model.MultiVariant$Deserializer": {
+          "member": "gnr$a.class",
+          "sha256": "32e207a99463f4ed0b9cd4a6aee2d3090f96f27181bc28edcb51166d4a94fe36"
+        },
+        "net.minecraft.client.renderer.block.model.MultiVariant": {
+          "member": "gnr.class",
+          "sha256": "86039e862b8ee3eb295eb31adca41c2ba4d90354b137c7b57d91c0f7e001e7d5"
+        },
+        "net.minecraft.client.renderer.block.model.UnbakedBlockStateModel": {
+          "member": "gnt.class",
+          "sha256": "53e2d071916cb293e7e0db445ac47b437bb56786baa125526dd861c497416c47"
+        },
+        "net.minecraft.client.renderer.block.model.Variant$Deserializer": {
+          "member": "gnu$a.class",
+          "sha256": "ddbd744186cb0a2611f2c5a046cef0fbcb3365ac494a9b0bbfe25a4eb4a177f1"
+        },
+        "net.minecraft.client.renderer.block.model.Variant": {
+          "member": "gnu.class",
+          "sha256": "580a18bd1141dfd8f170ffb2bc49d574fffbb47d898560bb5ba0c9e5e1ce94e1"
+        },
+        "net.minecraft.client.renderer.block.model.VariantSelector": {
+          "member": "gnv.class",
+          "sha256": "fa209da1c97d3f63eafc526a4d1ae8b23c78e9eaeaf4d657960bcdbb20df9e88"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Condition": {
+          "member": "gnx.class",
+          "sha256": "78959aae8f937d604c526712ee86495a36e23d1b9c7505f456135bd5c612250e"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition": {
+          "member": "gny.class",
+          "sha256": "eae2c31a779c295bc2f532601a302e7f175d8099fad7bf519b1ae31cf4ec7ec9"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart$1Key": {
+          "member": "gnz$a.class",
+          "sha256": "ff1385da8e4abd08009b19219c911ac9301db82f9c3f83d15d0025a5db689a76"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart$Definition": {
+          "member": "gnz$b.class",
+          "sha256": "7f5b112f1453d55bf770a763b5a60710234be98f515550beb303ee431a9457e0"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart$Deserializer": {
+          "member": "gnz$c.class",
+          "sha256": "b00af8f89f9eb75db303368c802f02ae2ef64bd0f0b41fdc57179a2b1e638134"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart$InstantiatedSelector": {
+          "member": "gnz$d.class",
+          "sha256": "70ca0a925a3d287cf40c9845cd92a26b94eced053f5aa6d285a3000ce5a35e15"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.MultiPart": {
+          "member": "gnz.class",
+          "sha256": "29a7b58aea5eb5058a6791be65e5c5c7e1c025b9305f18597108aeb45f7aa2aa"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector$Deserializer": {
+          "member": "gob$a.class",
+          "sha256": "58d7b3f8778bfcdf7d5d6723e0153c26b8606baa0c6e957c35c108fd51e95a8c"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector": {
+          "member": "gob.class",
+          "sha256": "89015d1cfbe2a6b290a2401bd77e16b7888cad5f18644b69878994620f52ccd8"
+        },
+        "net.minecraft.client.renderer.texture.AbstractTexture": {
+          "member": "hee.class",
+          "sha256": "410b5550101ea9e5825b1e72dd3c41033abbdf85a8bb287d9ad89cf9721feb88"
+        },
+        "net.minecraft.client.renderer.texture.MipmapGenerator": {
+          "member": "heh.class",
+          "sha256": "f0572e24f36d51a202a90fcc9964cf7b5fb4b4edcebe52afb6e2050bd95482de"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture": {
+          "member": "hel.class",
+          "sha256": "b4282ecd00484e8086065811bbfcda5c31ea0ec4fa95fb1147a3e5d34c1ced95"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture": {
+          "member": "hen$a.class",
+          "sha256": "b3e4f2aab828e5c7d5393c6b1001de8eafd34b920a580bd6be4a71b10a33b15e"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo": {
+          "member": "hen$b.class",
+          "sha256": "9a1f7e6dc9e0b4665954399a23fc9821db34cadc8916c3e946017f41d9978185"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData": {
+          "member": "hen$c.class",
+          "sha256": "e60f75cafc3fe9061091ba159e2da10495dc006413dcd8b98ada8410095ebbd4"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$Ticker": {
+          "member": "hen$d.class",
+          "sha256": "aa5b452e3114a43c03192b0f49c08e8533a8f208a27f6d3268529baef9928276"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents": {
+          "member": "hen.class",
+          "sha256": "a9f067418c652500c36f645fde5479fa046ba3bf9f829ae71d93876f2df9f696"
+        },
+        "net.minecraft.client.renderer.texture.TextureContents": {
+          "member": "heu.class",
+          "sha256": "01f10cd7f867ecc8bc9215d2bd192abf1397286fb9e9f63b5e9c41cd88a1d096"
+        },
+        "net.minecraft.client.resources.SplashManager": {
+          "member": "hfx.class",
+          "sha256": "8349c5b71729511b6976d47cf9e2b104e07ea6e9d4f425c92b3344b5ef73154e"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition": {
+          "member": "hgv$a.class",
+          "sha256": "8f9f026ac2adec80e1454d5ce0dc3326e5264d9fffd0e5d58262242dba3e6bee"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModel": {
+          "member": "hgv$b.class",
+          "sha256": "c588a95808af0ef1df31e64280366e91c096519dbc4ea7f0bde98ce1d5035037"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels": {
+          "member": "hgv$c.class",
+          "sha256": "d148b9463d19ffb1b9885c29da04fd9efefd9d134ceb0a37d280eb9c648c9aaa"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader": {
+          "member": "hgv.class",
+          "sha256": "d9ea73247bfb28d4f1e53a21a44240531eb5a8f94a84dbeaf5dfcd68cfd0a52b"
+        },
+        "net.minecraft.server.packs.PackSelectionConfig": {
+          "member": "atd.class",
+          "sha256": "003ec98a2db19d9bfce8c20543dc345f97bbba4227fcf86e3eacbac94b99d5ad"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector": {
+          "member": "atv$a.class",
+          "sha256": "a6282c0b1188e3b61b72b2fdb5e3d7dd73443c044642b71b5f6db7ded9276f1b"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource": {
+          "member": "atv.class",
+          "sha256": "fd808e16ce00ee36637a5f102a7b68c0135a09c0c2e9d4e19aab200d0f14aba4"
+        },
+        "net.minecraft.server.packs.repository.Pack$Metadata": {
+          "member": "atx$a.class",
+          "sha256": "4ecf33dad7c24ac2a18ee9cd824a2db722de6296351436772c1e5165063a6498"
+        },
+        "net.minecraft.server.packs.repository.Pack$Position": {
+          "member": "atx$b.class",
+          "sha256": "0c8b37eec16f2be87e58b8e532e370645f3e7ef22ae5f74120b762932d7a6238"
+        },
+        "net.minecraft.server.packs.repository.Pack$ResourcesSupplier": {
+          "member": "atx$c.class",
+          "sha256": "a9cfe071b28fdaad97f2cbaf701ad7664c65b826510cd03b734c4b99a4802035"
+        },
+        "net.minecraft.server.packs.repository.Pack": {
+          "member": "atx.class",
+          "sha256": "825f64d1c8f1c4b72f36726acc84b7b34a86a15dd818a2f191f618ab1d9efc22"
+        },
+        "net.minecraft.server.packs.repository.PackDetector": {
+          "member": "atz.class",
+          "sha256": "395a3eb18129753a2316bcd0b3464ac171a361d07e0036fba38d3477f5c43589"
+        },
+        "net.minecraft.server.packs.repository.PackRepository": {
+          "member": "aua.class",
+          "sha256": "8a318edc83ed09b668ba29428290c0d857b39452138563b4c64ba1f7176b22e6"
+        }
+      },
+      "viewsSha256": {
+        "com/mojang/blaze3d/platform/NativeImage.java": "b0ffd71a653775b44277426c81b7c44f68f4d7ddf0ffdc130e625a1798f3daf9",
+        "net/minecraft/client/PeriodicNotificationManager.java": "a6d029902535a5ffe72ff7baf8bd02c8767a49f7e2ba7c77ced2151e1d7d6a08",
+        "net/minecraft/client/resources/SplashManager.java": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+        "net/minecraft/client/gui/screens/WinScreen.java": "1ce8373907b12f00d7bf6cf0df9531b6555ba246b41dc3858f961cb1af176168",
+        "net/minecraft/client/gui/screens/packs/PackSelectionModel.java": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+        "net/minecraft/client/resources/model/BlockStateModelLoader.java": "67673beba1f9232fcb65a6600482c45f47f00dcb2da1e8a6e803481e940564e6",
+        "net/minecraft/client/renderer/texture/AbstractTexture.java": "c9aa59f3b6913e5d72a498a20668234c1fc9c7acd31ba9b8b0ede3019f5eb1f1",
+        "net/minecraft/client/renderer/texture/TextureContents.java": "311f5a004679cc83db7a37b425edb302fd80b0ca8598339b7c9950131ad76b30",
+        "net/minecraft/client/renderer/texture/MipmapGenerator.java": "496357cb9a56f74db297a843e9268814dad328b199eb1fadb63a555c24c58b0e",
+        "net/minecraft/client/renderer/texture/SimpleTexture.java": "35107816930343e0fd4fa9b65407f1705a1ea957590b187fc0bd562c88669326",
+        "net/minecraft/client/renderer/texture/SpriteContents.java": "240e46cdb5741bcca997d146c1b9f09018ed181cba979f3f85d9f03e12991898",
+        "net/minecraft/client/renderer/block/model/ItemModelGenerator.java": "fb152fc2474aa84db30fbccae3dfe4f6d317ab894f064eb2978f34ccb412ea1f",
+        "net/minecraft/client/renderer/block/model/Variant.java": "ae6ec67b15dacfdf52925f0e17ea1004222129cc14475eb61577ccac0fd443d5",
+        "net/minecraft/client/renderer/block/model/VariantSelector.java": "481f575e67383cca32ad3c2e07b27d595679858973edbdfcdfbe29e142af6983",
+        "net/minecraft/client/renderer/block/model/MultiVariant.java": "537a715e717d17d618c204ed319497e2268ad3ddde1cfb70c63ccab878f7807b",
+        "net/minecraft/client/renderer/block/model/UnbakedBlockStateModel.java": "252e15a55cebeb84ab2c88fe419f81740839233d17a7f70398a982f04375b9a0",
+        "net/minecraft/client/renderer/block/model/BlockModelDefinition.java": "d0facc81cf07d88b2dfb4cbf76fc6030a07cc7168d8188cb9354e086f26a7a1b",
+        "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java": "ef4f1e57d9e8a8b30e7f34b60c0f9a0c9be13fb76d10b2f2e412489bf5cf2cd2",
+        "net/minecraft/client/renderer/block/model/multipart/Condition.java": "7b044c731660532957eb6f42c8746738aeedf6c743124a02a36d29ac6bc096b5",
+        "net/minecraft/client/renderer/block/model/multipart/Selector.java": "77505b401ccb4fba13807b8295b74a77dd60126275d47e6559e6318e7baf6de8",
+        "net/minecraft/client/renderer/block/model/multipart/MultiPart.java": "f3eee9df44735e8d668c73c85a1fd12a2093bf61067fbad12dc70d1a73fa5938",
+        "net/minecraft/server/packs/PackSelectionConfig.java": "df23232e4975c5a04bf54d53de951d1ea1a0115f433536c67c0de02359400a91",
+        "net/minecraft/server/packs/repository/FolderRepositorySource.java": "912770f7119ee2eeb17dcf154776a3b2888a23ee1f9ddf0854f76e71e0c89ae6",
+        "net/minecraft/server/packs/repository/PackRepository.java": "2bc3af20792796fa5ee95d7c56115086756849e1d4e9c3f11fdfe778b452eaec",
+        "net/minecraft/server/packs/repository/PackDetector.java": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+        "net/minecraft/server/packs/repository/Pack.java": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b"
+      },
+      "categories": {
+        "packs.selection": [
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.PackSelectionConfig",
+          "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.Pack$Metadata",
+          "net.minecraft.server.packs.repository.Pack$Position",
+          "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+          "net.minecraft.server.packs.repository.Pack",
+          "net.minecraft.server.packs.repository.PackDetector",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "models.blockstates": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.MultiVariant$Deserializer",
+          "net.minecraft.client.renderer.block.model.MultiVariant",
+          "net.minecraft.client.renderer.block.model.UnbakedBlockStateModel",
+          "net.minecraft.client.renderer.block.model.Variant$Deserializer",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.VariantSelector",
+          "net.minecraft.client.renderer.block.model.multipart.Condition",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart$1Key",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart$Definition",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart$Deserializer",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart$InstantiatedSelector",
+          "net.minecraft.client.renderer.block.model.multipart.MultiPart",
+          "net.minecraft.client.renderer.block.model.multipart.Selector$Deserializer",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModel",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels",
+          "net.minecraft.client.resources.model.BlockStateModelLoader"
+        ],
+        "models.generated": [
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ],
+        "textures.images": [
+          "com.mojang.blaze3d.platform.NativeImage$Format",
+          "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat",
+          "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.MipmapGenerator",
+          "net.minecraft.client.renderer.texture.SimpleTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo",
+          "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData",
+          "net.minecraft.client.renderer.texture.SpriteContents$Ticker",
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.TextureContents"
+        ],
+        "text.builtin_lists": [
+          "net.minecraft.client.PeriodicNotificationManager$Notification",
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "command": {
+        "exitCode": 0,
+        "timedOut": false,
+        "ownedGroupAbsent": true
+      }
+    },
+    {
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "capture": "breadth-views-1.21.5-20261125T205444655440Z",
+      "receiptSha256": "15ddce5798cb98e12f66e3a6fa35f25a0dab98ef99f0ce85eacbb19422469997",
+      "clientSha256": "522672ad20b460c02c2e39b6c5035ef6a849af28eb11ab2ac7eb293d395a8c11",
+      "metadataSha256": "005f44f207162d6a709453780ff1a6a84dee9bbd863506c68093716e9d378ca8",
+      "mappingSha256": "3907657ade3e61bc8cffb4ca0a1bcba15f57986be4e613900947119364a206e5",
+      "namedJarSha256": "8559f87816ef703e0667dea9ca8e08ba15dde1c6573f47d7a51765178920a551",
+      "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+      "producersSha256": {
+        "inspect_breadth_sources.py": "e42408eb6f989c2ccb3d2909e516f9c4ef8c8ea1ee6bc587be63db47ec78930a",
+        "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+        "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+      },
+      "originalClassMembers": {
+        "com.mojang.blaze3d.platform.NativeImage$Format": {
+          "member": "fkf$a.class",
+          "sha256": "e311baffb1eeb5b32d76987e8e2596a3e8ed46d07ac3bac5a55b375d9d78dba6"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$WriteCallback": {
+          "member": "fkf$b.class",
+          "sha256": "33acdc268d9eac6aff3f8126ef731fbb4e16257067361cf04e135264f5949bb2"
+        },
+        "com.mojang.blaze3d.platform.NativeImage": {
+          "member": "fkf.class",
+          "sha256": "7f71dbcc017381e4b7a504db23e7b89bff9b2747a5c70123eb0014a118bb0467"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$Notification": {
+          "member": "fqv$a.class",
+          "sha256": "3129d10e2431badf7e41c9b503762a0a03528f1fa7774769b243f9d9e8a974a2"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+          "member": "fqv$b.class",
+          "sha256": "b122887a85c541e55c861d1d51c5e785d73f5874cd5cc81179ad8cf464ce6caa"
+        },
+        "net.minecraft.client.PeriodicNotificationManager": {
+          "member": "fqv.class",
+          "sha256": "762ab442f01cb7b849db9b3f344ff3251854b70fa52c71f8324c7edd60ff3a3a"
+        },
+        "net.minecraft.client.gui.screens.WinScreen$CreditsReader": {
+          "member": "fzt$a.class",
+          "sha256": "e12c17c66202d9589f84bb27991f75a2abfbfb6732c440bf69b34f6150281777"
+        },
+        "net.minecraft.client.gui.screens.WinScreen": {
+          "member": "fzt.class",
+          "sha256": "b8fe772f247e2aa067067d21436d8a7a70d4532c4534012108b191af0ff51ba5"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry": {
+          "member": "gdh$a.class",
+          "sha256": "87058ee09928282f363cdce802977fe6d079789e62e2dcd09de91615aef266eb"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase": {
+          "member": "gdh$b.class",
+          "sha256": "239e9b94e5d4429fa8347dd2899831977d5de7c44931ce6e13e3911296b6141f"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry": {
+          "member": "gdh$c.class",
+          "sha256": "11d08e24540a2bc3464ef0336a679165a96f70929b51853060f5440e3fffc231"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry": {
+          "member": "gdh$d.class",
+          "sha256": "540538af482fddfb52bde670e28ba2b439ba43fff66c33e07b656448b9994c5e"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel": {
+          "member": "gdh.class",
+          "sha256": "0243b05897da5735aff2f6087af378e0f0613afbe6659b4b0aa629a08dc50e51"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition": {
+          "member": "gsy$a.class",
+          "sha256": "e8949f67e56a3cf68999e2a0ab0d389ab4407874153e5300b706f829b6121d20"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors": {
+          "member": "gsy$b.class",
+          "sha256": "ec2ec19f0725f1799225b3c41b692605472a4afa18004eac3ef4bbea94940fc3"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition": {
+          "member": "gsy.class",
+          "sha256": "322d3cce8124b821f495e2ca288b67130f89a78989cab20d168f45849eee5fd1"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot$1": {
+          "member": "gta$a$1.class",
+          "sha256": "3493a2c0e299014bf713dd5366e247e95ac08d6d1fce40a81b69b9d57baf6d1a"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot": {
+          "member": "gta$a.class",
+          "sha256": "f2a2a5f4e98be7b4a1a3076e2d5c948e91cb32fc6d01f3c014c16daf5e8bec93"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$Unbaked": {
+          "member": "gta$b.class",
+          "sha256": "96d783c4c5d4cf324a1a4ec7703f4035072f0788be95e27fb8a46585abdbe03d"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$UnbakedRoot": {
+          "member": "gta$c.class",
+          "sha256": "5118ff705b29fc7091eb8cd4d720bfd38fc63451e66632306917da9982b93ddd"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel": {
+          "member": "gta.class",
+          "sha256": "07caf8aa85036519563e3b9a146b732d534bb319fc34691f3e6c6157fd66fa3a"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span": {
+          "member": "gtc$a.class",
+          "sha256": "7e8a5826161a65abeb9916da50a3bc2f3a11c457ef77e3fa974fcb710d0f419e"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing": {
+          "member": "gtc$b.class",
+          "sha256": "18cfef92f9072434b3d84948cebda77c9a113d82396389dc78d75608043a8e5d"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator": {
+          "member": "gtc.class",
+          "sha256": "9f693e84fb5b43642cd7dc8f5f5f743d6a7fd4b24c482a989c8eb67a98e0e4f1"
+        },
+        "net.minecraft.client.renderer.block.model.Variant$SimpleModelState": {
+          "member": "gtj$a.class",
+          "sha256": "b03eead0c20f6f052483d0f130209d5753ef2e69a05ca9bd0ac72c583c18b5a6"
+        },
+        "net.minecraft.client.renderer.block.model.Variant": {
+          "member": "gtj.class",
+          "sha256": "2575569b7bc5adcc107d58fff6ee33fc2507aaa9ac6c1abe6761f6fb6e78a6c6"
+        },
+        "net.minecraft.client.renderer.block.model.VariantSelector": {
+          "member": "gtl.class",
+          "sha256": "72c4dc3b0a3149a7592de69cf60f818f1604bda91d7c86a92950d6bdbc67028f"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$1": {
+          "member": "gtm$a$1.class",
+          "sha256": "f127f6f36cc9477c506a39e927798dd22981670e8ca8892c6619ffc31d5c1003"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$2": {
+          "member": "gtm$a$2.class",
+          "sha256": "22bbfc501c4b352877ddded583d497c5d3b84da674985a75a03e7086efa0a5a5"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation": {
+          "member": "gtm$a.class",
+          "sha256": "66991bd6b15174e97f2bdfdd30dc3e8b529f815cca127aeeca5ee698ac24f24f"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition": {
+          "member": "gtm.class",
+          "sha256": "c94ce53eb8b6dc87e6be7793bd97e632604af944c9313c6dd2267fbb6eb762d9"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Condition": {
+          "member": "gtn.class",
+          "sha256": "d5f63f9c778bd881fcaef5b716d9272ecae9be30d2d5d0a762583749257ea9d3"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Term": {
+          "member": "gto$a.class",
+          "sha256": "4a361006fa4802bcbb5985f903f769dcc4ed9a39861d48e3101baadec6a65568"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Terms": {
+          "member": "gto$b.class",
+          "sha256": "73d156fab6b98129086436cdffc8e40fcc561696448aa1c4199f2c14c8766683"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition": {
+          "member": "gto.class",
+          "sha256": "f496208f253bbeba83fc4f9e89729da8c359cf49fe7e96752c6416fe265e557c"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector": {
+          "member": "gtq.class",
+          "sha256": "9ee83175cbde7373953b471058d99b7201b6f5469208dc9f55f981b4b402a5f0"
+        },
+        "net.minecraft.client.renderer.texture.AbstractTexture": {
+          "member": "hkb.class",
+          "sha256": "21acf8944be581ae4bb3adc4fad35be43e5610240cd28f87322120a26979e8d8"
+        },
+        "net.minecraft.client.renderer.texture.MipmapGenerator": {
+          "member": "hke.class",
+          "sha256": "fbe585f6304f4c7d46848d9fb38e310e13489e9298c5b40c32f8a4cea00f6d3f"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture": {
+          "member": "hki.class",
+          "sha256": "19a99921d121384f58860eda5811b8b0977550ed967b0aa66368f61ed833c8cb"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture": {
+          "member": "hkk$a.class",
+          "sha256": "6aa7d8427f038122cdd6c059ce4a67fc37ac1def34198aff184faba7c2a27cd3"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo": {
+          "member": "hkk$b.class",
+          "sha256": "274bbd8702268945501e4ce3dc9b20668203e305beb252bcb4378369aa530b80"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData": {
+          "member": "hkk$c.class",
+          "sha256": "3d31398e71f002ed0cbba40a4d47ba435ee83457d91e168a38e48a1b6f6beac1"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$Ticker": {
+          "member": "hkk$d.class",
+          "sha256": "2fef4bd7f68f3f6d8b399c9cbecf6405ff789533922da563b8c8cf0e5f2df91b"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents": {
+          "member": "hkk.class",
+          "sha256": "3e298153733c531cda384bd8ef5a38a4332dc8c72dd0dfbbb427675f3897141c"
+        },
+        "net.minecraft.client.renderer.texture.TextureContents": {
+          "member": "hkr.class",
+          "sha256": "9e3f3d3a94870d2075dc2363e98dc276b5c3661806d768b06ece175a75910402"
+        },
+        "net.minecraft.client.resources.SplashManager": {
+          "member": "hlu.class",
+          "sha256": "4d8d44042c09c508c7bc02e342bd8492d6307cd96691d5647cfb77012ea65823"
+        },
+        "net.minecraft.client.resources.model.BlockStateDefinitions": {
+          "member": "hms.class",
+          "sha256": "aed2090b09edf41af4a2ebced7aa4bc24f58bf951d39594a33bd47e53779b20c"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition": {
+          "member": "hmt$a.class",
+          "sha256": "f7a8e1422afab9b108e93f1d0d46b21272defdc7a02ec9a92bc07ff401d4d97f"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels": {
+          "member": "hmt$b.class",
+          "sha256": "932992c7dfede8328bbdd142042f088fe26f3fc8488cb9815a64a8925f82e4bc"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader": {
+          "member": "hmt.class",
+          "sha256": "c1a2c1cbed2d62904ed938f0145536e5e6493d3d71a542b1bda60d52c4501b64"
+        },
+        "net.minecraft.server.packs.PackSelectionConfig": {
+          "member": "aub.class",
+          "sha256": "275450445cb04820c2a0e02574000ea5e2af884672d31e3475fdefa97c222b1a"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector": {
+          "member": "aut$a.class",
+          "sha256": "9b970120de948e73d92348387f2ca9e6089ad2f98b1e6fbca353306148e7dd5b"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource": {
+          "member": "aut.class",
+          "sha256": "e6301336b68b514cde9ff6634823283122a6ac38ee73c8f78326df805ce5b565"
+        },
+        "net.minecraft.server.packs.repository.Pack$Metadata": {
+          "member": "auv$a.class",
+          "sha256": "f1d6de894383d25d5bdea60543a7ac29cebf3b16be57fdd78fb68aa406ab4d05"
+        },
+        "net.minecraft.server.packs.repository.Pack$Position": {
+          "member": "auv$b.class",
+          "sha256": "4c00df7066c0ec103b375feb11c11b22ee350aadff58de5308e3eb5b0dadd8f4"
+        },
+        "net.minecraft.server.packs.repository.Pack$ResourcesSupplier": {
+          "member": "auv$c.class",
+          "sha256": "1afd6d21db3c151fc82bb18a875b44fde87749387c2cd32413f01478a570ed87"
+        },
+        "net.minecraft.server.packs.repository.Pack": {
+          "member": "auv.class",
+          "sha256": "71a3ca5828afbf4e05d6625ba66c98cd2bca13fe773c953cc27aa56854b267b7"
+        },
+        "net.minecraft.server.packs.repository.PackDetector": {
+          "member": "auy.class",
+          "sha256": "e9825280275171126dbd6b90af1b69fd7d11561fa8e9b3b0f039565a781aa73f"
+        },
+        "net.minecraft.server.packs.repository.PackRepository": {
+          "member": "auz.class",
+          "sha256": "0a8943487588d28871653174bdb8bda57dab587c87010f89a124964b8faa2f6d"
+        }
+      },
+      "viewsSha256": {
+        "com/mojang/blaze3d/platform/NativeImage.java": "8488141e702f8807c664a0590c95a6c5ab15f3e312bdfd9a798910148ea6ddc6",
+        "net/minecraft/client/PeriodicNotificationManager.java": "a6d029902535a5ffe72ff7baf8bd02c8767a49f7e2ba7c77ced2151e1d7d6a08",
+        "net/minecraft/client/resources/SplashManager.java": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+        "net/minecraft/client/gui/screens/WinScreen.java": "1ce8373907b12f00d7bf6cf0df9531b6555ba246b41dc3858f961cb1af176168",
+        "net/minecraft/client/gui/screens/packs/PackSelectionModel.java": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+        "net/minecraft/client/resources/model/BlockStateDefinitions.java": "bc5ccbd85da6c6f9248f2ca67245dfb5f9678f347d5b20864e2d42c28d90e3aa",
+        "net/minecraft/client/resources/model/BlockStateModelLoader.java": "3bbabcbcbcf94b49058330c784199c1c676deec97d1808dead21918da54f02ab",
+        "net/minecraft/client/renderer/texture/AbstractTexture.java": "6f7fbbedbd51e5eb8c619960fbc21a4ae716f884770bf8b43a87afc992116318",
+        "net/minecraft/client/renderer/texture/TextureContents.java": "311f5a004679cc83db7a37b425edb302fd80b0ca8598339b7c9950131ad76b30",
+        "net/minecraft/client/renderer/texture/MipmapGenerator.java": "496357cb9a56f74db297a843e9268814dad328b199eb1fadb63a555c24c58b0e",
+        "net/minecraft/client/renderer/texture/SimpleTexture.java": "35107816930343e0fd4fa9b65407f1705a1ea957590b187fc0bd562c88669326",
+        "net/minecraft/client/renderer/texture/SpriteContents.java": "51670a1ee250e345ba198db1178fe3344e17db0d249fbe11bfcd6927c1097f57",
+        "net/minecraft/client/renderer/block/model/ItemModelGenerator.java": "39638fcd14ed43449b8baca219d27fc65df5f2a74c64374f63cd2cd7f1e4f440",
+        "net/minecraft/client/renderer/block/model/Variant.java": "83fe0b7b343c3efa8b980e992a08170e54cb06ce9087b6e4c73fcafcc76c6dc1",
+        "net/minecraft/client/renderer/block/model/VariantSelector.java": "481f575e67383cca32ad3c2e07b27d595679858973edbdfcdfbe29e142af6983",
+        "net/minecraft/client/renderer/block/model/BlockModelDefinition.java": "eb25f5f1d73a520dffc0d6644201ba2604e31cba6d2985d292666305b3f2c434",
+        "net/minecraft/client/renderer/block/model/BlockStateModel.java": "df0d5eb62cd234ad4e07ba9c869f1599a50324f8264d5a5d44b3bf4992e5da5e",
+        "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java": "3e9bcc190c237bdce3f85ab6f5c9ecc8afbaefff3ddb2e64e57e45ed44618435",
+        "net/minecraft/client/renderer/block/model/multipart/CombinedCondition.java": "18434b653376f3aa266d536d255c3e40452c6fe7e82fe4a9d952e8a66cff45db",
+        "net/minecraft/client/renderer/block/model/multipart/Condition.java": "b3c4b46a4849dd8092cee701634b0641c4ec5035ba2d25a32f922ef0e02c9b3e",
+        "net/minecraft/client/renderer/block/model/multipart/Selector.java": "c4655a519736bcfdd6b682ec3a6ed8ad9d65950c48f6c68f118a7314fd7cbf56",
+        "net/minecraft/server/packs/PackSelectionConfig.java": "df23232e4975c5a04bf54d53de951d1ea1a0115f433536c67c0de02359400a91",
+        "net/minecraft/server/packs/repository/FolderRepositorySource.java": "912770f7119ee2eeb17dcf154776a3b2888a23ee1f9ddf0854f76e71e0c89ae6",
+        "net/minecraft/server/packs/repository/PackRepository.java": "2bc3af20792796fa5ee95d7c56115086756849e1d4e9c3f11fdfe778b452eaec",
+        "net/minecraft/server/packs/repository/PackDetector.java": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+        "net/minecraft/server/packs/repository/Pack.java": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b"
+      },
+      "categories": {
+        "packs.selection": [
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.PackSelectionConfig",
+          "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.Pack$Metadata",
+          "net.minecraft.server.packs.repository.Pack$Position",
+          "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+          "net.minecraft.server.packs.repository.Pack",
+          "net.minecraft.server.packs.repository.PackDetector",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "models.blockstates": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot$1",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$Unbaked",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$UnbakedRoot",
+          "net.minecraft.client.renderer.block.model.BlockStateModel",
+          "net.minecraft.client.renderer.block.model.Variant$SimpleModelState",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.VariantSelector",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$1",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$2",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition",
+          "net.minecraft.client.renderer.block.model.multipart.Condition",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Term",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Terms",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.client.resources.model.BlockStateDefinitions",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels",
+          "net.minecraft.client.resources.model.BlockStateModelLoader"
+        ],
+        "models.generated": [
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ],
+        "textures.images": [
+          "com.mojang.blaze3d.platform.NativeImage$Format",
+          "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.MipmapGenerator",
+          "net.minecraft.client.renderer.texture.SimpleTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo",
+          "net.minecraft.client.renderer.texture.SpriteContents$InterpolationData",
+          "net.minecraft.client.renderer.texture.SpriteContents$Ticker",
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.TextureContents"
+        ],
+        "text.builtin_lists": [
+          "net.minecraft.client.PeriodicNotificationManager$Notification",
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "command": {
+        "exitCode": 0,
+        "timedOut": false,
+        "ownedGroupAbsent": true
+      }
+    },
+    {
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "capture": "breadth-views-1.21.11-20261125T205446234606Z",
+      "receiptSha256": "b3bc596ea050badbff73af0f080277f9afbcf2a5938211c624635afb85e554ef",
+      "clientSha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+      "metadataSha256": "a2540aade24dd28c466f5b3ca7d4c61be72a9505eaa71d99cd9239a659cae916",
+      "mappingSha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+      "namedJarSha256": "c6239e6818bea379c7625fbba26ee753b9b75fffb9ee2c30cee979c9739dc4ea",
+      "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+      "producersSha256": {
+        "inspect_breadth_sources.py": "e42408eb6f989c2ccb3d2909e516f9c4ef8c8ea1ee6bc587be63db47ec78930a",
+        "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+        "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+      },
+      "originalClassMembers": {
+        "com.mojang.blaze3d.platform.NativeImage$Format": {
+          "member": "fyh$a.class",
+          "sha256": "803b23e2a2d8df1c22c30fd5aea8bdaa6fcecfa53e8aa8121d8adc5a86f1a935"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$WriteCallback": {
+          "member": "fyh$b.class",
+          "sha256": "9c2396d29bc3e9cf9d5fa3d0c71f6021631d3b97799fd0ab8ba415d1fbe400b2"
+        },
+        "com.mojang.blaze3d.platform.NativeImage": {
+          "member": "fyh.class",
+          "sha256": "730930a529c6fa35113ae3106858a151583228f426dd9341f07322e615effb8b"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$Notification": {
+          "member": "gfp$a.class",
+          "sha256": "e098355224ca5d258760886ea1e14524654c0a0c9cb68f766d69f3e1d31252b4"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+          "member": "gfp$b.class",
+          "sha256": "417dfb9f681f652728a082125ec98fd9f498777546c69e6db92ef4681e3867da"
+        },
+        "net.minecraft.client.PeriodicNotificationManager": {
+          "member": "gfp.class",
+          "sha256": "a798384e318e876cd929945c35c44b6d11f5a6ee6f13160b0212eec33cf64a53"
+        },
+        "net.minecraft.client.gui.screens.WinScreen$CreditsReader": {
+          "member": "gse$a.class",
+          "sha256": "79263c9c8ec22c0a9dc968048af478210624b57a0b84677559f29e17c30e8195"
+        },
+        "net.minecraft.client.gui.screens.WinScreen": {
+          "member": "gse.class",
+          "sha256": "093d4ae2fc0bda82d19cfc168437697c7babea1457e63be3c18b0ff4f004ab24"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry": {
+          "member": "gwn$a.class",
+          "sha256": "c9f5367c777e9c4718c3f00577f1032b79d5cc8641427a13efd5c42d0289dc26"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase": {
+          "member": "gwn$b.class",
+          "sha256": "1f551c8a4f9c35af74d59ea0c9dd48422c859d5357440169f24a74f865cc8396"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry": {
+          "member": "gwn$c.class",
+          "sha256": "d4cc55fcad4634df0b40aba157606a846dba2567ac6406cf2d9a26d1133bcb13"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry": {
+          "member": "gwn$d.class",
+          "sha256": "4b9d0b832f10b384fcc5b201d4b0b9c06d550fd469ae1d5054071de55f3bb71b"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel": {
+          "member": "gwn.class",
+          "sha256": "4f0d5750c39a0cd1bc8e08d46252ed7b08c51e2e3a7aa0f051a268be6caa45ba"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition": {
+          "member": "hqf$a.class",
+          "sha256": "baa3715d9800e9c6eee3f739454406a7351f6627a7a5b2b4d17a33f4f199e8c6"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors": {
+          "member": "hqf$b.class",
+          "sha256": "8281713414c9bf70c44c903f46354d295109883de2ac5fac58647bb23a37962d"
+        },
+        "net.minecraft.client.renderer.block.model.BlockModelDefinition": {
+          "member": "hqf.class",
+          "sha256": "c56b2f78ee5ad83251c2f658910c185b00be2f1352007f789592cd08cf40d85e"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot$1": {
+          "member": "hqh$a$1.class",
+          "sha256": "5ba9b3df409b1e8a98171c9e4237dfb8aa43efa2f690f480b8480efa177d26a9"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot": {
+          "member": "hqh$a.class",
+          "sha256": "4921c37e361bc848c9d97fd69be30f00c4c1acb9a41fb373fc7f60ab4d1ca2cd"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$Unbaked": {
+          "member": "hqh$b.class",
+          "sha256": "d89311291c0d14a58ca49cd92c8e75883a62b1eeae791cb2c7671101801d52a8"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel$UnbakedRoot": {
+          "member": "hqh$c.class",
+          "sha256": "82bd75f606db38ae07cb5f42566c91b70f64ea38967430def3150829ac24afd6"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModel": {
+          "member": "hqh.class",
+          "sha256": "1cca078456e9935d194b86e31c600c1ce6f2d9ae627ffc07057dfa4516e29a1e"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection": {
+          "member": "hqj$a.class",
+          "sha256": "593fe01ba79cb77d48eb94b414f8e85dac507e6c76f2c3aa85ea1c10a4d964f6"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideFace": {
+          "member": "hqj$b.class",
+          "sha256": "590c046788702a1aff57b1a65a114280305cc8101822195adfeb8fa76cd410a0"
+        },
+        "net.minecraft.client.renderer.block.model.ItemModelGenerator": {
+          "member": "hqj.class",
+          "sha256": "59327fa292290b63c4a1abb33bf6876404945e79e33fb0dadf688ce1f5258a74"
+        },
+        "net.minecraft.client.renderer.block.model.Variant$SimpleModelState": {
+          "member": "hqq$a.class",
+          "sha256": "93957a07367e72b57319bc3d247214d0e0aac84f6d97a64ac9460f6776e8e486"
+        },
+        "net.minecraft.client.renderer.block.model.Variant": {
+          "member": "hqq.class",
+          "sha256": "8864bc16160069a8948f3647ea450128ce5a212f6af26b209a8804a8ecb5e95c"
+        },
+        "net.minecraft.client.renderer.block.model.VariantSelector": {
+          "member": "hqs.class",
+          "sha256": "791d32aee39260dc38d8463494448d54eb4cd06f4d2f72dd26e4d5e04759eacd"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$1": {
+          "member": "hqt$a$1.class",
+          "sha256": "5af42c856a20513e51e8a042c6ef912954ccd23f5102e16b16cc6763aa0015f9"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$2": {
+          "member": "hqt$a$2.class",
+          "sha256": "8315da4668df311e5a52c1afcb0175c29f4c1999c1ca46b248a1e5dfe34a6a06"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation": {
+          "member": "hqt$a.class",
+          "sha256": "79991b0f8b825a83857c1510f9357046ca08d5015565412af61e9fc1c95a2165"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.CombinedCondition": {
+          "member": "hqt.class",
+          "sha256": "a4358ea6660f9ab1a79b6476c9c93a4ed29e76392b4f85e678c523822c194b46"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Condition": {
+          "member": "hqu.class",
+          "sha256": "f456959fa5bc8604ad19864b134e5349adfa82d0b8cc8229a51f513cd8fba0d2"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Term": {
+          "member": "hqv$a.class",
+          "sha256": "2665c71b1f0420b1abcbc8f17c25a78e1a2f6e56ee48fc5a3ff76a6c349d1137"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Terms": {
+          "member": "hqv$b.class",
+          "sha256": "1831c6ebf02e0d88f80472cd08eade5f597d19a5c953542d032b0b7a8824f903"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition": {
+          "member": "hqv.class",
+          "sha256": "2c5c884eff04eb415bb5218d85429abcff94bc1b2d6e09dd1c8f2e3d4d43e128"
+        },
+        "net.minecraft.client.renderer.block.model.multipart.Selector": {
+          "member": "hqx.class",
+          "sha256": "04b8823978da285cf1a21826d34a733ff3d90ab776a8b64c8b06fcc30722ae88"
+        },
+        "net.minecraft.client.renderer.texture.AbstractTexture": {
+          "member": "ikz.class",
+          "sha256": "b9bff81f85b182a55240c72cfd5c01d6fdc913bb8a58505d172a30b87283e121"
+        },
+        "net.minecraft.client.renderer.texture.MipmapGenerator": {
+          "member": "ild.class",
+          "sha256": "49fc1712a9fedef50400c6ef77582290decd04323f29e306cc7c5b88994f9329"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture": {
+          "member": "ili.class",
+          "sha256": "34b5f247ef8fb64025a8af87c7449a9f35034fa75aa7cbaf01dd3dbe27ef20ba"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture": {
+          "member": "ilk$a.class",
+          "sha256": "6c95ae2906cb02fef752dd251fd1f45a76ce3dec400927de7acbe8b7a1457ddb"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimationState": {
+          "member": "ilk$b.class",
+          "sha256": "49b97005a115478024c8e6b349df84b8dc299f0ec731d9d3395d3665c654f923"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo": {
+          "member": "ilk$c.class",
+          "sha256": "06ec159ed9715ccb52cc6309c35b72a19a5b05da2dc624f3da11eb2def8864e7"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents": {
+          "member": "ilk.class",
+          "sha256": "bb139b0967e75339e56fa121c0eb979f490d3f8f8e6626d333a3b72b33458822"
+        },
+        "net.minecraft.client.renderer.texture.TextureContents": {
+          "member": "ilq.class",
+          "sha256": "d46787132c57e4d77fdf4c2f38d5a99bb679326b0c14346603399c67d68f97ec"
+        },
+        "net.minecraft.client.resources.SplashManager": {
+          "member": "imp.class",
+          "sha256": "45245603ea5f09bef9c6ac0a1559004cd0d5f2342dd6b7638361be4b610fd382"
+        },
+        "net.minecraft.client.resources.model.BlockStateDefinitions": {
+          "member": "inn.class",
+          "sha256": "0a61b086ef8fb342b30971b66d36f8c4f4b9f29ae8f5c6db114ea7510c26d599"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition": {
+          "member": "ino$a.class",
+          "sha256": "bba57deca3353e05b114b903f3090e0db9c2547cbe5e7f5fd867c3222a9ff7a6"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels": {
+          "member": "ino$b.class",
+          "sha256": "5d89b41b7d0f8177311d7441a8ab699c43ca6ecdba19f47153771770f21b0aad"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader": {
+          "member": "ino.class",
+          "sha256": "cec2be19f82d1bb984a6daf56a0501f6317e855d9e427c2ce02fd86f9c174d68"
+        },
+        "net.minecraft.server.packs.PackSelectionConfig": {
+          "member": "azm.class",
+          "sha256": "977e3f6263cf63235046c7f3e28258f83b389c9d50640948fbf88faaf049c0bb"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector": {
+          "member": "baf$a.class",
+          "sha256": "7a7647f1f390d1318087801fa56e46a5b72e31e01f2665d234f07be1a8287951"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource": {
+          "member": "baf.class",
+          "sha256": "ebb3bbd92474ecf7e1803f2d6e84f59641831846e34733f9473891c943ac3801"
+        },
+        "net.minecraft.server.packs.repository.Pack$Metadata": {
+          "member": "bah$a.class",
+          "sha256": "47e9cfc6e3b490de157d436fcefafe538134ffb5f016de83758a6d467b1ec2d0"
+        },
+        "net.minecraft.server.packs.repository.Pack$Position": {
+          "member": "bah$b.class",
+          "sha256": "27e1328322e687cea0175a4289ba343e1be2c44ec97b30ae5c2494ac86384f3d"
+        },
+        "net.minecraft.server.packs.repository.Pack$ResourcesSupplier": {
+          "member": "bah$c.class",
+          "sha256": "8dc48253d7572829c7039154cfc7e6efa0cbac4aeaf9d59487e9c6caa1e82beb"
+        },
+        "net.minecraft.server.packs.repository.Pack": {
+          "member": "bah.class",
+          "sha256": "ca9dc6665c67ddd67bf6c602af194382c4128437a1884d2dd42903a9976277ec"
+        },
+        "net.minecraft.server.packs.repository.PackDetector": {
+          "member": "baj.class",
+          "sha256": "692119a1377ad3e3f12d414f1f9be018f8992729c141b2b84c7c0e70dbcfd3df"
+        },
+        "net.minecraft.server.packs.repository.PackRepository": {
+          "member": "bak.class",
+          "sha256": "c1512b00cb35e7d32cb2b6fb77fc9d6257a6d579e22426fa17da1507352736c0"
+        }
+      },
+      "viewsSha256": {
+        "com/mojang/blaze3d/platform/NativeImage.java": "82e93063762f38240311cfe944fbdedc3d9f0eb476177ccfca80b7f6c6166b35",
+        "net/minecraft/client/PeriodicNotificationManager.java": "5ecbdc1d0bd6e5c36f23d387e916d9ad6ad760d680effcc5b3735f0144c1b24b",
+        "net/minecraft/client/resources/SplashManager.java": "1a850a684fc1c2c9e8e0e36b6c28ffcb72f01a739f4dfad5e8a19ced6006be5a",
+        "net/minecraft/client/gui/screens/WinScreen.java": "97c7ad1e2bd8873aa2e820fbb4d38698277b62d0dd60f32d28b994d3b1fe4195",
+        "net/minecraft/client/gui/screens/packs/PackSelectionModel.java": "bd28b55a943788b27f7cf81edc8cd422bab672de408990cc54c7d8fdb2eb573a",
+        "net/minecraft/client/resources/model/BlockStateDefinitions.java": "8f1330a49c0409694127dccc7fe2bd058d605267ac1afd8014836168975a2f6b",
+        "net/minecraft/client/resources/model/BlockStateModelLoader.java": "218649d38225793e6b7f4576bec83cca59c568764139b98747d4e58decd3eeb3",
+        "net/minecraft/client/renderer/texture/AbstractTexture.java": "b037696d5276fc205807b3c295e5583ba157c0d4222a62ac20cbf5b976e7cb94",
+        "net/minecraft/client/renderer/texture/TextureContents.java": "9cdfee52a26d08da726c2601e699ae17bd0c1abf245fecf909a5b9327209b525",
+        "net/minecraft/client/renderer/texture/MipmapGenerator.java": "b98a33fede83a3e701e55d6b4db593dd2c7ddaaadf2d1e5424ae626fa0925d82",
+        "net/minecraft/client/renderer/texture/SimpleTexture.java": "549b21a60687c5dc8e806cfdbd8b58eb70d4e2f73424a0d7ae12bf973a146b6b",
+        "net/minecraft/client/renderer/texture/SpriteContents.java": "f140a900933e5e519bb08768d9878d0efcbd3cc9baaacb5cd6865d32e15b9945",
+        "net/minecraft/client/renderer/block/model/ItemModelGenerator.java": "6c664fb6e6c8096e6c311f918818ff08174026aa9099ff95bd5641007a9561ae",
+        "net/minecraft/client/renderer/block/model/Variant.java": "cec4a67353d4b8e5e75872fb21eb5f786a0e3ec9864c055dc389d79998fc7dbb",
+        "net/minecraft/client/renderer/block/model/VariantSelector.java": "92fffa31fbd552901c8237db7bf389e70fff33dfa4479fc6d43c371f5b511bc8",
+        "net/minecraft/client/renderer/block/model/BlockModelDefinition.java": "eb25f5f1d73a520dffc0d6644201ba2604e31cba6d2985d292666305b3f2c434",
+        "net/minecraft/client/renderer/block/model/BlockStateModel.java": "df0d5eb62cd234ad4e07ba9c869f1599a50324f8264d5a5d44b3bf4992e5da5e",
+        "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java": "a381b292a3f475a74db248a7891676eb3c15dfa83910936c650868ab7e364362",
+        "net/minecraft/client/renderer/block/model/multipart/CombinedCondition.java": "ff9db015310f55804c7c07ba0f38a0814357742ec8c7fc66ae5bc2c6c53068e9",
+        "net/minecraft/client/renderer/block/model/multipart/Condition.java": "b3c4b46a4849dd8092cee701634b0641c4ec5035ba2d25a32f922ef0e02c9b3e",
+        "net/minecraft/client/renderer/block/model/multipart/Selector.java": "c4655a519736bcfdd6b682ec3a6ed8ad9d65950c48f6c68f118a7314fd7cbf56",
+        "net/minecraft/server/packs/PackSelectionConfig.java": "df23232e4975c5a04bf54d53de951d1ea1a0115f433536c67c0de02359400a91",
+        "net/minecraft/server/packs/repository/FolderRepositorySource.java": "2373165f0a96c433c0b810e7e8a1548ffd2f98b225e07568496bf666f1c3f1fb",
+        "net/minecraft/server/packs/repository/PackRepository.java": "b2a8c4a7fc7d04b568a81888e2897c536b6aac76e6c183f5eda5269f8b568cfb",
+        "net/minecraft/server/packs/repository/PackDetector.java": "0582892661caab2f868899ae56783415558505561a874f62e98a64b46bbb01d3",
+        "net/minecraft/server/packs/repository/Pack.java": "4a8f81fc1c63bcaa5fd1592a098f518d960d0fcbda2e77bbad1369219e306b81"
+      },
+      "categories": {
+        "packs.selection": [
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.PackSelectionConfig",
+          "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.Pack$Metadata",
+          "net.minecraft.server.packs.repository.Pack$Position",
+          "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+          "net.minecraft.server.packs.repository.Pack",
+          "net.minecraft.server.packs.repository.PackDetector",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "models.blockstates": [
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors",
+          "net.minecraft.client.renderer.block.model.BlockModelDefinition",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot$1",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$SimpleCachedUnbakedRoot",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$Unbaked",
+          "net.minecraft.client.renderer.block.model.BlockStateModel$UnbakedRoot",
+          "net.minecraft.client.renderer.block.model.BlockStateModel",
+          "net.minecraft.client.renderer.block.model.Variant$SimpleModelState",
+          "net.minecraft.client.renderer.block.model.Variant",
+          "net.minecraft.client.renderer.block.model.VariantSelector",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$1",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation$2",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition$Operation",
+          "net.minecraft.client.renderer.block.model.multipart.CombinedCondition",
+          "net.minecraft.client.renderer.block.model.multipart.Condition",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Term",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Terms",
+          "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition",
+          "net.minecraft.client.renderer.block.model.multipart.Selector",
+          "net.minecraft.client.resources.model.BlockStateDefinitions",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockModelDefinition",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels",
+          "net.minecraft.client.resources.model.BlockStateModelLoader"
+        ],
+        "models.generated": [
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideFace",
+          "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+        ],
+        "textures.images": [
+          "com.mojang.blaze3d.platform.NativeImage$Format",
+          "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.MipmapGenerator",
+          "net.minecraft.client.renderer.texture.SimpleTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimationState",
+          "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo",
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.TextureContents"
+        ],
+        "text.builtin_lists": [
+          "net.minecraft.client.PeriodicNotificationManager$Notification",
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "command": {
+        "exitCode": 0,
+        "timedOut": false,
+        "ownedGroupAbsent": true
+      }
+    },
+    {
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "capture": "breadth-views-26.3-20261125T205447278082Z",
+      "receiptSha256": "9f3be5ae6204acdc7c544cd457136986410dfb07c6c6655a8285c0a90e4231fe",
+      "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+      "metadataSha256": "f6805e95ade84803945082da53083bb7ae18cd0d0acb54e7dd58b964e0ffa518",
+      "mappingSha256": null,
+      "namedJarSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+      "toolSha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "javaSha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "jdkReleaseSha256": "e5e50f3c36e9ce7ac50ccbc499c8299880e8fb8fee57bb3a7a2b890477ce8498",
+      "producersSha256": {
+        "inspect_breadth_sources.py": "e42408eb6f989c2ccb3d2909e516f9c4ef8c8ea1ee6bc587be63db47ec78930a",
+        "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668",
+        "arena_probe.py": "0d1a9da4c6dae3a3373cca9fe53673a0d832e1a3341d10999c548ffc8ede1e2a"
+      },
+      "originalClassMembers": {
+        "com.mojang.blaze3d.platform.NativeImage$Format": {
+          "member": "com/mojang/blaze3d/platform/NativeImage$Format.class",
+          "sha256": "597b587b3a9481d56c198d5abb34d5fadc56dfe6de4ebcd58e1788980cfd297f"
+        },
+        "com.mojang.blaze3d.platform.NativeImage$WriteCallback": {
+          "member": "com/mojang/blaze3d/platform/NativeImage$WriteCallback.class",
+          "sha256": "cde41cfa9cdcae58c621f28c36b2307a9fe3370a0e03f1373edc2e00ca14abe5"
+        },
+        "com.mojang.blaze3d.platform.NativeImage": {
+          "member": "com/mojang/blaze3d/platform/NativeImage.class",
+          "sha256": "1f3e80fdefd541829eaaaf24bb35bdd5fa2c8f45c3122805c6ffe872ceda85df"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$Notification": {
+          "member": "net/minecraft/client/PeriodicNotificationManager$Notification.class",
+          "sha256": "3af2c41a8e0b98dc6295ab7eb240b3749930cb2e0fadf97236815ead6be0e1f3"
+        },
+        "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+          "member": "net/minecraft/client/PeriodicNotificationManager$NotificationTask.class",
+          "sha256": "ea0f99bb133e2f313e09bfce856128ab0c9937389eb60d1c66a0562d0f4b3a87"
+        },
+        "net.minecraft.client.PeriodicNotificationManager": {
+          "member": "net/minecraft/client/PeriodicNotificationManager.class",
+          "sha256": "4b4b19c075df67f1a71c7b28b95fa58bf9bd98be639f858444704b8f0f4d08e5"
+        },
+        "net.minecraft.client.gui.screens.WinScreen$CreditsReader": {
+          "member": "net/minecraft/client/gui/screens/WinScreen$CreditsReader.class",
+          "sha256": "a93ccfc511a2c9b95631afe02f2fa0e961b40b08913cebf5fec3ea2167f174ca"
+        },
+        "net.minecraft.client.gui.screens.WinScreen": {
+          "member": "net/minecraft/client/gui/screens/WinScreen.class",
+          "sha256": "2e350341cce266a474434b641f59267ce7125e2655dc8912527557a1e7be417d"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry": {
+          "member": "net/minecraft/client/gui/screens/packs/PackSelectionModel$Entry.class",
+          "sha256": "918c4bef0deddb1157c907123e72ea7c3db00ce8be7f03182659d73e1f0e4474"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase": {
+          "member": "net/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase.class",
+          "sha256": "e6c84f348281c0011aea98989eb9a13e7a5a4f40ce10cdc13c484eb96432008f"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry": {
+          "member": "net/minecraft/client/gui/screens/packs/PackSelectionModel$SelectedPackEntry.class",
+          "sha256": "285052eed663b6fb3a6b0182b2039286eef3114becc96f94468c514ccb2846bf"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry": {
+          "member": "net/minecraft/client/gui/screens/packs/PackSelectionModel$UnselectedPackEntry.class",
+          "sha256": "b234d39971959677271c4327b46214e04381169a4185312f8a53d2d5cc46493f"
+        },
+        "net.minecraft.client.gui.screens.packs.PackSelectionModel": {
+          "member": "net/minecraft/client/gui/screens/packs/PackSelectionModel.class",
+          "sha256": "42632a111b9997927ec77bf48adb4831755956f0bb54a82ff8de298aa8d3fc64"
+        },
+        "net.minecraft.client.renderer.block.dispatch.BlockStateModel$SimpleCachedUnbakedRoot$1": {
+          "member": "net/minecraft/client/renderer/block/dispatch/BlockStateModel$SimpleCachedUnbakedRoot$1.class",
+          "sha256": "829b51d06841adde8f90e4f50e07e7fd3b67920e9b4c5b7c83e5839705a75779"
+        },
+        "net.minecraft.client.renderer.block.dispatch.BlockStateModel$SimpleCachedUnbakedRoot": {
+          "member": "net/minecraft/client/renderer/block/dispatch/BlockStateModel$SimpleCachedUnbakedRoot.class",
+          "sha256": "b93fd5e7a54bfdec42153b7569de80e863d0f3ff1eb14c295db26897a24782f0"
+        },
+        "net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked": {
+          "member": "net/minecraft/client/renderer/block/dispatch/BlockStateModel$Unbaked.class",
+          "sha256": "11b70ec319f54787331e5625ca10919bb5aa671382d42702124f6f43abf00d1d"
+        },
+        "net.minecraft.client.renderer.block.dispatch.BlockStateModel$UnbakedRoot": {
+          "member": "net/minecraft/client/renderer/block/dispatch/BlockStateModel$UnbakedRoot.class",
+          "sha256": "e5d425e9649ad99079e6863dfdc938bb99a50689cab3e939f3862d021b238657"
+        },
+        "net.minecraft.client.renderer.block.dispatch.BlockStateModel": {
+          "member": "net/minecraft/client/renderer/block/dispatch/BlockStateModel.class",
+          "sha256": "85b06509c4ed7da2e9cbd90e39be8bbcaae1224d99df90d61485c3d2c5ef0d01"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModelWrapper$Unbaked": {
+          "member": "net/minecraft/client/renderer/block/model/BlockStateModelWrapper$Unbaked.class",
+          "sha256": "87f1b8e9cd29247d831ae3668135a818ba89ed897984396523c91775e95abb51"
+        },
+        "net.minecraft.client.renderer.block.model.BlockStateModelWrapper": {
+          "member": "net/minecraft/client/renderer/block/model/BlockStateModelWrapper.class",
+          "sha256": "c28e5825a4e141ebf9626bc23274d1cb12c3811afe82b64584e1685589333e95"
+        },
+        "net.minecraft.client.renderer.texture.AbstractTexture": {
+          "member": "net/minecraft/client/renderer/texture/AbstractTexture.class",
+          "sha256": "b9cae95409f9850c7977893598232b86133cac120556dcb18131be606c1363cf"
+        },
+        "net.minecraft.client.renderer.texture.MipmapGenerator": {
+          "member": "net/minecraft/client/renderer/texture/MipmapGenerator.class",
+          "sha256": "fc7b87c713631960f7b89d364f8b2247cd5f537b48b4f2ce10733cdf0d058721"
+        },
+        "net.minecraft.client.renderer.texture.SimpleTexture": {
+          "member": "net/minecraft/client/renderer/texture/SimpleTexture.class",
+          "sha256": "3dad0f0374d5e9004a18c9c1631a27b2390c3a685cf6526ee9b6fce05819b3ca"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture": {
+          "member": "net/minecraft/client/renderer/texture/SpriteContents$AnimatedTexture.class",
+          "sha256": "6c49632698953bfa85c4ae36a6c64ead434f62a1c1c099ce7efd4c46ce6a9e3b"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$AnimationState": {
+          "member": "net/minecraft/client/renderer/texture/SpriteContents$AnimationState.class",
+          "sha256": "eee73b9e64d0d7189b971f63519862b9d54a306b8e42563a69c7414c18e99bb6"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo": {
+          "member": "net/minecraft/client/renderer/texture/SpriteContents$FrameInfo.class",
+          "sha256": "e4d0e42941a66c7576052b6a6a5ee0a2a839ad74996d6d7c2b03c2c883f81b8a"
+        },
+        "net.minecraft.client.renderer.texture.SpriteContents": {
+          "member": "net/minecraft/client/renderer/texture/SpriteContents.class",
+          "sha256": "388655770b6c410bf85bf7f33d731daf15a67606b447b49e08f679e0caa1c615"
+        },
+        "net.minecraft.client.renderer.texture.TextureContents": {
+          "member": "net/minecraft/client/renderer/texture/TextureContents.class",
+          "sha256": "bc3a4f0f1b34793d1fa06885755c684bcc5b111f80dbb088f48f4456a5060e75"
+        },
+        "net.minecraft.client.resources.SplashManager": {
+          "member": "net/minecraft/client/resources/SplashManager.class",
+          "sha256": "3de435f2a0b460e2ba15297f0ab3f892b7e5f6a5a3ee2c301b429175ff25663f"
+        },
+        "net.minecraft.client.resources.model.BlockStateDefinitions": {
+          "member": "net/minecraft/client/resources/model/BlockStateDefinitions.class",
+          "sha256": "05fb158b2f3841c4213aa4bbec6c05be784bc351b96408b4a6415726773a4ba4"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockStateModelDispatcher": {
+          "member": "net/minecraft/client/resources/model/BlockStateModelLoader$LoadedBlockStateModelDispatcher.class",
+          "sha256": "48360cd94bea2b39134f7588d944cc4842ab63d0d79fe5e6b26629cb3f65b012"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels": {
+          "member": "net/minecraft/client/resources/model/BlockStateModelLoader$LoadedModels.class",
+          "sha256": "0fcd8dfcebe102a5ceed4705d185a2b3b1256abddf4cb9546acaa98ecbf138dd"
+        },
+        "net.minecraft.client.resources.model.BlockStateModelLoader": {
+          "member": "net/minecraft/client/resources/model/BlockStateModelLoader.class",
+          "sha256": "44941dd01337b7c6b202a38b4683056b98690c3ac8e9aabeda09d422370370a4"
+        },
+        "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$ItemLayerKey": {
+          "member": "net/minecraft/client/resources/model/cuboid/ItemModelGenerator$ItemLayerKey.class",
+          "sha256": "4f072f990908af4ad2cf7585f2c9dcd584e0c1d40a50105bc64d91731e64faed"
+        },
+        "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection": {
+          "member": "net/minecraft/client/resources/model/cuboid/ItemModelGenerator$SideDirection.class",
+          "sha256": "5429ca7e94b2aef24bae38495fbd0062a30dd6519c69aae295fe0f9068904b76"
+        },
+        "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace": {
+          "member": "net/minecraft/client/resources/model/cuboid/ItemModelGenerator$SideFace.class",
+          "sha256": "b32605b744058828d0f8ba482c9c5d6e26c71dd4ad470f4fac66db6f0525abcf"
+        },
+        "net.minecraft.client.resources.model.cuboid.ItemModelGenerator": {
+          "member": "net/minecraft/client/resources/model/cuboid/ItemModelGenerator.class",
+          "sha256": "a55d3aa19b2e5fd97e6e94dddd8ea9c1ad42eeb4e6f41e4bccd3227a13503bd6"
+        },
+        "net.minecraft.server.packs.PackSelectionConfig": {
+          "member": "net/minecraft/server/packs/PackSelectionConfig.class",
+          "sha256": "886485a43483feedafb6b8e92ac59a4adfcb636196dfa64f600d46ded1bd0aae"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector": {
+          "member": "net/minecraft/server/packs/repository/FolderRepositorySource$FolderPackDetector.class",
+          "sha256": "401da132ff4b5785cc21dce6063f0afa3cfa99568671b60e0c9d16d15692f3bd"
+        },
+        "net.minecraft.server.packs.repository.FolderRepositorySource": {
+          "member": "net/minecraft/server/packs/repository/FolderRepositorySource.class",
+          "sha256": "4071cabca869cedce8df72ae6ee16c77816826ce9dad59a3bd6d71cb6e78c669"
+        },
+        "net.minecraft.server.packs.repository.Pack$Metadata": {
+          "member": "net/minecraft/server/packs/repository/Pack$Metadata.class",
+          "sha256": "1bc0d842c5ad10fe2a22f0b747424572e343ed6a20378b56a1c6d80145f0bb07"
+        },
+        "net.minecraft.server.packs.repository.Pack$Position": {
+          "member": "net/minecraft/server/packs/repository/Pack$Position.class",
+          "sha256": "9eaf26d2a6a5c7c20bd187838c616c081dbc84b58365298b157e02c4a622703d"
+        },
+        "net.minecraft.server.packs.repository.Pack$ResourcesSupplier": {
+          "member": "net/minecraft/server/packs/repository/Pack$ResourcesSupplier.class",
+          "sha256": "65c37b1e5d82f9f30e8790409be9aad219b9d0abc3d516d49c31e40eda0b743f"
+        },
+        "net.minecraft.server.packs.repository.Pack": {
+          "member": "net/minecraft/server/packs/repository/Pack.class",
+          "sha256": "6a0795098085b72c6d92ad23b17b387f369574d82a2170e1e73418b161aff5e0"
+        },
+        "net.minecraft.server.packs.repository.PackDetector": {
+          "member": "net/minecraft/server/packs/repository/PackDetector.class",
+          "sha256": "c6faf10ad4436c84fbc85bbc5105120894ff428e76dcf08ec1cfbd888f3bea74"
+        },
+        "net.minecraft.server.packs.repository.PackRepository": {
+          "member": "net/minecraft/server/packs/repository/PackRepository.class",
+          "sha256": "d19a109d13afdf85f6816e257c8069a9bde250ffdea6f3a9c31d80a7f7d06e5f"
+        }
+      },
+      "viewsSha256": {
+        "com/mojang/blaze3d/platform/NativeImage.java": "8d24ad8bdf4f038f9d790c0c36b178bd45152015ea49ce6888b6bdddaaba0da1",
+        "net/minecraft/client/PeriodicNotificationManager.java": "b16e95bd0d70d7529e5989a74107c2fe84212c56dfd28a7cdad019f2174483e6",
+        "net/minecraft/client/resources/SplashManager.java": "320e15f2394c6a1c607eda8074561b470c8721e5c866fa0bdd5e9a588625e95a",
+        "net/minecraft/client/gui/screens/WinScreen.java": "dafe2d32a0193b3fcb1fba6c6fc43394f83c56503427396de9b21952e0d6707b",
+        "net/minecraft/client/gui/screens/packs/PackSelectionModel.java": "27fe7f95340866346e16d4abbff3c16d3fa22b20b5f75a6f41b55895403ad05e",
+        "net/minecraft/client/resources/model/BlockStateDefinitions.java": "091d3eb407c0fe34763dee4f26e1b87dd44c1b8f0e7286d858e88a293588becf",
+        "net/minecraft/client/resources/model/BlockStateModelLoader.java": "e79ec71b34cad0d11690304328341f5f7220754978656f457589790d7ce23701",
+        "net/minecraft/client/resources/model/cuboid/ItemModelGenerator.java": "705705060b2058795fed1bcdfcaa9218f61f720e0362ced23966aec00cb1cfa9",
+        "net/minecraft/client/renderer/texture/AbstractTexture.java": "89318eebd98cf2031698a5d1439a1ee58a35fe5c29511b8fdb60af5588ab6f80",
+        "net/minecraft/client/renderer/texture/TextureContents.java": "6cc30cec6eef8824f9467907d5d4b761983bdcf7a1d47fbe252c6d52dd3e4460",
+        "net/minecraft/client/renderer/texture/MipmapGenerator.java": "070e1f854e729420d4fa76db68275b67d6d3167b2855dd61b813839620809117",
+        "net/minecraft/client/renderer/texture/SimpleTexture.java": "8cedab9fbbe2c062a92b35fd845e0e53080b8396c4abfb10e0c09973caa79296",
+        "net/minecraft/client/renderer/texture/SpriteContents.java": "724be9e239710343de60b49c704a6ce44a9ae160f285a8bf3883259d33a32a02",
+        "net/minecraft/client/renderer/block/dispatch/BlockStateModel.java": "30fc719bfd38bd1a97254028e8330281fe6adf2e81f19c0688a446c5fbc06458",
+        "net/minecraft/client/renderer/block/model/BlockStateModelWrapper.java": "73a9715ca1c1c9580d5d8cb5b9941b73c0fccf3ebdff51689576002aed6b353d",
+        "net/minecraft/server/packs/PackSelectionConfig.java": "df23232e4975c5a04bf54d53de951d1ea1a0115f433536c67c0de02359400a91",
+        "net/minecraft/server/packs/repository/FolderRepositorySource.java": "9fde3517ddd49b882b063747267961c69a93dbea9e627c9d0515e496eef232dc",
+        "net/minecraft/server/packs/repository/PackRepository.java": "ffeeb995e95ae32343a5a9d0b959dff7974f8e1bfa3aace41254a5be362f0c2e",
+        "net/minecraft/server/packs/repository/PackDetector.java": "1c6c7364faaabbeca84d78327e1577499f15a97422a84090cac5b22daf7a894e",
+        "net/minecraft/server/packs/repository/Pack.java": "329fb48866b4afef473941136168d0d39d8b0112ecd5c199ff570a61a479a3fe"
+      },
+      "categories": {
+        "packs.selection": [
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+          "net.minecraft.client.gui.screens.packs.PackSelectionModel",
+          "net.minecraft.server.packs.PackSelectionConfig",
+          "net.minecraft.server.packs.repository.FolderRepositorySource$FolderPackDetector",
+          "net.minecraft.server.packs.repository.FolderRepositorySource",
+          "net.minecraft.server.packs.repository.Pack$Metadata",
+          "net.minecraft.server.packs.repository.Pack$Position",
+          "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+          "net.minecraft.server.packs.repository.Pack",
+          "net.minecraft.server.packs.repository.PackDetector",
+          "net.minecraft.server.packs.repository.PackRepository"
+        ],
+        "models.blockstates": [
+          "net.minecraft.client.renderer.block.dispatch.BlockStateModel$SimpleCachedUnbakedRoot$1",
+          "net.minecraft.client.renderer.block.dispatch.BlockStateModel$SimpleCachedUnbakedRoot",
+          "net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked",
+          "net.minecraft.client.renderer.block.dispatch.BlockStateModel$UnbakedRoot",
+          "net.minecraft.client.renderer.block.dispatch.BlockStateModel",
+          "net.minecraft.client.renderer.block.model.BlockStateModelWrapper$Unbaked",
+          "net.minecraft.client.renderer.block.model.BlockStateModelWrapper",
+          "net.minecraft.client.resources.model.BlockStateDefinitions",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockStateModelDispatcher",
+          "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels",
+          "net.minecraft.client.resources.model.BlockStateModelLoader"
+        ],
+        "models.generated": [
+          "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$ItemLayerKey",
+          "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection",
+          "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace",
+          "net.minecraft.client.resources.model.cuboid.ItemModelGenerator"
+        ],
+        "textures.images": [
+          "com.mojang.blaze3d.platform.NativeImage$Format",
+          "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+          "com.mojang.blaze3d.platform.NativeImage",
+          "net.minecraft.client.renderer.texture.AbstractTexture",
+          "net.minecraft.client.renderer.texture.MipmapGenerator",
+          "net.minecraft.client.renderer.texture.SimpleTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimatedTexture",
+          "net.minecraft.client.renderer.texture.SpriteContents$AnimationState",
+          "net.minecraft.client.renderer.texture.SpriteContents$FrameInfo",
+          "net.minecraft.client.renderer.texture.SpriteContents",
+          "net.minecraft.client.renderer.texture.TextureContents"
+        ],
+        "text.builtin_lists": [
+          "net.minecraft.client.PeriodicNotificationManager$Notification",
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+          "net.minecraft.client.PeriodicNotificationManager",
+          "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+          "net.minecraft.client.gui.screens.WinScreen",
+          "net.minecraft.client.resources.SplashManager"
+        ]
+      },
+      "command": {
+        "exitCode": 0,
+        "timedOut": false,
+        "ownedGroupAbsent": true
+      }
+    }
+  ]
+}

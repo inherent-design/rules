@@ -1,0 +1,1403 @@
+{
+  "schema": 1,
+  "state": "partial-source-linework",
+  "sourceLedger": "host/minecraft/breadth-sources.json",
+  "report": "host/minecraft/BREADTH-LINEWORK.md",
+  "families": [
+    {
+      "id": "packs.selection",
+      "inputs": [
+        {
+          "name": "path",
+          "domain": "host Path plus observed file attributes and validator decisions",
+          "absence": "missing path returns no detected pack"
+        },
+        {
+          "name": "selection",
+          "domain": "ordered requested IDs plus available Pack objects",
+          "absence": "missing IDs dropped by rebuild"
+        },
+        {
+          "name": "placement",
+          "domain": "required, fixedPosition and defaultPosition",
+          "absence": "supplied by PackSelectionConfig, not inferred from filename"
+        }
+      ],
+      "consumer": "PackDetector -> metadata supplier -> PackRepository rebuild -> reversed UI list -> commit output -> separate resource application",
+      "effects": [
+        "filesystem metadata reads and validator calls",
+        "UI list mutation and callback",
+        "repository selection update",
+        "high-contrast option update on named toggle",
+        "opening retained resource owners"
+      ],
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "models.blockstates",
+      "inputs": [
+        {
+          "name": "variants/multipart",
+          "domain": "versioned definition grammar and ordered resource stack",
+          "absence": "reader-specific rejection/optional branches"
+        },
+        {
+          "name": "state properties",
+          "domain": "actual StateDefinition and typed allowed values",
+          "absence": "unknown properties/values are not fabricated"
+        },
+        {
+          "name": "model references",
+          "domain": "versioned unbaked nodes and referenced geometry",
+          "absence": "consumer resolution remains separate"
+        }
+      ],
+      "consumer": "resource decode -> state-domain instantiation -> stack composition -> bake/model update -> separate rendering",
+      "effects": [
+        "logging and per-resource/per-selector failure boundaries",
+        "state-to-unbaked-root map writes",
+        "later seeded part collection, tints and transforms"
+      ],
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "models.generated",
+      "inputs": [
+        {
+          "name": "layer0..layer4",
+          "domain": "ordered resolved texture/material slots",
+          "absence": "first unresolved layer stops traversal"
+        },
+        {
+          "name": "sprite",
+          "domain": "dimensions, transparency and unique animation frames",
+          "absence": "missing sprite resolution is a separate consumer policy"
+        },
+        {
+          "name": "material/modelState",
+          "domain": "versioned bake inputs",
+          "absence": "no fabricated default for unavailable material/context"
+        }
+      ],
+      "consumer": "resolved layers -> sprite edge observations -> versioned CPU geometry -> bake/material cache -> separate upload/render",
+      "effects": [
+        "sprite/material resolution",
+        "geometry construction",
+        "26.3 shared per-layer operation lookup"
+      ],
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "textures.images",
+      "inputs": [
+        {
+          "name": "encoded bytes",
+          "domain": "stream, native ByteBuffer or byte array; PNG header then STB decode",
+          "absence": "decoder refusal is distinct from missing resource"
+        },
+        {
+          "name": "dimensions/channels",
+          "domain": "positive constructor dimensions and versioned output format",
+          "absence": "native limits and format closure remain unqualified"
+        },
+        {
+          "name": "metadata",
+          "domain": "optional TextureContents metadata in selected later API",
+          "absence": "blur/clamp false in inspected TextureContents accessors"
+        }
+      ],
+      "consumer": "resource stream -> NativeImage CPU allocation -> texture contents -> reload/upload -> GPU texture/view -> separate device retirement",
+      "effects": [
+        "temporary and retained native allocation/deallocation",
+        "stream close in finally",
+        "texture/object/view release calls",
+        "metadata decode and possible partial acquisition"
+      ],
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "text.builtin_lists",
+      "inputs": [
+        {
+          "name": "splashes",
+          "domain": "trimmed lines, hash filter, date/user/random context",
+          "absence": "I/O failure produces empty prepared list; special-date selection separate"
+        },
+        {
+          "name": "credits",
+          "domain": "section -> disciplines -> titles -> names JSON arrays",
+          "absence": "failed file wrapper logs; earlier line additions not presumed rolled back"
+        },
+        {
+          "name": "notifications",
+          "domain": "group -> list of {delay,period,title,message}",
+          "absence": "delay defaults zero; other fields required by selected codec"
+        }
+      ],
+      "consumer": "prepare/read -> apply/list or timer state -> live selection/scheduled task -> queued UI action -> separate UI scope/retirement",
+      "effects": [
+        "resource reads and input close",
+        "incremental credits line additions",
+        "random/date/user reads",
+        "timer creation/reset/cancellation",
+        "queued UI toast and completion callback"
+      ],
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    }
+  ],
+  "slices": [
+    {
+      "id": "1.21.1:packs.selection",
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "family": "packs.selection",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/gui/screens/packs/PackSelectionModel.java",
+          "sha256": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel"
+          ],
+          "reviewedClauses": [
+            "constructor, updateRepoSelectedList, commit, findNewPacks",
+            "EntryBase.toggleSelection, move, canMoveUp/canMoveDown and high-contrast update"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackRepository.java",
+          "sha256": "68d4162c40b1ae1c8407cda6db5e53fbe177a245d3df0d5d7b76b1d6d81ab1df",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackRepository"
+          ],
+          "reviewedClauses": [
+            "reload, discoverAvailable, rebuildSelected, openAllSelected"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/Pack.java",
+          "sha256": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.Pack$Metadata",
+            "net.minecraft.server.packs.repository.Pack$Position",
+            "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+            "net.minecraft.server.packs.repository.Pack"
+          ],
+          "reviewedClauses": [
+            "readMetaAndCreate/readPackMetadata, open, equals, Position.insert"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackDetector.java",
+          "sha256": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackDetector"
+          ],
+          "reviewedClauses": [
+            "detectPackResources"
+          ]
+        }
+      ],
+      "versionBoundary": "Runnable list-change callback; single PackResources open path.",
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "1.21.1:models.blockstates",
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "family": "models.blockstates",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/BlockModelDefinition.java",
+          "sha256": "5d20b4bdee7a4be5aed5b448ee5219d8567f6b59fea0fa18f86104cc2e9f594e",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$Context",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition"
+          ],
+          "reviewedClauses": [
+            "reader/codec and construction/merge/instantiate clauses"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java",
+          "sha256": "07dd7566cf383ee2f3ddba2605ef3100de6250bf90c5b1c5f8ca2db40bc5508f",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition"
+          ],
+          "reviewedClauses": [
+            "typed lookup, pipe terms and negation"
+          ]
+        }
+      ],
+      "versionBoundary": "Gson variants/multipart reader; merge constructor clears variants at multipart boundaries. Leading negation applies to the inspected whole key/value expression.",
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "1.21.1:models.generated",
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "family": "models.generated",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/ItemModelGenerator.java",
+          "sha256": "e33f6cee08cca00cf2c4612754ba3110e851310f4ed8d2c0f4a083f0b11d3da5",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+          ],
+          "reviewedClauses": [
+            "ordered layer traversal and processFrames",
+            "getSpans, checkTransition and createOrExpandSpan"
+          ]
+        }
+      ],
+      "versionBoundary": "Returns generated BlockModel; facing/anchor spans expand over unique frames.",
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "1.21.1:textures.images",
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "family": "textures.images",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "com/mojang/blaze3d/platform/NativeImage.java",
+          "sha256": "ab17aa3df51cb75d0ab68b1930f21c3e6ac510e6ec31336b3e5b3a4fde564e39",
+          "originalClasses": [
+            "com.mojang.blaze3d.platform.NativeImage$Format",
+            "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat",
+            "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+            "com.mojang.blaze3d.platform.NativeImage"
+          ],
+          "reviewedClauses": [
+            "constructors, read overloads and close only"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/AbstractTexture.java",
+          "sha256": "77f9716b02e356005314301f69c3ca688db743bf2e6695dc3bca0d4852ed8fc1",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.AbstractTexture"
+          ],
+          "reviewedClauses": [
+            "selected ownership/release and access APIs"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/SimpleTexture.java",
+          "sha256": "f310f01ac97c86d4f8b81d3a4b2c548205941ffb362e78f3018aebb20f90c015",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.SimpleTexture$TextureImage",
+            "net.minecraft.client.renderer.texture.SimpleTexture"
+          ],
+          "reviewedClauses": [
+            "selected load/loadContents delegation"
+          ]
+        }
+      ],
+      "versionBoundary": "Native image can carry explicit or absent read format; default RGBA. SimpleTexture owns selected load/upload orchestration; OpenGL texture-ID API.",
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "1.21.1:text.builtin_lists",
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "family": "text.builtin_lists",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/PeriodicNotificationManager.java",
+          "sha256": "980505d6dfd46dcf2e4c8ce5b13657bdce412e401dca254a905ad9b8ee4abf61",
+          "originalClasses": [
+            "net.minecraft.client.PeriodicNotificationManager$Notification",
+            "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+            "net.minecraft.client.PeriodicNotificationManager"
+          ],
+          "reviewedClauses": [
+            "codec, prepare, apply, stopTimer, task reset and run"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/resources/SplashManager.java",
+          "sha256": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+          "originalClasses": [
+            "net.minecraft.client.resources.SplashManager"
+          ],
+          "reviewedClauses": [
+            "prepare, apply and getSplash"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/gui/screens/WinScreen.java",
+          "sha256": "5d4e0f0f44f2902499e3ec06821362cbd7f5344c7b2d3d0dccae5ffac6c905a4",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+            "net.minecraft.client.gui.screens.WinScreen"
+          ],
+          "reviewedClauses": [
+            "addCreditsFile; baseline init and wrapCreditsIO only"
+          ]
+        }
+      ],
+      "versionBoundary": "String splash list, Calendar date selection, Gson notification parser; selected credits reader appends incrementally.",
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    },
+    {
+      "id": "1.21.4:packs.selection",
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "family": "packs.selection",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/gui/screens/packs/PackSelectionModel.java",
+          "sha256": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel"
+          ],
+          "reviewedClauses": [
+            "constructor, updateRepoSelectedList, commit, findNewPacks",
+            "EntryBase.toggleSelection, move, canMoveUp/canMoveDown and high-contrast update"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackRepository.java",
+          "sha256": "2bc3af20792796fa5ee95d7c56115086756849e1d4e9c3f11fdfe778b452eaec",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackRepository"
+          ],
+          "reviewedClauses": [
+            "reload, discoverAvailable, rebuildSelected, openAllSelected"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/Pack.java",
+          "sha256": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.Pack$Metadata",
+            "net.minecraft.server.packs.repository.Pack$Position",
+            "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+            "net.minecraft.server.packs.repository.Pack"
+          ],
+          "reviewedClauses": [
+            "readMetaAndCreate/readPackMetadata, open, equals, Position.insert"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackDetector.java",
+          "sha256": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackDetector"
+          ],
+          "reviewedClauses": [
+            "detectPackResources"
+          ]
+        }
+      ],
+      "versionBoundary": "Repository adds isAbleToClearAnyPack; reviewed selection ordering clauses retained.",
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "1.21.4:models.blockstates",
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "family": "models.blockstates",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/BlockModelDefinition.java",
+          "sha256": "d0facc81cf07d88b2dfb4cbf76fc6030a07cc7168d8188cb9354e086f26a7a1b",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$Deserializer",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$MissingVariantException",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition"
+          ],
+          "reviewedClauses": [
+            "reader/codec and construction/merge/instantiate clauses"
+          ]
+        }
+      ],
+      "versionBoundary": "Definition exposes state instantiation directly; overlap/error semantics not executed or qualified.",
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "1.21.4:models.generated",
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "family": "models.generated",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/ItemModelGenerator.java",
+          "sha256": "fb152fc2474aa84db30fbccae3dfe4f6d317ab894f064eb2978f34ccb412ea1f",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+          ],
+          "reviewedClauses": [
+            "ordered layer traversal and processFrames",
+            "getSpans, checkTransition and createOrExpandSpan"
+          ]
+        }
+      ],
+      "versionBoundary": "Implements UnbakedModel and bakes through SimpleBakedModel; span algorithm remains in selected source.",
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "1.21.4:textures.images",
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "family": "textures.images",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "com/mojang/blaze3d/platform/NativeImage.java",
+          "sha256": "b0ffd71a653775b44277426c81b7c44f68f4d7ddf0ffdc130e625a1798f3daf9",
+          "originalClasses": [
+            "com.mojang.blaze3d.platform.NativeImage$Format",
+            "com.mojang.blaze3d.platform.NativeImage$InternalGlFormat",
+            "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+            "com.mojang.blaze3d.platform.NativeImage"
+          ],
+          "reviewedClauses": [
+            "constructors, read overloads and close only"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/AbstractTexture.java",
+          "sha256": "c9aa59f3b6913e5d72a498a20668234c1fc9c7acd31ba9b8b0ede3019f5eb1f1",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.AbstractTexture"
+          ],
+          "reviewedClauses": [
+            "selected ownership/release and access APIs"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/TextureContents.java",
+          "sha256": "311f5a004679cc83db7a37b425edb302fd80b0ca8598339b7c9950131ad76b30",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.TextureContents"
+          ],
+          "reviewedClauses": [
+            "load, blur, clamp and close where present"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/SimpleTexture.java",
+          "sha256": "35107816930343e0fd4fa9b65407f1705a1ea957590b187fc0bd562c88669326",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.SimpleTexture"
+          ],
+          "reviewedClauses": [
+            "selected load/loadContents delegation"
+          ]
+        }
+      ],
+      "versionBoundary": "Byte-array temporary chooses native heap if stack space insufficient; TextureContents plus ReloadableTexture delegation.",
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "1.21.4:text.builtin_lists",
+      "release": "1.21.4",
+      "target": "java-1.21.4-vanilla",
+      "family": "text.builtin_lists",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/PeriodicNotificationManager.java",
+          "sha256": "a6d029902535a5ffe72ff7baf8bd02c8767a49f7e2ba7c77ced2151e1d7d6a08",
+          "originalClasses": [
+            "net.minecraft.client.PeriodicNotificationManager$Notification",
+            "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+            "net.minecraft.client.PeriodicNotificationManager"
+          ],
+          "reviewedClauses": [
+            "codec, prepare, apply, stopTimer, task reset and run"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/resources/SplashManager.java",
+          "sha256": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+          "originalClasses": [
+            "net.minecraft.client.resources.SplashManager"
+          ],
+          "reviewedClauses": [
+            "prepare, apply and getSplash"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/gui/screens/WinScreen.java",
+          "sha256": "1ce8373907b12f00d7bf6cf0df9531b6555ba246b41dc3858f961cb1af176168",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+            "net.minecraft.client.gui.screens.WinScreen"
+          ],
+          "reviewedClauses": [
+            "addCreditsFile; baseline init and wrapCreditsIO only"
+          ]
+        }
+      ],
+      "versionBoundary": "Selected input grammars retain prior structure; toast-manager accessor changes.",
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    },
+    {
+      "id": "1.21.5:packs.selection",
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "family": "packs.selection",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/gui/screens/packs/PackSelectionModel.java",
+          "sha256": "72518086fed2de8ca4d1f4113e8720f9c5e6d4c00e2318a26ad90ee8baee31f6",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel"
+          ],
+          "reviewedClauses": [
+            "constructor, updateRepoSelectedList, commit, findNewPacks",
+            "EntryBase.toggleSelection, move, canMoveUp/canMoveDown and high-contrast update"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackRepository.java",
+          "sha256": "2bc3af20792796fa5ee95d7c56115086756849e1d4e9c3f11fdfe778b452eaec",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackRepository"
+          ],
+          "reviewedClauses": [
+            "reload, discoverAvailable, rebuildSelected, openAllSelected"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/Pack.java",
+          "sha256": "59e6edef49839b5eca84694e57fd5b174021c3e0e07c643f412a43a5cc3d153b",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.Pack$Metadata",
+            "net.minecraft.server.packs.repository.Pack$Position",
+            "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+            "net.minecraft.server.packs.repository.Pack"
+          ],
+          "reviewedClauses": [
+            "readMetaAndCreate/readPackMetadata, open, equals, Position.insert"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackDetector.java",
+          "sha256": "008ae5d0e81ef2cc0531dceca2e93e3b903e70df8ea4bf9ed37f2ec42d252c25",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackDetector"
+          ],
+          "reviewedClauses": [
+            "detectPackResources"
+          ]
+        }
+      ],
+      "versionBoundary": "Reviewed selection views unchanged from 1.21.4.",
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "1.21.5:models.blockstates",
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "family": "models.blockstates",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/BlockModelDefinition.java",
+          "sha256": "eb25f5f1d73a520dffc0d6644201ba2604e31cba6d2985d292666305b3f2c434",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition"
+          ],
+          "reviewedClauses": [
+            "reader/codec and construction/merge/instantiate clauses"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/block/model/multipart/KeyValueCondition.java",
+          "sha256": "3e9bcc190c237bdce3f85ab6f5c9ecc8afbaefff3ddb2e64e57e45ed44618435",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Term",
+            "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition$Terms",
+            "net.minecraft.client.renderer.block.model.multipart.KeyValueCondition"
+          ],
+          "reviewedClauses": [
+            "typed lookup, pipe terms and negation"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/block/model/multipart/Condition.java",
+          "sha256": "b3c4b46a4849dd8092cee701634b0641c4ec5035ba2d25a32f922ef0e02c9b3e",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.multipart.Condition"
+          ],
+          "reviewedClauses": [
+            "recursive condition codec"
+          ]
+        }
+      ],
+      "versionBoundary": "Codec has optional nonempty variants/multipart and requires at least one. Inspected key/value grammar has per-term negation.",
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "1.21.5:models.generated",
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "family": "models.generated",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/ItemModelGenerator.java",
+          "sha256": "39638fcd14ed43449b8baca219d27fc65df5f2a74c64374f63cd2cd7f1e4f440",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$Span",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$SpanFacing",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+          ],
+          "reviewedClauses": [
+            "ordered layer traversal and processFrames",
+            "getSpans, checkTransition and createOrExpandSpan"
+          ]
+        }
+      ],
+      "versionBoundary": "Geometry delegates to SimpleUnbakedGeometry/QuadCollection; selected span algorithm retained.",
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "1.21.5:textures.images",
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "family": "textures.images",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "com/mojang/blaze3d/platform/NativeImage.java",
+          "sha256": "8488141e702f8807c664a0590c95a6c5ab15f3e312bdfd9a798910148ea6ddc6",
+          "originalClasses": [
+            "com.mojang.blaze3d.platform.NativeImage$Format",
+            "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+            "com.mojang.blaze3d.platform.NativeImage"
+          ],
+          "reviewedClauses": [
+            "constructors, read overloads and close only"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/AbstractTexture.java",
+          "sha256": "6f7fbbedbd51e5eb8c619960fbc21a4ae716f884770bf8b43a87afc992116318",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.AbstractTexture"
+          ],
+          "reviewedClauses": [
+            "selected ownership/release and access APIs"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/TextureContents.java",
+          "sha256": "311f5a004679cc83db7a37b425edb302fd80b0ca8598339b7c9950131ad76b30",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.TextureContents"
+          ],
+          "reviewedClauses": [
+            "load, blur, clamp and close where present"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/SimpleTexture.java",
+          "sha256": "35107816930343e0fd4fa9b65407f1705a1ea957590b187fc0bd562c88669326",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.SimpleTexture"
+          ],
+          "reviewedClauses": [
+            "selected load/loadContents delegation"
+          ]
+        }
+      ],
+      "versionBoundary": "GPU texture object replaces AbstractTexture OpenGL-ID owner. Explicit/absent NativeImage read format still selected.",
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "1.21.5:text.builtin_lists",
+      "release": "1.21.5",
+      "target": "java-1.21.5-vanilla",
+      "family": "text.builtin_lists",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/PeriodicNotificationManager.java",
+          "sha256": "a6d029902535a5ffe72ff7baf8bd02c8767a49f7e2ba7c77ced2151e1d7d6a08",
+          "originalClasses": [
+            "net.minecraft.client.PeriodicNotificationManager$Notification",
+            "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+            "net.minecraft.client.PeriodicNotificationManager"
+          ],
+          "reviewedClauses": [
+            "codec, prepare, apply, stopTimer, task reset and run"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/resources/SplashManager.java",
+          "sha256": "4c2971b88598fc658eb935de998572c470d257f4c0fbc73f69fb31589a4c14c2",
+          "originalClasses": [
+            "net.minecraft.client.resources.SplashManager"
+          ],
+          "reviewedClauses": [
+            "prepare, apply and getSplash"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/gui/screens/WinScreen.java",
+          "sha256": "1ce8373907b12f00d7bf6cf0df9531b6555ba246b41dc3858f961cb1af176168",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+            "net.minecraft.client.gui.screens.WinScreen"
+          ],
+          "reviewedClauses": [
+            "addCreditsFile; baseline init and wrapCreditsIO only"
+          ]
+        }
+      ],
+      "versionBoundary": "Selected input grammars retain prior structure.",
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    },
+    {
+      "id": "1.21.11:packs.selection",
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "family": "packs.selection",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/gui/screens/packs/PackSelectionModel.java",
+          "sha256": "bd28b55a943788b27f7cf81edc8cd422bab672de408990cc54c7d8fdb2eb573a",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel"
+          ],
+          "reviewedClauses": [
+            "constructor, updateRepoSelectedList, commit, findNewPacks",
+            "EntryBase.toggleSelection, move, canMoveUp/canMoveDown and high-contrast update"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackRepository.java",
+          "sha256": "b2a8c4a7fc7d04b568a81888e2897c536b6aac76e6c183f5eda5269f8b568cfb",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackRepository"
+          ],
+          "reviewedClauses": [
+            "reload, discoverAvailable, rebuildSelected, openAllSelected"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/Pack.java",
+          "sha256": "4a8f81fc1c63bcaa5fd1592a098f518d960d0fcbda2e77bbad1369219e306b81",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.Pack$Metadata",
+            "net.minecraft.server.packs.repository.Pack$Position",
+            "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+            "net.minecraft.server.packs.repository.Pack"
+          ],
+          "reviewedClauses": [
+            "readMetaAndCreate/readPackMetadata, open, equals, Position.insert"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackDetector.java",
+          "sha256": "0582892661caab2f868899ae56783415558505561a874f62e98a64b46bbb01d3",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackDetector"
+          ],
+          "reviewedClauses": [
+            "detectPackResources"
+          ]
+        }
+      ],
+      "versionBoundary": "Entry-valued list-change callback; typed metadata with absence fallback.",
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "1.21.11:models.blockstates",
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "family": "models.blockstates",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/BlockModelDefinition.java",
+          "sha256": "eb25f5f1d73a520dffc0d6644201ba2604e31cba6d2985d292666305b3f2c434",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$MultiPartDefinition",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition$SimpleModelSelectors",
+            "net.minecraft.client.renderer.block.model.BlockModelDefinition"
+          ],
+          "reviewedClauses": [
+            "reader/codec and construction/merge/instantiate clauses"
+          ]
+        }
+      ],
+      "versionBoundary": "BlockModelDefinition private view byte-identical to 1.21.5; original class identities remain separate.",
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "1.21.11:models.generated",
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "family": "models.generated",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/renderer/block/model/ItemModelGenerator.java",
+          "sha256": "6c664fb6e6c8096e6c311f918818ff08174026aa9099ff95bd5641007a9561ae",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator$SideFace",
+            "net.minecraft.client.renderer.block.model.ItemModelGenerator"
+          ],
+          "reviewedClauses": [
+            "ordered layer traversal and processFrames",
+            "createSideElements selected UV/edge clauses, getSideFaces and checkTransition"
+          ]
+        }
+      ],
+      "versionBoundary": "Per-pixel SideFace set replaces spans; UV inset is 0.1 pixel.",
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "1.21.11:textures.images",
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "family": "textures.images",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "com/mojang/blaze3d/platform/NativeImage.java",
+          "sha256": "82e93063762f38240311cfe944fbdedc3d9f0eb476177ccfca80b7f6c6166b35",
+          "originalClasses": [
+            "com.mojang.blaze3d.platform.NativeImage$Format",
+            "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+            "com.mojang.blaze3d.platform.NativeImage"
+          ],
+          "reviewedClauses": [
+            "constructors, read overloads and close only"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/AbstractTexture.java",
+          "sha256": "b037696d5276fc205807b3c295e5583ba157c0d4222a62ac20cbf5b976e7cb94",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.AbstractTexture"
+          ],
+          "reviewedClauses": [
+            "selected ownership/release and access APIs"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/TextureContents.java",
+          "sha256": "9cdfee52a26d08da726c2601e699ae17bd0c1abf245fecf909a5b9327209b525",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.TextureContents"
+          ],
+          "reviewedClauses": [
+            "load, blur, clamp and close where present"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/SimpleTexture.java",
+          "sha256": "549b21a60687c5dc8e806cfdbd8b58eb70d4e2f73424a0d7ae12bf973a146b6b",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.SimpleTexture"
+          ],
+          "reviewedClauses": [
+            "selected load/loadContents delegation"
+          ]
+        }
+      ],
+      "versionBoundary": "Texture-view release and sampler reference added to AbstractTexture; stream path no longer explicitly rewinds before read.",
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "1.21.11:text.builtin_lists",
+      "release": "1.21.11",
+      "target": "java-1.21.11-vanilla",
+      "family": "text.builtin_lists",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/PeriodicNotificationManager.java",
+          "sha256": "5ecbdc1d0bd6e5c36f23d387e916d9ad6ad760d680effcc5b3735f0144c1b24b",
+          "originalClasses": [
+            "net.minecraft.client.PeriodicNotificationManager$Notification",
+            "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+            "net.minecraft.client.PeriodicNotificationManager"
+          ],
+          "reviewedClauses": [
+            "codec, prepare, apply, stopTimer, task reset and run"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/resources/SplashManager.java",
+          "sha256": "1a850a684fc1c2c9e8e0e36b6c28ffcb72f01a739f4dfad5e8a19ced6006be5a",
+          "originalClasses": [
+            "net.minecraft.client.resources.SplashManager"
+          ],
+          "reviewedClauses": [
+            "prepare, apply and getSplash"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/gui/screens/WinScreen.java",
+          "sha256": "97c7ad1e2bd8873aa2e820fbb4d38698277b62d0dd60f32d28b994d3b1fe4195",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+            "net.minecraft.client.gui.screens.WinScreen"
+          ],
+          "reviewedClauses": [
+            "addCreditsFile; baseline init and wrapCreditsIO only"
+          ]
+        }
+      ],
+      "versionBoundary": "Styled Component splash values/List.copyOf and SpecialDates; notification parser delegates to StrictJsonParser; credits add narration flags.",
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    },
+    {
+      "id": "26.3:packs.selection",
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "family": "packs.selection",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/gui/screens/packs/PackSelectionModel.java",
+          "sha256": "27fe7f95340866346e16d4abbff3c16d3fa22b20b5f75a6f41b55895403ad05e",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$Entry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$EntryBase",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$SelectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel$UnselectedPackEntry",
+            "net.minecraft.client.gui.screens.packs.PackSelectionModel"
+          ],
+          "reviewedClauses": [
+            "constructor, updateRepoSelectedList, commit, findNewPacks",
+            "EntryBase.toggleSelection, move, canMoveUp/canMoveDown and high-contrast update"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackRepository.java",
+          "sha256": "ffeeb995e95ae32343a5a9d0b959dff7974f8e1bfa3aace41254a5be362f0c2e",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackRepository"
+          ],
+          "reviewedClauses": [
+            "reload, discoverAvailable, rebuildSelected, openAllSelected"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/Pack.java",
+          "sha256": "329fb48866b4afef473941136168d0d39d8b0112ecd5c199ff570a61a479a3fe",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.Pack$Metadata",
+            "net.minecraft.server.packs.repository.Pack$Position",
+            "net.minecraft.server.packs.repository.Pack$ResourcesSupplier",
+            "net.minecraft.server.packs.repository.Pack"
+          ],
+          "reviewedClauses": [
+            "readMetaAndCreate/readPackMetadata, open, equals, Position.insert"
+          ]
+        },
+        {
+          "view": "net/minecraft/server/packs/repository/PackDetector.java",
+          "sha256": "1c6c7364faaabbeca84d78327e1577499f15a97422a84090cac5b22daf7a894e",
+          "originalClasses": [
+            "net.minecraft.server.packs.repository.PackDetector"
+          ],
+          "reviewedClauses": [
+            "detectPackResources"
+          ]
+        }
+      ],
+      "versionBoundary": "Metadata opening is separate; resource opening yields streams; typed metadata fallback follows JsonParseException in inspected body.",
+      "openDependencies": [
+        "actual validator and link-resolution behavior",
+        "metadata implementations and compatibility/default codecs",
+        "UI action guards and callback reachability",
+        "resource-stream ownership, apply, failure and retirement"
+      ]
+    },
+    {
+      "id": "26.3:models.blockstates",
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "family": "models.blockstates",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/resources/model/BlockStateModelLoader.java",
+          "sha256": "e79ec71b34cad0d11690304328341f5f7220754978656f457589790d7ce23701",
+          "originalClasses": [
+            "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedBlockStateModelDispatcher",
+            "net.minecraft.client.resources.model.BlockStateModelLoader$LoadedModels",
+            "net.minecraft.client.resources.model.BlockStateModelLoader"
+          ],
+          "reviewedClauses": [
+            "loadBlockStates and loadBlockStateDefinitionStack"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/block/model/BlockStateModelWrapper.java",
+          "sha256": "73a9715ca1c1c9580d5d8cb5b9941b73c0fccf3ebdff51689576002aed6b353d",
+          "originalClasses": [
+            "net.minecraft.client.renderer.block.model.BlockStateModelWrapper$Unbaked",
+            "net.minecraft.client.renderer.block.model.BlockStateModelWrapper"
+          ],
+          "reviewedClauses": [
+            "update, tints and Unbaked.bake"
+          ]
+        }
+      ],
+      "versionBoundary": "Loader delegates to BlockStateModelDispatcher.CODEC, which is not in this capture; registry lookup, per-resource catches and ordered map composition are inspected.",
+      "openDependencies": [
+        "26.3 BlockStateModelDispatcher.CODEC and its delegated grammar",
+        "full variant/multipart codec and state-domain comparisons",
+        "overlap/error paths requiring bytecode disambiguation",
+        "weighted selection, bake, custom renderer and loaded registry closure"
+      ]
+    },
+    {
+      "id": "26.3:models.generated",
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "family": "models.generated",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/resources/model/cuboid/ItemModelGenerator.java",
+          "sha256": "705705060b2058795fed1bcdfcaa9218f61f720e0362ced23966aec00cb1cfa9",
+          "originalClasses": [
+            "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$ItemLayerKey",
+            "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection",
+            "net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace",
+            "net.minecraft.client.resources.model.cuboid.ItemModelGenerator"
+          ],
+          "reviewedClauses": [
+            "ordered layer traversal, per-layer shared-operation use and ItemLayerKey",
+            "bakeExtrudedSprite, selected bakeSideFaces UV/edge clauses, getSideFaces and checkTransition"
+          ]
+        }
+      ],
+      "versionBoundary": "Cuboid package; computes each layer through a shared key of baked material/modelState/layerIndex; per-pixel side set retained.",
+      "openDependencies": [
+        "actual sprite frame/transparency admission",
+        "complete UV/transform/material/bake comparison",
+        "shared-operation ownership and cache retirement",
+        "rendered equivalence and performance across hosts/backends"
+      ]
+    },
+    {
+      "id": "26.3:textures.images",
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "family": "textures.images",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "com/mojang/blaze3d/platform/NativeImage.java",
+          "sha256": "8d24ad8bdf4f038f9d790c0c36b178bd45152015ea49ce6888b6bdddaaba0da1",
+          "originalClasses": [
+            "com.mojang.blaze3d.platform.NativeImage$Format",
+            "com.mojang.blaze3d.platform.NativeImage$WriteCallback",
+            "com.mojang.blaze3d.platform.NativeImage"
+          ],
+          "reviewedClauses": [
+            "constructors, read overloads and close only"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/AbstractTexture.java",
+          "sha256": "89318eebd98cf2031698a5d1439a1ee58a35fe5c29511b8fdb60af5588ab6f80",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.AbstractTexture"
+          ],
+          "reviewedClauses": [
+            "selected ownership/release and access APIs"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/TextureContents.java",
+          "sha256": "6cc30cec6eef8824f9467907d5d4b761983bdcf7a1d47fbe252c6d52dd3e4460",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.TextureContents"
+          ],
+          "reviewedClauses": [
+            "load, blur, clamp and close where present"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/renderer/texture/SimpleTexture.java",
+          "sha256": "8cedab9fbbe2c062a92b35fd845e0e53080b8396c4abfb10e0c09973caa79296",
+          "originalClasses": [
+            "net.minecraft.client.renderer.texture.SimpleTexture"
+          ],
+          "reviewedClauses": [
+            "selected load/loadContents delegation"
+          ]
+        }
+      ],
+      "versionBoundary": "ByteBuffer read selects RGBA; AbstractTexture uses RenderPearl types and releaseTextures method.",
+      "openDependencies": [
+        "PngInfo, STB, native allocator and malformed-byte bounds",
+        "ReloadableTexture loading/upload/failure closure",
+        "mipmap and channel representation comparisons",
+        "backend/device completion and final reclamation"
+      ]
+    },
+    {
+      "id": "26.3:text.builtin_lists",
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "family": "text.builtin_lists",
+      "evidenceKind": "source-inspection",
+      "nativeConformance": "unqualified",
+      "formalClaims": [],
+      "reviewedViews": [
+        {
+          "view": "net/minecraft/client/PeriodicNotificationManager.java",
+          "sha256": "b16e95bd0d70d7529e5989a74107c2fe84212c56dfd28a7cdad019f2174483e6",
+          "originalClasses": [
+            "net.minecraft.client.PeriodicNotificationManager$Notification",
+            "net.minecraft.client.PeriodicNotificationManager$NotificationTask",
+            "net.minecraft.client.PeriodicNotificationManager"
+          ],
+          "reviewedClauses": [
+            "codec, prepare, apply, stopTimer, task reset and run"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/resources/SplashManager.java",
+          "sha256": "320e15f2394c6a1c607eda8074561b470c8721e5c866fa0bdd5e9a588625e95a",
+          "originalClasses": [
+            "net.minecraft.client.resources.SplashManager"
+          ],
+          "reviewedClauses": [
+            "prepare, apply and getSplash"
+          ]
+        },
+        {
+          "view": "net/minecraft/client/gui/screens/WinScreen.java",
+          "sha256": "dafe2d32a0193b3fcb1fba6c6fc43394f83c56503427396de9b21952e0d6707b",
+          "originalClasses": [
+            "net.minecraft.client.gui.screens.WinScreen$CreditsReader",
+            "net.minecraft.client.gui.screens.WinScreen"
+          ],
+          "reviewedClauses": [
+            "addCreditsFile; baseline init and wrapCreditsIO only"
+          ]
+        }
+      ],
+      "versionBoundary": "Selected notification/splash/credits clauses retain 1.21.11 structure with named source variables and changed toast-manager access.",
+      "openDependencies": [
+        "actual text codecs and invalid-input comparisons",
+        "clock/random/user adapters and normalization edge cases",
+        "timer negative values, overflow, reuse and queued-action retirement",
+        "font/narration/UI completion and caller reload lifecycle"
+      ]
+    }
+  ]
+}

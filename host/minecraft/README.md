@@ -6,6 +6,8 @@ The [expanded research contract](intent.md) owns target-selection and completion
 
 The [scope audit](SCOPE-AUDIT.md) checks all ten expanded deliverables against current evidence and names the thinner families to address next. It keeps scoped model/native results separate from family completion and actual provider/runtime support.
 
+The [resource consumer linework](BREADTH-LINEWORK.md) adds partial source contracts for pack selection, blockstates, generated models, images, and built-in text across all five Java releases. It distinguishes reviewed clauses from acquired views and keeps their next original-method comparisons, proofs, and dependency gaps explicit.
+
 The current [selected target graph](TARGETS.md) pins five Java releases, three separate Bedrock sample-source milestones, and eight provider variants. It preserves major/minor artifact format declarations and the Java 25 requirement for 26.3. The [static host API map](HOST-APIS.md) identifies actual 26.3 bytecode consumers without launching the game. Neither target selection nor a source census establishes runtime or rendering support.
 
 These are the initial comparison nodes, retained with their evidence; they are not the final target set:

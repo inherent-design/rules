@@ -1,0 +1,55 @@
+# Resource consumer linework
+
+This is a partial source map across five previously unlinked families and the five selected Java releases. It supplies concrete input, consumer, effect, and lifetime boundaries before deeper proofs. It does not establish complete family semantics, original-method conformance, loaded providers, or rendered equivalence. Bedrock and provider-assisted variants retain their separate maps and open obligations.
+
+[The structured contracts](breadth-contracts.json) bind each family/release slice to original client class identities and private source-view hashes. The acquisition read 276 selected original class identities and produced 121 private views. Those are acquisition counts; only the named clauses in `reviewedViews` were inspected for this map. Missing selected class names are not feature-absence evidence. Proprietary classes, source views, and resource text stay private.
+
+## Selection is a sequence of decisions
+
+The selected `PackDetector` in all five releases distinguishes missing paths, validated directories with a regular `pack.mcmeta`, and regular files whose names end with lowercase `.zip`. A `.jar` or uppercase `.ZIP` filename is not admitted by that regular-file suffix branch. Archive opening, metadata acceptance, compatibility, selected membership, and applied resources remain later decisions. This source fact does not qualify native filesystem behavior, symlink resolution, a pack's contents, or shader-pack detection.
+
+`PackRepository.rebuildSelected` drops requested IDs absent from the available map, then inserts available required packs using their default/fixed placement. `PackSelectionModel` reverses the repository list for display. Moving an entry changes that UI list and calls its notification callback; it does not itself update the repository. Commit updates the repository before invoking the output consumer. Toggle changes list membership before its callback, repository update, and high-contrast option update. These boundaries require separate captured state and partial-effect reporting if a callback fails. Raw action methods and UI `can*` guards remain distinct; no reachable UI defect is established here.
+
+At 1.21.11, the list-change callback changes from `Runnable` to a consumer receiving the entry. In 26.3, metadata opening is distinct from opening a stream of resource packs, and the repository flattens those streams. The metadata fallback changes too: 1.21.11 attempts fallback when the typed metadata is absent; the selected 26.3 body attempts it after a typed-parser `JsonParseException`. Actual metadata implementations and resulting runtime acceptance remain open. A backport must preserve the selected contract rather than assume these APIs are interchangeable.
+
+## Blockstates require a real state domain
+
+The 1.21.1 definition reader uses Gson adapters for `variants` and `multipart`. Its stack merge can clear accumulated variants when a multipart definition appears, then add that definition's variants. The 1.21.4 definition exposes state instantiation directly. By 1.21.5, the reader is a codec with optional, nonempty `variants` and `multipart` branches and a requirement that at least one exists. Its instantiation fills simple selectors before filling remaining states with multipart roots. The inspected 1.21.11 definition view is byte-identical to 1.21.5's view; that does not make their original class identities identical.
+
+Typed property lookup and allowed values are part of the consumer contract. The inspected 1.21.1 key/value condition negates a whole pipe-separated expression using its leading `!`; the inspected 1.21.5 terms represent negation per term. These source grammars need separate cases, including invalid properties, empty terms, and negated unions. They are not qualified by a generic string matcher. Decompiled overlap/error paths are not promoted to production defects or exact executable rules without disambiguation.
+
+The 26.3 loader delegates decoding to `BlockStateModelDispatcher.CODEC`, resolves IDs against actual state definitions, skips unknown definitions, catches per-resource failures, and combines successfully instantiated maps in stack order. That dispatcher's codec was not captured by this selection and remains an explicit dependency gap. The model wrapper also needs material, transformation, tint, seeded-part, and actual render-state contracts. A missing old `BlockModelDefinition` class name does not mean blockstate support disappeared.
+
+## Generated models depend on sprite data and version
+
+All five inspected generators visit `layer0` through `layer4` in order and stop at the first missing resolved texture. A later present layer does not bridge a gap. Particle references, lighting defaults, transforms, sprite resolution, and bake APIs have their own versioned owners.
+
+The older generators merge side transitions into spans by facing and anchor, expanding their minimum/maximum across unique animation frames. By 1.21.11, the generator uses a set of per-pixel side faces and a 0.1-pixel UV inset. The 26.3 generator retains the per-pixel approach while computing individual layers through a shared operation key containing material, model state, and layer index. These are different geometry/cache contracts. No pixel-equivalence, allocation-cost, or arbitrary-animation claim follows from this inspection. The sprite's actual transparency/frame decoder and full material/bake closure remain open.
+
+## Images have CPU and device owners
+
+The inspected `NativeImage` constructors require positive dimensions, record a long-sized channel allocation, and select zeroed versus uninitialized allocation. Read paths validate a PNG header before delegating to STB. The stream overload releases its temporary buffer and closes its input in `finally`. CPU image close selects the appropriate deallocator and zeros the pointer. These are source clauses; allocation limits, malformed-image behavior, channel representation, and native failure paths still need bounded original-method comparisons. They are not proved merely by the use of a long size field.
+
+The 26.3 byte-buffer read has an RGBA output path; older selected overloads permit an explicit or absent format. Starting with 1.21.4, the byte-array path chooses heap-native temporary storage when the stack has insufficient space. This is separate from the decoded image's retained allocation.
+
+Texture ownership changes from OpenGL IDs to GPU texture objects by 1.21.5, adds texture views and sampler ownership by 1.21.11, and uses RenderPearl API types in 26.3. `TextureContents` owns a decoded CPU image and optional metadata; its absent blur/clamp metadata defaults are false. The later `SimpleTexture` delegates loading through `ReloadableTexture`, whose upload/failure/retirement closure is not completed here. CPU close, GPU object close, upload acceptance, device completion, and final reclamation must remain distinct. Existing host lifetime rules remain relevant, but no backend or driver has been exercised for this band.
+
+## Built-in text has scheduling and UI effects
+
+Splashes are line-oriented input: trim each line, filter a specific hash, and select using live date, user, and random context. Empty output can return no splash outside special-date branches. By 1.21.11, prepared values are styled components copied into a replacement list, and date lookup delegates to `SpecialDates`. The preparation body uses the current Minecraft resource manager rather than the passed manager. That is an ownership question to resolve in its caller, not a demonstrated reload defect.
+
+Credits use nested section, discipline, title, and name collections. The selected parser adds lines incrementally; the enclosing file wrapper catches exceptions. A later malformed record therefore cannot be assumed to roll back earlier additions. Actual parsing, retained partial lines, narration, layout, user substitution, and UI completion still need controlled comparison. No original credits, poem, or splash payload is published here.
+
+Periodic notifications decode a group-to-list map. `delay` defaults to zero; `period`, `title`, and `message` are required by the selected codec. Group selection precedes scheduling. Empty selections and zero periods stop the timer; other scheduling admission is delegated to the Java timer API. The task checks elapsed periods in list order, queues a UI toast, and returns after the first matching notification. Reset cancels the old task and carries its elapsed counter into a replacement. Timer cancellation does not prove an already queued UI action has retired. Negative periods, overflow, canceled-timer reuse, callback failure, and caller lifecycle remain unqualified. The JSON parser dependency changes to `StrictJsonParser` by 1.21.11.
+
+## Next comparisons and host consequences
+
+| Family | Bounded next comparison | Necessary host distinction |
+| --- | --- | --- |
+| Pack selection | Original detector and repository/order decisions on disposable paths and controlled pack suppliers, including absent/required/fixed entries and callback failure. | Filename spelling, filesystem identity, metadata admission, selected order, resource publication, and ownership are separate. |
+| Blockstates | Original decoding and state matching over a small attributed state domain; independently compare stack precedence and invalid terms. Resolve the 26.3 dispatcher first. | Typed domain lookup, partial failure, deterministic versus sampled choices, and retained baked state. |
+| Generated models | Tiny authored sprite/frame inputs, layer gaps, separated boundaries, and versioned span versus pixel output. | CPU geometry, image ownership, cache keys, uploaded material, and rendered output. |
+| Images | Bounded decoder/dimension/channel cases and close/read lifecycle, followed separately by actual upload/retirement where a backend is available. | Allocation bounds, native buffer custody, thread admission, device completion, and final release. |
+| Built-in text | Authored credits/splash/notification inputs with controlled clock/random/user/scheduler adapters; preserve partial results and queued actions. | Parse versus apply, time units, callback ordering, UI scope closure, and queued-work retirement. |
+
+`breadth_contracts_check.py` checks the finite target/family matrix, references, source identities, and evidence-state separation. Its negative controls reject missing slices, wrong target binding, missing dependencies, and invented native/proof qualification. The optional private readback verifies source bytes and selected original classes against retained inputs; neither mode proves the semantic interpretation. The [scope audit](SCOPE-AUDIT.md) and all family review states remain incomplete. Provider composition, complete field/consumer semantics, design proposals, and host-platform qualification remain part of the active goal.

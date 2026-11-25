@@ -37,6 +37,8 @@ Pack discovery also retains a specific unresolved consumer boundary: filename/ho
 
 These families take priority over adding more detail to the already bounded cache fixture. Other material gaps remain: actual provider composition, complete vanilla property/tint semantics, Polytone manager payloads and consumers, shader/backend contracts, and operational UX. Closing a thin family does not automatically close those gaps.
 
+The subsequent [resource consumer linework](BREADTH-LINEWORK.md) now gives these five families partial source slices across all five selected Java releases. It identifies concrete version changes and pending consumers, including the uncaptured 26.3 blockstate dispatcher, generated span versus pixel geometry, CPU/device image ownership, and scheduled UI work. Those source records do not satisfy the missing native comparison or proof obligations, and no parent review state is advanced.
+
 ## Evidence integration rules
 
 The inventory now links the generic item-program and property/cache bands to their relevant families with explicit limits and, where useful, retained case IDs. Every parent review state remains pending or partial. The generic compiler's authored callbacks do not qualify actual game values. The host-free cache comparison is linked to its provider implementation; it is not counted as native execution of all 33 property readers.
