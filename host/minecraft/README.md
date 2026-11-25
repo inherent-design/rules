@@ -13,6 +13,8 @@ The [study intent](intent.md) owns scope and completion requirements. Shared def
 
 The first [decoding band](DECODING.md) retains 169 original-client parser calls across 15 families. Lean and Bend agree with 96 selected cases across eight families. These qualify bounded vanilla decoding behavior; consumer execution and both modded refinements remain unfinished.
 
+The [resource-selection band](RESOURCES.md) compares 36 generated folder-pack scenarios in both versions, preserving distinct single/stack metadata ownership, filters, opened bytes, and later metadata failures. Repository selection, ZIPs, overlays, reloads, and rendering remain outside that band.
+
 The study covers pack discovery, metadata and selection; identifiers, priority and resource stacks; decoding, references, validation and failure; models and item presentation; textures, atlases and animation; fonts and text; sounds and particles; equipment and entity presentation; GUI and accessibility resources; shader-facing resources; server-offered packs; reload preparation, publication and retirement; and the game state those definitions consume. Unrelated Minecraft systems remain explicit boundary nodes until a resource consumer needs their rules.
 
 Original assets, Minecraft binaries, decompiled sources, downloaded tools, user accounts, worlds, and private game installations are not public study artifacts. Acquisition and native comparisons use attributed private inputs. Ordinary CI checks the authored rules and bounded retained comparisons without starting Minecraft or the studied applications.

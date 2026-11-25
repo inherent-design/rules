@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "selections": [
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.PathPackResources",
+      "binaryClassSha256": "0a449c11bbc24568851f8adf7fcc0d312c2f35c5ab46169a226b917bfedf32fa",
+      "readableSelectionSha256": "dcc2f49b20c937bfefaca0ece9f3c394537e4b444dee5976eb898c25b3722ad8",
+      "members": [
+        "constructor",
+        "getResource",
+        "listResources",
+        "getNamespaces",
+        "close"
+      ],
+      "scope": "Physical folder provider and path decomposition delegation;no ZIP/symlink qualification.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.resources.MultiPackResourceManager",
+      "binaryClassSha256": "0141a180a44090e3f8a133f6c3f34536aa83789578b6730dc89bc4efd1429541",
+      "readableSelectionSha256": "8f2c369e642fab00e6fe2bce3fc41548e899405c7a2961d50ccd4c24e847ad61",
+      "members": [
+        "constructor",
+        "getResource",
+        "getResourceStack",
+        "listResources",
+        "close"
+      ],
+      "scope": "Pack order,namespace discovery,filter composition and dispatch.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.resources.FallbackResourceManager",
+      "binaryClassSha256": "cb84739e30214079af9e1f511fb0857e33c80b5080afca45ab94923613f3c16a",
+      "readableSelectionSha256": "573854a896d046e4bd78742f210383f89325531a3dc7e196a19bb3f39e5ed922",
+      "members": [
+        "getResource",
+        "createStackMetadataFinder",
+        "getResourceStack",
+        "listResources"
+      ],
+      "scope": "Selected file floor,higher metadata,own stack metadata,filter ordering.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.resources.Resource",
+      "binaryClassSha256": "1993244188cebf79f95e584f2b942a9f0590bc0a0aba46451179ac3cec7c3405",
+      "readableSelectionSha256": "fcea58f5417d8f6b2a8c3bb4c0c59050ba9b587f70d1db95aa13919d65d2854a",
+      "members": [
+        "open",
+        "metadata"
+      ],
+      "scope": "Body stream and cached lazy metadata remain separate.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.resources.ResourceMetadata",
+      "binaryClassSha256": "d6f28cb6af1d39f0a7f7bc32fa0668e07bb32dd7961e6d82670537dda1b265e5",
+      "readableSelectionSha256": "fca26a1db430b6bf1191ff7e98d6adf3177966089bc23fe78534269ebd3801f9",
+      "members": [
+        "fromJsonStream",
+        "getSection"
+      ],
+      "scope": "Actual metadata JSON parsing and requested-section decode.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.AbstractPackResources",
+      "binaryClassSha256": "6d6c934ef436686e84fbbce03d9313709ae9c4f8e6c0c3e159f70af1d34cb2b5",
+      "readableSelectionSha256": "d4cc3f21fb08f9b224f09b654a9034fd9b761595e057db751861b96fb363e3f4",
+      "members": [
+        "getMetadataSection",
+        "getMetadataFromStream"
+      ],
+      "scope": "Pack filter metadata decoding and error handling.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.1",
+      "className": "net.minecraft.server.packs.resources.ResourceFilterSection",
+      "binaryClassSha256": "4cda954815734f75bfacd5a9b2343ad7f346be50f97241c1a02bef36d368cc13",
+      "readableSelectionSha256": "030c124d79b42c71b75dc1f34a647c2355710ffa6f9e728f5b409d1f6cf095dd",
+      "members": [
+        "isNamespaceFiltered",
+        "isPathFiltered"
+      ],
+      "scope": "Separate existential namespace/path checks;multi-entry composition not exercised in this native band.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.PathPackResources",
+      "binaryClassSha256": "e0beb622ca09a12d86fa05ca8a85fec4012a48dafba6f61ddc34f71823f0630a",
+      "readableSelectionSha256": "dcc2f49b20c937bfefaca0ece9f3c394537e4b444dee5976eb898c25b3722ad8",
+      "members": [
+        "constructor",
+        "getResource",
+        "listResources",
+        "getNamespaces",
+        "close"
+      ],
+      "scope": "Physical folder provider and path decomposition delegation;no ZIP/symlink qualification.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.resources.MultiPackResourceManager",
+      "binaryClassSha256": "25e249027ff5bd8234518afd8e42ab6898916affb06969d648cc66c116bbc48a",
+      "readableSelectionSha256": "8f2c369e642fab00e6fe2bce3fc41548e899405c7a2961d50ccd4c24e847ad61",
+      "members": [
+        "constructor",
+        "getResource",
+        "getResourceStack",
+        "listResources",
+        "close"
+      ],
+      "scope": "Pack order,namespace discovery,filter composition and dispatch.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.resources.FallbackResourceManager",
+      "binaryClassSha256": "4a31458ce1a0202a5a952f0454f587d95058e82e31462d677753846c65abdc7b",
+      "readableSelectionSha256": "573854a896d046e4bd78742f210383f89325531a3dc7e196a19bb3f39e5ed922",
+      "members": [
+        "getResource",
+        "createStackMetadataFinder",
+        "getResourceStack",
+        "listResources"
+      ],
+      "scope": "Selected file floor,higher metadata,own stack metadata,filter ordering.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.resources.Resource",
+      "binaryClassSha256": "f0fa65ce587f2421ff0ec3f31dc56e6e96a19d4a9cc54614f224b945d2c061ff",
+      "readableSelectionSha256": "fcea58f5417d8f6b2a8c3bb4c0c59050ba9b587f70d1db95aa13919d65d2854a",
+      "members": [
+        "open",
+        "metadata"
+      ],
+      "scope": "Body stream and cached lazy metadata remain separate.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.resources.ResourceMetadata",
+      "binaryClassSha256": "431042ae654d2a6595928801409a376f7ffa2e9ab4c4abfcc5444ab5696d9f30",
+      "readableSelectionSha256": "52b016ff2a09cbd0ad0c5904dab4304724245b7309dea55e0438569ebc12002d",
+      "members": [
+        "fromJsonStream",
+        "getSection"
+      ],
+      "scope": "Actual metadata JSON parsing and requested-section decode.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.AbstractPackResources",
+      "binaryClassSha256": "51c4011714d42b8b9ccae3b2890282756a1b117bba6be2abb179e28f60e57a8d",
+      "readableSelectionSha256": "fdb2eacfc2ff5095a69f335b1f0b04d17d4c6ae0f1585b0c778f4c58e780a1d3",
+      "members": [
+        "getMetadataSection",
+        "getMetadataFromStream"
+      ],
+      "scope": "Pack filter metadata decoding and error handling.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    },
+    {
+      "minecraft": "1.21.5",
+      "className": "net.minecraft.server.packs.resources.ResourceFilterSection",
+      "binaryClassSha256": "1ec3219150fe01377d848c168e8d657688158fede51c5013a7c0994e761456b6",
+      "readableSelectionSha256": "26703b8a9fccf587d40d6784c3008daa8308fde3c1971cd1fef3b9b4ddedd1ae",
+      "members": [
+        "isNamespaceFiltered",
+        "isPathFiltered"
+      ],
+      "scope": "Separate existential namespace/path checks;multi-entry composition not exercised in this native band.",
+      "evidence": "Inspected private readable view + scoped actual original-client calls;not translation or full-consumer equivalence proof."
+    }
+  ]
+}

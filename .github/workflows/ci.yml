@@ -45,6 +45,7 @@ jobs:
           export PATH="$PWD/.tools/bend/bin:$PWD/.tools/lean-4.34.0-linux/bin:$PATH"
           python3 scripts/check-rules.py
           python3 host/minecraft/codec_conformance.py
+          python3 host/minecraft/resource_conformance.py
           scripts/ci-export
 
   hosts:

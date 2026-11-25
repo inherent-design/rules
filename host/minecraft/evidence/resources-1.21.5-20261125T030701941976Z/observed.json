@@ -1,0 +1,471 @@
+[
+  {
+    "id": "low-only",
+    "single": {
+      "source": "low-only-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": true,
+      "clamp": false
+    },
+    "stack": [
+      {
+        "source": "low-only-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "low-only-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "high-replaces",
+    "single": {
+      "source": "high-replaces-high",
+      "content": "HIGH",
+      "textureMetadata": true,
+      "blur": false,
+      "clamp": true
+    },
+    "stack": [
+      {
+        "source": "high-replaces-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      },
+      {
+        "source": "high-replaces-high",
+        "content": "HIGH",
+        "textureMetadata": true,
+        "blur": false,
+        "clamp": true
+      }
+    ],
+    "listed": [
+      {
+        "source": "high-replaces-high",
+        "content": "HIGH",
+        "textureMetadata": true,
+        "blur": false,
+        "clamp": true,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "reversed-order",
+    "single": {
+      "source": "reversed-order-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": true,
+      "clamp": false
+    },
+    "stack": [
+      {
+        "source": "reversed-order-high",
+        "content": "HIGH",
+        "textureMetadata": true,
+        "blur": false,
+        "clamp": true
+      },
+      {
+        "source": "reversed-order-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "reversed-order-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "higher-metadata-only",
+    "single": {
+      "source": "higher-metadata-only-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": false,
+      "clamp": true
+    },
+    "stack": [
+      {
+        "source": "higher-metadata-only-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "higher-metadata-only-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": false,
+        "clamp": true,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "lower-metadata-only",
+    "single": {
+      "source": "lower-metadata-only-high",
+      "content": "HIGH",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "lower-metadata-only-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      },
+      {
+        "source": "lower-metadata-only-high",
+        "content": "HIGH",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "lower-metadata-only-high",
+        "content": "HIGH",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "filter-removes-lower",
+    "single": null,
+    "stack": [],
+    "listed": []
+  },
+  {
+    "id": "filter-keeps-own",
+    "single": {
+      "source": "filter-keeps-own-high",
+      "content": "HIGH",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "filter-keeps-own-high",
+        "content": "HIGH",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "filter-keeps-own-high",
+        "content": "HIGH",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "filter-other-namespace",
+    "single": {
+      "source": "filter-other-namespace-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": true,
+      "clamp": false
+    },
+    "stack": [
+      {
+        "source": "filter-other-namespace-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "filter-other-namespace-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "filter-other-path",
+    "single": {
+      "source": "filter-other-path-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": true,
+      "clamp": false
+    },
+    "stack": [
+      {
+        "source": "filter-other-path-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "filter-other-path-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "filter-metadata-only",
+    "single": {
+      "source": "filter-metadata-only-low",
+      "content": "LOW",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "filter-metadata-only-low",
+        "content": "LOW",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "filter-metadata-only-low",
+        "content": "LOW",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "filter-with-own-metadata",
+    "single": {
+      "source": "filter-with-own-metadata-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": false,
+      "clamp": true
+    },
+    "stack": [
+      {
+        "source": "filter-with-own-metadata-low",
+        "content": "LOW",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "filter-with-own-metadata-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": false,
+        "clamp": true,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "malformed-higher-metadata",
+    "single": {
+      "source": "malformed-higher-metadata-low",
+      "content": "LOW",
+      "metadataError": {
+        "exception": "com.google.gson.JsonParseException",
+        "message": "com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 3 path $.\nSee https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json",
+        "observerError": false
+      }
+    },
+    "stack": [
+      {
+        "source": "malformed-higher-metadata-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "malformed-higher-metadata-low",
+        "content": "LOW",
+        "metadataError": {
+          "exception": "com.google.gson.JsonParseException",
+          "message": "com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 3 path $.\nSee https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json",
+          "observerError": false
+        },
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "malformed-lower-metadata",
+    "single": {
+      "source": "malformed-lower-metadata-high",
+      "content": "HIGH",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "malformed-lower-metadata-low",
+        "content": "LOW",
+        "metadataError": {
+          "exception": "com.google.gson.JsonParseException",
+          "message": "com.google.gson.stream.MalformedJsonException: Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON at line 1 column 3 path $.\nSee https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json",
+          "observerError": false
+        }
+      },
+      {
+        "source": "malformed-lower-metadata-high",
+        "content": "HIGH",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "malformed-lower-metadata-high",
+        "content": "HIGH",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "no-metadata",
+    "single": {
+      "source": "no-metadata-low",
+      "content": "LOW",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "no-metadata-low",
+        "content": "LOW",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "no-metadata-low",
+        "content": "LOW",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "selected-invalid-content",
+    "single": {
+      "source": "selected-invalid-content-high",
+      "content": "{malformed",
+      "textureMetadata": false
+    },
+    "stack": [
+      {
+        "source": "selected-invalid-content-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      },
+      {
+        "source": "selected-invalid-content-high",
+        "content": "{malformed",
+        "textureMetadata": false
+      }
+    ],
+    "listed": [
+      {
+        "source": "selected-invalid-content-high",
+        "content": "{malformed",
+        "textureMetadata": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "dot-path-identifier",
+    "single": null,
+    "stack": [],
+    "listed": [
+      {
+        "source": "dot-path-identifier-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "empty-path-identifier",
+    "single": null,
+    "stack": [],
+    "listed": [
+      {
+        "source": "empty-path-identifier-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false,
+        "location": "fixture:defs/entry.txt"
+      }
+    ]
+  },
+  {
+    "id": "trailing-directory-prefix",
+    "single": {
+      "source": "trailing-directory-prefix-low",
+      "content": "LOW",
+      "textureMetadata": true,
+      "blur": true,
+      "clamp": false
+    },
+    "stack": [
+      {
+        "source": "trailing-directory-prefix-low",
+        "content": "LOW",
+        "textureMetadata": true,
+        "blur": true,
+        "clamp": false
+      }
+    ],
+    "listError": {
+      "exception": "java.lang.IllegalArgumentException",
+      "message": "Trailing slash in path defs/",
+      "observerError": false
+    }
+  }
+]

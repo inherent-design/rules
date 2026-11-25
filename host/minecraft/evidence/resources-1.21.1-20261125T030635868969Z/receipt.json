@@ -1,0 +1,553 @@
+{
+  "schema": 1,
+  "minecraft": "1.21.1",
+  "scope": "Actual PathPackResources/MultiPackResourceManager folder lookup,stack,metadata and listing;no pack repository/UI/ZIP/reload/render.",
+  "clientSha256": "499f6897d1837516680f3114072d8106e11c9adcd933fe5cf051b551089b0c99",
+  "mappingSha256": "140c47931cccc8fc9e4c22d7603e2d714d1a953a146f51ea7397d95c955536ec",
+  "requestSha256": "546dcee25704b13429f702450b01878b28cd6756b1d1781301e5b20328559f38",
+  "classEntrySha256": {
+    "net.minecraft.SharedConstants": "c90fc49d47bb3018cad99303e5874e49e0ff24e70125d0a9aadf654ade670ea7",
+    "net.minecraft.server.Bootstrap": "c4b3b83dc839ac5cbcb1916c7e5c3583235a3542d7522256292f1683e9e80e4c",
+    "net.minecraft.server.packs.PathPackResources": "0a449c11bbc24568851f8adf7fcc0d312c2f35c5ab46169a226b917bfedf32fa",
+    "net.minecraft.server.packs.PackLocationInfo": "72096715014818d4a7ce07bb9b6d6150a4632b53d675be550bf81fac2ef6ec6b",
+    "net.minecraft.network.chat.Component": "968325cb6d447be8f77ea817dad589fcac6ba6625775a70cc805098d4765a767",
+    "net.minecraft.server.packs.repository.PackSource": "d5f7d49991e9c7544560b3049d4a9d4362ae997167b21cf19af1e6bd94175236",
+    "net.minecraft.server.packs.PackType": "490a824dc783da0e0504e932afe3a848ea78e31ca5c25a2f05827575338c2e43",
+    "net.minecraft.resources.ResourceLocation": "143a5767b02120e87c2aa8dd9b5f7452eaf2f9a97bd3a51c4aa5eb32569c4e74",
+    "net.minecraft.server.packs.resources.MultiPackResourceManager": "0141a180a44090e3f8a133f6c3f34536aa83789578b6730dc89bc4efd1429541",
+    "net.minecraft.server.packs.resources.Resource": "1993244188cebf79f95e584f2b942a9f0590bc0a0aba46451179ac3cec7c3405",
+    "net.minecraft.server.packs.resources.ResourceMetadata": "d6f28cb6af1d39f0a7f7bc32fa0668e07bb32dd7961e6d82670537dda1b265e5",
+    "net.minecraft.client.resources.metadata.texture.TextureMetadataSection": "938d12e2273768fc9338afbb27756595f9d901e7548a79a54969d8695615a0a5",
+    "net.minecraft.server.packs.metadata.MetadataSectionSerializer": "f580a58b96368669fb557c558992a5077156bbfe97aad0558272eab535e03c1f"
+  },
+  "sourceSha256": {
+    "ResourceProbe.java": "bb454ce056c409004d02c09d7d52ac0641cb8b77ed799cfc24f0a7c68f6c6607",
+    "native_resources.py": "bd5641cefca7c94a90a43a4060da635646e9e52a4c223aa5909f2c49d0099b14",
+    "native_codecs.py": "6714dfc434029849890e855a5096cdabdd530bc31063a46fb32965f33c2d57e8",
+    "mappings.py": "2395156653641adc3455bae12b65a4b831bc39849818444908680ad0f2967668"
+  },
+  "fixturesBefore": {
+    "dot-path-identifier-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "dot-path-identifier-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "dot-path-identifier-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "dot-path-identifier-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "dot-path-identifier-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "dot-path-identifier-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "empty-path-identifier-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "empty-path-identifier-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "empty-path-identifier-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "empty-path-identifier-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "empty-path-identifier-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "empty-path-identifier-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-keeps-own-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-keeps-own-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "filter-keeps-own-high/pack.mcmeta": "fcb3669999a09e2736f394e8c865658b64672df847e7c255b56a08172a5f0fb0",
+    "filter-keeps-own-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-keeps-own-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-keeps-own-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-keeps-own-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-metadata-only-high/pack.mcmeta": "7190d032a1c6d55b5b2bb1723c976af4b754c0e847a33797f9dccb0a60b180e5",
+    "filter-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-other-namespace-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-namespace-high/pack.mcmeta": "55404be89713d40826eda7e14972888afc6ed5e30e3f04075c62e44727734218",
+    "filter-other-namespace-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-namespace-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-other-namespace-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-other-namespace-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-other-path-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-path-high/pack.mcmeta": "9b92f0d966fe6f8cfc36eceab93c34e3e80a5ff6c1de1634bc52a1983fbd4eb8",
+    "filter-other-path-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-path-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-other-path-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-other-path-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-removes-lower-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-removes-lower-high/pack.mcmeta": "fcb3669999a09e2736f394e8c865658b64672df847e7c255b56a08172a5f0fb0",
+    "filter-removes-lower-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-removes-lower-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-removes-lower-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-removes-lower-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-with-own-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-with-own-metadata-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "filter-with-own-metadata-high/pack.mcmeta": "7190d032a1c6d55b5b2bb1723c976af4b754c0e847a33797f9dccb0a60b180e5",
+    "filter-with-own-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-with-own-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-with-own-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-with-own-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "high-replaces-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "high-replaces-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "high-replaces-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "high-replaces-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "high-replaces-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "high-replaces-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "high-replaces-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "high-replaces-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "higher-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "higher-metadata-only-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "higher-metadata-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "higher-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "higher-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "higher-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "higher-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "low-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "low-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "low-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "low-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "low-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "low-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "lower-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "lower-metadata-only-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "lower-metadata-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "lower-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "lower-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "lower-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "lower-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-higher-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-higher-metadata-high/assets/fixture/defs/entry.txt.mcmeta": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "malformed-higher-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-higher-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-higher-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "malformed-higher-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "malformed-higher-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-lower-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-lower-metadata-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "malformed-lower-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-lower-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-lower-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "malformed-lower-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "malformed-lower-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "no-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "no-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "no-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "no-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "no-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "reversed-order-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "reversed-order-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "reversed-order-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "reversed-order-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "reversed-order-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "reversed-order-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "reversed-order-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "reversed-order-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "selected-invalid-content-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "selected-invalid-content-high/assets/fixture/defs/entry.txt": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "selected-invalid-content-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "selected-invalid-content-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "selected-invalid-content-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "selected-invalid-content-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "selected-invalid-content-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "trailing-directory-prefix-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "trailing-directory-prefix-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "trailing-directory-prefix-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "trailing-directory-prefix-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "trailing-directory-prefix-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "trailing-directory-prefix-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea"
+  },
+  "fixturesAfter": {
+    "dot-path-identifier-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "dot-path-identifier-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "dot-path-identifier-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "dot-path-identifier-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "dot-path-identifier-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "dot-path-identifier-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "empty-path-identifier-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "empty-path-identifier-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "empty-path-identifier-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "empty-path-identifier-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "empty-path-identifier-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "empty-path-identifier-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-keeps-own-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-keeps-own-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "filter-keeps-own-high/pack.mcmeta": "fcb3669999a09e2736f394e8c865658b64672df847e7c255b56a08172a5f0fb0",
+    "filter-keeps-own-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-keeps-own-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-keeps-own-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-keeps-own-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-metadata-only-high/pack.mcmeta": "7190d032a1c6d55b5b2bb1723c976af4b754c0e847a33797f9dccb0a60b180e5",
+    "filter-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-other-namespace-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-namespace-high/pack.mcmeta": "55404be89713d40826eda7e14972888afc6ed5e30e3f04075c62e44727734218",
+    "filter-other-namespace-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-namespace-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-other-namespace-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-other-namespace-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-other-path-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-path-high/pack.mcmeta": "9b92f0d966fe6f8cfc36eceab93c34e3e80a5ff6c1de1634bc52a1983fbd4eb8",
+    "filter-other-path-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-other-path-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-other-path-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-other-path-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-removes-lower-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-removes-lower-high/pack.mcmeta": "fcb3669999a09e2736f394e8c865658b64672df847e7c255b56a08172a5f0fb0",
+    "filter-removes-lower-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-removes-lower-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-removes-lower-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-removes-lower-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "filter-with-own-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-with-own-metadata-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "filter-with-own-metadata-high/pack.mcmeta": "7190d032a1c6d55b5b2bb1723c976af4b754c0e847a33797f9dccb0a60b180e5",
+    "filter-with-own-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "filter-with-own-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "filter-with-own-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "filter-with-own-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "high-replaces-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "high-replaces-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "high-replaces-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "high-replaces-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "high-replaces-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "high-replaces-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "high-replaces-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "high-replaces-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "higher-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "higher-metadata-only-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "higher-metadata-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "higher-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "higher-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "higher-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "higher-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "low-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "low-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "low-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "low-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "low-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "low-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "lower-metadata-only-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "lower-metadata-only-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "lower-metadata-only-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "lower-metadata-only-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "lower-metadata-only-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "lower-metadata-only-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "lower-metadata-only-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-higher-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-higher-metadata-high/assets/fixture/defs/entry.txt.mcmeta": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "malformed-higher-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-higher-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-higher-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "malformed-higher-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "malformed-higher-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-lower-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-lower-metadata-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "malformed-lower-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "malformed-lower-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "malformed-lower-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "malformed-lower-metadata-low/assets/fixture/defs/entry.txt.mcmeta": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "malformed-lower-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "no-metadata-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "no-metadata-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "no-metadata-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "no-metadata-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "no-metadata-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "reversed-order-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "reversed-order-high/assets/fixture/defs/entry.txt": "b43e72eed0488d784f1e3092b48320e2355e9d6313f7ac401542018eec20d8a3",
+    "reversed-order-high/assets/fixture/defs/entry.txt.mcmeta": "4f3c945eaca791d8d33b1ee67b4d74c0a90913b3f88492339aaf6860bab04194",
+    "reversed-order-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "reversed-order-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "reversed-order-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "reversed-order-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "reversed-order-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "selected-invalid-content-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "selected-invalid-content-high/assets/fixture/defs/entry.txt": "d94369f560e33258400e3e856e3be50fc380a5e7aa493b7f974fd3eaf36fb555",
+    "selected-invalid-content-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "selected-invalid-content-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "selected-invalid-content-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "selected-invalid-content-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "selected-invalid-content-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "trailing-directory-prefix-high/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "trailing-directory-prefix-high/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea",
+    "trailing-directory-prefix-low/assets/fixture/canary.txt": "a87330b0752680fe210060ea088cd7b0e7895dd45c51546ffb1028c39af810df",
+    "trailing-directory-prefix-low/assets/fixture/defs/entry.txt": "5fbdda1b8c72e849493a8534652682ed35b5bde51896cd1f457278883b0c5cf4",
+    "trailing-directory-prefix-low/assets/fixture/defs/entry.txt.mcmeta": "058d373fa8ad61db2f96bdd3b668b7e386d86d4c5238d71b0e37b7244d869036",
+    "trailing-directory-prefix-low/pack.mcmeta": "92b7232624aa7043cb774a82f8a0eb04bdf0d2cbdb3c6260a11f43bd236dbeea"
+  },
+  "fixturesUnchanged": true,
+  "observedSha256": "c9bcdf80a959f364cbe50dd2354dfd90ddbc870a61bb708355d2f05a05b95bc8",
+  "libraries": [
+    {
+      "sha256": "77e34a13bccffc6c8b1a0e3ed46ddb0ea7dd56f2104ecdfacaaec9e4054ac332",
+      "sha1": "1227f9e0666314f9de41477e3ec277e542ed7f7b",
+      "file": "java-objc-bridge-1.1.jar"
+    },
+    {
+      "sha256": "fef001a7a13515c273f30915915580782afbc45273cc07aa15994e51563ef310",
+      "sha1": "b1d8ab82d11d92fd639b56d639f8f46f739dd5fa",
+      "file": "oshi-core-6.4.10.jar"
+    },
+    {
+      "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593",
+      "sha1": "b3add478d4382b78ea20b1671390a858002feb6c",
+      "file": "gson-2.10.1.jar"
+    },
+    {
+      "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26",
+      "sha1": "1dcf1de382a0bf95a3d8b0849546c88bac1292c9",
+      "file": "failureaccess-1.0.1.jar"
+    },
+    {
+      "sha256": "bc65dea7cfd9e4dacf8419d8af0e741655857d27885bb35d943d7187fc3a8fce",
+      "sha1": "5e64ec7e056456bef3a4bc4c6fdaef71e8ab6318",
+      "file": "guava-32.1.2-jre.jar"
+    },
+    {
+      "sha256": "29280822f4b0796acef1f79b90b1d0c1edd86c10e876a848e04b8a6298a16bf9",
+      "sha1": "61ad4ef7f9131fcf6d25c34b817f90d6da06c9e9",
+      "file": "icu4j-73.2.jar"
+    },
+    {
+      "sha256": "319ea7b53b5e52f62ad3e2b81e9db7f0751240edac548bd74f5f19e35dc21a3b",
+      "sha1": "de8bc95660e1b2fe8793fd427a7a10dcec5b3ea7",
+      "file": "authlib-6.0.54.jar"
+    },
+    {
+      "sha256": "830bfd639c8db49236bbd8e45d3a2b8c96c56ff654a10118654958a6235d4c44",
+      "sha1": "5c685c5ffa94c4cd39496c7184c1d122e515ecef",
+      "file": "blocklist-1.0.10.jar"
+    },
+    {
+      "sha256": "c8ee4136e474ac7723ca2b432ec8d1a2bc88ef7d1ec57c314ba9e33cdc83dd75",
+      "sha1": "d15b53a14cf20fdcaa98f731af5dda654452c010",
+      "file": "brigadier-1.3.10.jar"
+    },
+    {
+      "sha256": "ffc138bc2596c291781b0d5e211ccac51f0f2345f27fc2742f335cedf7e2870d",
+      "sha1": "67d4de6d7f95d89bcf5862995fb854ebaec02a34",
+      "file": "datafixerupper-8.0.16.jar"
+    },
+    {
+      "sha256": "3dc3190204bac5f4184d8405bfe1f724f73a6a15a0d3f36ec7f69e6872c1a76c",
+      "sha1": "24cb95ffb0e3433fd6e844c04e68009e504ca1c0",
+      "file": "logging-1.2.7.jar"
+    },
+    {
+      "sha256": "16d70e7968b45caffc81576268eb000f473fb60bf257182d3447dea8ec919d5a",
+      "sha1": "da05971b07cbb379d002cf7eaec6a2048211fefc",
+      "file": "patchy-2.2.10.jar"
+    },
+    {
+      "sha256": "c2a95b499e76fada7dd63e9b0ec797b678d411c2b0ee6f37f4dc674662bfb0af",
+      "sha1": "3cad216e3a7f0c19b4b394388bc9ffc446f13b14",
+      "file": "text2speech-1.17.9.jar"
+    },
+    {
+      "sha256": "56595fb20b0b85bc91d0d503dad50bb7f1b9afc0eed5dffa6cbb25929000484d",
+      "sha1": "4e3eb3d79888d76b54e28b350915b5dc3919c9de",
+      "file": "commons-codec-1.16.0.jar"
+    },
+    {
+      "sha256": "a58af12ee1b68cfd2ebb0c27caef164f084381a00ec81a48cc275fd7ea54e154",
+      "sha1": "f11560da189ab563a5c8e351941415430e9304ea",
+      "file": "commons-io-2.15.1.jar"
+    },
+    {
+      "sha256": "daddea1ea0be0f56978ab3006b8ac92834afeefbd9b7e4e6316fca57df0fa636",
+      "sha1": "4bfc12adfe4842bf07b657f0369c4cb522955686",
+      "file": "commons-logging-1.2.jar"
+    },
+    {
+      "sha256": "a4393f5b395486cc74d0325c9b41311abb9513ba0fd7ef8cf46e9345c3bffbea",
+      "sha1": "f8f3d8644afa5e6e1a40a3a6aeb9d9aa970ecb4f",
+      "file": "netty-buffer-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "bcc96737a0f912fcf031cf8c45ebda352a90a40437db0832caad3d5a63618b38",
+      "sha1": "384ba4d75670befbedb45c4d3b497a93639c206d",
+      "file": "netty-codec-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "a8aca0c8e9347acc75c885ecc749195d9775369aa520b9276f2d1128210a6c17",
+      "sha1": "7cceacaf11df8dc63f23d0fb58e9d4640fc88404",
+      "file": "netty-common-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "bd4771d19149cbc9c7464ed2d58035d79cdfed7adb59d38718b0d8e7a3dcc2de",
+      "sha1": "abb86c6906bf512bf2b797a41cd7d2e8d3cd7c36",
+      "file": "netty-handler-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "38a018c6d9fb2cb11b72881354782b45080bbd20b9a0ad6cde28b80d431ed0b1",
+      "sha1": "cec8348108dc76c47cf87c669d514be52c922144",
+      "file": "netty-resolver-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "ee65fa17fe65f18fd22269f92bddad85bfb3a263cf65eba01e116a2f30b86ff5",
+      "sha1": "795da37ded759e862457a82d9d92c4d39ce8ecee",
+      "file": "netty-transport-classes-epoll-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "93b5fe8f3829dcb5e033d8d40d59159366ff4cf8266c903bbd6a4aeed9e59bac",
+      "sha1": "5514744c588190ffda076b35a9b8c9f24946a960",
+      "file": "netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar"
+    },
+    {
+      "sha256": "1e83fc9f82e5415cdbb688c6a5c6bbbd7d198e9fdd6fdf64b3dc5d54dd1acfd0",
+      "sha1": "54188f271e388e7f313aea995e82f58ce2cdb809",
+      "file": "netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar"
+    },
+    {
+      "sha256": "412fe140257c2dda5a5e15bee911298bd61928d03ee6be4db588e82c196c5dc6",
+      "sha1": "d469d84265ab70095b01b40886cabdd433b6e664",
+      "file": "netty-transport-native-unix-common-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "197fd2d6c6b4afe677d9e95bf2e36b49a0bcabdfce0583683fb73f29a3f5a407",
+      "sha1": "f37380d23c9bb079bc702910833b2fd532c9abd0",
+      "file": "netty-transport-4.1.97.Final.jar"
+    },
+    {
+      "sha256": "b5543ee08d062d551cf0a5c9bc0fb70588b0382079029ba48941fa9c9be8a5d4",
+      "sha1": "c24946d46824bd528054bface3231d2ecb7e95e8",
+      "file": "fastutil-8.5.12.jar"
+    },
+    {
+      "sha256": "ae4caceb3840730c2537f9b7fb55a01baba580286b4122951488bcee558c2449",
+      "sha1": "28934d48aed814f11e4c584da55c49fa7032b31b",
+      "file": "jna-platform-5.14.0.jar"
+    },
+    {
+      "sha256": "34ed1e1f27fa896bca50dbc4e99cf3732967cec387a7a0d5e3486c09673fe8c6",
+      "sha1": "67bf3eaea4f0718cb376a181a629e5f88fa1c9dd",
+      "file": "jna-5.14.0.jar"
+    },
+    {
+      "sha256": "df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28",
+      "sha1": "4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c",
+      "file": "jopt-simple-5.0.4.jar"
+    },
+    {
+      "sha256": "051aceb8bbcc62d0f5b2b8ac72c53767f9c59bfbd050151e65bef6f51c8ed9c9",
+      "sha1": "659feffdd12280201c8aacb8f7be94f9a883c824",
+      "file": "commons-compress-1.26.0.jar"
+    },
+    {
+      "sha256": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c",
+      "sha1": "1ed471194b02f2c6cb734a0cd6f6f107c673afae",
+      "file": "commons-lang3-3.14.0.jar"
+    },
+    {
+      "sha256": "6fe9026a566c6a5001608cf3fc32196641f6c1e5e1986d1037ccdbd5f31ef743",
+      "sha1": "e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada",
+      "file": "httpclient-4.5.13.jar"
+    },
+    {
+      "sha256": "6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f",
+      "sha1": "51cf043c87253c9f58b539c9f7e44c8894223850",
+      "file": "httpcore-4.4.16.jar"
+    },
+    {
+      "sha256": "5d7beae7ff15d8516d6517121d7f12a79a6ac180df64b5fcec55d5be21056e53",
+      "sha1": "bea6fede6328fabafd7e68363161a7ea6605abd1",
+      "file": "log4j-api-2.22.1.jar"
+    },
+    {
+      "sha256": "46dccecac556623d8e2ce8648496824a82951d139062a4e61148aff1a25ed18d",
+      "sha1": "7183a25510a02ad00cc6a95d3b3d2a7d3c5a8dc4",
+      "file": "log4j-core-2.22.1.jar"
+    },
+    {
+      "sha256": "1920cd69d8682c7ef249bb407a3d0685723aa1785867cf4c53258da6bf14da97",
+      "sha1": "d7e6693c2606cb7e7335047d7bb96dec52db5665",
+      "file": "log4j-slf4j2-impl-2.22.1.jar"
+    },
+    {
+      "sha256": "e067f29a3701426b67ed973036949c6e58ca5bb53eef7240b2e71e286d252a9e",
+      "sha1": "8872d22b293e8f5d7d56ff92be966e6dc28ebdc6",
+      "file": "jorbis-0.0.17.jar"
+    },
+    {
+      "sha256": "cac9f22f83a7aa33eebda73c16ff5261e3cb4911b6bafcf4c79ea486099d0c9a",
+      "sha1": "22566d58af70ad3d72308bab63b8339906deb649",
+      "file": "joml-1.10.5.jar"
+    },
+    {
+      "sha256": "e1a7ab07106349d9a8a68f6860b7b73b353c502b81e662aca77f931c6fdd3de8",
+      "sha1": "a0db6c84a8becc8ca05f9dbfa985edc348a824c7",
+      "file": "lwjgl-freetype-3.3.3.jar"
+    },
+    {
+      "sha256": "bedc757fd2b1b255146db26b74b9cbd1fcf5644b89b47b104fa721c741604259",
+      "sha1": "efa1eb78c5ccd840e9f329717109b5e892d72f8e",
+      "file": "lwjgl-glfw-3.3.3.jar"
+    },
+    {
+      "sha256": "e99e31269e6678a4bfc62ef24c50a481c01cbdd004861ece9a59ba12768c6516",
+      "sha1": "b543467b7ff3c6920539a88ee602d34098628be5",
+      "file": "lwjgl-jemalloc-3.3.3.jar"
+    },
+    {
+      "sha256": "ae0e82767cacf08921f578fba9d84753ddeb00ceada0510a2b4a882be28fbf95",
+      "sha1": "daada81ceb5fc0c291fbfdd4433cb8d9423577f2",
+      "file": "lwjgl-openal-3.3.3.jar"
+    },
+    {
+      "sha256": "5062da750e5f7ec89e27e8b67b7d40fa8c4b16890159e35f828116ce6c8eca1e",
+      "sha1": "02f6b0147078396a58979125a4c947664e98293a",
+      "file": "lwjgl-opengl-3.3.3.jar"
+    },
+    {
+      "sha256": "0cff7aa46ea9d70fcc20857015293ea80fbf21adcac34600c84da9b81a44ca93",
+      "sha1": "25dd6161988d7e65f71d5065c99902402ee32746",
+      "file": "lwjgl-stb-3.3.3.jar"
+    },
+    {
+      "sha256": "ee0515054ee19a3f4088426fee9d879eb2ee657b07e5064e4e2c851f6adcf14b",
+      "sha1": "82d755ca94b102e9ca77283b9e2dc46d1b15fbe5",
+      "file": "lwjgl-tinyfd-3.3.3.jar"
+    },
+    {
+      "sha256": "dc9c7b2d48e8396d68895f8902ffa01e46253de44dfe927533ff09457ebfeec4",
+      "sha1": "29589b5f87ed335a6c7e7ee6a5775f81f97ecb84",
+      "file": "lwjgl-3.3.3.jar"
+    },
+    {
+      "sha256": "d74a3334fb35195009b338a951f918203d6bbca3d1d359033dc33edd1cadc9ef",
+      "sha1": "4b986a99445e49ea5fbf5d149c4b63f6ed6c6780",
+      "file": "lz4-java-1.8.0.jar"
+    },
+    {
+      "sha256": "0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c",
+      "sha1": "7cf2726fdcfbc8610f9a71fb3ed639871f315340",
+      "file": "slf4j-api-2.0.9.jar"
+    }
+  ],
+  "tools": {
+    "java": {
+      "executable": "java",
+      "sha256": "8261edc44ac1643e7aba9f0df5155b6d81f7977cc8a0374bb7630d838d2a3910"
+    },
+    "javac": {
+      "executable": "javac",
+      "sha256": "ecf20ae96db9c6237e18c5c7684fbf70ebc19472b16248d1844868584e2c9783"
+    }
+  },
+  "commands": [
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv retained privately; authored collector constructs arguments."
+    },
+    {
+      "exitCode": 0,
+      "timedOut": false,
+      "ownedGroupAbsent": true,
+      "stdoutSha256": "42232dcf79ff530cc5b947d7a578492238e610055ca413dcb37f763d380011b1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argvDisclosure": "Exact owner-local argv retained privately; authored collector constructs arguments."
+    }
+  ],
+  "publicCasesSha256": "f830dd1a845415de387a2b32e83c6ab0052e35605074856db1e0ec7a4295ec41",
+  "publicFilesSha256": "14c093dde419adf7304b846458014fbfe3bed536b2a96b68521edf25d30e3f72",
+  "limits": [
+    "Generated folders with manual pack order;not ZIP/discovery/UI/overlays/reload/baking/rendering.",
+    "No original game, mapping, library, decompiled source, account, world, or installation payload exported.",
+    "Metadata decoding can fail after bytes were opened;retain both facts."
+  ]
+}
