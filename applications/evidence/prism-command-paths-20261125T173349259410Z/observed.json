@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "posix-prepare",
+      "role": "prepare",
+      "expectedProgram": "/opt/Java Runtime/bin/java",
+      "actualProgram": "/opt/Java Runtime/bin/java",
+      "preserved": true,
+      "consumerArgs": [
+        "/opt/Java Runtime/bin/java",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/prepare.json"
+      ],
+      "qtVersion": "6.12.0"
+    },
+    {
+      "id": "posix-wrapper",
+      "role": "wrapper",
+      "expectedProgram": "/opt/Java Runtime/bin/java",
+      "actualProgram": "/opt/Java Runtime/bin/java",
+      "preserved": true,
+      "consumerArgs": [
+        "/opt/Java Runtime/bin/java",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/launch.json",
+        "--"
+      ],
+      "qtVersion": "6.12.0"
+    },
+    {
+      "id": "windows-native-prepare",
+      "role": "prepare",
+      "expectedProgram": "C:\\Program Files\\Java\\bin\\javaw.exe",
+      "actualProgram": "C:\\Program Files\\Java\\bin\\javaw.exe",
+      "preserved": true,
+      "consumerArgs": [
+        "C:\\Program Files\\Java\\bin\\javaw.exe",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/prepare.json"
+      ],
+      "qtVersion": "6.12.0"
+    },
+    {
+      "id": "windows-native-wrapper",
+      "role": "wrapper",
+      "expectedProgram": "C:\\Program Files\\Java\\bin\\javaw.exe",
+      "actualProgram": "C:Program FilesJavabinjavaw.exe",
+      "preserved": false,
+      "consumerArgs": [
+        "C:Program FilesJavabinjavaw.exe",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/launch.json",
+        "--"
+      ],
+      "qtVersion": "6.12.0"
+    },
+    {
+      "id": "windows-forward-prepare",
+      "role": "prepare",
+      "expectedProgram": "C:/Program Files/Java/bin/javaw.exe",
+      "actualProgram": "C:/Program Files/Java/bin/javaw.exe",
+      "preserved": true,
+      "consumerArgs": [
+        "C:/Program Files/Java/bin/javaw.exe",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/prepare.json"
+      ],
+      "qtVersion": "6.12.0"
+    },
+    {
+      "id": "windows-forward-wrapper",
+      "role": "wrapper",
+      "expectedProgram": "C:/Program Files/Java/bin/javaw.exe",
+      "actualProgram": "C:/Program Files/Java/bin/javaw.exe",
+      "preserved": true,
+      "consumerArgs": [
+        "C:/Program Files/Java/bin/javaw.exe",
+        "-Dfile.encoding=UTF-8",
+        "-jar",
+        "../.empack-tools/empack-bootstrap.jar",
+        "--invocation-file",
+        "../.empack-tools/launch.json",
+        "--"
+      ],
+      "qtVersion": "6.12.0"
+    }
+  ]
+}

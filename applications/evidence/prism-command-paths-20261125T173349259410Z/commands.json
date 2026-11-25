@@ -1,0 +1,251 @@
+[
+  {
+    "label": "native-check",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/state",
+      "--cache-dir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/cache",
+      "--workdir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/project",
+      "--yes",
+      "--color",
+      "never",
+      "check",
+      "--json"
+    ],
+    "exitCode": 0,
+    "pid": 6142,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.01801920821890235,
+    "streams": {
+      "stdout": "f07c0b9deb2e647aacb17ed0e50c027f75b80c88c4aa06de9ff4e8baa5ea9755",
+      "stderr": "5773284106309a0d75c2c774ab941064849bfcc6cdff08be9b4b800b2bbff6f2"
+    }
+  },
+  {
+    "label": "native-build",
+    "argv": [
+      "/Users/zer0cell/.local/bin/empack",
+      "--state-dir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/state",
+      "--cache-dir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/cache",
+      "--workdir",
+      "/private/tmp/rules-prism-command-paths-th55a7is/project",
+      "--yes",
+      "--color",
+      "never",
+      "build",
+      "--ad-hoc",
+      "prism",
+      "--delivery",
+      "references",
+      "--environment",
+      "client",
+      "--updates",
+      "snapshot",
+      "--format",
+      "zip"
+    ],
+    "exitCode": 0,
+    "pid": 6143,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.28388833394274116,
+    "streams": {
+      "stdout": "ea70107ecdf52bb4d6ee601227b06df0adf39b9503542f69b25393245e20bae4",
+      "stderr": "c253eaa7090da86d4f84437311c5c9b44b8824c85a54d77d234c196eab4ae7ab"
+    }
+  },
+  {
+    "label": "qt-flags",
+    "argv": [
+      "/opt/homebrew/bin/pkg-config",
+      "--cflags",
+      "--libs",
+      "Qt6Core",
+      "Qt6Network"
+    ],
+    "exitCode": 0,
+    "pid": 51995,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.03117300011217594,
+    "streams": {
+      "stdout": "b0691a048dc3d0b94c54a3ac7a2f4b5e98e20a1882de67ef49f9fc00046fb2ed",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "compile-reader",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "-DQT_NO_DEBUG",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-I/private/tmp/rules-prism-command-paths-th55a7is/source",
+      "/private/tmp/rules-prism-command-paths-th55a7is/reader.cpp",
+      "/private/tmp/rules-prism-command-paths-th55a7is/source/settings/INIFile.cpp",
+      "/private/tmp/rules-prism-command-paths-th55a7is/source/Json.cpp",
+      "-o",
+      "/private/tmp/rules-prism-command-paths-th55a7is/ini-reader",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtNetwork",
+      "-I/opt/homebrew/lib/QtNetwork.framework",
+      "-DQT_NETWORK_LIB",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtNetwork",
+      "-framework",
+      "QtCore",
+      "-Wl,-dead_strip",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "exitCode": 0,
+    "pid": 51996,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 4.431165375281125,
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "reader-environment",
+    "argv": [
+      "/private/tmp/rules-prism-command-paths-th55a7is/ini-reader",
+      "--environment"
+    ],
+    "exitCode": 0,
+    "pid": 53453,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.3580371658317745,
+    "streams": {
+      "stdout": "81e10a294b3425d86d24098b42f79fb90209aa3e0b286342738108962393dbe2",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "read-generated",
+    "argv": [
+      "/private/tmp/rules-prism-command-paths-th55a7is/ini-reader",
+      "/private/tmp/rules-prism-command-paths-th55a7is/instance.cfg"
+    ],
+    "exitCode": 0,
+    "pid": 53460,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.021967708133161068,
+    "streams": {
+      "stdout": "ee357cce38f7876bb1945dbb2a7e4e04a848d177abe12f6dac317dec7a2b5b0b",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "posix-prepare",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/posix-prepare-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53461,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.030193541664630175,
+    "streams": {
+      "stdout": "cb4960fb37bae7911d5c246a2befabb0c95c0751bec08878f51457af60b26fec",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "posix-wrapper",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/posix-wrapper-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53462,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.028686916921287775,
+    "streams": {
+      "stdout": "403c69f615d43b2c2fc31e76c4859e3e0af575477879488092dcb4a93c8f2b3f",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "windows-native-prepare",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/windows-native-prepare-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53463,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.023085040971636772,
+    "streams": {
+      "stdout": "ff85f9d34156575f370882f77434d6a9c4901f34f424086b58d38f58c7f008f0",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "windows-native-wrapper",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/windows-native-wrapper-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53464,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.022259416989982128,
+    "streams": {
+      "stdout": "3f2a21a615bda5696ee2c49cfce702649449f30869147260c0de26da8042ed9c",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "windows-forward-prepare",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/windows-forward-prepare-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53465,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.022287041880190372,
+    "streams": {
+      "stdout": "a3700bafe46b82f3f7cd00e56a38928dca45487da181ebdb8ebf52352aee7b2f",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "windows-forward-wrapper",
+    "argv": [
+      "/private/tmp/rules-prism-commands-pn3twm74/probe-release",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-command-paths-20261125T173349259410Z/windows-forward-wrapper-input.json"
+    ],
+    "exitCode": 0,
+    "pid": 53466,
+    "processGroupAbsent": true,
+    "timedOut": false,
+    "seconds": 0.023230541963130236,
+    "streams": {
+      "stdout": "a53cae923b762c71e6dfd883f06a3a74a5c53dd7644d397f109a6ce263571908",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]

@@ -6,6 +6,8 @@ A separate [launch lifecycle band](LAUNCH.md) studies sequencing and abort deliv
 
 The [command band](COMMANDS.md) compares real Qt hook outcomes and wrapper argument handoff. It retains two parser contracts, empty-token helper failures, and a missing-executable headline with code zero; settings, complete launcher behavior, and any corrective guard remain separately scoped.
 
+The [generated Java-path follow-up](COMMAND-PATHS.md) passes an actual empack reference export through original INI and command parsers. It reproduces native-separator loss in a quoted wrapper program token, with Windows paths treated as data on Mac; a full Windows launch and any production correction remain pending.
+
 A [cleanup and override-record band](CLEANUP.md) compares selected deletion and record helpers with disposable files and scoped models. It retains raw-path protection, recorded-destination, and partial-cleanup counterexamples; full-importer qualification remains pending.
 
 The [component-decision band](COMPONENTS.md) compares protected selections, exact and suggested versions, activation flags, obsolete-dependency candidates, cached-state round trips, and removal failure through source functions and supported Qt. Its models match the selected retained comparisons; actual component loading, publication, and game launch remain separate obligations.
