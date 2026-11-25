@@ -1,0 +1,9 @@
+error[E0599]: no method named `lock` found for struct `AdditionPlan` in the current scope
+  --> /Users/zer0cell/production/rules/applications/evidence/empack-selection-20261125T210710572931Z/work/driver.rs:59:31
+   |
+59 |             let selected=plan.lock().dependencies[&k].selected.as_ref().unwrap();
+   |                               ^^^^ private field, not a method
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0599`.

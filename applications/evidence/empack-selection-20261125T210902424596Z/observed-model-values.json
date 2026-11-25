@@ -1,0 +1,233 @@
+{
+  "preferences": [
+    {
+      "id": "project-default",
+      "actual": "prefer-stable"
+    },
+    {
+      "id": "root-preference",
+      "actual": "stable-only"
+    },
+    {
+      "id": "operation-override",
+      "actual": "any"
+    },
+    {
+      "id": "missing-key-default",
+      "actual": "prefer-stable"
+    },
+    {
+      "id": "retained-key-default",
+      "actual": "prefer-stable"
+    },
+    {
+      "id": "operation-without-key",
+      "actual": "stable-only"
+    }
+  ],
+  "admissions": [
+    {
+      "id": "pin-and-preference-invalid",
+      "accepted": false
+    }
+  ],
+  "updates": [
+    {
+      "id": "automatic-keeps-author-policy",
+      "accepted": true,
+      "failure": null,
+      "afterAuthorPin": "automatic",
+      "afterPreference": "stable-only",
+      "selected": 2,
+      "changed": [
+        "a"
+      ],
+      "existing": [
+        "a"
+      ],
+      "afterRoots": [
+        "a"
+      ],
+      "inputUnchanged": true,
+      "otherIntentPreserved": true
+    },
+    {
+      "id": "explicit-pin-replaces-root-preference",
+      "accepted": true,
+      "failure": null,
+      "afterAuthorPin": "Version2",
+      "afterPreference": "none",
+      "selected": 2,
+      "changed": [
+        "a"
+      ],
+      "existing": [
+        "a"
+      ],
+      "afterRoots": [
+        "a"
+      ],
+      "inputUnchanged": true,
+      "otherIntentPreserved": true
+    },
+    {
+      "id": "held-without-reviewed-pin",
+      "accepted": false,
+      "failure": "invalid-project",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "held-reviewed-pin",
+      "accepted": true,
+      "failure": null,
+      "afterAuthorPin": "Version2",
+      "afterPreference": "none",
+      "selected": 2,
+      "changed": [
+        "a"
+      ],
+      "existing": [
+        "a"
+      ],
+      "afterRoots": [
+        "a"
+      ],
+      "inputUnchanged": true,
+      "otherIntentPreserved": true
+    },
+    {
+      "id": "held-mismatched-pin",
+      "accepted": false,
+      "failure": "invalid-pin",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "pin-not-requested",
+      "accepted": false,
+      "failure": "invalid-pin",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "pin-retained-not-author-root",
+      "accepted": false,
+      "failure": "invalid-pin",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "retained-without-promotion",
+      "accepted": true,
+      "failure": null,
+      "afterAuthorPin": "automatic",
+      "afterPreference": "stable-only",
+      "selected": 2,
+      "changed": [
+        "c"
+      ],
+      "existing": [
+        "c"
+      ],
+      "afterRoots": [
+        "a"
+      ],
+      "inputUnchanged": true,
+      "otherIntentPreserved": true
+    },
+    {
+      "id": "same-held-pin",
+      "accepted": false,
+      "failure": "retained-evidence",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "new-identity-is-not-update",
+      "accepted": false,
+      "failure": "not-installed",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "runtime-change-is-not-update",
+      "accepted": false,
+      "failure": "runtime-mismatch",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "project-change-is-not-update",
+      "accepted": false,
+      "failure": "occupied-key",
+      "afterAuthorPin": null,
+      "afterPreference": null,
+      "selected": null,
+      "changed": null,
+      "existing": null,
+      "afterRoots": null,
+      "inputUnchanged": true,
+      "otherIntentPreserved": null
+    },
+    {
+      "id": "same-held-pin-matching-evidence",
+      "accepted": true,
+      "failure": null,
+      "afterAuthorPin": "Version1",
+      "afterPreference": "none",
+      "selected": 1,
+      "changed": [],
+      "existing": [
+        "a"
+      ],
+      "afterRoots": [
+        "a"
+      ],
+      "inputUnchanged": true,
+      "otherIntentPreserved": true
+    }
+  ]
+}

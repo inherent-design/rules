@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "preferences": [
+    {
+      "id": "project-default",
+      "project": "prefer-stable",
+      "root": null,
+      "operation": null,
+      "rootApplies": true
+    },
+    {
+      "id": "root-preference",
+      "project": "prefer-stable",
+      "root": "stable-only",
+      "operation": null,
+      "rootApplies": true
+    },
+    {
+      "id": "operation-override",
+      "project": "prefer-stable",
+      "root": "stable-only",
+      "operation": "any",
+      "rootApplies": true
+    },
+    {
+      "id": "missing-key-default",
+      "project": "prefer-stable",
+      "root": "stable-only",
+      "operation": null,
+      "rootApplies": false
+    },
+    {
+      "id": "retained-key-default",
+      "project": "prefer-stable",
+      "root": "stable-only",
+      "operation": null,
+      "rootApplies": false
+    },
+    {
+      "id": "operation-without-key",
+      "project": "prefer-stable",
+      "root": null,
+      "operation": "stable-only",
+      "rootApplies": false
+    }
+  ],
+  "admissions": [
+    {
+      "id": "pin-and-preference-invalid",
+      "pinned": true,
+      "preferencePresent": true
+    }
+  ],
+  "updates": [
+    {
+      "id": "automatic-keeps-author-policy",
+      "key": "a",
+      "held": false,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "explicit-pin-replaces-root-preference",
+      "key": "a",
+      "held": false,
+      "version": 2,
+      "request": {
+        "key": "a",
+        "version": 2
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "held-without-reviewed-pin",
+      "key": "a",
+      "held": true,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "held-reviewed-pin",
+      "key": "a",
+      "held": true,
+      "version": 2,
+      "request": {
+        "key": "a",
+        "version": 2
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "held-mismatched-pin",
+      "key": "a",
+      "held": true,
+      "version": 2,
+      "request": {
+        "key": "a",
+        "version": 3
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "pin-not-requested",
+      "key": "a",
+      "held": false,
+      "version": 2,
+      "request": {
+        "key": "b",
+        "version": 1
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "pin-retained-not-author-root",
+      "key": "c",
+      "held": false,
+      "version": 2,
+      "request": {
+        "key": "c",
+        "version": 2
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "retained-without-promotion",
+      "key": "c",
+      "held": false,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "same-held-pin",
+      "key": "a",
+      "held": true,
+      "version": 1,
+      "request": {
+        "key": "a",
+        "version": 1
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "new-identity-is-not-update",
+      "key": "d",
+      "held": false,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "runtime-change-is-not-update",
+      "key": "a",
+      "held": false,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": true,
+      "foreignIdentity": false,
+      "evidenceMatches": false
+    },
+    {
+      "id": "project-change-is-not-update",
+      "key": "a",
+      "held": false,
+      "version": 2,
+      "request": null,
+      "runtimeMismatch": false,
+      "foreignIdentity": true,
+      "evidenceMatches": false
+    },
+    {
+      "id": "same-held-pin-matching-evidence",
+      "key": "a",
+      "held": true,
+      "version": 1,
+      "request": {
+        "key": "a",
+        "version": 1
+      },
+      "runtimeMismatch": false,
+      "foreignIdentity": false,
+      "evidenceMatches": true
+    }
+  ]
+}

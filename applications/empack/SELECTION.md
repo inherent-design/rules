@@ -1,6 +1,6 @@
 # Selection policy from catalog observation to application
 
-This source map connects empack's current assessment, synchronization, update, and runtime-migration boundaries. The [18 source selections](../sources/empack-selection-policy-selections.json) pin unchanged Git blobs at `0b4462e3032b4f09230b15329722eabefb7f574c` and name the inspected functions and test bodies. Tests described here were read, not executed by this study. No engine build, catalog request, CLI reproduction, or production change establishes additional behavior in this band.
+This source map connects empack's current assessment, synchronization, update, and runtime-migration boundaries. The [18 source selections](../sources/empack-selection-policy-selections.json) pin unchanged Git blobs at `0b4462e3032b4f09230b15329722eabefb7f574c` and name the inspected functions and test bodies. Engine test bodies described here were read, not executed by this study. The separate [core policy comparison](selection/README.md) now exercises selected preference, intent-admission, and exact-update helpers. It does not establish catalog, CLI, native publication, or complete workflow behavior. No engine build or production change ran.
 
 The missing design question is larger than an update label: which identity and policy did the caller request, what evidence was obtained, which exact candidate was interpreted, what could be prepared against retained state, and what was actually published? These are different values in the current implementation. Preserve them before changing commands or extracting a portable API.
 
@@ -44,7 +44,7 @@ The runtime-compatible observation ignores release-class preference but still ra
 
 After a successful catalog observation, an explicit analysis pin takes precedence over a held author pin; otherwise an automatic candidate is used. Held pins remain exact. Exact resolution still checks provider identity, content kind, and runtime eligibility, although a deliberate pin can bypass automatic release-class preference. Interactive selection checks membership in its offered runtime-eligible observations. A direct exact request is a different route and is not established by an interactive list entry.
 
-A pin does not skip the catalog phase or turn an unavailable catalog into a successful observation. Preserve its failure and the existing exact constraint separately. A preference is also not an instruction to rewrite existing exact selections during sync. The [synchronization study](SYNCHRONIZATION.md) already exercises the core retention rules; reuse that evidence rather than assume every policy edit authorizes an update.
+A pin does not skip the catalog phase or turn an unavailable catalog into a successful observation. Preserve its failure and the existing exact constraint separately. Valid intent does not combine an exact pin with a per-root automatic release preference. The owning `set_provider_pin` helper clears that preference; programmatically filling both fields is rejected. The native core comparison confirms this invariant. A preference is also not an instruction to rewrite existing exact selections during sync. The [synchronization study](SYNCHRONIZATION.md) already exercises the core retention rules; reuse that evidence rather than assume every policy edit authorizes an update.
 
 ## What assessment completion means
 
