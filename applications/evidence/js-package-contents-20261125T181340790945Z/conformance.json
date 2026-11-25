@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "nativePacks": 18,
+  "nativeCommands": 21,
+  "filePredicates": 177,
+  "archiveEntries": 134,
+  "symlinks": 5,
+  "leanLaws": 12,
+  "bendLaws": 9,
+  "negativeControls": [
+    "ignore-fallback-lost",
+    "empty-npmignore-does-not-replace",
+    "root-ignore-beats-files",
+    "nested-ignore-lost",
+    "main-not-required",
+    "npm-keeps-link",
+    "pnpm-loses-dangling",
+    "pnpm-keeps-external",
+    "yarn-drops-external",
+    "schema",
+    "manager",
+    "link-class",
+    "changed-archive-refused-before-decode"
+  ],
+  "availableSources": [
+    "lib/commands/pack.js",
+    "packages/plugin-pack/sources/commands/pack.ts",
+    "packages/plugin-pack/sources/packUtils.ts",
+    "pnpm/crates/pack/src/lib.rs",
+    "pnpm/crates/pack/src/contents.rs",
+    "pnpm/crates/pack/src/collation.rs",
+    "pnpm/crates/pack/src/tarball.rs",
+    "pnpm/crates/pack/src/source.rs",
+    "pnpm/crates/pack/src/lifecycle.rs",
+    "pnpm/crates/pack/src/options.rs",
+    "lib/index.js",
+    "pnpm/crates/fs-packlist/src/lib.rs",
+    "pnpm/crates/fs-packlist/src/symlinks.rs",
+    "pnpm/crates/fs-packlist/src/ignore_walk.rs",
+    "pnpm/crates/fs/src/internal_symlink.rs"
+  ],
+  "unavailableSources": [],
+  "artifacts": {
+    "node": "identity checked, not executed",
+    "npm": "identity checked, not executed",
+    "pnpm": "identity checked, not executed",
+    "yarn": "identity checked, not executed"
+  },
+  "basisFiles": 98,
+  "limits": [
+    "Literal fixture patterns and simple links are interpreted premises, not complete glob or filesystem traversal conformance.",
+    "Archive membership and link text do not establish safe extraction, consumer resolution, publication, or general host-read isolation.",
+    "No pack hooks, workspace ancestry/bundles, concurrent writer, upload, install, or other-platform qualification."
+  ]
+}

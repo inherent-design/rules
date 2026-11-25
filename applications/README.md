@@ -81,3 +81,5 @@ The [Cargo freshness band](cargo/FRESHNESS.md) separates metadata replay from ph
 The [joined empack authoring band](empack/PORTABLE-JOINED.md) connects the shared codec/core to actual native and browser storage, save/reopen, and verified Prism downloads. Independent backend/archive reads and an installed0.8.8 reference support the selected vanilla research flow. This does not qualify the production0.9 engine or promote the pending parent operations.
 
 The [deduplication band](js-dedupe/README.md) separates author constraints, saved selections, physical copies, and preview/application effects across npm, pnpm, and Yarn. It also corrects the omitted Yarn `dedupe` operation; the inventory now has 972 operations, with existing parent statuses preserved.
+
+The [package-contents band](js-package-contents/README.md) compares authored rules, required entry points, regular bytes, and typed links across local npm/pnpm/Yarn archives. It leaves consumer extraction, publication, and general matching behavior pending.
