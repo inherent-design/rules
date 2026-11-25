@@ -1,0 +1,3022 @@
+{
+  "schema": 1,
+  "status": "provider breadth discovery;all semantic/runtime qualification incomplete",
+  "provider": "polytone-Ty5Aowoi",
+  "artifactSha256": "7c78b6f425d84a85dc1dcdc6d2d00073fbe16f9de0217325467d9d218a5cd96d",
+  "generatorSha256": "f773a8cadbe27510c8951654cff84bb197244e751bfb30d3c205b320c1e3dd48",
+  "privateInspectionReceiptSha256": "a35681f6347a8a0267a1de286fa0b05af984b8294b5e3b2e9f2e01bc7ceeebdf",
+  "registrationOrder": [
+    "CONFIGS",
+    "NOISES",
+    "GLOBAL_EXPRESSION",
+    "SOUND_TYPES",
+    "BIOME_ID_MAPPERS",
+    "COLORMAPS",
+    "CUSTOM_PARTICLES",
+    "COLORS",
+    "COLORED_LIGHTS",
+    "BLOCK_SET",
+    "BLOCK_MODIFIERS",
+    "FLUID_MODIFIERS",
+    "CUSTOM_MODELS",
+    "ITEM_MODIFIERS",
+    "ITEM_MODELS",
+    "BIOME_MODIFIERS",
+    "VARIANT_TEXTURES",
+    "LIGHTMAPS",
+    "DIMENSION_MODIFIERS",
+    "PARTICLE_MODIFIERS",
+    "SLOTIFY",
+    "OVERLAY_MODIFIERS",
+    "ENTITY_MODIFIERS",
+    "CREATIVE_TABS_MODIFIERS",
+    "POST_TARGETS",
+    "POST_CHAINS",
+    "VOXEL_VOLUME",
+    "SHADER_UNIFORMS"
+  ],
+  "managers": [
+    {
+      "id": "polytone.block_modifiers",
+      "field": "BLOCK_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.block.BlockPropertiesManager",
+      "classEntrySha256": "d3adca8dcdd07e683bf2d328d55efb995d87db1c3c143c585102660c782fe951",
+      "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+      "constructorStartLine": 62,
+      "reloadOrder": 10,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "block_modifiers",
+          "block_properties"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BlockPropertyModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addSimpleColormap",
+        "applyWithLevel",
+        "getTerrainTintOverride",
+        "getVanillaColor",
+        "getVanillaFoliageOrGrass",
+        "getVoxelFlags",
+        "hasVisualOffset",
+        "maybeAssignToDefaultGrassAndFoliage",
+        "maybeModifyOffset",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel",
+        "runTickers"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertyModifier.java",
+          "lines": [
+            253
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "lines": [
+            452
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/Colormap.java",
+          "lines": [
+            212,
+            333
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/CellPalette.java",
+          "lines": [
+            282
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ClientLevelMixin.java",
+          "lines": [
+            57
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java",
+          "lines": [
+            72
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/compat/SodiumBlockRendererMixin.java",
+          "lines": [
+            26,
+            39
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/ModelRendererMixin.java",
+          "lines": [
+            24
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/TerrainParticleMixin.java",
+          "lines": [
+            21
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/compat/SodiumBlockRendererMixin.java",
+          "lines": [
+            22
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.fluid_modifiers",
+      "field": "FLUID_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.fluid.FluidPropertiesManager",
+      "classEntrySha256": "4bcf2c9836ce91d85c4b9140a4e2b88d9ef3969c0cacf384c06c2d11622bfc7a",
+      "source": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java",
+      "constructorStartLine": 41,
+      "reloadOrder": 11,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "fluid_modifiers",
+          "fluid_properties"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "FluidPropertyModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addConvertedBlockProperties",
+        "applyWithLevel",
+        "getModifier",
+        "getModifierOrVariant",
+        "hasAnyModifier",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/LegacyHelper.java",
+          "lines": [
+            524
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.custom_models",
+      "field": "CUSTOM_MODELS",
+      "className": "net.mehvahdjukaar.polytone.content.model.CustomModelsManager",
+      "classEntrySha256": "7369a852a238ac0332f6ecaff1b2610384e0c540c113381b071845ede7a83af7",
+      "source": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java",
+      "constructorStartLine": 25,
+      "reloadOrder": 12,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "custom_models"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "byNameCodec",
+        "getLayers",
+        "isEmpty",
+        "layerLocation",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/EntityModelSetMixin.java",
+          "lines": [
+            31
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.item_modifiers",
+      "field": "ITEM_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.item.ItemModifiersManager",
+      "classEntrySha256": "f6a4cc5eb5c03b17630781323b9fc09c48457c0205514ef1ecd594a26e259612",
+      "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+      "constructorStartLine": 32,
+      "reloadOrder": 13,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "item_modifiers",
+          "item_properties"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "ItemModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": true,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "earlyProcess",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.item_models",
+      "field": "ITEM_MODELS",
+      "className": "net.mehvahdjukaar.polytone.content.item.CustomItemModelsManager",
+      "classEntrySha256": "7426afb41c4fd7fc857b4561b15aaceddb9c5ec47d67061fd59b4fe1a9c877e2",
+      "source": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java",
+      "constructorStartLine": 35,
+      "reloadOrder": 14,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "custom_item_models"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": true,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addModelFromModifier",
+        "applyWithLevel",
+        "createAutoGeneratedModels",
+        "earlyProcess",
+        "getOverride",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "lines": [
+            101
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ItemOverridesMixin.java",
+          "lines": [
+            30
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ModelBakeryMixin.java",
+          "lines": [
+            35
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.biome_modifiers",
+      "field": "BIOME_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.biome.BiomeEffectsManager",
+      "classEntrySha256": "5748d45008830f6953a702e8d34c9c8450b60b29a425821c52a589420e24d3f3",
+      "source": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java",
+      "constructorStartLine": 39,
+      "reloadOrder": 15,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "biome_modifiers",
+          "biome_effects"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BiomeEffectModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "modifyFogParameters",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/platform/PolytoneForge.java",
+          "lines": [
+            127
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.noises",
+      "field": "NOISES",
+      "className": "net.mehvahdjukaar.polytone.content.noise.NoiseManager",
+      "classEntrySha256": "50a9b5c376c615bf9aa4e5fa8d942e5baadbc3436fa42bc10f0aff14ed012a40",
+      "source": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java",
+      "constructorStartLine": 23,
+      "reloadOrder": 1,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "noises"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "NoiseManager.NoiseConfig.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "NoiseConfig",
+        "PerlinSimplexNoise",
+        "applyWithLevel",
+        "getNoise",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/proxies/RandomProxy.java",
+          "lines": [
+            68
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.global_expression",
+      "field": "GLOBAL_EXPRESSION",
+      "className": "net.mehvahdjukaar.polytone.content.global_expressions.GlobalExpressionsManager",
+      "classEntrySha256": "578321acbad896d9aa11ad1fec19345ee25fe29fa4a00cf41eebd70f44bb2874",
+      "source": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java",
+      "constructorStartLine": 22,
+      "reloadOrder": 2,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "global_expressions"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "GlobalExpression.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "getValue",
+        "parseWithLevel",
+        "resetWithLevel",
+        "slots",
+        "tick"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/ClientFrameTicker.java",
+          "lines": [
+            113
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/PolyExpType.java",
+          "lines": [
+            33
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/proxies/GlobalProxy.java",
+          "lines": [
+            79
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.colormaps",
+      "field": "COLORMAPS",
+      "className": "net.mehvahdjukaar.polytone.content.colormap.ColormapsManager",
+      "classEntrySha256": "10f4da932097c2598c677b19faeaaaf6741643dbb06b73ce235a0af220532a7f",
+      "source": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java",
+      "constructorStartLine": 81,
+      "reloadOrder": 5,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "colormaps"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BiomeCompoundColorGetter.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "IColorGetter",
+        "add",
+        "applyWithLevel",
+        "byNameCodec",
+        "get",
+        "getOrCreateConcurrentColormap",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/ExpMath.java",
+          "lines": [
+            277
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/proxies/ParticleProxy.java",
+          "lines": [
+            181
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertyModifier.java",
+          "lines": [
+            249
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/Colormap.java",
+          "lines": [
+            80,
+            90
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java",
+          "lines": [
+            90
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/fluid/platform/FluidPropertiesManagerImpl.java",
+          "lines": [
+            38
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.lightmaps",
+      "field": "LIGHTMAPS",
+      "className": "net.mehvahdjukaar.polytone.content.lightmap.LightmapsManager",
+      "classEntrySha256": "e633517a71f6b040a40c81ae073da937ab7deb34963613451cd24bf127a8d658",
+      "source": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java",
+      "constructorStartLine": 47,
+      "reloadOrder": 17,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "lightmaps"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "Lightmap.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "byNameCodec",
+        "isGui",
+        "maybeModifyLightTexture",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel",
+        "setupForGUI"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsModifier.java",
+          "lines": [
+            54
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/lightmap/Lightmap.java",
+          "lines": [
+            40
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.java",
+          "lines": [
+            32,
+            39
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LightTextureMixin.java",
+          "lines": [
+            40,
+            55
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.colored_lights",
+      "field": "COLORED_LIGHTS",
+      "className": "net.mehvahdjukaar.polytone.content.shaders.light.ColoredLightsManager",
+      "classEntrySha256": "10d1991a39479a1f76f8ada6acdb767f027bd705ac35d191360d4668f09c6e8e",
+      "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+      "constructorStartLine": 67,
+      "reloadOrder": 8,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "colored_lights"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "ColoredLightEntry.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "BlockRule",
+        "addBlockAlias",
+        "addBlockLight",
+        "addEntityAlias",
+        "addEntityLight",
+        "addItemAlias",
+        "addItemLight",
+        "addParticleAlias",
+        "addParticleLight",
+        "aliasOf",
+        "appliesToShader",
+        "applyWithLevel",
+        "bindToShader",
+        "canPatchShaders",
+        "getBlockLights",
+        "getEnablingUniforms",
+        "getLightFor",
+        "hasAnyLights",
+        "hasBlockLights",
+        "hasEntityLights",
+        "lightStateOf",
+        "onParticleCreated",
+        "onParticlesCleared",
+        "onRenderTick",
+        "onTick",
+        "openBlockScan",
+        "parseWithLevel",
+        "patchShaderSource",
+        "patchSodiumChunkShaderSource",
+        "prepare",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/api/VoxelVolumeApi.java",
+          "lines": [
+            59,
+            67,
+            71,
+            75,
+            79,
+            87,
+            95,
+            103
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/ClientFrameTicker.java",
+          "lines": [
+            88,
+            115
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java",
+          "lines": [
+            159
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java",
+          "lines": [
+            40
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java",
+          "lines": [
+            102
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java",
+          "lines": [
+            102
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/PolytoneRenderHooks.java",
+          "lines": [
+            14,
+            16
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/BlockLightSource.java",
+          "lines": [
+            80,
+            81
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/MovingLightSource.java",
+          "lines": [
+            103
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/CellPalette.java",
+          "lines": [
+            375,
+            376,
+            401
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "lines": [
+            79,
+            175
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java",
+          "lines": [
+            41,
+            96,
+            102
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/compat/SodiumVeilSectionLightScanMixin.java",
+          "lines": [
+            24
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/compat/VeilSectionLightScanMixin.java",
+          "lines": [
+            26
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.biome_id_mappers",
+      "field": "BIOME_ID_MAPPERS",
+      "className": "net.mehvahdjukaar.polytone.content.biome.BiomeIdMapperManager",
+      "classEntrySha256": "3d9816e8baa9447122685bb6a9e7a3d4429fd2d53c8d02330ad22fe3468de137",
+      "source": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java",
+      "constructorStartLine": 19,
+      "reloadOrder": 4,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "biome_id_mappers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BiomeIdMapper.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "byNameCodec",
+        "get",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/proxies/PositionalProxy.java",
+          "lines": [
+            192
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapper.java",
+          "lines": [
+            14
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.dimension_modifiers",
+      "field": "DIMENSION_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.dimension.DimensionEffectsManager",
+      "classEntrySha256": "ea390a3da8d854c154b5ec35edfc8e6ae84ff3d5b1c625fa5f3df31357ae31cb",
+      "source": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java",
+      "constructorStartLine": 66,
+      "reloadOrder": 18,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "dimension_modifiers",
+          "dimension_effects"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "DimensionEffectsModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addConvertedBlockProperties",
+        "applyWithLevel",
+        "hasTranslucentSunAndMoon",
+        "modifyCloudHeight",
+        "modifyFogColor",
+        "modifyFogMagicNumber",
+        "modifySkyColor",
+        "modifySunsetColor",
+        "onDimensionChanged",
+        "parseWithLevel",
+        "resetWithLevel",
+        "shouldCancelFogWeatherDarken",
+        "shouldCancelSkyNightDarken",
+        "shouldCancelSkyWeatherDarken"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/LegacyHelper.java",
+          "lines": [
+            626
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ClientLevelMixin.java",
+          "lines": [
+            71,
+            77,
+            82,
+            87
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/DimensionSpecialEffectsMixin.java",
+          "lines": [
+            17
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/FogRendererMixin.java",
+          "lines": [
+            34,
+            45,
+            50
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java",
+          "lines": [
+            48,
+            90,
+            107
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.custom_particles",
+      "field": "CUSTOM_PARTICLES",
+      "className": "net.mehvahdjukaar.polytone.content.particle.custom.CustomParticlesManager",
+      "classEntrySha256": "a6d55297559770c11eb34dd371c267a3a41f20b9ce69fd08d53336e812d904db",
+      "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java",
+      "constructorStartLine": 57,
+      "reloadOrder": 6,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "custom_particles"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": true,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "GpuParticles",
+        "addSpriteSets",
+        "applyWithLevel",
+        "byNameCodec",
+        "createPreviewParticle",
+        "earlyProcess",
+        "getId",
+        "isDynamicParticle",
+        "makeParticle",
+        "parseWithLevel",
+        "resetWithLevel",
+        "spawnInWorld"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/PolytoneStub.java",
+          "lines": [
+            16
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/ParticleParticleEmitter.java",
+          "lines": [
+            76
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/ParticleSpec.java",
+          "lines": [
+            55
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleType.java",
+          "lines": [
+            275
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java",
+          "lines": [
+            137
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java",
+          "lines": [
+            57
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.particle_modifiers",
+      "field": "PARTICLE_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.particle.modifiers.ParticleModifiersManager",
+      "classEntrySha256": "27172a92c5642ee54bc8531166906383f3288eea3a3ec0b2cb2476ddf4e5231a",
+      "source": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java",
+      "constructorStartLine": 38,
+      "reloadOrder": 19,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "particle_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "ParticleModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addCustomParticleColor",
+        "applyWithLevel",
+        "getXpOrbReplaceParticle",
+        "maybeModify",
+        "parseWithLevel",
+        "resetWithLevel",
+        "setXpOrbReplace"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+          "lines": [
+            268,
+            270,
+            394
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java",
+          "lines": [
+            40
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.entity_modifiers",
+      "field": "ENTITY_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.entity.EntityModifiersManager",
+      "classEntrySha256": "3b96260f15d33bf97f3848c67960b5fa25c29d2a6baab2ff91bec4c6b0f80620",
+      "source": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java",
+      "constructorStartLine": 22,
+      "reloadOrder": 22,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "entity_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "EntityModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "onEntityTick",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/EntityMixin.java",
+          "lines": [
+            16
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/platform/PolytoneForge.java",
+          "lines": [
+            74
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.sound_types",
+      "field": "SOUND_TYPES",
+      "className": "net.mehvahdjukaar.polytone.content.sound.SoundTypesManager",
+      "classEntrySha256": "2558d6ca86c918085d6a574b4c221fb8788153beb025871603c2065eff36e62c",
+      "source": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java",
+      "constructorStartLine": 30,
+      "reloadOrder": 3,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "custom_sound_types",
+          "sound_types"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "getCustomSoundType",
+        "isDynamicSound",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/PolytoneStub.java",
+          "lines": [
+            18
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/sound/PolytoneSoundType.java",
+          "lines": [
+            178
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.variant_textures",
+      "field": "VARIANT_TEXTURES",
+      "className": "net.mehvahdjukaar.polytone.content.texture.VariantTextureManager",
+      "classEntrySha256": "e6615711ba17bf0724b81c1e0d4c3c39641ac9a1faac6c38f883d30b78786bee",
+      "source": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java",
+      "constructorStartLine": 39,
+      "reloadOrder": 16,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "variant_textures"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addTintOverrideHack",
+        "applyWithLevel",
+        "maybeModify",
+        "parseWithLevel",
+        "resetWithLevel",
+        "shouldSetTintTo0"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/LegacyHelper.java",
+          "lines": [
+            455
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockPropertyModifier.java",
+          "lines": [
+            282
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ModelBlockRendererMixin.java",
+          "lines": [
+            40
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.colors",
+      "field": "COLORS",
+      "className": "net.mehvahdjukaar.polytone.content.color.ColorManager",
+      "classEntrySha256": "7e77684d0373ab126f8f19e6383d15d0a3f0715940d70507448b9355aa3fed2b",
+      "source": "net/mehvahdjukaar/polytone/content/color/ColorManager.java",
+      "constructorStartLine": 118,
+      "reloadOrder": 7,
+      "resources": {
+        "style": "single-file-suffix-stack",
+        "folders": [
+          "polytone",
+          "colormatic",
+          "vanadium",
+          "optifine"
+        ],
+        "suffixes": [
+          "color.properties",
+          "colors.json"
+        ]
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "areEntityShadowsDisabled",
+        "getBlackSignGlow",
+        "getBlindnessFogDistance",
+        "getBlockOutlineColor",
+        "getDarknessFogDistance",
+        "getFishingLineColor",
+        "getFishingLineOffset",
+        "getLightningBoltColor",
+        "getPaintingRenderType",
+        "getPowderSnowFogColor",
+        "getSkyRenderDistance",
+        "getSplash",
+        "getStarCount",
+        "getStarSize",
+        "getWaterFogBrightening",
+        "getWaterVisionTimeScale",
+        "getXpBar",
+        "getXpOrbColor",
+        "parseWithLevel",
+        "regenSheepColors",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/BlindnessFogFunctionMixin.java",
+          "lines": [
+            13
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/DarknessFogFunctionMixin.java",
+          "lines": [
+            13
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/EntityRenderDispatcherMixin.java",
+          "lines": [
+            18
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/FishingHookRendererMixin.java",
+          "lines": [
+            32,
+            45
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/FogRendererMixin.java",
+          "lines": [
+            40,
+            55,
+            61,
+            67,
+            73,
+            79
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GuiMixin.java",
+          "lines": [
+            28
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java",
+          "lines": [
+            72,
+            97,
+            162,
+            167
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LightningBoltRendererMixin.java",
+          "lines": [
+            19
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LocalPlayerMixin.java",
+          "lines": [
+            20
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PaintingRendererMixin.java",
+          "lines": [
+            23
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/SignRendererMixin.java",
+          "lines": [
+            13
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/SplashRendererMixin.java",
+          "lines": [
+            18
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/XpOrbMixin.java",
+          "lines": [
+            30
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.slotify",
+      "field": "SLOTIFY",
+      "className": "net.mehvahdjukaar.polytone.content.slotify.GuiModifierManager",
+      "classEntrySha256": "67c7c04a0b1f8e1a346dc33789de2a8a7255c0d581751f1f981138195e42c3e8",
+      "source": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java",
+      "constructorStartLine": 47,
+      "reloadOrder": 20,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "gui_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "GuiModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "getGuiModifier",
+        "getSlotModifiers",
+        "maybeChangeColor",
+        "maybeModifySlot",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/compat/nautilus/NautilusGuiModifierOverlay.java",
+          "lines": [
+            26,
+            56
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierPreview.java",
+          "lines": [
+            112
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/AbstractContainerMenuMixin.java",
+          "lines": [
+            17
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ScreenMixin.java",
+          "lines": [
+            30,
+            52,
+            62,
+            70
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/AbstractContainerScreenMixin.java",
+          "lines": [
+            60,
+            75
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.overlay_modifiers",
+      "field": "OVERLAY_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.slotify.GuiOverlayManager",
+      "classEntrySha256": "f6948c003a9e78528aa52745376351ab40cb5204497764e43119d3c22b2af464",
+      "source": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java",
+      "constructorStartLine": 30,
+      "reloadOrder": 21,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "overlay_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BlitModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "maybeFancifyHeart",
+        "maybeModifyBlit",
+        "onEndRenderLevel",
+        "onStartRenderingOverlay",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.java",
+          "lines": [
+            34,
+            41
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GuiMixin.java",
+          "lines": [
+            52
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/neoforge/GuiGraphicsMixin.java",
+          "lines": [
+            24,
+            51
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.block_set",
+      "field": "BLOCK_SET",
+      "className": "net.mehvahdjukaar.polytone.content.block.BlockSetManager",
+      "classEntrySha256": "b4027661bae618698d1510b8e49fca13de8340636668dcf5db4cd1f6407b2eab",
+      "source": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java",
+      "constructorStartLine": 21,
+      "reloadOrder": 9,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "custom_block_sets",
+          "block_sets"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "BlockSetTypeProvider.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "byNameCodec",
+        "getNextName",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/block/BlockSetTypeProvider.java",
+          "lines": [
+            16,
+            55,
+            95
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.creative_tabs_modifiers",
+      "field": "CREATIVE_TABS_MODIFIERS",
+      "className": "net.mehvahdjukaar.polytone.content.tabs.CreativeTabsModifiersManager",
+      "classEntrySha256": "dc6fa41d66457a4be5cb9e3ca26a2682083ac7e2f8afe601d21944508d0f8724",
+      "source": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java",
+      "constructorStartLine": 38,
+      "reloadOrder": 23,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "creative_tab_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "CreativeTabModifier.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": true,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "applyWithLevel",
+        "isDynamicTab",
+        "modifyTab",
+        "parseWithLevel",
+        "prepare",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/PolytoneStub.java",
+          "lines": [
+            14
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/platform/PolytoneForge.java",
+          "lines": [
+            142
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.post_targets",
+      "field": "POST_TARGETS",
+      "className": "net.mehvahdjukaar.polytone.content.shaders.post.PostTargetsManager",
+      "classEntrySha256": "9cdf65b6663178ef25cc36ec2c499cc3059caeb630bfed3fc299c5b1d0ecc3d1",
+      "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java",
+      "constructorStartLine": 27,
+      "reloadOrder": 24,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "post_targets"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "PostTargetsManager.PostTargetDef.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "PostTargetDef",
+        "applyWithLevel",
+        "ensureAllocated",
+        "getTarget",
+        "isEmpty",
+        "parseWithLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainEffect.java",
+          "lines": [
+            96
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+          "lines": [
+            98,
+            174
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PostChainMixin.java",
+          "lines": [
+            18
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.post_chains",
+      "field": "POST_CHAINS",
+      "className": "net.mehvahdjukaar.polytone.content.shaders.post.PostChainsManager",
+      "classEntrySha256": "908fbfcd7108c9f53f08536771bfa62fd00a941043dfdd9c68888bb534aac9a2",
+      "source": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java",
+      "constructorStartLine": 39,
+      "reloadOrder": 25,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "post_chains",
+          "post_shaders"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "PostChainEffect.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": false,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "bindProcessingEffectTo",
+        "captureLevelDepthSnapshot",
+        "isLoadingChain",
+        "isProcessing",
+        "parseWithLevel",
+        "renderAfterMainPostEffect",
+        "resetWithLevel",
+        "resize",
+        "tick"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/common/ClientFrameTicker.java",
+          "lines": [
+            118
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/PolyShaderPointLights.java",
+          "lines": [
+            48
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "lines": [
+            183
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.java",
+          "lines": [
+            47,
+            76
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java",
+          "lines": [
+            141
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PostChainMixin.java",
+          "lines": [
+            16
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PostPassMixin.java",
+          "lines": [
+            15
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.voxel_volume",
+      "field": "VOXEL_VOLUME",
+      "className": "net.mehvahdjukaar.polytone.content.shaders.voxel.VoxelVolumeManager",
+      "classEntrySha256": "06ff26282185fe9abf7b336ed49d39525f800eca651f9381c1da93ef0a9a0482",
+      "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+      "constructorStartLine": 70,
+      "reloadOrder": 26,
+      "resources": {
+        "style": "callback-derived;no-constructor-resource-directory",
+        "folders": []
+      },
+      "codecReferences": [],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "addBlockEntityData",
+        "addVoxelFlag",
+        "afterLevelRender",
+        "appliesToShader",
+        "applyWithLevel",
+        "bindToShader",
+        "getEnablingUniforms",
+        "markDirty",
+        "onBlockChanged",
+        "onBlockEntityDataPacket",
+        "parseWithLevel",
+        "registerCallback",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/api/VoxelVolumeApi.java",
+          "lines": [
+            25,
+            29,
+            42,
+            47
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/PolytoneRenderHooks.java",
+          "lines": [
+            16,
+            18
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ClientLevelMixin.java",
+          "lines": [
+            46
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ClientPacketListenerMixin.java",
+          "lines": [
+            15
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.shader_uniforms",
+      "field": "SHADER_UNIFORMS",
+      "className": "net.mehvahdjukaar.polytone.content.shaders.ShaderUniformsManager",
+      "classEntrySha256": "6856370d9553f84d7860f567c9c94adf5337730045c2dfe7053a5444d6b97018",
+      "source": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java",
+      "constructorStartLine": 20,
+      "reloadOrder": 27,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "shader_modifiers"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "ExpressionUniforms.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": false,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "appliesToShader",
+        "applyWithLevel",
+        "bindToShader",
+        "getEnablingUniforms",
+        "parseWithLevel",
+        "resetWithLevel",
+        "updateAll"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/PolytoneRenderHooks.java",
+          "lines": [
+            16
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.java",
+          "lines": [
+            71
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    },
+    {
+      "id": "polytone.configs",
+      "field": "CONFIGS",
+      "className": "net.mehvahdjukaar.polytone.content.config.ConfigsManager",
+      "classEntrySha256": "e9ab8ae3a751638eb8719c64bb576fd95f4ca9bbbc6b319f4d6ac95bbce85dcd",
+      "source": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java",
+      "constructorStartLine": 95,
+      "reloadOrder": 0,
+      "resources": {
+        "style": "default-polytone-directory",
+        "folders": [
+          "config_entries"
+        ],
+        "prefix": "polytone/"
+      },
+      "codecReferences": [
+        "PolyConfig.CODEC"
+      ],
+      "declaredPhaseOverrides": {
+        "earlyProcess": false,
+        "prepare": false,
+        "parseWithLevel": true,
+        "parseWithoutLevel": true,
+        "applyWithLevel": true,
+        "resetWithLevel": true
+      },
+      "methodDeclarationCandidates": [
+        "ConfigBubbleManager",
+        "addBuiltin",
+        "applyWithLevel",
+        "beforeRepositoryRefresh",
+        "builtinConfig",
+        "checkAndClearNeedsPackReload",
+        "clearCurrentPackConfigs",
+        "createScreenForMainMenu",
+        "createScreenForPack",
+        "getBooleanConfig",
+        "getButtonPos",
+        "getValue",
+        "hasPackConfigs",
+        "isEmpty",
+        "isLenientLoading",
+        "loadCurrentPackConfigs",
+        "loadCurrentReloadConfigs",
+        "parseWithLevel",
+        "parseWithoutLevel",
+        "resetWithLevel"
+      ],
+      "staticConsumerReferences": [
+        {
+          "source": "net/mehvahdjukaar/polytone/api/PolytoneRenderApi.java",
+          "lines": [
+            41,
+            45
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/ConditionUtils.java",
+          "lines": [
+            15
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/Parsed.java",
+          "lines": [
+            54
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/TokenBucketTracker.java",
+          "lines": [
+            30
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/common/expressions/ExpMath.java",
+          "lines": [
+            307
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectModifier.java",
+          "lines": [
+            57
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/config/ConfigScreen.java",
+          "lines": [
+            87,
+            89,
+            145
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/config/SupportScreen.java",
+          "lines": [
+            54
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/entity/EntityParticleEmitter.java",
+          "lines": [
+            61
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/BlockParticleEmitter.java",
+          "lines": [
+            89
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/ParticleParticleEmitter.java",
+          "lines": [
+            93
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleInstance.java",
+          "lines": [
+            251
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleType.java",
+          "lines": [
+            215
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java",
+          "lines": [
+            73,
+            211,
+            361
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/post/LevelDepthSnapshot.java",
+          "lines": [
+            33
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java",
+          "lines": [
+            279,
+            280,
+            281,
+            282,
+            284
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/EntityRendererLightMixin.java",
+          "lines": [
+            29
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/OptionsMixin.java",
+          "lines": [
+            13
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PackMixin.java",
+          "lines": [
+            31,
+            37
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PackRepositoryMixin.java",
+          "lines": [
+            14
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/PackSelectScreenMixin.java",
+          "lines": [
+            46,
+            69,
+            89,
+            98,
+            99
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java",
+          "lines": [
+            88
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/SoundManagerMixin.java",
+          "lines": [
+            19,
+            27
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/mixins/compat/SodiumMeshBufferBuilderMixin.java",
+          "lines": [
+            26
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        },
+        {
+          "source": "net/mehvahdjukaar/polytone/platform/PolytoneForge.java",
+          "lines": [
+            68
+          ],
+          "qualification": "static-reference-candidate;not-active-injection-or-runtime-dispatch"
+        }
+      ],
+      "assessment": "source-discovery-only;schema,consumer-effects,UX,rules,proofs-and-native-qualification-pending"
+    }
+  ],
+  "mixinDescriptors": [
+    {
+      "entry": "polytone-common.mixins.json",
+      "sha256": "b0075b06a57442405355bc1b379cd3eef184a46d61835f91773f3d5e43f8299d",
+      "package": "net.mehvahdjukaar.polytone.mixins",
+      "mixins": [
+        "BlockElementRotationMixin",
+        "IdentifierMixin",
+        "OverlayEntryMixin",
+        "PackMixin",
+        "PackRepositoryMixin"
+      ],
+      "client": [
+        "AbstractContainerMenuMixin",
+        "AnimationMetadataSectionMixin",
+        "AnimationMetadataSectionSerializerMixin",
+        "BlindnessFogFunctionMixin",
+        "BlockElementDeserializerMixin",
+        "ClientLevelMixin",
+        "ClientPacketListenerMixin",
+        "ColorResolverMixin",
+        "ContainerScreenPickMixin",
+        "CreativeScreenPickMixin",
+        "DarknessFogFunctionMixin",
+        "DimensionSpecialEffectsMixin",
+        "EffectProgramMixin",
+        "EntityMixin",
+        "EntityModelSetMixin",
+        "EntityRenderDispatcherMixin",
+        "EntityRendererLightMixin",
+        "FaceBakeryMixin",
+        "FishingHookRendererMixin",
+        "FogRendererMixin",
+        "GameRendererMixin",
+        "GlslPreprocessorMixin",
+        "GuiGraphicsMixin",
+        "GuiMixin",
+        "HackThatPreventsMissingSpritesFromCrashingMixin",
+        "ItemMixin",
+        "ItemOverridesMixin",
+        "ItemStackMixin",
+        "LeashMixin",
+        "LevelRendererMixin",
+        "LightningBoltRendererMixin",
+        "LightTextureMixin",
+        "LocalPlayerMixin",
+        "MinecraftMixin",
+        "ModelBakeryMixin",
+        "ModelBlockRendererMixin",
+        "MultiPlayerGameModeMixin",
+        "MultiVariantDeserializerMixin",
+        "OptionsMixin",
+        "OverlayMetadataSectionMixin",
+        "PackEntryMixin",
+        "PackSelectScreenMixin",
+        "PaintingRendererMixin",
+        "ParticleEngineMixin",
+        "PostChainMixin",
+        "PostPassMixin",
+        "ScreenMixin",
+        "ShaderInstanceMixin",
+        "SignRendererMixin",
+        "SlotMixin",
+        "SmithingScreenMixin",
+        "SoundEventRegistrationSerializerMixin",
+        "SoundManagerMixin",
+        "SplashRendererMixin",
+        "SpriteContentsMixin",
+        "VariantDeserializerMixin",
+        "XpOrbMixin",
+        "accessor.BiomeAccessor",
+        "accessor.DustParticleOptionAccessor",
+        "accessor.ParticleAccessor",
+        "accessor.SheepAccessor",
+        "compat.SodiumBlockRendererMixin",
+        "compat.SodiumChunkRendererMixin",
+        "compat.SodiumMeshBufferBuilderMixin",
+        "compat.SodiumShaderParserMixin",
+        "compat.SodiumVeilSectionLightScanMixin"
+      ],
+      "plugin": null,
+      "qualification": "descriptor-declaration;not-proof-of-applied-transform"
+    },
+    {
+      "entry": "polytone.mixins.json",
+      "sha256": "6bee30553dceda14d60635dcff3f304985746c76a43402347ffd77451c8d4c9f",
+      "package": "net.mehvahdjukaar.polytone.mixins.neoforge",
+      "mixins": [
+        "RegistrySnapshotMixin"
+      ],
+      "client": [
+        "AbstractContainerScreenMixin",
+        "AnimatedTextureMixin",
+        "BlockColorsAccessor",
+        "BuildCreativeModeTabContentsEventAccessor",
+        "CreativeModeInventoryScreenMixin",
+        "CreativeTabAccessor",
+        "compat.CurioInventoryScreenMixin",
+        "GuiGraphicsMixin",
+        "IClientFluidTypeExtensionsMixin",
+        "IClientItemExtensionsMixin",
+        "InventoryScreenMixin",
+        "ItemBlockRenderTypesMixin",
+        "ItemColorsAccessor",
+        "ModelManagerMixin",
+        "ModelRendererMixin",
+        "ModifiableBiomeAccessor",
+        "ModifiableBiomeInfoBiomeInfoAccessor",
+        "ParticleEngineAccessor",
+        "ParticleEngineMixin2",
+        "compat.VeilSectionLightScanMixin",
+        "compat.SodiumBlockRendererMixin",
+        "TerrainParticleMixin"
+      ],
+      "plugin": null,
+      "qualification": "descriptor-declaration;not-proof-of-applied-transform"
+    }
+  ],
+  "sources": {
+    "net/mehvahdjukaar/polytone/Polytone.java": {
+      "viewSha256": "9d9c24e21f07b2ee288a689ef82dce4731d27096a2dab43a6c6434484f1a2f7d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/Polytone.class",
+      "originalOuterClassEntrySha256": "30e961efc3ff41db7d5bb6e2c4fb3c3d1a9ad0383869ef519e977aa0b9a170e5",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockPropertyModifier.java": {
+      "viewSha256": "0e167eff167d8710ff60451ff1d278a37edcd720694c161c0b838266096c482e",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockPropertyModifier.class",
+      "originalOuterClassEntrySha256": "9a3b653656a294c01172697c53115f9a7829ff2679a49be9f73234cf54909c3a",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/color/ColorManager.java": {
+      "viewSha256": "865cfa95a71c919591f20dd36f0004e02707363f3d6de922890646d80ff9c0dc",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/color/ColorManager.class",
+      "originalOuterClassEntrySha256": "7e77684d0373ab126f8f19e6383d15d0a3f0715940d70507448b9355aa3fed2b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/colormap/Colormap.java": {
+      "viewSha256": "dfaf2efdac1cb38f41fb28049759b3fd9c7842bed3a2e5b353555f02418f6a7f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/colormap/Colormap.class",
+      "originalOuterClassEntrySha256": "d6ee99f315db6a9f4312e807b2cecc8c63e4c6ddb5d92bf86735992d54881fd6",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/voxel/CellPalette.java": {
+      "viewSha256": "244693f31bbb7c70d2e37f27bf0c3f0052ad676284af759aae9a72827a3359c9",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/voxel/CellPalette.class",
+      "originalOuterClassEntrySha256": "bf2755acfefcbed53d39d00db904ffcfad953362625f075a925fcdc533c09068",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ClientLevelMixin.java": {
+      "viewSha256": "a929a75bc3c3a72f779d2d36082383244034a7196bc452dd39cec045f4d63d52",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ClientLevelMixin.class",
+      "originalOuterClassEntrySha256": "319e45b9d09a294a5a661d45af6d9b33c9301cb6df25c373f7db970ef26af178",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.java": {
+      "viewSha256": "1ea0279a8e51f2bed85e2cd8a90748c54b18f9e1db86f53c09cb48f7a661c85c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ParticleEngineMixin.class",
+      "originalOuterClassEntrySha256": "6a3402b5c750a61f33df7470a2950c7efa768e5af705104fab7480bfb6124938",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/compat/SodiumBlockRendererMixin.java": {
+      "viewSha256": "cf0b4ff0ea392d4e80fe12126dc7ec67fb2fca1f4676ba4b79623dbbcac3b070",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/compat/SodiumBlockRendererMixin.class",
+      "originalOuterClassEntrySha256": "3941faa86e1e79c7e1539bd5eb1e33359d5e6991829f4777731934e13ae52a70",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/ModelRendererMixin.java": {
+      "viewSha256": "6a5cce2ddae46813185e292de2dedb64437c43e97129519d548b4e2250e0d10c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/ModelRendererMixin.class",
+      "originalOuterClassEntrySha256": "cc77af667d33b4cc0c9a4515a2616b010ae65d1ca240b1d02c34772c7b8d6d8e",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/TerrainParticleMixin.java": {
+      "viewSha256": "cf67577372f229ed66b89e129a9cfd2f7c925058d3b38e46fcc72ca556e5a5d4",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/TerrainParticleMixin.class",
+      "originalOuterClassEntrySha256": "6fb8612edaa465bed5e95d8ea44b529b04f785ebbe22a1cb7b79ff32e261a079",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/compat/SodiumBlockRendererMixin.java": {
+      "viewSha256": "7482a7130684bac94ff463e05de197bbcaccb47e2ae20e40685ada01647ecc35",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/compat/SodiumBlockRendererMixin.class",
+      "originalOuterClassEntrySha256": "f88e7ddf3a386af511687cc4b398758c401e839e0862ce6d819d0f6b71b6e042",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.java": {
+      "viewSha256": "2e34125ad37a191cb720a2271492d1f9ceab406b5db0547121a20faca7013d27",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockPropertiesManager.class",
+      "originalOuterClassEntrySha256": "d3adca8dcdd07e683bf2d328d55efb995d87db1c3c143c585102660c782fe951",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/LegacyHelper.java": {
+      "viewSha256": "353a90398fa8ba16ffe126fffcf511d8419964248dd72850aff665eaedfea7ab",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/LegacyHelper.class",
+      "originalOuterClassEntrySha256": "90e55500e0f4d65644f10ca8fe90eb690dc658b97c44f4d588f10fc0d0e5066b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.java": {
+      "viewSha256": "d478fa876753f7abecf0ff8846be36257b6d85cf4644705bbed0255914a2a673",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/fluid/FluidPropertiesManager.class",
+      "originalOuterClassEntrySha256": "4bcf2c9836ce91d85c4b9140a4e2b88d9ef3969c0cacf384c06c2d11622bfc7a",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/EntityModelSetMixin.java": {
+      "viewSha256": "85506212c91c6b641e47e8657e45b7a19cfb731d48140c2ed8de8fac0d77ffa4",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/EntityModelSetMixin.class",
+      "originalOuterClassEntrySha256": "74d3addaf6d6acc570db104fc3a3832fddd22b58ecfcec6c112e494681489752",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.java": {
+      "viewSha256": "515582970354795112373333665aecb95a0c0021587e28b3d609addafd5a6222",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/model/CustomModelsManager.class",
+      "originalOuterClassEntrySha256": "7369a852a238ac0332f6ecaff1b2610384e0c540c113381b071845ede7a83af7",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.java": {
+      "viewSha256": "6c1af02b40aa5f438e262713d0e16a5aa215eb2c37ebd3f7a7d48eeae9842844",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/item/ItemModifiersManager.class",
+      "originalOuterClassEntrySha256": "f6a4cc5eb5c03b17630781323b9fc09c48457c0205514ef1ecd594a26e259612",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ItemOverridesMixin.java": {
+      "viewSha256": "3ebd1a0817163a8c8bcf046cf5673935fa16853a8b85b7a2eb1da83a98407990",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ItemOverridesMixin.class",
+      "originalOuterClassEntrySha256": "42d1b64cc989440c50099b173d926b471892cc2beb3c7f52f5a37b4a44293309",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ModelBakeryMixin.java": {
+      "viewSha256": "0db173a8bc2be2cc1e98b8328d12d07acab2c4b1987434a06a443f36632fe9ac",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ModelBakeryMixin.class",
+      "originalOuterClassEntrySha256": "ad4cf9a4c95fb88d2713d108f365df76a5a10b514a53d6eb49908b777050d13c",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.java": {
+      "viewSha256": "9c793534ffd25ce464b71bc368b448240eb2a6d33f0c6f165003d34e961d0bdf",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/item/CustomItemModelsManager.class",
+      "originalOuterClassEntrySha256": "7426afb41c4fd7fc857b4561b15aaceddb9c5ec47d67061fd59b4fe1a9c877e2",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/platform/PolytoneForge.java": {
+      "viewSha256": "fb5d46d0438c703f4b65377db7a1b005de9499e1935c42d6983d4eb529b88f0d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/platform/PolytoneForge.class",
+      "originalOuterClassEntrySha256": "72b444e53994a6f2135a95414da4d07e7e1a9b5f51299d16c8bb818dce8e9071",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.java": {
+      "viewSha256": "8431418114c72a1da6f97110c1bb9416de094be631fa244db75647b12d2fad4d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectsManager.class",
+      "originalOuterClassEntrySha256": "5748d45008830f6953a702e8d34c9c8450b60b29a425821c52a589420e24d3f3",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/proxies/RandomProxy.java": {
+      "viewSha256": "c4c83444163f16f489e7eb798453f2a0aa127e5f3db19014a440271aed68d0fb",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/proxies/RandomProxy.class",
+      "originalOuterClassEntrySha256": "83df98ebce976dd74eb1f61510bf08e838de375ad05db5e66b695c6dc8197cbb",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/noise/NoiseManager.java": {
+      "viewSha256": "ba402eab1e9feae56cb3ff07028cb9e9da49fe8469e55fcb67f9e406f211d0e0",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/noise/NoiseManager.class",
+      "originalOuterClassEntrySha256": "50a9b5c376c615bf9aa4e5fa8d942e5baadbc3436fa42bc10f0aff14ed012a40",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/ClientFrameTicker.java": {
+      "viewSha256": "1d4ddbe4f547f44c6a882bcdd3b3d726689d528c0909cc83128d79d328d43de7",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/ClientFrameTicker.class",
+      "originalOuterClassEntrySha256": "ff6340c529fcf89bcde280d16514a2e73e41b11a6253307a516f9464978cfa58",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/PolyExpType.java": {
+      "viewSha256": "992c01a742aec2b39c519a34421369ddb2ce354599966590db27e0d3868e9d03",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/PolyExpType.class",
+      "originalOuterClassEntrySha256": "de5bf1214bf68b445b775114176384e6f02c532f523880b44e9dc7f72f5b8143",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/proxies/GlobalProxy.java": {
+      "viewSha256": "2b9b88bbba80b893e659ae9fecf33168eaf146d0b13cb5fff22886612818287f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/proxies/GlobalProxy.class",
+      "originalOuterClassEntrySha256": "f822cdddca916b6b1198460604d05466e8fc3e6c1cefce8bb1ffd4d9ecdf4d00",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.java": {
+      "viewSha256": "fe65b8234d8c4db9b1eb0bf089d8f8aac9986eb38009ef55f79c66ae73e5c1dd",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/global_expressions/GlobalExpressionsManager.class",
+      "originalOuterClassEntrySha256": "578321acbad896d9aa11ad1fec19345ee25fe29fa4a00cf41eebd70f44bb2874",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/ExpMath.java": {
+      "viewSha256": "85cb9f8ac291eda2c7546b3141d6595f933cb042a8a2053879e1e6de1b536c4e",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/ExpMath.class",
+      "originalOuterClassEntrySha256": "a659086198b5ec826bc7c974022eb11aa5edde856c392bcca44872f626f83b33",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/proxies/ParticleProxy.java": {
+      "viewSha256": "f6a8467a2a728cf9004ea077f9fe752942fc297e488c74636c5c4d9ced81418c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/proxies/ParticleProxy.class",
+      "originalOuterClassEntrySha256": "82bc484049fc6ecab7ca9deaac1d0bfa2132e4362a810548587e79d0c65d6fb6",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.java": {
+      "viewSha256": "ebca57c982cbdbdf227a1f9e5d10fcbaa726e4d35a53cd385225651e80fbde34",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/colormap/ColormapsManager.class",
+      "originalOuterClassEntrySha256": "10f4da932097c2598c677b19faeaaaf6741643dbb06b73ce235a0af220532a7f",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/fluid/platform/FluidPropertiesManagerImpl.java": {
+      "viewSha256": "610e418ace7585a80f6ac27f7ae19215020ba65881442732449b818176c54a3c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/fluid/platform/FluidPropertiesManagerImpl.class",
+      "originalOuterClassEntrySha256": "0480eef201f28e3e26719a1b666fd2a4721442cf22d348e6a598c07af881815c",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsModifier.java": {
+      "viewSha256": "fbb0666ebd9f8ec28ecd33c99daad6c160e827ab135926388937f784b69e9a4c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsModifier.class",
+      "originalOuterClassEntrySha256": "3e18d10d085c1b1f789b094fb6c2d7f18428820db622ae4306616267c4ddeb93",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/lightmap/Lightmap.java": {
+      "viewSha256": "834c8ee0f793eae523f2167ceefb47f48546e489076f1e1b72f0701fb4863ef6",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/lightmap/Lightmap.class",
+      "originalOuterClassEntrySha256": "6260c9bfe633397a4f8b1c87a75c3f2a3656eb4fc5462cab86190e778c5894b3",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.java": {
+      "viewSha256": "748391c67d93a4fecbcba3b3fb238571067178d1352cefacc71c5a5cd29f960f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/GameRendererMixin.class",
+      "originalOuterClassEntrySha256": "19e53e85fa1039f3c089dd3f3a27bb28885397543c9f1ee19fc28f77e839aaca",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/LightTextureMixin.java": {
+      "viewSha256": "cf9a4ef3c1435aca60813092dfe2e1e18ddea686f4ced698aa1e81b6cb551eb6",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/LightTextureMixin.class",
+      "originalOuterClassEntrySha256": "c6e24de639a58567c8c66c4b38424eeaf3499b436380a30c832d92e3c0c0d9cf",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.java": {
+      "viewSha256": "d15471cc0a5ca48d4788e5ac4cc67d455ae666830e5da880d05ea25f1f962418",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/lightmap/LightmapsManager.class",
+      "originalOuterClassEntrySha256": "e633517a71f6b040a40c81ae073da937ab7deb34963613451cd24bf127a8d658",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/api/VoxelVolumeApi.java": {
+      "viewSha256": "9f8de383b22f3faeb494198d5bc80fcff532046a57075c04ba1d084a98b86b61",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/api/VoxelVolumeApi.class",
+      "originalOuterClassEntrySha256": "fab34c3267ef2bc9029dc863b5dd10c64a5bdd6b2409d837b6cae3b603981208",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.java": {
+      "viewSha256": "60a753e4220b724be5949f9e2807b564daa8d041cde0f0e2781764216f42e90d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/entity/EntityModifiersManager.class",
+      "originalOuterClassEntrySha256": "3b96260f15d33bf97f3848c67960b5fa25c29d2a6baab2ff91bec4c6b0f80620",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.java": {
+      "viewSha256": "7105703af2120730a2faf25ee633684aeaab23aa958499039f3c310b1659843f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/modifiers/ParticleModifiersManager.class",
+      "originalOuterClassEntrySha256": "27172a92c5642ee54bc8531166906383f3288eea3a3ec0b2cb2476ddf4e5231a",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/PolytoneRenderHooks.java": {
+      "viewSha256": "a82dda910b2286870f719f58695a137bcc29e162eb873f7d36ac7a3516ac6e1b",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/PolytoneRenderHooks.class",
+      "originalOuterClassEntrySha256": "ba7f5b71d6ba270d36f3da0d00b9ad8a0eeaa403879afc2f8503ce742ea579bb",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/light/BlockLightSource.java": {
+      "viewSha256": "e6a01cfd7dd151692e1c3896e142b5c227d5c7a2e22368bc3fa0fc94c9b5a0ec",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/light/BlockLightSource.class",
+      "originalOuterClassEntrySha256": "36910d778262eff14cff7ff72c68213fab676a555513bf440c0f031b25602aa5",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/light/MovingLightSource.java": {
+      "viewSha256": "01127c40a1a791ccc95e8736952727d7176a3db33f8b94115f6eacd7c9d10fef",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/light/MovingLightSource.class",
+      "originalOuterClassEntrySha256": "349a1d075799c3002ac622193726ea7f3b379373782c560bf55acb9f5cb689c2",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.java": {
+      "viewSha256": "a7563d8a80faee806424b068c514f7a0f4fd4c5ec2b6093f7d2c4fb0f938ab75",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/voxel/VoxelVolumeManager.class",
+      "originalOuterClassEntrySha256": "06ff26282185fe9abf7b336ed49d39525f800eca651f9381c1da93ef0a9a0482",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/compat/SodiumVeilSectionLightScanMixin.java": {
+      "viewSha256": "ad2b59ffc33006e55fb8f4dc2d6366ad3d93a5edb692133f3db9fa38f0a48494",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/compat/SodiumVeilSectionLightScanMixin.class",
+      "originalOuterClassEntrySha256": "c55e78d6f43f345e1271a461502c4e9ba23f142be84e16658c5c9d2f41e1f590",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/compat/VeilSectionLightScanMixin.java": {
+      "viewSha256": "43750b2f1d1c31334ff626113fb1b55f027aeb2653718525fb1a07ba9fc2563e",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/compat/VeilSectionLightScanMixin.class",
+      "originalOuterClassEntrySha256": "a7fe75299995c8e9c0d5358bf6f93ba06aafc4108f3df91077c4a1f2162544ec",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.java": {
+      "viewSha256": "1f65e69bf8c116f8b224e523eb70de99a1bf1d48eafb551c3f1b33e2a631b478",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/light/ColoredLightsManager.class",
+      "originalOuterClassEntrySha256": "10d1991a39479a1f76f8ada6acdb767f027bd705ac35d191360d4668f09c6e8e",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/expressions/proxies/PositionalProxy.java": {
+      "viewSha256": "ebe838b32ea52ffe476c289467fa089c830297bdfb75a84d92e9fe9f68ffc23b",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/expressions/proxies/PositionalProxy.class",
+      "originalOuterClassEntrySha256": "4f3dd74d0b8049b1d5beaeedc44eba77bdc44fed3e888913db6624a35574fe41",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapper.java": {
+      "viewSha256": "46314c7227a3f71ed43849b5dc9901b17b9cc46044a7894d681aaa63b6e8784f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapper.class",
+      "originalOuterClassEntrySha256": "3523e27842689485b0ecc8c0a1f6429da9d446a9bbbc9e5ac88f30692bb0c985",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.java": {
+      "viewSha256": "0aa71d4b0b4d762d5c4595b1afc687aba54080907cb9a718f8fe33bb49db6a17",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeIdMapperManager.class",
+      "originalOuterClassEntrySha256": "3d9816e8baa9447122685bb6a9e7a3d4429fd2d53c8d02330ad22fe3468de137",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/DimensionSpecialEffectsMixin.java": {
+      "viewSha256": "1943a6394e011bf127d3ebc4466fb00b31c5a2882789f190e5690ab064738d84",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/DimensionSpecialEffectsMixin.class",
+      "originalOuterClassEntrySha256": "3bcdf49328ab23ac400979d4f41d4742b0061aea5c0730678fdd202c9f44efe3",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/FogRendererMixin.java": {
+      "viewSha256": "9316728422ba6c6447c285ebed57073bb8b3d77876a320fbf9451ff65d729912",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/FogRendererMixin.class",
+      "originalOuterClassEntrySha256": "f14952e6b63e0e5dbb59fbdefc8407699723fd56f2b632d103f0ab04cd0fe9ec",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.java": {
+      "viewSha256": "ec2e6cd2538150e937f98e2783b75632db3c701a19a7baa7f4603ab0107074ce",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/LevelRendererMixin.class",
+      "originalOuterClassEntrySha256": "b97eb84cd5140f13b0a54538fc6b67a02a9f4c3b2129380c27d380139da48388",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.java": {
+      "viewSha256": "66522425866d706b5d9ce09b7dd5dc209811a69defda8b7d37f58f612796dae2",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/dimension/DimensionEffectsManager.class",
+      "originalOuterClassEntrySha256": "ea390a3da8d854c154b5ec35edfc8e6ae84ff3d5b1c625fa5f3df31357ae31cb",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/PolytoneStub.java": {
+      "viewSha256": "3fe56f2dfc2db38bf1f4afa95226114ef9c6a9a281a4709dcf5539bc90ab5164",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/PolytoneStub.class",
+      "originalOuterClassEntrySha256": "641451f61fd381fa3db6fbdcf39666135d56cc82c7a3ac3fb548e86fff0b1a7b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/ParticleParticleEmitter.java": {
+      "viewSha256": "65977794850cfb23d7aa28432a4da6c98fc88195565a7fac508c7e2747c03a2c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/ParticleParticleEmitter.class",
+      "originalOuterClassEntrySha256": "79c5413ac6f5c7ede0f9eeca90bf3da4300d6be28f9c06bccd7594b9f0c30906",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/ParticleSpec.java": {
+      "viewSha256": "33d8412637c27147308ede00f6a0e5b4344265db45865abea62575bd076cd98d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/ParticleSpec.class",
+      "originalOuterClassEntrySha256": "0a6b5a8ff2cfb2673af4ae42abd523aa34488bc39bb2805e0b2482b9afd2f50f",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleType.java": {
+      "viewSha256": "f60b004fc1e5079e4f9de32f6950713b9414faae897870daabec6547c64a3a40",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleType.class",
+      "originalOuterClassEntrySha256": "04fef903ad7c9e2e031e506f636c2b0d2328b9a7424bb5b72b0922aacf1af3e0",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.java": {
+      "viewSha256": "f07052c21926ed5e3037ed4096d524f39197cfed3b2bcc5bef8805b0d3d0c735",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticlesManager.class",
+      "originalOuterClassEntrySha256": "a6d55297559770c11eb34dd371c267a3a41f20b9ce69fd08d53336e812d904db",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/EntityMixin.java": {
+      "viewSha256": "1b8f011a11cdc48ef5384dbb8a7b71eba065fd812067345d8959abc9effe5cad",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/EntityMixin.class",
+      "originalOuterClassEntrySha256": "f226ba6bd4285a12d290e5acedea754976dc15aa74896aea2703822fe0a5534d",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/sound/PolytoneSoundType.java": {
+      "viewSha256": "050c935a94532288e9e42c5d5df1884cb05db1c7eb7e378dedf8226a93da45da",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/sound/PolytoneSoundType.class",
+      "originalOuterClassEntrySha256": "8c80b6098bbac9571cd3cfc80a199d2fdb0fc6a2ea8c45d02244603b53372f5b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.java": {
+      "viewSha256": "8e0bb050507a4ffdf3bd70a637a4f0959a75b54c94c3a07429ab9dca7e241c8d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/sound/SoundTypesManager.class",
+      "originalOuterClassEntrySha256": "2558d6ca86c918085d6a574b4c221fb8788153beb025871603c2065eff36e62c",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ModelBlockRendererMixin.java": {
+      "viewSha256": "3f86b4e17044782b53c1f8beeefa648ca68a17d38382b2e4f4e7cd22fce89484",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ModelBlockRendererMixin.class",
+      "originalOuterClassEntrySha256": "a64bc7d5e893b8c284d38bd95505934c206a61e7527d5d428604a1e954176fbe",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.java": {
+      "viewSha256": "f2af0cc72406e6d5a10fbb06896f61205e6c8843a9551c8fb5fd34d216f24c07",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/texture/VariantTextureManager.class",
+      "originalOuterClassEntrySha256": "e6615711ba17bf0724b81c1e0d4c3c39641ac9a1faac6c38f883d30b78786bee",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/BlindnessFogFunctionMixin.java": {
+      "viewSha256": "b5228137922cc92b26a226034938b413e2420ae14550bb756943146b6200c4d6",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/BlindnessFogFunctionMixin.class",
+      "originalOuterClassEntrySha256": "fe79194abff288858ae1da0b51752ec528af37c9ce0fa381d4a2f5071dca7f9b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/DarknessFogFunctionMixin.java": {
+      "viewSha256": "23259224952491c8ccaff505a21dffda659660d16a058b738eaad20727126cf3",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/DarknessFogFunctionMixin.class",
+      "originalOuterClassEntrySha256": "a5261c92d41eb0b8a3f9d4d02895558821c48a8d7cb46a4639cf2c94df148751",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/EntityRenderDispatcherMixin.java": {
+      "viewSha256": "226584e150d633ed331c0c5529fb8e3b351e1543038bd8b991e806677234a2a1",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/EntityRenderDispatcherMixin.class",
+      "originalOuterClassEntrySha256": "947a3fd31c9bca59d379c0e9186f34311ad2c160e40b9c70c9ff73340b23e715",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/FishingHookRendererMixin.java": {
+      "viewSha256": "cf54546a3f29477173469d6ac8f22b79111ba552c075c1f597176e80dd262f60",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/FishingHookRendererMixin.class",
+      "originalOuterClassEntrySha256": "910a04149c905adf673dc3d7b439c40d37bbdb07400fb1d0b54ff22d6db88ef7",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/GuiMixin.java": {
+      "viewSha256": "7c115fc0ad3b5de1fc03157264b91bc7a03f3c8fb8ca3f30479d1076e2158c8d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/GuiMixin.class",
+      "originalOuterClassEntrySha256": "e735e6394f376bde71567ab52a6042e12ec8736dcacb4f50273e208ffea81ba5",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/LightningBoltRendererMixin.java": {
+      "viewSha256": "cb233fecd10b3ddaf3a5a5b4ff666c88c00a5db15a20d5f2ba833c61c5e52d43",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/LightningBoltRendererMixin.class",
+      "originalOuterClassEntrySha256": "2fe01e79480d50ed93293370e9cdbeab62ce17d372e128ca072f6bb8d2c77372",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/LocalPlayerMixin.java": {
+      "viewSha256": "dae11917afba7acdd8ef373deccb85bf2e39b12127484625820c67fe7faf3b15",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/LocalPlayerMixin.class",
+      "originalOuterClassEntrySha256": "24b43cf83c1a8c8b7dcb0f9c5a64170b9b28cd16f9f78167d7e78f410b6a7d81",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PaintingRendererMixin.java": {
+      "viewSha256": "3be8ad54e7f7fc64ce8280667efe5552eac3779bf99bd73a1b7879248be19e79",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PaintingRendererMixin.class",
+      "originalOuterClassEntrySha256": "3de447b68613e4d6f57f483156255829de413a8c41b0bff6a2483777353b3b18",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/SignRendererMixin.java": {
+      "viewSha256": "1173b028e7c4e99cf8e855f42e5cedadd8664a675c5ad3c87159366ccc7a9fe0",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/SignRendererMixin.class",
+      "originalOuterClassEntrySha256": "1b0b9417d469e51951c03c5dd07eb2d92a62d80eb0eeddd9352843a89a5eb83d",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/SplashRendererMixin.java": {
+      "viewSha256": "44cfc366c505b5cf973f1cef38b706930015d62bfaa6f4ddc8b07c36a83a5d18",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/SplashRendererMixin.class",
+      "originalOuterClassEntrySha256": "1e2f2a271e5dfc7bd6866f5c81340f963a7392b7cb5f1dcb326cd2bed4b20cc0",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/XpOrbMixin.java": {
+      "viewSha256": "d83bbb6ddb2f54481c98a3f58db6057d96cdc702036a907f4b96f061bbf81742",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/XpOrbMixin.class",
+      "originalOuterClassEntrySha256": "9c061e52746a1501cd03d803a9ace578a50201717314d8d3a326f820417c9ec0",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/compat/nautilus/NautilusGuiModifierOverlay.java": {
+      "viewSha256": "dbd93f6afb5c810baf5092f08ba37fc02303dc7d91f984f600df770334b39bdf",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/compat/nautilus/NautilusGuiModifierOverlay.class",
+      "originalOuterClassEntrySha256": "3819a045c52d2301cd1d4dcc7149a8168a09ac4d93b353fcade0cbca409338e8",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/slotify/GuiModifierPreview.java": {
+      "viewSha256": "72f41177be8fef0991ead6884fd44d71ea13e78249eddc2e7deaa7bb975df0b9",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierPreview.class",
+      "originalOuterClassEntrySha256": "380563310fba73850fef69e02076db601b0c86c10fc5221b3bf4854d47086095",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/AbstractContainerMenuMixin.java": {
+      "viewSha256": "e9fcd96fc87a3bbecd1f6352fdc0c3f0293f9b3cc2e19da58ab1a6b52be75726",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/AbstractContainerMenuMixin.class",
+      "originalOuterClassEntrySha256": "a6b35370dcfec5418c7c1a26c51827b2b8230e0ecc5fa80488b732df63b451a7",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ScreenMixin.java": {
+      "viewSha256": "b221b812b2ac831f9e534f1f0aadfe2ea6f46255a7c010d6be89a06c413c256e",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ScreenMixin.class",
+      "originalOuterClassEntrySha256": "358620c6263d1e01a988c5f96668628674f40dbe7f73dae927a9a79a06917ad0",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/AbstractContainerScreenMixin.java": {
+      "viewSha256": "b979e3f3ba57273c9cca6d55f76a9eaad5db8a34e13327d0a3ae7075874f8f44",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/AbstractContainerScreenMixin.class",
+      "originalOuterClassEntrySha256": "74abbe3ec45cf0b5bbd653aba9fced220a92bce948a0dbf95d1c39b8388208cc",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.java": {
+      "viewSha256": "d81120c93f44a0496cb83eb922cef1b2ebc626a0437b6f7cb59de895eea28010",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/slotify/GuiModifierManager.class",
+      "originalOuterClassEntrySha256": "67c7c04a0b1f8e1a346dc33789de2a8a7255c0d581751f1f981138195e42c3e8",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/neoforge/GuiGraphicsMixin.java": {
+      "viewSha256": "bd2f0e38fc87a6f6c9e35fb360684490f9a2207f863e9ece201fc04cac3ae17b",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/neoforge/GuiGraphicsMixin.class",
+      "originalOuterClassEntrySha256": "10be377443ca08d753a353d5da201d52436f65070490bd2e55c083441d61aea2",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.java": {
+      "viewSha256": "f5217fb20a6c1759cebdbf45c059b108f4d001a564e03df24603ca3cda883fde",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/slotify/GuiOverlayManager.class",
+      "originalOuterClassEntrySha256": "f6948c003a9e78528aa52745376351ab40cb5204497764e43119d3c22b2af464",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockSetTypeProvider.java": {
+      "viewSha256": "9b59bfc4a921720760e959de268585f81571da203c7e76c266ce630c01340cb9",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockSetTypeProvider.class",
+      "originalOuterClassEntrySha256": "650834bb0367762220f6b874b676485e33132b84aade14d35f3c335d1c5c31cc",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/block/BlockSetManager.java": {
+      "viewSha256": "d8b8dbb44c84d07e4cde438ce2d62848659047d41f0552d7924ac2ba0d159396",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/block/BlockSetManager.class",
+      "originalOuterClassEntrySha256": "b4027661bae618698d1510b8e49fca13de8340636668dcf5db4cd1f6407b2eab",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.java": {
+      "viewSha256": "8b6c5ab4d7df31d176c99a8577713bdc9fc78ad7cdae468e7d83f3693ad72295",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/tabs/CreativeTabsModifiersManager.class",
+      "originalOuterClassEntrySha256": "dc6fa41d66457a4be5cb9e3ca26a2682083ac7e2f8afe601d21944508d0f8724",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/PostChainEffect.java": {
+      "viewSha256": "ef3e7fc5e0ae933f014fad64c6fc6b21464e795367c474283055eef8ca0690e6",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainEffect.class",
+      "originalOuterClassEntrySha256": "29aa2c2b9738956b00c2ce807b8a8f4c7a45767a668977897cd383b5c8433625",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.java": {
+      "viewSha256": "8b804b0ad8ed96b6ab3dedbea6f982e35c13f395f04c4c5aed2dad0ce83019d7",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/PostChainsManager.class",
+      "originalOuterClassEntrySha256": "908fbfcd7108c9f53f08536771bfa62fd00a941043dfdd9c68888bb534aac9a2",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PostChainMixin.java": {
+      "viewSha256": "4090d5fa8621f5a2b5df9eb8bed55f1593b558ff2d72db46c43938d6934cf492",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PostChainMixin.class",
+      "originalOuterClassEntrySha256": "c891d1b100e00b19ee0d28243ec16b30a355205235c1ad5011807bd40307d04a",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.java": {
+      "viewSha256": "eba433d1ea5fa345395e157b01b6d9ad106f1652a064e382bb161228b9ffb1a3",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/PostTargetsManager.class",
+      "originalOuterClassEntrySha256": "9cdf65b6663178ef25cc36ec2c499cc3059caeb630bfed3fc299c5b1d0ecc3d1",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/light/PolyShaderPointLights.java": {
+      "viewSha256": "f2080f4e66978d3680fc4cec27c443d630230d3bae36d47761b069a29e32dc3a",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/light/PolyShaderPointLights.class",
+      "originalOuterClassEntrySha256": "c0a0469bb53adb6408c52680eabcd6f7663be8af192d21c54fbd2ae351213217",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PostPassMixin.java": {
+      "viewSha256": "3b3460c86030b0228c1182e836176e6286fa2beff668f6cd50d22107e1157cd2",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PostPassMixin.class",
+      "originalOuterClassEntrySha256": "5ac45330b0b8a1e64afbbce99bff47b2be9423682a1b9158119a2e47af926599",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/ClientPacketListenerMixin.java": {
+      "viewSha256": "bc7db04cf993b6314bd78214f61e43711cce0bb2e39ddf3db4b6bad41dd69d34",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/ClientPacketListenerMixin.class",
+      "originalOuterClassEntrySha256": "a14ef6a96c66968c69384268205f0dd68a5f3c43e7849ad0f97c950f7771e2c5",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.java": {
+      "viewSha256": "34553ebf91d001218bb2c6d75a59f619382606f0ef3d8844fb7be746fd5f71fe",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/ShaderUniformsManager.class",
+      "originalOuterClassEntrySha256": "6856370d9553f84d7860f567c9c94adf5337730045c2dfe7053a5444d6b97018",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/api/PolytoneRenderApi.java": {
+      "viewSha256": "2d61fa9dd18a330f0162141cb5f65b7c8536002c80f89244ff23a29c6b41d9c0",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/api/PolytoneRenderApi.class",
+      "originalOuterClassEntrySha256": "2fd5572ba3972079ae93a7c5c0684c00ef124526d5a3be2d16493cfdae36e393",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/ConditionUtils.java": {
+      "viewSha256": "14dbed28a9fe811333b5bb1a090962514fddeef5d441a364e1b512c72b9954e8",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/ConditionUtils.class",
+      "originalOuterClassEntrySha256": "d9354220795571ef4ccc78a909a06991019351a50bcdf37b4a5f960491805884",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/Parsed.java": {
+      "viewSha256": "c31ebc4a490a430e61d608c28979b389b951baab1ce879403ef7d789c91695a1",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/Parsed.class",
+      "originalOuterClassEntrySha256": "604b5e66d26d9fe3fda7749ff16706ea3df8453b70b704633f39f03b8e2d4cf2",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/TokenBucketTracker.java": {
+      "viewSha256": "e6eea96c196ebe5a13a7d15534611f9b70343147d05532748cba4a9a39d5d86c",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/TokenBucketTracker.class",
+      "originalOuterClassEntrySha256": "2fc9b0fe385c45e09bf55d4f325b05954f7131856ccdf0c04ae4f20e9e4c1824",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/biome/BiomeEffectModifier.java": {
+      "viewSha256": "6da200c8f3163aa76ff2e6f527e91093e4f7d25272b0f201d15afbba03af7ef3",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/biome/BiomeEffectModifier.class",
+      "originalOuterClassEntrySha256": "2caad2a156a1d11f735445b7ae6bdb34a3a58b37be38fc9060b8b26a418c066b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/config/ConfigScreen.java": {
+      "viewSha256": "d625da7eb56d52ac598313a7f8ef76550cd4b39b77a8046c8c1ab0fae10165a1",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/config/ConfigScreen.class",
+      "originalOuterClassEntrySha256": "cb54d65e2194c2330da99293de44539c9d2b7da1c9fb46bf6716015f39d6b634",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/config/SupportScreen.java": {
+      "viewSha256": "5eeb2f8b3783e6acc1aead718d281ab4e7a46a9c5fdd20df5d4d056f3267027d",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/config/SupportScreen.class",
+      "originalOuterClassEntrySha256": "b93c8795355b3d9ba972075452a21e63b974519ea8bb20f21e247d405339c197",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/entity/EntityParticleEmitter.java": {
+      "viewSha256": "7d85028131dc7cbd3911d80a5bf2c6d80af9a34dbbb947d0cdffac6ae8360489",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/entity/EntityParticleEmitter.class",
+      "originalOuterClassEntrySha256": "4837d00207161e2aee52fff240f92da7a450094512bbc31930180d68f2087d57",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/BlockParticleEmitter.java": {
+      "viewSha256": "b8a79c58742a3e9fef6bbb9311646f2a3429fddcdfac9552c501af821537ea7f",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/BlockParticleEmitter.class",
+      "originalOuterClassEntrySha256": "2f7f06a163b1a083b45184f803fa8bf2d925654d4ab843d63e0cc77c7d745fbd",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleInstance.java": {
+      "viewSha256": "92321ef29a2d11a5739e34349e5c1b32879bf3799cdaf977fdc8a5d6d0e7d125",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/particle/custom/CustomParticleInstance.class",
+      "originalOuterClassEntrySha256": "6bc5c0f0c1ce873b5b11458575c1a5c820245c477d5e3e44955d657867096639",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/shaders/post/LevelDepthSnapshot.java": {
+      "viewSha256": "ec2a882d5bc38d0eb0cdc8fa44f28abc9dbada22ba01ac2ff6df979aa47fe084",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/shaders/post/LevelDepthSnapshot.class",
+      "originalOuterClassEntrySha256": "dbbbab09efc3adf6affac2ce8646714b5bc1b678e7837fa7f2f5d382fdbe678c",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/EntityRendererLightMixin.java": {
+      "viewSha256": "84e62bb77d6407f362ac7823cedbec249c901f5e6eb44ec2c7b2a76870c7d1e2",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/EntityRendererLightMixin.class",
+      "originalOuterClassEntrySha256": "f27d48b638d609529fdc5a4174c2a19288bf0a464a2d618e2151cb99c313dd0d",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/OptionsMixin.java": {
+      "viewSha256": "edd2448712ce9bc6961e8920063e083d4cd011d89ca90318b63ed0e929ccf1d5",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/OptionsMixin.class",
+      "originalOuterClassEntrySha256": "5a59a88d8c8e0ecf6ab427abc974d84c1c0b9fe7d22a3fab4a9300d938558477",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PackMixin.java": {
+      "viewSha256": "4ce2329b5c2a2647cf6ddac61b48391d7e826b3f3479ac46d7c5003f3b0bed30",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PackMixin.class",
+      "originalOuterClassEntrySha256": "9612e9025f035fd678954f6966752a2649cbcd0c3095813dadcac417141b214e",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PackRepositoryMixin.java": {
+      "viewSha256": "9248b18ac906a87b1cf670ea93e95405d4f9620b6eaa244bba568e051845421e",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PackRepositoryMixin.class",
+      "originalOuterClassEntrySha256": "3a0d525900b9fe594bb854a784b71ac4de36dcb56b0db79b352689e8de3d0202",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/PackSelectScreenMixin.java": {
+      "viewSha256": "17df1839d833cf40f691d300fe9858e61c5a4df7cefb1dce183eef88849fa382",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/PackSelectScreenMixin.class",
+      "originalOuterClassEntrySha256": "9c2b236bed29e06d5216cce28370f50dc82b9ca4d012a24c4c22bee7dbceb5f7",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/SoundManagerMixin.java": {
+      "viewSha256": "5a10ed969f83d8d2e256533d861102931e712bb6364cd8dbcef06062051428f9",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/SoundManagerMixin.class",
+      "originalOuterClassEntrySha256": "95b07401c0ff4c21519818fc9be306a19faf3174428648b5495eedf71cfc2597",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/mixins/compat/SodiumMeshBufferBuilderMixin.java": {
+      "viewSha256": "40e07d21a4b1548a6d3bade74e09e2f8d58ab8c6c1cb4139b4fb92d9bb81e849",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/mixins/compat/SodiumMeshBufferBuilderMixin.class",
+      "originalOuterClassEntrySha256": "fc64733941c5bf82a1a494f62a6f526fb0e527574c5a427443d1e5f2719cd032",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/content/config/ConfigsManager.java": {
+      "viewSha256": "0d45ed4efa8b6c8e605cfcd20140d36bd258d462511c262b535170cd323886e3",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/content/config/ConfigsManager.class",
+      "originalOuterClassEntrySha256": "e9ab8ae3a751638eb8719c64bb576fd95f4ca9bbbc6b319f4d6ac95bbce85dcd",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/ContentManager.java": {
+      "viewSha256": "c608383a8767bc14a342ace538ed4fa6ee603f20912482159d2a52ec0dfcb6a0",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/reloader/ContentManager.class",
+      "originalOuterClassEntrySha256": "252c187fc0051d06c656995ed900840c22138a8e68f54295e69a8807ae2e70b1",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/SingleFileContentManager.java": {
+      "viewSha256": "a2d46c6995445c27d1b175b8aa585207391ac53d473394d808d81423f60fe973",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/reloader/SingleFileContentManager.class",
+      "originalOuterClassEntrySha256": "1c31cf843d1b68c0ea71c9b282b45e72c8295935877a8662cf504fb3268fd2f6",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.java": {
+      "viewSha256": "d877ee9e388e9d6159771fc7ddd3bf501aa894f99abab49f752fb42dfe052e55",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/common/reloader/PolytoneReloadManager.class",
+      "originalOuterClassEntrySha256": "66018da0224bc3d0ae9b4c2e37b5e80d7ef2b06558fe114d9e46e854cd4bbde8",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    },
+    "net/mehvahdjukaar/polytone/compat/CompatHandler.java": {
+      "viewSha256": "160f08dd22be56f1cb211648a3737f504ed32180b58c343e4c8c6013c99cd8be",
+      "originalOuterClassEntry": "net/mehvahdjukaar/polytone/compat/CompatHandler.class",
+      "originalOuterClassEntrySha256": "e2310366f51259f4c7cd7cbc582a4774c6743343f0e525225ea5cd4f9901511b",
+      "kind": "decompiled-private-inspection-view;not-upstream-source"
+    }
+  },
+  "sharedQuestions": [
+    "Condition/priority decoding vs full/partial/disabled content decoding.",
+    "Directory aliases and pack stacks have distinct precedence;do not infer one universal priority.",
+    "Parallel preparation,barrier,ordered parse/apply and error aggregation differ from atomic publication.",
+    "Reset and log-off must preserve/retire each owned native/GPU resource under its actual consumer contract.",
+    "Configuration load/save,pack selection,late world/tag application and live controls need separate UX/effect traces.",
+    "Optional renderer integrations,model mixin overlap and later-version native data are not supplied by class presence."
+  ],
+  "limits": [
+    "403 decompiled inspection files cover595 original class entries including nested classes;not matching upstream source or a verified compiler inverse.",
+    "Folder constants were independently found in corresponding original class entries;constructor/control-flow semantics remain inspection claims.",
+    "Method-name and consumer references are discovery locators,not completed semantic operations,reachable injection proofs or user commands.",
+    "Add-on manager registration remains an explicit extension boundary outside the28 built-in manager records.",
+    "This discovery collector executes no provider/game class;the separate priority band has its own explicit original-class adapter boundary."
+  ],
+  "sharedPolicyEvidence": [
+    {
+      "component": "per-ID priority and collection views",
+      "report": "polytone-priority/README.md",
+      "conformance": "evidence/polytone-priority-conformance.json",
+      "qualification": "one-original-class-with-explicit-adapters;not-complete-manager-or-loader-qualification"
+    }
+  ]
+}
