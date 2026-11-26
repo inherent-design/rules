@@ -2,6 +2,8 @@
 
 This is the first bounded feature band within the larger [application study](../README.md). It does not complete restic's inventory or qualify its other backends, general retention policies, repairs, or key operations. A later [snapshot-selection and grouping band](SELECTION.md) covers selected filters and keep-last-one previews.
 
+The [policy-to-restore join](POLICY-JOIN.md) connects two-group keep-last-one preview, failed and successful combined reference removal/pruning, full remaining-data checks, and exact keeper restores. It keeps planned removals separate from completed effects and leaves concurrent-owner and remote-backend behavior unqualified.
+
 ## Current domain and evidence
 
 The selected program is restic 0.20.0, compiled with Go 1.27.4 for macOS arm64. The isolated binary matches the publisher's release-asset digest and checksum file; GPG provenance was not verified. The fixture uses only a new local repository, two fake text files, generated private credentials, and explicit full snapshot IDs. Credentials and the encrypted test repository remain in ignored work storage.

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "cmd/restic/cmd_forget.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_forget.go",
+      "cache": "applications/tools/source-cache/restic-selection/cmd__restic__cmd_forget.go",
+      "sha256": "4df5a5174f06e85f88dd3c3e90908b25a5a9cdcc60a3ce61e13187af8c948767",
+      "inspection": "69 named removal error;179\u2013204 exclusive lock;210\u2013310 groups/policy/planned IDs;316\u2013362 per-removal results,JSON before error,skip prune after any failure,combined dry-run prune.",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33"
+    },
+    {
+      "path": "internal/data/snapshot_policy.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/snapshot_policy.go",
+      "cache": "applications/tools/source-cache/restic-selection/internal__data__snapshot_policy.go",
+      "sha256": "ee0bfabbede6263b9aca157cc9ea695a00525040f79b7e5ec75601ac9506db73",
+      "inspection": "ApplyPolicy keep-last and reasons; selected keep-last-one scope only.",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33"
+    },
+    {
+      "path": "internal/data/snapshot_group.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/snapshot_group.go",
+      "cache": "applications/tools/source-cache/restic-selection/internal__data__snapshot_group.go",
+      "sha256": "c3de970caa423c5f1f27489362f694bf8282f3bafab4bcc5c64f2d07c25a95c6",
+      "inspection": "GroupSnapshots host/path key construction and canonical paths; default grouping,not arbitrary tie policy.",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33"
+    },
+    {
+      "path": "internal/data/snapshot.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/snapshot.go",
+      "cache": "applications/tools/source-cache/restic/internal__data__snapshot.go",
+      "sha256": "2c9bde348134b41ff0f6b0ae65b789e19012ffe90509024935e28405bf26b590",
+      "inspection": "Snapshot ID,Parent,Tree,host/paths metadata; lineage is not retaining reachability.",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33"
+    },
+    {
+      "path": "cmd/restic/cmd_prune.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_prune.go",
+      "sha256": "74891f7251fb5fd315c4ddf303e8d9097af1f1ef3f63ff52db9520bee0450d1d",
+      "inspected": "getUsedBlobs entire body lines285\u2013315; selected runPruneWithRepo index/PlanPrune context",
+      "cache": "applications/tools/source-cache/restic/cmd__restic__cmd_prune.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "inspection": "196\u2013235 combined runPruneWithRepo and selected full-reclamation arguments;285\u2013317 getUsedBlobs uses remaining snapshot Tree roots and ignores removed IDs,not Parent lineage."
+    }
+  ],
+  "limits": "Entry-point binary pin plus selected upstream sources,not a reproducible binary build. Exit3 is observed for this native partial-operation error;global numeric error mapper not newly qualified. No complete native repository decoder or general backend/lock proof."
+}

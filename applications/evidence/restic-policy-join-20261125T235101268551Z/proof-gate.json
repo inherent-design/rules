@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "snapshot": "/private/tmp/rules-restic-policy-gate-cdco6yu6",
+  "argv": [
+    "python3",
+    "scripts/check-rules.py"
+  ],
+  "exitCode": 0,
+  "stdout": "applications/restic/PolicyJoin.bend: kernel checked\napplications/restic/Retention.bend: kernel checked\napplications/restic/Selection.bend: kernel checked\nChecked 4 Lean modules and 3 Bend files.\n",
+  "stderr": "",
+  "sourceSha256": {
+    "scripts/check-rules.py": "17aa15e6528d85774a7fb99354fb8078b9a0c70f019e9d94d8bb85ba7aa25d1b",
+    "applications/restic/Selection.lean": "a79254916f0bc9cba1c58c76fd807c9a9d3a3c3ad3f099df86a5893ec4f314ac",
+    "applications/restic/Retention.lean": "5ed01ad5fe639541fe8de6feb81beb2275009692cfb563ee46fe588083750fef",
+    "applications/restic/PolicyJoin.lean": "751acc3ac6807e35863a159c45ac7117afe2ec4dff2e892816a00cfcbfcbfe1e",
+    "applications/restic/PolicyJoinCase.lean": "715e1224acdc92bfbab1226b48bcabf63eb8238f8e4f9fe453f1a03bb747efe6",
+    "applications/restic/Selection.bend": "c312efa4134c9d8cfe7a8b5505f1e01927277f443889568699e1136fb7ab2798",
+    "applications/restic/Retention.bend": "495c99b7450cac565a57ee06a44d50fc78c6941604851fd61b0563450f6426bf",
+    "applications/restic/PolicyJoin.bend": "ef79f8061cf3913593ee04ba579f046d70f357a60adcd6c070c3d396ad9d9982"
+  },
+  "tools": {
+    "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+    "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+  },
+  "scope": "Exact isolated4Lean/3Bend subset including existingSelection/Retention dependencies;new2Lean/1Bend. No full-repository gate or restic execution."
+}
