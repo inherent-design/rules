@@ -1,0 +1,540 @@
+[
+  {
+    "id": "cli-runner-only",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "--config",
+      "target.aarch64-apple-darwin.runner=\"/Users/zer0cell/.local/share/mise/installs/python/latest/bin/python3 /private/tmp/rules-cargo-run-dboawit8/runner.py cli\"",
+      "run",
+      "--offline",
+      "--message-format=json",
+      "--",
+      "space argument",
+      "\u03a9\u65e5\u672c",
+      "--literal-flag"
+    ],
+    "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+    "environmentOverrides": {},
+    "pid": 69387,
+    "exitCode": 0,
+    "timedOut": false,
+    "groupAbsent": true,
+    "seconds": 0.41928466595709324,
+    "before": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": null,
+      "runner": [],
+      "app": []
+    },
+    "after": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "streams": {
+      "stdout": "22cbc024e706da1f4ffd6060eb707be586e262d56b44950112dd8a8a8be1fcfe",
+      "stderr": "ba9995996acefcda30d65b0184bf0597e3d7b9f25c207d26bc2cc748601e3c39"
+    }
+  },
+  {
+    "id": "invalid-environment-jobs",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "run",
+      "--offline",
+      "--message-format=json",
+      "--",
+      "space argument",
+      "\u03a9\u65e5\u672c",
+      "--literal-flag"
+    ],
+    "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+    "environmentOverrides": {
+      "CARGO_BUILD_JOBS": "0"
+    },
+    "pid": 69508,
+    "exitCode": 101,
+    "timedOut": false,
+    "groupAbsent": true,
+    "seconds": 0.017178125213831663,
+    "before": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "after": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "71371467278a2d25b08745c06873bccd58d320091523b8cfd33708890c1be4d4"
+    }
+  },
+  {
+    "id": "cli-scalar-jobs-over-environment",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "--config",
+      "build.jobs=1",
+      "run",
+      "--offline",
+      "--message-format=json",
+      "--",
+      "space argument",
+      "\u03a9\u65e5\u672c",
+      "--literal-flag"
+    ],
+    "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+    "environmentOverrides": {
+      "CARGO_BUILD_JOBS": "0"
+    },
+    "pid": 69592,
+    "exitCode": 0,
+    "timedOut": false,
+    "groupAbsent": true,
+    "seconds": 0.14960137521848083,
+    "before": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "after": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        },
+        {
+          "label": "project",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        },
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "streams": {
+      "stdout": "7a968d9f32110d455f3a2ba5e1cb0d82ab0d211c1c9c64486ab69cf5e400a784",
+      "stderr": "f57d91aaeffa88ed5a25066969069de99a99b64baa01b6d6ee770ee0791348f3"
+    }
+  },
+  {
+    "id": "owned-target-clean",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "clean",
+      "--offline"
+    ],
+    "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+    "environmentOverrides": {},
+    "pid": 69657,
+    "exitCode": 0,
+    "timedOut": false,
+    "groupAbsent": true,
+    "seconds": 0.013030375353991985,
+    "before": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": {
+        "bytes": 477584,
+        "sha256": "d111fb61e7e60967a463edad9da94c8ab15fa3ac0504f5c94535ad4825c38a12",
+        "mode": 493
+      },
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        },
+        {
+          "label": "project",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        },
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "after": {
+      "project": {
+        ".cargo/config.toml": {
+          "bytes": 164,
+          "sha256": "d68fa6dd266b70ee029890da3174d39ebdba9a33ac8135b32b7f6d99673aa7a8",
+          "mode": 420
+        },
+        "Cargo.lock": {
+          "bytes": 161,
+          "sha256": "958d3358b91ab08066bc0629d0d7bc9664dcd56a632dfa18011b104112d40438",
+          "mode": 420
+        },
+        "Cargo.toml": {
+          "bytes": 106,
+          "sha256": "9e3b1d9fee59c1f039a05bb80e2cd0fad4bcbc326c56b6c3ac5043148bd257c3",
+          "mode": 420
+        },
+        "src/main.rs": {
+          "bytes": 509,
+          "sha256": "5bca9439b9eb61ceee9d6d88f8e866e34a3a1a563d10d38355feed6e47236258",
+          "mode": 420
+        }
+      },
+      "binary": null,
+      "runner": [
+        {
+          "label": "cli",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        },
+        {
+          "label": "project",
+          "binary": "/private/tmp/rules-cargo-run-dboawit8/target/debug/rules-run-profile",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project"
+        }
+      ],
+      "app": [
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        },
+        {
+          "cwd": "/private/tmp/rules-cargo-run-dboawit8/project",
+          "args": [
+            "space argument",
+            "\u03a9\u65e5\u672c",
+            "--literal-flag"
+          ],
+          "code": 0
+        }
+      ]
+    },
+    "streams": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "e59fcbea504b97a8c5d3d3dec15c0d205dc9b7e2cacdcfa78ae65eb56b228512"
+    }
+  }
+]
