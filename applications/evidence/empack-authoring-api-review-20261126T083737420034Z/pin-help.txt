@@ -1,0 +1,18 @@
+Pin current provider selections; remove per-dependency automatic preferences
+
+Usage: empack pin [OPTIONS] <DEPENDENCIES>...
+
+Arguments:
+  <DEPENDENCIES>...  
+
+Options:
+      --state-dir <STATE_DIR>  Durable operation and recovery storage, separate from disposable
+                               caches [env: EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>  Disposable cache root; previews only inspect existing objects [env:
+                               EMPACK_CACHE_DIR=]
+  -y, --yes                    Run without prompts; unresolved content choices still fail [env:
+                               EMPACK_YES=]
+      --dry-run                Preview changes without publishing project, instance or durable state
+                               [env: EMPACK_DRY_RUN=]
+  -h, --help                   Print help
+  -V, --version                Print version

@@ -1,0 +1,38 @@
+Plan or apply a runtime migration without editing live intent first
+
+Usage: empack migrate [OPTIONS] --minecraft <MINECRAFT> --loader <LOADER>
+
+Options:
+      --minecraft <MINECRAFT>
+          Requested Minecraft version
+      --loader <LOADER>
+          Requested loader family [possible values: vanilla, fabric, quilt, forge, neoforge]
+      --loader-version <LOADER_VERSION>
+          Exact loader version; otherwise retain a valid version or resolve a compatible one
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches [env:
+          EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects [env: EMPACK_CACHE_DIR=]
+      --java <JAVA>
+          Preferred Java major for the resulting runtime; otherwise preserve the author's choice
+      --accept-version <ACCEPTABLE_VERSIONS>
+          Explicit alternative Minecraft versions accepted for provider compatibility
+      --replace <KEY=PROVIDER:ID>
+          Replace a provider root: KEY=modrinth:PROJECT_ID or KEY=curseforge:PROJECT_ID
+      --json
+          Print a structured native preview (requires --dry-run)
+      --materialize
+          Acquire referenced content; missing files can be resumed through pending
+      --release-policy <RELEASE_POLICY>
+          Stability preference for newly selected provider versions [possible values: stable-only,
+          prefer-stable, any]
+  -y, --yes
+          Run without prompts; unresolved content choices still fail [env: EMPACK_YES=]
+      --dry-run
+          Preview changes without publishing project, instance or durable state [env:
+          EMPACK_DRY_RUN=]
+  -h, --help
+          Print help
+  -V, --version
+          Print version

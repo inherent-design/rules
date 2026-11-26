@@ -105,3 +105,5 @@ The [SBOM basis study](js-sbom/README.md) separates installed metadata, lock gra
 The [Prism export study](prism-export/README.md) separates selected entries, source/link roles, archive payloads, and task completion. Eight headless original-source cases qualify collector/writer boundaries; the interrupted normal GUI attempt produced no exports and remains unqualified.
 
 The [native adoption study](empack/adoption-flow/README.md) verifies installed0.8.8 ordinary URL/local observation through preview and lock publication. Payload identity remains unchanged within each command; successful publication changes the lock and explicit durable records. Broader provider and recovery obligations remain open.
+
+The [authoring API synthesis](empack/AUTHORING-API.md) maps nine current operation contracts to a portable draft facade while retaining native preparation and approval. It records affected types/callers,compatibility,keep-current choices,and implementation checks;no new native or formal conformance is claimed.

@@ -1,0 +1,256 @@
+{
+  "schema": 1,
+  "status": "Proposed API synthesis;no production implementation or complete feature qualification.",
+  "sourceLedger": "sources/empack-authoring-api-selections.json",
+  "operations": [
+    {
+      "id": "inspect-selection",
+      "currentSurface": "AssessmentRequest / UpdateAssessment",
+      "sourceIds": [
+        "assessment-report"
+      ],
+      "currentSymbols": [
+        "AssessmentRequest",
+        "UpdateAssessment"
+      ],
+      "currentMeaning": "Inspect effective policy,eligible observations and recorded closure within explicit scope;no publication.",
+      "possibleNativeProjectEffects": [],
+      "proposedPortableBoundary": "Inspect image-bound selection information without minting an edit or execution grant.",
+      "evidence": [
+        "empack/SELECTION.md",
+        "empack/update-flow/README.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "add-request",
+      "currentSurface": "AddRequest / AdditionPlan",
+      "sourceIds": [
+        "addition-api",
+        "addition-candidate"
+      ],
+      "currentSymbols": [
+        "AddRequest",
+        "AdditionCandidate"
+      ],
+      "currentMeaning": "Add explicit requests and map logical keys to canonical records;existing selection/replacement needs its own policy.",
+      "possibleNativeProjectEffects": [
+        "author-intent",
+        "lock",
+        "selected-payloads"
+      ],
+      "proposedPortableBoundary": "Propose an explicit draft request;reuse existing addition and same-identity semantics.",
+      "evidence": [
+        "empack/REMOVAL.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "reconcile",
+      "currentSurface": "SyncRequest::Recorded / AcquiredReferences / Supplied",
+      "sourceIds": [
+        "sync-api"
+      ],
+      "currentSymbols": [
+        "SyncRequest",
+        "Recorded",
+        "AcquiredReferences",
+        "Supplied"
+      ],
+      "currentMeaning": "Retain valid exact selections;changed semantic intent needs admitted resolution;record/defer references by source role.",
+      "possibleNativeProjectEffects": [
+        "lock",
+        "selected-payloads"
+      ],
+      "proposedPortableBoundary": "Separate semantic reconciliation from optional native materialization.",
+      "evidence": [
+        "empack/SYNCHRONIZATION.md",
+        "empack/SOURCES.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "select-update",
+      "currentSurface": "UpdateRequest / update command",
+      "sourceIds": [
+        "addition-api",
+        "update-command"
+      ],
+      "currentSymbols": [
+        "UpdateRequest",
+        "UpdatePreview"
+      ],
+      "currentMeaning": "Deliberately select replacements under requested scope,existing author pins and release policy;explicit pin edits remain distinct.",
+      "possibleNativeProjectEffects": [
+        "explicit-author-pin-edits",
+        "lock",
+        "selected-payloads"
+      ],
+      "proposedPortableBoundary": "Propose image-bound selection changes;accepting an editor edit is separate from native publication.",
+      "evidence": [
+        "empack/SELECTION.md",
+        "empack/update-flow/README.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "change-pin-policy",
+      "currentSurface": "SyncRequest::SelectionIntent",
+      "sourceIds": [
+        "sync-api"
+      ],
+      "currentSymbols": [
+        "SelectionIntent"
+      ],
+      "currentMeaning": "Pin or unpin authored selection policy while retaining exact current selections;do not conflate unpin with an update.",
+      "possibleNativeProjectEffects": [
+        "author-intent",
+        "lock"
+      ],
+      "proposedPortableBoundary": "Use a policy-edit proposal and validate it independently of fresh resolution.",
+      "evidence": [
+        "empack/migration-flow/README.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "observe-existing",
+      "currentSurface": "AdoptObservedRequest",
+      "sourceIds": [
+        "addition-api",
+        "addition-candidate"
+      ],
+      "currentSymbols": [
+        "AdoptObservedRequest",
+        "prepare_adoption"
+      ],
+      "currentMeaning": "Verify selected existing bytes against their proposed description;publish documents,not missing/replacement payloads.",
+      "possibleNativeProjectEffects": [
+        "author-intent-if-needed",
+        "lock"
+      ],
+      "proposedPortableBoundary": "Keep native installed-file observation separate from portable asset import;use a host capture when preparing native adoption.",
+      "evidence": [
+        "empack/adoption-flow/README.md",
+        "empack/AUTHOR-TRANSITIONS.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "migrate-runtime",
+      "currentSurface": "SyncRequest::Migration / MigrationOptions::compose",
+      "sourceIds": [
+        "sync-api",
+        "migration-options",
+        "migration-candidate"
+      ],
+      "currentSymbols": [
+        "Migration",
+        "compose",
+        "prepare_migration"
+      ],
+      "currentMeaning": "Compose a proposed runtime;preserve unrelated roots/pins and preferred Java unless explicitly changed;revalidate retained selections.",
+      "possibleNativeProjectEffects": [
+        "runtime-intent",
+        "explicit-provider-replacements",
+        "lock",
+        "selected-payloads"
+      ],
+      "proposedPortableBoundary": "Make runtime change an explicit proposal,not an update-all alias or project-format migration.",
+      "evidence": [
+        "empack/migration-flow/README.md",
+        "empack/AUTHOR-TRANSITIONS.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "forget-roots",
+      "currentSurface": "RemoveRequest + RemovalMode::ForgetRoots",
+      "sourceIds": [
+        "removal-api",
+        "removal-policy"
+      ],
+      "currentSymbols": [
+        "RemoveRequest",
+        "ForgetRoots"
+      ],
+      "currentMeaning": "Remove explicit author requests while retaining exact locked records and content.",
+      "possibleNativeProjectEffects": [
+        "author-intent",
+        "lock"
+      ],
+      "proposedPortableBoundary": "Preserve requested-root role and retained inventory as different values;no implicit orphan collection.",
+      "evidence": [
+        "empack/REMOVAL.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    },
+    {
+      "id": "remove-content",
+      "currentSurface": "RemoveRequest + RemovalMode::RemoveContent",
+      "sourceIds": [
+        "removal-api",
+        "removal-policy"
+      ],
+      "currentSymbols": [
+        "RemoveRequest",
+        "RemoveContent",
+        "AcknowledgeUnknown"
+      ],
+      "currentMeaning": "Delete explicitly selected records/content only with required-edge,evidence,ownership and publication checks;unknown acknowledgement cannot override known requirements.",
+      "possibleNativeProjectEffects": [
+        "author-intent",
+        "lock",
+        "selected-payload-deletion"
+      ],
+      "proposedPortableBoundary": "Retain explicit content-removal intent and scoped blockers;do not turn forgetting into deletion authority.",
+      "evidence": [
+        "empack/REMOVAL.md"
+      ],
+      "evidenceStatus": "Source-reviewed synthesis;referenced component evidence retains its original limits,not a new native join."
+    }
+  ],
+  "authorityBoundary": {
+    "current": [
+      "PreparedOperation has private owner/view/data",
+      "authorize checks plan/network/installer/runtime/replacement",
+      "Engine::start checks prepared engine owner",
+      "ProjectRevision binds root identity and raw intent/bindings/lock revisions"
+    ],
+    "proposal": [
+      "Portable draft edit proposals are not native prepared operations",
+      "Native backend issues and owns non-serializable execution handles",
+      "Epoch,image and interpretation basis admit editor results separately from native read-set validation"
+    ],
+    "sourceIds": [
+      "engine-api",
+      "native-revision",
+      "host-approval",
+      "reported-sync"
+    ]
+  },
+  "outcomes": [
+    "Completed",
+    "PartiallyCompleted",
+    "NeedsInput",
+    "FailedBeforePublication",
+    "InterruptedBeforePublication",
+    "ExecutionUncertain",
+    "RecoveryRequired"
+  ],
+  "preservedModelReferences": [
+    "empack/Authoring.lean",
+    "empack/Authoring.bend",
+    "empack/Removal.lean",
+    "empack/Removal.bend",
+    "empack/Synchronization.lean",
+    "empack/Synchronization.bend",
+    "empack/adoption-flow/Adoption.lean",
+    "empack/adoption-flow/Adoption.bend"
+  ],
+  "limits": [
+    "No new resolver,semantic wire format,signing service,scheduler,CLI migration framework or production split.",
+    "Current request enums and rich execution outcomes are reused;portable proposal signatures are illustrative.",
+    "This nine-operation group leaves other empack and comparator feature obligations open."
+  ]
+}

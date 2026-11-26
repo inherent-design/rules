@@ -1,0 +1,66 @@
+Add a new dependency; use update to change an existing selection
+
+Usage: empack add [OPTIONS] <SOURCE>...
+
+Arguments:
+  <SOURCE>...
+          Names, provider URLs/IDs, HTTPS files, or local paths
+
+Options:
+      --continue-independent
+          Publish verified independent groups after resolution; report blocked groups as failure
+
+      --platform <PLATFORM>
+          Provider for project resolution or supplied-file identification
+
+          Possible values:
+          - modrinth:   Prefer Modrinth
+          - curseforge: Prefer CurseForge
+          - both:       Search both platforms
+
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches
+          
+          [env: EMPACK_STATE_DIR=]
+
+      --type <PROJECT_TYPE>
+          Project type to search for (skips tiered search when specified)
+          
+          [alias: --project-type]
+          [possible values: mod, datapack, resourcepack, shader, world]
+
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects
+          
+          [env: EMPACK_CACHE_DIR=]
+
+      --version-id <ID>
+          Pin a specific Modrinth version ID (skips version selection)
+
+      --file-id <ID>
+          Pin a specific CurseForge file ID (skips version selection)
+
+      --file-plan <PATH>
+          YAML file-role destinations and environment choices for one provider project
+
+      --download-as-local
+          Track an HTTPS download as local content instead of retaining its URL
+
+  -y, --yes
+          Run without prompts; unresolved content choices still fail
+          
+          [env: EMPACK_YES=]
+
+      --dry-run
+          Preview changes without publishing project, instance or durable state
+          
+          [env: EMPACK_DRY_RUN=]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
+
+To change an existing dependency, run empack update DEPENDENCY to preview it, then add --apply to
+apply the change.

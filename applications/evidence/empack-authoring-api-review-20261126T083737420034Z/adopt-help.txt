@@ -1,0 +1,59 @@
+Accept verified installed changes without rewriting payloads
+
+Usage: empack adopt [OPTIONS] [DEPENDENCIES]...
+
+Arguments:
+  [DEPENDENCIES]...
+          Exact logical keys already declared or tracked by the project
+
+Options:
+      --from <FROM>...
+          Describe new installed content using local files, URLs, or provider selectors
+
+      --platform <PLATFORM>
+          Provider for a project selector or supplied-file identification
+
+          Possible values:
+          - modrinth:   Prefer Modrinth
+          - curseforge: Prefer CurseForge
+          - both:       Search both platforms
+
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches
+          
+          [env: EMPACK_STATE_DIR=]
+
+      --type <PROJECT_TYPE>
+          Kind of the selected installed content
+          
+          [possible values: mod, datapack, resourcepack, shader, world]
+
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects
+          
+          [env: EMPACK_CACHE_DIR=]
+
+      --version-id <VERSION_ID>
+          Exact Modrinth selection; adoption never requests latest
+
+      --file-id <FILE_ID>
+          Exact CurseForge selection; adoption never requests latest
+
+      --file-plan <FILE_PLAN>
+          Explicit provider file roles, placements and environment requirements
+
+  -y, --yes
+          Run without prompts; unresolved content choices still fail
+          
+          [env: EMPACK_YES=]
+
+      --dry-run
+          Preview changes without publishing project, instance or durable state
+          
+          [env: EMPACK_DRY_RUN=]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version

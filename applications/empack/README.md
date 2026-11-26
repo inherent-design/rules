@@ -79,6 +79,8 @@ The [source/placement and projection study](SOURCES.md) compares 32 actual pure-
 
 ## Session and operation interfaces
 
+The [authoring API synthesis](AUTHORING-API.md) maps nine current operation contracts to this facade, including native basis, approval, outcomes, and compatibility. It refines these boundary sketches without introducing a second resolver or treating a draft edit as native publication.
+
 These are boundary sketches, not existing Rust signatures:
 
 ```text

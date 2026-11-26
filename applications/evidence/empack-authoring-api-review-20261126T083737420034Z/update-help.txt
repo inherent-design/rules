@@ -1,0 +1,41 @@
+Preview dependency updates; use --apply to apply the reviewed changes
+
+Usage: empack update [OPTIONS] [DEPENDENCY]...
+
+Arguments:
+  [DEPENDENCY]...  Existing dependency keys; select these or --all
+
+Options:
+      --all
+          Attempt updates for every explicit dependency; retain unrelated locked libraries
+      --apply
+          Apply the reviewed update; without this flag only prepare a preview
+      --json
+          Print the prepared proposal as JSON; application is a separate invocation
+      --state-dir <STATE_DIR>
+          Durable operation and recovery storage, separate from disposable caches [env:
+          EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>
+          Disposable cache root; previews only inspect existing objects [env: EMPACK_CACHE_DIR=]
+      --details
+          Include catalog observations and exact version information
+      --quiet
+          Hide progress on stderr
+      --pin <KEY=ID>
+          Deliberately change selected provider pins: KEY=VERSION_ID
+      --select
+          Choose observed versions interactively and preview explicit pin changes
+      --release-policy <RELEASE_POLICY>
+          Version preference; exact author pins remain exact [possible values: stable-only,
+          prefer-stable, any]
+      --continue-independent
+          Apply validated independent groups and report any blocked groups
+  -y, --yes
+          Run without prompts; unresolved content choices still fail [env: EMPACK_YES=]
+      --dry-run
+          Preview changes without publishing project, instance or durable state [env:
+          EMPACK_DRY_RUN=]
+  -h, --help
+          Print help
+  -V, --version
+          Print version

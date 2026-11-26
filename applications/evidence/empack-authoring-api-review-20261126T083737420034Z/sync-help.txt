@@ -1,0 +1,17 @@
+Reconcile installed content with recorded intent and exact selections
+
+Usage: empack sync [OPTIONS]
+
+Options:
+      --materialize            Acquire and verify all remote references before publishing the
+                               complete batch
+      --state-dir <STATE_DIR>  Durable operation and recovery storage, separate from disposable
+                               caches [env: EMPACK_STATE_DIR=]
+      --cache-dir <CACHE_DIR>  Disposable cache root; previews only inspect existing objects [env:
+                               EMPACK_CACHE_DIR=]
+  -y, --yes                    Run without prompts; unresolved content choices still fail [env:
+                               EMPACK_YES=]
+      --dry-run                Preview changes without publishing project, instance or durable state
+                               [env: EMPACK_DRY_RUN=]
+  -h, --help                   Print help
+  -V, --version                Print version
