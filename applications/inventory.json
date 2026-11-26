@@ -15413,6 +15413,21 @@
                 "open": "Config presence and controlled credential profiles with independent authenticated version readbacks;not general crypto/key-search qualification.",
                 "migrate-format": "Actual normal format 1-to-2 flow, unknown/mixed/repeated requests, and preserved file namespace. No remote/force/failure/crash qualification."
               }
+            },
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "open": "Preserve repository versus access identity and scoped object admission; source/caller/codec review, no new native open.",
+                "migrate-format": "Per-request applied/skipped/unknown/failed results; strict completion and output compatibility remain choices."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
             }
           ]
         },
@@ -15552,7 +15567,25 @@
           "disposition": "bounded native access-wrapper add/change/remove study; key derivation and broader custody remain pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "add-key": "Return exact wrapper effects through existing owners; no new key or cryptographic qualification.",
+                "change-password": "Preserve process-local current key, duplicate-password wrappers and partial/uncertain replacement effects.",
+                "remove-key": "Wrapper removal does not prove revocation of copied master material; no new attack or deletion test."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
+          ]
         },
         {
           "id": "restic.snapshot-selection",
@@ -15754,6 +15787,23 @@
             "evidence/restic-20261124T001750826529Z/findings.json",
             "evidence/restic-20261124T001750826529Z/conformance.json",
             "restic/README.md"
+          ],
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "publish-snapshot": "Separate simulated, skipped, partial saved and fatal outcomes using existing facts and capture policy.",
+                "store": "New stored data, fresh reads and reused content remain different; no new backend or capture execution."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
           ]
         },
         {
@@ -15988,7 +16038,26 @@
           "disposition": "bounded native comparisons and typed policy models; query and counting gaps documented, broader qualification pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "find": "Correct incomplete-search status and JSON framing together; callback-only early error can bypass finalization.",
+                "diff": "Choose complete closure versus event-traversal count semantics explicitly; preserve path events and unknown weights.",
+                "stats": "Retain mode-specific units/keys and counting-policy compatibility; not physical reclaimable bytes.",
+                "ls": "Preserve metadata scope rather than infer payload or restore verification."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
+          ]
         },
         {
           "id": "restic.restore",
@@ -16150,6 +16219,21 @@
                 "restore": "Fixed local restore component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises.",
                 "verify-restored": "Fixed local verify-restored component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises."
               }
+            },
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "verify-restored": "Report the actual restored/tracked verification set, not all target bytes.",
+                "overwrite-policy": "Preserve explicit metadata reuse and destructive parent selection; leaf-aware deletion remains a policy choice."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
             }
           ]
         },
@@ -16376,6 +16460,21 @@
               "operationSlices": {
                 "check-data": "Fixed local check-data component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises."
               }
+            },
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "check-index": "Structural/index success is distinct from payload verification.",
+                "check-data": "State selected versus complete read scope; no new cryptographic or backend qualification."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
             }
           ]
         },
@@ -16559,7 +16658,24 @@
           "disposition": "Selected local compatibility/retry/stale-removal/interruption behavior observed;full backend/age/refresh/identity/platform semantics remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "unlock": "Proposed nonintrusive owner observation with nonexpired unknown retention and independent age policy; no fresh PID/permission case.",
+                "acquire-exclusive": "Keep publication/admission and unreadable observations distinct; complete caller/platform review required before a probe change."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
+          ]
         },
         {
           "id": "restic.retention",
@@ -16693,6 +16809,21 @@
                 "dry-run": "Fixed local dry-run component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises.",
                 "forget-prune": "Fixed local forget-prune component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises."
               }
+            },
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "forget-selected": "Requested/selected IDs differ from per-reference acknowledgement; opt-in receipts preserve confirmed and unknown effects.",
+                "forget-prune": "Later prune failure does not undo removed references; preserve current failure ordering."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
             }
           ]
         },
@@ -16790,6 +16921,21 @@
                 "remove-unreferenced": "Fixed local remove-unreferenced component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises.",
                 "limit-unused": "Fixed local limit-unused component in the policy/delete/prune/restore join. Planned IDs and completed effects are checked separately;report defines source and native premises."
               }
+            },
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "mark-reachable": "Use complete admitted tree roots, not lineage/provenance; preserve unknown required roots as a hold.",
+                "remove-unreferenced": "Coordinate maintenance authority and actual closure; no new reclamation, crash or remote qualification."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
             }
           ]
         },
@@ -16853,7 +16999,23 @@
           "disposition": "Partially observed/modelled for selected local copying; general source selection, destination verification, remote and interruption obligations remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "copy-snapshots": "Name the existing compared metadata projection and preserve source/destination and copy-origin roles."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
+          ]
         },
         {
           "id": "restic.repair",
@@ -16961,7 +17123,23 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "restic-ownership-api-target",
+              "status": "proposed",
+              "scope": "Source-grounded per-program ownership, interface, compatibility and verification plan using retained reports/models. No fresh native operation or model replay.",
+              "evidence": [
+                "restic/ARCHITECTURE.md",
+                "restic/architecture-targets.json",
+                "sources/restic-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "repair-index": "Index reconstruction is not missing-payload recovery; retain explicit repair authority and unknown outcomes."
+              },
+              "remaining": "Concrete caller/codec/result implementation choices, fault/host/legacy qualification, unresolved policies and full program coverage remain open."
+            }
+          ]
         },
         {
           "id": "restic.cache-resources",
@@ -17103,29 +17281,47 @@
       "improvementCandidates": [
         {
           "id": "typed-id-boundaries",
-          "status": "proposed, source caller/codec review pending",
-          "document": "restic/README.md"
+          "status": "Source/caller/codec review recorded; narrow boundary checks or current scoped interfaces preferred. No global type rewrite or native namespace defect established.",
+          "document": "restic/ARCHITECTURE.md"
         },
         {
           "id": "explicit-forget-receipt",
           "status": "proposed, native silent explicit-ID form observed",
-          "document": "restic/README.md"
+          "document": "restic/ARCHITECTURE.md"
         },
         {
           "id": "nonintrusive-owner-probe-classification",
           "status": "proposed from Unix source;no native permission/PID-reuse incident established",
-          "document": "restic/LOCKS.md"
+          "document": "restic/ARCHITECTURE.md"
         },
         {
           "id": "stale-cleanup-terminal-results",
           "status": "proposed opt-in reporting;live unlock preserved records with little feedback",
-          "document": "restic/LOCKS.md"
+          "document": "restic/ARCHITECTURE.md"
         },
         {
           "id": "inspection-completion-and-scope",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "restic/INSPECTION.md",
+          "document": "restic/ARCHITECTURE.md",
           "summary": "Return a valid, explicitly incomplete result when traversal fails; keep reference accounting and counting policy distinct from physically reclaimable allocation."
+        },
+        {
+          "id": "credential-wrapper-effect-result",
+          "status": "Scoped proposal from existing native help/output and wrapper evidence; not implemented.",
+          "document": "restic/ARCHITECTURE.md",
+          "summary": "Return exact saved/replaced wrapper IDs and partial effects through existing key owners, preserving master material and duplicate-wrapper meaning."
+        },
+        {
+          "id": "migration-request-outcomes",
+          "status": "Existing native mixed outcomes and model-only strict alternative; interface compatibility unresolved.",
+          "document": "restic/ARCHITECTURE.md",
+          "summary": "Keep unknown names, successful skips, applied upgrades and uncertain writes separate; no implied rollback or new repository format."
+        },
+        {
+          "id": "restore-verification-and-deletion-scope",
+          "status": "Reporting/compatibility proposal; existing subtree deletion policy preserved, leaf-aware alternative unselected.",
+          "document": "restic/ARCHITECTURE.md",
+          "summary": "Name the actual verification set and destructive selection scope without claiming every target byte was checked or changing parent-selected deletion silently."
         }
       ],
       "preservationDecisions": [
@@ -17136,15 +17332,30 @@
         },
         {
           "id": "recorded-domain-boundaries",
-          "evidence": "COMPARISON.md",
+          "evidence": "restic/ARCHITECTURE.md",
           "decision": "Preserve command-specific selection/grouping, reference versus content retention, partial snapshot evidence, integrity scope, repository formats, and explicit repair/restore authority."
+        },
+        {
+          "id": "existing-scoped-repository-interfaces",
+          "evidence": "restic/ARCHITECTURE.md",
+          "decision": "Preserve scoped snapshot/blob loaders, typed BlobHandle, ID string codecs and legacy tree compatibility; narrow risky role admission before selecting broad wrapper conversions."
         }
       ],
       "unresolvedChoices": [
         {
           "id": "inspection-counting-policy",
           "question": "Which per-location/reference versus unique-content policy preserves documented rename resilience and reports unavailable traversal/weights without implying physical reclaimable space?",
-          "document": "restic/INSPECTION.md"
+          "document": "restic/ARCHITECTURE.md"
+        },
+        {
+          "id": "search-result-finalization",
+          "document": "restic/ARCHITECTURE.md",
+          "question": "Which existing Finder/caller result owns incomplete traversal, partial matches and writer finalization without altering policy skips, ID-search completion or legacy array output?"
+        },
+        {
+          "id": "child-preserving-restore-policy",
+          "document": "restic/ARCHITECTURE.md",
+          "question": "Should an explicit alternative preserve excluded children under selected unexpected parents? Native behavior and upstream internal test establish current subtree policy; implementation and compatibility remain unselected."
         }
       ],
       "coverageStatus": "First local retention band modelled and observed; full application feature coverage incomplete.",

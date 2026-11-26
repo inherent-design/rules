@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "status": "Source-grounded restic ownership/interface and compatibility targets; not a production SDK, wire format, or fresh native conformance.",
+  "sourceLedger": "sources/restic-architecture-selections.json",
+  "contracts": [
+    {
+      "id": "object-role-and-codec",
+      "owners": [
+        "data.Snapshot fields and LoadSnapshot/SaveSnapshot",
+        "restic.BlobHandle and scoped repository interfaces",
+        "data.LoadTree and tree iterator"
+      ],
+      "sourceIds": [
+        "snapshot-roles",
+        "typed-blobs",
+        "repository-interfaces",
+        "id-codec",
+        "tree-codec",
+        "retained-tree-roots"
+      ],
+      "reports": [
+        "restic/README.md",
+        "restic/INSPECTION.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Retention.lean",
+        "restic/Comparison.lean"
+      ],
+      "status": "Source/caller/codec review; no namespace substitution or malformed-repository runtime defect reproduced.",
+      "target": "Preserve existing scoped loaders, typed blob handles and wire IDs. Prefer narrow role admission and caller tests; a global ID-type rewrite is not selected.",
+      "callersAndFormats": "Internal snapshot/blob/prune callers, CLI selectors and JSON codecs. Preserve full-ID strings, optional fields, unknown tree keys and legacy null node lists.",
+      "keepCurrent": "Reasonable when callers retain file/blob roles and validate required roots. Names and tests may supply protection without pervasive conversions.",
+      "remaining": [
+        "Qualify actual risky conversions, missing required snapshot roots and legacy/invalid codecs.",
+        "Internal wrappers require explicit codec delegation and caller review; they do not prove authorization or complete root discovery.",
+        "Preserve LoadRaw data-plus-error semantics; available bytes are not automatically verified content."
+      ]
+    },
+    {
+      "id": "pattern-search-completion",
+      "owners": [
+        "Finder.findInSnapshot",
+        "runFind",
+        "walker.WalkVisitor",
+        "statefulOutput.Finish",
+        "terminalPrinter error routing"
+      ],
+      "sourceIds": [
+        "search-owner",
+        "walk-control",
+        "printer-routing"
+      ],
+      "reports": [
+        "restic/INSPECTION.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Comparison.lean",
+        "restic/Comparison.bend"
+      ],
+      "status": "False empty success/mixed JSON is prior native evidence. Early-return finalization risk is source-supported, not fresh native execution.",
+      "target": "Keep unreadable scope separate from intentional skip, retain matches, finalize the array when output permits, route diagnostics to stderr, and report incomplete traversal as failure.",
+      "callersAndFormats": "Pattern-search caller and automation consuming existing JSON arrays/status. Do not change the global ordinary-output printer or replace the array schema silently.",
+      "keepCurrent": "Current successful selection and array output remain. The reproduced false completion is not an acceptable alternative for a truthful query contract.",
+      "remaining": [
+        "Root/nested faults after earlier results, multiple snapshots, policy skips, cancellation, ID-search completion and output-write failure.",
+        "The old model postcondition does not prove a streaming finalizer; adapter/candidate implementation remains open.",
+        "Retain errors from all result writes; a successful final write alone does not verify the earlier stream."
+      ]
+    },
+    {
+      "id": "counting-basis",
+      "owners": [
+        "diff endpoint traversal and collectDir",
+        "statistics mode reducers and typed blob weights"
+      ],
+      "sourceIds": [
+        "typed-blobs",
+        "tree-codec"
+      ],
+      "reports": [
+        "restic/INSPECTION.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Comparison.lean",
+        "restic/Comparison.bend"
+      ],
+      "status": "Native type-boundary and mode differences retained; complete-closure and location-reference alternatives are proposals.",
+      "target": "Name event traversal versus full closure and mode-specific accumulation. Preserve unavailable measurements and distinguish metadata counts from payload availability or physical reclaimability.",
+      "callersAndFormats": "Diff/statistics JSON consumers and human summaries; existing field meanings and rename/reference policies need a deliberate compatibility decision.",
+      "keepCurrent": "Keep existing values while the intended counting policy is unresolved; clarify the measure rather than adopt another reducer automatically.",
+      "remaining": [
+        "Full closure versus event interpretation, shared content across type boundaries, location/rename semantics, unavailable weights and traversal faults."
+      ]
+    },
+    {
+      "id": "capture-and-snapshot-publication",
+      "owners": [
+        "Archiver file-change/capture policy",
+        "backup command summary and source-error handling",
+        "Snapshot publication"
+      ],
+      "sourceIds": [
+        "snapshot-roles"
+      ],
+      "reports": [
+        "restic/BACKUP.md",
+        "restic/INPUTS.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Backup.lean",
+        "restic/Backup.bend",
+        "restic/Inputs.lean"
+      ],
+      "status": "Existing metadata reuse, partial saved snapshot and simulated-token evidence; no fresh capture operation here.",
+      "target": "Compose requested input/capture policy, completeness, simulated or saved reference, and fatal outcome from existing facts. Preserve explicit performance policy.",
+      "callersAndFormats": "Backup CLI and wrappers reading dry_run, summary, source errors and status. No generic saved claim from snapshot_id alone or silent change to metadata reuse.",
+      "keepCurrent": "Existing fields/status suffice when interpreted together; preserve partial useful snapshots and explicit reread controls.",
+      "remaining": [
+        "Live source races, failed/unknown backend publication, interrupted workers, input codecs, remote consistency and all hosts."
+      ]
+    },
+    {
+      "id": "reference-removal-and-prune",
+      "owners": [
+        "forget selection and per-reference callbacks",
+        "getUsedBlobs and prune planning",
+        "repository lock admission"
+      ],
+      "sourceIds": [
+        "reference-removal",
+        "retained-tree-roots",
+        "snapshot-roles"
+      ],
+      "reports": [
+        "restic/README.md",
+        "restic/POLICY-JOIN.md",
+        "restic/SELECTION.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Retention.lean",
+        "restic/PolicyJoin.lean",
+        "restic/PolicyJoin.bend"
+      ],
+      "status": "Prior native reference/prune joins and finite proposals; complete backend acknowledgement remains unqualified.",
+      "target": "Keep requested/selected IDs, confirmed/failed/unknown removals and later prune result separate. Hold reclamation on incomplete roots; lineage/provenance edges are not live content edges.",
+      "callersAndFormats": "Explicit-ID and grouped forget, combined prune, human/JSON result consumers. Add receipts opt-in/versioned; no repository schema change selected.",
+      "keepCurrent": "Existing diagnostics plus independent reference queries remain usable, with concurrent-state limits. No failure implies rollback or reclaimed space.",
+      "remaining": [
+        "Unknown/partial acknowledgements, changed selections, exact roots, remote listing consistency, concurrent owners and destructive maintenance faults."
+      ]
+    },
+    {
+      "id": "creator-observation-and-cleanup",
+      "owners": [
+        "lockHandle.processExists",
+        "lockHandle.stale",
+        "stale removal and retry reporting"
+      ],
+      "sourceIds": [
+        "unix-owner-probe",
+        "stale-policy"
+      ],
+      "reports": [
+        "restic/LOCKS.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Locks.lean",
+        "restic/Locks.bend"
+      ],
+      "status": "Unix signal-error concern and tri-state alternative are source/proposal-only; existing live/retired/wait evidence is preserved.",
+      "target": "Use nonintrusive reachable/absent/denied/unknown observations, preserving nonexpired records on uncertainty and keeping age policy independent.",
+      "callersAndFormats": "Unix and Windows probe implementations, stale classifier and cleanup reports. New fields cannot make older clients honor a new lifetime rule.",
+      "keepCurrent": "Existing same-user deployment assumptions and age policy are a bounded alternative; arbitrary creator identity is not established.",
+      "remaining": [
+        "Safe permission and PID-reuse controls, reboot/clock/host identity, refresh/standby failures, unreadable records and mixed clients.",
+        "No unrelated process signal, force-all cleanup, or recovery deletion is authorized by this proposal."
+      ]
+    },
+    {
+      "id": "restore-and-integrity-scope",
+      "owners": [
+        "Restorer overwrite and selection",
+        "tracked restored-file set and VerifyFiles",
+        "index repair and selected data checks"
+      ],
+      "sourceIds": [
+        "restore-verification",
+        "restore-caller"
+      ],
+      "reports": [
+        "restic/RESTORE.md",
+        "restic/INTEGRITY.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Restore.lean",
+        "restic/Restore.bend",
+        "restic/Integrity.lean"
+      ],
+      "status": "Prior native verification/deletion controls, source-selected verification set and leaf-aware model alternative; no new restore or repair.",
+      "target": "Report the actual verification/read set and preserve explicit destructive authority. Index reconstruction is not content recovery; child-preserving deletion is a separate policy choice.",
+      "callersAndFormats": "Restore flags/help/results, integrity checks and repair callers. Preserve current parent-selected subtree semantics unless a deliberate compatibility change is chosen.",
+      "keepCurrent": "Existing overwrite, verification and subtree-selection rules are legitimate when described accurately; no automatic stronger verification or deletion policy.",
+      "remaining": [
+        "Candidate recursive implementation, physical target admission, links/reparse points, races, failed writes/deletion, missing data, all hosts and broader restoration."
+      ]
+    },
+    {
+      "id": "credential-wrapper-effects",
+      "owners": [
+        "key add/passwd/remove commands",
+        "repository.Key.ID and printers",
+        "wrapper creation/verification/removal"
+      ],
+      "sourceIds": [],
+      "reports": [
+        "restic/KEYS.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Keys.lean",
+        "restic/Keys.bend"
+      ],
+      "status": "Prior native wrapper results and help/output mismatch; stronger revocation and fault outcomes untested.",
+      "target": "Report exact saved/replaced wrapper IDs and confirmed or uncertain effects using current owners. Preserve duplicate-password wrappers and process-local current-key meaning.",
+      "callersAndFormats": "Command-specific text/JSON consumers; new structured command results require explicit compatibility. No encryption/master-key or repository format change.",
+      "keepCurrent": "The current key model and key-list inspection remain sound; help should not promise an ID and return only a description.",
+      "remaining": [
+        "Failure after wrapper creation, verification/removal errors, unknown acknowledgements and concurrent writers.",
+        "No private key material, copied-master revocation guarantee or cryptographic qualification in this synthesis."
+      ]
+    },
+    {
+      "id": "migration-request-results",
+      "owners": [
+        "runMigrate/checkMigrations/applyMigrations",
+        "existing format-upgrade implementation and backup"
+      ],
+      "sourceIds": [],
+      "reports": [
+        "restic/REPOSITORY.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Repository.lean",
+        "restic/Repository.bend"
+      ],
+      "status": "Prior native mixed request outcomes; strict unknown-name completion remains model-only.",
+      "target": "Retain per-name requested/applied/skipped/unknown/failed results and independent confirmed or uncertain effects. Avoid a generic force-retry suggestion for already-current format.",
+      "callersAndFormats": "Migration human/JSON callers and automation. Opt-in structured result or stricter completion needs compatibility review; preserve encrypted formats and current upgrade recovery.",
+      "keepCurrent": "Current statuses plus diagnostics and repository-version readback are usable but do not provide general per-name acknowledgement.",
+      "remaining": [
+        "Unknown/known request mixtures, forced paths, failed save/reupload, process loss, compatibility with older clients and backend durability."
+      ]
+    },
+    {
+      "id": "copy-comparison-projection",
+      "owners": [
+        "Snapshot copy comparison",
+        "source/destination repositories",
+        "copy-origin metadata"
+      ],
+      "sourceIds": [
+        "snapshot-roles"
+      ],
+      "reports": [
+        "restic/COPY.md",
+        "restic/ARCHITECTURE.md"
+      ],
+      "models": [
+        "restic/Copy.lean",
+        "restic/Copy.bend"
+      ],
+      "status": "Existing native metadata-sensitive copy evidence; no new identity or copy policy selected.",
+      "target": "Name the actual metadata comparison projection and preserve origin as operation provenance rather than retaining/authentication authority.",
+      "callersAndFormats": "Copy skip decision, snapshots and source/destination publication reports; existing repositories and metadata formats preserved.",
+      "keepCurrent": "Reasonable when the existing compared fields are intentional; comment/tests may suffice without another schema.",
+      "remaining": [
+        "Omitted-field meaning, duplicate tags/paths, partial/unknown destination publication and remote backends."
+      ]
+    }
+  ],
+  "freshScope": {
+    "sourceFileIdentities": 14,
+    "newOfficialSourceFiles": 2,
+    "nativeCommands": 0,
+    "newFormalModelsOrReplays": 0
+  },
+  "limits": [
+    "Prior reports/models retain original premises and qualified profiles.",
+    "Current upstream status, crypto correctness and source-to-binary reproduction remain unreviewed.",
+    "Full application and nine-program goal are incomplete; production implementation requires a separately selected decision."
+  ]
+}

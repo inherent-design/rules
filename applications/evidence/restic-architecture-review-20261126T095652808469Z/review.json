@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "baseRevision": "b0cb8e20a9f424f9eb0da6357f1986cee46152f5",
+  "sourceIdentitiesChecked": 14,
+  "newOfficialSourceAcquisitions": 2,
+  "contractRecords": 10,
+  "existingModelReferences": [
+    {
+      "path": "applications/restic/Retention.lean",
+      "sha256": "5ed01ad5fe639541fe8de6feb81beb2275009692cfb563ee46fe588083750fef"
+    },
+    {
+      "path": "applications/restic/Comparison.lean",
+      "sha256": "6e609f583d4b3937c7eca5191b3a5305dbaa0c58f9533da5ab8de0eab9f1230a"
+    },
+    {
+      "path": "applications/restic/Comparison.bend",
+      "sha256": "acb203b80ae4faf947fb1827a8957693f8793d1b5a1583fcba023892f68e3020"
+    },
+    {
+      "path": "applications/restic/Backup.lean",
+      "sha256": "d37ceac9a2be46ea1990db1628066661b9c6da1ef5fafc42085b047be20c718d"
+    },
+    {
+      "path": "applications/restic/Backup.bend",
+      "sha256": "0afa4be6db131c3d0314ded0a2e51e51529e8d76ee9222482904e94661115aa9"
+    },
+    {
+      "path": "applications/restic/Inputs.lean",
+      "sha256": "240f8d9de89333ea7b94161adffb4188f299ab319996b580d88fa3fc2f2adcf4"
+    },
+    {
+      "path": "applications/restic/PolicyJoin.lean",
+      "sha256": "751acc3ac6807e35863a159c45ac7117afe2ec4dff2e892816a00cfcbfcbfe1e"
+    },
+    {
+      "path": "applications/restic/PolicyJoin.bend",
+      "sha256": "ef79f8061cf3913593ee04ba579f046d70f357a60adcd6c070c3d396ad9d9982"
+    },
+    {
+      "path": "applications/restic/Locks.lean",
+      "sha256": "31b0e92063759602e0e5313bae08b6a94f1f6161b1d5241f00f5f064e9bc428d"
+    },
+    {
+      "path": "applications/restic/Locks.bend",
+      "sha256": "7b4a069ac6b62b4910666dd441eaa892a73fa0a6e22fd8055439b4bef986ec70"
+    },
+    {
+      "path": "applications/restic/Restore.lean",
+      "sha256": "a80f497c91686e0611bc6374cd272b6882d34bdfdf22a428a3ee18392e33bb53"
+    },
+    {
+      "path": "applications/restic/Restore.bend",
+      "sha256": "ef618c4e78b3a50d2b915d740a318d57ab7173e69880718a1e06a1c9a264f968"
+    },
+    {
+      "path": "applications/restic/Integrity.lean",
+      "sha256": "1b188d03cccc8bf73096dcb836dabfc85ca89133c0099ae26dd3c66be9e53344"
+    },
+    {
+      "path": "applications/restic/Keys.lean",
+      "sha256": "974629925b9fb6923e465a579af5201b2f484a89640e07bcaa21fd54c3032287"
+    },
+    {
+      "path": "applications/restic/Keys.bend",
+      "sha256": "df125da05b47690afa062627fdd597bd6b2e641192214d6991f98b3737bc1fbc"
+    },
+    {
+      "path": "applications/restic/Repository.lean",
+      "sha256": "1857f69a83c42de75d80a44935ee9466efa33f536fcc8ded80e9bbe1c719ef53"
+    },
+    {
+      "path": "applications/restic/Repository.bend",
+      "sha256": "a54724bb7653f474723e8691fff36e28a6a019dc8836fe9fcb4a9ec01355cf21"
+    },
+    {
+      "path": "applications/restic/Copy.lean",
+      "sha256": "76ee8a43dca457f5ffd7a9f8525366aec606df248c8cc07a88e7f8c5d6e564c8"
+    },
+    {
+      "path": "applications/restic/Copy.bend",
+      "sha256": "e1ee1ae780b6f0a73c01352f8f923f3393d93e3229d049965f34445712077a41"
+    }
+  ],
+  "owningReports": [
+    "restic/ARCHITECTURE.md",
+    "restic/BACKUP.md",
+    "restic/COPY.md",
+    "restic/INPUTS.md",
+    "restic/INSPECTION.md",
+    "restic/INTEGRITY.md",
+    "restic/KEYS.md",
+    "restic/LOCKS.md",
+    "restic/POLICY-JOIN.md",
+    "restic/README.md",
+    "restic/REPOSITORY.md",
+    "restic/RESTORE.md",
+    "restic/SELECTION.md"
+  ],
+  "markdownLinks": 15,
+  "proposedComponents": [
+    "restic.repository",
+    "restic.key-custody",
+    "restic.backup",
+    "restic.comparison",
+    "restic.restore",
+    "restic.integrity",
+    "restic.locks",
+    "restic.retention",
+    "restic.prune",
+    "restic.copy",
+    "restic.repair"
+  ],
+  "parentRecordsPreserved": true,
+  "freshNativeCommands": 0,
+  "newFormalModelsOrReplays": 0,
+  "scope": "Read-only source, interface, codec and retained-report review; existing native/models retain their original limits.",
+  "newSourceConstraints": [
+    "Direct error return from runFind bypasses Finish; callback error propagation alone does not qualify valid partial JSON.",
+    "Existing ID codecs and scoped loader/blob interfaces support narrow role refinement; legacy null tree nodes differ from unavailable snapshot roots.",
+    "LoadRaw can return a buffer with an invalid-data error; available bytes alone are not verified content.",
+    "Finish discards its write errors; output-error ownership must cover earlier writes as well as finalization."
+  ],
+  "notRun": [
+    "No restic command, repository mutation, key/password read, Go test, compiler or new formal replay.",
+    "No streaming candidate, malformed repository, unknown owner or backend fault injected.",
+    "Current upstream status and source-to-binary reproduction unreviewed."
+  ],
+  "checks": [
+    "python3 applications/check_inventory.py",
+    "Read-only Python checks of source SHA256/range bounds, references, Markdown links and parent inventory equality after explicit proposal additions.",
+    "git diff --check"
+  ],
+  "developmentNotes": [
+    "Two preliminary generic-key scan hits were model SHA256 values named by Keys.lean/Keys.bend paths. Both matched Git objects; explicit path/sha256 records preserve their values without an allowlist."
+  ]
+}

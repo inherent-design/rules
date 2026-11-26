@@ -1,0 +1,270 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "internal/data/snapshot.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/snapshot.go",
+      "cache": "applications/tools/source-cache/restic/internal__data__snapshot.go",
+      "sha256": "2c9bde348134b41ff0f6b0ae65b789e19012ffe90509024935e28405bf26b590",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "id": "snapshot-roles",
+      "originLedger": "sources/restic-policy-join-selections.json",
+      "originInspection": "Snapshot ID,Parent,Tree,host/paths metadata; lineage is not retaining reachability.",
+      "reviewedHereRanges": [
+        [
+          16,
+          31
+        ],
+        [
+          82,
+          123
+        ]
+      ]
+    },
+    {
+      "path": "cmd/restic/cmd_prune.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_prune.go",
+      "sha256": "74891f7251fb5fd315c4ddf303e8d9097af1f1ef3f63ff52db9520bee0450d1d",
+      "cache": "applications/tools/source-cache/restic/cmd__restic__cmd_prune.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "id": "retained-tree-roots",
+      "originLedger": "sources/restic-policy-join-selections.json",
+      "originInspection": "196\u2013235 combined runPruneWithRepo and selected full-reclamation arguments;285\u2013317 getUsedBlobs uses remaining snapshot Tree roots and ignores removed IDs,not Parent lineage.",
+      "reviewedHereRanges": [
+        [
+          285,
+          314
+        ]
+      ]
+    },
+    {
+      "path": "cmd/restic/cmd_forget.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_forget.go",
+      "cache": "applications/tools/source-cache/restic-selection/cmd__restic__cmd_forget.go",
+      "sha256": "4df5a5174f06e85f88dd3c3e90908b25a5a9cdcc60a3ce61e13187af8c948767",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "id": "reference-removal",
+      "originLedger": "sources/restic-policy-join-selections.json",
+      "originInspection": "69 named removal error;179\u2013204 exclusive lock;210\u2013310 groups/policy/planned IDs;316\u2013362 per-removal results,JSON before error,skip prune after any failure,combined dry-run prune.",
+      "reviewedHereRanges": [
+        [
+          310,
+          365
+        ]
+      ]
+    },
+    {
+      "path": "cmd/restic/cmd_find.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-comparison/cmd__restic__cmd_find.go",
+      "sha256": "fbb08ff5c45c4e70e75eb7e72a0de56911c4b4d5d288bc2e67d8ecb2abde93a0",
+      "gitBlobSha1": "e3e5aa631e957202dc8419dbfd5b7253b2ec1a0a",
+      "bytes": 18675,
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_find.go",
+      "id": "search-owner",
+      "originLedger": "sources/restic-comparison-selections.json",
+      "originInspection": "84-116 flags,146-188 pattern JSON,209-239 object JSON,260-367 finish/pattern walk,369-448 ID walk,596-735 admission/selection/order. Actual root-load skip plus terminal.S yields mixed stdout/exit0. Subtree/short-ID/multi-fault cases unqualified.",
+      "reviewedHereRanges": [
+        [
+          250,
+          340
+        ],
+        [
+          585,
+          714
+        ]
+      ]
+    },
+    {
+      "path": "internal/walker/walker.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-comparison/internal__walker__walker.go",
+      "sha256": "1d85fd728c4d9eb86b9c979df00146a8a6691a9504ee18bb9ef5dc3a7c1e8b9e",
+      "gitBlobSha1": "d5ab8faf71a3d1c225ac34ee98fd36ca7e2947a7",
+      "bytes": 2985,
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/walker/walker.go",
+      "id": "walk-control",
+      "originLedger": "sources/restic-comparison-selections.json",
+      "originInspection": "Entire selected walk/ErrSkipNode contract. Root callback can convert load error to ErrSkipNode and success;actual root-loss find confirms this path.",
+      "reviewedHereRanges": [
+        [
+          1,
+          109
+        ]
+      ]
+    },
+    {
+      "path": "internal/ui/progress/terminal.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-comparison/internal__ui__progress__terminal.go",
+      "sha256": "4fac0c7c99b8def1805a662cd7551301bcf6d62bc4a877bc1ba1b51e00ee87f5",
+      "gitBlobSha1": "36c36b22a05562f479d60900c02aa51e089fd484",
+      "bytes": 2799,
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/ui/progress/terminal.go",
+      "id": "printer-routing",
+      "originLedger": "sources/restic-comparison-selections.json",
+      "originInspection": "terminalPrinter.S/E and NewTerminalPrinter:JSON affects verbosity,not S routing. Actual bad find writes human text to stdout before[].",
+      "reviewedHereRanges": [
+        [
+          60,
+          105
+        ]
+      ]
+    },
+    {
+      "path": "internal/data/tree.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-comparison/internal__data__tree.go",
+      "sha256": "cb0a33d946b23b549762ac40826178fe40d70bf036c2861f3aac9137d8fc43e8",
+      "gitBlobSha1": "0bb8b06b84f9daa897a4b8d37a05540f1a33c2d5",
+      "bytes": 10150,
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/data/tree.go",
+      "id": "tree-codec",
+      "originLedger": "sources/restic-comparison-selections.json",
+      "originInspection": "40-159 stream setup/LoadTree,254-284 ordered builder,371-434 DualTreeIterator name merge and single-use/error handling. Actual fresh trees ordered and native loads verified;unknown-key/null legacy parsing,malformed order and cancellation unqualified.",
+      "reviewedHereRanges": [
+        [
+          12,
+          64
+        ],
+        [
+          65,
+          120
+        ],
+        [
+          147,
+          165
+        ]
+      ]
+    },
+    {
+      "path": "internal/restic/blob.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "cache": "applications/tools/source-cache/restic-comparison/internal__restic__blob.go",
+      "sha256": "aa2727bb8e3e6d95ca0e2698284d4bc2533271722f88f85525e65e66f470dcc0",
+      "gitBlobSha1": "c19fb65927f645b4dc5b1bf72426f6b4587d645e",
+      "bytes": 2515,
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restic/blob.go",
+      "id": "typed-blobs",
+      "originLedger": "sources/restic-comparison-selections.json",
+      "originInspection": "PackBlob length interface and typed BlobHandle(Type,ID),not untagged hash. Other blob-set helpers unqualified.",
+      "reviewedHereRanges": [
+        [
+          1,
+          64
+        ]
+      ]
+    },
+    {
+      "path": "internal/repository/lock_file.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/lock_file.go",
+      "cache": "applications/tools/source-cache/restic-locks/internal__repository__lock_file.go",
+      "sha256": "288201043171718c2b87ed6559b666c65bb74369741ee22ccecae09df9a9f88f",
+      "bytes": 11508,
+      "id": "stale-policy",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "originLedger": "sources/restic-locks-selections.json",
+      "originInspection": "lines21-31,97-205,242-282,377-425:serialized values,publish/check,stale predicate and readable/empty/unknown observations",
+      "reviewedHereRanges": [
+        [
+          246,
+          278
+        ]
+      ]
+    },
+    {
+      "path": "internal/repository/lock_file_unix.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/lock_file_unix.go",
+      "cache": "applications/tools/source-cache/restic-locks/internal__repository__lock_file_unix.go",
+      "sha256": "c2b9de0e44c090771f91f26d42dd6ecb369708011016bfd448e22325610a223a",
+      "bytes": 984,
+      "id": "unix-owner-probe",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "originLedger": "sources/restic-locks-selections.json",
+      "originInspection": "whole:Unix SIGHUP probe returnsfalse on any signal error;permission/PID-reuse effects source-only,not natively exercised",
+      "reviewedHereRanges": [
+        [
+          1,
+          49
+        ]
+      ]
+    },
+    {
+      "path": "internal/restorer/restorer.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restorer/restorer.go",
+      "cache": "applications/tools/source-cache/restic-restore/internal__restorer__restorer.go",
+      "sha256": "c1aa0caa943ac52c3f995e65a65b5b9156d2e3c512d6ef9b6a007dadf0ec2647",
+      "bytes": 23689,
+      "id": "restore-verification",
+      "originLedger": "sources/restic-restore-selections.json",
+      "originInspection": "405\u2013455,510\u2013634,645\u2013710,734\u2013805: first restore pass, recursive unexpected-entry deletion, overwrite admission/content checks, tracked-file verification scope.",
+      "reviewedHereRanges": [
+        [
+          405,
+          452
+        ],
+        [
+          645,
+          710
+        ]
+      ]
+    },
+    {
+      "path": "cmd/restic/cmd_restore.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_restore.go",
+      "cache": "applications/tools/source-cache/restic-restore/cmd__restic__cmd_restore.go",
+      "sha256": "9887f7e3a842e607fdcab161379081bcaf4f9a92a8316db68cd2452eccbc9910",
+      "bytes": 9597,
+      "id": "restore-caller",
+      "originLedger": "sources/restic-restore-selections.json",
+      "originInspection": "65\u2013100,115\u2013151,190\u2013240,250\u2013279: CLI flags, invalid combinations, root-only delete guard, filter closures, verification dispatch.",
+      "reviewedHereRanges": [
+        [
+          250,
+          279
+        ]
+      ]
+    },
+    {
+      "path": "internal/restic/id.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restic/id.go",
+      "cache": "applications/tools/source-cache/restic-architecture/internal__restic__id.go",
+      "sha256": "f2533bbe4df9bfa1cb40c8fa8684f40fd2642ff0753f16eae4c2bcba560cd32f",
+      "bytes": 2198,
+      "origin": "Fresh official raw source at fixed commit; content identity recorded, no reproduced binary build.",
+      "id": "id-codec",
+      "reviewedHereRanges": [
+        [
+          1,
+          110
+        ]
+      ]
+    },
+    {
+      "path": "internal/restic/repository.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restic/repository.go",
+      "cache": "applications/tools/source-cache/restic-architecture/internal__restic__repository.go",
+      "sha256": "62fca92984590b5b349730411010dbfe0806e04b67041797f222eea75aa851d0",
+      "bytes": 6298,
+      "origin": "Fresh official raw source at fixed commit; content identity recorded, no reproduced binary build.",
+      "id": "repository-interfaces",
+      "reviewedHereRanges": [
+        [
+          1,
+          167
+        ]
+      ]
+    }
+  ],
+  "scope": "Source/interface proposal review for restic0.20.0;14 file identities, including2 newly acquired official fixed-commit source files. No fresh native operation or model replay.",
+  "limits": [
+    "Existing reports retain their own native/model/source scopes.",
+    "The search-finalization constraint and object-role/codec observations are source-supported; streaming writer, malformed repository and process-probe candidate implementations remain unqualified.",
+    "Current upstream release status, crypto correctness and source-to-binary reproducibility are unreviewed."
+  ]
+}

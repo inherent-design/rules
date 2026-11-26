@@ -111,3 +111,5 @@ The [authoring API synthesis](empack/AUTHORING-API.md) maps nine current operati
 The [package-manager ownership targets](js-architecture/README.md) consolidate npm, pnpm, and Yarn corrections and compatibility choices. They distinguish installed-index truth, backing admission, protected deployment, phase-bound version decisions, constraint postconditions, and configuration targets without another resolver or generic transaction layer.
 
 The [Cargo ownership and API targets](cargo/ARCHITECTURE.md) connect binary publication, tracking, cleanup, configuration provenance, and context-bound inspection. A fresh no-track fixture establishes false success after replacement failure; metadata-write failure and stronger cleanup recovery remain separately unqualified.
+
+The [restic ownership and API targets](restic/ARCHITECTURE.md) preserve object roles, legacy codecs, capture and destructive policies while refining query completion and per-operation acknowledgement. The source review identifies a JSON-finalization obligation for the proposed search correction; it does not change the earlier native/model evidence.
