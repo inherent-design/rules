@@ -913,6 +913,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "javascript-override-selection-lifetime",
+      "features": [
+        "npm.resolution-lock",
+        "pnpm.resolution-lock",
+        "yarn.constraints-resolution"
+      ],
+      "flow": "Declare raw ranges;install;author ordered forcing/convergence rules;read real installed bindings;set a lock-table choice;check it under a stricter mode;remove only the owned lock and regenerate.",
+      "counterexamples": [
+        "Canonical key sorting changes Yarn first-match policy.",
+        "Direct declaration refusal generalized to pnpm/Yarn.",
+        "Empty-range convergence collapsed into unscoped forcing.",
+        "Successful set resolution mistaken for stricter validation or durable manifest policy.",
+        "Unresolved pnpm overlap winner promoted to uniquely predicted selection."
+      ],
+      "hostWitnesses": [
+        "Generated registry and archive identities",
+        "Separate project/config/cache roots",
+        "Fresh-process installed-byte observations",
+        "Explicit authored mutations and lock selection",
+        "Caller and registry retirement"
+      ],
+      "status": "pending",
+      "evidence": [],
+      "componentEvidence": [
+        {
+          "id": "generated-caret-override-traces",
+          "status": "native-observed",
+          "scope": "Three generated-package tool profiles plus separate Yarn manual/check and pnpm overlapping-range workflows on the pinned Mac toolchain.31 command exits,30 fresh-runtime pairs(28 unique predictions,2 range admissions),8 Yarn saved selections;rules and request sequences are model inputs,not native after-state.",
+          "remaining": "Full solver/lock graph,protocols,peer/optional/workspace interactions,other linkers/hosts,cache failure,concurrency and partial installer IO remain unqualified. pnpm range-order cause and proposed containment correction remain unresolved. Parent operation states unchanged.",
+          "evidence": [
+            "js-overrides/README.md",
+            "js-overrides/Overrides.lean",
+            "js-overrides/Overrides.bend",
+            "js-overrides/comparison.json",
+            "sources/js-overrides-selections.json"
+          ]
+        }
+      ]
     }
   ]
 }

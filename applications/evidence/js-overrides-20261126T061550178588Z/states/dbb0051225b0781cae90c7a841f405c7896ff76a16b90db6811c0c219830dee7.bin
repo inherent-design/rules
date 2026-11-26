@@ -1,0 +1,47 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+overrides:
+  rules-override-left>rules-override-leaf: 2.0.0
+
+importers:
+
+  .:
+    dependencies:
+      rules-override-left:
+        specifier: 1.0.0
+        version: 1.0.0
+      rules-override-right:
+        specifier: 1.0.0
+        version: 1.0.0
+
+packages:
+
+  rules-override-leaf@1.1.0:
+    resolution: {integrity: sha512-oQPVRPH4zt1PAU83+P0QmZPTA+GNBuPR36rc7VEBgQ6XkbhoJZqyOHGHYG8vEDh/3AYwC1LR1AXMhp5UtgWG5w==}
+
+  rules-override-leaf@2.0.0:
+    resolution: {integrity: sha512-IswzSZGaNFbpGPgCIx4BI4w+URgWAoXv0SJhYne1T15i0urqSDjyfH0AGM6DXSkMYE3w2baxbyPdCNdgPASJJw==}
+
+  rules-override-left@1.0.0:
+    resolution: {integrity: sha512-OmVGy+qYwbPotP47yatKwWMOgGvD9Vzzssrm6KPMTip8d0u9rfT+nBjnD9uNKdV9QhpQD2I7/r6uU+0rhlbE6Q==}
+
+  rules-override-right@1.0.0:
+    resolution: {integrity: sha512-FZ9x3KlFIpYsgqC20q0qPiEBveqv5vRNZk2kAj80GlOM8stVIWKU0SnChtcfJrA7DnHG/INIW6U0c8f34lPHgQ==}
+
+snapshots:
+
+  rules-override-leaf@1.1.0: {}
+
+  rules-override-leaf@2.0.0: {}
+
+  rules-override-left@1.0.0:
+    dependencies:
+      rules-override-leaf: 2.0.0
+
+  rules-override-right@1.0.0:
+    dependencies:
+      rules-override-leaf: 1.1.0

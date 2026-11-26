@@ -1,0 +1,31 @@
+{
+  "packages": {
+    ".": {
+      "url": "..",
+      "dependencies": {
+        "rules-override-left": "rules-override-left",
+        "rules-override-right": "rules-override-right"
+      }
+    },
+    "rules-override-leaf": {
+      "url": "./rules-override-leaf",
+      "dependencies": {
+        "rules-override-leaf": "rules-override-leaf"
+      }
+    },
+    "rules-override-left": {
+      "url": "./rules-override-left",
+      "dependencies": {
+        "rules-override-leaf": "rules-override-leaf",
+        "rules-override-left": "rules-override-left"
+      }
+    },
+    "rules-override-right": {
+      "url": "./rules-override-right",
+      "dependencies": {
+        "rules-override-leaf": "rules-override-leaf",
+        "rules-override-right": "rules-override-right"
+      }
+    }
+  }
+}
