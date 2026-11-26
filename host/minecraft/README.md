@@ -10,6 +10,8 @@ The [resource consumer linework](BREADTH-LINEWORK.md) adds partial source contra
 
 The [pack detection band](PACK-DETECTION.md) compares 80 original detector/validator calls across the five Java releases with authored matchers and factories. It separates suffix decisions, link policy, callback attempts, and raw-target path context. No archive, metadata, repository/UI selection, or game is opened by that fixture.
 
+The [pack selection consumer map](PACK-SELECTION.md) follows displayed order, repository selection, saved choices, reload, and recovery. It adds source-only downstream boundaries and two static original-method disassemblies; it does not establish UI/game conformance. In particular, recovery can clear user choices rather than restore the previous selection.
+
 The [image-header band](IMAGE-HEADERS.md) compares 165 original tiny-buffer calls across all five Java clients, plus 12 arithmetic calibrations on Java 17/21/25. It preserves short-buffer errors, byte-order effects, and wrapped-versus-mathematical bounds. No image is decoded or allocated; full texture and device behavior remain open.
 
 The [CPU-image lifecycle band](CPU-IMAGES.md) separately constructs one original zeroed 2×2 image on Java 21/macOS and compares 16 ordered steps with the host models. Pixel words, bounds errors, closed-access refusal, retained metadata, and repeated close remain distinct. Decoding, physical reclamation, modern clients, and graphics backends are unqualified.
