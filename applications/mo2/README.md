@@ -45,3 +45,5 @@ The shared host contracts can describe origin identity, observed effective-view 
 The later [output and sync band](OUTPUTS.md) separates custom write routing and shell-move adoption from the sync dialog's per-file remove/move sequence. Real Qt/macOS source-method evidence exposes partial destination loss; supported Windows/USVFS qualification and any correction remain separate.
 
 The [mapping-plan band](ROUTING.md) separately compares default/custom target flags, requested/current profile save context, and supplied plugin rows. Assembled mappings do not establish the installed VFS view or physical tool writes.
+
+The [ownership and API targets](ARCHITECTURE.md) keep profile edits, persistence, effective views, mappings, processes and output adoption distinct. A new [callback fragment](REFRESH-CALLBACKS.md) exposes loss of a forced future registration during batch cleanup; a detached alternative executes only in the research adapter. The inventory also splits inspection from destructive sync and records shell-move adoption separately, without changing old observations.

@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+  "sources": [
+    {
+      "application": "mo2",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "path": "src/organizercore.cpp",
+      "cache": "applications/tools/source-cache/launchers/mo2__src__organizercore.cpp",
+      "sha256": "6532df0e3f7d561534165a76d3999eabfdd377eda1b25a3b3b1e4f17ba25814a",
+      "url": "https://github.com/ModOrganizer2/modorganizer/blob/9c130cbf2fc7225fb2916e46419af50671772aa0/src/organizercore.cpp",
+      "id": "core-lifecycle",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-profile-selections.json",
+      "originInspection": "Selected105-140:mod-list writer scheduling;530-605:profile selection;1210-1255:refresh callbacks and full refresh;1540-1635:threaded structure refresh/publication;1674-1775:scalar/bulk activation listeners;1890-1920:save refusal during update. Caller guards and complete worker/plugin behavior remain unqualified.",
+      "reviewedHereRanges": [
+        [
+          531,
+          605
+        ],
+        [
+          1217,
+          1279
+        ],
+        [
+          1540,
+          1642
+        ],
+        [
+          1912,
+          1948
+        ],
+        [
+          1951,
+          2102
+        ]
+      ]
+    },
+    {
+      "application": "mo2",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "path": "src/profile.cpp",
+      "cache": "applications/tools/source-cache/launchers/mo2__src__profile.cpp",
+      "sha256": "d9711393827f2f92df4603a8f03128b781b5fcb5759e6e76f3fc544a7218ef97",
+      "url": "https://github.com/ModOrganizer2/modorganizer/blob/9c130cbf2fc7225fb2916e46419af50671772aa0/src/profile.cpp",
+      "id": "profile-publication",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-profile-selections.json",
+      "originInspection": "Selected95-155:construction/copy/destruction;228-275:writer;390-738:refresh,active list,scalar and bulk activation,priority edits. Unmodified618-674 activation bodies executed with fixture adapters; parsing, writing, priority mutation and full MO2 not executed here.",
+      "reviewedHereRanges": [
+        [
+          65,
+          158
+        ],
+        [
+          223,
+          298
+        ]
+      ]
+    },
+    {
+      "application": "mo2",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "path": "src/profile.h",
+      "cache": "applications/tools/source-cache/launchers/mo2__src__profile.h",
+      "sha256": "7a3b4b06b97d40fae8e426611d99f03b9bc36e0ca578331f71e9e3e69c675a52",
+      "url": "https://github.com/ModOrganizer2/modorganizer/blob/9c130cbf2fc7225fb2916e46419af50671772aa0/src/profile.h",
+      "id": "profile-policy-contract",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-profile-selections.json",
+      "originInspection": "Selected275-320:activation/priority contracts;365-418:signals,ModStatus defaults and per-profile fields. Bulk setter explicitly requires a full refresh afterward.",
+      "reviewedHereRanges": [
+        [
+          270,
+          296
+        ]
+      ]
+    },
+    {
+      "path": "src/processrunner.cpp",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/processrunner.cpp",
+      "cache": "applications/tools/source-cache/mo2-output/src__processrunner.cpp",
+      "sha256": "3ef2bd8f17cc2c5978a96c8de6eebe206a6bb3a45df962f2d3f977ef8cbdc734",
+      "bytes": 26852,
+      "id": "launch-settings-context",
+      "originLedger": "sources/mo2-routing-selections.json",
+      "originInspection": "477\u2013495,609\u2013698,750\u2013779: profile/custom overrides, settings taken from current profile, defaulting and beforeRun forwarding. Source-only; complete caller/profile-switch reachability and native launch pending.",
+      "reviewedHereRanges": [
+        [
+          605,
+          670
+        ],
+        [
+          750,
+          785
+        ]
+      ]
+    },
+    {
+      "path": "src/organizerproxy.cpp",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/organizerproxy.cpp",
+      "cache": "applications/tools/source-cache/mo2-executables/src__organizerproxy.cpp",
+      "sha256": "743414cc4e8b699484dfaa78510f2b489b1207e0c068d0035b8cbbdf49f59c98",
+      "gitBlob": "6edbdbab756e2d45fbe033c0ba6198af47fb6c2b",
+      "bytes": 12600,
+      "id": "handle-transfer-and-wait",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-process-selections.json",
+      "originInspection": "176\u2013240: plugin profile override, handle transfer and wait completion conversion inspected only.",
+      "reviewedHereRanges": [
+        [
+          176,
+          238
+        ]
+      ]
+    },
+    {
+      "path": "src/syncoverwritedialog.cpp",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/syncoverwritedialog.cpp",
+      "cache": "applications/tools/source-cache/mo2-output/src__syncoverwritedialog.cpp",
+      "sha256": "93b87f8be9ed76cfe78ecdc92d99d8ac78ddc178da97a2eba6a9c3be79e1ff94",
+      "bytes": 5815,
+      "id": "overwrite-publication",
+      "originLedger": "sources/mo2-overwrite-selections.json",
+      "originInspection": "55\u2013177: combo destination filtering/order, metadata exclusion, recursive widget population, remove-then-rename and empty-directory cleanup; methods from55 toEOF executed unchanged with adapters.",
+      "reviewedHereRanges": [
+        [
+          125,
+          176
+        ]
+      ]
+    },
+    {
+      "application": "mo2",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "path": "src/pluginlist.cpp",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/pluginlist.cpp",
+      "cache": "applications/tools/source-cache/mo2-plugins/src__pluginlist.cpp",
+      "sha256": "5510afa300411868d57986b2d65bfda069199850110fe5e39cc555ac99320e6f",
+      "gitBlob": "94aee98da86fb749190c782d8ad7116e766ec805",
+      "bytes": 54003,
+      "id": "plugin-edit-stages",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-plugin-selections.json",
+      "originInspection": "Nine unchanged method bodies executed:enableESP,setEnabledAll,state,setState,setLoadOrder,updateIndices,syncLoadOrder,testMasters,pluginStatesChanged. Constructor75-80,refresh255-293,UIsetData1549-1600 andpriority helper1719-1765 source-only.",
+      "reviewedHereRanges": []
+    },
+    {
+      "application": "mo2",
+      "commit": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "path": "src/pluginlist.h",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/pluginlist.h",
+      "cache": "applications/tools/source-cache/mo2-plugins/src__pluginlist.h",
+      "sha256": "05afd68da20d4b59165536ec66fe7c725fcec84e0bbb68708e8e537c9917b0a8",
+      "gitBlob": "89c05141d7b5d11c37bd8756d06ecf35055a9248",
+      "bytes": 13095,
+      "id": "plugin-interface",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "originLedger": "sources/mo2-plugin-selections.json",
+      "originInspection": "Selected205-260 API declarations,signals300-315,ESP fields317-345 andname/priority maps390-391;not full constructor/game codec.",
+      "reviewedHereRanges": []
+    },
+    {
+      "path": "src/organizercore.h",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/organizercore.h",
+      "cache": "applications/tools/source-cache/mo2-architecture/src__organizercore.h",
+      "sha256": "d99b7a5a22f17eb022d06b88cdffb2091f2f50646cfd398a0b135b6140a9ebb6",
+      "bytes": 19400,
+      "id": "refresh-callback-contract",
+      "reviewedHereRanges": [
+        [
+          214,
+          240
+        ],
+        [
+          410,
+          424
+        ],
+        [
+          545,
+          554
+        ]
+      ],
+      "origin": "New official fixed-commit header acquisition; not a reproduced application build."
+    },
+    {
+      "path": "src/modlistviewactions.cpp",
+      "revision": "9c130cbf2fc7225fb2916e46419af50671772aa0",
+      "url": "https://raw.githubusercontent.com/ModOrganizer2/modorganizer/9c130cbf2fc7225fb2916e46419af50671772aa0/src/modlistviewactions.cpp",
+      "cache": "applications/tools/source-cache/mo2-output/src__modlistviewactions.cpp",
+      "sha256": "2279633ba3202dafae55ca4407675d10f8454355f0ea3f349341cb4555f1f634",
+      "bytes": 48503,
+      "id": "shell-adoption",
+      "originLedger": "sources/mo2-overwrite-selections.json",
+      "originInspection": "1299\u20131388: create-mod-from-overwrite and existing-mod move use shellMove, not the sync dialog per-file algorithm. No execution/atomicity claim.",
+      "reviewedHereRanges": [
+        [
+          1299,
+          1389
+        ]
+      ]
+    }
+  ],
+  "scope": "MO2 source/interface target plus selected callback registration/drain execution. Header enum values and signal type checked separately.",
+  "limits": [
+    "Empty new inspection ranges mean identity/reference reuse, not new body inspection.",
+    "Real Boost1.92/macOS fragment and earlier source-method fixtures do not qualify supported Windows MO2/Qt/USVFS.",
+    "Current upstream, complete plugin contracts and reproducible full-application dependency builds remain unreviewed."
+  ]
+}

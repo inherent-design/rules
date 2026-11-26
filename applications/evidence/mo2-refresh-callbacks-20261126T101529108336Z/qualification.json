@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "at": "2026-11-26T10:46:04.374088+00:00",
+  "baseRevision": "b77631a14a7040da18281a11764b54d191300d17",
+  "sourceIdentitiesChecked": 10,
+  "newOfficialSourceHeaders": 1,
+  "contracts": 9,
+  "modelReferences": [
+    {
+      "path": "applications/mo2/Profile.lean",
+      "sha256": "3a75304d8ee9b0ad1f030f1d1b9a813dff91c4b51ebbb213786da075d9dfa8a1"
+    },
+    {
+      "path": "applications/mo2/Profile.bend",
+      "sha256": "7cb155f1bdee2ee0acab858b0af2d9d1285313238faecc6dde250cc435af15c2"
+    },
+    {
+      "path": "applications/mo2/RefreshCallbacks.lean",
+      "sha256": "d4013d8699ea5c0647b10b67107230baacd24c6eafb8d6a55e0e6a0a12588ed9"
+    },
+    {
+      "path": "applications/mo2/RefreshCallbacks.bend",
+      "sha256": "ab389cf947331001be4c0c036c08240e5499632ae79f4cd7c116a7d50708e904"
+    },
+    {
+      "path": "applications/mo2/Process.lean",
+      "sha256": "1e81a81e40c8f49a7c2b81f40073d551d2c6a54d6ec67e5019b7a7aced367dd1"
+    },
+    {
+      "path": "applications/mo2/Routing.lean",
+      "sha256": "0b777389a502bc1282a7d0dd833f0e8d6530cbaddb2cbf7653b26cdffe888800"
+    },
+    {
+      "path": "applications/mo2/Routing.bend",
+      "sha256": "f26bd6e565d069152b0ccacbec19d2a19d74952b8ccfffad2213ebef7af427e4"
+    },
+    {
+      "path": "applications/mo2/Overwrite.lean",
+      "sha256": "c0ba0b990c3b73d4498256bafac587ba67766395ad00f090018851e91fec62f4"
+    },
+    {
+      "path": "applications/mo2/Overwrite.bend",
+      "sha256": "d64a620ec87bf3c7bcdfc32cee3d3878f6c0c920afdf8afa068424df0b726888"
+    },
+    {
+      "path": "applications/mo2/Plugins.lean",
+      "sha256": "8590f963ac8a64393742d608ed73a3a00b59b5a624595e80e7a7930ac31446af"
+    },
+    {
+      "path": "applications/mo2/Plugins.bend",
+      "sha256": "c6ea7836ad40a6199b4c12cf5e477951d80cd767e98d5e8ad142064b7f6ba8ae"
+    },
+    {
+      "path": "applications/mo2/Overlay.lean",
+      "sha256": "e186c3967af847d0b781a19f9d68b5586a83b58b21cda8096be2274fc00adb9c"
+    },
+    {
+      "path": "applications/mo2/Overlay.bend",
+      "sha256": "eb6158df49a027bf325e68ddfa0a39fb1015400d3166be10c8da4564b8f0ee1a"
+    },
+    {
+      "path": "applications/mo2/Process.bend",
+      "sha256": "5960897b148fe2b15a4364acb6c3adc2092c2c8344be122990f2c5e2950e826f"
+    }
+  ],
+  "newComponents": [
+    [
+      "mo2.profiles",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.mod-state",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.effective-files",
+      "refresh-callback-batch"
+    ],
+    [
+      "mo2.effective-files",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.plugins-load-order",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.configuration",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.saves",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.executables",
+      "mo2-ownership-api-target"
+    ],
+    [
+      "mo2.overwrite",
+      "mo2-ownership-api-target"
+    ]
+  ],
+  "operationCountBefore": 972,
+  "operationCountAfter": 974,
+  "newOperations": [
+    "sync-existing-files",
+    "move-to-existing-mod"
+  ],
+  "correctedExistingOperation": "mo2.overwrite/inspect-overwrite: narrow scope to choices; same model/native evidence/status retained. Destructive effects attributed to new sync-existing-files without a new run.",
+  "otherExistingParentRecordsUnchanged": true,
+  "markdownLinks": 19,
+  "qualifyingFragmentCommands": 2,
+  "fragmentCases": 10,
+  "structuredSnapshots": 30,
+  "newLeanLaws": 11,
+  "newBendLaws": 9,
+  "decoderRefusals": 10,
+  "changedObservationControls": 4,
+  "publicPrivateParity": true,
+  "privateCheckExclusions": [
+    "current-source-cuts",
+    "generated-binary-and-source",
+    "compiler-and-header-dependencies"
+  ],
+  "sharedFormalWritten": false,
+  "supportedWindowsMO2Runs": 0,
+  "developmentFailures": [
+    "Initial linker-only capture retained/excluded: resolving clang++ to clang changed driver mode. Failed/successful generated source SHA256 is identical.",
+    "First model parse errors and Bend list annotation corrected without native rerun; pre-correction copies retained under .build/mo2-refresh-callbacks-*-gate.*."
+  ],
+  "limits": [
+    "Unchanged registration body plus three drain statements, not whole callback caller or actual directory refresh.",
+    "Real Boost1.92/macOS alternative is a research fragment, not a product correction.",
+    "Exceptions/cancel/nested dispatch/threads/lifetime and Windows/Qt/USVFS/full pipeline unqualified.",
+    "Profile constructor/writer and prelaunch effects are source observations, not executed profile failures.",
+    "Current upstream and reproducible application build remain unreviewed."
+  ],
+  "checks": [
+    "Private2Lean1Bend focused gate;11Lean9Bend laws.",
+    "refresh_callbacks_conformance.py with owner checks and --public-only; comparison equal apart from3explicit private-exclusion categories.",
+    "python3 applications/check_inventory.py; source/model/ref/link checks and exact parent/op-delta review.",
+    "git diff --check."
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "status": "MO2 ownership/API and staged compatibility targets; conceptual responsibilities, not implemented public SDK or serialized result types.",
+  "sourceLedger": "sources/mo2-architecture-selections.json",
+  "contracts": [
+    {
+      "id": "profile-view-and-save",
+      "owners": [
+        "Profile::m_ModStatus and catalog lookup",
+        "OrganizerCore directory refresh/publication",
+        "Profile delayed writer and doWriteModlist"
+      ],
+      "sourceIds": [
+        "core-lifecycle",
+        "profile-publication",
+        "profile-policy-contract"
+      ],
+      "reports": [
+        "mo2/PROFILES.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Profile.lean",
+        "mo2/Profile.bend"
+      ],
+      "status": "Existing setter source-method evidence; save/refresh pipeline observations are inspected source, not supported Windows execution.",
+      "target": "Preserve ordered setter notifications and derive net edits separately. Bind view/persistence completion to actual profile/catalog/environment and writer results.",
+      "callersAndFormats": "Core/UI/plugin callers and listeners; existing enabled markers, reversed mod-list order and profile/settings files preserved.",
+      "keepCurrent": "Existing ready callbacks and UI guards are credible when sufficient; prove their scope before adding another coordination layer.",
+      "remaining": [
+        "Real save/reopen failure, profile/catalog changes during refresh, source/input stability and native injected reads.",
+        "A void writer or caller label cannot create a confirmed native readiness receipt."
+      ]
+    },
+    {
+      "id": "delivered-callback-batch",
+      "owners": [
+        "OrganizerCore::onNextRefresh",
+        "onDirectoryRefreshed callback invocation/disconnection",
+        "Boost connections and callback groups"
+      ],
+      "sourceIds": [
+        "core-lifecycle",
+        "refresh-callback-contract"
+      ],
+      "reports": [
+        "mo2/REFRESH-CALLBACKS.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/RefreshCallbacks.lean",
+        "mo2/RefreshCallbacks.bend"
+      ],
+      "status": "Current loss and detached-batch alternative executed as source/Boost fragments; not full MO2 or Qt refresh.",
+      "target": "Retire delivered callbacks without disconnecting future registrations accepted during delivery. Preserve immediate policy, group order and ordinary one-shot handles.",
+      "callersAndFormats": "Refresh subscribers, existing connection ownership and callback modes. Internal lifecycle correction; no profile/file format migration.",
+      "keepCurrent": "Requires a justified, enforced restriction against forced future registration during delivery; no such restriction established here.",
+      "remaining": [
+        "Exceptions and uncalled callbacks, cancellation/disconnect, nested delivery, threads, destruction, supported Boost/Windows and actual caller reachability.",
+        "Callback delivery is not complete view, persistence, VFS or process evidence."
+      ]
+    },
+    {
+      "id": "preparation-effects-and-save-result",
+      "owners": [
+        "OrganizerCore::beforeRun and saveCurrentProfile",
+        "Profile(QDir) initialization/destruction",
+        "doWriteModlist error handling"
+      ],
+      "sourceIds": [
+        "core-lifecycle",
+        "profile-publication",
+        "handle-transfer-and-wait"
+      ],
+      "reports": [
+        "mo2/ROUTING.md",
+        "mo2/PROCESSES.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Profile.lean",
+        "mo2/Process.lean"
+      ],
+      "status": "Source/caller review only; mapping fixture profile constructor was an adapter and actual save failures unexecuted.",
+      "target": "Separate read-only inspection from initializing/loading profiles and expose preparation/save outcomes before launch admission. Keep earlier effects visible after veto or later mapping failure.",
+      "callersAndFormats": "Launch UI, plugin start API, profile loader and delayed writer. Reuse existing parsing and safe-write owner; no new generic transaction or saved format.",
+      "keepCurrent": "Existing entry points can remain when their effects are documented and callers retain uncertainty; a void return is insufficient for a new verified-save promise.",
+      "remaining": [
+        "Writer/helper failure and commit/readback semantics, explicit older-saved-state permission, plugin mutation during preparation and supported Windows save/launch workflow."
+      ]
+    },
+    {
+      "id": "resolved-mapping-context",
+      "owners": [
+        "fileMapping(profileName,customOverwrite)",
+        "ProcessRunner::setFromFileOrExecutable",
+        "Profile local-save policy",
+        "game/file-mapper plugin contributions"
+      ],
+      "sourceIds": [
+        "core-lifecycle",
+        "launch-settings-context",
+        "handle-transfer-and-wait",
+        "profile-publication"
+      ],
+      "reports": [
+        "mo2/ROUTING.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Routing.lean",
+        "mo2/Routing.bend"
+      ],
+      "status": "Earlier real-Qt method fixture and current caller inspection; nonregular target and mixed profiles remain API-shape cases, not full supported launch failures.",
+      "target": "Resolve content profile, setting origins, saves, catalog, game paths and plugin rows explicitly. Choose override semantics before stricter target admission.",
+      "callersAndFormats": "Ordinary executable UI, plugin profile override, regular/custom targets and plugin mapping rows. Preserve profiles and public extension contracts.",
+      "keepCurrent": "Credible with explicit current/requested preconditions and existing UI eligibility. Do not impose one global create-target count.",
+      "remaining": [
+        "Actual override contract, eligible plugin/nonregular backing, mapping installation, existing/new-file writes, stale indices, profile switches, failed/partial backend updates and process output."
+      ]
+    },
+    {
+      "id": "replacement-backing-and-row-results",
+      "owners": [
+        "SyncOverwriteDialog::applyTo/apply",
+        "chosen FilesOrigin and physical source/destination",
+        "existing checked filesystem helpers"
+      ],
+      "sourceIds": [
+        "overwrite-publication"
+      ],
+      "reports": [
+        "mo2/OUTPUTS.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Overwrite.lean",
+        "mo2/Overwrite.bend"
+      ],
+      "status": "Destination loss reproduced by real Qt/macOS source methods; prior-backing retention model-only and Windows/shell paths unqualified.",
+      "target": "Preserve old backing until confirmed replacement or retain verified recovery bytes before destruction. Return per-row effects and failure phases without implying whole-batch rollback.",
+      "callersAndFormats": "Sync dialog, refresh/recovery guidance and later adoption. Existing origins and mod storage meanings preserved; no broad transaction framework selected.",
+      "keepCurrent": "Retain skip/choice/partial-row semantics, but unchanged destructive ordering does not satisfy backing preservation.",
+      "remaining": [
+        "Actual helper and Windows guarantees, identity/races/permissions/cross-volume, links/attributes, interruptions, restart and restoration from real retained data."
+      ]
+    },
+    {
+      "id": "plugin-ingestion-and-action",
+      "owners": [
+        "PluginList scalar/bulk setters",
+        "setLoadOrder/index synchronization/master checks",
+        "game-specific fixups and delayed writer"
+      ],
+      "sourceIds": [
+        "plugin-edit-stages",
+        "plugin-interface",
+        "core-lifecycle"
+      ],
+      "reports": [
+        "mo2/PLUGINS.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Plugins.lean",
+        "mo2/Plugins.bend"
+      ],
+      "status": "Existing source-method timeline evidence; ordinary duplicate-order reachability, game indices and saved results remain unqualified.",
+      "target": "Preserve raw ingestion contracts; a higher-level action validates its current catalog, reuses fixups/writer/refresh and reports completed stages. Decide duplicate handling at that boundary.",
+      "callersAndFormats": "Internal readers, UI/extensions, listener order and game-specific load-order files. Do not reinterpret catalog-order fallback from a comment or invent another resolver.",
+      "keepCurrent": "Raw setters are appropriate within existing staged ingestion; no unconditional normalization or publication promise.",
+      "remaining": [
+        "Real UI/plugin paths, catalog replacement, duplicates/unknown names, game-specific indices, saving/reopen, LOOT and runtime acceptance."
+      ]
+    },
+    {
+      "id": "effective-view-inspection",
+      "owners": [
+        "DirectoryEntry/FileEntry/FilesOrigin",
+        "profile activation and game archive policy",
+        "conflict UI and plugin consumers"
+      ],
+      "sourceIds": [
+        "core-lifecycle"
+      ],
+      "reports": [
+        "mo2/README.md",
+        "mo2/PROFILES.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Overlay.lean",
+        "mo2/Overlay.bend"
+      ],
+      "status": "Existing finite source-fragment rank evidence; eligibility, complete view and supported Windows VFS remain premises.",
+      "target": "Expose virtual path, winner/alternatives, backing kind/comparison rule and actual context where current consumers need it; preserve distinct rank domains.",
+      "callersAndFormats": "Existing conflict UI, plugin inspection and source backings. Preserve mod/archived priority semantics and negative sentinel, not a universal highest-priority rule.",
+      "keepCurrent": "Existing views may already suffice; inspect their actual explanations before another interface.",
+      "remaining": [
+        "Real loose/archive/hidden conflicts, ties/boundaries, profile changes, injected physical reads and original backing preservation."
+      ]
+    },
+    {
+      "id": "process-handle-wait-and-output",
+      "owners": [
+        "ProcessRunner Results/WaitFlags",
+        "OrganizerProxy startApplication/waitForApplication",
+        "UILocker and afterRun refresh",
+        "external output/adoption"
+      ],
+      "sourceIds": [
+        "launch-settings-context",
+        "handle-transfer-and-wait",
+        "core-lifecycle"
+      ],
+      "reports": [
+        "mo2/PROCESSES.md",
+        "mo2/OUTPUTS.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [
+        "mo2/Process.lean",
+        "mo2/Process.bend"
+      ],
+      "status": "Existing inert-adapter branch traces and inspected handle/caller contract; no native Windows process/job execution.",
+      "target": "Preserve spawn, transferred handle responsibility, wait result, UI unlock, retirement, refresh and stable output as separate facts.",
+      "callersAndFormats": "UI and plugin launch/wait clients; existing enum/flag and handle contract preserved. Reuse process owner, not a generic runner or done flag.",
+      "keepCurrent": "Existing entry points remain useful with explicit guarantees and caller ownership; an unlock is not termination.",
+      "remaining": [
+        "Real handles/jobs/descendants, signals/waits, VFS lifetime, cancellation, profile mutation, refresh/save failure and joined output capture/adoption."
+      ]
+    },
+    {
+      "id": "shell-move-adoption",
+      "owners": [
+        "ModListViewActions::createModFromOverwrite",
+        "moveOverwriteContentToExistingMod",
+        "moveOverwriteContentsTo and shellMove"
+      ],
+      "sourceIds": [
+        "shell-adoption"
+      ],
+      "reports": [
+        "mo2/OUTPUTS.md",
+        "mo2/ARCHITECTURE.md"
+      ],
+      "models": [],
+      "status": "Source discovery only; create-new and move-to-existing operations remain pending, separate from per-file sync evidence.",
+      "target": "Retain source/destination and any created mod, helper outcome, partial filesystem effects and refresh as separate stages. Do not transfer sync-dialog guarantees to a shell move.",
+      "callersAndFormats": "Overwrite UI create/move actions, installed mod catalog and shell helper. Preserve existing mod storage; no new transaction or migration selected.",
+      "keepCurrent": "Keep the existing helper until its actual success/partial/cancel contract is qualified. A Boolean result alone does not establish rollback.",
+      "remaining": [
+        "Supported Windows shell operations, user cancellation, partial/cross-volume/permission/link effects, new-mod preservation, restart and original backing recovery."
+      ]
+    }
+  ],
+  "freshScope": {
+    "sourceFiles": 10,
+    "newOfficialHeader": 1,
+    "qualifyingCompileObserveCommands": 2,
+    "fragmentRecords": 10,
+    "snapshotComparisons": 30,
+    "newLeanLaws": 11,
+    "newBendLaws": 9,
+    "supportedWindowsMO2Runs": 0
+  },
+  "limits": [
+    "Current source, real-Boost fragment, earlier Qt/source-method results and proposed application behavior remain distinct.",
+    "No production patch, saved-state migration, general VFS/process authority or whole-application qualification.",
+    "Current upstream/dependency support and full nine-program goal remain open."
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "schema": 1,
+  "profile": "single-thread-leaf-callback-drain",
+  "requests": [
+    {
+      "active": true,
+      "detached": false,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": null
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": true,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": null
+        }
+      ]
+    },
+    {
+      "active": false,
+      "detached": false,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": false,
+          "child": null
+        }
+      ]
+    },
+    {
+      "active": false,
+      "detached": true,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": false,
+          "child": null
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": false,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": {
+            "token": 2,
+            "group": 2,
+            "force": true
+          }
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": true,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": {
+            "token": 2,
+            "group": 2,
+            "force": true
+          }
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": false,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": {
+            "token": 2,
+            "group": 2,
+            "force": false
+          }
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": true,
+      "requests": [
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": {
+            "token": 2,
+            "group": 2,
+            "force": false
+          }
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": false,
+      "requests": [
+        {
+          "token": 3,
+          "group": 2,
+          "force": true,
+          "child": null
+        },
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": null
+        },
+        {
+          "token": 2,
+          "group": 1,
+          "force": true,
+          "child": null
+        }
+      ]
+    },
+    {
+      "active": true,
+      "detached": true,
+      "requests": [
+        {
+          "token": 3,
+          "group": 2,
+          "force": true,
+          "child": null
+        },
+        {
+          "token": 1,
+          "group": 0,
+          "force": true,
+          "child": null
+        },
+        {
+          "token": 2,
+          "group": 1,
+          "force": true,
+          "child": null
+        }
+      ]
+    }
+  ],
+  "comparison": [
+    {
+      "case": "queued",
+      "policy": "current",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "case": "queued",
+      "policy": "detached-batch",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "case": "immediate",
+      "policy": "current",
+      "snapshots": {
+        "before": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "case": "immediate",
+      "policy": "detached-batch",
+      "snapshots": {
+        "before": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "case": "reentrant-forced",
+      "policy": "current",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "case": "reentrant-forced",
+      "policy": "detached-batch",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [
+            2
+          ],
+          "pending": 1,
+          "trace": [
+            1
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "case": "reentrant-immediate",
+      "policy": "current",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "case": "reentrant-immediate",
+      "policy": "detached-batch",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1
+          ],
+          "pending": 1,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "case": "groups",
+      "policy": "current",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1,
+            2,
+            3
+          ],
+          "pending": 3,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2,
+            3
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "case": "groups",
+      "policy": "detached-batch",
+      "snapshots": {
+        "before": {
+          "connected": [
+            1,
+            2,
+            3
+          ],
+          "pending": 3,
+          "trace": []
+        },
+        "first": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2,
+            3
+          ]
+        },
+        "second": {
+          "connected": [],
+          "pending": 0,
+          "trace": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    }
+  ],
+  "modelIdentities": [
+    {
+      "path": "applications/mo2/RefreshCallbacks.lean",
+      "sha256": "d4013d8699ea5c0647b10b67107230baacd24c6eafb8d6a55e0e6a0a12588ed9"
+    },
+    {
+      "path": "applications/mo2/RefreshCallbacksCase.lean",
+      "sha256": "55e4137bb97efe52af4868e674bb6513eb84c417ab75d03b712e7b6b159f4724"
+    },
+    {
+      "path": "applications/mo2/RefreshCallbacks.bend",
+      "sha256": "ab389cf947331001be4c0c036c08240e5499632ae79f4cd7c116a7d50708e904"
+    }
+  ],
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "threading",
+    "exception-cancel",
+    "group",
+    "zero-token",
+    "child-group",
+    "duplicate-token",
+    "request-count",
+    "scenario-count"
+  ],
+  "changedObservationControls": [
+    "first-trace",
+    "first-connected",
+    "first-pending",
+    "second-trace"
+  ],
+  "excludedPrivateChecks": [],
+  "limits": [
+    "Five scenarios, two research implementations, three snapshots; not Windows MO2, Qt refresh, VFS or profile persistence.",
+    "No exceptions, cancellation, deeper registration chains, parallel delivery or full application reachability qualified."
+  ]
+}

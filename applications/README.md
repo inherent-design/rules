@@ -113,3 +113,5 @@ The [package-manager ownership targets](js-architecture/README.md) consolidate n
 The [Cargo ownership and API targets](cargo/ARCHITECTURE.md) connect binary publication, tracking, cleanup, configuration provenance, and context-bound inspection. A fresh no-track fixture establishes false success after replacement failure; metadata-write failure and stronger cleanup recovery remain separately unqualified.
 
 The [restic ownership and API targets](restic/ARCHITECTURE.md) preserve object roles, legacy codecs, capture and destructive policies while refining query completion and per-operation acknowledgement. The source review identifies a JSON-finalization obligation for the proposed search correction; it does not change the earlier native/model evidence.
+
+The [MO2 ownership and API targets](mo2/ARCHITECTURE.md) connect existing state owners and compatibility choices to a new [source/Boost callback comparison](mo2/REFRESH-CALLBACKS.md). They also correct the overwrite inventory by separating inspection, per-file sync and shell-move adoption. Supported Windows MO2, Qt refresh and VFS remain unqualified.
