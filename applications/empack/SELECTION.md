@@ -70,6 +70,8 @@ Runtime migration instead composes a candidate intent. It requires a current loc
 
 The sync caller can revalidate prior exact provider selections against changed runtime context before looking for alternatives, and asks for implicit-library revalidation when that context changes. The full runtime resolver, replacement workflow, and pin/unpin publication need further direct comparison; this call map does not qualify them.
 
+The later [author-transition review](AUTHOR-TRANSITIONS.md) follows adoption's observation and document-only plan separately from migration's original-basis request. It also reads the automatic-retention and authored-pin migration tests at their actual boundaries; neither source inspection nor a test name is a new execution result.
+
 ## Independent work and partial outcomes
 
 `--continue-independent` reaches the engine's dependency-batch policy after discovery has produced usable normalized inputs. It does not promise an executable subset whenever a catalog or required-edge lookup fails. A shared unknown relation can prevent establishing independence even when a particular row's catalog succeeded. Preserve useful observations and the original failure rather than manufacture a subset from apparently unrelated names.

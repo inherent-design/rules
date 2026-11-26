@@ -6,6 +6,8 @@ The separate [current ownership band](OWNERSHIP.md) has actual core API and inst
 
 The [removal/re-adoption band](REMOVAL.md) compares current core demotion, exact deletion, known/unknown evidence, and identical-request merges. It keeps author requests, retained selections, and actual file deletion separate; the deferred UX implementation remains unstarted.
 
+The [author-transition review](AUTHOR-TRANSITIONS.md) traces observed-content adoption and explicit runtime migration through identification, authored policy, native preparation, and publication. It classifies existing test bodies without claiming a fresh run, and separates automatic retention of a locked version from preservation of an authored exact pin.
+
 The [native identity band](IDENTITY.md) separates live object equality, durable comparison, content observations, and recovery authority. Synthetic device changes preserve durable comparison while fresh live equality remains strict. This is source-function evidence, not a reboot, state lookup, or recovery qualification. The distinction must survive portable extraction; native evidence is not a portable project revision.
 
 The [state discovery band](ROOT-STATE.md) compares actual directory lookup with Lean and Bend and retains a source-supported initialization-lock concern. The subsequent initializer band executes the selected writer chain and controlled interruptions; complete Engine/CLI composition remains pending. A returned state key alone supplies no observed state or execution authority.
