@@ -62,3 +62,5 @@ The later [backup-capture band](BACKUP.md) distinguishes metadata-based content 
 The later [copy band](COPY.md) separates persistent origin, metadata-sensitive skip, retained file bytes, and encrypted destination snapshot IDs. Its three generated repositories and repeat/tag/password controls leave remote and interrupted-copy qualification open.
 
 The later [comparison and search band](INSPECTION.md) compares saved-tree diffs, query completion, and four size measures. It retains a successful search with invalid JSON after a root-tree read failure and a type-change reference-counter gap, alongside distinct proposed policies. Metadata-only query success remains separate from payload availability and physical reclamation.
+
+The [repository-admission and format band](REPOSITORY.md) connects local initialization, authenticated opening, conservative partial-state guards, and an actual format upgrade through check/dump readbacks. It preserves zero-status unknown and skipped requests separately from applied migrations; remote, forced, failed, and interrupted transitions remain open.

@@ -14635,7 +14635,28 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#restic",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "local-config-admission-and-format-upgrade",
+              "status": "native-observed",
+              "scope": "22 full local CLI calls with 18 primary init/open/migration requests and four setup/readback controls. Recognized key/snapshot guards, authenticated config versions, normal 1-to-2 publication, and current per-name reporting; three strict-unknown cases are model-only.",
+              "remaining": "Other backends, arbitrary authentication/config corruption, forced/failed migration, reupload, interruption/concurrency, recovery, and complete operation qualification remain open.",
+              "evidence": [
+                "restic/REPOSITORY.md",
+                "restic/Repository.lean",
+                "restic/Repository.bend",
+                "restic/repository_observations.py",
+                "evidence/restic-repository-comparison/controls.json",
+                "sources/restic-repository-selections.json"
+              ],
+              "operationSlices": {
+                "init": "Selected local version/config/key/snapshot admission;authored partial states are not crashed initializers.",
+                "open": "Config presence and controlled credential profiles with independent authenticated version readbacks;not general crypto/key-search qualification.",
+                "migrate-format": "Actual normal format 1-to-2 flow, unknown/mixed/repeated requests, and preserved file namespace. No remote/force/failure/crash qualification."
+              }
+            }
+          ]
         },
         {
           "id": "restic.key-custody",

@@ -1,0 +1,1929 @@
+[
+  {
+    "label": "version",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/absent",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/absent",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "version"
+    ],
+    "before": {
+      "exists": false,
+      "files": {}
+    },
+    "after": {
+      "exists": false,
+      "files": {}
+    },
+    "pid": 21903,
+    "seconds": 0.025876250118017197,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "version.stdout",
+        "publicSha256": "22e81f872b5ba9a10703925fbfb5c8419ba0191e1ce5e83c0c947ef87a729743",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/version.stdout",
+        "rawSha256": "22e81f872b5ba9a10703925fbfb5c8419ba0191e1ce5e83c0c947ef87a729743"
+      },
+      "stderr": {
+        "path": "version.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/version.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "unsupported-init",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/unsupported",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/unsupported",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "99"
+    ],
+    "before": {
+      "exists": false,
+      "files": {}
+    },
+    "after": {
+      "exists": false,
+      "files": {}
+    },
+    "pid": 21921,
+    "seconds": 0.015095333103090525,
+    "exitCode": 1,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "unsupported-init.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/unsupported-init.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "unsupported-init.stderr",
+        "publicSha256": "f141c37049983b8a224d02e5725843ef6936cb7895364a5e91a5d23aa64dca48",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/unsupported-init.stderr",
+        "rawSha256": "f141c37049983b8a224d02e5725843ef6936cb7895364a5e91a5d23aa64dca48"
+      }
+    }
+  },
+  {
+    "label": "missing-open",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/missing",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/missing",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": false,
+      "files": {}
+    },
+    "after": {
+      "exists": false,
+      "files": {}
+    },
+    "pid": 21936,
+    "seconds": 0.015125875361263752,
+    "exitCode": 10,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "missing-open.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/missing-open.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "missing-open.stderr",
+        "publicSha256": "508728a8a925bc1ae16d349c7d07bdfcd3029fa2fe385ad5392f809ed1fc9ba9",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/missing-open.stderr",
+        "rawSha256": "508728a8a925bc1ae16d349c7d07bdfcd3029fa2fe385ad5392f809ed1fc9ba9"
+      }
+    }
+  },
+  {
+    "label": "init-v1",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "1"
+    ],
+    "before": {
+      "exists": false,
+      "files": {}
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "pid": 21937,
+    "seconds": 2.553383500315249,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "init-v1.stdout",
+        "publicSha256": "9dc5a78fbde718a8ae19ec4a2a013ea6a52a6ad58e451054d77f22df49aced55",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/init-v1.stdout",
+        "rawSha256": "9dc5a78fbde718a8ae19ec4a2a013ea6a52a6ad58e451054d77f22df49aced55"
+      },
+      "stderr": {
+        "path": "init-v1.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/init-v1.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "config-v1",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "pid": 22469,
+    "seconds": 0.7047666669823229,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "config-v1.stdout",
+        "publicSha256": "cc29985812ff633b79522b447adf5477f753b96ad58a7def3c4729c4c51c3dec",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-v1.stdout",
+        "rawSha256": "cc29985812ff633b79522b447adf5477f753b96ad58a7def3c4729c4c51c3dec"
+      },
+      "stderr": {
+        "path": "config-v1.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-v1.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "backup-v1",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "backup",
+      ".",
+      "--host",
+      "fixture-host"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 22726,
+    "seconds": 0.7358420421369374,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "backup-v1.stdout",
+        "publicSha256": "d357ef2445b7abc914f1d206fac110deacb3de207a52b7aec587fad1a8d9b8f2",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/backup-v1.stdout",
+        "rawSha256": "d357ef2445b7abc914f1d206fac110deacb3de207a52b7aec587fad1a8d9b8f2"
+      },
+      "stderr": {
+        "path": "backup-v1.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/backup-v1.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "existing-init",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 22989,
+    "seconds": 0.02406054176390171,
+    "exitCode": 1,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "existing-init.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/existing-init.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "existing-init.stderr",
+        "publicSha256": "c4a1d9523958edf021c88c5894bd8e5fe3b0ac27bbad10ef61f3a3e34300d974",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/existing-init.stderr",
+        "rawSha256": "c4a1d9523958edf021c88c5894bd8e5fe3b0ac27bbad10ef61f3a3e34300d974"
+      }
+    }
+  },
+  {
+    "label": "wrong-password",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/wrong-password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 22991,
+    "seconds": 0.47890158323571086,
+    "exitCode": 12,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "wrong-password.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/wrong-password.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "wrong-password.stderr",
+        "publicSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/wrong-password.stderr",
+        "rawSha256": "52e6e90408bfc58cc551750753eb14013475e5151d651bc78309010bf5c5f3c4"
+      }
+    }
+  },
+  {
+    "label": "key-only-init",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/key-only",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/key-only",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "pid": 22992,
+    "seconds": 0.03543024975806475,
+    "exitCode": 1,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "key-only-init.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/key-only-init.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "key-only-init.stderr",
+        "publicSha256": "3ef0bffbaf85185b146dfe893e4db5485fad9b085284a73ca16e20e78977c4f4",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/key-only-init.stderr",
+        "rawSha256": "3ef0bffbaf85185b146dfe893e4db5485fad9b085284a73ca16e20e78977c4f4"
+      }
+    }
+  },
+  {
+    "label": "key-only-open",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/key-only",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/key-only",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "pid": 22993,
+    "seconds": 0.019771375227719545,
+    "exitCode": 10,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "key-only-open.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/key-only-open.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "key-only-open.stderr",
+        "publicSha256": "707ad8c81d97395066b7a68136c9baec433cb150075ecfdf15d3f4b592663d19",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/key-only-open.stderr",
+        "rawSha256": "707ad8c81d97395066b7a68136c9baec433cb150075ecfdf15d3f4b592663d19"
+      }
+    }
+  },
+  {
+    "label": "snapshot-only-init",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/snapshot-only",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/snapshot-only",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init",
+      "--repository-version",
+      "2"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 22994,
+    "seconds": 0.02001170814037323,
+    "exitCode": 1,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "snapshot-only-init.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/snapshot-only-init.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "snapshot-only-init.stderr",
+        "publicSha256": "79bf0351a5bcd2836248f3a059a164d15cc22e9dfe5f8de1de5ae20cc2b58f98",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/snapshot-only-init.stderr",
+        "rawSha256": "79bf0351a5bcd2836248f3a059a164d15cc22e9dfe5f8de1de5ae20cc2b58f98"
+      }
+    }
+  },
+  {
+    "label": "list-migrations",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "migrate"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 22995,
+    "seconds": 0.6481762076728046,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "list-migrations.stdout",
+        "publicSha256": "d787efedcb6f109c7bf41abcf69b027afa6ea3fd009d3916099ea60a5b7697cd",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/list-migrations.stdout",
+        "rawSha256": "d787efedcb6f109c7bf41abcf69b027afa6ea3fd009d3916099ea60a5b7697cd"
+      },
+      "stderr": {
+        "path": "list-migrations.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/list-migrations.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "unknown-migration",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "migrate",
+      "not_a_fixture_migration"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 23248,
+    "seconds": 0.6399656250141561,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "unknown-migration.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/unknown-migration.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "unknown-migration.stderr",
+        "publicSha256": "588dba77567f1562107cd261b26cae4936079ebf163a3002e530b605cf6721cc",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/unknown-migration.stderr",
+        "rawSha256": "588dba77567f1562107cd261b26cae4936079ebf163a3002e530b605cf6721cc"
+      }
+    }
+  },
+  {
+    "label": "config-after-unknown",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 23505,
+    "seconds": 0.6981995003297925,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "config-after-unknown.stdout",
+        "publicSha256": "cc29985812ff633b79522b447adf5477f753b96ad58a7def3c4729c4c51c3dec",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-after-unknown.stdout",
+        "rawSha256": "cc29985812ff633b79522b447adf5477f753b96ad58a7def3c4729c4c51c3dec"
+      },
+      "stderr": {
+        "path": "config-after-unknown.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-after-unknown.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "migrate-with-unknown",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "migrate",
+      "not_a_fixture_migration",
+      "upgrade_repo_v2"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 23513,
+    "seconds": 1.3214667080901563,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "migrate-with-unknown.stdout",
+        "publicSha256": "7353ef8b57324540fca11678e7fa1dde0aaff3852b9dac007593ade85d5089cc",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/migrate-with-unknown.stdout",
+        "rawSha256": "7353ef8b57324540fca11678e7fa1dde0aaff3852b9dac007593ade85d5089cc"
+      },
+      "stderr": {
+        "path": "migrate-with-unknown.stderr",
+        "publicSha256": "588dba77567f1562107cd261b26cae4936079ebf163a3002e530b605cf6721cc",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/migrate-with-unknown.stderr",
+        "rawSha256": "588dba77567f1562107cd261b26cae4936079ebf163a3002e530b605cf6721cc"
+      }
+    }
+  },
+  {
+    "label": "config-v2",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 24024,
+    "seconds": 0.6878193328157067,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "config-v2.stdout",
+        "publicSha256": "b3d473733551d96b6ebf799c0b4187d5ad1bbca70ac397842c1be21d7e4ef851",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-v2.stdout",
+        "rawSha256": "b3d473733551d96b6ebf799c0b4187d5ad1bbca70ac397842c1be21d7e4ef851"
+      },
+      "stderr": {
+        "path": "config-v2.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-v2.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "repeat-migration",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "migrate",
+      "upgrade_repo_v2"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 24025,
+    "seconds": 0.7048837919719517,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "repeat-migration.stdout",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/repeat-migration.stdout",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "repeat-migration.stderr",
+        "publicSha256": "8688a00f7c696456cfa03be0117f7dad7f940468b1883b5e3c677c9b869ebd4e",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/repeat-migration.stderr",
+        "rawSha256": "8688a00f7c696456cfa03be0117f7dad7f940468b1883b5e3c677c9b869ebd4e"
+      }
+    }
+  },
+  {
+    "label": "list-after-migration",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "migrate"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 24281,
+    "seconds": 0.7406012499704957,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "list-after-migration.stdout",
+        "publicSha256": "66c135d1953647ec04f6474af83d08901eff092c63e99004c3382aad36cdf8e5",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/list-after-migration.stdout",
+        "rawSha256": "66c135d1953647ec04f6474af83d08901eff092c63e99004c3382aad36cdf8e5"
+      },
+      "stderr": {
+        "path": "list-after-migration.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/list-after-migration.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "dump-after-migration",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "dump",
+      "latest",
+      "/payload.txt"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 24562,
+    "seconds": 0.7708215001039207,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "dump-after-migration.stdout",
+        "publicSha256": "ca456b9d7f99df3ac501d2fad175f07c3f39abdc176f7edfe692ebc8364c27b5",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/dump-after-migration.stdout",
+        "rawSha256": "ca456b9d7f99df3ac501d2fad175f07c3f39abdc176f7edfe692ebc8364c27b5"
+      },
+      "stderr": {
+        "path": "dump-after-migration.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/dump-after-migration.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "check-after-migration",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "check",
+      "--read-data"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "7f5c8a265af4fcfdf600e1dd1546577f9724dbdccd9156a6d5480430bd598533",
+          "mode": 256,
+          "mtimeNs": 1795661062160293286
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "pid": 24725,
+    "seconds": 0.7635103329084814,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "check-after-migration.stdout",
+        "publicSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/check-after-migration.stdout",
+        "rawSha256": "390183f57f5965367604ccbb914ce144ee4e7a11a769bf987db639f71c003be6"
+      },
+      "stderr": {
+        "path": "check-after-migration.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/check-after-migration.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "init-default",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/default-repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/default-repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "init"
+    ],
+    "before": {
+      "exists": false,
+      "files": {}
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "37133f4a612768adcd4e9a886898fd85e283d4ece2e3eccd0615ae8bed79068c",
+          "mode": 256,
+          "mtimeNs": 1795661068961475153
+        },
+        "keys/9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb": {
+          "bytes": 460,
+          "sha256": "9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb",
+          "mode": 256,
+          "mtimeNs": 1795661068949366769
+        }
+      }
+    },
+    "pid": 24822,
+    "seconds": 3.077629250008613,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "init-default.stdout",
+        "publicSha256": "c871b15e7b304b247680fcf7e8d6a35e8da7282fed7376eb4682bd605d177ba4",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/init-default.stdout",
+        "rawSha256": "c871b15e7b304b247680fcf7e8d6a35e8da7282fed7376eb4682bd605d177ba4"
+      },
+      "stderr": {
+        "path": "init-default.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/init-default.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  {
+    "label": "config-default",
+    "repo": "/private/tmp/rules-restic-repository-2b21s813/default-repository",
+    "argv": [
+      "/Users/[fixture-user]/production/rules/applications/tools/restic-0.20.0/restic",
+      "--repo",
+      "/private/tmp/rules-restic-repository-2b21s813/default-repository",
+      "--password-file",
+      "/private/tmp/rules-restic-repository-2b21s813/password",
+      "--json",
+      "cat",
+      "config"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "37133f4a612768adcd4e9a886898fd85e283d4ece2e3eccd0615ae8bed79068c",
+          "mode": 256,
+          "mtimeNs": 1795661068961475153
+        },
+        "keys/9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb": {
+          "bytes": 460,
+          "sha256": "9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb",
+          "mode": 256,
+          "mtimeNs": 1795661068949366769
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "37133f4a612768adcd4e9a886898fd85e283d4ece2e3eccd0615ae8bed79068c",
+          "mode": 256,
+          "mtimeNs": 1795661068961475153
+        },
+        "keys/9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb": {
+          "bytes": 460,
+          "sha256": "9731b0325e189258e3a136d85c31e70c763589ad9fbb5d5b81bc24e0b63c1adb",
+          "mode": 256,
+          "mtimeNs": 1795661068949366769
+        }
+      }
+    },
+    "pid": 25592,
+    "seconds": 0.7484092921949923,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "timedOut": false,
+    "streams": {
+      "stdout": {
+        "path": "config-default.stdout",
+        "publicSha256": "5805233dfe3ff48282ced5c249cf11a69ed982b7db96622ee74ce720b5e64cfd",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-default.stdout",
+        "rawSha256": "5805233dfe3ff48282ced5c249cf11a69ed982b7db96622ee74ce720b5e64cfd"
+      },
+      "stderr": {
+        "path": "config-default.stderr",
+        "publicSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rawPrivatePath": "/private/tmp/rules-restic-repository-2b21s813/private/config-default.stderr",
+        "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  }
+]

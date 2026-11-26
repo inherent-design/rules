@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+  "sources": [
+    {
+      "path": "cmd/restic/cmd_init.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_init.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "842db2c84227951717caa5252a1119238af87ead",
+      "sha256": "c39d7c75878d4d4c08242a10a8a0780577130fd7390d23fab59b53057e56a2f6",
+      "cache": "applications/tools/source-cache/restic-repository/cmd__restic__cmd_init.go",
+      "bytes": 4225,
+      "inspection": "runInit and format selector, lines 52-98; JSON initialization result, lines 89-95. Copying chunker parameters remains source context and was not tested."
+    },
+    {
+      "path": "cmd/restic/cmd_migrate.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/cmd/restic/cmd_migrate.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "b0862c620e2c1c0b98ee0c1d5b40bd20aa345e7b",
+      "sha256": "898750dea73b2fb6392f732f0897a4a53f0c7af1d296e783a4e6c1e12ee4e361",
+      "cache": "applications/tools/source-cache/restic-repository/cmd__restic__cmd_migrate.go",
+      "bytes": 3850,
+      "inspection": "checkMigrations/applyMigrations/runMigrate, lines 52-142. Unknown and skipped names do not set firsterr; valid requests can still apply. The force branch was inspected but not exercised."
+    },
+    {
+      "path": "internal/migrations/upgrade_repo_v2.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/migrations/upgrade_repo_v2.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "079058dcbfd8d2660d62f337de167207079a7b6e",
+      "sha256": "3a15d63e83930a397a21b41ba79da69a712b2935a2f184dc3673b9490e40710f",
+      "cache": "applications/tools/source-cache/restic-repository/internal__migrations__upgrade_repo_v2.go",
+      "bytes": 865,
+      "inspection": "Complete file: eligibility for version 1, integrity-check requirement, and selected UpgradeRepo call."
+    },
+    {
+      "path": "internal/repository/repository.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/repository.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "0a3ca836d79e0fa428487bb442c280430fa5db1d",
+      "sha256": "30f664e1242331faf358080fb135625df537509eb5072d0d49ddad904ada956c",
+      "cache": "applications/tools/source-cache/restic-repository/internal__repository__repository.go",
+      "bytes": 39320,
+      "inspection": "SearchKey/Init/init, lines 866-949. Authenticated config loading, key/snapshot reinitialization guards, and master-key-before-config order. Interruption and concurrency were not tested."
+    },
+    {
+      "path": "internal/repository/key.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/key.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "e1b0a3dcd63ed2b7d582ff20cb12e4c478149f78",
+      "sha256": "2af7919cabd71ebe7a576f26fd2c0afecf97d939c48919456628fd4222f4fe35",
+      "cache": "applications/tools/source-cache/restic-repository/internal__repository__key.go",
+      "bytes": 7828,
+      "inspection": "openKey and searchKey context, lines 72-190. Password-wrapper search is distinct from later config validation. Cryptography, KDF correctness, and all key ordering remain outside this band."
+    },
+    {
+      "path": "internal/backend/local/local.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/backend/local/local.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "141769913190c854c44fd71f958de233797b4ac2",
+      "sha256": "30f60177203a0898cd6bcfd00a0a07b86c099a3d40c2a86e3e412b7d36aefcd5",
+      "cache": "applications/tools/source-cache/restic-repository/internal__backend__local__local.go",
+      "bytes": 9326,
+      "inspection": "open/Open/Create, lines 40-88; Save temporary-write/sync context, lines 109-170. Only the local backend was used; not a full filesystem/durability refinement."
+    },
+    {
+      "path": "internal/restic/config.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/restic/config.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "4c6c97a0829970022df0ae1ca96118e6d35ec273",
+      "sha256": "f4405af64c08ac5a0aa2fed95a0f0f5f1639d4fc26922e9df88d4252da7b1f2a",
+      "cache": "applications/tools/source-cache/restic-repository/internal__restic__config.go",
+      "bytes": 2169,
+      "inspection": "Complete file: versions 1-2 and stable default 2, repository ID/chunker polynomial, CreateConfig, and LoadConfig admission. Unsupported on-disk formats and corruption were not injected."
+    },
+    {
+      "path": "internal/global/global.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/global/global.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "39716f250491547caececd742dc864d8401f21e1",
+      "sha256": "6672c5fc31b086c01a5e5c530d3ab15274b8ac40c05d67686f999b6d7c6947ea",
+      "cache": "applications/tools/source-cache/restic-repository/internal__global__global.go",
+      "bytes": 21381,
+      "inspection": "OpenRepository/hasRepositoryConfig/decryptRepository, lines 303-407; CreateRepository, lines 466-500. Version bounds before backend creation; config existence before authentication. Other backends remain unqualified."
+    },
+    {
+      "path": "internal/repository/upgrade_repo.go",
+      "url": "https://raw.githubusercontent.com/restic/restic/9c88ff768f10c192dc6a87619a65a16374080e33/internal/repository/upgrade_repo.go",
+      "revision": "9c88ff768f10c192dc6a87619a65a16374080e33",
+      "gitBlob": "e2419e6eb927a1ffb2b702a889a536da6a08fcd6",
+      "sha256": "5f13b7be18bbbd2249d98e9f350ed189aea7cf12fe7229e41da24efd5978ad96",
+      "cache": "applications/tools/source-cache/restic-repository/internal__repository__upgrade_repo.go",
+      "bytes": 3047,
+      "inspection": "Complete file: old encrypted-config backup, version-only new config, backend atomic-replace branch, and error-path reupload. Normal local migration was executed; failed save/reupload and crash recovery remain source-only."
+    }
+  ],
+  "limits": "Native restic 0.20.0 CLI on macOS arm64 with newly owned local repositories only. A reproducible source-to-binary build is not established; the release binary has its separate publisher-digest pin. Authored missing-config derivatives are not crash evidence. Remote backends, forced/failed migration, reupload, interruption, concurrency, and cryptographic refinement remain outside this band."
+}

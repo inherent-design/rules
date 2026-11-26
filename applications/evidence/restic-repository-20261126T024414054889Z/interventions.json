@@ -1,0 +1,146 @@
+[
+  {
+    "label": "key-only",
+    "source": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "target": "/private/tmp/rules-restic-repository-2b21s813/key-only",
+    "remove": [
+      "config",
+      "snapshots",
+      "data",
+      "index"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        }
+      }
+    },
+    "scope": "Explicitly authored derivative;not an observed failed initialization or crash."
+  },
+  {
+    "label": "snapshot-only",
+    "source": "/private/tmp/rules-restic-repository-2b21s813/repository",
+    "target": "/private/tmp/rules-restic-repository-2b21s813/snapshot-only",
+    "remove": [
+      "config",
+      "keys"
+    ],
+    "before": {
+      "exists": true,
+      "files": {
+        "config": {
+          "bytes": 155,
+          "sha256": "6cbefc9ec26f4605e1aec64c6c4d4f485a548db613799b85d1f600f2ca2fd2ed",
+          "mode": 256,
+          "mtimeNs": 1795661056673910453
+        },
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "keys/9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150": {
+          "bytes": 460,
+          "sha256": "9b7688402602018d330bb2548f1e1ef6ce47027c13a44d8d98b4282c1b792150",
+          "mode": 256,
+          "mtimeNs": 1795661056655500668
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "after": {
+      "exists": true,
+      "files": {
+        "data/3e/3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7": {
+          "bytes": 576,
+          "sha256": "3e32196cdc5b225c3981f06d462395bb9eff14b3a90b89bfc7338b40b82fa7d7",
+          "mode": 256,
+          "mtimeNs": 1795661058110575079
+        },
+        "data/c1/c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6": {
+          "bytes": 137,
+          "sha256": "c1bdfdbbcf7e65a3fef72a9a3fb4a4cb940d2527a466baa239c9c4f10d2421d6",
+          "mode": 256,
+          "mtimeNs": 1795661058110548246
+        },
+        "index/d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7": {
+          "bytes": 435,
+          "sha256": "d59429b1e1f93e4f92ddfbf265fe1e887de0206fa86d3bf5f5942734203f4ef7",
+          "mode": 256,
+          "mtimeNs": 1795661058127821318
+        },
+        "snapshots/097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f": {
+          "bytes": 652,
+          "sha256": "097f652d7d8b303f3bb2b8291f09f4110487501c6214c26c567b6cfbd02c498f",
+          "mode": 256,
+          "mtimeNs": 1795661058138642030
+        }
+      }
+    },
+    "scope": "Explicitly authored derivative;not an observed failed initialization or crash."
+  }
+]

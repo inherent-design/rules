@@ -1,0 +1,74 @@
+[
+  {
+    "basisLabel": "unknown-migration",
+    "request": {
+      "kind": "migrate-apply",
+      "requestedVersion": 2,
+      "version": 1,
+      "hasKeys": true,
+      "hasSnapshots": true,
+      "otherPassword": false,
+      "knownMigration": false,
+      "unknownMigration": true,
+      "strictUnknown": true
+    },
+    "expected": [
+      1,
+      1,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "evidenceStatus": "proposed-model-only;no native candidate"
+  },
+  {
+    "basisLabel": "migrate-with-unknown",
+    "request": {
+      "kind": "migrate-apply",
+      "requestedVersion": 2,
+      "version": 1,
+      "hasKeys": true,
+      "hasSnapshots": true,
+      "otherPassword": false,
+      "knownMigration": true,
+      "unknownMigration": true,
+      "strictUnknown": true
+    },
+    "expected": [
+      1,
+      2,
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "evidenceStatus": "proposed-model-only;no native candidate"
+  },
+  {
+    "basisLabel": "repeat-migration",
+    "request": {
+      "kind": "migrate-apply",
+      "requestedVersion": 2,
+      "version": 2,
+      "hasKeys": true,
+      "hasSnapshots": true,
+      "otherPassword": false,
+      "knownMigration": true,
+      "unknownMigration": false,
+      "strictUnknown": true
+    },
+    "expected": [
+      0,
+      2,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "evidenceStatus": "proposed-model-only;no native candidate"
+  }
+]

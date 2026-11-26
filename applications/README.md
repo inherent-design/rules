@@ -62,6 +62,8 @@ The [Prism accounts band](prism/ACCOUNTS.md) distinguishes actor identity, profi
 
 The [restic input-policy band](restic/INPUTS.md) compares explicit roots, ordered exclusions, parent traversal, and normal/verbatim/raw file lists. Twenty local backup cases preserve the distinction between refusal, filtered content, and a partial snapshot saved with status 3. Formal projections use finite admission/match witnesses; general parsing and filesystem coverage remain open.
 
+The [restic repository band](restic/REPOSITORY.md) separates location/config/key evidence, authentication, and explicit format migration. Eighteen primary local CLI requests retain unknown, skipped, and applied outcomes independently from command status, with actual format and payload readbacks. Broader backend and interruption guarantees remain pending.
+
 The [restic comparison/search band](restic/INSPECTION.md) distinguishes diff events, complete reference changes, query completion, and size-counting policies. Both models compare 32 native outcomes and five separate proposal cases. Listing/search field projections and restored byte-copy controls have independent checks; general query parsing, nested faults, and physical reclamation remain outside this band.
 
 The [JavaScript update-selection band](js-updates/README.md) compares range refreshes, deliberate declaration rewrites, retagged targets, and inspection scope across npm, pnpm, and Yarn. It keeps saved and installed selections distinct, retains npm's empty successful report after a selected 404, and separates prior catalog evidence from a successful new lookup. General resolver, cache, and graph guarantees remain open.
