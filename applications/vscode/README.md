@@ -75,3 +75,5 @@ The [workspace/search band](WORKSPACE-SEARCH.md) executes selected multi-root, f
 The [task band](TASKS.md) separates provider discovery, execution handles, virtual process events, stop requests, and background readiness in two retained desktop collections. It leaves complete task/terminal UI, browser/remote execution, and descendant retirement unqualified.
 
 The [filesystem band](FILESYSTEMS.md) separates live registration, cached capabilities, backend permissions, partial effects, borrowed buffers, and captured provider identity. Three native collections and a pinned source replay support a narrow stale-capability finding after unregistration. Its invalidation candidate remains separate from the installed product and the document save/dirty race.
+
+The [extension band](EXTENSIONS.md) observes local VSIX installation, engine refusal, skipped downgrade, and profile removal on desktop 1.148.0. Separate original source caller/picker comparisons distinguish desktop and browser placement. Membership, retained files, enablement, host choice, and activation remain separate; actual extension-host and trust enforcement are still open.

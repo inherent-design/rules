@@ -1,0 +1,570 @@
+{
+  "schema": 1,
+  "profile": "vscode-1.148-local-vsix-and-source-hosts",
+  "hosts": [
+    {
+      "label": "desktop-local-workspace",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": false,
+      "worker": false,
+      "development": "none"
+    },
+    {
+      "label": "remote-window-local-workspace",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "remote-installed-workspace",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "remote-only-ui",
+      "surface": "desktop",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "ui"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "local-ui-remote-window",
+      "surface": "desktop",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "ui"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "worker-disabled",
+      "surface": "desktop",
+      "localKinds": [
+        "web"
+      ],
+      "remoteKinds": [
+        "web"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": false,
+      "worker": false,
+      "development": "none"
+    },
+    {
+      "label": "worker-enabled",
+      "surface": "desktop",
+      "localKinds": [
+        "web"
+      ],
+      "remoteKinds": [
+        "web"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": false,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "remote-only-web",
+      "surface": "desktop",
+      "localKinds": [
+        "web"
+      ],
+      "remoteKinds": [
+        "web"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "local-web-fallback",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace",
+        "web"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "web"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "ui-first",
+      "surface": "desktop",
+      "localKinds": [
+        "ui",
+        "workspace"
+      ],
+      "remoteKinds": [
+        "ui",
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "workspace-first",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace",
+        "ui"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "ui"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "remote-development",
+      "surface": "desktop",
+      "localKinds": [
+        "ui",
+        "workspace"
+      ],
+      "remoteKinds": [
+        "ui",
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "remote"
+    },
+    {
+      "label": "local-development",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace",
+        "ui"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "ui"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "local"
+    },
+    {
+      "label": "remote-development-web-first",
+      "surface": "desktop",
+      "localKinds": [
+        "web",
+        "workspace"
+      ],
+      "remoteKinds": [
+        "web",
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "remote"
+    },
+    {
+      "label": "local-development-workspace-first",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace",
+        "web"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "local"
+    },
+    {
+      "label": "both-development-preserves-order",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace",
+        "ui"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "ui"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "both"
+    },
+    {
+      "label": "local-manifest-wins",
+      "surface": "desktop",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "local-workspace-manifest-wins",
+      "surface": "desktop",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "ui"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-local-workspace",
+      "surface": "browser",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": false,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-remote-workspace",
+      "surface": "browser",
+      "localKinds": [
+        "workspace"
+      ],
+      "remoteKinds": [
+        "workspace"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-local-ui",
+      "surface": "browser",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "ui"
+      ],
+      "local": true,
+      "remote": false,
+      "remoteHost": false,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-remote-ui-last-resort",
+      "surface": "browser",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "ui"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-web-before-ui-reserve",
+      "surface": "browser",
+      "localKinds": [
+        "ui",
+        "web"
+      ],
+      "remoteKinds": [
+        "ui",
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-remote-development-ui",
+      "surface": "browser",
+      "localKinds": [
+        "ui",
+        "web"
+      ],
+      "remoteKinds": [
+        "ui",
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "remote"
+    },
+    {
+      "label": "browser-workspace-first",
+      "surface": "browser",
+      "localKinds": [
+        "workspace",
+        "web"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-local-development",
+      "surface": "browser",
+      "localKinds": [
+        "workspace",
+        "web"
+      ],
+      "remoteKinds": [
+        "workspace",
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "local"
+    },
+    {
+      "label": "browser-remote-development",
+      "surface": "browser",
+      "localKinds": [
+        "web",
+        "workspace"
+      ],
+      "remoteKinds": [
+        "web",
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "remote"
+    },
+    {
+      "label": "browser-remote-only-web",
+      "surface": "browser",
+      "localKinds": [
+        "web"
+      ],
+      "remoteKinds": [
+        "web"
+      ],
+      "local": false,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-local-manifest-wins",
+      "surface": "browser",
+      "localKinds": [
+        "ui"
+      ],
+      "remoteKinds": [
+        "web"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "none"
+    },
+    {
+      "label": "browser-both-development",
+      "surface": "browser",
+      "localKinds": [
+        "web",
+        "workspace"
+      ],
+      "remoteKinds": [
+        "web",
+        "workspace"
+      ],
+      "local": true,
+      "remote": true,
+      "remoteHost": true,
+      "worker": true,
+      "development": "both"
+    }
+  ],
+  "management": [
+    {
+      "label": "empty",
+      "operation": "query",
+      "registered": 0,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "install-one",
+      "operation": "install",
+      "registered": 0,
+      "requested": 1,
+      "compatible": true
+    },
+    {
+      "label": "list-one",
+      "operation": "query",
+      "registered": 1,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "incompatible",
+      "operation": "install",
+      "registered": 1,
+      "requested": 3,
+      "compatible": false
+    },
+    {
+      "label": "after-refusal",
+      "operation": "query",
+      "registered": 1,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "install-two",
+      "operation": "install",
+      "registered": 1,
+      "requested": 2,
+      "compatible": true
+    },
+    {
+      "label": "list-two",
+      "operation": "query",
+      "registered": 2,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "downgrade",
+      "operation": "install",
+      "registered": 2,
+      "requested": 1,
+      "compatible": true
+    },
+    {
+      "label": "after-downgrade",
+      "operation": "query",
+      "registered": 2,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "uninstall",
+      "operation": "uninstall",
+      "registered": 2,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "after-uninstall",
+      "operation": "query",
+      "registered": 0,
+      "requested": 0,
+      "compatible": true
+    },
+    {
+      "label": "uninstall-again",
+      "operation": "uninstall",
+      "registered": 0,
+      "requested": 0,
+      "compatible": true
+    }
+  ]
+}

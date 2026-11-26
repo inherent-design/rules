@@ -17503,7 +17503,38 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "scope": "Thirteen owned local Electron-Node CLI calls on VS Code 1.148.0; twelve management outcomes for install/list/engine refusal/local VSIX replacement/skipped downgrade/uninstall. Profile membership, retained packages and activation beacon separately read.",
+              "remaining": "Full installation, Marketplace updates, dependencies/packs, arbitrary engine policy, actual host activation/enablement, UI, other platforms and interruption/collection; parent statuses unchanged.",
+              "evidence": [
+                "vscode/EXTENSIONS.md",
+                "evidence/vscode-extensions-20261126T040016341935Z/receipt.json",
+                "evidence/vscode-host-selection-20261126T040253545Z/receipt.json",
+                "evidence/vscode-extensions-comparison/conformance.json"
+              ],
+              "operationSlices": {
+                "install": "Owned compatible/incompatible local VSIX requests and independent membership/byte readbacks.",
+                "update": "Replacement with a newer owned local VSIX; not gallery --update-extensions or automatic update.",
+                "uninstall": "Owned extension removed from default profile while two directories remain; no physical collection or running-host retirement claim."
+              }
+            },
+            {
+              "status": "source-modeled",
+              "scope": "Thirty caller/host-picker calls across desktop/browser with scanned-description, kind, identifier, helper-record and constructor-fact adapters. Ordered kinds, local-manifest precedence and development preference retained.",
+              "remaining": "Actual scanner/manifest/host/worker/remote/enablement and full identity behavior. Parent operation status unchanged.",
+              "evidence": [
+                "vscode/EXTENSIONS.md",
+                "evidence/vscode-host-selection-20261126T040253545Z/receipt.json",
+                "evidence/vscode-extensions-comparison/conformance.json"
+              ],
+              "operationSlices": {
+                "select-host": "Original source local/remote merge and selection bodies with explicit adapters, not native runtime placement."
+              }
+            }
+          ]
         },
         {
           "id": "vscode.workspace-trust",
@@ -18135,7 +18166,23 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "source-modeled",
+              "scope": "Browser host picker and its caller: local Node host unavailable, remote UI last resort and eligible remote web description can select local worker; only source methods executed.",
+              "remaining": "Actual browser worker, web extension load, remote service, UI diagnostic and API support remain untested. All parent statuses unchanged.",
+              "evidence": [
+                "vscode/EXTENSIONS.md",
+                "evidence/vscode-host-selection-20261126T040253545Z/receipt.json",
+                "evidence/vscode-extensions-comparison/conformance.json"
+              ],
+              "operationSlices": {
+                "load-web-extension": "Pre-load source host-choice slice; does not execute a web extension.",
+                "report-unavailable": "No-host return from source picker for selected contexts; no rendered diagnostic qualification."
+              }
+            }
+          ]
         },
         {
           "id": "vscode.ui-accessibility",
@@ -18669,9 +18716,20 @@
           "id": "explicit-search-scope-and-plan-basis",
           "status": "Proposed documentation/effective-scope and versioned-edit receipt alternatives; bounded native observations, no product adoption.",
           "document": "vscode/WORKSPACE-SEARCH.md"
+        },
+        {
+          "id": "extension-membership-placement-and-effect-reporting",
+          "status": "Proposed compact action/profile/version and host provenance; native skip diagnostic is already correct, no production adoption.",
+          "document": "vscode/EXTENSIONS.md"
         }
       ],
-      "preservationDecisions": [],
+      "preservationDecisions": [
+        {
+          "id": "extension-membership-and-host-placement",
+          "evidence": "vscode/EXTENSIONS.md",
+          "decision": "Preserve engine refusal, explicit downgrade skip, ordered effective kinds, development-placement preference, profile membership and distinct browser host capabilities; retained files and activation remain separate facts. See vscode/EXTENSIONS.md."
+        }
+      ],
       "unresolvedChoices": [],
       "coverageStatus": "inventory captured; modeling and qualification pending",
       "inventorySourceBasis": "sources/inventory-basis.json#vscode"
