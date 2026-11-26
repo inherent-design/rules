@@ -1,0 +1,1 @@
+const fs=require('fs');const row={label:process.argv[2],args:process.argv.slice(3),cwd:process.cwd(),npmCommand:process.env.npm_command};fs.appendFileSync(process.env.FIXTURE_EVENTS,JSON.stringify(row)+'\n');console.log(JSON.stringify(row));

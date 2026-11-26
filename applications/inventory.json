@@ -7633,7 +7633,26 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "command-script-namespace-admission",
+              "status": "native-observed",
+              "scope": "Fifteen full pnpm 12.21.0 namespace cases with controlled Node scripts on Mac. Four other calls admit parser help only; two read versions. Built-in/script precedence, root shadowing, explicit run, placeholders, leading-prefix position, and help are distinct.",
+              "remaining": "Other commands/aliases, arbitrary manifests and shell bodies, child failure, external-program fallback, group scheduling, pipeline/cache/runtime/global behavior, other hosts, and whole workflows remain unqualified.",
+              "evidence": [
+                "pnpm-admission/README.md",
+                "pnpm-admission/Admission.lean",
+                "pnpm-admission/Admission.bend",
+                "pnpm-admission/observations.py",
+                "evidence/pnpm-admission-comparison/controls.json",
+                "sources/pnpm-admission-selections.json"
+              ],
+              "operationSlices": {
+                "run": "Explicit package scripts, forced built-in run, script help forwarding, and a declared fallback script with actual argv/cwd/npm_command marker evidence."
+              }
+            }
+          ]
         },
         {
           "id": "pnpm.task-pipelines",
@@ -7691,7 +7710,26 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "command-script-namespace-admission",
+              "status": "native-observed",
+              "scope": "Fifteen full pnpm 12.21.0 namespace cases with controlled Node scripts on Mac. Four other calls admit parser help only; two read versions. Built-in/script precedence, root shadowing, explicit run, placeholders, leading-prefix position, and help are distinct.",
+              "remaining": "Other commands/aliases, arbitrary manifests and shell bodies, child failure, external-program fallback, group scheduling, pipeline/cache/runtime/global behavior, other hosts, and whole workflows remain unqualified.",
+              "evidence": [
+                "pnpm-admission/README.md",
+                "pnpm-admission/Admission.lean",
+                "pnpm-admission/Admission.bend",
+                "pnpm-admission/observations.py",
+                "evidence/pnpm-admission-comparison/controls.json",
+                "sources/pnpm-admission-selections.json"
+              ],
+              "operationSlices": {
+                "tasks": "Selected tasks status/help namespace admission and same-name script behavior. No populated concurrency-group or pipeline/cache execution."
+              }
+            }
+          ]
         },
         {
           "id": "pnpm.build-permissions",
@@ -8834,9 +8872,9 @@
         },
         {
           "id": "pnpm.unsupported-aliases",
-          "title": "Advertised unsupported legacy commands",
-          "domainValuesAndRelations": "Native command admission -> explicit unsupported result",
-          "invariantQuestions": "An advertised placeholder is not implementation support; retain that distinction in help/model.",
+          "title": "Registered unsupported commands",
+          "domainValuesAndRelations": "Registered built-in placeholder -> typed unsupported-handler result, distinct from an explicitly requested package script",
+          "invariantQuestions": "Parser registration and help are not implemented-operation support; a same-named package script is a different namespace.",
           "hostWitnesses": [
             "capability",
             "terminal"
@@ -8844,27 +8882,57 @@
           "operations": [
             {
               "id": "edit",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "pnpm-admission/Admission.lean; pnpm-admission/Admission.bend",
+              "laws": [
+                "placeholder_does_not_dispatch_script",
+                "placeholder_refuses_script"
+              ],
+              "nativeEvidence": [
+                "evidence/pnpm-admission-20261126T031327788019Z/commands.json:unsupported-edit"
+              ],
+              "sourceComparison": [
+                "sources/pnpm-admission-selections.json",
+                "pnpm-admission/README.md"
+              ],
+              "negativeControls": [
+                "evidence/pnpm-admission-comparison/controls.json:placeholder-script"
+              ],
+              "uxAssessment": "pnpm-admission/README.md",
+              "status": "unsupported-profile",
+              "proofPremises": [
+                "pnpm 12.21.0 native macOS arm64 built-in invocation with the admitted placeholder operands; help is not execution.",
+                "Registered placeholder refusal does not qualify npm editing behavior or an authored same-name package script."
+              ],
+              "verificationPlan": "Recheck the registry and handler in any newly selected version/host before reusing this unsupported-profile disposition."
             },
             {
               "id": "xmas",
-              "model": null,
-              "laws": [],
-              "nativeEvidence": [],
-              "sourceComparison": [],
-              "negativeControls": [],
-              "uxAssessment": null,
-              "status": "pending"
+              "model": "pnpm-admission/Admission.lean; pnpm-admission/Admission.bend",
+              "laws": [
+                "placeholder_does_not_dispatch_script",
+                "placeholder_refuses_script"
+              ],
+              "nativeEvidence": [
+                "evidence/pnpm-admission-20261126T031327788019Z/commands.json:unsupported-xmas-arguments"
+              ],
+              "sourceComparison": [
+                "sources/pnpm-admission-selections.json",
+                "pnpm-admission/README.md"
+              ],
+              "negativeControls": [
+                "evidence/pnpm-admission-comparison/controls.json:placeholder-script"
+              ],
+              "uxAssessment": "pnpm-admission/README.md",
+              "status": "unsupported-profile",
+              "proofPremises": [
+                "pnpm 12.21.0 native macOS arm64 built-in invocation with the admitted placeholder operands; help is not execution.",
+                "Registered placeholder refusal does not qualify npm editing behavior or an authored same-name package script."
+              ],
+              "verificationPlan": "Recheck the registry and handler in any newly selected version/host before reusing this unsupported-profile disposition."
             }
           ],
           "inventoryBasis": "Application inventory sources/help/contracts; detailed source validation pending.",
-          "disposition": "inventoried, unqualified",
+          "disposition": "Pinned built-in edit/xmas profiles are explicitly unsupported; custom package scripts remain separate operations.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
           "meaning": "Research decomposition; current source/interface behavior must be established per operation."
