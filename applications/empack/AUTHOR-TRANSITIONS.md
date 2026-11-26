@@ -4,6 +4,8 @@ Adoption accepts an explicit description of files already present. Runtime migra
 
 This is a source and test-body review at empack `0b4462e3032b4f09230b15329722eabefb7f574c`. The [source ledger](../sources/empack-author-transitions-selections.json) records exact Git blobs, hashes, and inspected ranges. No application, source-method comparator, engine test, or new formal model ran for this review. The [removal study](REMOVAL.md) already executes bounded core adoption/request-merging cases; that evidence does not qualify the native adoption workflow below.
 
+The later [core admission comparison](author-transitions/README.md) now executes fifteen supplied-value adoption/validation calls and compares them with Lean and Bend. It distinguishes automatic and authored exact-pin policy, while demonstrating why matching runtime labels alone cannot establish provider compatibility. It does not turn this source/test-body review into an executed migration or observed-file workflow.
+
 ## Current adoption contract
 
 | Boundary | Inspected behavior | Consequence |
