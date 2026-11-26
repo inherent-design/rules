@@ -105,3 +105,5 @@ The later [native saved-offer study](saved-offer/README.md) now supplies that se
 ## Evidence limits
 
 This record establishes bounded source/model comparisons. It does not qualify a complete engine, installed CLI, publisher transaction, HTTP redirect policy, release decoding, acquisition, filesystem recovery, or consumer installation. There is no proof of crypto algorithms or dependency reproducibility. No public service, personal state, installed executable, or production source changed. Original captures and the corrected diagnostic disposition remain retained; private generated source and binaries live under ignored `work/`.
+
+The later [publisher retry comparison](channel-publication/README.md) connects the actual local producer sequence guard to this subscriber floor. It observes same-sequence decoded equality accepting differently serialized signed payloads while the subscriber refuses the changed bytes. The stricter guard is model-only; hosted creation and full publication remain unexecuted.

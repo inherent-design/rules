@@ -1,0 +1,49 @@
+[
+  {
+    "name": "compile",
+    "argv": [
+      "/Users/zer0cell/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc",
+      "--edition=2024",
+      "-C",
+      "debuginfo=0",
+      "-A",
+      "dead_code",
+      "-A",
+      "unused_imports",
+      "-L",
+      "dependency=/Users/zer0cell/production/empack/target/debug/deps",
+      "/private/tmp/rules-empack-channel-publication-0m0y8r8j/main.rs",
+      "-o",
+      "/private/tmp/rules-empack-channel-publication-0m0y8r8j/oracle",
+      "--extern",
+      "anyhow=/Users/zer0cell/production/empack/target/debug/deps/libanyhow-d12b2df66a0583fc.rlib",
+      "--extern",
+      "serde=/Users/zer0cell/production/empack/target/debug/deps/libserde-eaf6bade07334d0d.rlib",
+      "--extern",
+      "serde_json=/Users/zer0cell/production/empack/target/debug/deps/libserde_json-d572ad3a3bc4b2e4.rlib",
+      "--extern",
+      "ed25519_dalek=/Users/zer0cell/production/empack/target/debug/deps/libed25519_dalek-429c30776c4ae53f.rlib",
+      "--extern",
+      "reqwest=/Users/zer0cell/production/empack/target/debug/deps/libreqwest-893d856ece8dbf20.rlib",
+      "--extern",
+      "semver=/Users/zer0cell/production/empack/target/debug/deps/libsemver-0e90ff15ced0040c.rlib",
+      "--extern",
+      "sha2=/Users/zer0cell/production/empack/target/debug/deps/libsha2-fb3e67ad47f9ad90.rlib"
+    ],
+    "pid": 79312,
+    "exitCode": 1,
+    "timedOut": false,
+    "seconds": 0.8829177501611412,
+    "ownedGroupAbsent": true,
+    "streams": {
+      "stdout": {
+        "file": "compile.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "compile.stderr",
+        "sha256": "4a51c44240d79a9418fbdba4732e01fa0bf752250fb3f779e0420f0ad9c4d543"
+      }
+    }
+  }
+]

@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "requests": [
+    {
+      "id": "exact-retry",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": true,
+      "samePayload": true,
+      "sameEnvelope": true
+    },
+    {
+      "id": "prior-payload-whitespace",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": true,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "prior-payload-key-order",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": true,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "prior-envelope-whitespace",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": true,
+      "samePayload": true,
+      "sameEnvelope": false
+    },
+    {
+      "id": "changed-release-same-sequence",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "changed-bound-same-sequence",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "older-candidate",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 2,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "advanced-same-release",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 4,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "advanced-after-whitespace",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 4,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "advanced-after-old-engine-bound",
+      "priorAuthenticated": true,
+      "oldSequence": 3,
+      "sequence": 4,
+      "sameDocument": false,
+      "samePayload": false,
+      "sameEnvelope": false
+    },
+    {
+      "id": "invalid-prior-signature",
+      "priorAuthenticated": false,
+      "oldSequence": 3,
+      "sequence": 3,
+      "sameDocument": true,
+      "samePayload": true,
+      "sameEnvelope": false
+    }
+  ],
+  "observed": [
+    {
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "publisher": true,
+      "subscriber": false
+    },
+    {
+      "publisher": true,
+      "subscriber": false
+    },
+    {
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "publisher": false,
+      "subscriber": null
+    }
+  ],
+  "model": [
+    {
+      "proposed": true,
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "proposed": false,
+      "publisher": true,
+      "subscriber": false
+    },
+    {
+      "proposed": false,
+      "publisher": true,
+      "subscriber": false
+    },
+    {
+      "proposed": true,
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "proposed": false,
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "proposed": false,
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "proposed": false,
+      "publisher": false,
+      "subscriber": false
+    },
+    {
+      "proposed": true,
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "proposed": true,
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "proposed": true,
+      "publisher": true,
+      "subscriber": true
+    },
+    {
+      "proposed": false,
+      "publisher": false,
+      "subscriber": null
+    }
+  ],
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "candidate",
+    "binding",
+    "empty",
+    "limit",
+    "zero-sequence",
+    "payload-vs-document",
+    "envelope-vs-payload"
+  ],
+  "changedObservationControls": [
+    "publisher-result",
+    "subscriber-result",
+    "same-payload",
+    "next-floor",
+    "hidden-signature-failure"
+  ],
+  "comparisonFields": 22,
+  "independentSignatureAssociations": 22,
+  "uniqueIndependentSignatureVerifications": 9,
+  "modelIdentities": [
+    {
+      "path": "applications/empack/channel-publication/Publication.lean",
+      "sha256": "df8145194a296698986bce8392d1a4eaaed81d59f4a5e7923e0f2b962e09ace5"
+    },
+    {
+      "path": "applications/empack/channel-publication/PublicationCase.lean",
+      "sha256": "fa8a858c3c34673062158d7b947b5d5ae545eaf2591b338b1b53d91c6f25ccf5"
+    },
+    {
+      "path": "applications/empack/channel-publication/Publication.bend",
+      "sha256": "a03401ae3062e5dc4bcb05fd2d2456a610cd3973b5b6b357945d2fe9ed40a413"
+    }
+  ],
+  "excludedPrivateChecks": [
+    "old-generated-source-and-new-reconstruction",
+    "compiler-binary-and-direct-dependencies",
+    "current-openssl-binary"
+  ],
+  "limits": [
+    "Prior authentication comes from independent retained public-signature verification plus closed fixture codec/origin/engine premises, not publisher output.",
+    "Publisher rule is exact source guard plus old-pointer authentication; no staged asset/HTTPS/publication or installed CLI.",
+    "Proposed stricter guard is model-only; crypto/diff/hashing/transport/durability are not formalized."
+  ]
+}

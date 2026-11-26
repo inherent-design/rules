@@ -2160,6 +2160,28 @@
                 "verify-offer": "Saved-role revalidation differs from incoming offer admission; explicit valid observation repairs the pair using the normal advancement operation.",
                 "retain-sequence": "Same-sequence/different-payload control refuses, but a newer saved envelope above the authored floor is not required to match it exactly."
               }
+            },
+            {
+              "id": "publisher-payload-floor",
+              "status": "source-modeled",
+              "scope": "Unchanged publisher sequence guard plus actual old-pointer authentication/codec and subscriber floor functions:11controlled source cases,22publisher/subscriber fields. Independent OpenSSL9unique public-signature inputs/22associations; no full hosted producer or installed CLI publication.",
+              "evidence": [
+                "empack/channel-publication/README.md",
+                "empack/channel-publication/Publication.lean",
+                "empack/channel-publication/Publication.bend",
+                "empack/channel-publication/PublicationCase.lean",
+                "empack/channel-publication/conformance.py",
+                "sources/empack-channel-publication-selections.json",
+                "evidence/empack-channel-publication-20261126T112857119598Z/receipt.json",
+                "evidence/empack-channel-publication-20261126T112857119598Z/crypto-verification.json",
+                "evidence/empack-channel-publication-20261126T112857119598Z/comparison.json"
+              ],
+              "operationSlices": {
+                "advance-channel": "Local guard compares decoded prior/candidate metadata; valid same-sequence whitespace/key-order payload changes pass this guard but fail subscriber payload floor. No staged asset/HTTPS/full-publication execution.",
+                "verify-offer": "Exact source subscriber authenticates controlled candidate against independently established prior floor; envelope-only formatting and raw payload differ. Not another installed-consumer/update flow.",
+                "retain-sequence": "Same-sequence payload identity differs from document/envelope identity; higher sequence remains permitted under admitted context. No durable state write."
+              },
+              "remaining": "Actual hosted immutable verification/native channel creation, noncanonical authenticated prior pointer through publication, key rotation, stale source/approval, failures/recovery, public TLS and consumer install remain unqualified. Stricter rule model-only; serialized formats unchanged."
             }
           ]
         },
@@ -5224,6 +5246,12 @@
           "status": "Proposed reporting improvement from bounded installed-CLI mismatch/missing refusals; correct verification and publication guards retained.",
           "document": "empack/adoption-flow/README.md",
           "summary": "Name the logical key, installed destination and separately declared source, explain expected versus observed evidence, and preserve installation/adoption as separate explicit actions."
+        },
+        {
+          "id": "channel-retry-payload-identity",
+          "status": "Source-component publisher/subscriber mismatch and model-only correction; full native publication pending.",
+          "document": "empack/channel-publication/README.md",
+          "summary": "Keep exact authenticated payload identity at an unchanged channel sequence. Reuse raw bytes or require sequence advancement; do not compare outer envelope identity or weaken subscriber floor."
         }
       ],
       "preservationDecisions": [
@@ -5243,6 +5271,11 @@
           "id": "portable-production-capabilities",
           "question": "Which production portable-host capabilities and authorized I/O boundaries come first? Preserve the accepted browser scope and clean break; native recovery/execution stays native.",
           "document": "empack/README.md"
+        },
+        {
+          "id": "channel-idempotent-encoding",
+          "document": "empack/channel-publication/README.md",
+          "question": "Should an idempotent publisher preserve/re-sign the prior authenticated payload or refuse changed encoding until sequence advances? Keep previous-pointer authentication separate from current engine eligibility and define key-rotation behavior."
         }
       ],
       "coverageStatus": "inventory captured; modeling and qualification pending",
