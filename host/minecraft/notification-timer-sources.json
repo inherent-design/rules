@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "evidenceKind": "source-inspection",
+  "report": "host/minecraft/NOTIFICATIONS.md",
+  "hostContract": "host/java/TIMERS.md",
+  "hostComparison": "host/java/evidence/timer-conformance.json",
+  "profiles": [
+    {
+      "release": "1.21.1",
+      "target": "java-1.21.1-vanilla",
+      "clientSha256": "499f6897d1837516680f3114072d8106e11c9adcd933fe5cf051b551089b0c99",
+      "metadataSha256": "46bd44d2732fd1cd187724de9b5cab9fc98678d8de46509410659b5c6f103ff8",
+      "mappingSha256": "140c47931cccc8fc9e4c22d7603e2d714d1a953a146f51ea7397d95c955536ec",
+      "manager": {
+        "canonical": "net.minecraft.client.PeriodicNotificationManager",
+        "originalClassMembers": {
+          "net.minecraft.client.PeriodicNotificationManager$Notification": {
+            "member": "fgu$a.class",
+            "sha256": "456e35b298d9adf5ece2f93b47e1b83eb689aeb7eea664d089b0966263718b6a"
+          },
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+            "member": "fgu$b.class",
+            "sha256": "8357779a710ce2fc0f7a27172d1c12e99b136099cf5a6cea238d486ed0c92f88"
+          },
+          "net.minecraft.client.PeriodicNotificationManager": {
+            "member": "fgu.class",
+            "sha256": "e3a5dd765ea05da327ecbc9592d7ef3d1560092e38ed45268036bbf39b59784f"
+          }
+        },
+        "view": "net/minecraft/client/PeriodicNotificationManager.java",
+        "viewSha256": "980505d6dfd46dcf2e4c8ce5b13657bdce412e401dca254a905ad9b8ee4abf61",
+        "breadthCapture": "breadth-views-1.21.1-20261125T205441595397Z",
+        "breadthReceiptSha256": "819b4dab7f1cac39551cf709defc3860fd674ed606051528a1bde52a8e157b20"
+      },
+      "caller": {
+        "canonical": "net.minecraft.client.Minecraft",
+        "originalClass": "fgo",
+        "originalClassSha256": "81b000661c1cc805209d409115897067cfe44987cc452c43767a26f8468748eb",
+        "capture": "notification-callers-20261126T014111468232Z",
+        "receiptSha256": "3da068d2d96c43f427cfa6d9d8e9933c698472e563a33bf1992660d85e1b41af",
+        "streamSha256": "432e5b0f3aef2b5dd415b8d03601297ec7e8678187677d78d5d01483bfaa68c9",
+        "selectedSha256": "c6b4ad36704253bca5d62c4529a60467e4d2e15eb13a24232b2c3e3be8737695",
+        "selectedReferences": 7
+      },
+      "reviewedClauses": [
+        "Client constructor creates a retained final manager field and registers that object as a resource reload listener;client close calls manager close.",
+        "Manager stopTimer cancels the existing timer but does not null its field;apply allocates a timer only when that field isnull.",
+        "Empty or selected zero-period preparations stop the timer;other selected preparations attempt scheduling after delay/GCD calculation.",
+        "NotificationTask initialization accesses Minecraft;run enqueues a UI action. These are not executed by the separate authored JDK Timer fixture."
+      ],
+      "limits": "Source/decompiler/bytecode inspection only;not actual notification manager,codec,selector,user-region,resource change,callback,queued UI,game reload or product-defect qualification."
+    },
+    {
+      "release": "26.3",
+      "target": "java-26.3-vanilla",
+      "clientSha256": "4508d006323f24fa02876310c192d739af56516eb259000ac50f0909a68c9a2d",
+      "metadataSha256": "f6805e95ade84803945082da53083bb7ae18cd0d0acb54e7dd58b964e0ffa518",
+      "mappingSha256": null,
+      "manager": {
+        "canonical": "net.minecraft.client.PeriodicNotificationManager",
+        "originalClassMembers": {
+          "net.minecraft.client.PeriodicNotificationManager$Notification": {
+            "member": "net/minecraft/client/PeriodicNotificationManager$Notification.class",
+            "sha256": "3af2c41a8e0b98dc6295ab7eb240b3749930cb2e0fadf97236815ead6be0e1f3"
+          },
+          "net.minecraft.client.PeriodicNotificationManager$NotificationTask": {
+            "member": "net/minecraft/client/PeriodicNotificationManager$NotificationTask.class",
+            "sha256": "ea0f99bb133e2f313e09bfce856128ab0c9937389eb60d1c66a0562d0f4b3a87"
+          },
+          "net.minecraft.client.PeriodicNotificationManager": {
+            "member": "net/minecraft/client/PeriodicNotificationManager.class",
+            "sha256": "4b4b19c075df67f1a71c7b28b95fa58bf9bd98be639f858444704b8f0f4d08e5"
+          }
+        },
+        "view": "net/minecraft/client/PeriodicNotificationManager.java",
+        "viewSha256": "b16e95bd0d70d7529e5989a74107c2fe84212c56dfd28a7cdad019f2174483e6",
+        "breadthCapture": "breadth-views-26.3-20261125T205447278082Z",
+        "breadthReceiptSha256": "9f3be5ae6204acdc7c544cd457136986410dfb07c6c6655a8285c0a90e4231fe"
+      },
+      "caller": {
+        "canonical": "net.minecraft.client.Minecraft",
+        "originalClass": "net.minecraft.client.Minecraft",
+        "originalClassSha256": "6620185007eb572e953c5fdad1e6e369b75b058b9dcd9a0bda9f8bc3f212c9d6",
+        "capture": "notification-callers-20261126T014111468232Z",
+        "receiptSha256": "3da068d2d96c43f427cfa6d9d8e9933c698472e563a33bf1992660d85e1b41af",
+        "streamSha256": "c2d46e073ab019aba3049721d19344e470facba47cae3a9aec968ee5b78fff40",
+        "selectedSha256": "5d9a5af16831644130eb99e03a5894d4be3a323ee9d47611f07775067a390b28",
+        "selectedReferences": 7
+      },
+      "reviewedClauses": [
+        "Client constructor creates a retained final manager field and registers that object as a resource reload listener;client close calls manager close.",
+        "Manager stopTimer cancels the existing timer but does not null its field;apply allocates a timer only when that field isnull.",
+        "Empty or selected zero-period preparations stop the timer;other selected preparations attempt scheduling after delay/GCD calculation.",
+        "NotificationTask initialization accesses Minecraft;run enqueues a UI action. These are not executed by the separate authored JDK Timer fixture."
+      ],
+      "limits": "Source/decompiler/bytecode inspection only;not actual notification manager,codec,selector,user-region,resource change,callback,queued UI,game reload or product-defect qualification."
+    }
+  ],
+  "limits": "Two selected client consumer boundaries;authored JDK17/21/25 host evidence remains distinct from Minecraft execution. Original client/views/disassembly stay private."
+}

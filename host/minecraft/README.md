@@ -14,6 +14,8 @@ The [image-header band](IMAGE-HEADERS.md) compares 165 original tiny-buffer call
 
 The [CPU-image lifecycle band](CPU-IMAGES.md) separately constructs one original zeroed 2×2 image on Java 21/macOS and compares 16 ordered steps with the host models. Pixel words, bounds errors, closed-access refusal, retained metadata, and repeated close remain distinct. Decoding, physical reclamation, modern clients, and graphics backends are unqualified.
 
+The [notification timer boundary](NOTIFICATIONS.md) follows definition selection into retained timer/listener ownership in two original clients. Its host comparison observes 45 authored JDK 17/21/25 operations. Actual notification decoding, selection, callbacks, queued UI work, and game reload remain unqualified.
+
 The [blockstate condition band](BLOCK-CONDITIONS.md) follows literal atoms, record construction/encoding, separate condition parsing, and canonical property domains. It compares 72 original record scenarios across three modern clients while retaining distinct source-only older condition and five-client builder boundaries. Full codecs, property/state execution, and rendering remain open.
 
 The current [selected target graph](TARGETS.md) pins five Java releases, three separate Bedrock sample-source milestones, and eight provider variants. It preserves major/minor artifact format declarations and the Java 25 requirement for 26.3. The [static host API map](HOST-APIS.md) identifies actual 26.3 bytecode consumers without launching the game. Neither target selection nor a source census establishes runtime or rendering support.

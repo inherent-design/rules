@@ -46,6 +46,11 @@ def validate(data):
             if component["id"] == "compat-host-free-value-cache":
                 assert family["id"] == "host.compat"
                 assert component["conformance"] == "host/minecraft/evidence/resource-cache-conformance.json"
+            if component["id"] == "notification-timer-host-boundary":
+                assert family["id"] == "text.builtin_lists" and component["evidenceKind"] == "source-inspection"
+                assert "conformance" not in component and not component.get("rules") and not component.get("proofs")
+                assert component["hostComparison"] == "host/java/evidence/timer-conformance.json"
+                assert (ROOT / component["hostComparison"]).is_file()
     return [f["id"] for f in families if not any(f[k] for k in ["rules", "proofs", "nativeComparisons"]) and not f.get("componentEvidence")]
 
 
@@ -53,17 +58,18 @@ def main():
     data = json.loads((HERE / "inventory.json").read_text())
     thin = validate(data)
     mutations = []
-    for name in ["duplicate-family", "broken-report", "unknown-case", "duplicate-component", "source-as-native", "breadth-as-native", "cache-as-game-values"]:
+    for name in ["duplicate-family", "broken-report", "unknown-case", "duplicate-component", "source-as-native", "breadth-as-native", "cache-as-game-values", "notification-host-as-game"]:
         changed = copy.deepcopy(data)
         if name == "duplicate-family":
             changed["families"][1]["id"] = changed["families"][0]["id"]
         else:
-            target = "compat-generic-item-program" if name in ["unknown-case", "duplicate-component", "broken-report"] else "property-context-source-contracts" if name == "source-as-native" else "breadth-source-linework" if name == "breadth-as-native" else "compat-host-free-value-cache"
+            target = "compat-generic-item-program" if name in ["unknown-case", "duplicate-component", "broken-report"] else "property-context-source-contracts" if name == "source-as-native" else "breadth-source-linework" if name == "breadth-as-native" else "notification-timer-host-boundary" if name == "notification-host-as-game" else "compat-host-free-value-cache"
             family, component = next((f, c) for f in changed["families"] for c in f.get("componentEvidence", []) if c["id"] == target)
             if name == "broken-report": component["report"] = "host/minecraft/unrecorded-report.md"
             elif name == "unknown-case": component["caseIds"].append("unmeasured-full-renderer")
             elif name == "duplicate-component": family["componentEvidence"].append(copy.deepcopy(component))
             elif name in ["source-as-native", "breadth-as-native"]: component["conformance"] = "host/minecraft/evidence/resource-cache-conformance.json"
+            elif name == "notification-host-as-game": component["conformance"] = component["hostComparison"]
             else:
                 family["componentEvidence"].remove(component)
                 changed["families"][0]["componentEvidence"].append(component)

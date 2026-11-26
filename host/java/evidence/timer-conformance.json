@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "profiles": 3,
+  "nativeAdmissionOperations": 45,
+  "semanticResultScalars": 54,
+  "independentRetirementWitnesses": 3,
+  "zeroCallbackSamples": 48,
+  "leanLaws": 14,
+  "bendLaws": 9,
+  "sourceModelOnlyLaws": [
+    "invalid_arguments_precede_closed_timer",
+    "canceled_timer_does_not_make_task_cancel_false",
+    "argument_guard_first_source_example"
+  ],
+  "decoderRefusals": [
+    "schema",
+    "contract",
+    "java18",
+    "operation",
+    "needed-timer",
+    "needed-task",
+    "needed-validity",
+    "timer-range",
+    "task-range",
+    "duplicate",
+    "too-many"
+  ],
+  "changedPremises": [
+    "cancel-timer-instead",
+    "bad-delay-as-valid",
+    "fresh-task-instead",
+    "open-timer-instead"
+  ],
+  "changedRawObservations": [
+    "fresh-cancel-as-true",
+    "double-schedule-accepted",
+    "scheduled-cancel-false",
+    "bad-delay-accepted",
+    "callback-executed",
+    "worker-still-live",
+    "boolean-error-code",
+    "numeric-retirement"
+  ],
+  "formalSha256": {
+    "TimerPolicy.lean": "44ae3ef644ce6fd2ed6de9f99a3509f5cfdbbc7f5eac1a345c0603e702638c57",
+    "TimerPolicy.bend": "048c4cc92dd26ace08cd5090e3b9812d8f72edf4df3399ad17d4a131860ea74e",
+    "TimerPolicyCase.lean": "9b2f3d5c81d2112d2ffc81dd2347e6f56362c31d35b5b1cd845ddfd08d398e42"
+  },
+  "basisSha256": {
+    "timer-captures.json": "86e4da5c0938655da036a10a3a0f4c3d8393f391f217bc5470205c2d5344d5ce",
+    "timer_observations.py": "e9e04e4045903e843cd02ceb4290e51f04442e04cdd910cc4efb044c6f667762",
+    "timer_conformance.py": "eea55e164afc5f2762253d9872754a9797df233b81fe68952a1a37bf9a63a5bc"
+  },
+  "limits": "Far-future owned tasks on JDK17/21/25 macOSarm64;OS build not recorded. Retirement/zero callbacks observed separately,not inferred from admission model. No callbacks run,clock/latency/concurrent retirement,Minecraft/application/GUI or other-host qualification."
+}

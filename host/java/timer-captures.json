@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "exporterSha256": "e9e04e4045903e843cd02ceb4290e51f04442e04cdd910cc4efb044c6f667762",
+  "operationAdapter": {
+    "producerSha256": "278b7ff262067cb3fdb98172d0360e14d13c11853dcd5177ee66034317ae46c1",
+    "definitions": [
+      {
+        "id": 0,
+        "name": "cancel-fresh-task",
+        "operation": 1,
+        "timer": null,
+        "task": 0,
+        "delayMs": null,
+        "periodMs": null
+      },
+      {
+        "id": 1,
+        "name": "schedule-canceled-task",
+        "operation": 0,
+        "timer": 0,
+        "task": 0,
+        "delayMs": 86400000,
+        "periodMs": null
+      },
+      {
+        "id": 2,
+        "name": "schedule-future-task",
+        "operation": 0,
+        "timer": 0,
+        "task": 1,
+        "delayMs": 86400000,
+        "periodMs": 86400000
+      },
+      {
+        "id": 3,
+        "name": "schedule-same-task-again",
+        "operation": 0,
+        "timer": 0,
+        "task": 1,
+        "delayMs": 86400000,
+        "periodMs": 86400000
+      },
+      {
+        "id": 4,
+        "name": "cancel-scheduled-task",
+        "operation": 1,
+        "timer": null,
+        "task": 1,
+        "delayMs": null,
+        "periodMs": null
+      },
+      {
+        "id": 5,
+        "name": "cancel-task-again",
+        "operation": 1,
+        "timer": null,
+        "task": 1,
+        "delayMs": null,
+        "periodMs": null
+      },
+      {
+        "id": 6,
+        "name": "move-canceled-task-to-new-timer",
+        "operation": 0,
+        "timer": 1,
+        "task": 1,
+        "delayMs": 86400000,
+        "periodMs": null
+      },
+      {
+        "id": 7,
+        "name": "negative-delay",
+        "operation": 0,
+        "timer": 1,
+        "task": 2,
+        "delayMs": -1,
+        "periodMs": null
+      },
+      {
+        "id": 8,
+        "name": "retry-same-task-valid-delay",
+        "operation": 0,
+        "timer": 1,
+        "task": 2,
+        "delayMs": 86400000,
+        "periodMs": null
+      },
+      {
+        "id": 9,
+        "name": "zero-period",
+        "operation": 0,
+        "timer": 1,
+        "task": 3,
+        "delayMs": 86400000,
+        "periodMs": 0
+      },
+      {
+        "id": 10,
+        "name": "retry-same-task-valid-period",
+        "operation": 0,
+        "timer": 1,
+        "task": 3,
+        "delayMs": 86400000,
+        "periodMs": 86400000
+      },
+      {
+        "id": 11,
+        "name": "cancel-first-timer",
+        "operation": 2,
+        "timer": 0,
+        "task": null,
+        "delayMs": null,
+        "periodMs": null
+      },
+      {
+        "id": 12,
+        "name": "cancel-first-timer-again",
+        "operation": 2,
+        "timer": 0,
+        "task": null,
+        "delayMs": null,
+        "periodMs": null
+      },
+      {
+        "id": 13,
+        "name": "fresh-task-on-canceled-timer",
+        "operation": 0,
+        "timer": 0,
+        "task": 4,
+        "delayMs": 86400000,
+        "periodMs": null
+      },
+      {
+        "id": 14,
+        "name": "fresh-task-on-second-timer",
+        "operation": 0,
+        "timer": 1,
+        "task": 5,
+        "delayMs": 86400000,
+        "periodMs": null
+      }
+    ],
+    "limits": "Source-derived object labels/overload arguments from the frozen authored helper,not captured internal JDK state or an RPC stream."
+  },
+  "profiles": [
+    {
+      "java": 17,
+      "capture": "timer-17-20261126T013333429826Z",
+      "privateReceiptSha256": "5fb70c26490d53adcfcd2ca141604cc99ce05489fdfc6a7ba831226c05aaf4f1",
+      "javaVersion": "17.0.21.1",
+      "os": "Mac OS X",
+      "architecture": "aarch64",
+      "publicPayloadSha256": {
+        "compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stdout": "db41fb304d9fc074ab9d961450636ee4e7a14fb4a46b71edab456c91e39c3c7e",
+        "receipt.json": "86ef92cc38b8eed2a2c7c707ac7a74bb0e5f589c87c0d2a2061c22afe6017472"
+      }
+    },
+    {
+      "java": 21,
+      "capture": "timer-21-20261126T013346687397Z",
+      "privateReceiptSha256": "168bf21c3a0cb98b1d42f8c693412ee8608a0f48fe71b487858cef331d34b702",
+      "javaVersion": "21.0.13.1",
+      "os": "Mac OS X",
+      "architecture": "aarch64",
+      "publicPayloadSha256": {
+        "compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stdout": "be580a3fef4864c387edd4c76e41f4a7a332b69762186c7feb48c8569b16a448",
+        "receipt.json": "2efd037b25072c360e417a0b2d60eee294a43186e3177d1cfb788d4ac5f59ea5"
+      }
+    },
+    {
+      "java": 25,
+      "capture": "timer-25-20261126T013348428443Z",
+      "privateReceiptSha256": "d2dd963e91c1bfd8cd0652df569d1c5adcbc915a567b7bb015e87c79fce5a76d",
+      "javaVersion": "25.0.4.1",
+      "os": "Mac OS X",
+      "architecture": "aarch64",
+      "publicPayloadSha256": {
+        "compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "execute.stdout": "69e62099ac1f89a87b1c98f159b71f1ef6796d2c91996412f388b7c8f6cd433a",
+        "receipt.json": "914f6bf81a191e216927881ad57494e89851d360dd3d6bb87132d5ca9628dc89"
+      }
+    }
+  ]
+}
