@@ -23,6 +23,7 @@ def require_file(path, owner):
 
 
 def validate_operation_references(owner, operation):
+    assert not any(key in operation for key in ('components', 'componentEvidence')), (owner, 'operation component evidence must use feature operationSlices')
     models = MODEL_PATH.findall(operation.get('model') or '')
     assert not operation.get('model') or models, (owner, 'model has no declared module path')
     laws = set()
@@ -144,6 +145,9 @@ def main():
     selected = next(feature for app in no_scope['applications'] for feature in app['features'] if feature.get('componentEvidence'))
     selected['componentEvidence'][0]['operationSlices'] = {}
     selected['componentEvidence'][0].pop('relationOnly', None)
+    misplaced = copy.deepcopy(catalog)
+    misplaced['applications'][0]['features'][0]['operations'][0]['components'] = [
+        {'scope': 'This field is ignored by the canonical feature query.'}]
     missing_decision = copy.deepcopy(catalog)
     selected = next(a for a in missing_decision['applications'] if a['improvementCandidates'])
     selected['improvementCandidates'][0]['document'] = 'missing-decision-report.md'
@@ -160,6 +164,7 @@ def main():
                                ('missing-component-evidence', catalog, missing), ('missing-feature-component-evidence', feature_missing, scenarios),
                                ('missing-model-reference', bad_model, scenarios), ('missing-law-reference', bad_law, scenarios),
                                ('unknown-operation-slice', bad_slice, scenarios), ('unmapped-component-without-scope', no_scope, scenarios),
+                               ('misplaced-operation-component', misplaced, scenarios),
                                ('missing-decision-document', missing_decision, scenarios), ('duplicate-decision-id', duplicate_decision, scenarios),
                                ('empty-preservation-rationale', empty_preservation, scenarios), ('missing-choice-document', missing_choice, scenarios)]:
         try:
@@ -174,6 +179,7 @@ def main():
                 'missing-law-reference': 'missing named law',
                 'unknown-operation-slice': 'unknown component operation',
                 'unmapped-component-without-scope': 'unmapped component needs an explicit relation-only scope',
+                'misplaced-operation-component': 'operation component evidence must use feature operationSlices',
                 'missing-decision-document': 'missing evidence file',
                 'duplicate-decision-id': 'duplicate decision id',
                 'empty-preservation-rationale': 'empty decision content',

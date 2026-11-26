@@ -39,6 +39,8 @@ Narrative control descriptions remain narrative. A file fragment or named field 
 
 The checker's negative controls must fail for the intended reason. A missing model cannot pass its negative control merely because an unrelated component was also invalid. Scope and evidence statuses are not inferred from link counts, a parent feature, or a joined scenario.
 
+Component evidence belongs on the feature, with `operationSlices` identifying its bounded operation relationships. Operation-level `components` or `componentEvidence` fields are rejected: the canonical query does not consume them. The Prism export records were corrected to this structure without changing the observations or parent operation statuses.
+
 ## Proposal and preservation references
 
 Each application's `improvementCandidates`, `preservationDecisions`, and `unresolvedChoices` indexes link the owning reports. Their IDs and required status/rationale/question and file references are checked alongside operation evidence. They record design obligations, not adopted changes, fresh upstream reviews, or completion counts. Keep compatibility and verification detail in the referenced report; a nonempty array cannot qualify a proposal.
