@@ -1,0 +1,175 @@
+{
+  "inventorySha256": "a6b9afd48449862843758dbfdd79af78340eadc4ee36c02fa9855c15ece381ea",
+  "scenariosSha256": "acd70ded8a80fa800f670f9ca7155ba05f87e6cb400ea2972a65f8c0a72cd999",
+  "querySha256": "b7329d6601d7f8c4ea3e326ac7b928a727a9d19fdce020c2c7e6be8bf27fe7f7",
+  "applications": [
+    {
+      "application": "empack",
+      "features": 52,
+      "operations": 264,
+      "linkedOperations": 145,
+      "operationsWithoutLinks": 119,
+      "proposalOnlyOperations": 4,
+      "statuses": {
+        "native-observed": 25,
+        "pending": 221,
+        "proposed": 8,
+        "source-modeled": 10
+      }
+    },
+    {
+      "application": "npm",
+      "features": 23,
+      "operations": 101,
+      "linkedOperations": 33,
+      "operationsWithoutLinks": 68,
+      "proposalOnlyOperations": 2,
+      "statuses": {
+        "native-observed": 20,
+        "pending": 81
+      }
+    },
+    {
+      "application": "pnpm",
+      "features": 22,
+      "operations": 108,
+      "linkedOperations": 26,
+      "operationsWithoutLinks": 82,
+      "proposalOnlyOperations": 1,
+      "statuses": {
+        "native-observed": 18,
+        "pending": 88,
+        "unsupported-profile": 2
+      }
+    },
+    {
+      "application": "yarn",
+      "features": 19,
+      "operations": 76,
+      "linkedOperations": 28,
+      "operationsWithoutLinks": 48,
+      "proposalOnlyOperations": 0,
+      "statuses": {
+        "native-observed": 19,
+        "pending": 57
+      }
+    },
+    {
+      "application": "mo2",
+      "features": 15,
+      "operations": 68,
+      "linkedOperations": 19,
+      "operationsWithoutLinks": 49,
+      "proposalOnlyOperations": 5,
+      "statuses": {
+        "pending": 62,
+        "source-modeled": 6
+      }
+    },
+    {
+      "application": "prism",
+      "features": 17,
+      "operations": 77,
+      "linkedOperations": 36,
+      "operationsWithoutLinks": 41,
+      "proposalOnlyOperations": 13,
+      "statuses": {
+        "pending": 72,
+        "source-modeled": 5
+      }
+    },
+    {
+      "application": "cargo",
+      "features": 19,
+      "operations": 79,
+      "linkedOperations": 37,
+      "operationsWithoutLinks": 42,
+      "proposalOnlyOperations": 1,
+      "statuses": {
+        "native-observed": 19,
+        "pending": 60
+      }
+    },
+    {
+      "application": "restic",
+      "features": 16,
+      "operations": 68,
+      "linkedOperations": 38,
+      "operationsWithoutLinks": 30,
+      "proposalOnlyOperations": 1,
+      "statuses": {
+        "native-observed": 29,
+        "pending": 39
+      }
+    },
+    {
+      "application": "vscode",
+      "features": 25,
+      "operations": 133,
+      "linkedOperations": 58,
+      "operationsWithoutLinks": 75,
+      "proposalOnlyOperations": 18,
+      "statuses": {
+        "native-observed": 13,
+        "pending": 118,
+        "source-modeled": 2
+      }
+    }
+  ],
+  "statuses": {
+    "pending": 798,
+    "native-observed": 143,
+    "source-modeled": 23,
+    "proposed": 8,
+    "unsupported-profile": 2
+  },
+  "linkedOperations": 420,
+  "proposalOnlyOperations": 45,
+  "operationsWithoutLinks": 554,
+  "familiesWithOperationLinks": 139,
+  "familiesRelatedOnly": 2,
+  "scenarioCount": 19,
+  "controls": [
+    "Existing proposal-only operations remain pending.",
+    "Relation-only components do not create operation links.",
+    "Synthetic component status change affects classification but not operation states or total links.",
+    "Direct references plus proposals remain direct-reference relationships.",
+    "Summary partitions and independently derived raw proposal count agree."
+  ],
+  "limits": [
+    "Reference metadata only, not application correctness or completion.",
+    "Synthetic controls do not rewrite native evidence or real catalog."
+  ],
+  "baseRevision": "17363c3ffc7f1ed14d3e82a0df7f7f2d25f9a22a",
+  "priorAuditSha256": "fc57d320a629b6435c1e05e39cd9876e878aa6f55480001d6d4c5746cdc655a9",
+  "currentAuditSha256": "76ef19f9c797681499881db13b93e3632fd50026d89d3c69008fc70ef817f148",
+  "classification": "Goal remains active/incomplete; no operation/scenario state advance.",
+  "freshNativeOrModelExecution": 0,
+  "reviewedReports": [
+    "empack/adoption-flow/README.md",
+    "empack/migration-flow/README.md",
+    "empack/subscribed-flow/README.md",
+    "empack/update-flow/README.md",
+    "empack/AUTHORING-API.md",
+    "js-architecture/README.md",
+    "cargo/ARCHITECTURE.md",
+    "restic/ARCHITECTURE.md",
+    "mo2/ARCHITECTURE.md",
+    "prism/ARCHITECTURE.md",
+    "vscode/ARCHITECTURE.md"
+  ],
+  "controlProducer": {
+    "path": "applications/evidence/application-scope-review-20261126T111946544843Z/query_controls.py",
+    "sha256": "b599260f0ca295afcefd6cface5546623cd20fd706b53304ec0e7c27396d14a2"
+  },
+  "checks": {
+    "localLinks": 27,
+    "inventoryAndScenarioBytesUnchanged": true,
+    "canonicalAuditUnchanged": true,
+    "classificationControls": 5,
+    "tableAndJsonFromSameReport": true
+  },
+  "attempts": [
+    "An earlier private assertion used an incorrect manual proposal-only sum46; derived raw/query totals both45. Query/canonical records were unchanged; user-facing correction delivered."
+  ]
+}

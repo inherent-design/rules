@@ -18,7 +18,7 @@ def describe_feature(app, feature):
         for index, component in enumerate(feature.get('componentEvidence', [])):
             scope = component['operationSlices'].get(operation['id'])
             if scope:
-                slices.append(dict(component=index, scope=scope))
+                slices.append(dict(component=index, status=component['status'], scope=scope))
         operations.append(dict(id=operation['id'], status=operation['status'],
                                directReferences=direct, scopedReferences=slices))
     return dict(application=app['id'], id=feature['id'], title=feature['title'],
@@ -39,18 +39,21 @@ def build_report(catalog, scenarios, app_id=None, feature_id=None):
             continue
         ops = [o for f in selected for o in f['operations']]
         linked = sum(bool(o['directReferences'] or o['scopedReferences']) for o in ops)
+        proposal_only = sum(not o['directReferences'] and bool(o['scopedReferences'])
+                            and all(s['status'] == 'proposed' for s in o['scopedReferences']) for o in ops)
         summaries.append(dict(application=app['id'], features=len(selected), operations=len(ops),
                               linkedOperations=linked, operationsWithoutLinks=len(ops)-linked,
+                              proposalOnlyOperations=proposal_only,
                               statuses=dict(sorted(Counter(o['status'] for o in ops).items()))))
     return dict(schema=1, meaning='Reference bookkeeping only. Existing files, named laws, or scoped links do not prove semantic conformance or completion.',
                 applications=summaries, features=features)
 
 
 def render(report, detail=False):
-    lines = ['Inventory references', '', f'{"Application":<14}{"Features":>10}{"Operations":>12}{"With links":>12}{"Without links":>16}']
+    lines = ['Inventory references', '', f'{"Application":<14}{"Features":>10}{"Operations":>12}{"With links":>12}{"Proposal only":>16}{"Without links":>16}']
     for app in report['applications']:
-        lines.append(f'{app["application"]:<14}{app["features"]:>10}{app["operations"]:>12}{app["linkedOperations"]:>12}{app["operationsWithoutLinks"]:>16}')
-    lines += ['', report['meaning']]
+        lines.append(f'{app["application"]:<14}{app["features"]:>10}{app["operations"]:>12}{app["linkedOperations"]:>12}{app["proposalOnlyOperations"]:>16}{app["operationsWithoutLinks"]:>16}')
+    lines += ['', 'Proposal only is a subset of With links: no direct references and only proposed component slices.', report['meaning']]
     if not detail:
         lines += ['Use --feature ID to inspect operation scopes and remaining work.']
         return '\n'.join(lines)
@@ -61,7 +64,7 @@ def render(report, detail=False):
             if op['directReferences']:
                 kinds.append('direct references')
             if op['scopedReferences']:
-                kinds.append('scoped evidence')
+                kinds.append('scoped references: ' + ', '.join(sorted({s['status'] for s in op['scopedReferences']})))
             label = ' and '.join(kinds) if kinds else 'no inventory references'
             lines.append(f'  {op["id"]}: {op["status"]} ({label})')
         for index, component in enumerate(feature['components']):

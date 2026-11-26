@@ -13,6 +13,8 @@ python3 applications/query_inventory.py --feature cargo.freshness --json
 
 Human and JSON output use the same derived facts. The query does not write another coverage ledger. Counts describe inventory references, not completion, test quality, implementation correctness, or a percentage of the goal.
 
+`Proposal only` is a subset of `With links`: the operation has no direct references and all of its component slices are marked `proposed`. It prevents a new design link from looking like a new observation. The JSON summary exposes `proposalOnlyOperations`, and each scoped reference retains its component's `status`. These are additive reference fields; the operation's own recorded status remains unchanged. A direct reference can itself be incomplete or proposed, so the other linked operations are not automatically native or verified.
+
 ## Three different relationships
 
 | Record | What it establishes |
