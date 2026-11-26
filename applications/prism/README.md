@@ -62,3 +62,5 @@ No production Prism or empack changes were made. The existing host contracts can
 The [instance-library band](LIBRARY.md) separates display, directory, and UUID identity, grouping persistence, trash/delete effects, and undo references through selected Qt methods and private files. Its caller, watcher, OS-trash, and full GUI obligations remain open.
 
 The [local content-install band](CONTENT-INSTALL.md) separates file identity, replacement effects, drop handling, and refresh. Eight selected original-method cases reproduce destination loss through a source alias; thirteen private proposal cases and a multi-chunk continuation qualify narrower preservation alternatives. Full launcher, GUI, bundled Qt, and supported-host obligations remain open.
+
+The [ownership and interface target](ARCHITECTURE.md) connects the scoped bands to instance, component save/reload, settings, accounts, task/process, file-update, and export owners. Its [contract map](architecture-targets.json) keeps all 17 feature-family dispositions explicit; newly inspected staging and save-result branches remain source-only.

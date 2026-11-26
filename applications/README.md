@@ -115,3 +115,5 @@ The [Cargo ownership and API targets](cargo/ARCHITECTURE.md) connect binary publ
 The [restic ownership and API targets](restic/ARCHITECTURE.md) preserve object roles, legacy codecs, capture and destructive policies while refining query completion and per-operation acknowledgement. The source review identifies a JSON-finalization obligation for the proposed search correction; it does not change the earlier native/model evidence.
 
 The [MO2 ownership and API targets](mo2/ARCHITECTURE.md) connect existing state owners and compatibility choices to a new [source/Boost callback comparison](mo2/REFRESH-CALLBACKS.md). They also correct the overwrite inventory by separating inspection, per-file sync and shell-move adoption. Supported Windows MO2, Qt refresh and VFS remain unqualified.
+
+The [Prism architecture target](prism/ARCHITECTURE.md) reuses its existing state owners across library/undo, component preparation, settings, account/session capture, task/process lifetime, file updates, and export. It records new source-only save/reload and staging/result conditions without promoting full GUI or supported-host coverage.
