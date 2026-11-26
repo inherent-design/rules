@@ -1,0 +1,44 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      rules-sbom-prod:
+        specifier: file:archives/rules-sbom-prod-1.0.0.tgz
+        version: file:archives/rules-sbom-prod-1.0.0.tgz
+    devDependencies:
+      rules-sbom-dev:
+        specifier: file:archives/rules-sbom-dev-1.0.0.tgz
+        version: file:archives/rules-sbom-dev-1.0.0.tgz
+    optionalDependencies:
+      rules-sbom-optional:
+        specifier: file:archives/rules-sbom-optional-1.0.0.tgz
+        version: file:archives/rules-sbom-optional-1.0.0.tgz
+
+packages:
+
+  rules-sbom-dev@file:archives/rules-sbom-dev-1.0.0.tgz:
+    resolution: {integrity: sha512-LUQWkKijpT9bPRRqvXn5FpbUkYXEliykU5zhEdI+AX8kyxwIP2y//V1/hJ+UD/ysVnOP7YxGw6wLe86B6k/snw==, tarball: file:archives/rules-sbom-dev-1.0.0.tgz}
+    version: 1.0.0
+
+  rules-sbom-optional@file:archives/rules-sbom-optional-1.0.0.tgz:
+    resolution: {integrity: sha512-JZJZCICLmMP4EXyO/HwFdKk5H4WddcqMTOUipuckgILFiWUOKFD/KzmR6+61SQ3fNiAfgkInSr11nngx/9Pt3w==, tarball: file:archives/rules-sbom-optional-1.0.0.tgz}
+    version: 1.0.0
+
+  rules-sbom-prod@file:archives/rules-sbom-prod-1.0.0.tgz:
+    resolution: {integrity: sha512-Ji6JmxebNuw1RYCsFmwleLKau78EBN7eT8Nfz3nJ1Al8xa5KVkq8VBKCd3eCWdE5Cw/UUYfmqoYTOy69U+M61g==, tarball: file:archives/rules-sbom-prod-1.0.0.tgz}
+    version: 1.0.0
+
+snapshots:
+
+  rules-sbom-dev@file:archives/rules-sbom-dev-1.0.0.tgz: {}
+
+  rules-sbom-optional@file:archives/rules-sbom-optional-1.0.0.tgz:
+    optional: true
+
+  rules-sbom-prod@file:archives/rules-sbom-prod-1.0.0.tgz: {}

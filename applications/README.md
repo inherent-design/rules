@@ -99,3 +99,5 @@ The [Prism local-install band](prism/CONTENT-INSTALL.md) compares actual regular
 The [pnpm namespace band](pnpm-admission/README.md) separates registered handlers, placeholders, parser help, explicit scripts, and script fallback. Fifteen native cases retain leading-prefix and root-shadow semantics. Only the two pinned built-in placeholders acquire unsupported-profile dispositions; task/runtime/pipeline behavior remains separately scoped.
 
 The [override/resolution study](js-overrides/README.md) compares nested and ordered policy, direct-declaration protection, compatible convergence, and manual lock-table lifetime across npm, pnpm, and Yarn. Its pnpm overlapping-range result remains a bounded admission, with cause and correction unqualified.
+
+The [SBOM basis study](js-sbom/README.md) separates installed metadata, lock graphs, enrichment, artifact assertions, and current runtime bytes across npm and pnpm. Its root-name and provenance candidates remain separate from production adoption.

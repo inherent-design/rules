@@ -6381,7 +6381,25 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "direct-archive-sbom-basis",
+              "status": "native-observed",
+              "scope": "Two generated projects use direct local archives offline. The evidence covers two successful installation seeds, 18 SBOM requests, six fresh Node observations, and eight authored events. The projection separates graph, metadata, identity, and hashes, and checks direct reference closure. Native after-state is never a model input.",
+              "remaining": "Complete graph and schema validation, other sources, workspaces, peers, platforms, output-file publication, cache and I/O failures, concurrency, and actual file-integrity verification remain open. The root-name correction is proposed. Parent operation states are unchanged.",
+              "evidence": [
+                "js-sbom/README.md",
+                "js-sbom/Sbom.lean",
+                "js-sbom/Sbom.bend",
+                "js-sbom/comparison.json",
+                "sources/js-sbom-selections.json"
+              ],
+              "operationSlices": {
+                "sbom": "Default and explicit lock-only reporting, metadata availability, archive integrity assertions, identity, role/filter fields, and unchanged project entries in the selected local profile."
+              }
+            }
+          ]
         },
         {
           "id": "npm.cache",
@@ -7117,6 +7135,12 @@
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
           "document": "js-peers/LOCK-MODES.md",
           "summary": "Keep the hidden installed index tied to actual materialized backing across lock-only and ordinary installation; no new lock format is implied."
+        },
+        {
+          "id": "sbom-root-package-identity",
+          "status": "Scoped candidate; native implementation and format changes unselected.",
+          "document": "js-sbom/README.md",
+          "summary": "Separate physical placement name from authored root package identity across CycloneDX display and purl/reference; review aliases/workspaces and serialized consumers before correction."
         }
       ],
       "preservationDecisions": [
@@ -7129,6 +7153,11 @@
           "id": "override-policy-and-lifetime",
           "evidence": "js-overrides/README.md",
           "decision": "Preserve nested override ancestry and direct raw-declaration protection;no weaker authorization or lock-format change."
+        },
+        {
+          "id": "sbom-basis-and-integrity-scope",
+          "evidence": "js-sbom/README.md",
+          "decision": "Preserve missing/invalid-edge refusals and explicit virtual-tree reporting; archive assertions do not prove current installed-file equality."
         }
       ],
       "unresolvedChoices": [
@@ -8285,7 +8314,25 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "direct-archive-sbom-basis",
+              "status": "native-observed",
+              "scope": "Two generated projects use direct local archives offline. The evidence covers two successful installation seeds, 18 SBOM requests, six fresh Node observations, and eight authored events. The projection separates graph, metadata, identity, and hashes, and checks direct reference closure. Native after-state is never a model input.",
+              "remaining": "Complete graph and schema validation, other sources, workspaces, peers, platforms, output-file publication, cache and I/O failures, concurrency, and actual file-integrity verification remain open. The root-name correction is proposed. Parent operation states are unchanged.",
+              "evidence": [
+                "js-sbom/README.md",
+                "js-sbom/Sbom.lean",
+                "js-sbom/Sbom.bend",
+                "js-sbom/comparison.json",
+                "sources/js-sbom-selections.json"
+              ],
+              "operationSlices": {
+                "sbom": "Default and explicit lock-only reporting, metadata availability, archive integrity assertions, identity, role/filter fields, and unchanged project entries in the selected local profile."
+              }
+            }
+          ]
         },
         {
           "id": "pnpm.tool-runtime",
@@ -9137,6 +9184,12 @@
           "status": "Scoped proposal only;no production change or whole-feature qualification.",
           "document": "js-overrides/README.md",
           "summary": "Separate overlap from containment before selecting a comparator correction;retain current result and lock/configuration compatibility obligations."
+        },
+        {
+          "id": "sbom-generation-basis",
+          "status": "Scoped candidate; native implementation and format changes unselected.",
+          "document": "js-sbom/README.md",
+          "summary": "Explain lock graph, store metadata enrichment and artifact hash basis without equating success with physical installation or forcing rematerialization."
         }
       ],
       "preservationDecisions": [
@@ -9149,6 +9202,11 @@
           "id": "override-policy-and-lifetime",
           "evidence": "js-overrides/README.md",
           "decision": "Keep ordinary forcing separate from range-compatible convergence and preserve absent-versus-empty selector meaning."
+        },
+        {
+          "id": "sbom-basis-and-integrity-scope",
+          "evidence": "js-sbom/README.md",
+          "decision": "Keep useful inventory generation distinct from installed-file verification; preserve explicit lock reporting, format-specific relationships and unavailable metadata."
         }
       ],
       "unresolvedChoices": [

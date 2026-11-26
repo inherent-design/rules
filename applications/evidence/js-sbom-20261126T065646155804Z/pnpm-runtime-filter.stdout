@@ -1,0 +1,78 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:bad0781a-98cd-4d21-9a8f-6173d2072ae4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-26T06:56:48.570Z",
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "pnpm",
+          "version": "12.21.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "name": "rules-sbom-pnpm",
+      "version": "1.0.0",
+      "purl": "pkg:npm/rules-sbom-pnpm@1.0.0",
+      "bom-ref": "pkg:npm/rules-sbom-pnpm@1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "rules-sbom-prod",
+      "version": "1.0.0",
+      "purl": "pkg:npm/rules-sbom-prod@1.0.0",
+      "bom-ref": "pkg:npm/rules-sbom-prod@1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "file:archives/rules-sbom-prod-1.0.0.tgz",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "262e899b179b36ec354580ac166c2578b29abbbf0404dede4fc35fcf79c9d4097cc5ae4a564abc54128277778259d1390b0fd45187e6aa86133b2ebd53e33ad6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/rules-sbom-pnpm@1.0.0",
+      "dependsOn": [
+        "pkg:npm/rules-sbom-prod@1.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/rules-sbom-prod@1.0.0",
+      "dependsOn": []
+    }
+  ]
+}

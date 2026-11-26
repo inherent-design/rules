@@ -953,6 +953,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "javascript-sbom-inventory-basis",
+      "features": [
+        "npm.security",
+        "npm.installation",
+        "pnpm.security-license",
+        "pnpm.install-store"
+      ],
+      "flow": "Install generated local archives; generate two inventory formats; filter dependency groups; change installed code; remove a top-level entry; compare default and explicit lock-only reports; retain missing-lock and missing-format refusals.",
+      "counterexamples": [
+        "Archive integrity assertion mistaken for current file verification.",
+        "Lock inventory mistaken for actual top-level installation visibility.",
+        "Missing enriched metadata treated as a negative license assertion.",
+        "Format-specific dependency relations silently normalized into equivalent role information.",
+        "Physical placement name conflated with authored package identity."
+      ],
+      "hostWitnesses": [
+        "Archive bytes and digest assertions",
+        "Read-only project images",
+        "Fresh process and physical code observations",
+        "Ordered owned mutations",
+        "Process retirement"
+      ],
+      "status": "pending",
+      "evidence": [],
+      "componentEvidence": [
+        {
+          "id": "three-direct-archive-sbom-traces",
+          "status": "native-observed",
+          "scope": "Two generated projects use direct local archives offline. The evidence covers two successful installation seeds, 18 SBOM requests, six fresh Node observations, and eight authored events. The projection separates graph, metadata, identity, and hashes, and checks direct reference closure. Native after-state is never a model input.",
+          "remaining": "Complete graph and schema validation, other sources, workspaces, peers, platforms, output-file publication, cache and I/O failures, concurrency, and actual file-integrity verification remain open. The root-name correction is proposed. Parent operation states are unchanged.",
+          "evidence": [
+            "js-sbom/README.md",
+            "js-sbom/Sbom.lean",
+            "js-sbom/Sbom.bend",
+            "js-sbom/comparison.json",
+            "sources/js-sbom-selections.json"
+          ]
+        }
+      ]
     }
   ]
 }

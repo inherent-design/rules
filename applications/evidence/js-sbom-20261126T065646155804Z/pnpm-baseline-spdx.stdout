@@ -1,0 +1,124 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "rules-sbom-pnpm",
+  "documentNamespace": "https://spdx.org/spdxdocs/rules-sbom-pnpm-1.0.0-393f34a7-0dc7-4bb9-a6c4-ad50b16cc675",
+  "creationInfo": {
+    "created": "2026-11-26T06:56:48Z",
+    "creators": [
+      "Tool: pnpm"
+    ]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-RootPackage",
+      "name": "rules-sbom-pnpm",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "primaryPackagePurpose": "LIBRARY",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-pnpm@1.0.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-rules-sbom-prod-1.0.0-0",
+      "name": "rules-sbom-prod",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "file:archives/rules-sbom-prod-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-prod@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "262e899b179b36ec354580ac166c2578b29abbbf0404dede4fc35fcf79c9d4097cc5ae4a564abc54128277778259d1390b0fd45187e6aa86133b2ebd53e33ad6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-rules-sbom-dev-1.0.0-1",
+      "name": "rules-sbom-dev",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "file:archives/rules-sbom-dev-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-dev@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "2d441690a8a3a53f5b3d146abd79f91696d49185c4962ca4539ce111d23e017f24cb1c083f6cbffd5d7f849f940ffcac56738fed8c46c3ac0b7bce81ea4fec9f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-rules-sbom-optional-1.0.0-2",
+      "name": "rules-sbom-optional",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "file:archives/rules-sbom-optional-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-optional@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "25925908808b98c3f8117c8efc7c0574a9391f859d75ca8c4ce522a6e7248082c589650e2850ff2b3991ebeeb5490ddf36201f8242274abd759e7831ffd3eddf"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-RootPackage",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-prod-1.0.0-0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-RootPackage",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-dev-1.0.0-1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-RootPackage",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-optional-1.0.0-2",
+      "relationshipType": "DEPENDS_ON"
+    }
+  ]
+}

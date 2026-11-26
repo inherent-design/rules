@@ -1,0 +1,127 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "rules-sbom-npm@1.0.0",
+  "documentNamespace": "http://spdx.org/spdxdocs/rules-sbom-npm-1.0.0-23c14aa7-49c1-4647-ab97-33e9d5f99799",
+  "creationInfo": {
+    "created": "2026-11-26T06:56:46.989Z",
+    "creators": [
+      "Tool: npm/cli-11.20.0"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-Package-rules-sbom-npm-1.0.0"
+  ],
+  "packages": [
+    {
+      "name": "rules-sbom-npm",
+      "SPDXID": "SPDXRef-Package-rules-sbom-npm-1.0.0",
+      "versionInfo": "1.0.0",
+      "packageFileName": "",
+      "primaryPackagePurpose": "LIBRARY",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-npm@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "rules-sbom-dev",
+      "SPDXID": "SPDXRef-Package-rules-sbom-dev-1.0.0",
+      "versionInfo": "1.0.0",
+      "packageFileName": "node_modules/rules-sbom-dev",
+      "downloadLocation": "file:/private/tmp/rules-js-sbom-7msqr1xo/npm/project/archives/rules-sbom-dev-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-dev@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "2d441690a8a3a53f5b3d146abd79f91696d49185c4962ca4539ce111d23e017f24cb1c083f6cbffd5d7f849f940ffcac56738fed8c46c3ac0b7bce81ea4fec9f"
+        }
+      ]
+    },
+    {
+      "name": "rules-sbom-optional",
+      "SPDXID": "SPDXRef-Package-rules-sbom-optional-1.0.0",
+      "versionInfo": "1.0.0",
+      "packageFileName": "node_modules/rules-sbom-optional",
+      "downloadLocation": "file:/private/tmp/rules-js-sbom-7msqr1xo/npm/project/archives/rules-sbom-optional-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-optional@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "25925908808b98c3f8117c8efc7c0574a9391f859d75ca8c4ce522a6e7248082c589650e2850ff2b3991ebeeb5490ddf36201f8242274abd759e7831ffd3eddf"
+        }
+      ]
+    },
+    {
+      "name": "rules-sbom-prod",
+      "SPDXID": "SPDXRef-Package-rules-sbom-prod-1.0.0",
+      "versionInfo": "1.0.0",
+      "packageFileName": "node_modules/rules-sbom-prod",
+      "downloadLocation": "file:/private/tmp/rules-js-sbom-7msqr1xo/npm/project/archives/rules-sbom-prod-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rules-sbom-prod@1.0.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "262e899b179b36ec354580ac166c2578b29abbbf0404dede4fc35fcf79c9d4097cc5ae4a564abc54128277778259d1390b0fd45187e6aa86133b2ebd53e33ad6"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-npm-1.0.0",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-rules-sbom-prod-1.0.0",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-npm-1.0.0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-rules-sbom-optional-1.0.0",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-npm-1.0.0",
+      "relationshipType": "OPTIONAL_DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-rules-sbom-dev-1.0.0",
+      "relatedSpdxElement": "SPDXRef-Package-rules-sbom-npm-1.0.0",
+      "relationshipType": "DEV_DEPENDENCY_OF"
+    }
+  ]
+}
