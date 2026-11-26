@@ -109,3 +109,5 @@ The [native adoption study](empack/adoption-flow/README.md) verifies installed0.
 The [authoring API synthesis](empack/AUTHORING-API.md) maps nine current operation contracts to a portable draft facade while retaining native preparation and approval. It records affected types/callers,compatibility,keep-current choices,and implementation checks;no new native or formal conformance is claimed.
 
 The [package-manager ownership targets](js-architecture/README.md) consolidate npm, pnpm, and Yarn corrections and compatibility choices. They distinguish installed-index truth, backing admission, protected deployment, phase-bound version decisions, constraint postconditions, and configuration targets without another resolver or generic transaction layer.
+
+The [Cargo ownership and API targets](cargo/ARCHITECTURE.md) connect binary publication, tracking, cleanup, configuration provenance, and context-bound inspection. A fresh no-track fixture establishes false success after replacement failure; metadata-write failure and stronger cleanup recovery remain separately unqualified.

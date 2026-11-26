@@ -1,0 +1,205 @@
+{
+  "schema": 1,
+  "scope": "Cargo 1.92.0 selected native/source profile; current upstream status and reproducible source-to-binary correspondence are not established.",
+  "sources": [
+    {
+      "path": "src/doc/src/commands/cargo-install.md",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/doc/src/commands/cargo-install.md",
+      "cache": "applications/tools/source-cache/cargo-install/src__doc__src__commands__cargo-install.md",
+      "sha256": "cd42349aba72830e1d83d837ef91416453daa1a8827b338e9b8e2a3e82cf153b",
+      "bytes": 25164,
+      "inspected": "13-74,103-127: root/source precedence,up-to-date dimensions,path alwaysreinstall,configuration discovery,force andno-track limits. Documentation only;registry/Git skip behavior not native-qualified.",
+      "id": "install-docs",
+      "originLedger": "sources/cargo-install-selections.json",
+      "reviewedHereRanges": [
+        [
+          13,
+          55
+        ],
+        [
+          140,
+          147
+        ]
+      ]
+    },
+    {
+      "path": "src/cargo/ops/cargo_install.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/ops/cargo_install.rs",
+      "cache": "applications/tools/source-cache/cargo-install/src__cargo__ops__cargo_install.rs",
+      "sha256": "c7b8f9ac345e5c8f91594b844619109b7ed704b2dc7cbef752ccdb9ca67321f7",
+      "bytes": 34887,
+      "inspected": "24-39,266-325,338-365,414-523,799-813: Transaction drops newly installed paths unless success consumes it; duplicate/freshness admission, compilation/staging, new-first then A/B replacements, successful-bin metadata save before replacement error propagation. Selected failure/control only; no general crash or IO guarantee.",
+      "id": "binary-publication",
+      "originLedger": "sources/cargo-install-selections.json",
+      "reviewedHereRanges": [
+        [
+          24,
+          39
+        ],
+        [
+          266,
+          325
+        ],
+        [
+          414,
+          550
+        ]
+      ]
+    },
+    {
+      "path": "src/cargo/ops/cargo_uninstall.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/ops/cargo_uninstall.rs",
+      "cache": "applications/tools/source-cache/cargo-install/src__cargo__ops__cargo_uninstall.rs",
+      "sha256": "eb87ddd51d85bb0d0f062f7098390435ac308e1373fdfcdde22b337a1afe7288",
+      "bytes": 4267,
+      "inspected": "78-158: package selection,preflight existence of ALL tracked bins before applying --bin subset,per-bin remove-then-save;not payload hash validation.",
+      "id": "uninstall-authorization",
+      "originLedger": "sources/cargo-install-selections.json",
+      "reviewedHereRanges": [
+        [
+          80,
+          147
+        ]
+      ]
+    },
+    {
+      "path": "src/cargo/ops/common_for_install_and_uninstall.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/ops/common_for_install_and_uninstall.rs",
+      "cache": "applications/tools/source-cache/cargo-install/src__cargo__ops__common_for_install_and_uninstall.rs",
+      "sha256": "1ab86cd448db5198dc86d88e8ad4f21461af97c9c2ad79202447d7cbc95edbd2",
+      "bytes": 29841,
+      "inspected": "102-138,165-337,340-388,431-480: exclusive metadata opens,duplicate ownership byname,path dirty policy,source/version/options freshness,successful-bin transfer,per-bin remove/save. v1/v2 compatibility andcrash consistency beyond selected source paths unqualified.",
+      "id": "tracking-persistence",
+      "originLedger": "sources/cargo-install-selections.json",
+      "reviewedHereRanges": [
+        [
+          102,
+          138
+        ],
+        [
+          273,
+          302
+        ],
+        [
+          388,
+          415
+        ],
+        [
+          508,
+          516
+        ]
+      ]
+    },
+    {
+      "path": "src/doc/src/reference/config.md",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/doc/src/reference/config.md",
+      "cache": "applications/tools/source-cache/cargo-run/src__doc__src__reference__config.md",
+      "bytes": 54625,
+      "sha256": "45b068aba7bbdf1974a77d8b015df496ed7ecf2fce1b24307f17807b51d2c6b7",
+      "inspection": "1\u201344 discovery and precedence;212\u2013251 environment/CLI scalar priority. This is the documented expectation,not runner-specific native behavior.",
+      "id": "config-docs",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": []
+    },
+    {
+      "path": "src/cargo/ops/cargo_run.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/ops/cargo_run.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__ops__cargo_run.rs",
+      "bytes": 4157,
+      "sha256": "7f6889952110d2259798cab03cec8444f1efa6a18d8531ef424e525041ffb709",
+      "inspection": "Complete128-line operation:target admission,compile?,target_process,args,cwd override,exec_replace.",
+      "id": "run-phase",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": []
+    },
+    {
+      "path": "src/cargo/core/compiler/compilation.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/core/compiler/compilation.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__core__compiler__compilation.rs",
+      "bytes": 18578,
+      "sha256": "6ef93c22d19ce0fbb9079370dfe5728d5ae87dd2b57cd5642373b6804f346035",
+      "inspection": "218\u2013283 target_process wrapper;428\u2013467 triple/cfg runner selection. Other environment/linker/cross-target behavior not qualified.",
+      "id": "runtime-process",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": []
+    },
+    {
+      "path": "src/cargo/util/context/mod.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/util/context/mod.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__util__context__mod.rs",
+      "bytes": 118120,
+      "sha256": "bb3e33c5bb0814b832e28779f00e87a660faebc2affdb8ba83b5bf51cc3d0b51",
+      "inspection": "765\u2013908 get_cv_with_env;1010\u20131048 get_env_list clears nonmergeable output;1225\u20131298 cwd load;1590\u20131615 ancestor/home walk;2331\u20132343 runner/nonmergeable keys. General config system not fully qualified.",
+      "id": "configuration-values",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": [
+        [
+          865,
+          908
+        ],
+        [
+          1010,
+          1054
+        ]
+      ]
+    },
+    {
+      "path": "src/cargo/util/context/path.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/util/context/path.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__util__context__path.rs",
+      "bytes": 5439,
+      "sha256": "e7c83683f179730c7f5e387526660ae93bffd9357c8cca16fa8c07a5151f014b",
+      "inspection": "104\u2013148 PathAndArgs uses Value<StringList> and separates first program/rest args.",
+      "id": "configured-path",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": [
+        [
+          104,
+          151
+        ]
+      ]
+    },
+    {
+      "path": "src/cargo/util/context/de.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/util/context/de.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__util__context__de.rs",
+      "bytes": 25675,
+      "sha256": "08cf9fd328958dd2312eaa1bb84fad9aa2675488ce4d736801ac27f9a04398ef",
+      "inspection": "178\u2013210 StringList loads config then unconditionally env;500\u2013536 ValueDeserializer separately chooses higher-priority Definition.",
+      "id": "configuration-decoder",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": []
+    },
+    {
+      "path": "src/cargo/util/context/value.rs",
+      "revision": "344c4567c634a25837e3c3476aac08af84cf9203",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/344c4567c634a25837e3c3476aac08af84cf9203/src/cargo/util/context/value.rs",
+      "cache": "applications/tools/source-cache/cargo-run/src__cargo__util__context__value.rs",
+      "bytes": 9457,
+      "sha256": "cce01ed912878d3c5dbf3d0771fb2ba36463ff3388ade16b874d93f95749e677",
+      "inspection": "80\u2013145 Definition priority and relative-root source. Relative-provenance consequence source-only,not a native claim.",
+      "id": "configuration-definition",
+      "originLedger": "sources/cargo-run-config-selections.json",
+      "reviewedHereRanges": [
+        [
+          55,
+          68
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "Earlier inspection descriptions retain their original scope. Empty new ranges mean identity/reference reuse, not new body inspection.",
+    "Only the new no-track replacement case and its controls have fresh native observations. Tracking-write failures remain source-only."
+  ]
+}

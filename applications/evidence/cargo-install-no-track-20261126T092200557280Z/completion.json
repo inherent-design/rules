@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "nativeCommandBoundaries": 6,
+  "measuredCompletionCases": [
+    {
+      "case": "untracked-force",
+      "input": {
+        "tracking": 0,
+        "replacementFailed": true,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "observation": [
+        0,
+        1,
+        1
+      ],
+      "nativeFields": 3
+    },
+    {
+      "case": "tracked-force-control",
+      "input": {
+        "tracking": 1,
+        "replacementFailed": true,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "observation": [
+        1,
+        0,
+        0
+      ],
+      "nativeFields": 3
+    }
+  ],
+  "finiteCases": [
+    {
+      "input": {
+        "tracking": 0,
+        "replacementFailed": false,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "0/1/1/0/1",
+      "evidenceKind": "source-only"
+    },
+    {
+      "input": {
+        "tracking": 0,
+        "replacementFailed": true,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "0/1/1/1/0",
+      "evidenceKind": "native-compared"
+    },
+    {
+      "input": {
+        "tracking": 1,
+        "replacementFailed": false,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "0/1/1/0/1",
+      "evidenceKind": "source-only"
+    },
+    {
+      "input": {
+        "tracking": 1,
+        "replacementFailed": true,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "1/0/0/1/0",
+      "evidenceKind": "native-compared"
+    },
+    {
+      "input": {
+        "tracking": 2,
+        "replacementFailed": false,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "0/1/1/1/1",
+      "evidenceKind": "source-only"
+    },
+    {
+      "input": {
+        "tracking": 2,
+        "replacementFailed": true,
+        "stagedPrefixAdmitted": true,
+        "laterFailureExcluded": true
+      },
+      "result": "1/0/0/1/0",
+      "evidenceKind": "source-only"
+    }
+  ],
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "tracking",
+    "prefix",
+    "later-failure",
+    "boolean",
+    "count"
+  ],
+  "changedObservationControls": [
+    "exit",
+    "new-bin",
+    "headline"
+  ],
+  "models": {
+    "applications/cargo-install/Completion.lean": "ca35ce6a93b357040d93a8b9bf9fa5c3023e257650aff492e0437baa4da87b0a",
+    "applications/cargo-install/CompletionCase.lean": "8f638400e8c7eea1c7f241f6b1e53c8e32e6f2376b2b279cb1d5e1a6b3a5df1d",
+    "applications/cargo-install/Completion.bend": "0a4539e07dc06700496686583b0a133a4ea58b33339615df73d4c802fb5c9704"
+  },
+  "privateChecksExcluded": false,
+  "excludedPrivateChecks": [],
+  "limits": [
+    "Only two staged completion cases have native comparisons; other tracking outcomes are source interpretations.",
+    "The proposed result contract is model-only; cleanup and metadata reconciliation are not implemented."
+  ]
+}

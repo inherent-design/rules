@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "status": "Local native/source/model cohort; host publication pending.",
+  "at": "2026-11-26T09:33:33.482389+00:00",
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "tools": {
+    "lean": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/lean-4.34.0-darwin_aarch64/bin/lean",
+      "selectedVersion": "4.34.0",
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "bend": {
+      "path": "/Users/zer0cell/production/re-desktop/.tools/bend/bin/bend",
+      "selectedVersion": "2.0.40",
+      "sha256": "c362cdac355d84f51278db97cb29a3b2e0be084d59b76a5cff013199b3513539"
+    }
+  },
+  "versionSelectionBasis": "toolchain.json; binary paths and SHA256 checked separately, no compiler build reproducibility claimed.",
+  "sourceFilesIdentityChecked": 11,
+  "nativeCommands": 6,
+  "nativeCompletionCases": 2,
+  "nativeCompletionScalars": 6,
+  "finiteSourceCases": 6,
+  "newLeanLaws": 10,
+  "newBendLaws": 9,
+  "decoderRefusals": 7,
+  "changedObservationControls": 3,
+  "publicPrivateParity": true,
+  "ownedWorkAllocatedKiB": 1808,
+  "freshNativeRuns": 1,
+  "nativeReruns": 0,
+  "focusedGate": {
+    "leanModules": 2,
+    "bendFiles": 1,
+    "sharedFormalWritten": false
+  },
+  "commands": [
+    "python3 applications/cargo-install/no_track_probe.py",
+    "LEAN=<pinned-lean> BEND=<pinned-bend> python3 applications/cargo-install/no_track_conformance.py",
+    "LEAN=<pinned-lean> BEND=<pinned-bend> python3 applications/cargo-install/no_track_conformance.py --public-only",
+    "<pinned-bend> applications/cargo-install/Completion.bend --verdict",
+    "LEAN_PATH=<private-output> <pinned-lean> -DwarningAsError=true -o <private-output>/CompletionCase.olean applications/cargo-install/CompletionCase.lean"
+  ],
+  "developmentFailures": [
+    {
+      "attempt": "Initial Bend model checks",
+      "outcome": "Computed-value scrutinee and then forward helper reference rejected; projections and definition order corrected. No native observation changed or reran.",
+      "preCorrectionSources": "Not separately frozen; diagnostic locations retained in session tool transcript."
+    },
+    {
+      "attempt": "python3 scripts/check-rules.py --help",
+      "outcome": "Non-CLI script aborted at missing lean on PATH before compilation; no formal output produced. Final gate used only new modules and private output."
+    },
+    {
+      "attempt": "Tool version discovery",
+      "outcome": "Bend does not support the attempted --version form; attempted text inspection confirmed its entrypoint is not UTF-8 source. Qualification records selected version and actual binary hash separately."
+    },
+    {
+      "attempt": "Inventory component status",
+      "outcome": "Noncanonical partial label rejected; canonical native-observed used with explicit limited scope, and parent review states preserved."
+    }
+  ],
+  "limits": [
+    "Four finite outcomes are source-only; metadata-save failure, crash, concurrent install, and other hosts were not induced.",
+    "Candidate rules specify truthful result composition, not cleanup or metadata reconciliation.",
+    "Current upstream status and reproducible source/tool build correspondence remain unreviewed."
+  ],
+  "protected": [
+    "Owned source/configuration/target roots and original captures retained.",
+    "Host installations, personal desktop, private GUI evidence, prior storage holds, and recovery38 untouched."
+  ],
+  "isolatedPublicReplayPassed": true
+}

@@ -14303,6 +14303,21 @@
                 "configure-runner": "Selected configure-runner component inside Cargo run:knownhost/scalar runner config and current build phase precede actual process execution. This is a scoped component,not full operation qualification.",
                 "merge-config": "Selected merge-config component inside Cargo run:knownhost/scalar runner config and current build phase precede actual process execution. This is a scoped component,not full operation qualification."
               }
+            },
+            {
+              "id": "cargo-ownership-api-target",
+              "status": "proposed",
+              "scope": "Per-program owner, interface, compatibility and verification plan; no production API or format changes.",
+              "evidence": [
+                "cargo/ARCHITECTURE.md",
+                "cargo/architecture-targets.json",
+                "sources/cargo-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "configure-runner": "Select value and actual definition together using existing typed helpers; earlier native mismatch retained.",
+                "merge-config": "Preserve mergeable arrays, origins and relative roots; shared-consumer qualification remains open."
+              },
+              "remaining": "Concrete implementation choices, caller and saved-format compatibility, fault/host qualification, and complete program coverage."
             }
           ]
         },
@@ -14589,7 +14604,24 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "cargo-ownership-api-target",
+              "status": "proposed",
+              "scope": "Per-program owner, interface, compatibility and verification plan; no production API or format changes.",
+              "evidence": [
+                "cargo/ARCHITECTURE.md",
+                "cargo/architecture-targets.json",
+                "sources/cargo-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "metadata": "Carry request/workspace/compiler context without redefining existing output.",
+                "pkgid": "Preserve opaque package IDs and separate precise source evidence; no new parser or native scope."
+              },
+              "remaining": "Concrete implementation choices, caller and saved-format compatibility, fault/host qualification, and complete program coverage."
+            }
+          ]
         },
         {
           "id": "cargo.source-cache",
@@ -14912,7 +14944,46 @@
           "disposition": "bounded native binary-install/ownership study; broader feature and production correction pending",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "no-track-completion",
+              "status": "native-observed",
+              "scope": "Six generated native commands; two staged install completion cases compare command failure, new-bin survival, and replacement headline. Ten Lean/nine Bend laws; other finite tracking outcomes are source-only.",
+              "evidence": [
+                "cargo/ARCHITECTURE.md",
+                "cargo-install/Completion.lean",
+                "cargo-install/Completion.bend",
+                "cargo-install/CompletionCase.lean",
+                "cargo-install/no_track_conformance.py",
+                "evidence/cargo-install-no-track-20261126T092200557280Z/receipt.json",
+                "evidence/cargo-install-no-track-20261126T092200557280Z/completion.json",
+                "evidence/cargo-install-no-track-20261126T092200557280Z/qualification.json"
+              ],
+              "operationSlices": {
+                "install": "Observed no-track duplicate refusal and forced partial installation with false success; not general installation or metadata-fault coverage.",
+                "replace-binary": "Owned directory blocks A while B installs. No-track success/false headline versus tracked error/cleanup; source-save failure remains unexecuted.",
+                "list-installed": "Fresh tracked list reports B after its cleanup; no new general catalog or uninstall qualification."
+              },
+              "remaining": "Tracking-write faults, cleanup/race/crash behavior, other hosts and no-track forms, candidate implementation, full feature coverage."
+            },
+            {
+              "id": "cargo-ownership-api-target",
+              "status": "proposed",
+              "scope": "Per-program owner, interface, compatibility and verification plan; no production API or format changes.",
+              "evidence": [
+                "cargo/ARCHITECTURE.md",
+                "cargo/architecture-targets.json",
+                "sources/cargo-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "install": "Proposed result propagation independent of tracking mode and separately qualified publication/cleanup.",
+                "uninstall": "Preserve registration authority and all-owned-bin preflight; no fresh uninstall case.",
+                "replace-binary": "Preserve per-resource effects and partial/unknown ownership; no universal rollback."
+              },
+              "remaining": "Concrete implementation choices, caller and saved-format compatibility, fault/host qualification, and complete program coverage."
+            }
+          ]
         },
         {
           "id": "cargo.registry-identity",
@@ -15209,38 +15280,49 @@
         {
           "id": "context-bound-workspace-inspection",
           "status": "proposed integration/inspection improvement;bounded Cargo behavior consistent,no product defect established",
-          "document": "cargo/WORKSPACES.md"
+          "document": "cargo/ARCHITECTURE.md"
         },
         {
           "id": "role-bound-feature-inspection",
           "status": "proposed caller/reporting improvement;bounded behavior consistent,no product defect established",
-          "document": "cargo/FEATURES.md"
+          "document": "cargo/ARCHITECTURE.md"
         },
         {
           "id": "install-tracking-and-cleanup-order",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "cargo-install/README.md",
+          "document": "cargo/ARCHITECTURE.md",
           "summary": "Align saved binary ownership with surviving publication after mixed new/replacement failure; preserve ordinary partial replacement and existing tracking formats."
         },
         {
           "id": "runner-value-definition-consistency",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "cargo/RUN-CONFIG.md",
+          "document": "cargo/ARCHITECTURE.md",
           "summary": "Resolve a winning runner value and its provenance together through existing configuration helpers; the recorded mismatch is profile-specific."
+        },
+        {
+          "id": "untracked-replacement-completion",
+          "status": "Native defect in selected Cargo 1.92.0 profile; correction proposed, not implemented.",
+          "document": "cargo/ARCHITECTURE.md",
+          "summary": "Propagate replacement errors independently of tracking mode and emit replacement success only for confirmed per-binary effects."
         }
       ],
       "preservationDecisions": [
         {
           "id": "recorded-domain-boundaries",
-          "evidence": "COMPARISON.md",
+          "evidence": "cargo/ARCHITECTURE.md",
           "decision": "Preserve package/source identity, selected compiler units, positive role-specific features, declared freshness inputs, build/run separation, and existing metadata/lock formats."
         }
       ],
       "unresolvedChoices": [
         {
           "id": "partial-install-ownership-policy",
-          "question": "Choose between preserving successfully published new binaries with partial ownership and registering only post-cleanup survivors; review both metadata writes, interruption, and existing binary retention.",
-          "document": "cargo-install/README.md"
+          "question": "Choose retention after confirmed ownership or registration of post-cleanup survivors while preserving partial replacements; qualify v1/v2 partial writes and uncertain metadata before cleanup.",
+          "document": "cargo/ARCHITECTURE.md"
+        },
+        {
+          "id": "tracking-write-result-and-reconciliation",
+          "question": "How should tracking-write errors and uncertain v1/v2 effects be reported and reconciled without deleting potentially registered backing? The source branch is inspected but complete I/O-fault behavior is not native-qualified.",
+          "document": "cargo/ARCHITECTURE.md"
         }
       ],
       "coverageStatus": "inventory captured; modeling and qualification pending",

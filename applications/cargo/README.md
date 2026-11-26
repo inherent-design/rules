@@ -73,3 +73,5 @@ The [feature-context band](FEATURES.md) compares resolver 1/2/3, positive root/d
 The [environment/partial-output band](FRESHNESS.md) separately compares watched optional environment values, automatic Rust macro dependencies, cached script metadata, failed-script invalidation, missing generated includes, and retained older executables. It does not extend the selected profile into a general fingerprint or repair guarantee.
 
 The [test-execution band](TESTING.md) distinguishes compiled targets, invoked harnesses, actual bodies, expected compiler rejection, ignored/filter selections, and per-executable continuation. Its std-only Mac fixture leaves general run/benchmark, scheduling, other platforms, and semantic test fidelity pending.
+
+The [ownership and API targets](ARCHITECTURE.md) consolidate Cargo's per-program design direction. A fresh no-track replacement fixture reproduces false success and a false replacement headline; tracking-write faults remain source-only. The proposal preserves compiler context, typed configuration provenance, formats, and partial ownership while separating result composition from cleanup.

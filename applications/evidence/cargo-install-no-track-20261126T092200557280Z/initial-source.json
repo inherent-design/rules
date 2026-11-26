@@ -1,0 +1,5 @@
+{
+  "Cargo.toml": "[package]\nname=\"rules-no-track-ownership\"\nversion=\"0.1.0\"\nedition=\"2021\"\nautobins=false\n[workspace]\n[[bin]]\nname=\"rules-no-track-a\"\npath=\"src/a.rs\"\n[[bin]]\nname=\"rules-no-track-b\"\npath=\"src/b.rs\"\n[profile.release]\nopt-level=0\ndebug=0\nstrip=\"symbols\"\ncodegen-units=1\n",
+  "src/a.rs": "fn main() { println!(\"owned-a\"); }\n",
+  "src/b.rs": "fn main() { println!(\"owned-b\"); }\n"
+}

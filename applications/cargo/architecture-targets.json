@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "status": "Proposed Cargo ownership and interface targets; not a production SDK or serialized result format.",
+  "sourceLedger": "sources/cargo-architecture-selections.json",
+  "contracts": [
+    {
+      "id": "binary-completion",
+      "currentOwners": [
+        "InstallablePackage::install_one",
+        "replace_result",
+        "Transaction",
+        "InstallTracker"
+      ],
+      "sourceIds": [
+        "binary-publication",
+        "tracking-persistence",
+        "install-docs"
+      ],
+      "evidence": [
+        "cargo/ARCHITECTURE.md",
+        "cargo-install/README.md",
+        "evidence/cargo-install-no-track-20261126T092200557280Z/receipt.json",
+        "evidence/cargo-install-no-track-20261126T092200557280Z/completion.json"
+      ],
+      "models": [
+        "cargo-install/Completion.lean",
+        "cargo-install/Completion.bend"
+      ],
+      "status": "No-track replacement false success is native-reproduced. Save-error masking is source-only. The result proposal is model-only.",
+      "proposedChange": "Propagate replacement failures independently of tracking mode and report actual replacement effects. Preserve metadata failures and partial outcomes rather than derive success from one result.",
+      "affectedCallers": [
+        "cargo install CLI and wrappers consuming its status or installed/replaced text.",
+        "Internal installation completion and cleanup."
+      ],
+      "compatibility": "Correct false success at the normal entry point; successful cases keep existing meaning. New structured partial-result fields require opt-in or versioning. No format migration for truthful propagation.",
+      "keepCurrent": "Independent path/readback can limit exposure in this pinned version, but retaining false success does not satisfy truthful completion.",
+      "remaining": [
+        "Qualify injected tracking-write failures, no-track replacement with other file types, cleanup/status errors, and Windows.",
+        "Do not present the four source-only finite cases as native observations."
+      ]
+    },
+    {
+      "id": "partial-install-ownership",
+      "currentOwners": [
+        "Transaction::drop and success",
+        "InstallTracker::mark_installed and save",
+        "CrateListingV1 and CrateListingV2",
+        "uninstall_pkgid"
+      ],
+      "sourceIds": [
+        "binary-publication",
+        "tracking-persistence",
+        "uninstall-authorization"
+      ],
+      "evidence": [
+        "cargo-install/README.md",
+        "cargo/ARCHITECTURE.md"
+      ],
+      "models": [
+        "cargo-install/Install.lean",
+        "cargo-install/Install.bend"
+      ],
+      "status": "Mixed-new/replacement registration inconsistency is native-reproduced; old model admits successful tracking writes. Fault and cleanup design remains open.",
+      "proposedChange": "Choose retention after confirmed ownership publication or registration of post-cleanup survivors; keep successful replacement prefixes and unknown metadata effects explicit.",
+      "affectedCallers": [
+        "Installation and orphan cleanup.",
+        "Installation listing and registered-bin uninstall preflight."
+      ],
+      "compatibility": "Preserve source/package ownership and both tracking formats, including v1-to-v2 synchronization and old/new writers. Registration is not content authentication.",
+      "keepCurrent": "Keep ordinary partial replacement and explicit force, but correct the demonstrated registration/cleanup disagreement. A universal rollback promise would change established effects.",
+      "remaining": [
+        "Separate v1/v2 save outcomes, interrupted/truncated writes, save failure after effects, orphan failure, and concurrency.",
+        "Preserve uncertain backing; no selected journal, atomic metadata format, or recovery implementation."
+      ]
+    },
+    {
+      "id": "configuration-value-origin",
+      "currentOwners": [
+        "Value<T> and Definition",
+        "StringList",
+        "PathAndArgs",
+        "GlobalContext::get_env_list and configuration deserialization"
+      ],
+      "sourceIds": [
+        "config-docs",
+        "configuration-values",
+        "configured-path",
+        "configuration-decoder",
+        "configuration-definition",
+        "runtime-process"
+      ],
+      "evidence": [
+        "cargo/RUN-CONFIG.md",
+        "cargo/ARCHITECTURE.md"
+      ],
+      "models": [
+        "cargo/RunConfig.lean",
+        "cargo/RunConfig.bend"
+      ],
+      "status": "Runner CLI/environment mismatch is native-reproduced in earlier evidence; relative-origin consequence remains source-only.",
+      "proposedChange": "Resolve a nonmergeable value and the definition that supplied it together through existing typed helpers.",
+      "affectedCallers": [
+        "Runner configuration and configuration-relative executable paths.",
+        "Neighboring nonmergeable consumers require separate review; no credential/browser execution was tested."
+      ],
+      "compatibility": "Preserve syntax, mergeable arrays, environment parsing, item origins, and relative-path semantics. Correcting the winner changes conflicting-runner behavior.",
+      "keepCurrent": "Remove the environment override explicitly when requesting the CLI runner in the observed profile.",
+      "remaining": [
+        "Scalar and array forms, explicit configuration origins, empty/invalid values, repeated CLI options, and relative programs.",
+        "Review helper consumers before changing a shared configuration boundary."
+      ]
+    },
+    {
+      "id": "context-bound-inspection-and-execution",
+      "currentOwners": [
+        "PackageId and SourceId",
+        "Workspace selection",
+        "CliFeatures, FeaturesFor, and UnitInner",
+        "Compilation, runner, and harness/application outcomes"
+      ],
+      "sourceIds": [
+        "run-phase",
+        "runtime-process"
+      ],
+      "evidence": [
+        "cargo/README.md",
+        "cargo/WORKSPACES.md",
+        "cargo/FEATURES.md",
+        "cargo/LOCK-SOURCES.md",
+        "cargo/FRESHNESS.md",
+        "cargo/TESTING.md",
+        "cargo/ARCHITECTURE.md"
+      ],
+      "models": [
+        "cargo/Build.lean",
+        "cargo/RunConfig.lean"
+      ],
+      "status": "Preservation and integration proposal using existing bounded evidence; no new resolver, build, or feature qualification.",
+      "proposedChange": "Carry request, selection, unit, source, and execution context with existing inspection facts; separate compiler events and raw child streams.",
+      "affectedCallers": [
+        "CLI wrappers, IDE integrations, metadata caches, and operation reports."
+      ],
+      "compatibility": "Preserve opaque IDs, metadata/lock formats, source-access policies, and existing build/run/test meanings. An extended public view is additive and versioned.",
+      "keepCurrent": "Existing metadata, tree, compiler events, and diagnostics are sufficient when their caller retains the correct scope.",
+      "remaining": [
+        "General resolver/source/feature combinations and artifacts, scripts/extensions, all hosts, and process containment.",
+        "No automatic promotion from the selected fixtures to whole-feature or whole-program completion."
+      ]
+    }
+  ],
+  "freshScope": {
+    "nativeCommands": 6,
+    "nativeCompletionCases": 2,
+    "nativeCompletionScalars": 6,
+    "finiteSourceCases": 6,
+    "newLeanLaws": 10,
+    "newBendLaws": 9
+  },
+  "limits": [
+    "No Cargo production patch or upstream issue. Current upstream status is unreviewed.",
+    "Native no-track behavior, current source interpretations, old scoped evidence, and proposed result rules remain distinct.",
+    "Cleanup/durability and full application coverage remain incomplete."
+  ]
+}
