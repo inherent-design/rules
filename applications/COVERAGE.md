@@ -39,6 +39,10 @@ Narrative control descriptions remain narrative. A file fragment or named field 
 
 The checker's negative controls must fail for the intended reason. A missing model cannot pass its negative control merely because an unrelated component was also invalid. Scope and evidence statuses are not inferred from link counts, a parent feature, or a joined scenario.
 
+## Proposal and preservation references
+
+Each application's `improvementCandidates`, `preservationDecisions`, and `unresolvedChoices` indexes link the owning reports. Their IDs and required status/rationale/question and file references are checked alongside operation evidence. They record design obligations, not adopted changes, fresh upstream reviews, or completion counts. Keep compatibility and verification detail in the referenced report; a nonempty array cannot qualify a proposal.
+
 ## Advancing the study
 
 The [interim scope audit](SCOPE-AUDIT.md) compares the full intent with existing component evidence and orders the remaining investigation. Its dated counts are a snapshot; query the inventory for current references. It changes no operation status.

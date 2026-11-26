@@ -59,12 +59,37 @@ def validate_components(owner, operation_ids=None):
             assert slices or component.get('relationOnly'), (owner['id'], 'unmapped component needs an explicit relation-only scope')
 
 
+def validate_decisions(app):
+    """Validate reference structure; a linked proposal is not an adopted design."""
+    fields = {'improvementCandidates': ('status', 'document'),
+              'preservationDecisions': ('decision', 'evidence'),
+              'unresolvedChoices': ('question', 'document')}
+    for category, (content, reference) in fields.items():
+        records = app[category]
+        assert isinstance(records, list), (app['id'], category, 'decision records must be a list')
+        seen = set()
+        for record in records:
+            assert isinstance(record, dict), (app['id'], category, 'decision record must be an object')
+            ident = record.get('id')
+            assert isinstance(ident, str) and re.fullmatch(r'[a-z][a-z0-9-]*', ident), (app['id'], category, 'invalid decision id')
+            assert ident not in seen, (app['id'], category, 'duplicate decision id', ident)
+            seen.add(ident)
+            owner = (app['id'], category, ident)
+            assert isinstance(record.get(content), str) and record[content].strip(), (owner, 'empty decision content')
+            value = record.get(reference)
+            assert isinstance(value, str), (owner, 'missing decision reference')
+            match = FILE_PREFIX.match(value)
+            assert match, (owner, 'unrecognized decision reference', value)
+            require_file(match[1], owner)
+
+
 def validate(catalog, scenarios):
     apps = catalog['applications']
     assert {a['id'] for a in apps} == REQUIRED and len(apps) == len(REQUIRED), 'required application scope changed'
     ids, operations = set(), set()
     for app in apps:
         assert app['features'], app['id']
+        validate_decisions(app)
         for feature in app['features']:
             fid = feature['id']
             assert fid.startswith(app['id'] + '.') and fid not in ids
@@ -119,10 +144,24 @@ def main():
     selected = next(feature for app in no_scope['applications'] for feature in app['features'] if feature.get('componentEvidence'))
     selected['componentEvidence'][0]['operationSlices'] = {}
     selected['componentEvidence'][0].pop('relationOnly', None)
+    missing_decision = copy.deepcopy(catalog)
+    selected = next(a for a in missing_decision['applications'] if a['improvementCandidates'])
+    selected['improvementCandidates'][0]['document'] = 'missing-decision-report.md'
+    duplicate_decision = copy.deepcopy(catalog)
+    selected = next(a for a in duplicate_decision['applications'] if a['improvementCandidates'])
+    selected['improvementCandidates'].append(copy.deepcopy(selected['improvementCandidates'][0]))
+    empty_preservation = copy.deepcopy(catalog)
+    selected = next(a for a in empty_preservation['applications'] if a['preservationDecisions'])
+    selected['preservationDecisions'][0]['decision'] = ''
+    missing_choice = copy.deepcopy(catalog)
+    selected = next(a for a in missing_choice['applications'] if a['unresolvedChoices'])
+    selected['unresolvedChoices'][0]['document'] = 'missing-choice-report.md'
     for name, value, joined in [('dropped-application', narrowed, scenarios), ('unsupported-completion-claim', fake, scenarios),
                                ('missing-component-evidence', catalog, missing), ('missing-feature-component-evidence', feature_missing, scenarios),
                                ('missing-model-reference', bad_model, scenarios), ('missing-law-reference', bad_law, scenarios),
-                               ('unknown-operation-slice', bad_slice, scenarios), ('unmapped-component-without-scope', no_scope, scenarios)]:
+                               ('unknown-operation-slice', bad_slice, scenarios), ('unmapped-component-without-scope', no_scope, scenarios),
+                               ('missing-decision-document', missing_decision, scenarios), ('duplicate-decision-id', duplicate_decision, scenarios),
+                               ('empty-preservation-rationale', empty_preservation, scenarios), ('missing-choice-document', missing_choice, scenarios)]:
         try:
             validate(value, joined)
         except AssertionError as error:
@@ -135,6 +174,10 @@ def main():
                 'missing-law-reference': 'missing named law',
                 'unknown-operation-slice': 'unknown component operation',
                 'unmapped-component-without-scope': 'unmapped component needs an explicit relation-only scope',
+                'missing-decision-document': 'missing evidence file',
+                'duplicate-decision-id': 'duplicate decision id',
+                'empty-preservation-rationale': 'empty decision content',
+                'missing-choice-document': 'missing evidence file',
             }[name]
             assert expected in str(error), (name, 'refused for an unrelated reason', str(error))
             rejected.append(name)
@@ -143,6 +186,8 @@ def main():
     before = hashlib.sha256((ROOT / 'inventory.json').read_bytes()).hexdigest()
     receipt = {'schema': 1, 'applications': len(REQUIRED), 'featureFamilies': features,
                'semanticOperations': operations, 'joinedScenarios': len(scenarios['scenarios']),
+               'decisionReferenceRecords': {field: sum(len(a[field]) for a in catalog['applications'])
+                                            for field in ['improvementCandidates', 'preservationDecisions', 'unresolvedChoices']},
                'negativeControlsRejected': rejected, 'inventorySource': 'inventory.json is canonical; one-off generator retired after initialization',
                'inventorySha256': before, 'scenarioSha256': hashlib.sha256((ROOT / 'scenarios.json').read_bytes()).hexdigest(),
                'limitation': 'Structure and bookkeeping only. This does not verify application features, source assertions, models, or native conformance.'}
