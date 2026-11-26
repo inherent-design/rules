@@ -1,0 +1,217 @@
+{
+  "schema": 3,
+  "current_runtime": {
+    "minecraft": "1.21.1",
+    "loader": "fabric",
+    "loader_version": "0.16.0",
+    "acceptable_versions": []
+  },
+  "proposed_runtime": {
+    "minecraft": "1.21",
+    "loader": "fabric",
+    "loader_version": "0.16.0",
+    "acceptable_versions": []
+  },
+  "dependencies": [
+    {
+      "key": "ferrite",
+      "change": "changed",
+      "requirement": "explicit-root",
+      "source_replaced": false,
+      "manual_compatibility": false,
+      "before": {
+        "title": "FerriteCore",
+        "role": "root",
+        "kind": "mod",
+        "selection": {
+          "provider": "modrinth",
+          "project": "uXXizFIs",
+          "selection": "sOzRw3CG",
+          "version": null,
+          "published_at": null,
+          "channel": null
+        },
+        "placements": [
+          {
+            "file": "primary",
+            "destination": "mods/ferritecore-7.0.3-fabric.jar",
+            "layer": "common",
+            "client": {
+              "state": "required",
+              "choice": null,
+              "default_enabled": null,
+              "description": null
+            },
+            "server": {
+              "state": "required",
+              "choice": null,
+              "default_enabled": null,
+              "description": null
+            }
+          }
+        ],
+        "files": [
+          {
+            "acquisition": {
+              "downloads": [
+                "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar"
+              ],
+              "kind": "provider",
+              "pin": {
+                "project": {
+                  "project": "uXXizFIs",
+                  "provider": "modrinth"
+                },
+                "selection": {
+                  "id": "sOzRw3CG",
+                  "provider": "modrinth"
+                }
+              },
+              "slot": "ferritecore-7.0.3-fabric.jar"
+            },
+            "expected": {
+              "accepted-observation": null,
+              "digests": {
+                "sha1": "a8a6a34fcda177da2828cedef44e0e538cf78aad",
+                "sha512": "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf"
+              },
+              "size": 123450
+            },
+            "provenance": {
+              "conversions": [],
+              "declared-digests": {
+                "sha1": "a8a6a34fcda177da2828cedef44e0e538cf78aad",
+                "sha512": "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf"
+              },
+              "location": "uXXizFIs",
+              "source": "provider-catalog"
+            },
+            "slot": "primary"
+          }
+        ],
+        "reason_chain": [
+          "ferrite"
+        ],
+        "dependency_evidence": "complete"
+      },
+      "after": {
+        "title": "FerriteCore",
+        "role": "root",
+        "kind": "mod",
+        "selection": {
+          "provider": "modrinth",
+          "project": "uXXizFIs",
+          "selection": "wmIZ4wP4",
+          "version": null,
+          "published_at": null,
+          "channel": null
+        },
+        "placements": [
+          {
+            "file": "primary",
+            "destination": "mods/ferritecore-7.0.0-fabric.jar",
+            "layer": "common",
+            "client": {
+              "state": "required",
+              "choice": null,
+              "default_enabled": null,
+              "description": null
+            },
+            "server": {
+              "state": "required",
+              "choice": null,
+              "default_enabled": null,
+              "description": null
+            }
+          }
+        ],
+        "files": [
+          {
+            "acquisition": {
+              "downloads": [
+                "https://cdn.modrinth.com/data/uXXizFIs/versions/wmIZ4wP4/ferritecore-7.0.0-fabric.jar"
+              ],
+              "kind": "provider",
+              "pin": {
+                "project": {
+                  "project": "uXXizFIs",
+                  "provider": "modrinth"
+                },
+                "selection": {
+                  "id": "wmIZ4wP4",
+                  "provider": "modrinth"
+                }
+              },
+              "slot": "ferritecore-7.0.0-fabric.jar"
+            },
+            "expected": {
+              "accepted-observation": null,
+              "digests": {
+                "sha1": "95b18b0f1673bbbe328812c3052cc1a921591f0f",
+                "sha512": "0f2f9b5aebd71ef3064fc94df964296ac6ee8ea12221098b9df037bdcaaca7bccd473c981795f4d57ff3d49da3ef81f13a42566880b9f11dc64645e9c8ad5d4f"
+              },
+              "size": 117333
+            },
+            "provenance": {
+              "conversions": [],
+              "declared-digests": {
+                "sha1": "95b18b0f1673bbbe328812c3052cc1a921591f0f",
+                "sha512": "0f2f9b5aebd71ef3064fc94df964296ac6ee8ea12221098b9df037bdcaaca7bccd473c981795f4d57ff3d49da3ef81f13a42566880b9f11dc64645e9c8ad5d4f"
+              },
+              "location": "uXXizFIs",
+              "source": "provider-catalog"
+            },
+            "slot": "primary"
+          }
+        ],
+        "reason_chain": [
+          "ferrite"
+        ],
+        "dependency_evidence": "complete"
+      }
+    }
+  ],
+  "limitations": "Provider declarations are evidence, not proof of gameplay compatibility. Manual sources require author verification. Unknown dependency coverage cannot prove a retained entry is no longer required. Retained placements still ship; nothing is deleted automatically. This does not port private files, configuration or worlds, validate a full Java compatibility range, or authorize publication. Native conflicts are checked before this report marks the project changes ready; referenced payload bytes are verified when acquired.",
+  "proposal": "ready",
+  "file_changes": [
+    {
+      "path": "empack.yml",
+      "action": "replace",
+      "before": {
+        "sha256": "68417975eb76d25fa8e9c050fa5e6c6019c5fd796b6cf2e230bc6f96e455c1de",
+        "bytes": 392,
+        "readonly": false,
+        "executable": false
+      },
+      "after": {
+        "sha256": "c61be45ab0f9e93d89bbc24e456940ed30df75dc36af7b172a1e81e7d00b40c4",
+        "bytes": 390,
+        "readonly": false,
+        "executable": false
+      }
+    },
+    {
+      "path": "empack.lock",
+      "action": "replace",
+      "before": {
+        "sha256": "c3b064e7dd9758abe111d982ee6c4da5a422520ac86779c11ee8e135d7fbb118",
+        "bytes": 2111,
+        "readonly": false,
+        "executable": false
+      },
+      "after": {
+        "sha256": "ed6413d4627a04de06e8a0fc1d6cc020152be5916e4a43fd3f6f91bfd33e5828",
+        "bytes": 2109,
+        "readonly": false,
+        "executable": false
+      }
+    }
+  ],
+  "references": [
+    "ferrite/primary"
+  ],
+  "materialization_requested": false,
+  "native_publication_performed": false,
+  "diagnostic": null,
+  "problem": null
+}

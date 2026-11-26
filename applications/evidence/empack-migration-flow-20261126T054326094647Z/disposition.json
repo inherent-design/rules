@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "classification": "Preserved successful sync then parser refusal; no target-validation result from the refused command.",
+  "observation": "Global --dry-run occurs before migrate, but --json requires --dry-run and parser reports it missing. Inspected config declares dry_run global=true. Positive suffix-placement control pending.",
+  "originalFiles": {
+    "compatible-sync.stdout": "44055381af15ca1a8c57c3c96a4047df8d913bc3b843a27aeddda141ae1e4313",
+    "setup.json": "13ff44a669a60c16c091c9a35bf196d99bb5eae18f3e71d6d8dd7c9bd6354b0f",
+    "metadata.json": "1bbeae562be23cd840f425edccdbef85b751a2788cb00ea2bb53588225b3128f",
+    "compatible-sync.stderr": "6165ba4cd65f8ade5268188c17bdb881a12063c03a2fb901b80c4f68bd063c1d",
+    "commands.json": "0336f21ada7eaf0f82a8114a6823e5b0586d8bd2970414de721c53bd21566b93",
+    "probe.py": "bd2c7bde01e6234b4a142d8b2d30840aa893d51ec40840b3c6a757d7e3e0a006",
+    "compatible-preview.stderr": "940f4dc3f4d4226e800685a06aaac0a58808cb44792660f46b883832daccd21f",
+    "failure.json": "26ac5e3fdf0b00907eaf9b1a527c91d5a2c9bb247606d5d1e933a02a72928352",
+    "compatible-preview.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "processes": "Both recorded groups absent.",
+  "effects": "Sync effects retained; parser-refused preview leaves captured project/state/cache images unchanged.",
+  "next": "Collect explicit prefix/suffix controls in a fresh fixture. Do not rewrite this capture or infer provider compatibility from usage exit2."
+}

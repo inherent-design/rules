@@ -1483,6 +1483,25 @@
                 "sources/empack-author-transitions-selections.json",
                 "evidence/empack-author-transitions-20261126T052842353539Z/conformance.json"
               ]
+            },
+            {
+              "id": "released-two-project-target-validation",
+              "status": "native-observed",
+              "scope": "Two one-root Mac CLI branches using released 0.8.8 and public provider metadata: compatible exact-pin retention, incompatible-pin refusal, explicit unpinning, and target reselection. Twelve observations match both workflow models. The deliberately older target is Minecraft 1.21; no game or world migration ran.",
+              "operationSlices": {
+                "prepare-target": "Structured ready preview changes 1.21.1 to 1.21 with Fabric 0.16.0 and Java 21. The global preview-flag ordering discrepancy is observed separately.",
+                "retain-valid-pins": "Compatible authored 7.0.0 pin survives. Incompatible 7.0.3 stays unchanged on refusal. Explicit unpinning retains the old saved selection until a separate migration.",
+                "re-resolve": "Automatic target selection after unpinning changes 7.0.3 to 7.0.0, consistent with independently sampled declarations. This does not qualify materialization or general graph closure.",
+                "apply": "Actual two-document replacement matches preview bytes. Previews, refusals, and checks leave captured project, state, and cache entries unchanged. Recorded checks permit one reference with zero verified payloads."
+              },
+              "remaining": "Other games, loaders, Java choices, project replacements, multiple roots, required edges, retained uncertainty, mutable sources, stale approvals, restricted content, materialization, crash recovery, other platforms, and game execution remain unqualified.",
+              "evidence": [
+                "empack/migration-flow/README.md",
+                "empack/migration-flow/MigrationFlow.lean",
+                "empack/migration-flow/MigrationFlow.bend",
+                "sources/empack-migration-flow-selections.json",
+                "evidence/empack-migration-flow-20261126T054446879342Z/conformance.json"
+              ]
             }
           ]
         },
@@ -5135,6 +5154,18 @@
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
           "document": "empack/saved-offer/README.md",
           "summary": "Separate exact saved-envelope/floor validation from monotonic incoming-offer admission; authored corrupt-state scope remains explicit."
+        },
+        {
+          "id": "migration-global-preview-flag-validation",
+          "status": "Released prefix/suffix inconsistency observed. A production correction is proposed, not selected; upstream parser attribution remains open.",
+          "document": "empack/migration-flow/README.md",
+          "summary": "Admit equivalent global preview-flag positions while preserving the existing preview-only structured-output guard."
+        },
+        {
+          "id": "migration-target-failure-context",
+          "status": "Bounded native diagnostic gap observed. API and reporting changes remain proposals without production adoption.",
+          "document": "empack/migration-flow/README.md",
+          "summary": "Carry the failing logical key, exact selection, and requested runtime through the existing error path; define the structured failure channel and keep progress off JSON stdout."
         }
       ],
       "preservationDecisions": [

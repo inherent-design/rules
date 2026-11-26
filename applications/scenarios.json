@@ -872,6 +872,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "empack-explicit-runtime-migration",
+      "features": [
+        "empack.author-documents",
+        "empack.sync",
+        "empack.provider-policy",
+        "empack.migration",
+        "empack.status-diagnostics"
+      ],
+      "flow": "Bind authored source runtime and exact lock;preview target;retain a compatible pin or refuse an incompatible pin;explicitly relax policy;preview and publish a target-compatible selection;recorded reference check.",
+      "counterexamples": [
+        "Supplied matching runtime labels mistaken for observed provider eligibility",
+        "Authored exact pin silently replaced during runtime change",
+        "Explicit unpin presented as an already completed migration",
+        "Preview/reference reported as materialized payload or publication",
+        "Equivalent global preview-flag position refused by structured parser"
+      ],
+      "hostWitnesses": [
+        "captured author and lock basis",
+        "provider metadata observation",
+        "native project publication",
+        "separate durable-state/cache effects"
+      ],
+      "status": "pending",
+      "evidence": [],
+      "componentEvidence": [
+        {
+          "id": "released-reference-target-policy",
+          "status": "native-observed",
+          "scope": "Twelve released 0.8.8 CLI operations across two isolated reference-only one-root projects on Mac. Both models start from fixture requests and actions. Native before/after entry hashes supply separate observations.",
+          "remaining": "Full runtime and world migration, consumer launch, multiple roots, stale authority, crash recovery, project replacement, and other hosts remain unqualified. The scenario parent remains pending.",
+          "evidence": [
+            "empack/migration-flow/README.md",
+            "empack/migration-flow/MigrationFlow.lean",
+            "empack/migration-flow/MigrationFlow.bend",
+            "sources/empack-migration-flow-selections.json",
+            "evidence/empack-migration-flow-20261126T054446879342Z/conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }
