@@ -1,0 +1,52 @@
+[
+  {
+    "label": "compile",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "-DQT_NO_DEBUG",
+      "/private/tmp/rules-prism-content-qt7elczq/main.cpp",
+      "-o",
+      "/private/tmp/rules-prism-content-qt7elczq/probe",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtCore",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "pid": 2390,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "stdout": {
+      "path": "compile.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "compile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "observe",
+    "argv": [
+      "/private/tmp/rules-prism-content-qt7elczq/probe",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-content-install-20261126T015852314941Z/input.json"
+    ],
+    "pid": 2650,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "stdout": {
+      "path": "observe.stdout",
+      "sha256": "a0f089ded337cf8fa4ae8c03f8c673b1b406b54d192e8aae1618a85445eefaac"
+    },
+    "stderr": {
+      "path": "observe.stderr",
+      "sha256": "198b3e972857cc04892be701097326f56d42eaee60ed2876d7a285ab61e6cb9d"
+    }
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-prism-content-1ahle3y6",
+  "cases": [
+    {
+      "id": "fresh-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/fresh-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true
+    },
+    {
+      "id": "overwrite-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/overwrite-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true
+    },
+    {
+      "id": "same-path",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/installed/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/same-path/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true
+    },
+    {
+      "id": "symlink-self-overwrite",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/symlink-self-overwrite/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true
+    },
+    {
+      "id": "disabled-sibling",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/disabled-sibling/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true
+    },
+    {
+      "id": "drop-mixed",
+      "operation": "drop",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "urls": [
+        "file:///private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/incoming/item.jar",
+        "file:///private/tmp/rules-prism-content-1ahle3y6/cases/drop-mixed/incoming/missing.jar"
+      ]
+    },
+    {
+      "id": "drop-alias",
+      "operation": "drop",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "urls": [
+        "file:///private/tmp/rules-prism-content-1ahle3y6/cases/drop-alias/incoming/item.jar"
+      ]
+    },
+    {
+      "id": "refresh-refuses",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/incoming/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/installed/item.jar",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-1ahle3y6/cases/refresh-refuses/incoming/missing.jar"
+      ],
+      "watching": false,
+      "updateResult": false
+    }
+  ]
+}

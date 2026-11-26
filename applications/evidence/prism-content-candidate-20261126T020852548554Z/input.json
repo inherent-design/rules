@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "work": "/private/tmp/rules-prism-content-candidate-f_0lo1mj",
+  "cases": [
+    {
+      "id": "guarded:fresh-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--fresh-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "fresh-copy",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "guarded:overwrite-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--overwrite-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "overwrite-copy",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "guarded:same-path",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/installed/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--same-path/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "same-path",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "guarded:symlink-self-overwrite",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--symlink-self-overwrite/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "symlink-self-overwrite",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "guarded:drop-alias",
+      "operation": "drop",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "urls": [
+        "file:///private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--drop-alias/incoming/item.jar"
+      ],
+      "baseId": "drop-alias",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "guarded:equal-bytes-distinct-files",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/guarded--equal-bytes-distinct-files/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "equal-bytes-distinct-files",
+      "policy": "guarded",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:fresh-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--fresh-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "fresh-copy",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:overwrite-copy",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--overwrite-copy/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "overwrite-copy",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:same-path",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/installed/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--same-path/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "same-path",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:symlink-self-overwrite",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--symlink-self-overwrite/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "symlink-self-overwrite",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:drop-alias",
+      "operation": "drop",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "urls": [
+        "file:///private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--drop-alias/incoming/item.jar"
+      ],
+      "baseId": "drop-alias",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:equal-bytes-distinct-files",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--equal-bytes-distinct-files/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "equal-bytes-distinct-files",
+      "policy": "staged",
+      "cancelBeforeCommit": false
+    },
+    {
+      "id": "staged:cancel-before-publish",
+      "operation": "install",
+      "source": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/incoming/item.jar",
+      "destination": "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/installed",
+      "observe": [
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/incoming/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/installed/item.jar",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/installed/item.jar.disabled",
+        "/private/tmp/rules-prism-content-candidate-f_0lo1mj/cases/staged--cancel-before-publish/incoming/missing.jar"
+      ],
+      "watching": true,
+      "updateResult": true,
+      "baseId": "cancel-before-publish",
+      "policy": "staged",
+      "cancelBeforeCommit": true
+    }
+  ]
+}

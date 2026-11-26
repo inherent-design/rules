@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "nativeOriginalCases": 8,
+  "nativeCandidateCases": 13,
+  "nativeMultichunkContinuation": 1,
+  "comparedOutcomes": 22,
+  "leanLaws": 14,
+  "bendLaws": 13,
+  "decoderRefusals": [
+    "schema",
+    "profile",
+    "empty",
+    "bound",
+    "policy",
+    "source",
+    "payload",
+    "missing-with-bytes",
+    "alias-with-different-bytes",
+    "extra-without-drop",
+    "cancel-current",
+    "candidate-refresh",
+    "candidate-disabled",
+    "multichunk-policy",
+    "nonboolean"
+  ],
+  "changedPremises": [
+    "guard-alias",
+    "stage-alias",
+    "refresh-result",
+    "drop-handled",
+    "cancel-before-publication"
+  ],
+  "changedRawObservations": [
+    "drop-surface",
+    "drop-child",
+    "refresh-count",
+    "copy-status",
+    "lost-target-view",
+    "disabled-neighbor",
+    "unrelated-source-write",
+    "staging-residue",
+    "coherent-hidden-alias-loss"
+  ],
+  "privateChecksExcluded": [],
+  "scope": "Selected regular-file methods and private candidates;not full launcher,GUI,game,crash,durability,arbitrary aliases,or concurrent writers."
+}

@@ -60,3 +60,5 @@ A native regression should install a disposable pack A, update it to B with a mo
 No production Prism or empack changes were made. The existing host contracts can carry destination/content identities, staged candidates, scoped effects, and publication evidence. The missing predicate is application-level placement compatibility, not a new host abstraction. Most of the Prism inventory and its full launch lifecycle remain open.
 
 The [instance-library band](LIBRARY.md) separates display, directory, and UUID identity, grouping persistence, trash/delete effects, and undo references through selected Qt methods and private files. Its caller, watcher, OS-trash, and full GUI obligations remain open.
+
+The [local content-install band](CONTENT-INSTALL.md) separates file identity, replacement effects, drop handling, and refresh. Eight selected original-method cases reproduce destination loss through a source alias; thirteen private proposal cases and a multi-chunk continuation qualify narrower preservation alternatives. Full launcher, GUI, bundled Qt, and supported-host obligations remain open.

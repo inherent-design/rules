@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+  "sources": [
+    {
+      "path": "launcher/FileSystem.cpp",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/FileSystem.cpp",
+      "cache": "applications/tools/source-cache/prism-content/launcher__FileSystem.cpp",
+      "bytes": 56642,
+      "sha256": "be3e7eac076b4f471c2843bb9b75fd0b16d489a36d0c429af8610a2dba1c56ed",
+      "inspection": "243\u2013253 timestamp;674\u2013687 remove_all;811\u2013826 path spelling;1629\u20131640 hardlink count;1680 onward unique resource names source-only. Native uses first four helpers;no general filesystem/concurrency guarantee."
+    },
+    {
+      "path": "launcher/minecraft/mod/Resource.cpp",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/mod/Resource.cpp",
+      "cache": "applications/tools/source-cache/prism-content/launcher__minecraft__mod__Resource.cpp",
+      "bytes": 8947,
+      "sha256": "36cc32a57bf1afc8f291b5d954e312d50f52baf2c9dcae4d3be591b565d8553d",
+      "inspection": "13\u201375 concrete construction/setFile/classification.207\u2013274 enable/destroy also inspected butnot native-tested here. Native classification is filename/filesystem type,not archive/runtime validation."
+    },
+    {
+      "path": "launcher/minecraft/mod/Resource.h",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/mod/Resource.h",
+      "cache": "applications/tools/source-cache/prism-content/launcher__minecraft__mod__Resource.h",
+      "bytes": 7683,
+      "sha256": "eeae9450be27f0bd52b77a625f98e6663d417e1ab62571042d16fdb5bf73510b",
+      "inspection": "84\u2013126 concrete API/type/validity and195\u2013213 defaults. Selected inline getters used;QObject reflection,lifetime and subclass contracts not qualified."
+    },
+    {
+      "path": "launcher/minecraft/mod/ResourceFolderModel.cpp",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/mod/ResourceFolderModel.cpp",
+      "cache": "applications/tools/source-cache/prism-content/launcher__minecraft__mod__ResourceFolderModel.cpp",
+      "bytes": 31930,
+      "sha256": "448ac092a9ee3f1399598d79ad3db49dac431902ff1ba2ec97a448c55d3f5adb",
+      "inspection": "95\u2013168 install;461\u2013488 local URL drop;264\u2013307 enable caller;309\u2013358 async refresh. Only install/drop execute;watching/refresh context is explicitly adapted."
+    },
+    {
+      "path": "launcher/minecraft/mod/Mod.cpp",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/mod/Mod.cpp",
+      "cache": "applications/tools/source-cache/prism-content/launcher__minecraft__mod__Mod.cpp",
+      "bytes": 8841,
+      "sha256": "5b9d32eff013e62e9b0859a005aefc81b6db756120dfd62fbad0f9766366840c",
+      "inspection": "52\u201355 constructor and296\u2013299 subclass validity. Source-only contrast:local parsed mod_id versus concrete Resource.valid."
+    },
+    {
+      "path": "launcher/minecraft/mod/ResourcePackFolderModel.cpp",
+      "revision": "7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4",
+      "url": "https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/7d2d3c1ec6fcf8255ebacd02d9f792688575dfb4/launcher/minecraft/mod/ResourcePackFolderModel.cpp",
+      "cache": "applications/tools/source-cache/prism-content/launcher__minecraft__mod__ResourcePackFolderModel.cpp",
+      "bytes": 6797,
+      "sha256": "0ebcda841d38ceaa4b840dde44e72acb158cad825e8682b42534be797836668d",
+      "inspection": "46\u201359 columns and59\u201385 data dispatch inspected. Resource availability/pack selection distinction is contextual;no actual UI/game test."
+    }
+  ],
+  "libraryDocumentation": [
+    {
+      "title": "QSaveFile",
+      "url": "https://doc.qt.io/qt-6/qsavefile.html",
+      "scope": "Temporary write,commit,destructor cancellation,and direct-write fallback contract inspected. Native QtCore6.12 hash is separate;documentation is not implementation translation validation."
+    }
+  ],
+  "licenseScope": "Upstream notices remain in checksum-pinned private source caches. Private generated translation units contain selected original excerpts;public fixture templates/producers refer to source identities rather than redistributing those bodies as project-owned code.",
+  "limits": "Concrete regular-file install/drop methods and two private proposals only. No whole launcher,bundled Qt,GUI,provider,game,metadata-index,subclass validity,arbitrary aliases,crash recovery,or concurrent-writer qualification."
+}

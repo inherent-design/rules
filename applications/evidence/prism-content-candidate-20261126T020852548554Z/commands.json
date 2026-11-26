@@ -1,0 +1,52 @@
+[
+  {
+    "label": "compile",
+    "argv": [
+      "/usr/bin/clang++",
+      "-std=c++20",
+      "-O0",
+      "-DQT_NO_DEBUG",
+      "/private/tmp/rules-prism-content-candidate-f_0lo1mj/main.cpp",
+      "-o",
+      "/private/tmp/rules-prism-content-candidate-f_0lo1mj/probe",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtCore",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "pid": 58864,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "stdout": {
+      "path": "compile.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "compile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "label": "observe",
+    "argv": [
+      "/private/tmp/rules-prism-content-candidate-f_0lo1mj/probe",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-content-candidate-20261126T020852548554Z/input.json"
+    ],
+    "pid": 59123,
+    "exitCode": 0,
+    "groupAbsent": true,
+    "stdout": {
+      "path": "observe.stdout",
+      "sha256": "f566e70df6558f1287a7ab3da3036e07c6a2ea406b211c26ac31ef6393e0a6df"
+    },
+    "stderr": {
+      "path": "observe.stderr",
+      "sha256": "9b6cc79f7c0048b1392339adfc437187c46241a4fcbb6fdabd534a4db124bf75"
+    }
+  }
+]

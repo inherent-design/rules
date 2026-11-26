@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "base": "applications/evidence/prism-content-install-20261126T015852314941Z",
+  "baseGeneratedSha256": "6b0ec2372ec045775c227f1b8e31a7e7df588a1838a23ec79e76f5640084d511",
+  "baseMethodSha256": "6a8ad40724a135d1ed17f5c42c75d09b1c6373b859c104c0402609d60065fecf",
+  "replacedCopyBlockSha256": "bcce39531306ced545a9262c41f9973974ddb48b88f4c7ba6c8818a7a8e92378",
+  "guardedMethodSha256": "bb7ab1b6d9c00e78f448da1fae144c0fec8f3c112226a4130babe1568e3a668b",
+  "stagedMethodSha256": "4fb79a825736f5115a32c78058a8c95b731720ee5f8ca68db20afac0baf5d372",
+  "generatedSha256": "d3ea8048bd5255b8bb3318499a53bd7f566809eb21b4b2240b5a787c4633a544",
+  "producerSha256": "9db90dd132507fa1079170da7597ebb81af8c437106ed57fd4bb3c998164c41a",
+  "extractorSha256": "71103c4ce4378911ddb3c7016e030c2fe10c57b849907f53a5e0b3bd997e879f",
+  "work": "/private/tmp/rules-prism-content-candidate-f_0lo1mj",
+  "qtVersion": "6.12.0",
+  "qtCoreSha256": "3e3d82dd216cc552a3835909baea61564c5be1211ce55ae313a3d4fe19fbee33",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "guard": "    const auto source_identity = file_info.canonicalFilePath();\n    const auto destination_identity = QFileInfo(new_path).canonicalFilePath();\n    if (!source_identity.isEmpty() && source_identity == destination_identity)\n        return false;\n",
+  "stagedBlock": "            QFile source(original_path);\n            if (!source.open(QIODevice::ReadOnly))\n                return false;\n            QSaveFile staged(new_path);\n            staged.setDirectWriteFallback(false);\n            if (!staged.open(QIODevice::WriteOnly))\n                return false;\n            while (!source.atEnd()) {\n                const auto chunk = source.read(65536);\n                if ((chunk.isEmpty() && source.error() != QFileDevice::NoError)\n                    || staged.write(chunk) != chunk.size())\n                    return false;\n            }\n            if (source.error() != QFileDevice::NoError)\n                return false;\n            source.close();\n            if (fixtureCancelBeforeCommit)\n                return false;\n            if (!staged.commit())\n                return false;\n\n",
+  "scope": "Two private proposals,not production patches. Canonical guard rejects known aliases;staged copy captures chunks before QSaveFile commit with direct-write fallback disabled. Cancellation is an authored precommit hook. No crash,durability,concurrency,all-alias,full-launcher,bundled-Qt or platform qualification."
+}
