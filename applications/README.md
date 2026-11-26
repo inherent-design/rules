@@ -103,3 +103,5 @@ The [override/resolution study](js-overrides/README.md) compares nested and orde
 The [SBOM basis study](js-sbom/README.md) separates installed metadata, lock graphs, enrichment, artifact assertions, and current runtime bytes across npm and pnpm. Its root-name and provenance candidates remain separate from production adoption.
 
 The [Prism export study](prism-export/README.md) separates selected entries, source/link roles, archive payloads, and task completion. Eight headless original-source cases qualify collector/writer boundaries; the interrupted normal GUI attempt produced no exports and remains unqualified.
+
+The [native adoption study](empack/adoption-flow/README.md) verifies installed0.8.8 ordinary URL/local observation through preview and lock publication. Payload identity remains unchanged within each command; successful publication changes the lock and explicit durable records. Broader provider and recovery obligations remain open.
