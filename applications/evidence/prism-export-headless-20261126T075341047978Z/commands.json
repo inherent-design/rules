@@ -1,0 +1,45 @@
+[
+  {
+    "label": "compile",
+    "argv": [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++20",
+      "-O0",
+      "/private/tmp/rules-prism-export-core-0u7m8as2/main.cpp",
+      "-o",
+      "/private/tmp/rules-prism-export-core-0u7m8as2/probe",
+      "-F/opt/homebrew/lib",
+      "-I/opt/homebrew/include/QtCore",
+      "-I/opt/homebrew/lib/QtCore.framework",
+      "-DQT_CORE_LIB",
+      "-I/opt/homebrew/share/qt/mkspecs/macx-clang",
+      "-F/opt/homebrew/lib",
+      "-framework",
+      "QtCore",
+      "-I/opt/homebrew/Cellar/libarchive/3.8.11/include",
+      "/opt/homebrew/Cellar/libarchive/3.8.11/lib/libarchive.13.dylib",
+      "-Wl,-rpath,/opt/homebrew/lib"
+    ],
+    "pid": 18132,
+    "exitCode": 0,
+    "timedOut": false,
+    "groupAbsent": true,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "observe",
+    "argv": [
+      "/private/tmp/rules-prism-export-core-0u7m8as2/probe",
+      "/Users/zer0cell/production/rules/applications/evidence/prism-export-headless-20261126T075341047978Z/input.json"
+    ],
+    "pid": 18400,
+    "exitCode": 0,
+    "timedOut": false,
+    "groupAbsent": true,
+    "stdoutSha256": "f8390874b646529fef51c33379566b4f2e905a7b5fb2ffffb5582fa1d5886f82",
+    "stderrSha256": "7a74ef6394074a6523e1d838fd3602b2ca256d0bc5e51cfedc3b3607fdf05c00"
+  }
+]

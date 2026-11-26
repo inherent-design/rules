@@ -101,3 +101,5 @@ The [pnpm namespace band](pnpm-admission/README.md) separates registered handler
 The [override/resolution study](js-overrides/README.md) compares nested and ordered policy, direct-declaration protection, compatible convergence, and manual lock-table lifetime across npm, pnpm, and Yarn. Its pnpm overlapping-range result remains a bounded admission, with cause and correction unqualified.
 
 The [SBOM basis study](js-sbom/README.md) separates installed metadata, lock graphs, enrichment, artifact assertions, and current runtime bytes across npm and pnpm. Its root-name and provenance candidates remain separate from production adoption.
+
+The [Prism export study](prism-export/README.md) separates selected entries, source/link roles, archive payloads, and task completion. Eight headless original-source cases qualify collector/writer boundaries; the interrupted normal GUI attempt produced no exports and remains unqualified.

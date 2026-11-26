@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "instance-follow",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/instance-follow/instance",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/instance-follow/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {}
+    },
+    {
+      "id": "game-retain-link",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/game-retain-link/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/game-retain-link/output.zip",
+      "prefix": "",
+      "follow": false,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {}
+    },
+    {
+      "id": "game-filter-prefix",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/game-filter-prefix/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/game-filter-prefix/output.zip",
+      "prefix": "overrides/",
+      "follow": true,
+      "filter": true,
+      "excludeAtCollect": [
+        "config/visible.txt"
+      ],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {
+        "metadata.json": "Generated metadata\n"
+      }
+    },
+    {
+      "id": "missing-root",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/missing-root/missing",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/missing-root/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {}
+    },
+    {
+      "id": "vanished-input",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/vanished-input/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/vanished-input/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {},
+      "removeAfterCollect": "config/visible.txt"
+    },
+    {
+      "id": "canceled-witness",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/canceled-witness/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/canceled-witness/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": true,
+      "extra": {}
+    },
+    {
+      "id": "directory-output",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/directory-output/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/directory-output/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": false,
+      "excludeAtCollect": [],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {}
+    },
+    {
+      "id": "empty-selection",
+      "root": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/empty-selection/instance/.minecraft",
+      "output": "/private/tmp/rules-prism-export-core-0u3r_wyx/cases/empty-selection/output.zip",
+      "prefix": "",
+      "follow": true,
+      "filter": true,
+      "excludeAtCollect": [
+        "config/visible.txt",
+        "config/linked.txt",
+        "config/.hidden-dir/inside.txt",
+        "logs/latest.log",
+        "saves/world/README.txt"
+      ],
+      "excludeAtWrite": [],
+      "canceled": false,
+      "extra": {}
+    }
+  ]
+}
