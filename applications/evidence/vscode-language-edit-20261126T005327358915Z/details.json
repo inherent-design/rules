@@ -1,0 +1,172 @@
+[
+  {
+    "action": "workspace-fresh",
+    "basis": 1,
+    "currentBeforeApply": 1,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "workspace-late",
+    "basis": 3,
+    "currentBeforeApply": 4,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "caller-guarded",
+    "basis": 6,
+    "currentBeforeApply": 7,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "editor-parallel",
+    "basis": 8,
+    "currentBeforeApply": 8,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "editor-sequential",
+    "basis": 10,
+    "currentBeforeApply": 10,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "editor-parallel-empty",
+    "basis": 13,
+    "currentBeforeApply": 13,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "format-compute",
+    "basis": 15,
+    "currentBeforeApply": 15,
+    "returned": {
+      "kind": "edits",
+      "edits": [
+        {
+          "range": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "newText": "FMT("
+        },
+        {
+          "range": [
+            0,
+            5,
+            0,
+            5
+          ],
+          "newText": ")"
+        }
+      ]
+    },
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "format-compute-late-apply",
+    "basis": 15,
+    "currentBeforeApply": 16,
+    "returned": {
+      "kind": "edits",
+      "edits": [
+        {
+          "range": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "newText": "FMT(alp"
+        },
+        {
+          "range": [
+            0,
+            2,
+            0,
+            5
+          ],
+          "newText": "a)"
+        }
+      ]
+    },
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "interactive-format-late",
+    "basis": 18,
+    "currentBeforeApply": 19,
+    "returned": null,
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "rename-compute",
+    "basis": 20,
+    "currentBeforeApply": 20,
+    "returned": {
+      "kind": "workspace-edit",
+      "entries": [
+        {
+          "uri": "file:///private/tmp/rules-vlang-ewhn1980/project/document.rules-language",
+          "kind": "edits",
+          "edits": [
+            {
+              "range": [
+                0,
+                0,
+                0,
+                5
+              ],
+              "newText": "REN"
+            }
+          ]
+        }
+      ]
+    },
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  },
+  {
+    "action": "rename-compute-late-apply",
+    "basis": 20,
+    "currentBeforeApply": 21,
+    "returned": {
+      "kind": "workspace-edit",
+      "entries": [
+        {
+          "uri": "file:///private/tmp/rules-vlang-ewhn1980/project/document.rules-language",
+          "kind": "edits",
+          "edits": [
+            {
+              "range": [
+                0,
+                0,
+                0,
+                5
+              ],
+              "newText": "REN"
+            }
+          ]
+        }
+      ]
+    },
+    "dirtyAfter": true,
+    "providersAtBoundary": 0
+  }
+]

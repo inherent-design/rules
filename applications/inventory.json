@@ -16559,6 +16559,19 @@
                 "edit": "Four selected WorkspaceEdit actions with stale ranges, refusal, and interleaved partial effects.",
                 "dirty": "Observed buffer/disk divergence after those edits; not all document/savepoint/undo rules."
               }
+            },
+            {
+              "status": "native-observed",
+              "remaining": "Built-in language semantics, interactive rename widget, arbitrary ranges/UTF-16, remote/browser hosts, concurrent changes, undo grouping, multi-resource atomicity, save/durability and complete UI/accessibility. Parent operation statuses unchanged.",
+              "evidence": [
+                "vscode/LANGUAGE-EDITS.md",
+                "evidence/vscode-language-edit-20261126T005327358915Z/observed.json",
+                "evidence/vscode-language-edit-20261126T005327358915Z/conformance.json"
+              ],
+              "scope": "VS Code 1.148 follow-up: stored WorkspaceEdit submission basis, parallel/sequential TextEditor.edit, empty success and authored caller-check example in one generated ASCII file.",
+              "operationSlices": {
+                "edit": "Fresh/stale-coordinate edits, parallel refusal, sequential success and empty no-op; does not qualify general edit semantics."
+              }
             }
           ]
         },
@@ -16998,7 +17011,23 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#vscode",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "remaining": "Built-in language semantics, interactive rename widget, arbitrary ranges/UTF-16, remote/browser hosts, concurrent changes, undo grouping, multi-resource atomicity, save/durability and complete UI/accessibility. Parent operation statuses unchanged.",
+              "evidence": [
+                "vscode/LANGUAGE-EDITS.md",
+                "evidence/vscode-language-edit-20261126T005327358915Z/observed.json",
+                "evidence/vscode-language-edit-20261126T005327358915Z/conformance.json"
+              ],
+              "scope": "VS Code 1.148 custom formatting and rename providers: compute-only results, delayed caller application, and normal formatting cancellation on an intervening edit.",
+              "operationSlices": {
+                "format": "Generated formatter through public compute helper and normal editor command; computed payload effects and cancellation/completion separately observed.",
+                "rename": "Generated provider compute helper and caller application only; no rename widget or real language engine."
+              }
+            }
+          ]
         },
         {
           "id": "vscode.configuration",

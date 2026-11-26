@@ -1,0 +1,1148 @@
+{
+  "schema": 1,
+  "version": "1.148.0",
+  "status": "quit-requested",
+  "handled": 12,
+  "activeProviders": 0,
+  "rows": [
+    {
+      "action": "workspace-fresh",
+      "before": {
+        "version": 1,
+        "text": "alpha beta\n",
+        "dirty": false,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 1,
+          "text": "alpha beta\n",
+          "dirty": false,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "applied": true
+      },
+      "after": {
+        "version": 2,
+        "text": "EDIT beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "workspace-late",
+      "before": {
+        "version": 3,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 3,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "intervening": {
+          "before": {
+            "version": 3,
+            "text": "alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "after": {
+            "version": 4,
+            "text": "shift alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "result": true
+        },
+        "applied": true
+      },
+      "after": {
+        "version": 5,
+        "text": "EDIT alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "caller-guarded",
+      "before": {
+        "version": 6,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "kind": "authored-caller-policy",
+        "basis": {
+          "version": 6,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "intervening": {
+          "before": {
+            "version": 6,
+            "text": "alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "after": {
+            "version": 7,
+            "text": "shift alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "result": true
+        },
+        "allowed": false,
+        "apiCalled": false,
+        "result": {
+          "kind": "not-called"
+        }
+      },
+      "after": {
+        "version": 7,
+        "text": "shift alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "editor-parallel",
+      "before": {
+        "version": 8,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "firstBasis": {
+          "version": 8,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "secondBasis": {
+          "version": 8,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "results": [
+          true,
+          false
+        ]
+      },
+      "after": {
+        "version": 9,
+        "text": "ONE beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "editor-sequential",
+      "before": {
+        "version": 10,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "firstBasis": {
+          "version": 10,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "secondBasis": {
+          "version": 11,
+          "text": "ONE beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "results": [
+          true,
+          true
+        ]
+      },
+      "after": {
+        "version": 12,
+        "text": "TWOeta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "editor-parallel-empty",
+      "before": {
+        "version": 13,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "firstBasis": {
+          "version": 13,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "secondBasis": {
+          "version": 13,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "results": [
+          true,
+          true
+        ],
+        "secondHasNoEdits": true
+      },
+      "after": {
+        "version": 14,
+        "text": "ONE beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "format-compute",
+      "before": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 15,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "returned": {
+          "kind": "edits",
+          "edits": [
+            {
+              "range": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "newText": "FMT("
+            },
+            {
+              "range": [
+                0,
+                5,
+                0,
+                5
+              ],
+              "newText": ")"
+            }
+          ]
+        },
+        "role": "provider-result"
+      },
+      "after": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "format-compute-late-apply",
+      "before": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 15,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "intervening": {
+          "before": {
+            "version": 15,
+            "text": "alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "after": {
+            "version": 16,
+            "text": "shift alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "result": true
+        },
+        "returned": {
+          "kind": "edits",
+          "edits": [
+            {
+              "range": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "newText": "FMT(alp"
+            },
+            {
+              "range": [
+                0,
+                2,
+                0,
+                5
+              ],
+              "newText": "a)"
+            }
+          ]
+        },
+        "beforeApply": {
+          "version": 16,
+          "text": "shift alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "applied": true
+      },
+      "after": {
+        "version": 17,
+        "text": "FMT(alpha) alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "interactive-format-late",
+      "before": {
+        "version": 18,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 18,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "intervening": {
+          "before": {
+            "version": 18,
+            "text": "alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "after": {
+            "version": 19,
+            "text": "shift alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "result": true
+        },
+        "canceledWithinWindow": true,
+        "windowMs": 500,
+        "commandReturn": {
+          "kind": "undefined"
+        }
+      },
+      "after": {
+        "version": 19,
+        "text": "shift alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "rename-compute",
+      "before": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 20,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "returned": {
+          "kind": "workspace-edit",
+          "entries": [
+            {
+              "uri": "file:///private/tmp/rules-vlang-ewhn1980/project/document.rules-language",
+              "kind": "edits",
+              "edits": [
+                {
+                  "range": [
+                    0,
+                    0,
+                    0,
+                    5
+                  ],
+                  "newText": "REN"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    },
+    {
+      "action": "rename-compute-late-apply",
+      "before": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": {
+        "basis": {
+          "version": 20,
+          "text": "alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "intervening": {
+          "before": {
+            "version": 20,
+            "text": "alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "after": {
+            "version": 21,
+            "text": "shift alpha beta\n",
+            "dirty": true,
+            "closed": false,
+            "activeIsOwn": true
+          },
+          "result": true
+        },
+        "returned": {
+          "kind": "workspace-edit",
+          "entries": [
+            {
+              "uri": "file:///private/tmp/rules-vlang-ewhn1980/project/document.rules-language",
+              "kind": "edits",
+              "edits": [
+                {
+                  "range": [
+                    0,
+                    0,
+                    0,
+                    5
+                  ],
+                  "newText": "REN"
+                }
+              ]
+            }
+          ]
+        },
+        "beforeApply": {
+          "version": 21,
+          "text": "shift alpha beta\n",
+          "dirty": true,
+          "closed": false,
+          "activeIsOwn": true
+        },
+        "applied": true
+      },
+      "after": {
+        "version": 22,
+        "text": "REN alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "activeProviders": 0
+    }
+  ],
+  "calls": [
+    {
+      "action": "workspace-fresh",
+      "api": "workspace.applyEdit",
+      "role": "selected-edit",
+      "basis": {
+        "version": 1,
+        "text": "alpha beta\n",
+        "dirty": false,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "submittedAt": {
+        "version": 1,
+        "text": "alpha beta\n",
+        "dirty": false,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "workspace-late",
+      "api": "TextEditor.edit",
+      "role": "intervening-edit",
+      "before": {
+        "version": 3,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "workspace-late",
+      "api": "workspace.applyEdit",
+      "role": "stored-edit",
+      "basis": {
+        "version": 3,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "submittedAt": {
+        "version": 4,
+        "text": "shift alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "caller-guarded",
+      "api": "TextEditor.edit",
+      "role": "intervening-edit",
+      "before": {
+        "version": 6,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "format-compute",
+      "api": "provideDocumentFormattingEdits",
+      "basis": {
+        "version": 15,
+        "text": "alpha beta\n"
+      }
+    },
+    {
+      "action": "format-compute-late-apply",
+      "api": "provideDocumentFormattingEdits",
+      "basis": {
+        "version": 15,
+        "text": "alpha beta\n"
+      }
+    },
+    {
+      "action": "format-compute-late-apply",
+      "api": "TextEditor.edit",
+      "role": "intervening-edit",
+      "before": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "interactive-format-late",
+      "api": "provideDocumentFormattingEdits",
+      "basis": {
+        "version": 18,
+        "text": "alpha beta\n"
+      }
+    },
+    {
+      "action": "interactive-format-late",
+      "api": "TextEditor.edit",
+      "role": "intervening-edit",
+      "before": {
+        "version": 18,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    },
+    {
+      "action": "rename-compute",
+      "api": "provideRenameEdits",
+      "basis": {
+        "version": 20,
+        "text": "alpha beta\n"
+      }
+    },
+    {
+      "action": "rename-compute-late-apply",
+      "api": "provideRenameEdits",
+      "basis": {
+        "version": 20,
+        "text": "alpha beta\n"
+      }
+    },
+    {
+      "action": "rename-compute-late-apply",
+      "api": "TextEditor.edit",
+      "role": "intervening-edit",
+      "before": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      }
+    }
+  ],
+  "events": [
+    {
+      "kind": "document-change",
+      "action": "workspace-fresh",
+      "version": 2,
+      "text": "EDIT beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "workspace-fresh",
+      "version": 2,
+      "text": "EDIT beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "workspace-late",
+      "version": 3,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "workspace-late",
+      "version": 4,
+      "text": "shift alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "workspace-late",
+      "version": 5,
+      "text": "EDIT alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "caller-guarded",
+      "version": 6,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "caller-guarded",
+      "version": 7,
+      "text": "shift alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-parallel",
+      "version": 8,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-parallel",
+      "version": 9,
+      "text": "ONE beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-sequential",
+      "version": 10,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-sequential",
+      "version": 11,
+      "text": "ONE beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-sequential",
+      "version": 12,
+      "text": "TWOeta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-parallel-empty",
+      "version": 13,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "editor-parallel-empty",
+      "version": 14,
+      "text": "ONE beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "format-compute",
+      "version": 15,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "format",
+      "action": "format-compute",
+      "basis": {
+        "version": 15,
+        "text": "alpha beta\n"
+      },
+      "computedWord": "alpha",
+      "computedRange": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "canceledAtEntry": false,
+      "completedAgainst": {
+        "version": 15,
+        "text": "alpha beta\n"
+      },
+      "canceledAtReturn": false
+    },
+    {
+      "kind": "document-change",
+      "action": "format-compute-late-apply",
+      "version": 16,
+      "text": "shift alpha beta\n"
+    },
+    {
+      "kind": "format",
+      "action": "format-compute-late-apply",
+      "basis": {
+        "version": 15,
+        "text": "alpha beta\n"
+      },
+      "computedWord": "alpha",
+      "computedRange": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "canceledAtEntry": false,
+      "completedAgainst": {
+        "version": 16,
+        "text": "shift alpha beta\n"
+      },
+      "canceledAtReturn": false
+    },
+    {
+      "kind": "document-change",
+      "action": "format-compute-late-apply",
+      "version": 17,
+      "text": "FMT(alpha) alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "interactive-format-late",
+      "version": 18,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "interactive-format-late",
+      "version": 19,
+      "text": "shift alpha beta\n"
+    },
+    {
+      "action": "interactive-format-late",
+      "kind": "provider-canceled",
+      "provider": "format"
+    },
+    {
+      "kind": "format",
+      "action": "interactive-format-late",
+      "basis": {
+        "version": 18,
+        "text": "alpha beta\n"
+      },
+      "computedWord": "alpha",
+      "computedRange": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "canceledAtEntry": false,
+      "completedAgainst": {
+        "version": 19,
+        "text": "shift alpha beta\n"
+      },
+      "canceledAtReturn": true
+    },
+    {
+      "kind": "document-change",
+      "action": "rename-compute",
+      "version": 20,
+      "text": "alpha beta\n"
+    },
+    {
+      "kind": "rename",
+      "action": "rename-compute",
+      "basis": {
+        "version": 20,
+        "text": "alpha beta\n"
+      },
+      "computedWord": "alpha",
+      "computedRange": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "canceledAtEntry": false,
+      "completedAgainst": {
+        "version": 20,
+        "text": "alpha beta\n"
+      },
+      "canceledAtReturn": false
+    },
+    {
+      "kind": "document-change",
+      "action": "rename-compute-late-apply",
+      "version": 21,
+      "text": "shift alpha beta\n"
+    },
+    {
+      "kind": "rename",
+      "action": "rename-compute-late-apply",
+      "basis": {
+        "version": 20,
+        "text": "alpha beta\n"
+      },
+      "computedWord": "alpha",
+      "computedRange": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "canceledAtEntry": false,
+      "completedAgainst": {
+        "version": 21,
+        "text": "shift alpha beta\n"
+      },
+      "canceledAtReturn": false
+    },
+    {
+      "kind": "document-change",
+      "action": "rename-compute-late-apply",
+      "version": 22,
+      "text": "REN alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "quit",
+      "version": 22,
+      "text": "REN alpha beta\n"
+    },
+    {
+      "kind": "document-change",
+      "action": "quit",
+      "version": 22,
+      "text": "REN alpha beta\n"
+    }
+  ],
+  "scaffold": [
+    {
+      "action": "workspace-fresh",
+      "kind": "owned-reset",
+      "before": {
+        "version": 1,
+        "text": "alpha beta\n",
+        "dirty": false,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 1,
+        "text": "alpha beta\n",
+        "dirty": false,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "workspace-late",
+      "kind": "owned-reset",
+      "before": {
+        "version": 2,
+        "text": "EDIT beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 3,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "caller-guarded",
+      "kind": "owned-reset",
+      "before": {
+        "version": 5,
+        "text": "EDIT alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 6,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "editor-parallel",
+      "kind": "owned-reset",
+      "before": {
+        "version": 7,
+        "text": "shift alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 8,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "editor-sequential",
+      "kind": "owned-reset",
+      "before": {
+        "version": 9,
+        "text": "ONE beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 10,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "editor-parallel-empty",
+      "kind": "owned-reset",
+      "before": {
+        "version": 12,
+        "text": "TWOeta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 13,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "format-compute",
+      "kind": "owned-reset",
+      "before": {
+        "version": 14,
+        "text": "ONE beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "format-compute-late-apply",
+      "kind": "owned-reset",
+      "before": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 15,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "interactive-format-late",
+      "kind": "owned-reset",
+      "before": {
+        "version": 17,
+        "text": "FMT(alpha) alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 18,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "rename-compute",
+      "kind": "owned-reset",
+      "before": {
+        "version": 19,
+        "text": "shift alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    },
+    {
+      "action": "rename-compute-late-apply",
+      "kind": "owned-reset",
+      "before": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "after": {
+        "version": 20,
+        "text": "alpha beta\n",
+        "dirty": true,
+        "closed": false,
+        "activeIsOwn": true
+      },
+      "result": true
+    }
+  ]
+}

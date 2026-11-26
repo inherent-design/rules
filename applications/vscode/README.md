@@ -1,6 +1,6 @@
 # VS Code: document versions, save points, and backing files
 
-This first band covers VS Code desktop 1.147.0 at `8a14f0cc1b08d531eb83255ea3764ae22aa932b5` on macOS arm64. It compares one native file-backed document with serial edits, save, undo/redo, external changes, and explicit revert. A separate [browser band](WEB.md) observes an untitled draft across one page reload. Custom filesystem providers, asynchronous save races, and most editor/workspace features remain open.
+This first band covers VS Code desktop 1.147.0 at `8a14f0cc1b08d531eb83255ea3764ae22aa932b5` on macOS arm64. It compares one native file-backed document with serial edits, save, undo/redo, external changes, and explicit revert. A separate [browser band](WEB.md) observes an untitled draft across one page reload. A later [language-edit band](LANGUAGE-EDITS.md) uses an explicitly selected 1.148.0 profile to distinguish computation, version admission, cancellation, and application. Custom filesystem providers, asynchronous save races, and most editor/workspace features remain open.
 
 ## Separate state values
 
