@@ -5777,7 +5777,26 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#npm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/npm.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "reify": "Proposed split between resolution-only root-lock and hidden installed-index publication; preserve existing reify return compatibility.",
+                "install": "Legacy index fallback and actual backing admission; implementation and performance qualification remain open.",
+                "dry-run": "Preserve no-write mode when adding hidden-index invalidation; source-grounded proposal only."
+              }
+            }
+          ]
         },
         {
           "id": "npm.editing-dependencies",
@@ -7191,25 +7210,25 @@
         {
           "id": "workspace-terminal-results",
           "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
-          "document": "js-scripts/WORKSPACES.md"
+          "document": "js-architecture/npm.md"
         },
         {
           "id": "lock-only-hidden-index-basis",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "js-peers/LOCK-MODES.md",
+          "document": "js-architecture/npm.md",
           "summary": "Keep the hidden installed index tied to actual materialized backing across lock-only and ordinary installation; no new lock format is implied."
         },
         {
           "id": "sbom-root-package-identity",
           "status": "Scoped candidate; native implementation and format changes unselected.",
-          "document": "js-sbom/README.md",
+          "document": "js-architecture/npm.md",
           "summary": "Separate physical placement name from authored root package identity across CycloneDX display and purl/reference; review aliases/workspaces and serialized consumers before correction."
         }
       ],
       "preservationDecisions": [
         {
           "id": "recorded-domain-boundaries",
-          "evidence": "COMPARISON.md",
+          "evidence": "js-architecture/npm.md",
           "decision": "Preserve edge validity, placement, actual peer binding, missing-root no-op, range-respecting updates, and acknowledged publication across later hook failure in their recorded scopes."
         },
         {
@@ -7226,8 +7245,8 @@
       "unresolvedChoices": [
         {
           "id": "installed-index-correction-boundary",
-          "question": "Which existing hidden-index invalidation or materialization boundary should own the correction, while preserving installed bytes, lock-only meaning, and established formats?",
-          "document": "js-peers/LOCK-MODES.md"
+          "question": "How should lock-only index invalidation and ordinary filesystem fallback address already bad legacy indexes without trusting markers an older writer could preserve or changing public lock meaning?",
+          "document": "js-architecture/npm.md"
         }
       ],
       "coverageStatus": "inventory captured; modeling and qualification pending",
@@ -7538,7 +7557,25 @@
           "disposition": "Partially observed and modeled in the fixed installation-mode profile; other operations and general feature qualification remain pending. See js-peers/LOCK-MODES.md.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#pnpm",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/pnpm.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "install": "Proposed backing/materialization evidence across repeat and frozen gates; full causal path and native correction remain unresolved.",
+                "link-store": "Keep selected identity, link relation, and actual live backing distinct; not full store integrity or garbage-collection coverage."
+              }
+            }
+          ]
         },
         {
           "id": "pnpm.dependency-edits",
@@ -8598,6 +8635,21 @@
               "operationSlices": {
                 "pack": "Six native source-only pack fixtures on one Mac:rules,required entry points,regular bytes and typed internal/external/dangling links;no publish/install or complete command qualification."
               }
+            },
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/pnpm.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "deploy": "Proposed physical protected-resource admission before force cleanup; actual mutation/race and missing-parent qualification still required."
+              }
             }
           ]
         },
@@ -9228,37 +9280,37 @@
         {
           "id": "workspace-terminal-results",
           "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
-          "document": "js-scripts/WORKSPACES.md"
+          "document": "js-architecture/pnpm.md"
         },
         {
           "id": "protected-deployment-resource",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "pnpm-deploy/README.md",
+          "document": "js-architecture/pnpm.md",
           "summary": "Admit deployment against actual protected filesystem resources before destructive preparation; lexical path inequality alone is insufficient in the recorded alias case."
         },
         {
           "id": "failed-patch-backing-reuse",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "js-patches/README.md",
+          "document": "js-architecture/pnpm.md",
           "summary": "Retain uncertainty after failed patching and establish valid selected backing before ordinary reuse; the complete materializer correction remains open."
         },
         {
           "id": "range-containment-policy",
           "status": "Scoped proposal only;no production change or whole-feature qualification.",
-          "document": "js-overrides/README.md",
+          "document": "js-architecture/pnpm.md",
           "summary": "Separate overlap from containment before selecting a comparator correction;retain current result and lock/configuration compatibility obligations."
         },
         {
           "id": "sbom-generation-basis",
           "status": "Scoped candidate; native implementation and format changes unselected.",
-          "document": "js-sbom/README.md",
+          "document": "js-architecture/pnpm.md",
           "summary": "Explain lock graph, store metadata enrichment and artifact hash basis without equating success with physical installation or forcing rematerialization."
         }
       ],
       "preservationDecisions": [
         {
           "id": "recorded-domain-boundaries",
-          "evidence": "COMPARISON.md",
+          "evidence": "js-architecture/pnpm.md",
           "decision": "Preserve peer-context identity, root visibility versus retained reachability, exact/range selection policies, explicit stale-lock guidance, and declared script/build policy."
         },
         {
@@ -9276,7 +9328,7 @@
         {
           "id": "physical-target-admission-policy",
           "question": "Which conservative admission policy handles nonexistent/aliased deployment targets and unknown physical identity before destructive preparation, without treating lexical checks as authority?",
-          "document": "pnpm-deploy/README.md"
+          "document": "js-architecture/pnpm.md"
         },
         {
           "id": "overlapping-range-precedence",
@@ -9441,6 +9493,21 @@
                 "resolve": "Ordered persistent resolution rules in the selected node-modules graph.",
                 "set-resolution": "Actual installation plus lock-only choice;explicit lock removal loses the choice.",
                 "check-resolutions": "Matching baseline succeeds;outside-range manual choice is refused without repair."
+              }
+            },
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/yarn.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "set-resolution": "Preserve ordered author rules and lock-table choice lifetime, including separate stricter validation; no resolution-policy change."
               }
             }
           ]
@@ -9948,7 +10015,25 @@
           "disposition": "Partially native-observed/modelled for six Modern JS examples and selected check/fix outcomes;query/source and general rule/host obligations remain pending.",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#yarn",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/yarn.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "constraints-fix": "Preserve bounded edits and report evaluation versus persisted basis; stricter postcondition mode remains a compatibility decision.",
+                "constraints-check": "Keep explicit checking distinct from fix completion and stateful callbacks; no new native evaluation."
+              }
+            }
+          ]
         },
         {
           "id": "yarn.scripts",
@@ -10512,7 +10597,25 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#yarn",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/yarn.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "config-set": "Separate stored target/value from effective interpretation with redaction; proposed canonical-home writer alignment preserves current reader precedence.",
+                "config-get": "Reader/writer target agreement and provenance are proposal requirements; existing configuration evaluation stays authoritative."
+              }
+            }
+          ]
         },
         {
           "id": "yarn.security",
@@ -10827,6 +10930,21 @@
                 "evidence/yarn-version-20261125T193206031858Z/owner-edits.json"
               ],
               "remaining": "General graph/range/semver/YAML behavior, Git stage, unqualified flags, prerelease, concurrent writers, I/O/crash faults and candidate durable recovery implementation remain pending. Parent statuses unchanged."
+            },
+            {
+              "id": "package-manager-ownership-synthesis",
+              "status": "proposed",
+              "scope": "Per-program ownership, API/result and compatibility synthesis using retained source/native/model findings; no fresh native mutation, implementation or model conformance.",
+              "remaining": "Exact producer/consumer or persistence correction, legacy and mixed-version handling, public interface compatibility, fault/host qualification and complete program coverage remain open.",
+              "evidence": [
+                "js-architecture/yarn.md",
+                "js-architecture/README.md",
+                "js-architecture/contracts.json",
+                "sources/js-architecture-selections.json"
+              ],
+              "operationSlices": {
+                "version-apply": "Tie exact decision consumption to verified manifest effects and sibling-write retirement, separately from later link/hook outcome; no native correction implemented."
+              }
             }
           ]
         }
@@ -10835,37 +10953,37 @@
         {
           "id": "workspace-terminal-results",
           "status": "proposed;distinct current continuation/root policies preserved,no new correctness defect established",
-          "document": "js-scripts/WORKSPACES.md"
+          "document": "js-architecture/yarn.md"
         },
         {
           "id": "constraints-fix-postcondition",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "yarn-constraints/README.md",
+          "document": "js-architecture/yarn.md",
           "summary": "Separate saved safe edits from a verified constraints postcondition, retaining bounded evaluation, partial effects, and manifest value identity."
         },
         {
           "id": "configuration-value-and-target",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "js-config/README.md",
+          "document": "js-architecture/yarn.md",
           "summary": "Align reported stored/effective values and explicit home-file routing without silently merging conflicting existing configuration."
         },
         {
           "id": "version-decision-acknowledgement",
           "status": "Recorded proposal; pinned scope and remaining checks are in the report. No adoption selected.",
-          "document": "yarn-version/README.md",
+          "document": "js-architecture/yarn.md",
           "summary": "Preserve unapplied release decisions across failed persistence; announcements and consumed records are not completed manifest writes."
         },
         {
           "id": "resolution-effect-and-lifetime",
           "status": "Scoped proposal only;no production change or whole-feature qualification.",
-          "document": "js-overrides/README.md",
+          "document": "js-architecture/yarn.md",
           "summary": "Expose installation effect,lock-table lifetime and validation mode without changing ordered-rule or explicit-check semantics."
         }
       ],
       "preservationDecisions": [
         {
           "id": "recorded-domain-boundaries",
-          "evidence": "COMPARISON.md",
+          "evidence": "js-architecture/yarn.md",
           "decision": "Preserve descriptors, locators, virtual peer contexts, linker distinctions, immutable policies, and command-specific update/version semantics; safe edits and verified convergence remain separate."
         },
         {
@@ -10877,8 +10995,8 @@
       "unresolvedChoices": [
         {
           "id": "constraints-fix-success-contract",
-          "question": "Should fix completion retain current applied-edit status or require a verified postcondition? Define compatibility for bounded passes, partial safe edits, and structured guidance before adoption.",
-          "document": "yarn-constraints/README.md"
+          "question": "Which opt-in result/verification contract distinguishes evaluated and persisted bases without silently adding stateful callback runs or changing the current fix exit contract?",
+          "document": "js-architecture/yarn.md"
         }
       ],
       "coverageStatus": "inventory captured; modeling and qualification pending",

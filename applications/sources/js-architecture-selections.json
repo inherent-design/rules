@@ -1,0 +1,339 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "npm-hidden-writer",
+      "application": "npm",
+      "path": "workspaces/arborist/lib/arborist/reify.js",
+      "revision": "d12b9434dd010b5fb7044c3cc149cdda317813f8",
+      "sha256": "bcd9de86dc8bdb70797bf9ee2e5a73f1eab653dd7446e0c3ca09eab5e3d29dcd",
+      "cache": "applications/tools/source-cache/js-lock-modes/npm-reify.js",
+      "url": "https://raw.githubusercontent.com/npm/cli/d12b9434dd010b5fb7044c3cc149cdda317813f8/workspaces/arborist/lib/arborist/reify.js",
+      "originLedger": "sources/js-lock-modes-selections.json",
+      "originInspection": "lines88-170,180-282,302-318: skip payload work in packageLockOnly then publish ideal metadata as hidden actual lock",
+      "reviewedHereRanges": [
+        [
+          88,
+          170
+        ],
+        [
+          250,
+          318
+        ]
+      ],
+      "installedFileMatchChecked": true
+    },
+    {
+      "id": "npm-actual-reader",
+      "application": "npm",
+      "path": "workspaces/arborist/lib/arborist/load-actual.js",
+      "revision": "d12b9434dd010b5fb7044c3cc149cdda317813f8",
+      "sha256": "add7c5c2ec70b19e874b0a3c86ec82e6b7ac93b2eb0c3f2d9a2ef3dbf63c327e",
+      "cache": "applications/tools/source-cache/js-lock-modes/npm-load-actual.js",
+      "url": "https://raw.githubusercontent.com/npm/cli/d12b9434dd010b5fb7044c3cc149cdda317813f8/workspaces/arborist/lib/arborist/load-actual.js",
+      "originLedger": "sources/js-lock-modes-selections.json",
+      "originInspection": "lines110-157: admitted hidden metadata loads virtual tree as actual and returns before filesystem tree read",
+      "reviewedHereRanges": [
+        [
+          110,
+          157
+        ]
+      ],
+      "installedFileMatchChecked": true
+    },
+    {
+      "id": "npm-clean-install",
+      "application": "npm",
+      "path": "lib/commands/ci.js",
+      "revision": "d12b9434dd010b5fb7044c3cc149cdda317813f8",
+      "sha256": "fb9ed5eb26d841dfcdf8cffaa3c33be3edda6ee27797b5db5ccbfbaba86e4315",
+      "cache": "applications/tools/source-cache/js-peers/npm__lib__commands__ci.js",
+      "url": "https://raw.githubusercontent.com/npm/cli/d12b9434dd010b5fb7044c3cc149cdda317813f8/lib/commands/ci.js",
+      "originLedger": "sources/js-lock-modes-selections.json",
+      "originInspection": "lines40-112: missing lock and virtual/ideal version check before node_modules removal",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": true
+    },
+    {
+      "id": "pnpm-dispatch",
+      "application": "pnpm",
+      "path": "pnpm/crates/package-manager/src/install/run/dispatch.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "de3fdb06c80dd11718782ee3e3545146deef4d3ea5ac5d80395c7868e809d9fe",
+      "cache": "applications/tools/source-cache/js-lock-modes/pnpm-dispatch.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/install/run/dispatch.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Lines 1\u2013110 and 153\u2013197: current/wanted lock dispatch and the up-to-date modules-state handoff. The complete cause of the skipped relink remains unresolved.",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-frozen-admission",
+      "application": "pnpm",
+      "path": "pnpm/crates/package-manager/src/install/prepare_modules_state/up_to_date.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "fffa64c58629a8ef7cd8170dd2df8dde836dcb054f116dce9cf496fd4f13443b",
+      "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__install__prepare_modules_state__up_to_date.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/install/prepare_modules_state/up_to_date.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Lines 1\u2013230: force/frozen/configuration/layout/content/bin/build gates and reporting inputs. The native case has additional premises not reconstructed here.",
+      "reviewedHereRanges": [
+        [
+          1,
+          73
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-repeat-admission",
+      "application": "pnpm",
+      "path": "pnpm/crates/package-manager/src/optimistic_repeat_install/up_to_date.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "a71db9743d7db2536554c5010321fd4e9230859612f399ceab537d0eff8f9f80",
+      "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__optimistic_repeat_install__up_to_date.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/optimistic_repeat_install/up_to_date.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Lines 1\u2013185: the separate CLI shortcut before asynchronous installation and recorded/file-check dispatch. Which shortcut serves each native success remains unresolved.",
+      "reviewedHereRanges": [
+        [
+          127,
+          167
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-link-observation",
+      "application": "pnpm",
+      "path": "pnpm/crates/package-manager/src/optimistic_repeat_install/modules_dirs/direct_links.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "20012350d3fc12e5fa6dcf0089ae7773be0391c486387ce20230fd90e7bc06fd",
+      "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__package-manager__src__optimistic_repeat_install__modules_dirs__direct_links.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/package-manager/src/optimistic_repeat_install/modules_dirs/direct_links.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Lines 1\u2013180 and 208\u2013229: dangling/local-missing link checks and healthy-entry classification by filesystem metadata. Presence alone does not establish selected target or bytes; other admission checks remain unqualified.",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-patch-apply",
+      "application": "pnpm",
+      "path": "pnpm/crates/patching/src/apply.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "334e42c2a01033d9052e430b5b8f1b89ff4f520bc898e7998110df20141fdad2",
+      "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__patching__src__apply.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/patching/src/apply.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Lines 1\u2013197: file-by-file application and the path-validation contract. This is not a full-install rollback or security qualification.",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-patch-dispatch",
+      "application": "pnpm",
+      "path": "pnpm/crates/cli/src/cli_args/dispatch_install/patches.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "dbe688fe0c65ec0920ed20da3d44819c200a27b57329909dc248f585db45063f",
+      "cache": "applications/tools/source-cache/js-patches/pnpm__pnpm__crates__cli__src__cli_args__dispatch_install__patches.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/dispatch_install/patches.rs",
+      "originLedger": "sources/js-patches-selections.json",
+      "originInspection": "Whole file: commit/remove helpers are followed by a re-resolving install. The command can fail after authored metadata changes.",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-deploy-target",
+      "application": "pnpm",
+      "path": "pnpm/crates/cli/src/cli_args/deploy/target.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "bbbc0db326a85c55c89e02b370b5c83f3fb475c6a06c398c16c574698cc25c7e",
+      "cache": "applications/tools/source-cache/pnpm-deploy/pnpm__crates__cli__src__cli_args__deploy__target.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/deploy/target.rs",
+      "originLedger": "sources/pnpm-deploy-selections.json",
+      "originInspection": "Selected1-280:target guards,workspace-child component checks,force cleanup,copy_project andstartoflegacyhook. Later hook details remain source-only/unqualified.",
+      "reviewedHereRanges": [
+        [
+          111,
+          144
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "pnpm-path-comparison",
+      "application": "pnpm",
+      "path": "pnpm/crates/cli/src/cli_args/deploy/path_compare.rs",
+      "revision": "b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600",
+      "sha256": "5cdb6945d69f663de99f61792d525826fddb56039834e3d1029379893085a3e8",
+      "cache": "applications/tools/source-cache/pnpm-deploy/pnpm__crates__cli__src__cli_args__deploy__path_compare.rs",
+      "url": "https://raw.githubusercontent.com/pnpm/pnpm/b8d388835f9a40ee1ac53fbc2d4b58c3ebfa5600/pnpm/crates/cli/src/cli_args/deploy/path_compare.rs",
+      "originLedger": "sources/pnpm-deploy-selections.json",
+      "originInspection": "Complete lexical normalization/component comparison;Windows lowercases,Unix retains spelling.",
+      "reviewedHereRanges": [],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-constraint-command",
+      "application": "yarn",
+      "path": "packages/plugin-constraints/sources/commands/constraints.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "87d45745129f4cb7d4fcef6189b980801efbd9c6a29c4940bd95b3c510a4eb5d",
+      "cache": "applications/tools/source-cache/yarn-constraints/packages__plugin-constraints__sources__commands__constraints.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-constraints/sources/commands/constraints.ts",
+      "originLedger": "sources/yarn-constraints-selections.json",
+      "originInspection": "36-124: engine selection, install-state restore, ten/one-pass budget, report application, per-workspace persistence, continuation and final status.",
+      "reviewedHereRanges": [
+        [
+          35,
+          125
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-constraint-application",
+      "application": "yarn",
+      "path": "packages/plugin-constraints/sources/constraintUtils.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "811aa9f7a9919bc1c320f702a81177fdb91a540c6f5a00515d17176f95faee0b",
+      "cache": "applications/tools/source-cache/yarn-constraints/packages__plugin-constraints__sources__constraintUtils.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-constraints/sources/constraintUtils.ts",
+      "originLedger": "sources/yarn-constraints-selections.json",
+      "originInspection": "164-282: text/fixable AnnotatedError,object-keyed newValues conflicts,JSON comparison,report-only versus assignment,changed-workspace/remaining-error results and conversion to string-valued diagnostic tree. Path normalization/index query semantics separate.",
+      "reviewedHereRanges": [
+        [
+          171,
+          239
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-version-command",
+      "application": "yarn",
+      "path": "packages/plugin-version/sources/commands/version.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "184cb6a2de1921c1266d159fd5ac8b017ab39a59b40ff0e94e94a79039b5ebde",
+      "cache": "applications/tools/source-cache/yarn-version/command-version.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-version/sources/commands/version.ts",
+      "originLedger": "sources/yarn-version-selections.json",
+      "originInspection": null,
+      "reviewedHereRanges": [
+        [
+          228,
+          269
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-version-records",
+      "application": "yarn",
+      "path": "packages/plugin-version/sources/versionUtils.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "8d5ba4a9750ca781b53b356f995e0c42e84e34454dea9343f14f367d160ad235",
+      "cache": "applications/tools/source-cache/yarn-version/versionUtils.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-version/sources/versionUtils.ts",
+      "originLedger": "sources/yarn-version-selections.json",
+      "originInspection": null,
+      "reviewedHereRanges": [
+        [
+          44,
+          116
+        ],
+        [
+          118,
+          173
+        ],
+        [
+          412,
+          458
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-config-write",
+      "application": "yarn",
+      "path": "packages/plugin-essentials/sources/commands/config/set.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "7fecbe977a83ede417efc10cc75ef46e740221f86cb006ca6fc502c7e1b1eaf6",
+      "cache": "applications/tools/source-cache/js-config/yarn__packages__plugin-essentials__sources__commands__config__set.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/plugin-essentials/sources/commands/config/set.ts",
+      "originLedger": "sources/js-config-selections.json",
+      "originInspection": "43\u2013116: default project/home target, write then reload and effective-value success headline.",
+      "reviewedHereRanges": [
+        [
+          48,
+          124
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-config-reader",
+      "application": "yarn",
+      "path": "packages/yarnpkg-core/sources/Configuration.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "c493cd917c537674104f373a1cd5a4717b65c8e6c6edb877b9519c33280ad225",
+      "cache": "applications/tools/source-cache/js-config/yarn__packages__yarnpkg-core__sources__Configuration.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/yarnpkg-core/sources/Configuration.ts",
+      "originLedger": "sources/js-config-selections.json",
+      "originInspection": "1038\u20131046,1180\u20131194,1274\u20131282,1425\u20131510,1599\u20131603,1638\u20131715: rc discovery/home default basename, write configured basename, environment precedence and source retention. Complex merge/persistence semantics unqualified.",
+      "reviewedHereRanges": [
+        [
+          1590,
+          1607
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-project-persistence",
+      "application": "yarn",
+      "path": "packages/yarnpkg-core/sources/Project.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "4839e0c16f6729565e65b54d525770516347ab4d623a39504940025921559046",
+      "cache": "applications/tools/source-cache/js-peers/yarn__packages__yarnpkg-core__sources__Project.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/yarnpkg-core/sources/Project.ts",
+      "originLedger": "sources/js-lock-modes-selections.json",
+      "originInspection": "lines1784-1857,1861-1901: immutable lock comparison before fetch; persist followed by skipped linking for update-lockfile",
+      "reviewedHereRanges": [
+        [
+          1860,
+          1927
+        ],
+        [
+          2095,
+          2105
+        ]
+      ],
+      "installedFileMatchChecked": null
+    },
+    {
+      "id": "yarn-workspace-write",
+      "application": "yarn",
+      "path": "packages/yarnpkg-core/sources/Workspace.ts",
+      "revision": "62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c",
+      "sha256": "c61105579778e32adf4558c25aeb77076fc63c97b8c5f473b0794ab2c09c47f0",
+      "cache": "applications/tools/source-cache/yarn-version/Workspace.ts",
+      "url": "https://raw.githubusercontent.com/yarnpkg/berry/62edcb0e2f62c93b7b2ec2ef6a79edeaf2e06b3c/packages/yarnpkg-core/sources/Workspace.ts",
+      "originLedger": "sources/yarn-version-scope-context.json",
+      "originInspection": null,
+      "reviewedHereRanges": [
+        [
+          217,
+          230
+        ]
+      ],
+      "installedFileMatchChecked": null
+    }
+  ],
+  "scope": "Retained source readback and ownership/compatibility synthesis. New range inspection is separate from prior owning-ledger scope.",
+  "limits": [
+    "Cache identity checks do not requalify complete functions or upstream/current-latest products.",
+    "No package-manager execution,patch or reproducible-source-build check in this review.",
+    "pnpm patch fast-path causation and legacy npm index recovery remain separately qualified/open."
+  ]
+}

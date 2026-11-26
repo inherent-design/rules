@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "status": "Proposed per-program ownership and compatibility synthesis; not a production SDK or wire format.",
+  "sourceLedger": "sources/js-architecture-selections.json",
+  "contracts": [
+    {
+      "id": "npm-hidden-index",
+      "application": "npm",
+      "sourceIds": [
+        "npm-hidden-writer",
+        "npm-actual-reader"
+      ],
+      "owningEvidenceReports": [
+        "js-peers/LOCK-MODES.md"
+      ],
+      "existingModelReferences": [
+        "js-peers/LockModes.lean",
+        "js-peers/LockModes.bend"
+      ],
+      "evidenceStatus": "Producer/consumer mismatch reproduced in selected native profile.",
+      "proposedOwnerAndChange": "Keep root-lock publication separate from hidden installed-index publication; invalidate unestablished claims and qualify legacy filesystem fallback.",
+      "compatibility": "Preserve public locks and the reify return contract; legacy bad indexes and mixed writers need explicit qualification.",
+      "remainingDiscriminatingChecks": [
+        "Lock-only followed by ordinary install, legacy bad index, and dry-run.",
+        "Filtered and linked layouts, partial or interrupted writes, and filesystem-read cost."
+      ]
+    },
+    {
+      "id": "npm-result-basis",
+      "application": "npm",
+      "sourceIds": [],
+      "owningEvidenceReports": [
+        "js-sbom/README.md",
+        "js-scripts/WORKSPACES.md",
+        "js-peers/PUBLICATION.md"
+      ],
+      "existingModelReferences": [],
+      "evidenceStatus": "Existing scoped native reports, not fresh source execution here.",
+      "proposedOwnerAndChange": "Expose inventory, materialization, workspace, and publication effects at their own owners without deriving them from command exit.",
+      "compatibility": "Preserve default SDK/JSON contracts and authentication/edge guards; a new structured view is opt-in or versioned.",
+      "remainingDiscriminatingChecks": [
+        "SBOM identity rules and schema consumers.",
+        "Observed workspace terminal results and registry acknowledgement versus durability."
+      ]
+    },
+    {
+      "id": "pnpm-backing-admission",
+      "application": "pnpm",
+      "sourceIds": [
+        "pnpm-dispatch",
+        "pnpm-frozen-admission",
+        "pnpm-repeat-admission",
+        "pnpm-link-observation",
+        "pnpm-patch-apply",
+        "pnpm-patch-dispatch"
+      ],
+      "owningEvidenceReports": [
+        "js-patches/README.md"
+      ],
+      "existingModelReferences": [],
+      "evidenceStatus": "Restoration-to-wrong-live-target reproduced; complete responsible gate path unresolved.",
+      "proposedOwnerAndChange": "Retain prior live backing while candidate work completes where supported; failed candidates cannot mint reuse evidence. Qualify the selected target through existing gates.",
+      "compatibility": "Preserve graph, peer, and patch identity and formats; do not replace the resolver or claim universal force repair.",
+      "remainingDiscriminatingChecks": [
+        "Trace each participating repeat/frozen/materializer branch.",
+        "Patch restoration, mutable sources, link/backing identity, and partial failures."
+      ]
+    },
+    {
+      "id": "pnpm-deployment-resource",
+      "application": "pnpm",
+      "sourceIds": [
+        "pnpm-deploy-target",
+        "pnpm-path-comparison"
+      ],
+      "owningEvidenceReports": [
+        "pnpm-deploy/README.md"
+      ],
+      "existingModelReferences": [
+        "pnpm-deploy/Deploy.lean",
+        "pnpm-deploy/Deploy.bend"
+      ],
+      "evidenceStatus": "Case-alias source loss reproduced on the selected filesystem.",
+      "proposedOwnerAndChange": "Admit actual protected resources before forced cleanup and retain/revalidate that basis at mutation; verify final inventory as an additional check.",
+      "compatibility": "An additional alias refusal corrects safety; global Unix lowercasing is not a repair. Preserve existing target policies.",
+      "remainingDiscriminatingChecks": [
+        "Case-sensitive and insensitive hosts, Unicode, ancestors, and missing parents.",
+        "Permission and replacement races, with actual deletion/copy."
+      ]
+    },
+    {
+      "id": "pnpm-policy-and-report",
+      "application": "pnpm",
+      "sourceIds": [],
+      "owningEvidenceReports": [
+        "js-overrides/README.md",
+        "js-sbom/README.md"
+      ],
+      "existingModelReferences": [],
+      "evidenceStatus": "Recorded policies and a range counterexample; native comparator causation remains open.",
+      "proposedOwnerAndChange": "Preserve forcing versus convergence, selector presence, and inventory basis; hold comparator changes until fresh, narrow-only, and tie controls.",
+      "compatibility": "Preserve lock/settings meaning and format-specific relationships; no generic force or SBOM-triggered install.",
+      "remainingDiscriminatingChecks": [
+        "Fresh versus warm setting order and actual interval containment.",
+        "Scoped graph/store metadata without invented verification."
+      ]
+    },
+    {
+      "id": "yarn-version-publication",
+      "application": "yarn",
+      "sourceIds": [
+        "yarn-version-command",
+        "yarn-version-records",
+        "yarn-project-persistence",
+        "yarn-workspace-write"
+      ],
+      "owningEvidenceReports": [
+        "yarn-version/README.md"
+      ],
+      "existingModelReferences": [
+        "yarn-version/Versions.lean",
+        "yarn-version/Versions.bend"
+      ],
+      "evidenceStatus": "Pre-persistence intent loss is native evidence; late-failure, sibling-write, and double-bump concerns are source-supported design counterexamples, not new native results.",
+      "proposedOwnerAndChange": "Consume the exact decision subset at verified manifest publication, retaining planned targets and partial/unknown outcomes independently of later installation failure.",
+      "compatibility": "Keep relative decisions, apply-time force, and formats; global command success is not a persistence receipt.",
+      "remainingDiscriminatingChecks": [
+        "Failure before, during, and after manifest persistence, including sibling-write retirement.",
+        "Exact targets, dependent range edits, relative retries, and process loss."
+      ]
+    },
+    {
+      "id": "yarn-constraints-postcondition",
+      "application": "yarn",
+      "sourceIds": [
+        "yarn-constraint-command",
+        "yarn-constraint-application"
+      ],
+      "owningEvidenceReports": [
+        "yarn-constraints/README.md"
+      ],
+      "existingModelReferences": [
+        "yarn-constraints/Constraints.lean",
+        "yarn-constraints/Constraints.bend"
+      ],
+      "evidenceStatus": "Bounded fix and a later failed check are native evidence; the strict candidate remains model-only.",
+      "proposedOwnerAndChange": "Report the last evaluation basis and persisted-edit basis; the postcondition is unknown after edits without another evaluation.",
+      "compatibility": "Preserve default exit behavior, the ten-pass bound, stateful callbacks, and value-identity semantics; strict mode needs an explicit compatibility decision.",
+      "remainingDiscriminatingChecks": [
+        "Last-pass edits, stateful or throwing callbacks, and partial persistence.",
+        "Equal-object conflicts and order-sensitive fields."
+      ]
+    },
+    {
+      "id": "yarn-configuration-target",
+      "application": "yarn",
+      "sourceIds": [
+        "yarn-config-write",
+        "yarn-config-reader"
+      ],
+      "owningEvidenceReports": [
+        "js-config/README.md"
+      ],
+      "existingModelReferences": [
+        "js-config/Configuration.lean",
+        "js-config/Configuration.bend"
+      ],
+      "evidenceStatus": "Masked write headline and custom-home-basename mismatch are native evidence.",
+      "proposedOwnerAndChange": "Separate saved target/assignment from effective value; prefer the preserved canonical home reader and a matched writer without echoing raw secrets.",
+      "compatibility": "Do not merge/delete home files or silently change read precedence; reuse existing formatting, redaction, and provenance.",
+      "remainingDiscriminatingChecks": [
+        "Canonical, custom, and conflicting home files, including secret settings.",
+        "Nested settings, equal masked values, write failure, and concurrency."
+      ]
+    },
+    {
+      "id": "yarn-selection-lifetime",
+      "application": "yarn",
+      "sourceIds": [
+        "yarn-project-persistence"
+      ],
+      "owningEvidenceReports": [
+        "js-overrides/README.md",
+        "js-peers/LOCK-MODES.md"
+      ],
+      "existingModelReferences": [
+        "js-overrides/Overrides.lean",
+        "js-overrides/Overrides.bend"
+      ],
+      "evidenceStatus": "Ordered rules, manual lock-table choice, and installation phases observed in selected profiles.",
+      "proposedOwnerAndChange": "Preserve descriptor/locator identity, ordered first-match rules, resolution versus linking, and the separate stricter check; report policy lifetime.",
+      "compatibility": "No universal specificity sort, mandatory validation, or linker equivalence; version extended public contracts.",
+      "remainingDiscriminatingChecks": [
+        "Persistent versus lock-table rules and regeneration.",
+        "PnP, plugins, workspaces, and immutable cache remain separate profiles."
+      ]
+    }
+  ],
+  "scope": [
+    "npm 11.20.0 / Node 26.13.1",
+    "pnpm 12.21.0 native executable",
+    "Yarn Berry 4.19.0 / Node 26.13.1"
+  ],
+  "freshNativeMutationOrModelConformance": false,
+  "limits": [
+    "Owning reports retain their original source, native, and model limits.",
+    "Current upstream releases were not reviewed; no patch or upstream issue is selected.",
+    "Existing model confirmations assume a truthful, complete basis; native adapter implementation remains open."
+  ]
+}
