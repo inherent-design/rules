@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "os": "Mac OS X",
+  "osVersion": "26.7.1",
+  "architecture": "aarch64",
+  "javaVersion": "21.0.13.1",
+  "imageClass": "faj",
+  "originalSigners": 4,
+  "allocatorProperty": "system",
+  "events": [
+    {
+      "id": "allocate-zeroed",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "00000000",
+        "00000000",
+        "00000000",
+        "00000000"
+      ]
+    },
+    {
+      "id": "get-zero",
+      "word": "00000000",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "00000000",
+        "00000000",
+        "00000000",
+        "00000000"
+      ]
+    },
+    {
+      "id": "set-0",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "00000000",
+        "00000000",
+        "00000000"
+      ]
+    },
+    {
+      "id": "set-1",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "00000000",
+        "00000000"
+      ]
+    },
+    {
+      "id": "set-2",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "ffffffff",
+        "00000000"
+      ]
+    },
+    {
+      "id": "set-3",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "ffffffff",
+        "00000000"
+      ]
+    },
+    {
+      "id": "get-last",
+      "word": "00000000",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "ffffffff",
+        "00000000"
+      ]
+    },
+    {
+      "id": "get-negative-live",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "(-1, 0) outside of image bounds (2, 2)",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "ffffffff",
+        "00000000"
+      ]
+    },
+    {
+      "id": "set-outside-live",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "(2, 0) outside of image bounds (2, 2)",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      },
+      "pixels": [
+        "12345678",
+        "89abcdef",
+        "ffffffff",
+        "00000000"
+      ]
+    },
+    {
+      "id": "close",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "get-closed",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Image is not allocated.",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "set-closed",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Image is not allocated.",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "get-outside-closed",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "(2, 0) outside of image bounds (2, 2)",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "set-negative-closed",
+      "status": "threw",
+      "errorClass": "java.lang.IllegalArgumentException",
+      "message": "(0, -1) outside of image bounds (2, 2)",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "metadata-closed",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    },
+    {
+      "id": "close-again",
+      "status": "returned",
+      "metadata": {
+        "width": 2,
+        "height": 2,
+        "format": "RGBA"
+      }
+    }
+  ],
+  "finallyCloseReturned": true
+}

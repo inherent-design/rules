@@ -1361,6 +1361,22 @@
             "host/java/Word64.bend"
           ],
           "limits": "165 original calls on 33-byte heap buffers;12 Java17/21/25 arithmetic checks on macOS/aarch64. Not full PNG/STB/NativeImage,allocation,provider,upload,device,other host or universal compiler/JVM qualification."
+        },
+        {
+          "id": "original-cpu-image-lifecycle",
+          "status": "one successful tiny CPU allocation and serial API lifecycle on Java21/macOSarm64",
+          "report": "host/minecraft/CPU-IMAGES.md",
+          "sources": "host/minecraft/native-image-capture.json",
+          "conformance": "host/minecraft/evidence/native-image-conformance.json",
+          "rules": [
+            "host/java/CpuImage.lean",
+            "host/java/CpuImage.bend"
+          ],
+          "proofs": [
+            "host/java/CpuImage.lean",
+            "host/java/CpuImage.bend"
+          ],
+          "limits": "Original1.21.1 zeroed2x2,16steps;opaque32bit APIwords,bounds/closed guards and retainedmetadata. Not decoder,STB,physical reclamation,concurrency,modern client,provider,GPU,other JVM/host or completefamily qualification."
         }
       ]
     },

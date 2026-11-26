@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "bindings": {
+    "imageClass": "faj",
+    "formatClass": "faj$a",
+    "width": "a",
+    "height": "b",
+    "format": "c",
+    "get": "a",
+    "set": "a"
+  },
+  "steps": [
+    {
+      "id": "allocate-zeroed",
+      "operation": "construct"
+    },
+    {
+      "id": "get-zero",
+      "operation": "get",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "set-0",
+      "operation": "set",
+      "x": 0,
+      "y": 0,
+      "word": "12345678"
+    },
+    {
+      "id": "set-1",
+      "operation": "set",
+      "x": 1,
+      "y": 0,
+      "word": "89abcdef"
+    },
+    {
+      "id": "set-2",
+      "operation": "set",
+      "x": 0,
+      "y": 1,
+      "word": "ffffffff"
+    },
+    {
+      "id": "set-3",
+      "operation": "set",
+      "x": 1,
+      "y": 1,
+      "word": "00000000"
+    },
+    {
+      "id": "get-last",
+      "operation": "get",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": "get-negative-live",
+      "operation": "get",
+      "x": -1,
+      "y": 0
+    },
+    {
+      "id": "set-outside-live",
+      "operation": "set",
+      "x": 2,
+      "y": 0,
+      "word": "aabbccdd"
+    },
+    {
+      "id": "close",
+      "operation": "close"
+    },
+    {
+      "id": "get-closed",
+      "operation": "get",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "set-closed",
+      "operation": "set",
+      "x": 0,
+      "y": 0,
+      "word": "aabbccdd"
+    },
+    {
+      "id": "get-outside-closed",
+      "operation": "get",
+      "x": 2,
+      "y": 0
+    },
+    {
+      "id": "set-negative-closed",
+      "operation": "set",
+      "x": 0,
+      "y": -1,
+      "word": "aabbccdd"
+    },
+    {
+      "id": "metadata-closed",
+      "operation": "metadata"
+    },
+    {
+      "id": "close-again",
+      "operation": "close"
+    }
+  ]
+}

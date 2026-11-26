@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "traceSteps": 16,
+  "leanLaws": 14,
+  "bendLaws": 9,
+  "requestedPixelBytes": 16,
+  "decoderRefusals": [
+    "schema",
+    "contract",
+    "profile",
+    "operation",
+    "needed-coordinate",
+    "coordinate-range",
+    "needed-word",
+    "word-range",
+    "duplicate",
+    "missing-construction",
+    "second-construction",
+    "too-many"
+  ],
+  "changedPremises": [
+    "different-word",
+    "different-coordinate",
+    "close-as-metadata",
+    "valid-closed-as-outside"
+  ],
+  "rawObservationControls": [
+    "lost-write",
+    "cleared-metadata",
+    "read-after-close",
+    "bounds-as-closed",
+    "repeat-close-failure",
+    "fabricated-closed-pixels"
+  ],
+  "formalSha256": {
+    "host/java/CpuImage.lean": "25ab71573959bae4a6fb06ee320695ab44ffadc22103bf1ed19a629d3ae0a8d2",
+    "host/java/CpuImage.bend": "c2e3e6a64965cdbd1634707d9059a9cd87abf39aa6dfb760ed36b58b38e3ef99",
+    "host/minecraft/NativeImageCase.lean": "f3c9b83c066757a3b6f605ea8efebbdf86a539be134fe6921645a26d8845f31e"
+  },
+  "basisSha256": {
+    "native-image-capture.json": "29c857d73b34577d7e6fb36103a8c7b49521e36c349ef70cf74218a6d3699833",
+    "native_image_conformance.py": "a2cb527a0beea2542ae3c77a52c1be1245a49ac9e08d01db7af7e46934910132"
+  },
+  "limits": "One original1.21.1 successful zeroed2x2 CPU allocation,Java21/macOSarm64/LWJGL3.3.3 system;no decode,GPU,physical reclamation,concurrency or other host/client qualification."
+}
