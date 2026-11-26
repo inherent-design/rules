@@ -117,3 +117,5 @@ The [restic ownership and API targets](restic/ARCHITECTURE.md) preserve object r
 The [MO2 ownership and API targets](mo2/ARCHITECTURE.md) connect existing state owners and compatibility choices to a new [source/Boost callback comparison](mo2/REFRESH-CALLBACKS.md). They also correct the overwrite inventory by separating inspection, per-file sync and shell-move adoption. Supported Windows MO2, Qt refresh and VFS remain unqualified.
 
 The [Prism architecture target](prism/ARCHITECTURE.md) reuses its existing state owners across library/undo, component preparation, settings, account/session capture, task/process lifetime, file updates, and export. It records new source-only save/reload and staging/result conditions without promoting full GUI or supported-host coverage.
+
+The [VS Code architecture target](vscode/ARCHITECTURE.md) preserves existing working-copy, provider, configuration, extension-host, and task owners across desktop and browser profiles. Twelve contracts and all 25 family dispositions keep source/native/proposed distinctions and unsupported joins explicit.

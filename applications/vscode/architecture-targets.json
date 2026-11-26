@@ -1,0 +1,543 @@
+{
+  "schema": 1,
+  "status": "VS Code state-owner/interface proposals; not implemented public APIs or whole-feature qualification.",
+  "sourceLedger": "sources/vscode-architecture-selections.json",
+  "contracts": [
+    {
+      "id": "document-history-and-save-evidence",
+      "owners": [
+        "TextFileEditorModel",
+        "Working copy/history and file-service writer"
+      ],
+      "sourceIds": [
+        "text-model",
+        "api147"
+      ],
+      "reports": [
+        "vscode/README.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Document.lean",
+        "vscode/Document.bend"
+      ],
+      "status": "1.147 ordinary-file serial native flow plus separate unresolved custom-provider race. New save/cancellation source inspection is not another native run.",
+      "target": "Preserve event ordering versus alternative save-point identity, captured snapshot and backing evidence. Use actual write/current state in optional automation receipt; cancellation of participants is not running-write retirement.",
+      "callersAndFormats": "Keep Boolean save and existing events/errors/conflicts; additive result needs a concrete consumer and API guarantee, not durability inferred from stat.",
+      "keepCurrent": "Normal UI/Boolean can be adequate; reuse current serialization and completion guard before another save coordinator.",
+      "remaining": [
+        "Raced save with native/provider controls, save errors, undo after save, model incarnation, true IO outcome, conflict interaction and supported hosts."
+      ]
+    },
+    {
+      "id": "retained-baseline-reconciliation",
+      "owners": [
+        "TextFileEditorModel retainResolvedContent/reconcileExternalChanges",
+        "Diff worker/StringEdit and file stat"
+      ],
+      "sourceIds": [
+        "text-model"
+      ],
+      "reports": [
+        "vscode/README.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [],
+      "status": "Newly inspected existing source only; no new reconciliation model, native merge, caller or complete protocol qualification.",
+      "target": "Preserve and qualify existing version/baseline/stat/encoding/cancellation/diff guards and explicit stale/conflict/unavailable results before introducing another merger.",
+      "callersAndFormats": "Internal source mechanism, not a newly public API or universal merge policy. Preserve history/dirty semantics and actual provider limits.",
+      "keepCurrent": "Existing owner is a stronger starting point than a replacement global revision or merger; ordinary serial native run does not qualify it.",
+      "remaining": [
+        "Actual callers and retain/dispose lifetimes, unsupported/diff-coarse/conflict paths, undo baseline reset, concurrent writers/provider races, cancellation and read/stat TOCTOU."
+      ]
+    },
+    {
+      "id": "provider-capability-lifetime-and-input",
+      "owners": [
+        "FileService registration",
+        "MainThreadFileSystem/ExtHostFileSystemInfo",
+        "File consumer queue and provider backing"
+      ],
+      "sourceIds": [
+        "fs-bridge",
+        "fs-info",
+        "fs-consumer",
+        "fs-service"
+      ],
+      "reports": [
+        "vscode/FILESYSTEMS.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/FileSystems.lean",
+        "vscode/FileSystems.bend"
+      ],
+      "status": "1.147 desktop custom-provider native rows plus ordered source invalidation candidate.",
+      "target": "Invalidate removed capability knowledge in measured bridge path; keep live registration, permission, captured provider incarnation, immutable submitted bytes and actual partial effects distinct.",
+      "callersAndFormats": "Preserve backend authority and queued old-provider completion. Narrow event correction before any generation framework.",
+      "keepCurrent": "Existing backends enforce permissions; caller-side snapshot can meet exact-image need. Stale removal hints still deserve correction.",
+      "remaining": [
+        "RPC/order races, normal OS/remote providers, registration/disposal concurrency, watchers, real permissions/IO/metadata and provider pending resources."
+      ]
+    },
+    {
+      "id": "browser-binding-and-permission",
+      "owners": [
+        "HTMLFileSystemProvider",
+        "Native handle identity and IndexedDB"
+      ],
+      "sourceIds": [
+        "handles",
+        "picker",
+        "indexeddb"
+      ],
+      "reports": [
+        "vscode/HANDLES.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Handles.lean",
+        "vscode/Handles.bend"
+      ],
+      "status": "1.147 source fragments with actual Chromium OPFS/IDB handles, not normal picker/editor.",
+      "target": "Immutable opaque bindings in one identity space with transactional allocation; name/kind, usability, permission and persistence remain distinct.",
+      "callersAndFormats": "Legacy aliases/recent resources need actual identity resolution and ambiguous re-selection; no basename rewrite or implemented migration.",
+      "keepCurrent": "Ephemeral usable handles can remain valid if no reopen guarantee is inferred; existing occupied-name aliases retain fragment counterexamples.",
+      "remaining": [
+        "Normal picker/open/edit/save/reopen; kinds/equal names/old registry, concurrent tabs, quota/revocation/restart, draft/reference retention and migration recovery."
+      ]
+    },
+    {
+      "id": "workspace-confirmation-and-search-scope",
+      "owners": [
+        "ExtHostWorkspace provisional roots",
+        "SearchService editor/provider merge",
+        "Query options and exclusions"
+      ],
+      "sourceIds": [
+        "workspace",
+        "search"
+      ],
+      "reports": [
+        "vscode/WORKSPACE-SEARCH.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/WorkspaceSearch.lean",
+        "vscode/WorkspaceSearch.bend"
+      ],
+      "status": "1.147 local multi-root native APIs; proposed legacy text API and source-inferred provider scope.",
+      "target": "Retain request vs confirmed roots, effective options and editor/provider provenance; validate identities when caller authority is root-limited.",
+      "callersAndFormats": "Keep existing confirmation events. Proposed API default/documentation change needs explicit scope compatibility; not a Search UI defect.",
+      "keepCurrent": "Current APIs suffice with explicit options and confirmation. Do not impose one universal exclusion/search policy.",
+      "remaining": [
+        "Relative text scope, engines/regex/ignore/encoding, live cancellation/providers, remote/workspace races, normal UI and actual authority boundaries."
+      ]
+    },
+    {
+      "id": "computed-edit-basis-and-partial-application",
+      "owners": [
+        "ExtHostBulkEdits/TextEditor",
+        "Bulk text/file service groups",
+        "Language provider/normal format route"
+      ],
+      "sourceIds": [
+        "bulk-submit148",
+        "text-editor148",
+        "bulk-text148",
+        "format148",
+        "bulk-service",
+        "bulk-files"
+      ],
+      "reports": [
+        "vscode/LANGUAGE-EDITS.md",
+        "vscode/WORKSPACE-SEARCH.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/LanguageEdit.lean",
+        "vscode/LanguageEdit.bend",
+        "vscode/WorkspaceSearch.lean",
+        "vscode/WorkspaceSearch.bend"
+      ],
+      "status": "1.147 mixed-edit and1.148 formatting/rename API evidence remain separately attributed; no general multi-resource transaction.",
+      "target": "Keep computation basis separate from submission and mutation checks; optional expected-basis admission at actual owner, plus completed/failed groups and save result.",
+      "callersAndFormats": "Preserve compute-only APIs, successful no-op/current-range behavior and normal guards; no automatic apply/rebase/retry. New public option needs defined resource/incarnation/coordinate compatibility.",
+      "keepCurrent": "Extensions can retain/recompute their own basis; precheck then submit is not generally atomic. Existing APIs do not promise semantic rebase.",
+      "remaining": [
+        "Unicode/closed/reopened models/notebooks, external/concurrent writers, multi-resource effects/undo, interactive rename/refactor providers and lost responses."
+      ]
+    },
+    {
+      "id": "configuration-presence-and-origin",
+      "owners": [
+        "ConfigurationModels scope/merge",
+        "ExtHostConfiguration update/inspect"
+      ],
+      "sourceIds": [
+        "config-values",
+        "config-inspection"
+      ],
+      "reports": [
+        "vscode/CONFIGURATION.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Configuration.lean",
+        "vscode/Configuration.bend"
+      ],
+      "status": "1.147 native explicit target/scalar/object/null source/getter evidence; inspected aggregate field loses explicit null.",
+      "target": "Preserve presence in provenance carrier and report lookup context/write target. Keep current getter, merge and masked assignment semantics.",
+      "callersAndFormats": "Review application/default/local/remote aggregate behavior before changing nullish fallback. No settings format or new resolver selected.",
+      "keepCurrent": "Actual getter plus exact source evidence can suffice; inspection limitation should remain explicit.",
+      "remaining": [
+        "Managed/policy/remote/profile layers, combined selectors, Settings UI, concurrent updates and consumers relying on current fallback."
+      ]
+    },
+    {
+      "id": "extension-membership-and-host-placement",
+      "owners": [
+        "Extension manager profile membership/files",
+        "Desktop/browser host pickers and manifest properties"
+      ],
+      "sourceIds": [
+        "extension-manager148",
+        "browser-host148",
+        "desktop-host148"
+      ],
+      "reports": [
+        "vscode/EXTENSIONS.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Extensions.lean",
+        "vscode/Extensions.bend"
+      ],
+      "status": "1.148 local VSIX CLI lifecycle and separate original picker/source comparisons; no actual remote/worker host.",
+      "target": "Keep package bytes/profile membership/admission/host/activation separate; expose actual skipped/downgrade/removal action and host capability.",
+      "callersAndFormats": "Preserve engine/version/picker policy and metadata augmentation; file cleanup is distinct from profile uninstall. No host reallocation algorithm selected.",
+      "keepCurrent": "Existing diagnostics/listing and ordered kind policies remain valid; zero exit alone cannot identify the action.",
+      "remaining": [
+        "Actual individual UI, remote/worker placement, dependencies/packs, update/rollback/interruption, trust and eventual safe file reclamation."
+      ]
+    },
+    {
+      "id": "extension-policy-runtime-and-retirement",
+      "owners": [
+        "EnablementService",
+        "ExtensionsWorkbenchService runtime action",
+        "Host process and extension exports"
+      ],
+      "sourceIds": [
+        "enablement148",
+        "runtime-action148",
+        "api148"
+      ],
+      "reports": [
+        "vscode/ACTIVATION.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Activation.lean",
+        "vscode/Activation.bend"
+      ],
+      "status": "1.148 one four-window native policy/activity/save/restart flow; settled model is not all activation states.",
+      "target": "Reuse saved policy and full runtime action/reason, expose pending restart and observed host state; avoid treating visibility/isActive as universal liveness or stop authority.",
+      "callersAndFormats": "Keep restart/reload model, SQLite/settings and Boolean/void API semantics. Management envelope needs consumer permission/version decision; no silent restart.",
+      "keepCurrent": "Existing enablement/runtime state plus clearer docs may suffice; do not force unload to make policy and activity instantly equal.",
+      "remaining": [
+        "Individual UI/trust enforcement, failed/pending activation/deactivation, other policy writers, remote workers, crash/PID reuse and unsaved work."
+      ]
+    },
+    {
+      "id": "trust-policy-and-complete-admission",
+      "owners": [
+        "Manifest support policy",
+        "Trust management and enablement gates"
+      ],
+      "sourceIds": [
+        "trust-manifest",
+        "trust-enablement",
+        "enablement148"
+      ],
+      "reports": [
+        "vscode/TRUST.md",
+        "vscode/ACTIVATION.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Trust.lean",
+        "vscode/Trust.bend"
+      ],
+      "status": "1.147 finite source predicates;1.148 native trust-disabled flow supplies no enforcement coverage.",
+      "target": "Preserve explicit/limited/exact-version and workspace-local policies; expose policy origin/eligibility/disable cause through existing decisions where needed.",
+      "callersAndFormats": "No new trust store or sandbox/instant revocation promise. Inspection API or policy changes need compatibility and real URI/permission review.",
+      "keepCurrent": "No defect established in predicates; keep actual full enablement pipeline, not a permissive shortcut.",
+      "remaining": [
+        "Installed grant/revoke persistence, URI identity, running code, dependency/environment gates, managed/virtual/remote/workers and actual rendered explanations."
+      ]
+    },
+    {
+      "id": "task-readiness-stop-and-host",
+      "owners": [
+        "Execution registry/events",
+        "Node/worker extension task adapter",
+        "TerminalTaskSystem readiness and provider resources"
+      ],
+      "sourceIds": [
+        "node-tasks",
+        "worker-tasks",
+        "task-system",
+        "api147"
+      ],
+      "reports": [
+        "vscode/TASKS.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/Tasks.lean",
+        "vscode/Tasks.bend"
+      ],
+      "status": "1.147 local Node native task flow, separate source admission/readiness projections; no browser process execution.",
+      "target": "Preserve registered handle/start/process-end/task-end/readiness and owned-resource retirement; keep absent status and virtual PID distinct.",
+      "callersAndFormats": "Reuse existing scheduler/events, never infer signaling authority from event PID or window type. Optional receipt must admit provider evidence and unknown results.",
+      "keepCurrent": "Existing system supports background readiness and custom providers; documentation and bounded consumer guards can improve safety without orchestration rewrite.",
+      "remaining": [
+        "Task resolution/inputs, shell/remote/browser, failure cycles/concurrent cancellation, real provider descendants/PTY shutdown, reconnect and persistent recovery."
+      ]
+    },
+    {
+      "id": "browser-working-copy-and-recovery",
+      "owners": [
+        "Untitled model/backup owner",
+        "Browser profile/store and eventual file provider"
+      ],
+      "sourceIds": [
+        "untitled",
+        "handles",
+        "picker"
+      ],
+      "reports": [
+        "vscode/WEB.md",
+        "vscode/HANDLES.md",
+        "vscode/ARCHITECTURE.md"
+      ],
+      "models": [
+        "vscode/WebDraft.lean",
+        "vscode/WebDraft.bend"
+      ],
+      "status": "1.147 one visible same-profile untitled reload; complete model bytes/backing storage unknown.",
+      "target": "Preserve recovered dirty drafts and separate backup, handle, permission, actual file write and user export receipts.",
+      "callersAndFormats": "No claim that tab restore means durable saved project. Existing backup/UI can remain while specialized consumers obtain actual finalized storage evidence.",
+      "keepCurrent": "No defect established by visible reload; keep useful backup behavior and dirty marker rather than pretend it is a user-file save.",
+      "remaining": [
+        "Full document/backing identity, browser process loss, quota/eviction/cross-tab/persistence failure, permission renewal and actual saved-file/export recovery."
+      ]
+    }
+  ],
+  "featureDisposition": [
+    {
+      "feature": "vscode.workspaces",
+      "contracts": [
+        "workspace-confirmation-and-search-scope"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Selected serial local roots only; remote/open/restart/general workspace workflows pending."
+    },
+    {
+      "feature": "vscode.documents",
+      "contracts": [
+        "document-history-and-save-evidence",
+        "computed-edit-basis-and-partial-application"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Serial file edits and selected API boundaries; save-as/general close/concurrency/IO failure pending."
+    },
+    {
+      "feature": "vscode.undo-history",
+      "contracts": [
+        "document-history-and-save-evidence",
+        "retained-baseline-reconciliation"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Serial undo/save point plus inspected source; arbitrary grouping/history restore/reconciliation pending."
+    },
+    {
+      "feature": "vscode.save-conflicts",
+      "contracts": [
+        "document-history-and-save-evidence",
+        "retained-baseline-reconciliation"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Dirty-buffer external preservation observed, full conflict compare/merge/overwrite and raced save pending."
+    },
+    {
+      "feature": "vscode.filesystem-adapters",
+      "contracts": [
+        "provider-capability-lifetime-and-input",
+        "browser-binding-and-permission"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "In-memory custom provider and handle fragments; OS/remote/permissions/watcher/recovery pending."
+    },
+    {
+      "feature": "vscode.search",
+      "contracts": [
+        "workspace-confirmation-and-search-scope",
+        "computed-edit-basis-and-partial-application"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Selected API scopes/edit groups, not Search UI or complete engines/cancel/replace workflow."
+    },
+    {
+      "feature": "vscode.language-services",
+      "contracts": [
+        "computed-edit-basis-and-partial-application"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Selected owned formatting/rename providers, not engines/completion/navigation/diagnostics/refactor."
+    },
+    {
+      "feature": "vscode.configuration",
+      "contracts": [
+        "configuration-presence-and-origin"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Selected explicit target/scopes; Settings UI/keybindings/managed/remote/profiles pending."
+    },
+    {
+      "feature": "vscode.profiles-sync",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Private profiles are fixture isolation, not profile create/switch/export/sync/conflict coverage."
+    },
+    {
+      "feature": "vscode.extensions",
+      "contracts": [
+        "extension-membership-and-host-placement",
+        "extension-policy-runtime-and-retirement"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Bounded local CLI and native all-extension policy flow; individual UI/platform/dependency/update/worker qualification pending."
+    },
+    {
+      "feature": "vscode.workspace-trust",
+      "contracts": [
+        "trust-policy-and-complete-admission"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Finite predicates only; real grant/revoke and installed enforcement pending."
+    },
+    {
+      "feature": "vscode.tasks",
+      "contracts": [
+        "task-readiness-stop-and-host"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Selected API discovery/process/readiness/stop; resolve/config/UI/remote/general failures pending."
+    },
+    {
+      "feature": "vscode.terminal",
+      "contracts": [
+        "task-readiness-stop-and-host"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Task terminal events do not qualify full terminal creation/reconnect/input/split/close/kill."
+    },
+    {
+      "feature": "vscode.debug-test",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Test discovery/debug/attach/stop not modeled or natively qualified."
+    },
+    {
+      "feature": "vscode.scm",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "SCM stage/commit/discard/checkout/worktree/merge/history not qualified by document edits."
+    },
+    {
+      "feature": "vscode.remote",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Remote capability distinctions from source, no SSH/container/WSL/tunnel/disconnect workflow."
+    },
+    {
+      "feature": "vscode.web-workspaces",
+      "contracts": [
+        "browser-binding-and-permission",
+        "browser-working-copy-and-recovery"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Fragment handles and visible draft reload; normal local picker/GitHub/edit/save/reopen pending."
+    },
+    {
+      "feature": "vscode.web-extensions",
+      "contracts": [
+        "extension-membership-and-host-placement",
+        "trust-policy-and-complete-admission",
+        "task-readiness-stop-and-host"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Host picker/admission source only; actual worker/remote extension/language service execution pending."
+    },
+    {
+      "feature": "vscode.ui-accessibility",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Limited command/menu/screenshot interactions do not qualify navigation/dialog/notification/screen-reader workflows."
+    },
+    {
+      "feature": "vscode.cli",
+      "contracts": [
+        "extension-membership-and-host-placement"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Extension CLI install/list/uninstall does not qualify goto/diff/merge/stdin/wait/new/reuse-window."
+    },
+    {
+      "feature": "vscode.agent-sessions",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Agent session/context/planning/review/undo/close remain pending, not inferred from editor APIs."
+    },
+    {
+      "feature": "vscode.agent-tools",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "MCP/tool/approval/sandbox/hook/delegation remain pending; extension trust is not their authority model."
+    },
+    {
+      "feature": "vscode.agent-continuity",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Resume/share/schedule/remote/artifact retention remain pending; draft reload is not agent continuity."
+    },
+    {
+      "feature": "vscode.browser-preview",
+      "contracts": [],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Markdown/browser/port/inspection feature workflows remain pending."
+    },
+    {
+      "feature": "vscode.updates-operations",
+      "contracts": [
+        "extension-membership-and-host-placement"
+      ],
+      "status": "partial proposal; original operation review states preserved",
+      "remaining": "Owned extension CLI does not qualify application self-update/status/profiling/log collection."
+    }
+  ],
+  "freshScope": {
+    "sourceIdentities": 31,
+    "officialFixedSourceReadbacks": 1,
+    "newNativeCommands": 0,
+    "newFormalModelsOrReplays": 0
+  },
+  "limits": [
+    "1.147 and1.148 selected profiles remain distinct; no fresh latest-upstream or source-to-binary claim.",
+    "Save reconciliation/cancellation source review does not resolve custom-provider race or prove merge/durability.",
+    "No production/API/serialized-state migration, new desktop/browser/model run, or upstream report.",
+    "All complete feature and joined obligations remain open."
+  ]
+}
