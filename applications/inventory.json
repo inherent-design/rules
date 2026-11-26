@@ -16533,6 +16533,19 @@
                 "add-root": "Serial add/duplicate requests in an already open multi-root workspace, distinguishing provisional view from confirmation.",
                 "remove-root": "One serial removal in the same context; not first-root, restart, remote, or concurrent behavior."
               }
+            },
+            {
+              "status": "native-observed",
+              "scope": "Two owned folder identities reopened serially under the same private profile; SQLite associations and extension workspace overrides independently read.",
+              "remaining": "Complete folder/workspace UI, multi-root/remote behavior, actual profile switching, sync, concurrent policy and failure/recovery. Parent statuses unchanged.",
+              "evidence": [
+                "vscode/ACTIVATION.md",
+                "evidence/vscode-activation-20261126T042148920855Z/collection-complete.json",
+                "evidence/vscode-activation-comparison/conformance.json"
+              ],
+              "operationSlices": {
+                "open-folder": "Local serial open/quit/reopen selects A/B identities and applies each saved extension choice; not general open-folder qualification."
+              }
             }
           ]
         },
@@ -17532,6 +17545,21 @@
               ],
               "operationSlices": {
                 "select-host": "Original source local/remote merge and selection bodies with explicit adapters, not native runtime placement."
+              }
+            },
+            {
+              "status": "native-observed",
+              "scope": "One serial four-window local native lifecycle on 1.148.0: real All Workspace enable/disable commands, per-workspace saved choices, actual target activation/held API calls and normal shutdown. Eighteen joined observations; source context read-only.",
+              "remaining": "Individual extension UI, full enablement/trust gates, other user extensions, remote/browser hosts, concurrency, automatic activation, crash and arbitrary detached-child retirement. Existing operation statuses unchanged.",
+              "evidence": [
+                "vscode/ACTIVATION.md",
+                "evidence/vscode-activation-20261126T042148920855Z/collection-complete.json",
+                "evidence/vscode-activation-comparison/conformance.json"
+              ],
+              "operationSlices": {
+                "enable": "All Workspace command admits an owned dormant target; explicit activation and another restart recorded separately. Includes actual bundled override effect.",
+                "disable": "All Workspace command saves owned active target choice; running API remains callable until normal shutdown.",
+                "install": "Installed target membership remains unchanged throughout this flow; prior local VSIX band supplies installation qualification."
               }
             }
           ]
@@ -18721,6 +18749,11 @@
           "id": "extension-membership-placement-and-effect-reporting",
           "status": "Proposed compact action/profile/version and host provenance; native skip diagnostic is already correct, no production adoption.",
           "document": "vscode/EXTENSIONS.md"
+        },
+        {
+          "id": "enablement-policy-versus-runtime-outcome",
+          "status": "Proposed additive scoped management outcome using existing enablement/runtime distinctions; current restart behavior and isActive contract retained, no production adoption.",
+          "document": "vscode/ACTIVATION.md"
         }
       ],
       "preservationDecisions": [
@@ -18728,9 +18761,20 @@
           "id": "extension-membership-and-host-placement",
           "evidence": "vscode/EXTENSIONS.md",
           "decision": "Preserve engine refusal, explicit downgrade skip, ordered effective kinds, development-placement preference, profile membership and distinct browser host capabilities; retained files and activation remain separate facts. See vscode/EXTENSIONS.md."
+        },
+        {
+          "id": "workspace-policy-and-explicit-runtime-transition",
+          "evidence": "vscode/ACTIVATION.md",
+          "decision": "Keep per-workspace overrides, explicit activation and orderly restart requirements. All Workspace retains broad selection; policy persistence is not a fresh execution or retirement receipt."
         }
       ],
-      "unresolvedChoices": [],
+      "unresolvedChoices": [
+        {
+          "id": "management-outcome-authority",
+          "question": "Should scoped policy/runtime management results become an additive administrative API or remain internal/report-only? Preserve existing API contracts and review authority, host-incarnation identity, unknown outcomes and persistence before adoption.",
+          "document": "vscode/ACTIVATION.md"
+        }
+      ],
       "coverageStatus": "inventory captured; modeling and qualification pending",
       "inventorySourceBasis": "sources/inventory-basis.json#vscode"
     }

@@ -78,3 +78,5 @@ The public-only replay excludes sixteen source caches and four private categorie
 Run `python3 applications/vscode/extensions_conformance.py --public` with the pinned Lean and Bend binaries. Actual collection requires the separately selected `extensions_probe.py` or `extensions_source_probe.mjs` procedure and stays outside ordinary CI.
 
 Full enable/disable UI, trust grant/revoke persistence, actual process/web-worker activation, remote authority/installation, extension dependency/pack handling, platform-specific installation, arbitrary engine/version policy, interruption/repair, and eventual file collection remain open. The parent extension and web-extension operation statuses stay pending; only these scoped components are linked.
+
+The subsequent [activation follow-up](ACTIVATION.md) adds one local native four-window policy/runtime flow with independent execution, storage, and shutdown observations. It leaves full enable/disable UI, trust enforcement, remote/browser hosts, and interruption behavior unqualified.

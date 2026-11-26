@@ -837,6 +837,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vscode-workspace-enablement-runtime",
+      "features": [
+        "vscode.workspaces",
+        "vscode.extensions"
+      ],
+      "flow": "One installed owned target and one profile across four serial native windows: activate in A, disable for A while a held API remains live, quit, activate in B, reopen disabled A, enable/activate, then reopen A again inactive. Read storage and tracked process retirement independently.",
+      "counterexamples": [
+        "Treat saved disablement as proof that active code stopped.",
+        "Treat admission or an enabled override as activation.",
+        "Leak one workspace choice into another workspace.",
+        "Treat All Workspace as a target-only command.",
+        "Treat quit request or historical isActive as proof of current process retirement."
+      ],
+      "hostWitnesses": [
+        "workspace and runtime-incarnation identity",
+        "saved versus effective capability policy",
+        "fresh execution witness",
+        "quit request versus actual normal retirement"
+      ],
+      "evidence": [],
+      "status": "pending",
+      "componentEvidence": [
+        {
+          "status": "native-observed",
+          "scope": "Four local desktop runs/one joined flow, eighteen API/checkpoint observations with one owned target; normal after-exit storage and 29 captured descendant PIDs checked.",
+          "remaining": "Individual UI, real trust/remote/browser gates, arbitrary plugins, profile switching, concurrency, crash recovery and complete process containment remain unqualified.",
+          "evidence": [
+            "vscode/ACTIVATION.md",
+            "evidence/vscode-activation-20261126T042148920855Z/collection-complete.json",
+            "evidence/vscode-activation-comparison/conformance.json"
+          ]
+        }
+      ]
     }
   ]
 }

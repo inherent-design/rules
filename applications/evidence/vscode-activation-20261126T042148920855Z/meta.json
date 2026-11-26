@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "capture": "/Users/zer0cell/production/rules/applications/evidence/vscode-activation-20261126T042148920855Z",
+  "private": "/private/tmp/rules-vsc-act-35jmdzrv",
+  "revision": "661626d0e72f97806550790a98fb87116c9db825",
+  "version": "1.148.0",
+  "producerSha256": "24821dc533c3cd8a61f331f821664a4d89d128fc41b1ca4767e46cb48f68c471",
+  "controllerSha256": "58279b05f9aaa633e261bf5befd0190bd0d75852d2635cbc37a4e197d43ad631",
+  "targetSha256": "156f1286f719edeb355f16a90cc0a2bbc967b43c6fff7357860ca6dc20ba0815",
+  "codeSha256": "38af459b440e3e57b983affc83ae48ced6fe820f642f771cf885ca5bee68a5c0",
+  "scope": "Private named data stores, ordinary HOME/in-memory secrets; trust disabled, not enforcement. No marketplace/account/personal profile.",
+  "preparationCorrection": {
+    "beforeAnyNativeCall": true,
+    "oldProducerSha256": "6604a1c5f769da8f5db2a3ed63ef4c1aaeb9575ba45ee48fb460e0fb91fa92f4",
+    "effect": "Use a private HOME for the non-GUI extension CLI; ordinary HOME remains explicit for GUI/keychain compatibility."
+  },
+  "controllerPreparationCorrection": {
+    "beforeGUIOrExtensionExecution": true,
+    "afterCLIInstall": true,
+    "oldControllerSha256": "ef93aa6472ff779e5f0f77f6ca2b7145a2b3348e993db117444e58ced066311d",
+    "effect": "Extension-list notifications preserve the controller request status; unrelated asynchronous events cannot strand the harness in a non-ready state."
+  }
+}
