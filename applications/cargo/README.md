@@ -4,6 +4,8 @@ This band compares Cargo 1.92.0 with its pinned source revision, `344c4567c634a2
 
 The [configuration/run join](RUN-CONFIG.md) observes actual build-before-run gating, configured runner/application outcomes, invocation-directory behavior, and a pinned runner-priority mismatch. It keeps compiler reports, retained binary identity, independent journals, and proposed priority changes separate.
 
+The [lock/source follow-up](LOCK-SOURCES.md) separates lockfile admission, source access, cache effects, and logical identity from precise Git revision. It uses owned path and local-file Git sources; registry resolution remains open.
+
 ## Domain distinctions
 
 | Value or relation | Meaning in this band |

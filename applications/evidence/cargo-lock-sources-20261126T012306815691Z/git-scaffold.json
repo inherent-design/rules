@@ -1,0 +1,113 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "init",
+      "--initial-branch=main"
+    ],
+    "exitCode": 0,
+    "stdout": "Initialized empty Git repository in /private/tmp/rules-cargo-lock-8usa_gcw/git-lib/.git/\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "add",
+      "Cargo.toml",
+      "src/lib.rs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "-c",
+      "user.name=Rules fixture",
+      "-c",
+      "user.email=rules@example.invalid",
+      "commit",
+      "--no-gpg-sign",
+      "-m",
+      "first image"
+    ],
+    "exitCode": 0,
+    "stdout": "[main (root-commit) d3fa0d5] first image\n 2 files changed, 5 insertions(+)\n create mode 100644 Cargo.toml\n create mode 100644 src/lib.rs\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "stdout": "d3fa0d5e7ab698b36e3646067e71a3389d6e2131\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "add",
+      "src/lib.rs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "-c",
+      "user.name=Rules fixture",
+      "-c",
+      "user.email=rules@example.invalid",
+      "commit",
+      "--no-gpg-sign",
+      "-m",
+      "second image same package version"
+    ],
+    "exitCode": 0,
+    "stdout": "[main 4b5bd26] second image same package version\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/Cellar/git/2.56.1/bin/git",
+      "-c",
+      "core.hooksPath=/dev/null",
+      "-C",
+      "/private/tmp/rules-cargo-lock-8usa_gcw/git-lib",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "stdout": "4b5bd26c9e8eab8b894a63d3d05b30cf141a4819\n",
+    "stderr": ""
+  }
+]

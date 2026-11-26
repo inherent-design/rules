@@ -13066,7 +13066,23 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "evidence": [
+                "cargo/LOCK-SOURCES.md",
+                "evidence/cargo-lock-sources-20261126T012306815691Z/receipt.json",
+                "evidence/cargo-lock-sources-20261126T012306815691Z/conformance.json"
+              ],
+              "remaining": "Registry/MSRV/semver resolution, source replacement and equivalent mirrors, transitive/multiple patches, malformed or partial caches, conditional-only graphs, concurrency, other platforms, compilation, and full recovery. Parent operation and scenario statuses remain unchanged.",
+              "scope": "One owned dependency changes between path, precise local Git revisions, and a compatible path patch; public metadata identity and exact source are observed separately.",
+              "operationSlices": {
+                "resolve": "One root/dependency metadata graph and lock selection under admitted cache/manifest contexts; not a general resolver.",
+                "patch": "One compatible same-version path override changes the Git selection after explicit lock admission; source replacement remains untested."
+              }
+            }
+          ]
         },
         {
           "id": "cargo.features",
@@ -13272,7 +13288,26 @@
           "disposition": "inventoried, unqualified",
           "currentOrCandidate": "current-review",
           "inventorySourceBasis": "sources/inventory-basis.json#cargo",
-          "meaning": "Research decomposition; current source/interface behavior must be established per operation."
+          "meaning": "Research decomposition; current source/interface behavior must be established per operation.",
+          "componentEvidence": [
+            {
+              "status": "native-observed",
+              "evidence": [
+                "cargo/LOCK-SOURCES.md",
+                "evidence/cargo-lock-sources-20261126T012306815691Z/receipt.json",
+                "evidence/cargo-lock-sources-20261126T012306815691Z/conformance.json"
+              ],
+              "remaining": "Registry/MSRV/semver resolution, source replacement and equivalent mirrors, transitive/multiple patches, malformed or partial caches, conditional-only graphs, concurrency, other platforms, compilation, and full recovery. Parent operation and scenario statuses remain unchanged.",
+              "scope": "Sixteen owned path/local-Git requests separate semantic lock admission, offline source availability, formatting preservation, local refresh, and cache effects on refusal.",
+              "operationSlices": {
+                "generate-lockfile": "One offline path dependency creates a lock; no complete workspace or registry-generation policy.",
+                "update": "One explicit local Git dependency update contrasts cached offline head with permitted local refresh.",
+                "locked": "Missing, changed-version, and patched-source selections refuse; local cache can still be populated before refusal.",
+                "frozen": "Combined source/lock restrictions preserve selected Git revision and one semantically equivalent formatted lock record.",
+                "offline": "Local path lock writes and warmed Git resolution succeed; cold Git acquisition fails. No registry freshness claim."
+              }
+            }
+          ]
         },
         {
           "id": "cargo.build-units",
