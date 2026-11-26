@@ -58,6 +58,8 @@ The [selected shader source chain](../minecraft/SHADERS.md) identifies LWJGL/sha
 
 The [tiny CPU-image comparison](../minecraft/CPU-IMAGES.md) adds an actual library-owned allocation on the selected Java 21/macOS profile. One original 1.21.1 image preserves metadata after close while refusing in-bounds pixel access; a bounds error can precede the closed-allocation guard. The shared [CPU model](CpuImage.lean) retains historical words without making them accessible after close. This is a selected library contract, not a new standard JDK API or an Arena translation. Java 17/25, Windows/Linux, other allocators, concurrent users, decoding, and device retirement remain unqualified by this band.
 
+The [constructed-sprite comparison](../minecraft/SPRITE-INPUTS.md) follows an actual consumer of that image. Retaining a Java alias does not protect backing from a sprite's close, while metadata can remain readable. The native observation uses explicit frame-size, empty-metadata, and null-name contexts; it does not qualify resource decoding, concurrent ownership, geometry, or graphics retirement.
+
 ## Aggregate futures and listener ownership
 
 The [original reload-orchestrator comparison](../minecraft/RELOAD-SCHEDULING.md) observes 108 controlled snapshots across four Java 21 client profiles and the selected Java 25 client. A failed aggregate can coexist with a pending listener future; partial authored application effects can remain after failure. An empty listener set can complete independently of its initial gate. These are selected library/consumer contracts, not a new Java 17 run or a proof of real worker retirement. Direct executors and manual futures make order observable without claiming scheduler latency, cancellation, native completion, or rollback.

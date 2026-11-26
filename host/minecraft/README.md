@@ -14,6 +14,8 @@ The [image-header band](IMAGE-HEADERS.md) compares 165 original tiny-buffer call
 
 The [CPU-image lifecycle band](CPU-IMAGES.md) separately constructs one original zeroed 2×2 image on Java 21/macOS and compares 16 ordered steps with the host models. Pixel words, bounds errors, closed-access refusal, retained metadata, and repeated close remain distinct. Decoding, physical reclamation, modern clients, and graphics backends are unqualified.
 
+The [constructed-sprite inputs](SPRITE-INPUTS.md) add 26 original baseline scenarios over tiny owned images. Frame labels, transparency matrices, input alias mutation, and close authority are compared separately from identifier/metadata loading, geometry generation, baking, and rendering. The null-name and explicit-frame-size context adapters remain visible.
+
 The [notification timer boundary](NOTIFICATIONS.md) follows definition selection into retained timer/listener ownership in two original clients. Its host comparison observes 45 authored JDK 17/21/25 operations. Actual notification decoding, selection, callbacks, queued UI work, and game reload remain unqualified.
 
 The [blockstate condition band](BLOCK-CONDITIONS.md) follows literal atoms, record construction/encoding, separate condition parsing, and canonical property domains. It compares 72 original record scenarios across three modern clients while retaining distinct source-only older condition and five-client builder boundaries. Full codecs, property/state execution, and rendering remain open.

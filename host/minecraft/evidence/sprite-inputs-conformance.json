@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "scenarios": 26,
+  "matrixQueries": 130,
+  "aliasQueries": 2,
+  "guardedClosedAccesses": 2,
+  "maxRequestedPixelBytes": 32,
+  "leanLaws": 13,
+  "bendLaws": 11,
+  "decoderRefusals": [
+    "schema",
+    "contract",
+    "release",
+    "identifier-context",
+    "metadata-context",
+    "needed-masks",
+    "empty-masks",
+    "width",
+    "height",
+    "image-budget",
+    "mask-range",
+    "alias-profile",
+    "duplicate",
+    "too-many"
+  ],
+  "changedPremises": [
+    "different-static-mask",
+    "different-animation-order",
+    "different-width",
+    "omit-alias-lifecycle"
+  ],
+  "changedRawObservations": [
+    "static-frame-as-zero",
+    "lost-opacity",
+    "swapped-animation",
+    "copied-input-image",
+    "input-readable-after-sprite-close",
+    "metadata-cleared-at-close",
+    "numeric-transparency",
+    "missing-cleanup"
+  ],
+  "formalSha256": {
+    "host/minecraft/SpriteInputs.lean": "53d1b1fbed8676593f36f74596e6b9367a51ec11dd8b8365dbd3262b3f840040",
+    "host/minecraft/SpriteInputs.bend": "5c1ff1010404a03b29221eda70edecff2b66c535c30340591f77b267fa48e299",
+    "host/minecraft/SpriteInputsCase.lean": "7763a6745fa1e278bbbad1855609aa12ea499d826dd0a4d2fc4549271a7265da",
+    "host/java/CpuImage.lean": "25ab71573959bae4a6fb06ee320695ab44ffadc22103bf1ed19a629d3ae0a8d2",
+    "host/java/CpuImage.bend": "c2e3e6a64965cdbd1634707d9059a9cd87abf39aa6dfb760ed36b58b38e3ef99"
+  },
+  "basisSha256": {
+    "sprite-inputs-capture.json": "311b7dd535ef50cd06a069d51290c411a8eec1532594875f63fec7ab9444d991",
+    "sprite_inputs_observations.py": "88ce43690e61bf1dd5a4109fb6d106003e6d3e0ecedc47fed0373b2285142827",
+    "sprite_inputs_conformance.py": "c9d1e1cf4ded0f24fc0c3637abfd6e87bfa38baea995f149c3a76de298dc8256"
+  },
+  "limits": "Constructed1.21.1 SpriteContents/explicitFrameSize/originalemptyMetadata/nullname on Java21/macOSarm64. Not metadata/identifier decode,fullsprite loading,ticker,generator,bake,GPU/game,other profile or physical-memory qualification."
+}
